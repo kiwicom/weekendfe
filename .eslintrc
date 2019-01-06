@@ -1,0 +1,25 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "prettier", "prettier/react", "plugin:fp/recommended"],
+  "plugins": ["prettier", "fp"],
+  "rules": {
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+    "import/extensions": "error",
+    "import/no-unresolved": "error",
+    "react/jsx-no-bind": "error",
+    "no-var": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": [["builtin", "external"], ["internal", "parent", "sibling", "index"]],
+        "newlines-between": "always"
+      }
+    ],
+    "react/react-in-jsx-scope": "off", // next
+    "fp/no-nil": "off", // Side effects
+    "fp/no-class": "off", // React
+    "fp/no-this": "off", // React
+    "fp/no-mutation": "off" // React
+  }
+}
