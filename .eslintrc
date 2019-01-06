@@ -20,6 +20,7 @@
     "fp/no-nil": "off", // Side effects
     "fp/no-class": "off", // React
     "fp/no-this": "off", // React
-    "fp/no-mutation": "off" // React
+    "fp/no-mutation": "off", // React
+    "fp/no-unused-expression": "off"
   }
 }

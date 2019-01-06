@@ -2,3 +2,7 @@
 
 - with styled-components
 - https://github.com/zeit/next.js#custom-document
+
+## TODO
+
+- [ ] GitHub pages publish
