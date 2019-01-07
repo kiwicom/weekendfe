@@ -51,6 +51,8 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/petrsnobelt/Projects/js-weekend-brno-fe/components/query.js";
 
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n  query {\n    continents {\n      name\n    }\n  }\n"]);
 
@@ -66,31 +68,31 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+var czechCountryQuery = { kind: "Document", definitions: [{ kind: "OperationDefinition", operation: "query", variableDefinitions: [], directives: [], selectionSet: { kind: "SelectionSet", selections: [{ kind: "Field", name: { kind: "Name", value: "country" }, arguments: [{ kind: "Argument", name: { kind: "Name", value: "code" }, value: { kind: "StringValue", value: "CZ", block: false } }], directives: [], selectionSet: { kind: "SelectionSet", selections: [{ kind: "Field", name: { kind: "Name", value: "name" }, arguments: [], directives: [] }, { kind: "Field", name: { kind: "Name", value: "code" }, arguments: [], directives: [] }, { kind: "Field", name: { kind: "Name", value: "native" }, arguments: [], directives: [] }, { kind: "Field", name: { kind: "Name", value: "phone" }, arguments: [], directives: [] }, { kind: "Field", name: { kind: "Name", value: "languages" }, arguments: [], directives: [], selectionSet: { kind: "SelectionSet", selections: [{ kind: "Field", name: { kind: "Name", value: "name" }, arguments: [], directives: [] }] } }, { kind: "Field", name: { kind: "Name", value: "currency" }, arguments: [], directives: [] }, { kind: "Field", name: { kind: "Name", value: "emoji" }, arguments: [], directives: [] }] } }] } }], loc: { start: 0, end: 133, source: { body: "query {\n  country(code: \"CZ\") {\n    name\n    code\n    native\n    phone\n    languages {\n      name\n    }\n    currency\n    emoji\n  }\n}\n", name: "GraphQL request", locationOffset: { line: 1, column: 1 } } } };
 var continentsQuery = graphql_tag__WEBPACK_IMPORTED_MODULE_2___default()(_templateObject());
 /* harmony default export */ __webpack_exports__["default"] = (function () {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_1__["Query"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_1__["Query"], {
     query: continentsQuery,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 17
     },
     __self: this
   }, function (_ref) {
     var loading = _ref.loading,
         error = _ref.error,
-        continents = _ref.data.continents,
-        fetchMore = _ref.fetchMore;
+        continents = _ref.data.continents;
     if (error) return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17
+        lineNumber: 19
       },
       __self: this
     }, "error");
     if (loading) return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18
+        lineNumber: 20
       },
       __self: this
     }, "Loading");
@@ -98,11 +100,43 @@ var continentsQuery = graphql_tag__WEBPACK_IMPORTED_MODULE_2___default()(_templa
       continents: continents,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 21
       },
       __self: this
     });
-  });
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_1__["Query"], {
+    query: czechCountryQuery,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, function (_ref2) {
+    var loading = _ref2.loading,
+        error = _ref2.error,
+        country = _ref2.data.country;
+    if (error) return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
+    }, "error");
+    if (loading) return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: this
+    }, "Loading");
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_debug__WEBPACK_IMPORTED_MODULE_3__["default"], _extends({}, country, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28
+      },
+      __self: this
+    }));
+  }));
 });
 
 /***/ }),
