@@ -1,0 +1,13 @@
+query {
+  country(code: "CZ") {
+    name
+    code
+    native
+    phone
+    languages {
+      name
+    }
+    currency
+    emoji
+  }
+}

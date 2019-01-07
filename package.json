@@ -4,15 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "mayday": "rm -rf ./node_modules/.cache",
     "dev": "next",
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages"
+    "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages",
+    "analyze": "BUNDLE_ANALYZE=both next build",
+    "analyze:server": "BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "BUNDLE_ANALYZE=browser next build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@zeit/next-bundle-analyzer": "^0.1.2",
     "@kiwicom/orbit-components": "^0.24.0",
     "apollo-boost": "^0.1.23",
     "graphql": "^14.0.2",
@@ -26,6 +31,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
+    "babel-plugin-import-graphql": "^2.6.2",
     "babel-plugin-styled-components": "^1.10.0",
     "eslint": "^5.12.0",
     "eslint-config-airbnb": "^17.1.0",

@@ -1,8 +1,16 @@
-## Used samples
+# DONE
 
-- with styled-components
-- https://github.com/zeit/next.js#custom-document
+- [x] NextJS
+- [x] Orbit-components, apollo client
+- [x] eslint, prettier
+- [x] GitHub pages publish
+- [x] graphql compile query
 
 ## TODO
 
-- [ ] GitHub pages publish
+## Used nextjs samples
+
+- with styled-components
+- gh-pages
+- analyze-bundles
+- https://github.com/zeit/next.js#custom-document
