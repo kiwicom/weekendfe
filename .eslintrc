@@ -1,7 +1,7 @@
 {
   "parser": "babel-eslint",
   "extends": ["airbnb", "prettier", "prettier/react", "plugin:fp/recommended"],
-  "plugins": ["prettier", "fp"],
+  "plugins": ["prettier", "fp", "react-hooks"],
   "rules": {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
@@ -16,6 +16,7 @@
         "newlines-between": "always"
       }
     ],
+    "react-hooks/rules-of-hooks": "error",
     "react/react-in-jsx-scope": "off", // next
     "fp/no-nil": "off", // Side effects
     "fp/no-class": "off", // React

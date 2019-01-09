@@ -14,3 +14,11 @@
 - gh-pages
 - analyze-bundles
 - https://github.com/zeit/next.js#custom-document
+
+## sources
+
+### hooks
+
+- https://usehooks.com
+- https://egghead.io/courses/simplify-react-apps-with-react-hooks
+- https://github.com/tannerlinsley/use-react-hooks
