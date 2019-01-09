@@ -35156,12 +35156,12 @@ module.exports = __webpack_require__(/*! ./dist/lib/head */ "./node_modules/next
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_831a3634f66cb1dada0c ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_1a416cd7febad04d919e ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_831a3634f66cb1dada0c */ "dll-reference dll_831a3634f66cb1dada0c"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_1a416cd7febad04d919e */ "dll-reference dll_1a416cd7febad04d919e"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -36053,12 +36053,12 @@ process.umask = function() { return 0; };
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_831a3634f66cb1dada0c ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_1a416cd7febad04d919e ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_831a3634f66cb1dada0c */ "dll-reference dll_831a3634f66cb1dada0c"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_1a416cd7febad04d919e */ "dll-reference dll_1a416cd7febad04d919e"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -36666,12 +36666,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_831a3634f66cb1dada0c ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_1a416cd7febad04d919e ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_831a3634f66cb1dada0c */ "dll-reference dll_831a3634f66cb1dada0c"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_1a416cd7febad04d919e */ "dll-reference dll_1a416cd7febad04d919e"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -38395,7 +38395,7 @@ module.exports = hoistNonReactStatics;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v16.7.0
+/** @license React v16.7.0-alpha.2
  * react-dom-server.browser.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -38463,7 +38463,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 
 // TODO: this is special because it gets imported during build.
 
-var ReactVersion = '16.7.0';
+var ReactVersion = '16.7.0-alpha.2';
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -38709,7 +38709,7 @@ var describeComponentFrame = function (name, source, ownerName) {
   return '\n    in ' + (name || 'Unknown') + sourceInfo;
 };
 
-var enableHooks = false;
+var enableHooks = true;
 // Helps identify side effects in begin-phase lifecycle hooks and setState reducers:
 
 
@@ -38733,10 +38733,7 @@ var warnAboutDeprecatedLifecycles = false;
 
 
 // Only used in www builds.
-var enableSuspenseServerRenderer = false; // TODO: true? Here it might just be false.
-
-// Only used in www builds.
-
+var enableSuspenseServerRenderer = false;
 
 // Only used in www builds.
 
@@ -38782,8 +38779,7 @@ function validateContextBounds(context, threadID) {
   // If we don't have enough slots in this context to store this threadID,
   // fill it in without leaving any holes to ensure that the VM optimizes
   // this as non-holey index properties.
-  // (Note: If `react` package is < 16.6, _threadCount is undefined.)
-  for (var i = context._threadCount | 0; i <= threadID; i++) {
+  for (var i = context._threadCount; i <= threadID; i++) {
     // We assume that this is the same as the defaultValue which might not be
     // true if we're rendering inside a secondary renderer but they are
     // secondary because these use cases are very rare.
@@ -39512,6 +39508,10 @@ function useRef(initialValue) {
   }
 }
 
+function useMutationEffect(create, inputs) {
+  warning$1(false, 'useMutationEffect does nothing on the server, because its effect cannot ' + "be encoded into the server renderer's output format. This will lead " + 'to a mismatch between the initial, non-hydrated UI and the intended ' + 'UI. To avoid this, useMutationEffect should only be used in ' + 'components that render exclusively on the client.');
+}
+
 function useLayoutEffect(create, inputs) {
   warning$1(false, 'useLayoutEffect does nothing on the server, because its effect cannot ' + "be encoded into the server renderer's output format. This will lead " + 'to a mismatch between the initial, non-hydrated UI and the intended ' + 'UI. To avoid this, useLayoutEffect should only be used in ' + 'components that render exclusively on the client.');
 }
@@ -39550,9 +39550,6 @@ function dispatchAction(componentIdentity, queue, action) {
 }
 
 function noop() {}
-function identity(fn) {
-  return fn;
-}
 
 var currentThreadID = 0;
 
@@ -39567,11 +39564,12 @@ var Dispatcher = {
   useReducer: useReducer,
   useRef: useRef,
   useState: useState,
+  useMutationEffect: useMutationEffect,
   useLayoutEffect: useLayoutEffect,
-  // Callbacks are passed as they are in the server environment.
-  useCallback: identity,
   // useImperativeMethods is not run in the server environment
   useImperativeMethods: noop,
+  // Callbacks are not run in the server environment.
+  useCallback: noop,
   // Effects are not run in the server environment.
   useEffect: noop
 };
@@ -42250,12 +42248,12 @@ if (false) {} else {
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_831a3634f66cb1dada0c ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_1a416cd7febad04d919e ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_831a3634f66cb1dada0c */ "dll-reference dll_831a3634f66cb1dada0c"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_1a416cd7febad04d919e */ "dll-reference dll_1a416cd7febad04d919e"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -43876,12 +43874,12 @@ module.exports = {
 
 /***/ "./node_modules/webpack/buildin/global.js":
 /*!******************************************************************************************************!*\
-  !*** delegated ./node_modules/webpack/buildin/global.js from dll-reference dll_831a3634f66cb1dada0c ***!
+  !*** delegated ./node_modules/webpack/buildin/global.js from dll-reference dll_1a416cd7febad04d919e ***!
   \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_831a3634f66cb1dada0c */ "dll-reference dll_831a3634f66cb1dada0c"))("./node_modules/webpack/buildin/global.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_1a416cd7febad04d919e */ "dll-reference dll_1a416cd7febad04d919e"))("./node_modules/webpack/buildin/global.js");
 
 /***/ }),
 
@@ -44748,14 +44746,14 @@ return { page: module.exports.default }});
 
 /***/ }),
 
-/***/ "dll-reference dll_831a3634f66cb1dada0c":
+/***/ "dll-reference dll_1a416cd7febad04d919e":
 /*!*******************************************!*\
-  !*** external "dll_831a3634f66cb1dada0c" ***!
+  !*** external "dll_1a416cd7febad04d919e" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_831a3634f66cb1dada0c;
+module.exports = dll_1a416cd7febad04d919e;
 
 /***/ })
 
