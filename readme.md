@@ -22,3 +22,9 @@
 - https://usehooks.com
 - https://egghead.io/courses/simplify-react-apps-with-react-hooks
 - https://github.com/tannerlinsley/use-react-hooks
+
+### GraphQL
+
+- https://www.onegraph.com/
+- https://github.com/otissv/graphql-guru-jsondb
+- https://github.com/kevzettler/gatsby-source-airtable/blob/master/src/gatsby-node.js
