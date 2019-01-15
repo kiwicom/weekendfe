@@ -1,8 +1,12 @@
 import Downshift from "downshift"
+import { Query } from "react-apollo"
 import InputField from "@kiwicom/orbit-components/lib/InputField"
 import ButtonLink from "@kiwicom/orbit-components/lib/ButtonLink"
 import Visibility from "@kiwicom/orbit-components/lib/icons/Visibility"
 import Search from "@kiwicom/orbit-components/lib/icons/Search"
+import matchSorter from "match-sorter"
+
+import countriesQuery from "../components/countries.gql"
 
 const items = [
   { value: "apple" },
@@ -12,6 +16,17 @@ const items = [
   { value: "banana" }
 ]
 
+const Item = ({ isActive, isSelected, children }) => (
+  <div
+    style={{
+      backgroundColor: isActive ? "lightgray" : "white",
+      fontWeight: isSelected ? "bold" : "normal"
+    }}
+  >
+    {children}
+  </div>
+)
+
 export default () => (
   <>
     <InputField
@@ -19,6 +34,72 @@ export default () => (
       prefix={<Search />}
       suffix={<ButtonLink transparent icon={<Visibility />} />}
     />
+    <hr />
+    <Downshift
+      onChange={selection => alert(`You selected ${selection}`)} // eslint-disable-line
+      itemToString={item => (item ? item.value : "")}
+    >
+      {({
+        getInputProps,
+        getItemProps,
+        getLabelProps,
+        isOpen,
+        inputValue,
+        highlightedIndex,
+        selectedItem,
+        openMenu
+      }) => (
+        <div>
+          <label {...getLabelProps()}>Enter a fruit</label>
+          <InputField
+            {...getInputProps({
+              // here's the interesting part
+              onFocus: openMenu
+            })}
+            placeholder="My placeholder"
+            prefix={<Search />}
+            suffix={<ButtonLink transparent icon={<Visibility />} />}
+          />
+          {isOpen ? (
+            <Query
+              query={countriesQuery}
+              variables={{
+                inputValue
+              }}
+            >
+              {({ loading, error, data: { countries = [] } = {} }) => {
+                if (loading) return <Item disabled>Loading...</Item>
+                if (error) return <Item disabled>Error! ${error.message}</Item>
+
+                const filtered = !inputValue
+                  ? countries
+                  : matchSorter(countries, inputValue, {
+                      keys: [
+                        { maxRanking: matchSorter.rankings.STARTS_WITH, key: "name" },
+                        { minRanking: matchSorter.rankings.EQUAL, key: "code" }
+                      ]
+                    })
+                return filtered.slice(0, 7).map(({ name, emoji }, index) => (
+                  <Item
+                    key={name}
+                    {...getItemProps({
+                      item: name,
+                      index,
+                      isActive: highlightedIndex === index,
+                      isSelected: selectedItem === name
+                    })}
+                  >
+                    {emoji}
+                    {name}
+                  </Item>
+                ))
+              }}
+            </Query>
+          ) : null}
+        </div>
+      )}
+    </Downshift>
+
     <hr />
     <Downshift
       onChange={selection => alert(`You selected ${selection.value}`)} // eslint-disable-line
