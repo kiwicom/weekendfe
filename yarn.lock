@@ -2141,6 +2141,11 @@ detect-libc@^1.0.2:
   resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
   integrity sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
 
+diacritic@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/diacritic/-/diacritic-0.0.2.tgz#fc2a887b5a5bc0a0a854fb614c7c2f209061ee04"
+  integrity sha1-/CqIe1pbwKCoVPthTHwvIJBh7gQ=
+
 diffie-hellman@^5.0.0:
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/diffie-hellman/-/diffie-hellman-5.0.3.tgz#40e8ee98f55a2149607146921c63e1ae5f3d2875"
@@ -3737,6 +3742,13 @@ map-visit@^1.0.0:
   integrity sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
   dependencies:
     object-visit "^1.0.0"
+
+match-sorter@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/match-sorter/-/match-sorter-2.3.0.tgz#99eaf386689f75bf976f6bbf7f49afb9a7ffecc8"
+  integrity sha512-0/F1ezfjs5vegTvdH0sJEDrIi+w7wvUeDW/yqLMsK6jQWgNNJRv8jYCLBc8QrCxQNpSEpei6vrOcnJwAbnYhkw==
+  dependencies:
+    diacritic "0.0.2"
 
 maximatch@^0.1.0:
   version "0.1.0"
