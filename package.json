@@ -20,6 +20,7 @@
     "@kiwicom/orbit-components": "^0.24.0",
     "@zeit/next-bundle-analyzer": "^0.1.2",
     "apollo-boost": "^0.1.23",
+    "downshift": "^3.1.12",
     "graphql": "^14.0.2",
     "graphql-tag": "^2.10.0",
     "isomorphic-unfetch": "^3.0.0",
