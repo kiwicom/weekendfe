@@ -16,12 +16,13 @@ const items = [
   { value: "banana" }
 ]
 
-const Item = ({ isActive, isSelected, children }) => (
+const Item = ({ isActive, isSelected, children, ...props }) => (
   <div
     style={{
       backgroundColor: isActive ? "lightgray" : "white",
       fontWeight: isSelected ? "bold" : "normal"
     }}
+    {...props}
   >
     {children}
   </div>
