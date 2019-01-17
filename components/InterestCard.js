@@ -56,7 +56,7 @@ const InterestCard = ({ title, description, icon, checked, value }) => (
         <Text>{description}</Text>
       </StyledContent>
       <StyledRadio>
-        <Radio checked={checked} value={value} />
+        <Radio checked={checked} value={value} readOnly />
       </StyledRadio>
     </Stack>
   </StyledInterestCard>

@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
 GlobalStyle.defaultProps = {
   theme: defaultTheme
 }
+
 const foundation = {
   palette: {
     product: {

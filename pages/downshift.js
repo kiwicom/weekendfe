@@ -22,6 +22,7 @@ import Slider from "../components/Slider"
 const NomadForm = styled.div`
   max-width: 696px;
 `
+
 const StyledOrigin = styled.div`
   max-width: 640px;
 `
@@ -30,10 +31,10 @@ const StyledButtons = styled.div`
   max-width: 640px;
 `
 class DownShift extends React.Component {
-  state = { selectedDate: null, datePickerOpened: false }
+  state = { selectedDate: null, datePickerOpened: false, placePickerValue: "" }
 
   handleOnDateSelected = ({ selected, selectable, date }) => {
-    this.setState(state => ({ selectedDate: date }))
+    this.setState({ selectedDate: date })
   }
 
   openDatePicker = () => {
@@ -44,9 +45,16 @@ class DownShift extends React.Component {
     this.setState({ datePickerOpened: false })
   }
 
+  handleInputValue = inputValue => {
+    this.setState({ placePickerValue: inputValue })
+  }
+
+  openSlider = () => {
+    this.setState({ isOpenSlider: true })
+  }
+
   render() {
-    const { selectedDate, datePickerOpened } = this.state
-    console.log(selectedDate)
+    const { selectedDate, datePickerOpened, placePickerValue, isOpenSlider } = this.state
     return (
       <>
         <ContentContainer>
@@ -99,7 +107,8 @@ class DownShift extends React.Component {
                   <DatePicker
                     label="Departure"
                     onFocus={this.openDatePicker}
-                    onBlur={this.closeDatePicker}
+                    // TODO: onBlur or clickOutside ref
+                    // onBlur={this.closeDatePicker}
                     shown={datePickerOpened}
                     currentDate={selectedDate}
                     onDateSelected={this.handleOnDateSelected}
@@ -116,9 +125,14 @@ class DownShift extends React.Component {
             </Heading>
             <Stack spaceAfter="medium">
               <Stack direction="row">
-                <PlacePicker />
-                <Slider />
-                <InputField inlineLabel label="Length" />
+                <PlacePicker inputValue={placePickerValue} setInputValue={this.handleInputValue} />
+                <Slider
+                  isOpen={isOpenSlider}
+                  onFocus={this.openSlider}
+                  defaultValues={[1, 8]}
+                  onChange={(from, to) => console.log(`${from}, ${to}`)}
+                  // TODO: onBlur or clickOutside ref
+                />
                 <Button type="secondary" disabled iconLeft={<CloseCircle />} />
               </Stack>
               <Stack direction="row">

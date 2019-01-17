@@ -43,28 +43,36 @@ const ResultsList = styled.div`
   box-shadow: ${({ theme }) => theme.orbit.boxShadowElevatedLevel1};
 `
 
-const PlacePicker = () => (
+const PlacePicker = props => (
   <StyledPlacePicker>
     <Downshift
-      onChange={selection => console.log(selection)} // eslint-disable-line
       itemToString={item => (item ? item.value : "")}
+      inputValue={props.inputValue}
+      onStateChange={props.onStateChange}
+      onChange={props.onChange}
+      setInputValue={props.setInputValue}
     >
       {({
         getInputProps,
         getItemProps,
         isOpen,
         inputValue,
-        selectItem,
         selectedItem,
-        openMenu
+        openMenu,
+        clearSelection
       }) => (
-        <div style={{ position: "relative" }}>
+        <InputWrapper>
           <InputField
             {...getInputProps({
               // here's the interesting part
               onFocus: openMenu,
               value: selectedItem
             })}
+            onChange={e => {
+              if (e.target.value === "") {
+                clearSelection()
+              }
+            }}
             inlineLabel
             label="Via"
           />
@@ -100,14 +108,13 @@ const PlacePicker = () => (
                       })}
                     >
                       <ListChoice
+                        key={name}
+                        icon={<City />}
+                        selectable
+                        selected={selectedItem === name}
+                        title={name}
                         {...getItemProps({
-                          item: name,
-                          key: name,
-                          title: name,
-                          selected: selectedItem === name,
-                          selectable: true,
-                          icon: <City />,
-                          onClick: selectItem
+                          item: name
                         })}
                       />
                     </div>
@@ -116,7 +123,7 @@ const PlacePicker = () => (
               </Query>
             </ResultsList>
           ) : null}
-        </div>
+        </InputWrapper>
       )}
     </Downshift>
   </StyledPlacePicker>

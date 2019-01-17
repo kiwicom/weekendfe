@@ -8,6 +8,7 @@ import InputField from "@kiwicom/orbit-components/lib/InputField"
 import ChevronLeft from "@kiwicom/orbit-components/lib/icons/ChevronLeft"
 import ChevronRight from "@kiwicom/orbit-components/lib/icons/ChevronRight"
 import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
+import { format } from "date-fns"
 
 const monthNamesShort = [
   "Jan",
@@ -104,9 +105,16 @@ const StyledCalendarWeekday = styled.div`
 
 // TODO: range selected if wanted
 
-const DatePicker = ({ label, onFocus, onBlur, onDateSelected, currentDate, shown }) => (
+const DatePicker = ({ label, onFocus, onBlur, onDateSelected, currentDate = "", shown }) => (
   <StyledDatePickerWrapper>
-    <InputField inlineLabel label={label} onFocus={onFocus} onBlur={onBlur} value={currentDate} />
+    <InputField
+      inlineLabel
+      label={label}
+      onFocus={onFocus}
+      onBlur={onBlur}
+      // TODO: do date formation
+      value={format(currentDate, "MM/dd/yyyy")}
+    />
     {shown && (
       <Dayzed
         onDateSelected={onDateSelected}
