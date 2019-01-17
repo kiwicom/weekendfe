@@ -1,154 +1,152 @@
-import Downshift from "downshift"
-import { Query } from "react-apollo"
+import * as React from "react"
 import InputField from "@kiwicom/orbit-components/lib/InputField"
-import ButtonLink from "@kiwicom/orbit-components/lib/ButtonLink"
-import Visibility from "@kiwicom/orbit-components/lib/icons/Visibility"
+import Heading from "@kiwicom/orbit-components/lib/Heading"
+import Stack from "@kiwicom/orbit-components/lib/Stack"
+import Checkbox from "@kiwicom/orbit-components/lib/Checkbox"
+import Button from "@kiwicom/orbit-components/lib/Button"
+import CloseCircle from "@kiwicom/orbit-components/lib/icons/CloseCircle"
+import Cocktail from "@kiwicom/orbit-components/lib/icons/Cocktail"
+import Meal from "@kiwicom/orbit-components/lib/icons/Meal"
+import Sightseeing from "@kiwicom/orbit-components/lib/icons/Sightseeing"
+import GenderWoman from "@kiwicom/orbit-components/lib/icons/GenderWoman"
+import Plus from "@kiwicom/orbit-components/lib/icons/Plus"
 import Search from "@kiwicom/orbit-components/lib/icons/Search"
-import matchSorter from "match-sorter"
+import styled from "styled-components"
 
-import countriesQuery from "../components/countries.gql"
+import ContentContainer from "../components/ContentContainer"
+import PlacePicker from "../components/PlacePicker"
+import InterestCard from "../components/InterestCard"
+import DatePicker from "../components/DatePicker"
+import Slider from "../components/Slider"
 
-const items = [
-  { value: "apple" },
-  { value: "pear" },
-  { value: "orange" },
-  { value: "grape" },
-  { value: "banana" }
-]
+const NomadForm = styled.div`
+  max-width: 696px;
+`
+const StyledOrigin = styled.div`
+  max-width: 640px;
+`
 
-const Item = ({ isActive, isSelected, children }) => (
-  <div
-    style={{
-      backgroundColor: isActive ? "lightgray" : "white",
-      fontWeight: isSelected ? "bold" : "normal"
-    }}
-  >
-    {children}
-  </div>
-)
+const StyledButtons = styled.div`
+  max-width: 640px;
+`
+class DownShift extends React.Component {
+  state = { selectedDate: null, datePickerOpened: false }
 
-export default () => (
-  <>
-    <InputField
-      placeholder="My placeholder"
-      prefix={<Search />}
-      suffix={<ButtonLink transparent icon={<Visibility />} />}
-    />
-    <hr />
-    <Downshift
-      onChange={selection => alert(`You selected ${selection}`)} // eslint-disable-line
-      itemToString={item => (item ? item.value : "")}
-    >
-      {({
-        getInputProps,
-        getItemProps,
-        getLabelProps,
-        isOpen,
-        inputValue,
-        highlightedIndex,
-        selectedItem,
-        openMenu
-      }) => (
-        <div>
-          <label {...getLabelProps()}>Enter a fruit</label>
-          <InputField
-            {...getInputProps({
-              // here's the interesting part
-              onFocus: openMenu
-            })}
-            placeholder="My placeholder"
-            prefix={<Search />}
-            suffix={<ButtonLink transparent icon={<Visibility />} />}
-          />
-          {isOpen ? (
-            <Query
-              query={countriesQuery}
-              variables={{
-                inputValue
-              }}
-            >
-              {({ loading, error, data: { countries = [] } = {} }) => {
-                if (loading) return <Item disabled>Loading...</Item>
-                if (error) return <Item disabled>Error! ${error.message}</Item>
+  handleOnDateSelected = ({ selected, selectable, date }) => {
+    this.setState(state => ({ selectedDate: date }))
+  }
 
-                const filtered = !inputValue
-                  ? countries
-                  : matchSorter(countries, inputValue, {
-                      keys: [
-                        { maxRanking: matchSorter.rankings.STARTS_WITH, key: "name" },
-                        { minRanking: matchSorter.rankings.EQUAL, key: "code" }
-                      ]
-                    })
-                return filtered.slice(0, 7).map(({ name, emoji }, index) => (
-                  <Item
-                    key={name}
-                    {...getItemProps({
-                      item: name,
-                      index,
-                      isActive: highlightedIndex === index,
-                      isSelected: selectedItem === name
-                    })}
-                  >
-                    {emoji}
-                    {name}
-                  </Item>
-                ))
-              }}
-            </Query>
-          ) : null}
-        </div>
-      )}
-    </Downshift>
+  openDatePicker = () => {
+    this.setState({ datePickerOpened: true })
+  }
 
-    <hr />
-    <Downshift
-      onChange={selection => alert(`You selected ${selection.value}`)} // eslint-disable-line
-      itemToString={item => (item ? item.value : "")}
-    >
-      {({
-        getInputProps,
-        getItemProps,
-        getLabelProps,
-        isOpen,
-        inputValue,
-        highlightedIndex,
-        selectedItem,
-        openMenu
-      }) => (
-        <div>
-          <label {...getLabelProps()}>Enter a fruit</label>
-          <InputField
-            {...getInputProps({
-              // here's the interesting part
-              onFocus: openMenu
-            })}
-            placeholder="My placeholder"
-            prefix={<Search />}
-            suffix={<ButtonLink transparent icon={<Visibility />} />}
-          />
-          {isOpen ? (
-            <div>
-              {items
-                .filter(item => !inputValue || item.value.includes(inputValue))
-                .map((item, index) => (
-                  <div
-                    {...getItemProps({
-                      key: item.value,
-                      index,
-                      item,
-                      style: {
-                        backgroundColor: highlightedIndex === index ? "lightgray" : "white",
-                        fontWeight: selectedItem === item ? "bold" : "normal"
-                      }
-                    })}
-                  >
-                    {item.value}
-                  </div>
-                ))}
-            </div>
-          ) : null}
-        </div>
-      )}
-    </Downshift>
-  </>
-)
+  closeDatePicker = () => {
+    this.setState({ datePickerOpened: false })
+  }
+
+  render() {
+    const { selectedDate, datePickerOpened } = this.state
+    console.log(selectedDate)
+    return (
+      <>
+        <ContentContainer>
+          <Heading type="title1" spaceAfter="largest">
+            What are you interested in?
+          </Heading>
+          <Stack
+            direction="column"
+            spacing="natural"
+            spaceAfter="largest"
+            desktop={{ direction: "row", spacing: "extraLoose" }}
+          >
+            <InterestCard
+              title="Party life"
+              description="Type something"
+              value="party"
+              checked
+              icon={<Cocktail />}
+            />
+            <InterestCard
+              title="Gastronomy"
+              description="Type something"
+              value="gastronomy"
+              checked
+              icon={<Meal />}
+            />
+            <InterestCard
+              title="Sightseeing"
+              description="Type something"
+              value="sightseeing"
+              checked
+              icon={<Sightseeing />}
+            />
+            <InterestCard
+              title="Hookers"
+              description="Type something"
+              value="hookers"
+              checked
+              icon={<GenderWoman />}
+            />
+          </Stack>
+          <NomadForm>
+            <StyledOrigin>
+              <Heading type="title1" spaceAfter="largest">
+                What destinations do you want to visit?
+              </Heading>
+              <Stack spaceAfter="largest">
+                <Stack direction="row">
+                  <InputField inlineLabel label="From" />
+                  <DatePicker
+                    label="Departure"
+                    onFocus={this.openDatePicker}
+                    onBlur={this.closeDatePicker}
+                    shown={datePickerOpened}
+                    currentDate={selectedDate}
+                    onDateSelected={this.handleOnDateSelected}
+                  />
+                </Stack>
+                <Stack direction="row">
+                  <Checkbox label="Return to origin" />
+                  <Checkbox label="Set return date" />
+                </Stack>
+              </Stack>
+            </StyledOrigin>
+            <Heading type="title2" spaceAfter="medium">
+              Places to visit
+            </Heading>
+            <Stack spaceAfter="medium">
+              <Stack direction="row">
+                <PlacePicker />
+                <Slider />
+                <InputField inlineLabel label="Length" />
+                <Button type="secondary" disabled iconLeft={<CloseCircle />} />
+              </Stack>
+              <Stack direction="row">
+                <InputField inlineLabel label="Via" />
+                <InputField inlineLabel label="Length" />
+                <Button type="secondary" disabled iconLeft={<CloseCircle />} />
+              </Stack>
+              <Stack direction="row">
+                <InputField inlineLabel label="Via" />
+                <InputField inlineLabel label="Length" />
+                <Button type="secondary" iconLeft={<CloseCircle />} />
+              </Stack>
+            </Stack>
+            <StyledButtons>
+              <Stack direction="row">
+                <Button type="secondary" iconLeft={<Plus />} block>
+                  Add destination
+                </Button>
+                <Button iconLeft={<Search />} block>
+                  Search
+                </Button>
+              </Stack>
+            </StyledButtons>
+          </NomadForm>
+        </ContentContainer>
+      </>
+    )
+  }
+}
+
+export default DownShift
