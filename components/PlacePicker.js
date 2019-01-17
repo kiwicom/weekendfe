@@ -61,7 +61,8 @@ const PlacePicker = props => (
         openMenu,
         clearSelection
       }) => (
-        <InputWrapper>
+        /* TODO: use InputWrapper, needs getRootProps */
+        <div style={{ position: "relative" }}>
           <InputField
             {...getInputProps({
               // here's the interesting part
@@ -123,7 +124,7 @@ const PlacePicker = props => (
               </Query>
             </ResultsList>
           ) : null}
-        </InputWrapper>
+        </div>
       )}
     </Downshift>
   </StyledPlacePicker>
