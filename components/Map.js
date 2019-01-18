@@ -42,10 +42,8 @@ function Map({ points }) {
       }
 
       const markers = points.map(point => {
-        // create a HTML element for each feature
         const el = document.createElement("div") // eslint-disable-line
         el.className = "marker"
-        // make a marker for each feature and add to the map
         const marker = new mapboxgl.Marker(el)
         marker.setLngLat(point.coordinates).addTo(mapObject)
         setTimeout(() => {
