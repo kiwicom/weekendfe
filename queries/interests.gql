@@ -1,0 +1,11 @@
+# https://weekend-api.now.sh/
+
+query {
+  interests(city: "Brno", country: "CZ", interest: "drinks") {
+    img
+    score
+    name
+    category
+    address
+  }
+}
