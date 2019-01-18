@@ -1,6 +1,8 @@
 import Document, { Head, Main, NextScript } from "next/document"
 import { ServerStyleSheet } from "styled-components"
 
+import Body from "../components/Body"
+
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet()
@@ -23,14 +25,15 @@ export default class MyDocument extends Document {
       <html lang="en-GB">
         <Head>
           <link
-            href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700"
+            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700"
             rel="stylesheet"
           />
+          <link href="https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css" rel="stylesheet" />
         </Head>
-        <body className="brno-js-weekend">
+        <Body>
           <Main />
           <NextScript />
-        </body>
+        </Body>
       </html>
     )
   }
