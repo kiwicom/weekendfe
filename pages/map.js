@@ -1,52 +1,53 @@
-import React from "react"
-import mapboxgl from "mapbox-gl/dist/mapbox-gl"
+import React, { useState } from "react"
+import dynamic from "next/dynamic"
+import Button from "@kiwicom/orbit-components/lib/Button"
 
-mapboxgl.accessToken =
-  "k.eyJ1IjoidmVwb3IiLCJhIjoiY2pyMHMzMDMyMDF1NTQ3bms1dGhiZ2VpZCJ9.p4hbla0QAUx3Iqe_imkOJA"
+const DynamicMap = dynamic(() => import("./../components/Map"), {
+  loading: () => <p>Loading...</p>,
+  ssr: false
+})
 
-class Map extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      lng: 5,
-      lat: 34,
-      zoom: 1.5
+const points = {
+  a: [
+    {
+      coordinates: [-77.032, 38.913],
+      title: "a",
+      description: "aa"
+    },
+    {
+      coordinates: [-122.414, 37.776],
+      title: "b",
+      description: "bb"
+    },
+    {
+      coordinates: [-124.414, 38.776],
+      title: "c",
+      description: "x"
     }
-  }
-
-  componentDidMount() {
-    const { lng, lat, zoom } = this.state
-
-    const map = new mapboxgl.Map({
-      container: this.mapContainer,
-      style: "mapbox://styles/mapbox/streets-v9",
-      center: [lng, lat],
-      zoom
-    })
-
-    map.on("move", () => {
-      const { lang, latt } = map.getCenter()
-
-      this.setState({
-        lng: lang.toFixed(4),
-        lat: latt.toFixed(4),
-        zoom: map.getZoom().toFixed(2)
-      })
-    })
-  }
-
-  render() {
-    const { lng, lat, zoom } = this.state
-
-    return (
-      <div>
-        <div className="inline-block absolute top left mt12 ml12 bg-darken75 color-white z1 py6 px12 round-full txt-s txt-bold">
-          <div>{`Longitude: ${lng} Latitude: ${lat} Zoom: ${zoom}`}</div>
-        </div>
-        <div ref={el => (this.mapContainer = el)} className="absolute top right left bottom" />
-      </div>
-    )
-  }
+  ],
+  b: [
+    {
+      coordinates: [-129.414, 39.776],
+      title: "b",
+      description: "bb"
+    },
+    {
+      coordinates: [-124.414, 38.776],
+      title: "c",
+      description: "x"
+    }
+  ]
 }
 
-export default Map
+const MapPage = function() {
+  const [pointsId, setPointsId] = useState("a")
+  return (
+    <div>
+      <DynamicMap points={points[pointsId]} />
+      <Button onClick={() => setPointsId("a")}>A</Button>
+      <Button onClick={() => setPointsId("b")}>B</Button>
+    </div>
+  )
+}
+
+export default MapPage
