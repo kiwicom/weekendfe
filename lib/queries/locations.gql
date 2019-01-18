@@ -1,0 +1,22 @@
+# https://weekend-api.now.sh/
+
+query {
+  locations(query: "Brno", limit: 20) {
+    id
+    iid
+    code
+    name
+    coords {
+      lat
+      lon
+    }
+    slug
+    timezone
+    type
+    city {
+      id
+      name
+      country
+    }
+  }
+}

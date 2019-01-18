@@ -15,7 +15,8 @@ const StyledInterestCard = styled.div`
   border-radius: ${({ theme }) => theme.orbit.borderRadiusNormal};
   padding: ${({ theme }) => theme.orbit.spaceMedium};
   box-shadow: 0 2px 4px 0 rgba(23, 27, 30, 0.1);
-  transition: box-shadow ${({ theme }) => theme.orbit.durationFast} ease-in-out,
+  transition: box-shadow ${({ theme }) => theme.orbit.durationFast}
+      ease-in-out,
     transform ${({ theme }) => theme.orbit.durationFast} ease-in-out;
   :hover,
   :focus {
@@ -47,8 +48,15 @@ const StyledRadio = styled.div`
     width: auto;
   }
 `
-const InterestCard = ({ title, description, icon, checked, value }) => (
-  <StyledInterestCard>
+const InterestCard = ({
+  title,
+  description,
+  icon,
+  checked,
+  value,
+  onChange
+}) => (
+  <StyledInterestCard onClick={() => onChange({ target: { value } })}>
     <Stack direction="row" justify="between" align="center">
       <StyledIcon>{icon}</StyledIcon>
       <StyledContent>
@@ -56,7 +64,12 @@ const InterestCard = ({ title, description, icon, checked, value }) => (
         <Text>{description}</Text>
       </StyledContent>
       <StyledRadio>
-        <Radio checked={checked} value={value} readOnly />
+        <Radio
+          checked={checked}
+          value={value}
+          name="interest"
+          onChange={onChange}
+        />
       </StyledRadio>
     </Stack>
   </StyledInterestCard>
