@@ -1,8 +1,8 @@
+import Airplane from "@kiwicom/orbit-components/lib/icons/Airplane"
+import mapboxgl from "mapbox-gl/dist/mapbox-gl"
 import React, { useEffect, useRef, useState } from "react"
 import ReactDOM from "react-dom"
-import mapboxgl from "mapbox-gl/dist/mapbox-gl"
 import styled from "styled-components"
-import Airplane from "@kiwicom/orbit-components/lib/icons/Airplane"
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoibWljaGFlbGtpd2kiLCJhIjoiY2l3aHRiN2ZqMDAycjJ6cXduNDU5djkweCJ9.XuamwcGDtyovJEMaSWtFkg"
