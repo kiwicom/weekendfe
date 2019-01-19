@@ -25,7 +25,15 @@ const monthNamesShort = [
   "Dec"
 ]
 
-const weekdayNamesShort = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+const weekdayNamesShort = [
+  "Sun",
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thu",
+  "Fri",
+  "Sat"
+]
 
 const StyledDatePickerWrapper = styled.div`
   position: relative;
@@ -33,7 +41,10 @@ const StyledDatePickerWrapper = styled.div`
 `
 const StyledDatePicker = styled.div`
   position: absolute;
-  top: ${({ theme }) => `calc(${theme.orbit.heightInputNormal} + ${theme.orbit.spaceXXSmall})`};
+  top: ${({ theme }) =>
+    `calc(${theme.orbit.heightInputNormal} + ${
+      theme.orbit.spaceXXSmall
+    })`};
   z-index: 999;
   box-sizing: border-box;
   background: ${({ theme }) => theme.orbit.paletteWhite};
@@ -55,14 +66,18 @@ const StyledDay = styled.button`
   line-height: 50px;
   font-size: 16px;
   color: ${({ selectable, theme }) =>
-    selectable ? theme.orbit.paletteInkNormal : theme.orbit.paletteInkLighter};
+    selectable
+      ? theme.orbit.paletteInkNormal
+      : theme.orbit.paletteInkLighter};
   font-weight: 700;
   border: 0;
   padding: 0;
-  background: ${({ selected, theme }) => selected && theme.orbit.paletteBlueNormal};
+  background: ${({ selected, theme }) =>
+    selected && theme.orbit.paletteBlueNormal};
   border-radius: ${({ theme }) => theme.orbit.borderRadiusNormal};
 
-  color: ${({ selected, theme }) => selected && theme.orbit.paletteWhite};
+  color: ${({ selected, theme }) =>
+    selected && theme.orbit.paletteWhite};
 
   ${({ selectable, selected, theme }) =>
     selectable &&
@@ -105,7 +120,14 @@ const StyledCalendarWeekday = styled.div`
 
 // TODO: range selected if wanted
 
-const DatePicker = ({ label, onFocus, onBlur, onDateSelected, currentDate = "", shown }) => (
+const DatePicker = ({
+  label,
+  onFocus,
+  onBlur,
+  onDateSelected,
+  currentDate = "",
+  shown
+}) => (
   <StyledDatePickerWrapper>
     <InputField
       inlineLabel
@@ -120,7 +142,12 @@ const DatePicker = ({ label, onFocus, onBlur, onDateSelected, currentDate = "", 
         onDateSelected={onDateSelected}
         selected={currentDate}
         monthsToDisplay={2}
-        render={({ calendars, getBackProps, getForwardProps, getDateProps }) => {
+        render={({
+          calendars,
+          getBackProps,
+          getForwardProps,
+          getDateProps
+        }) => {
           if (calendars.length) {
             return (
               <StyledDatePicker>
@@ -140,16 +167,21 @@ const DatePicker = ({ label, onFocus, onBlur, onDateSelected, currentDate = "", 
                 </Stack>
                 <Stack direction="row" spacing="extraLoose">
                   {calendars.map(calendar => (
-                    <StyledCalendarPart key={`${calendar.month}${calendar.year}`}>
+                    <StyledCalendarPart
+                      key={`${calendar.month}${calendar.year}`}
+                    >
                       <StyledCalendarYear>
                         <Text align="center" weight="bold">
-                          {monthNamesShort[calendar.month]} {calendar.year}
+                          {monthNamesShort[calendar.month]}{" "}
+                          {calendar.year}
                         </Text>
                       </StyledCalendarYear>
                       <StyledCalendarWeek>
                         {weekdayNamesShort.map(weekday => (
                           <StyledCalendarWeekday
-                            key={`${calendar.month}${calendar.year}${weekday}`}
+                            key={`${calendar.month}${
+                              calendar.year
+                            }${weekday}`}
                           >
                             <Text>{weekday}</Text>
                           </StyledCalendarWeekday>
@@ -157,11 +189,17 @@ const DatePicker = ({ label, onFocus, onBlur, onDateSelected, currentDate = "", 
                       </StyledCalendarWeek>
                       {calendar.weeks.map((week, weekIndex) =>
                         week.map((dateObj, index) => {
-                          const key = `${calendar.month}${calendar.year}${weekIndex}${index}`
+                          const key = `${calendar.month}${
+                            calendar.year
+                          }${weekIndex}${index}`
                           if (!dateObj) {
                             return <StyledDay key={key} />
                           }
-                          const { date, selected, selectable } = dateObj
+                          const {
+                            date,
+                            selected,
+                            selectable
+                          } = dateObj
                           return (
                             <StyledDay
                               key={key}

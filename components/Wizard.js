@@ -12,6 +12,8 @@ StyledWizard.defaultProps = {
   theme: defaultTheme
 }
 
-const Wizard = ({ active }) => <StyledWizard>this is the wizard</StyledWizard>
+const Wizard = ({ active }) => (
+  <StyledWizard>this is the wizard</StyledWizard>
+)
 
 export default Wizard

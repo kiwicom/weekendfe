@@ -2,12 +2,10 @@ import styled from "styled-components"
 import ListChoice from "@kiwicom/orbit-components/lib/ListChoice"
 import City from "@kiwicom/orbit-components/lib/icons/City"
 import InputField from "@kiwicom/orbit-components/lib/InputField"
-import Alert from "@kiwicom/orbit-components/lib/Alert"
-import Loading from "@kiwicom/orbit-components/lib/Loading"
 import Downshift from "downshift"
 import matchSorter from "match-sorter"
 
-import Query from "../components/query"
+import Query from "./query"
 import countriesQuery from "../queries/countries.gql"
 
 const StyledPlacePicker = styled.div`
@@ -72,11 +70,7 @@ const PlacePicker = ({
                   uri: "https://countries.trevorblades.com/"
                 }}
               >
-                {({
-                  loading,
-                  error,
-                  data: { countries = [] } = {}
-                }) => {
+                {({ data: { countries = [] } = {} }) => {
                   const filtered = !inputValue
                     ? countries
                     : matchSorter(countries, inputValue, {
