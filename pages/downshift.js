@@ -1,5 +1,4 @@
-import * as React from "react"
-import InputField from "@kiwicom/orbit-components/lib/InputField"
+import { useState, useEffect, useRef } from "react"
 import Heading from "@kiwicom/orbit-components/lib/Heading"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Checkbox from "@kiwicom/orbit-components/lib/Checkbox"
@@ -14,6 +13,7 @@ import PlacePicker from "../components/PlacePicker"
 import DatePicker from "../components/DatePicker"
 import Slider from "../components/Slider"
 import Interests from "../components/Interests"
+import Debug from "../components/debug"
 
 const NomadForm = styled.div`
   max-width: 696px;
@@ -26,126 +26,186 @@ const StyledOrigin = styled.div`
 const StyledButtons = styled.div`
   max-width: 640px;
 `
-class DownShift extends React.Component {
-  state = {
-    selectedDate: null,
-    datePickerOpened: false,
-    placePickerValue: ""
+const TopPart = () => {
+  const [tripFrom, setFrom] = useState("Czech Republic")
+  const [selectedDate, setDate] = useState(null)
+  const [datePickerOpened, setDatePickerVisibility] = useState(false)
+
+  const selectDate = date => {
+    setDate(date.date)
+    setDatePickerVisibility(false)
   }
 
-  handleOnDateSelected = ({ selected, selectable, date }) => {
-    this.setState({ selectedDate: date })
-  }
+  const openDatePicker = () => setDatePickerVisibility(true)
 
-  openDatePicker = () => {
-    this.setState({ datePickerOpened: true })
-  }
-
-  closeDatePicker = () => {
-    this.setState({ datePickerOpened: false })
-  }
-
-  handleInputValue = inputValue => {
-    this.setState({ placePickerValue: inputValue })
-  }
-
-  openSlider = () => {
-    this.setState({ isOpenSlider: true })
-  }
-
-  render() {
-    const {
-      selectedDate,
-      datePickerOpened,
-      placePickerValue,
-      isOpenSlider
-    } = this.state
-
-    return (
-      <>
-        <ContentContainer>
-          <Heading type="title1" spaceAfter="largest">
-            What are you interested in?
-          </Heading>
-          <Interests />
-          <NomadForm>
-            <StyledOrigin>
-              <Heading type="title1" spaceAfter="largest">
-                What destinations do you want to visit?
-              </Heading>
-              <Stack spaceAfter="largest">
-                <Stack direction="row">
-                  <InputField inlineLabel label="From" />
-                  <DatePicker
-                    label="Departure"
-                    onFocus={this.openDatePicker}
-                    // TODO: onBlur or clickOutside ref
-                    // onBlur={this.closeDatePicker}
-                    shown={datePickerOpened}
-                    currentDate={selectedDate}
-                    onDateSelected={this.handleOnDateSelected}
-                  />
-                </Stack>
-                <Stack direction="row">
-                  <Checkbox label="Return to origin" />
-                  <Checkbox label="Set return date" />
-                </Stack>
-              </Stack>
-            </StyledOrigin>
-            <Heading type="title2" spaceAfter="medium">
-              Places to visit
-            </Heading>
-            <Stack spaceAfter="medium">
-              <Stack direction="row">
-                <PlacePicker
-                  inputValue={placePickerValue}
-                  setInputValue={this.handleInputValue}
-                />
-                <Slider
-                  isOpen={isOpenSlider}
-                  onFocus={this.openSlider}
-                  defaultValues={[1, 8]}
-                  onChange={(from, to) =>
-                    console.log(`${from}, ${to}`)
-                  }
-                  // TODO: onBlur or clickOutside ref
-                />
-                <Button
-                  type="secondary"
-                  disabled
-                  iconLeft={<CloseCircle />}
-                />
-              </Stack>
-              <Stack direction="row">
-                <InputField inlineLabel label="Via" />
-                <InputField inlineLabel label="Length" />
-                <Button
-                  type="secondary"
-                  disabled
-                  iconLeft={<CloseCircle />}
-                />
-              </Stack>
-              <Stack direction="row">
-                <InputField inlineLabel label="Via" />
-                <InputField inlineLabel label="Length" />
-                <Button type="secondary" iconLeft={<CloseCircle />} />
-              </Stack>
-            </Stack>
-            <StyledButtons>
-              <Stack direction="row">
-                <Button type="secondary" iconLeft={<Plus />} block>
-                  Add destination
-                </Button>
-                <Button iconLeft={<Search />} block>
-                  Search
-                </Button>
-              </Stack>
-            </StyledButtons>
-          </NomadForm>
-        </ContentContainer>
-      </>
-    )
-  }
+  return (
+    <Stack direction="row">
+      <PlacePicker
+        label="From"
+        defaultValue={tripFrom}
+        onChange={setFrom}
+      />
+      <DatePicker
+        label="Departure"
+        onFocus={openDatePicker}
+        // TODO: onBlur or clickOutside ref
+        // onBlur={closeDatePicker}
+        shown={datePickerOpened}
+        currentDate={selectedDate}
+        onDateSelected={selectDate}
+      />
+    </Stack>
+  )
 }
+
+// Hook
+function useOnClickOutside(ref, handler) {
+  useEffect(() => {
+    const listener = event => {
+      // Do nothing if clicking ref's element or descendent elements
+      if (!ref.current || ref.current.contains(event.target)) {
+        return
+      }
+
+      handler(event)
+    }
+
+    document.addEventListener("mousedown", listener)
+    document.addEventListener("touchstart", listener)
+
+    return () => {
+      document.removeEventListener("mousedown", listener)
+      document.removeEventListener("touchstart", listener)
+    }
+  }, []) // Empty array ensures that effect is only run on mount and unmount
+}
+
+const PlaceToVisit = ({
+  place,
+  days = [2, 8],
+  changeDays,
+  changePlace,
+  onRemoveClick
+}) => {
+  // const [tripFrom, setFrom] = useState(place)
+  const [tripDays, setDaysState] = useState(days)
+
+  const setDays = daysChanged => {
+    setDaysState(daysChanged)
+    if (changeDays) changeDays(daysChanged)
+  }
+
+  // Create a ref that we add to the element for which we want to detect outside clicks
+  const ref = useRef()
+  // State for our slider
+  const [isOpenSlider, setSliderVisibility] = useState(false)
+  // Call hook passing in the ref and a function to call on outside click
+  useOnClickOutside(ref, () => setSliderVisibility(false))
+
+  return (
+    <Stack direction="row">
+      <PlacePicker defaultValue={place} onChange={changePlace} />
+      <Slider
+        openRef={ref}
+        isOpen={isOpenSlider}
+        onFocus={() => setSliderVisibility(true)}
+        defaultValues={tripDays}
+        onChange={(from, to) => setDays([from, to])}
+      />
+      <Button
+        type="secondary"
+        iconLeft={<CloseCircle />}
+        disabled={!onRemoveClick}
+        onClick={onRemoveClick}
+      />
+    </Stack>
+  )
+}
+
+const PlacesToVisit = () => {
+  const defaultDays = [2, 5]
+  const [places, changePlaces] = useState([
+    ["Australia", defaultDays]
+  ])
+  const addPlace = () => changePlaces(places.concat([[null, [1, 3]]]))
+  const removePlace = indexToRemove => () =>
+    changePlaces(
+      places.filter((val, index) => index !== indexToRemove)
+    )
+  const changeDays = index => days => {
+    const newPlaces = places.concat()
+    newPlaces[index][1] = days
+    changePlaces(newPlaces)
+  }
+  const changePlace = index => place => {
+    const newPlaces = places.concat()
+    newPlaces[index][0] = place
+    changePlaces(newPlaces)
+  }
+
+  return (
+    <>
+      <Heading type="title2" spaceAfter="medium">
+        Places to visit
+      </Heading>
+      <Stack spaceAfter="medium">
+        {places.map(([place, days], i) => (
+          <>
+            <PlaceToVisit
+              onRemoveClick={i !== 0 && removePlace(i)}
+              place={place}
+              days={days}
+              changeDays={changeDays(i)}
+              changePlace={changePlace(i)}
+            />
+          </>
+        ))}
+      </Stack>
+      <StyledButtons>
+        <Stack direction="row">
+          <Button
+            type="secondary"
+            iconLeft={<Plus />}
+            block
+            onClick={addPlace}
+          >
+            Add destination
+          </Button>
+          <Button iconLeft={<Search />} block>
+            Search
+          </Button>
+        </Stack>
+      </StyledButtons>
+      <hr />
+      <Debug {...places} />
+    </>
+  )
+}
+
+const DownShift = () => (
+  <>
+    <ContentContainer>
+      <Heading type="title1" spaceAfter="largest">
+        What are you interested in?
+      </Heading>
+      <Interests />
+      <NomadForm>
+        <StyledOrigin>
+          <Heading type="title1" spaceAfter="largest">
+            What destinations do you want to visit?
+          </Heading>
+          <Stack spaceAfter="largest">
+            <TopPart />
+            <Stack direction="row">
+              <Checkbox label="Return to origin" checked />
+              <Checkbox label="Set return date" />
+            </Stack>
+          </Stack>
+        </StyledOrigin>
+        <PlacesToVisit />
+      </NomadForm>
+    </ContentContainer>
+  </>
+)
 
 export default DownShift
