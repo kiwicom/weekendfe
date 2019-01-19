@@ -1,4 +1,4 @@
-import * as React from "react"
+import { Component, useState, useEffect, useRef } from "react"
 import InputField from "@kiwicom/orbit-components/lib/InputField"
 import Heading from "@kiwicom/orbit-components/lib/Heading"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
@@ -26,11 +26,72 @@ const StyledOrigin = styled.div`
 const StyledButtons = styled.div`
   max-width: 640px;
 `
-class DownShift extends React.Component {
+const TopPart = () => {
+  const [tripFrom, setFrom] = useState("")
+
+  return (
+    <Stack direction="row">
+      <PlacePicker
+        label="From"
+        inputValue={tripFrom}
+        setInputValue={setFrom}
+      />
+    </Stack>
+  )
+}
+
+// Hook
+function useOnClickOutside(ref, handler) {
+  useEffect(() => {
+    const listener = event => {
+      // Do nothing if clicking ref's element or descendent elements
+      if (!ref.current || ref.current.contains(event.target)) {
+        return
+      }
+
+      handler(event)
+    }
+
+    document.addEventListener("mousedown", listener)
+    document.addEventListener("touchstart", listener)
+
+    return () => {
+      document.removeEventListener("mousedown", listener)
+      document.removeEventListener("touchstart", listener)
+    }
+  }, []) // Empty array ensures that effect is only run on mount and unmount
+}
+
+const PlaceToVisit = () => {
+  const [tripFrom, setFrom] = useState("")
+
+  // Create a ref that we add to the element for which we want to detect outside clicks
+  const ref = useRef()
+  // State for our slider
+  const [isOpenSlider, setSliderVisibility] = useState(false)
+  // Call hook passing in the ref and a function to call on outside click
+  useOnClickOutside(ref, () => setSliderVisibility(false))
+
+  return (
+    <Stack direction="row">
+      <PlacePicker inputValue={tripFrom} setInputValue={setFrom} />
+      <Slider
+        openRef={ref}
+        isOpen={isOpenSlider}
+        onFocus={() => setSliderVisibility(true)}
+        defaultValues={[1, 8]}
+        onChange={(from, to) => console.log(`${from}, ${to}`)}
+        // TODO: onBlur or clickOutside ref
+      />
+      <Button type="secondary" disabled iconLeft={<CloseCircle />} />
+    </Stack>
+  )
+}
+
+class DownShift extends Component {
   state = {
     selectedDate: null,
-    datePickerOpened: false,
-    placePickerValue: ""
+    datePickerOpened: false
   }
 
   handleOnDateSelected = ({ selected, selectable, date }) => {
@@ -45,21 +106,8 @@ class DownShift extends React.Component {
     this.setState({ datePickerOpened: false })
   }
 
-  handleInputValue = inputValue => {
-    this.setState({ placePickerValue: inputValue })
-  }
-
-  openSlider = () => {
-    this.setState({ isOpenSlider: true })
-  }
-
   render() {
-    const {
-      selectedDate,
-      datePickerOpened,
-      placePickerValue,
-      isOpenSlider
-    } = this.state
+    const { selectedDate, datePickerOpened } = this.state
 
     return (
       <>
@@ -74,6 +122,7 @@ class DownShift extends React.Component {
                 What destinations do you want to visit?
               </Heading>
               <Stack spaceAfter="largest">
+                <TopPart />
                 <Stack direction="row">
                   <InputField inlineLabel label="From" />
                   <DatePicker
@@ -87,7 +136,7 @@ class DownShift extends React.Component {
                   />
                 </Stack>
                 <Stack direction="row">
-                  <Checkbox label="Return to origin" />
+                  <Checkbox label="Return to origin" checked />
                   <Checkbox label="Set return date" />
                 </Stack>
               </Stack>
@@ -96,40 +145,9 @@ class DownShift extends React.Component {
               Places to visit
             </Heading>
             <Stack spaceAfter="medium">
-              <Stack direction="row">
-                <PlacePicker
-                  inputValue={placePickerValue}
-                  setInputValue={this.handleInputValue}
-                />
-                <Slider
-                  isOpen={isOpenSlider}
-                  onFocus={this.openSlider}
-                  defaultValues={[1, 8]}
-                  onChange={(from, to) =>
-                    console.log(`${from}, ${to}`)
-                  }
-                  // TODO: onBlur or clickOutside ref
-                />
-                <Button
-                  type="secondary"
-                  disabled
-                  iconLeft={<CloseCircle />}
-                />
-              </Stack>
-              <Stack direction="row">
-                <InputField inlineLabel label="Via" />
-                <InputField inlineLabel label="Length" />
-                <Button
-                  type="secondary"
-                  disabled
-                  iconLeft={<CloseCircle />}
-                />
-              </Stack>
-              <Stack direction="row">
-                <InputField inlineLabel label="Via" />
-                <InputField inlineLabel label="Length" />
-                <Button type="secondary" iconLeft={<CloseCircle />} />
-              </Stack>
+              <PlaceToVisit />
+              <PlaceToVisit />
+              <PlaceToVisit />
             </Stack>
             <StyledButtons>
               <Stack direction="row">

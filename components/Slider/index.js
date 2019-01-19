@@ -12,7 +12,10 @@ import convertValues from "./convertValues"
 
 const StyledSlider = styled.div`
   position: absolute;
-  top: ${({ theme }) => `calc(${theme.orbit.heightInputNormal} + ${theme.orbit.spaceXXSmall})`};
+  top: ${({ theme }) =>
+    `calc(${theme.orbit.heightInputNormal} + ${
+      theme.orbit.spaceXXSmall
+    })`};
   z-index: 999;
   display: flex;
   justify-content: center;
@@ -79,17 +82,33 @@ class SliderComponent extends React.Component {
     const {
       state: { domain, values }
     } = this
-    const { isOpen, onFocus } = this.props
+    const { isOpen, onFocus, openRef } = this.props
     return (
       <StyledSliderInput>
-        <InputField inlineLabel label="Length" onFocus={onFocus} value={convertValues(values)} />
+        <InputField
+          inlineLabel
+          label="Length"
+          onFocus={onFocus}
+          value={convertValues(values)}
+        />
         {isOpen && (
-          <StyledSlider>
+          <StyledSlider ref={openRef}>
             <Stack>
-              <Heading type="title4">Stay {convertValues(values)}</Heading>
+              <Heading type="title4">
+                Stay {convertValues(values)}
+              </Heading>
               <StyledSliderWrapper>
-                <Slider step={1} domain={domain} onChange={this.handleChange} values={values}>
-                  <Rail>{({ getRailProps }) => <StyledRail {...getRailProps()} />}</Rail>
+                <Slider
+                  step={1}
+                  domain={domain}
+                  onChange={this.handleChange}
+                  values={values}
+                >
+                  <Rail>
+                    {({ getRailProps }) => (
+                      <StyledRail {...getRailProps()} />
+                    )}
+                  </Rail>
                   <Handles>
                     {({ handles, getHandleProps }) => (
                       <>

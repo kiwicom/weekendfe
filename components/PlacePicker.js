@@ -34,7 +34,10 @@ const ResultsList = styled.div`
   width: 100%;
   max-height: 270px;
   position: absolute;
-  top: ${({ theme }) => `calc(${theme.orbit.heightInputNormal} + ${theme.orbit.spaceXSmall})`};
+  top: ${({ theme }) =>
+    `calc(${theme.orbit.heightInputNormal} + ${
+      theme.orbit.spaceXSmall
+    })`};
   z-index: 10;
   background: ${({ theme }) => theme.orbit.paletteWhite};
   border-radius: ${({ theme }) => theme.orbit.borderRadiusNormal};
@@ -75,7 +78,7 @@ const PlacePicker = props => (
               }
             }}
             inlineLabel
-            label="Via"
+            label={props.label || "Via"}
           />
           {isOpen ? (
             <ResultsList>
@@ -85,8 +88,13 @@ const PlacePicker = props => (
                   inputValue
                 }}
               >
-                {({ loading, error, data: { countries = [] } = {} }) => {
-                  if (loading) return <Loading loading type="boxLoader" />
+                {({
+                  loading,
+                  error,
+                  data: { countries = [] } = {}
+                }) => {
+                  if (loading)
+                    return <Loading loading type="boxLoader" />
                   if (error)
                     return (
                       <Alert type="critical" title="Error!">
@@ -98,8 +106,15 @@ const PlacePicker = props => (
                     ? countries
                     : matchSorter(countries, inputValue, {
                         keys: [
-                          { maxRanking: matchSorter.rankings.STARTS_WITH, key: "name" },
-                          { minRanking: matchSorter.rankings.EQUAL, key: "code" }
+                          {
+                            maxRanking:
+                              matchSorter.rankings.STARTS_WITH,
+                            key: "name"
+                          },
+                          {
+                            minRanking: matchSorter.rankings.EQUAL,
+                            key: "code"
+                          }
                         ]
                       })
                   return filtered.slice(0, 20).map(({ name }) => (
