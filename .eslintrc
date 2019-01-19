@@ -1,10 +1,18 @@
 {
   "parser": "babel-eslint",
-  "extends": ["airbnb", "prettier", "prettier/react", "plugin:fp/recommended"],
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react",
+    "plugin:fp/recommended"
+  ],
   "plugins": ["prettier", "fp", "react-hooks"],
   "rules": {
     "prettier/prettier": "error",
-    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".js", ".jsx"] }
+    ],
     "import/extensions": "error",
     "import/no-unresolved": "error",
     "react/jsx-no-bind": "error",
@@ -12,11 +20,15 @@
     "import/order": [
       "error",
       {
-        "groups": [["builtin", "external"], ["internal", "parent", "sibling", "index"]],
+        "groups": [
+          ["builtin", "external"],
+          ["internal", "parent", "sibling", "index"]
+        ],
         "newlines-between": "always"
       }
     ],
     "react-hooks/rules-of-hooks": "error",
+    "react/prop-types": "warning",
     "react/react-in-jsx-scope": "off", // next
     "fp/no-nil": "off", // Side effects
     "fp/no-class": "off", // React

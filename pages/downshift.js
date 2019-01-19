@@ -5,19 +5,15 @@ import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Checkbox from "@kiwicom/orbit-components/lib/Checkbox"
 import Button from "@kiwicom/orbit-components/lib/Button"
 import CloseCircle from "@kiwicom/orbit-components/lib/icons/CloseCircle"
-import Cocktail from "@kiwicom/orbit-components/lib/icons/Cocktail"
-import Meal from "@kiwicom/orbit-components/lib/icons/Meal"
-import Sightseeing from "@kiwicom/orbit-components/lib/icons/Sightseeing"
-import GenderWoman from "@kiwicom/orbit-components/lib/icons/GenderWoman"
 import Plus from "@kiwicom/orbit-components/lib/icons/Plus"
 import Search from "@kiwicom/orbit-components/lib/icons/Search"
 import styled from "styled-components"
 
 import ContentContainer from "../components/ContentContainer"
 import PlacePicker from "../components/PlacePicker"
-import InterestCard from "../components/InterestCard"
 import DatePicker from "../components/DatePicker"
 import Slider from "../components/Slider"
+import Interests from "../components/Interests"
 
 const NomadForm = styled.div`
   max-width: 696px;
@@ -31,7 +27,11 @@ const StyledButtons = styled.div`
   max-width: 640px;
 `
 class DownShift extends React.Component {
-  state = { selectedDate: null, datePickerOpened: false, placePickerValue: "" }
+  state = {
+    selectedDate: null,
+    datePickerOpened: false,
+    placePickerValue: ""
+  }
 
   handleOnDateSelected = ({ selected, selectable, date }) => {
     this.setState({ selectedDate: date })
@@ -54,48 +54,20 @@ class DownShift extends React.Component {
   }
 
   render() {
-    const { selectedDate, datePickerOpened, placePickerValue, isOpenSlider } = this.state
+    const {
+      selectedDate,
+      datePickerOpened,
+      placePickerValue,
+      isOpenSlider
+    } = this.state
+
     return (
       <>
         <ContentContainer>
           <Heading type="title1" spaceAfter="largest">
             What are you interested in?
           </Heading>
-          <Stack
-            direction="column"
-            spacing="natural"
-            spaceAfter="largest"
-            desktop={{ direction: "row", spacing: "extraLoose" }}
-          >
-            <InterestCard
-              title="Party life"
-              description="Type something"
-              value="party"
-              checked
-              icon={<Cocktail />}
-            />
-            <InterestCard
-              title="Gastronomy"
-              description="Type something"
-              value="gastronomy"
-              checked
-              icon={<Meal />}
-            />
-            <InterestCard
-              title="Sightseeing"
-              description="Type something"
-              value="sightseeing"
-              checked
-              icon={<Sightseeing />}
-            />
-            <InterestCard
-              title="Hookers"
-              description="Type something"
-              value="hookers"
-              checked
-              icon={<GenderWoman />}
-            />
-          </Stack>
+          <Interests />
           <NomadForm>
             <StyledOrigin>
               <Heading type="title1" spaceAfter="largest">
@@ -125,20 +97,33 @@ class DownShift extends React.Component {
             </Heading>
             <Stack spaceAfter="medium">
               <Stack direction="row">
-                <PlacePicker inputValue={placePickerValue} setInputValue={this.handleInputValue} />
+                <PlacePicker
+                  inputValue={placePickerValue}
+                  setInputValue={this.handleInputValue}
+                />
                 <Slider
                   isOpen={isOpenSlider}
                   onFocus={this.openSlider}
                   defaultValues={[1, 8]}
-                  onChange={(from, to) => console.log(`${from}, ${to}`)}
+                  onChange={(from, to) =>
+                    console.log(`${from}, ${to}`)
+                  }
                   // TODO: onBlur or clickOutside ref
                 />
-                <Button type="secondary" disabled iconLeft={<CloseCircle />} />
+                <Button
+                  type="secondary"
+                  disabled
+                  iconLeft={<CloseCircle />}
+                />
               </Stack>
               <Stack direction="row">
                 <InputField inlineLabel label="Via" />
                 <InputField inlineLabel label="Length" />
-                <Button type="secondary" disabled iconLeft={<CloseCircle />} />
+                <Button
+                  type="secondary"
+                  disabled
+                  iconLeft={<CloseCircle />}
+                />
               </Stack>
               <Stack direction="row">
                 <InputField inlineLabel label="Via" />
