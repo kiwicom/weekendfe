@@ -43,7 +43,7 @@ const TopPart = () => {
       <PlacePicker
         label="From"
         inputValue={tripFrom}
-        setInputValue={setFrom}
+        onChange={setFrom}
       />
       <DatePicker
         label="Departure"
@@ -103,7 +103,7 @@ const PlaceToVisit = ({
 
   return (
     <Stack direction="row">
-      <PlacePicker inputValue={tripFrom} setInputValue={setFrom} />
+      <PlacePicker inputValue={tripFrom} onChange={setFrom} />
       <Slider
         openRef={ref}
         isOpen={isOpenSlider}
