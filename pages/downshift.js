@@ -1,4 +1,4 @@
-import { Component, useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef } from "react"
 import InputField from "@kiwicom/orbit-components/lib/InputField"
 import Heading from "@kiwicom/orbit-components/lib/Heading"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
@@ -88,82 +88,71 @@ const PlaceToVisit = () => {
   )
 }
 
-class DownShift extends Component {
-  state = {
-    selectedDate: null,
-    datePickerOpened: false
+const DownShift = () => {
+  const [selectedDate, setDate] = useState(null)
+  const [datePickerOpened, setDatePickerVisibility] = useState(false)
+
+  const selectDate = date => {
+    setDate(date.date)
+    setDatePickerVisibility(false)
   }
 
-  handleOnDateSelected = ({ selected, selectable, date }) => {
-    this.setState({ selectedDate: date })
-  }
+  const openDatePicker = () => setDatePickerVisibility(true)
 
-  openDatePicker = () => {
-    this.setState({ datePickerOpened: true })
-  }
-
-  closeDatePicker = () => {
-    this.setState({ datePickerOpened: false })
-  }
-
-  render() {
-    const { selectedDate, datePickerOpened } = this.state
-
-    return (
-      <>
-        <ContentContainer>
-          <Heading type="title1" spaceAfter="largest">
-            What are you interested in?
-          </Heading>
-          <Interests />
-          <NomadForm>
-            <StyledOrigin>
-              <Heading type="title1" spaceAfter="largest">
-                What destinations do you want to visit?
-              </Heading>
-              <Stack spaceAfter="largest">
-                <TopPart />
-                <Stack direction="row">
-                  <InputField inlineLabel label="From" />
-                  <DatePicker
-                    label="Departure"
-                    onFocus={this.openDatePicker}
-                    // TODO: onBlur or clickOutside ref
-                    // onBlur={this.closeDatePicker}
-                    shown={datePickerOpened}
-                    currentDate={selectedDate}
-                    onDateSelected={this.handleOnDateSelected}
-                  />
-                </Stack>
-                <Stack direction="row">
-                  <Checkbox label="Return to origin" checked />
-                  <Checkbox label="Set return date" />
-                </Stack>
-              </Stack>
-            </StyledOrigin>
-            <Heading type="title2" spaceAfter="medium">
-              Places to visit
+  return (
+    <>
+      <ContentContainer>
+        <Heading type="title1" spaceAfter="largest">
+          What are you interested in?
+        </Heading>
+        <Interests />
+        <NomadForm>
+          <StyledOrigin>
+            <Heading type="title1" spaceAfter="largest">
+              What destinations do you want to visit?
             </Heading>
-            <Stack spaceAfter="medium">
-              <PlaceToVisit />
-              <PlaceToVisit />
-              <PlaceToVisit />
-            </Stack>
-            <StyledButtons>
+            <Stack spaceAfter="largest">
+              <TopPart />
               <Stack direction="row">
-                <Button type="secondary" iconLeft={<Plus />} block>
-                  Add destination
-                </Button>
-                <Button iconLeft={<Search />} block>
-                  Search
-                </Button>
+                <InputField inlineLabel label="From" />
+                <DatePicker
+                  label="Departure"
+                  onFocus={openDatePicker}
+                  // TODO: onBlur or clickOutside ref
+                  // onBlur={closeDatePicker}
+                  shown={datePickerOpened}
+                  currentDate={selectedDate}
+                  onDateSelected={selectDate}
+                />
               </Stack>
-            </StyledButtons>
-          </NomadForm>
-        </ContentContainer>
-      </>
-    )
-  }
+              <Stack direction="row">
+                <Checkbox label="Return to origin" checked />
+                <Checkbox label="Set return date" />
+              </Stack>
+            </Stack>
+          </StyledOrigin>
+          <Heading type="title2" spaceAfter="medium">
+            Places to visit
+          </Heading>
+          <Stack spaceAfter="medium">
+            <PlaceToVisit />
+            <PlaceToVisit />
+            <PlaceToVisit />
+          </Stack>
+          <StyledButtons>
+            <Stack direction="row">
+              <Button type="secondary" iconLeft={<Plus />} block>
+                Add destination
+              </Button>
+              <Button iconLeft={<Search />} block>
+                Search
+              </Button>
+            </Stack>
+          </StyledButtons>
+        </NomadForm>
+      </ContentContainer>
+    </>
+  )
 }
 
 export default DownShift
