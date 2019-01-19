@@ -24,15 +24,14 @@ const MapPage = function() {
           if (error) {
             return "Err"
           }
-
-          return ""
-          // return <DynamicMap points={data} />
+          return <DynamicMap places={data.interests} />
         }}
       </Query>
 
       <Button onClick={() => setSearchParams({ city: "Brno", country: "CZ" })}>Brno</Button>
       <Button onClick={() => setSearchParams({ city: "Prague", country: "CZ" })}>Prague</Button>
       <Button onClick={() => setSearchParams({ city: "Dubai", country: "AE" })}>Dubai</Button>
+      <Button onClick={() => setSearchParams({ city: "Košice", country: "SK" })}>Košice</Button>
     </div>
   )
 }

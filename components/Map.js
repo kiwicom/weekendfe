@@ -22,7 +22,7 @@ const MapWrapper = styled.div`
   }
 `
 
-function Map({ points }) {
+function Map({ places }) {
   const mapRef = useRef(null)
   const [mapObject, setMapObject] = useState()
 
@@ -41,21 +41,27 @@ function Map({ points }) {
         return null
       }
 
-      const markers = points.map(point => {
+      const markers = places.map(place => {
         const el = document.createElement("div") // eslint-disable-line
         el.className = "marker"
         const marker = new mapboxgl.Marker(el)
-        marker.setLngLat(point.coordinates).addTo(mapObject)
+        marker.setLngLat([place.coords.lon, place.coords.lat]).addTo(mapObject)
         setTimeout(() => {
-          ReactDOM.render(<Airplane />, el)
+          ReactDOM.render(
+            <div>
+              <Airplane />
+              {place.name}
+            </div>,
+            el
+          )
         })
         return marker
       })
 
       const bounds = new mapboxgl.LngLatBounds()
 
-      points.forEach(point => {
-        bounds.extend(point.coordinates)
+      places.forEach(place => {
+        bounds.extend([place.coords.lon, place.coords.lat])
       })
 
       mapObject.fitBounds(bounds, {
@@ -68,7 +74,7 @@ function Map({ points }) {
         })
       }
     },
-    [JSON.stringify(points), mapObject]
+    [JSON.stringify(places), mapObject]
   )
 
   return <MapWrapper ref={mapRef} />

@@ -1,9 +1,15 @@
 query Interests($city: String!, $country: String!) {
   interests(city: $city, country: $country, interest: "drinks") {
+    id
     img
-    score
     name
     category
     address
+    coords {
+      lat
+      lon
+    }
+    score
+    url
   }
 }
