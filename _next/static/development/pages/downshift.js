@@ -57206,15 +57206,15 @@ var TopPart = function TopPart() {
       selectedDate = _useState10[0],
       setDate = _useState10[1];
 
-  var _useState11 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
+  var _useState11 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       _useState12 = _slicedToArray(_useState11, 2),
-      returnDate = _useState12[0],
-      setReturnDate = _useState12[1];
+      datePickerOpened = _useState12[0],
+      setDatePickerVisibility = _useState12[1];
 
-  var _useState13 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+  var _useState13 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
       _useState14 = _slicedToArray(_useState13, 2),
-      datePickerOpened = _useState14[0],
-      setDatePickerVisibility = _useState14[1];
+      returnDate = _useState14[0],
+      setReturnDate = _useState14[1];
 
   var selectDate = function selectDate(date) {
     setDate(date.date);
@@ -57229,14 +57229,14 @@ var TopPart = function TopPart() {
     spaceAfter: "largest",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 42
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default.a, {
     direction: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 43
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlacePicker__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -57245,7 +57245,7 @@ var TopPart = function TopPart() {
     onChange: setFrom,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 44
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_DatePicker__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -57258,14 +57258,14 @@ var TopPart = function TopPart() {
     onDateSelected: selectDate,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 49
     },
     __self: this
   })), (showDestination || showReturnDate) && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default.a, {
     direction: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 60
     },
     __self: this
   }, showDestination && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlacePicker__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -57274,7 +57274,7 @@ var TopPart = function TopPart() {
     onChange: setDestination,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 62
     },
     __self: this
   }), showReturnDate && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_DatePicker__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -57282,19 +57282,19 @@ var TopPart = function TopPart() {
     onFocus: openDatePicker // TODO: onBlur or clickOutside ref
     // onBlur={closeDatePicker}
     ,
-    shown: datePickerOpened,
+    shown: false,
     currentDate: selectedDate,
     onDateSelected: selectDate,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 69
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default.a, {
     direction: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 81
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Checkbox__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -57305,7 +57305,7 @@ var TopPart = function TopPart() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 82
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Checkbox__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -57316,7 +57316,7 @@ var TopPart = function TopPart() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 89
     },
     __self: this
   })));
@@ -57326,7 +57326,7 @@ var DownShift = function DownShift() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ContentContainer__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 102
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Heading__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -57334,25 +57334,25 @@ var DownShift = function DownShift() {
     spaceAfter: "largest",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 103
     },
     __self: this
   }, "What are you interested in?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Interests__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 106
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NomadForm, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 107
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledOrigin, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 108
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Heading__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -57360,19 +57360,19 @@ var DownShift = function DownShift() {
     spaceAfter: "largest",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 109
     },
     __self: this
   }, "What destinations do you want to visit?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TopPart, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 112
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlacesToVisit__WEBPACK_IMPORTED_MODULE_10__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 114
     },
     __self: this
   })));
@@ -57401,7 +57401,7 @@ var DownShift = function DownShift() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!**********************************!*\
   !*** multi ./pages/downshift.js ***!
   \**********************************/
@@ -57426,5 +57426,5 @@ module.exports = dll_6b580bfd958c73d2b4ce;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]));;
+},[[4,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=downshift.js.map
