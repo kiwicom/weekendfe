@@ -27,8 +27,9 @@ const TopPart = () => {
   const [showReturnDate, setReturnDateVisibility] = useState(false)
 
   const [selectedDate, setDate] = useState(null)
-  const [returnDate, setReturnDate] = useState(null)
   const [datePickerOpened, setDatePickerVisibility] = useState(false)
+
+  const [returnDate, setReturnDate] = useState(null)
 
   const selectDate = date => {
     setDate(date.date)
@@ -70,7 +71,7 @@ const TopPart = () => {
               onFocus={openDatePicker}
               // TODO: onBlur or clickOutside ref
               // onBlur={closeDatePicker}
-              shown={datePickerOpened}
+              shown={false}
               currentDate={selectedDate}
               onDateSelected={selectDate}
             />
