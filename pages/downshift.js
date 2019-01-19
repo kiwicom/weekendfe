@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react"
-import InputField from "@kiwicom/orbit-components/lib/InputField"
 import Heading from "@kiwicom/orbit-components/lib/Heading"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Checkbox from "@kiwicom/orbit-components/lib/Checkbox"
@@ -14,7 +13,6 @@ import PlacePicker from "../components/PlacePicker"
 import DatePicker from "../components/DatePicker"
 import Slider from "../components/Slider"
 import Interests from "../components/Interests"
-
 import Debug from "../components/debug"
 
 const NomadForm = styled.div`
@@ -30,6 +28,15 @@ const StyledButtons = styled.div`
 `
 const TopPart = () => {
   const [tripFrom, setFrom] = useState("")
+  const [selectedDate, setDate] = useState(null)
+  const [datePickerOpened, setDatePickerVisibility] = useState(false)
+
+  const selectDate = date => {
+    setDate(date.date)
+    setDatePickerVisibility(false)
+  }
+
+  const openDatePicker = () => setDatePickerVisibility(true)
 
   return (
     <Stack direction="row">
@@ -37,6 +44,15 @@ const TopPart = () => {
         label="From"
         inputValue={tripFrom}
         setInputValue={setFrom}
+      />
+      <DatePicker
+        label="Departure"
+        onFocus={openDatePicker}
+        // TODO: onBlur or clickOutside ref
+        // onBlur={closeDatePicker}
+        shown={datePickerOpened}
+        currentDate={selectedDate}
+        onDateSelected={selectDate}
       />
     </Stack>
   )
@@ -123,6 +139,9 @@ const PlacesToVisit = () => {
 
   return (
     <>
+      <Heading type="title2" spaceAfter="medium">
+        Places to visit
+      </Heading>
       <Stack spaceAfter="medium">
         {places.map(([place, days], i) => (
           <>
@@ -156,57 +175,30 @@ const PlacesToVisit = () => {
   )
 }
 
-const DownShift = () => {
-  const [selectedDate, setDate] = useState(null)
-  const [datePickerOpened, setDatePickerVisibility] = useState(false)
-
-  const selectDate = date => {
-    setDate(date.date)
-    setDatePickerVisibility(false)
-  }
-
-  const openDatePicker = () => setDatePickerVisibility(true)
-
-  return (
-    <>
-      <ContentContainer>
-        <Heading type="title1" spaceAfter="largest">
-          What are you interested in?
-        </Heading>
-        <Interests />
-        <NomadForm>
-          <StyledOrigin>
-            <Heading type="title1" spaceAfter="largest">
-              What destinations do you want to visit?
-            </Heading>
-            <Stack spaceAfter="largest">
-              <TopPart />
-              <Stack direction="row">
-                <InputField inlineLabel label="From" />
-                <DatePicker
-                  label="Departure"
-                  onFocus={openDatePicker}
-                  // TODO: onBlur or clickOutside ref
-                  // onBlur={closeDatePicker}
-                  shown={datePickerOpened}
-                  currentDate={selectedDate}
-                  onDateSelected={selectDate}
-                />
-              </Stack>
-              <Stack direction="row">
-                <Checkbox label="Return to origin" checked />
-                <Checkbox label="Set return date" />
-              </Stack>
-            </Stack>
-          </StyledOrigin>
-          <Heading type="title2" spaceAfter="medium">
-            Places to visit
+const DownShift = () => (
+  <>
+    <ContentContainer>
+      <Heading type="title1" spaceAfter="largest">
+        What are you interested in?
+      </Heading>
+      <Interests />
+      <NomadForm>
+        <StyledOrigin>
+          <Heading type="title1" spaceAfter="largest">
+            What destinations do you want to visit?
           </Heading>
-          <PlacesToVisit />
-        </NomadForm>
-      </ContentContainer>
-    </>
-  )
-}
+          <Stack spaceAfter="largest">
+            <TopPart />
+            <Stack direction="row">
+              <Checkbox label="Return to origin" checked />
+              <Checkbox label="Set return date" />
+            </Stack>
+          </Stack>
+        </StyledOrigin>
+        <PlacesToVisit />
+      </NomadForm>
+    </ContentContainer>
+  </>
+)
 
 export default DownShift
