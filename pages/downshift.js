@@ -15,6 +15,8 @@ import DatePicker from "../components/DatePicker"
 import Slider from "../components/Slider"
 import Interests from "../components/Interests"
 
+import Debug from "../components/debug"
+
 const NomadForm = styled.div`
   max-width: 696px;
 `
@@ -62,8 +64,19 @@ function useOnClickOutside(ref, handler) {
   }, []) // Empty array ensures that effect is only run on mount and unmount
 }
 
-const PlaceToVisit = () => {
-  const [tripFrom, setFrom] = useState("")
+const PlaceToVisit = ({
+  place,
+  days = [2, 8],
+  changeDays,
+  onRemoveClick
+}) => {
+  const [tripFrom, setFrom] = useState(place)
+  const [tripDays, setDaysState] = useState(days)
+
+  const setDays = daysChanged => {
+    setDaysState(daysChanged)
+    if (changeDays) changeDays(daysChanged)
+  }
 
   // Create a ref that we add to the element for which we want to detect outside clicks
   const ref = useRef()
@@ -79,12 +92,67 @@ const PlaceToVisit = () => {
         openRef={ref}
         isOpen={isOpenSlider}
         onFocus={() => setSliderVisibility(true)}
-        defaultValues={[1, 8]}
-        onChange={(from, to) => console.log(`${from}, ${to}`)}
-        // TODO: onBlur or clickOutside ref
+        defaultValues={tripDays}
+        onChange={(from, to) => setDays([from, to])}
       />
-      <Button type="secondary" disabled iconLeft={<CloseCircle />} />
+      <Button
+        type="secondary"
+        iconLeft={<CloseCircle />}
+        disabled={!onRemoveClick}
+        onClick={onRemoveClick}
+      />
     </Stack>
+  )
+}
+
+const PlacesToVisit = () => {
+  const defaultDays = [2, 5]
+  const [places, changePlaces] = useState([
+    ["Australia", defaultDays]
+  ])
+  const addPlace = () => changePlaces(places.concat([[null, [1, 3]]]))
+  const removePlace = indexToRemove => () =>
+    changePlaces(
+      places.filter((val, index) => index !== indexToRemove)
+    )
+  const changeDays = index => days => {
+    const newPlaces = places.concat()
+    newPlaces[index][1] = days
+    changePlaces(newPlaces)
+  }
+
+  return (
+    <>
+      <Stack spaceAfter="medium">
+        {places.map(([place, days], i) => (
+          <>
+            <PlaceToVisit
+              onRemoveClick={i !== 0 && removePlace(i)}
+              place={place}
+              days={days}
+              changeDays={changeDays(i)}
+            />
+          </>
+        ))}
+      </Stack>
+      <StyledButtons>
+        <Stack direction="row">
+          <Button
+            type="secondary"
+            iconLeft={<Plus />}
+            block
+            onClick={addPlace}
+          >
+            Add destination
+          </Button>
+          <Button iconLeft={<Search />} block>
+            Search
+          </Button>
+        </Stack>
+      </StyledButtons>
+      <hr />
+      <Debug {...places} />
+    </>
   )
 }
 
@@ -134,21 +202,7 @@ const DownShift = () => {
           <Heading type="title2" spaceAfter="medium">
             Places to visit
           </Heading>
-          <Stack spaceAfter="medium">
-            <PlaceToVisit />
-            <PlaceToVisit />
-            <PlaceToVisit />
-          </Stack>
-          <StyledButtons>
-            <Stack direction="row">
-              <Button type="secondary" iconLeft={<Plus />} block>
-                Add destination
-              </Button>
-              <Button iconLeft={<Search />} block>
-                Search
-              </Button>
-            </Stack>
-          </StyledButtons>
+          <PlacesToVisit />
         </NomadForm>
       </ContentContainer>
     </>
