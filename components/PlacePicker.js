@@ -14,10 +14,6 @@ const StyledPlacePicker = styled.div`
   width: 100%;
 `
 
-const InputWrapper = styled.div`
-  position: relative;
-`
-
 const ResultsList = styled.div`
   width: 100%;
   max-height: 270px;
