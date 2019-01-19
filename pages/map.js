@@ -11,12 +11,19 @@ const DynamicMap = dynamic(() => import("./../components/Map"), {
 })
 
 const MapPage = function() {
-  const [searchParams, setSearchParams] = useState({ city: "Brno", country: "CZ" })
+  const [searchParams, setSearchParams] = useState({
+    city: "Brno",
+    country: "CZ"
+  })
   const search = { ...searchParams, interests: "drinks" }
   console.log(search)
   return (
     <div>
-      <Query query={interestsQuery} variables={search}>
+      <Query
+        query={interestsQuery}
+        variables={search}
+        context={{ uri: "https://weekend-api.now.sh/" }}
+      >
         {({ loading, error, data }) => {
           if (loading) {
             return "..."
@@ -28,10 +35,34 @@ const MapPage = function() {
         }}
       </Query>
 
-      <Button onClick={() => setSearchParams({ city: "Brno", country: "CZ" })}>Brno</Button>
-      <Button onClick={() => setSearchParams({ city: "Prague", country: "CZ" })}>Prague</Button>
-      <Button onClick={() => setSearchParams({ city: "Dubai", country: "AE" })}>Dubai</Button>
-      <Button onClick={() => setSearchParams({ city: "Košice", country: "SK" })}>Košice</Button>
+      <Button
+        onClick={() =>
+          setSearchParams({ city: "Brno", country: "CZ" })
+        }
+      >
+        Brno
+      </Button>
+      <Button
+        onClick={() =>
+          setSearchParams({ city: "Prague", country: "CZ" })
+        }
+      >
+        Prague
+      </Button>
+      <Button
+        onClick={() =>
+          setSearchParams({ city: "Dubai", country: "AE" })
+        }
+      >
+        Dubai
+      </Button>
+      <Button
+        onClick={() =>
+          setSearchParams({ city: "Košice", country: "SK" })
+        }
+      >
+        Košice
+      </Button>
     </div>
   )
 }

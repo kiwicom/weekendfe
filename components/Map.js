@@ -45,7 +45,9 @@ function Map({ places }) {
         const el = document.createElement("div") // eslint-disable-line
         el.className = "marker"
         const marker = new mapboxgl.Marker(el)
-        marker.setLngLat([place.coords.lon, place.coords.lat]).addTo(mapObject)
+        marker
+          .setLngLat([place.coords.lon, place.coords.lat])
+          .addTo(mapObject)
         setTimeout(() => {
           ReactDOM.render(
             <div>
