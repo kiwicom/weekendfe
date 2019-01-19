@@ -68,6 +68,7 @@ const PlacePicker = ({
                 variables={{
                   inputValue
                 }}
+                context={{ uri: "https://weekend-api.now.sh/" }}
               >
                 {({
                   loading,
