@@ -2,10 +2,16 @@
 
 query {
   interests(city: "Brno", country: "CZ", interest: "drinks") {
+    id
     img
-    score
     name
     category
     address
+    coords {
+      lat
+      lon
+    }
+    score
+    url
   }
 }
