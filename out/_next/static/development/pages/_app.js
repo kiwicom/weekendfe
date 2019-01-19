@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return initApollo; });
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return initApollo; });
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/index.js");
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__);
@@ -27,7 +27,7 @@ function create(initialState) {
     ssrMode: !true,
     // Disables forceFetch on the server (so queries are only run once)
     link: new apollo_boost__WEBPACK_IMPORTED_MODULE_0__["HttpLink"]({
-      uri: "https://countries.trevorblades.com/",
+      uri: process.env.GQL_API || "https://countries.trevorblades.com/",
       // Server URL (must be absolute)
       credentials: "same-origin" // Additional fetch() options like `credentials` or `headers`
 
@@ -48,6 +48,7 @@ function initApollo(initialState) {
 
   return apolloClient;
 }
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -218,7 +219,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           apolloClient: this.apolloClient,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 55
+            lineNumber: 63
           },
           __self: this
         }));
