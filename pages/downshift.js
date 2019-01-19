@@ -27,7 +27,7 @@ const StyledButtons = styled.div`
   max-width: 640px;
 `
 const TopPart = () => {
-  const [tripFrom, setFrom] = useState("")
+  const [tripFrom, setFrom] = useState("Czech Republic")
   const [selectedDate, setDate] = useState(null)
   const [datePickerOpened, setDatePickerVisibility] = useState(false)
 
@@ -42,7 +42,7 @@ const TopPart = () => {
     <Stack direction="row">
       <PlacePicker
         label="From"
-        inputValue={tripFrom}
+        defaultValue={tripFrom}
         onChange={setFrom}
       />
       <DatePicker
@@ -84,9 +84,10 @@ const PlaceToVisit = ({
   place,
   days = [2, 8],
   changeDays,
+  changePlace,
   onRemoveClick
 }) => {
-  const [tripFrom, setFrom] = useState(place)
+  // const [tripFrom, setFrom] = useState(place)
   const [tripDays, setDaysState] = useState(days)
 
   const setDays = daysChanged => {
@@ -103,7 +104,7 @@ const PlaceToVisit = ({
 
   return (
     <Stack direction="row">
-      <PlacePicker inputValue={tripFrom} onChange={setFrom} />
+      <PlacePicker defaultValue={place} onChange={changePlace} />
       <Slider
         openRef={ref}
         isOpen={isOpenSlider}
@@ -136,6 +137,11 @@ const PlacesToVisit = () => {
     newPlaces[index][1] = days
     changePlaces(newPlaces)
   }
+  const changePlace = index => place => {
+    const newPlaces = places.concat()
+    newPlaces[index][0] = place
+    changePlaces(newPlaces)
+  }
 
   return (
     <>
@@ -150,6 +156,7 @@ const PlacesToVisit = () => {
               place={place}
               days={days}
               changeDays={changeDays(i)}
+              changePlace={changePlace(i)}
             />
           </>
         ))}
