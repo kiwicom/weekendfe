@@ -14,6 +14,7 @@ import DatePicker from "../components/DatePicker"
 import Slider from "../components/Slider"
 import Interests from "../components/Interests"
 import Debug from "../components/debug"
+import useOnClickOutside from "../components/useOnClickOutside"
 
 const NomadForm = styled.div`
   max-width: 696px;
@@ -58,33 +59,11 @@ const TopPart = () => {
   )
 }
 
-// Hook
-function useOnClickOutside(ref, handler) {
-  useEffect(() => {
-    const listener = event => {
-      // Do nothing if clicking ref's element or descendent elements
-      if (!ref.current || ref.current.contains(event.target)) {
-        return
-      }
-
-      handler(event)
-    }
-
-    document.addEventListener("mousedown", listener)
-    document.addEventListener("touchstart", listener)
-
-    return () => {
-      document.removeEventListener("mousedown", listener)
-      document.removeEventListener("touchstart", listener)
-    }
-  }, []) // Empty array ensures that effect is only run on mount and unmount
-}
-
 const PlaceToVisit = ({
   place,
+  changePlace,
   days = [2, 8],
   changeDays,
-  changePlace,
   onRemoveClick
 }) => {
   // const [tripFrom, setFrom] = useState(place)
