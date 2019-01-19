@@ -5,7 +5,7 @@ import ReactDOM from "react-dom"
 import styled from "styled-components"
 
 mapboxgl.accessToken =
-  "pk.eyJ1IjoibWljaGFlbGtpd2kiLCJhIjoiY2l3aHRiN2ZqMDAycjJ6cXduNDU5djkweCJ9.XuamwcGDtyovJEMaSWtFkg"
+  "pk.eyJ1IjoibWljaGFlbGtpd2kiLCJhIjoiY2pyM2FjcGUyMGU2dTQycDE3ajQ3b3B6eiJ9.iJ4UL0VhJj1xvIG3vozlrQ"
 
 const MapWrapper = styled.div`
   height: 100%;
