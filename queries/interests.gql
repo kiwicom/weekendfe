@@ -1,7 +1,7 @@
 # https://weekend-api.now.sh/
 
-query {
-  interests(city: "Brno", country: "CZ", interest: "drinks") {
+query Interests($city: String!, $country: String!) {
+  interests(city: $city, country: $country, interest: "drinks") {
     id
     img
     name

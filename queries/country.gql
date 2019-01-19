@@ -1,7 +1,7 @@
 # https://countries.trevorblades.com/
 
-query {
-  country(code: "CZ") {
+query Country($code: String!) {
+  country(code: $code) {
     name
     code
     native

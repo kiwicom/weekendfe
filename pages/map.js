@@ -3,7 +3,7 @@ import dynamic from "next/dynamic"
 import Button from "@kiwicom/orbit-components/lib/Button"
 import { Query } from "react-apollo"
 
-import interestsQuery from "../components/interests.gql"
+import interestsQuery from "../queries/interests.gql"
 
 const DynamicMap = dynamic(() => import("./../components/Map"), {
   loading: () => <p>Loading...</p>,

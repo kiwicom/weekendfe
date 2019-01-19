@@ -1,32 +1,24 @@
 import { Query } from "react-apollo"
-import gql from "graphql-tag"
+import Alert from "@kiwicom/orbit-components/lib/Alert"
+import Loading from "@kiwicom/orbit-components/lib/Loading"
 
 import Debug from "./debug"
-import czechCountryQuery from "./country.gql"
 
-export const continentsQuery = gql`
-  query {
-    continents {
-      name
-    }
-  }
-`
-
-export default () => (
-  <>
-    <Query query={continentsQuery}>
-      {({ loading, error, data: { continents } }) => {
-        if (error) return <div>error</div>
-        if (loading) return <div>Loading</div>
-        return <Debug continents={continents} />
-      }}
-    </Query>
-    <Query query={czechCountryQuery}>
-      {({ loading, error, data: { country } }) => {
-        if (error) return <div>error</div>
-        if (loading) return <div>Loading</div>
-        return <Debug {...country} />
-      }}
-    </Query>
-  </>
+export default props => (
+  <Query {...props}>
+    {({ loading, error, data }) => {
+      if (loading) return <Loading loading type="boxLoader" />
+      if (error)
+        return (
+          <Alert type="critical" title="Error!">
+            ${error.message}
+          </Alert>
+        )
+      return props.children ? (
+        props.children({ data })
+      ) : (
+        <Debug {...data} />
+      )
+    }}
+  </Query>
 )

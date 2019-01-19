@@ -1,4 +1,3 @@
-import { Query } from "react-apollo"
 import styled from "styled-components"
 import ListChoice from "@kiwicom/orbit-components/lib/ListChoice"
 import City from "@kiwicom/orbit-components/lib/icons/City"
@@ -8,7 +7,8 @@ import Loading from "@kiwicom/orbit-components/lib/Loading"
 import Downshift from "downshift"
 import matchSorter from "match-sorter"
 
-import countriesQuery from "./countries.gql"
+import Query from "../components/query"
+import countriesQuery from "../queries/countries.gql"
 
 const StyledPlacePicker = styled.div`
   width: 100%;
@@ -68,22 +68,15 @@ const PlacePicker = ({
                 variables={{
                   inputValue
                 }}
-                context={{ uri: "https://weekend-api.now.sh/" }}
+                context={{
+                  uri: "https://countries.trevorblades.com/"
+                }}
               >
                 {({
                   loading,
                   error,
                   data: { countries = [] } = {}
                 }) => {
-                  if (loading)
-                    return <Loading loading type="boxLoader" />
-                  if (error)
-                    return (
-                      <Alert type="critical" title="Error!">
-                        ${error.message}
-                      </Alert>
-                    )
-
                   const filtered = !inputValue
                     ? countries
                     : matchSorter(countries, inputValue, {
@@ -107,6 +100,7 @@ const PlacePicker = ({
                           item: name,
                           index
                         })}
+                        key={name}
                       >
                         <ListChoice
                           key={name}

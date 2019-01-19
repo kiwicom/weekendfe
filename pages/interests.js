@@ -9,6 +9,11 @@ import BrnoInterests from "../queries/interests.gql"
 const InterestsSample = () => (
   <Query
     query={BrnoInterests}
+    variables={{
+      city: "Brno",
+      country: "CZ",
+      interests: "drinks"
+    }}
     context={{ uri: "https://weekend-api.now.sh/" }}
   >
     {({ loading, error, data }) => {
