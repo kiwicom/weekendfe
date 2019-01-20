@@ -3,5 +3,9 @@
     "target": "es6"
   },
   "exclude": ["node_modules"],
-  "include": ["pages/**/*", "components/**/*", "lib/**/*"]
+  "include": ["pages/**/*", "components/**/*", "lib/**/*"],
+  "baseUrl": ".",
+  "paths": {
+    "components/*": ["components/*"]
+  }
 }

@@ -1,7 +1,19 @@
 {
   "presets": ["next/babel"],
   "plugins": [
-    ["styled-components", { "ssr": true, "transpileTemplateLiterals": true }],
-    ["import-graphql"]
+    [
+      "styled-components",
+      { "ssr": true, "transpileTemplateLiterals": true }
+    ],
+    ["import-graphql"],
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "components": "./components"
+        }
+      }
+    ]
   ]
 }

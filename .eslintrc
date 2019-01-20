@@ -10,6 +10,11 @@
     "plugin:fp/recommended"
   ],
   "plugins": ["prettier", "fp", "react-hooks"],
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
   "rules": {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [

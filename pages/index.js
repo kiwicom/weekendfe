@@ -2,7 +2,7 @@ import gql from "graphql-tag"
 import Alert from "@kiwicom/orbit-components/lib/Alert"
 import Illustration from "@kiwicom/orbit-components/lib/Illustration"
 
-import Query from "../components/query"
+import Query from "components/query"
 import czechCountryQuery from "../queries/country.gql"
 
 export const continentsQuery = gql`
