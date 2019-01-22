@@ -3,6 +3,7 @@ import Heading from "@kiwicom/orbit-components/lib/Heading"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Checkbox from "@kiwicom/orbit-components/lib/Checkbox"
 import styled from "styled-components"
+import { format, addDays } from "date-fns"
 
 import ContentContainer from "../components/ContentContainer"
 import PlacePicker from "../components/PlacePicker"
@@ -26,17 +27,39 @@ const TopPart = () => {
   const [showDestination, setDestinationVisibility] = useState(false)
   const [showReturnDate, setReturnDateVisibility] = useState(false)
 
-  const [selectedDate, setDate] = useState(null)
-  const [datePickerOpened, setDatePickerVisibility] = useState(false)
+  const [departureDate, setDepartureDate] = useState(new Date())
+  const [
+    departureDatePickerOpened,
+    setDepartureDatePickerVisibility
+  ] = useState(false)
 
-  const [returnDate, setReturnDate] = useState(null)
+  const [returnDate, setReturnDate] = useState(
+    addDays(new Date(), 10)
+  )
+  const [
+    returnDatePickerOpened,
+    setReturnDatePickerVisibility
+  ] = useState(false)
 
-  const selectDate = date => {
-    setDate(date.date)
-    setDatePickerVisibility(false)
+  const selectDepartureDate = date => {
+    setDepartureDate(date.date)
+    setDepartureDatePickerVisibility(false)
   }
 
-  const openDatePicker = () => setDatePickerVisibility(true)
+  const selectReturnDate = date => {
+    setReturnDate(date.date)
+    setReturnDatePickerVisibility(false)
+  }
+
+  const departureDatepickerRef = useRef()
+  useOnClickOutside(departureDatepickerRef, () =>
+    setDepartureDatePickerVisibility(false)
+  )
+
+  const returnDatepickerRef = useRef()
+  useOnClickOutside(returnDatepickerRef, () =>
+    setReturnDatePickerVisibility(false)
+  )
 
   return (
     <Stack spaceAfter="largest">
@@ -47,13 +70,12 @@ const TopPart = () => {
           onChange={setFrom}
         />
         <DatePicker
+          openRef={departureDatepickerRef}
           label="Departure"
-          onFocus={openDatePicker}
-          // TODO: onBlur or clickOutside ref
-          // onBlur={closeDatePicker}
-          shown={datePickerOpened}
-          currentDate={selectedDate}
-          onDateSelected={selectDate}
+          onFocus={() => setDepartureDatePickerVisibility(true)}
+          shown={departureDatePickerOpened}
+          currentDate={departureDate}
+          onDateSelected={selectDepartureDate}
         />
       </Stack>
       {(showDestination || showReturnDate) && (
@@ -67,13 +89,12 @@ const TopPart = () => {
           )}
           {showReturnDate && (
             <DatePicker
+              openRef={returnDatepickerRef}
               label="Arrival"
-              onFocus={openDatePicker}
-              // TODO: onBlur or clickOutside ref
-              // onBlur={closeDatePicker}
-              shown={false}
-              currentDate={selectedDate}
-              onDateSelected={selectDate}
+              onFocus={() => setReturnDatePickerVisibility(true)}
+              shown={returnDatePickerOpened}
+              currentDate={returnDate}
+              onDateSelected={selectReturnDate}
             />
           )}
         </Stack>
@@ -88,9 +109,9 @@ const TopPart = () => {
         />
         <Checkbox
           label="Set return date"
-          checked={!showReturnDate}
+          checked={showReturnDate}
           onChange={e => {
-            setReturnDateVisibility(!e.target.checked)
+            setReturnDateVisibility(e.target.checked)
           }}
         />
       </Stack>

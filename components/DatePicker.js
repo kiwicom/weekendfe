@@ -126,16 +126,17 @@ const DatePicker = ({
   onBlur,
   onDateSelected,
   currentDate = "",
-  shown
+  shown,
+  openRef
 }) => (
-  <StyledDatePickerWrapper>
+  <StyledDatePickerWrapper ref={openRef}>
     <InputField
       inlineLabel
       label={label}
       onFocus={onFocus}
       onBlur={onBlur}
       // TODO: do date formation
-      value={format(currentDate, "MM/dd/yyyy")}
+      value={format(currentDate, "MM/DD/YYYY")}
     />
     {shown && (
       <Dayzed
