@@ -176,11 +176,13 @@ var DatePicker = function DatePicker(_ref10) {
       onDateSelected = _ref10.onDateSelected,
       _ref10$currentDate = _ref10.currentDate,
       currentDate = _ref10$currentDate === void 0 ? "" : _ref10$currentDate,
-      shown = _ref10.shown;
+      shown = _ref10.shown,
+      openRef = _ref10.openRef;
   return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](StyledDatePickerWrapper, {
+    ref: openRef,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 132
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_InputField__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -189,10 +191,10 @@ var DatePicker = function DatePicker(_ref10) {
     onFocus: onFocus,
     onBlur: onBlur // TODO: do date formation
     ,
-    value: Object(date_fns__WEBPACK_IMPORTED_MODULE_10__["format"])(currentDate, "MM/dd/yyyy"),
+    value: Object(date_fns__WEBPACK_IMPORTED_MODULE_10__["format"])(currentDate, "MM/DD/YYYY"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 133
     },
     __self: this
   }), shown && react__WEBPACK_IMPORTED_MODULE_0__["createElement"](dayzed__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -209,7 +211,7 @@ var DatePicker = function DatePicker(_ref10) {
         return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](StyledDatePicker, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 153
+            lineNumber: 154
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -217,7 +219,7 @@ var DatePicker = function DatePicker(_ref10) {
           justify: "between",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 154
+            lineNumber: 155
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_4___default.a, _extends({}, getBackProps({
@@ -226,7 +228,7 @@ var DatePicker = function DatePicker(_ref10) {
           icon: react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_icons_ChevronLeft__WEBPACK_IMPORTED_MODULE_7___default.a, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 157
+              lineNumber: 158
             },
             __self: this
           }),
@@ -234,7 +236,7 @@ var DatePicker = function DatePicker(_ref10) {
           size: "small",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 155
+            lineNumber: 156
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_4___default.a, _extends({}, getForwardProps({
@@ -243,7 +245,7 @@ var DatePicker = function DatePicker(_ref10) {
           icon: react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_icons_ChevronRight__WEBPACK_IMPORTED_MODULE_8___default.a, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 163
+              lineNumber: 164
             },
             __self: this
           }),
@@ -251,7 +253,7 @@ var DatePicker = function DatePicker(_ref10) {
           size: "small",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 161
+            lineNumber: 162
           },
           __self: this
         }))), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -259,7 +261,7 @@ var DatePicker = function DatePicker(_ref10) {
           spacing: "extraLoose",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 168
+            lineNumber: 169
           },
           __self: this
         }, calendars.map(function (calendar) {
@@ -267,13 +269,13 @@ var DatePicker = function DatePicker(_ref10) {
             key: "".concat(calendar.month).concat(calendar.year),
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 170
+              lineNumber: 171
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](StyledCalendarYear, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 173
+              lineNumber: 174
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -281,13 +283,13 @@ var DatePicker = function DatePicker(_ref10) {
             weight: "bold",
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 174
+              lineNumber: 175
             },
             __self: this
           }, monthNamesShort[calendar.month], " ", calendar.year)), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](StyledCalendarWeek, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 179
+              lineNumber: 180
             },
             __self: this
           }, weekdayNamesShort.map(function (weekday) {
@@ -295,13 +297,13 @@ var DatePicker = function DatePicker(_ref10) {
               key: "".concat(calendar.month).concat(calendar.year).concat(weekday),
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 181
+                lineNumber: 182
               },
               __self: this
             }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_5___default.a, {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 186
+                lineNumber: 187
               },
               __self: this
             }, weekday));
@@ -314,7 +316,7 @@ var DatePicker = function DatePicker(_ref10) {
                   key: key,
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 196
+                    lineNumber: 197
                   },
                   __self: this
                 });
@@ -332,7 +334,7 @@ var DatePicker = function DatePicker(_ref10) {
                 selected: selected,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 204
+                  lineNumber: 205
                 },
                 __self: this
               }), selectable ? date.getDate() : "X");
@@ -345,7 +347,7 @@ var DatePicker = function DatePicker(_ref10) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 142
     },
     __self: this
   }));
@@ -57143,12 +57145,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _kiwicom_orbit_components_lib_Checkbox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Checkbox */ "./node_modules/@kiwicom/orbit-components/lib/Checkbox/index.js");
 /* harmony import */ var _kiwicom_orbit_components_lib_Checkbox__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Checkbox__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _components_ContentContainer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/ContentContainer */ "./components/ContentContainer.js");
-/* harmony import */ var _components_PlacePicker__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/PlacePicker */ "./components/PlacePicker.js");
-/* harmony import */ var _components_DatePicker__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/DatePicker */ "./components/DatePicker.js");
-/* harmony import */ var _components_Interests__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Interests */ "./components/Interests.js");
-/* harmony import */ var _components_useOnClickOutside__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/useOnClickOutside */ "./components/useOnClickOutside.js");
-/* harmony import */ var _components_PlacesToVisit__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/PlacesToVisit */ "./components/PlacesToVisit.js");
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/index.js");
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(date_fns__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_ContentContainer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/ContentContainer */ "./components/ContentContainer.js");
+/* harmony import */ var _components_PlacePicker__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/PlacePicker */ "./components/PlacePicker.js");
+/* harmony import */ var _components_DatePicker__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/DatePicker */ "./components/DatePicker.js");
+/* harmony import */ var _components_Interests__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/Interests */ "./components/Interests.js");
+/* harmony import */ var _components_useOnClickOutside__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/useOnClickOutside */ "./components/useOnClickOutside.js");
+/* harmony import */ var _components_PlacesToVisit__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/PlacesToVisit */ "./components/PlacesToVisit.js");
 var _jsxFileName = "/Users/petrsnobelt/Projects/js-weekend-brno-fe/pages/downshift.js";
 
 
@@ -57159,6 +57163,7 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -57201,100 +57206,116 @@ var TopPart = function TopPart() {
       showReturnDate = _useState8[0],
       setReturnDateVisibility = _useState8[1];
 
-  var _useState9 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
+  var _useState9 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(new Date()),
       _useState10 = _slicedToArray(_useState9, 2),
-      selectedDate = _useState10[0],
-      setDate = _useState10[1];
+      departureDate = _useState10[0],
+      setDepartureDate = _useState10[1];
 
   var _useState11 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       _useState12 = _slicedToArray(_useState11, 2),
-      datePickerOpened = _useState12[0],
-      setDatePickerVisibility = _useState12[1];
+      departureDatePickerOpened = _useState12[0],
+      setDepartureDatePickerVisibility = _useState12[1];
 
-  var _useState13 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
+  var _useState13 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(Object(date_fns__WEBPACK_IMPORTED_MODULE_5__["addDays"])(new Date(), 10)),
       _useState14 = _slicedToArray(_useState13, 2),
       returnDate = _useState14[0],
       setReturnDate = _useState14[1];
 
-  var selectDate = function selectDate(date) {
-    setDate(date.date);
-    setDatePickerVisibility(false);
+  var _useState15 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState16 = _slicedToArray(_useState15, 2),
+      returnDatePickerOpened = _useState16[0],
+      setReturnDatePickerVisibility = _useState16[1];
+
+  var selectDepartureDate = function selectDepartureDate(date) {
+    setDepartureDate(date.date);
+    setDepartureDatePickerVisibility(false);
   };
 
-  var openDatePicker = function openDatePicker() {
-    return setDatePickerVisibility(true);
+  var selectReturnDate = function selectReturnDate(date) {
+    setReturnDate(date.date);
+    setReturnDatePickerVisibility(false);
   };
 
+  var departureDatepickerRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+  Object(_components_useOnClickOutside__WEBPACK_IMPORTED_MODULE_10__["default"])(departureDatepickerRef, function () {
+    return setDepartureDatePickerVisibility(false);
+  });
+  var returnDatepickerRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+  Object(_components_useOnClickOutside__WEBPACK_IMPORTED_MODULE_10__["default"])(returnDatepickerRef, function () {
+    return setReturnDatePickerVisibility(false);
+  });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default.a, {
     spaceAfter: "largest",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 65
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default.a, {
     direction: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 66
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlacePicker__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlacePicker__WEBPACK_IMPORTED_MODULE_7__["default"], {
     label: "From",
     defaultValue: tripFrom,
     onChange: setFrom,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 67
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_DatePicker__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_DatePicker__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    openRef: departureDatepickerRef,
     label: "Departure",
-    onFocus: openDatePicker // TODO: onBlur or clickOutside ref
-    // onBlur={closeDatePicker}
-    ,
-    shown: datePickerOpened,
-    currentDate: selectedDate,
-    onDateSelected: selectDate,
+    onFocus: function onFocus() {
+      return setDepartureDatePickerVisibility(true);
+    },
+    shown: departureDatePickerOpened,
+    currentDate: departureDate,
+    onDateSelected: selectDepartureDate,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 72
     },
     __self: this
   })), (showDestination || showReturnDate) && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default.a, {
     direction: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 82
     },
     __self: this
-  }, showDestination && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlacePicker__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, showDestination && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlacePicker__WEBPACK_IMPORTED_MODULE_7__["default"], {
     label: "To",
     defaultValue: tripTo,
     onChange: setDestination,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 84
     },
     __self: this
-  }), showReturnDate && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_DatePicker__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }), showReturnDate && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_DatePicker__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    openRef: returnDatepickerRef,
     label: "Arrival",
-    onFocus: openDatePicker // TODO: onBlur or clickOutside ref
-    // onBlur={closeDatePicker}
-    ,
-    shown: false,
-    currentDate: selectedDate,
-    onDateSelected: selectDate,
+    onFocus: function onFocus() {
+      return setReturnDatePickerVisibility(true);
+    },
+    shown: returnDatePickerOpened,
+    currentDate: returnDate,
+    onDateSelected: selectReturnDate,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 91
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default.a, {
     direction: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 102
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Checkbox__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -57305,28 +57326,28 @@ var TopPart = function TopPart() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 103
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Checkbox__WEBPACK_IMPORTED_MODULE_3___default.a, {
     label: "Set return date",
-    checked: !showReturnDate,
+    checked: showReturnDate,
     onChange: function onChange(e) {
-      setReturnDateVisibility(!e.target.checked);
+      setReturnDateVisibility(e.target.checked);
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 110
     },
     __self: this
   })));
 };
 
 var DownShift = function DownShift() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ContentContainer__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ContentContainer__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 123
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Heading__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -57334,25 +57355,25 @@ var DownShift = function DownShift() {
     spaceAfter: "largest",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 124
     },
     __self: this
-  }, "What are you interested in?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Interests__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, "What are you interested in?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Interests__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 127
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NomadForm, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 128
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledOrigin, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 129
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Heading__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -57360,19 +57381,19 @@ var DownShift = function DownShift() {
     spaceAfter: "largest",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 130
     },
     __self: this
   }, "What destinations do you want to visit?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TopPart, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112
+      lineNumber: 133
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlacesToVisit__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlacesToVisit__WEBPACK_IMPORTED_MODULE_11__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114
+      lineNumber: 135
     },
     __self: this
   })));
