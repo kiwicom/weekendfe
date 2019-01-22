@@ -38,6 +38,9 @@ const TopPart = () => {
 
   const openDatePicker = () => setDatePickerVisibility(true)
 
+  const ref = useRef()
+  useOnClickOutside(ref, () => setDatePickerVisibility(false))
+
   return (
     <Stack spaceAfter="largest">
       <Stack direction="row">
@@ -47,10 +50,9 @@ const TopPart = () => {
           onChange={setFrom}
         />
         <DatePicker
+          openRef={ref}
           label="Departure"
           onFocus={openDatePicker}
-          // TODO: onBlur or clickOutside ref
-          // onBlur={closeDatePicker}
           shown={datePickerOpened}
           currentDate={selectedDate}
           onDateSelected={selectDate}
