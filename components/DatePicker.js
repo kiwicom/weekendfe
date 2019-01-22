@@ -126,9 +126,10 @@ const DatePicker = ({
   onBlur,
   onDateSelected,
   currentDate = "",
-  shown
+  shown,
+  openRef
 }) => (
-  <StyledDatePickerWrapper>
+  <StyledDatePickerWrapper ref={openRef}>
     <InputField
       inlineLabel
       label={label}
