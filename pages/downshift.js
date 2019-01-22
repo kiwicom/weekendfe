@@ -27,9 +27,7 @@ const TopPart = () => {
   const [showDestination, setDestinationVisibility] = useState(false)
   const [showReturnDate, setReturnDateVisibility] = useState(false)
 
-  const [departureDate, setDepartureDate] = useState(
-    format(new Date())
-  )
+  const [departureDate, setDepartureDate] = useState(new Date())
   const [
     departureDatePickerOpened,
     setDepartureDatePickerVisibility
