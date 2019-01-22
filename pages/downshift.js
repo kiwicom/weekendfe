@@ -3,6 +3,7 @@ import Heading from "@kiwicom/orbit-components/lib/Heading"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Checkbox from "@kiwicom/orbit-components/lib/Checkbox"
 import styled from "styled-components"
+import { format, addDays } from "date-fns"
 
 import ContentContainer from "../components/ContentContainer"
 import PlacePicker from "../components/PlacePicker"
@@ -26,13 +27,17 @@ const TopPart = () => {
   const [showDestination, setDestinationVisibility] = useState(false)
   const [showReturnDate, setReturnDateVisibility] = useState(false)
 
-  const [departureDate, setDepartureDate] = useState(null)
+  const [departureDate, setDepartureDate] = useState(
+    format(new Date())
+  )
   const [
     departureDatePickerOpened,
     setDepartureDatePickerVisibility
   ] = useState(false)
 
-  const [returnDate, setReturnDate] = useState(null)
+  const [returnDate, setReturnDate] = useState(
+    addDays(new Date(), 10)
+  )
   const [
     returnDatePickerOpened,
     setReturnDatePickerVisibility

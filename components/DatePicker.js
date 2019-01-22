@@ -136,7 +136,7 @@ const DatePicker = ({
       onFocus={onFocus}
       onBlur={onBlur}
       // TODO: do date formation
-      value={format(currentDate, "MM/dd/yyyy")}
+      value={format(currentDate, "MM/dd/YYYY")}
     />
     {shown && (
       <Dayzed
