@@ -1,9 +1,8 @@
 # https://weekend-api.now.sh/
 
-query {
-  locations(query: "Brno", limit: 20) {
+query Locations ($query: String!) {
+  locations(query: $query, limit: 20) {
     id
-    iid
     code
     name
     coords {
