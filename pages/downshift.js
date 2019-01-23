@@ -88,7 +88,6 @@ const TopPart = ({ from, to, start, end }) => {
             min={1}
             max={9}
             defaultValue={1}
-            label="Adults"
             onChange={value => console.log(value)}
           />
         </Stack>
