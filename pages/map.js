@@ -123,10 +123,10 @@ const MapPage = function() {
           </Tag>
           <Tag
             onClick={() =>
-              setSearchParams({ city: "Praha", country: "CZ" })
+              setSearchParams({ city: "Bratislava", country: "SK" })
             }
           >
-            Prague
+            Bratislava
           </Tag>
           <Tag
             onClick={() =>
