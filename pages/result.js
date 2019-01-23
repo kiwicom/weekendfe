@@ -44,8 +44,8 @@ const getStopovers = placesInUrl => {
     // eslint-disable-next-line fp/no-mutating-methods
     result.push({
       locations: [items[i]],
-      nightsFrom: items[i + 1],
-      nightsTo: items[i + 2]
+      nightsFrom: Number(items[i + 1]),
+      nightsTo: Number(items[i + 2])
     })
   return result
 }
@@ -59,7 +59,7 @@ const getParamsFromQuery = ({
   stopovers
 }) => ({
   params: {
-    adults,
+    adults: Number(adults),
     dateFrom:
       dateFrom || format(addDays(new Date(), 1), "DD/MM/YYYY"),
     dateTo: dateTo || format(addDays(new Date(), 30), "DD/MM/YYYY"),
