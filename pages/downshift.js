@@ -4,6 +4,8 @@ import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Checkbox from "@kiwicom/orbit-components/lib/Checkbox"
 import styled from "styled-components"
 import { format, addDays } from "date-fns"
+import createHistory from "history/createBrowserHistory"
+import createHashHistory from "history/createHashHistory"
 
 import ContentContainer from "../components/ContentContainer"
 import PlacePicker from "../components/PlacePicker"
@@ -11,6 +13,24 @@ import DatePicker from "../components/DatePicker"
 import Interests from "../components/Interests"
 import useOnClickOutside from "../components/useOnClickOutside"
 import PlacesToVisit from "../components/PlacesToVisit"
+
+let OurHistory = null
+if (typeof window !== "undefined") {
+  OurHistory = createHashHistory({
+    hashType: "slash" // the default
+  })
+
+  // Listen for changes to the current location.
+  const unlisten = OurHistory.listen(
+    ({ pathname, state }, action) => {
+      // location is an object like window.location
+      console.log(action, pathname, state)
+    }
+  )
+
+  // Get the current location.
+  const { location } = OurHistory
+}
 
 const NomadForm = styled.div`
   max-width: 696px;
@@ -44,6 +64,11 @@ const TopPart = () => {
   const selectDepartureDate = date => {
     setDepartureDate(date.date)
     setDepartureDatePickerVisibility(false)
+    OurHistory.push({
+      pathname: "/DepartureDate",
+      search: "?date=" + date.date.toISOString().split("T")[0],
+      state: { date: date.date }
+    })
   }
 
   const selectReturnDate = date => {
