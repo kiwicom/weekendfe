@@ -2,7 +2,7 @@ import * as React from "react"
 import styled from "styled-components"
 import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
 
-const StyledFooter = styled.div`
+const StyledNavBar = styled.div`
   display: flex;
   box-sizing: border-box;
   padding: 0 24px;
@@ -13,18 +13,18 @@ const StyledFooter = styled.div`
   justify-content: space-between;
   align-items: center;
   z-index: 10;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
-  box-shadow: 0 -2px 8px rgba(23, 27, 30, 0.15);
+  box-shadow: 0 2px 8px rgba(23, 27, 30, 0.15);
 `
 
-StyledFooter.defaultProps = {
+StyledNavBar.defaultProps = {
   theme: defaultTheme
 }
 
-const Footer = ({ children }) => (
-  <StyledFooter>{children}</StyledFooter>
+const NavBar = ({ children }) => (
+  <StyledNavBar>{children}</StyledNavBar>
 )
 
-export default Footer
+export default NavBar
