@@ -64,7 +64,7 @@ function reducer(places, { type, payload }) {
   const newPlaces = places && places.concat()
   switch (type) {
     case "reset":
-      return [["Australia", defaultDays]]
+      return payload || [["Australia", defaultDays]]
     case "addPlace":
       return places.concat([[null, [1, 3]]])
     case "removePlace":
@@ -82,9 +82,25 @@ function reducer(places, { type, payload }) {
   }
 }
 
-const PlacesToVisit = () => {
-  const [places, dispatch] = useReducer(reducer, null, {
-    type: "reset"
+const logReducer = (fn, logger) =>
+  // eslint-disable-next-line func-names
+  function() {
+    // eslint-disable-next-line
+    const before = arguments[0]
+    const result = fn.apply(null, arguments)
+    if (logger && before !== result) logger(result)
+    return result
+  }
+
+const PlacesToVisit = ({
+  defaultValue = [["Mexico", defaultDays]],
+  onChange = state => console.log("new places to visit", state),
+  onSearchClick
+}) => {
+  const loggReducer = logReducer(reducer, onChange)
+  const [places, dispatch] = useReducer(loggReducer, defaultValue, {
+    type: "reset",
+    payload: defaultValue
   })
   const action = (type, payload) => dispatch({ type, payload })
   const removePlace = index => () => action("removePlace", { index })
@@ -121,7 +137,12 @@ const PlacesToVisit = () => {
           >
             Add destination
           </Button>
-          <Button iconLeft={<Search />} block>
+          <Button
+            iconLeft={<Search />}
+            block
+            disabled={typeof onSearchClick !== "function"}
+            onClick={() => onSearchClick(places)}
+          >
             Search
           </Button>
         </Stack>
