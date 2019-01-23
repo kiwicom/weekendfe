@@ -24,25 +24,31 @@ const StyledOrigin = styled.div`
 
 const defaultValues = {
   interest: "gastronomy",
-  from: { id: "brno_cz", name: "Brno" },
-  start: new Date(),
+  flyFrom: { id: "brno_cz", name: "Brno" },
+  dateFrom: new Date(),
   places: [["Italy", [2, 5]]]
 }
 
-const TopPart = ({ from, to, start, end }) => {
+const TopPart = ({ flyFrom, flyTo, dateFrom, dateTo }) => {
   const [tripFrom, setFrom] = useUrl(
-    from || defaultValues.from,
-    "from",
+    flyFrom || defaultValues.flyFrom,
+    "flyFrom",
     item => item.id
   )
 
-  const [showDestination, setDestinationVisibility] = useState(false)
-  const [tripTo, setDestination] = useUrl(to, "to")
+  const [showDestination, setDestinationVisibility] = useState(
+    Boolean(flyTo)
+  )
+  const [tripTo, setDestination] = useUrl(flyTo, "flyTo", item =>
+    item ? item.id : undefined
+  )
 
-  const [showReturnDate, setReturnDateVisibility] = useState(false)
+  const [showReturnDate, setReturnDateVisibility] = useState(
+    Boolean(dateTo)
+  )
   const [departureDate, setDepartureDate] = useUrl(
-    start ? new Date(start) : defaultValues.start,
-    "start",
+    dateFrom ? new Date(dateFrom) : defaultValues.dateFrom,
+    "dateFrom",
     date => format(date, "YYYY-MM-DD")
   )
   const [
@@ -51,8 +57,8 @@ const TopPart = ({ from, to, start, end }) => {
   ] = useState(false)
 
   const [returnDate, setReturnDate] = useUrl(
-    end ? new Date(end) : addDays(new Date(), 10),
-    "end",
+    dateTo ? new Date(dateTo) : addDays(new Date(), 10),
+    "dateTo",
     date => format(date, "YYYY-MM-DD")
   )
   const [
@@ -180,10 +186,15 @@ const DownShift = ({ query, places }) => (
         </Heading>
         <TopPart
           {...query}
-          from={
-            query.from
-              ? { id: query.from, name: `[${query.from}]` }
-              : defaultValues.from
+          flyFrom={
+            query.flyFrom
+              ? { id: query.flyFrom, name: `[${query.flyFrom}]` }
+              : defaultValues.flyFrom
+          }
+          flyTo={
+            query.flyTo
+              ? { id: query.flyTo, name: `[${query.flyTo}]` }
+              : undefined
           }
         />
       </StyledOrigin>
