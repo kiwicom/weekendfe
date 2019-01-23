@@ -12,6 +12,7 @@ import DatePicker from "../components/DatePicker"
 import Interests from "../components/Interests"
 import useOnClickOutside from "../components/useOnClickOutside"
 import PlacesToVisit from "../components/PlacesToVisit"
+import Stepper from "../components/Stepper"
 import useUrl from "../components/useUrl"
 
 const NomadForm = styled.div`
@@ -81,6 +82,17 @@ const TopPart = ({ from, to, start, end }) => {
 
   return (
     <Stack spaceAfter="largest">
+      <Stack direction="row" justify="end">
+        <Stack basis="calc(25% - 16px)" shrink={false} grow={false}>
+          <Stepper
+            min={1}
+            max={9}
+            defaultValue={1}
+            label="Adults"
+            onChange={value => console.log(value)}
+          />
+        </Stack>
+      </Stack>
       <Stack direction="row">
         <PlacePicker
           label="From"
