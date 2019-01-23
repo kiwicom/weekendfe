@@ -1,11 +1,16 @@
+const path = require("path")
 const withBundleAnalyzer = require("@zeit/next-bundle-analyzer")
 
 const debug = process.env.NODE_ENV !== "production"
 const repoName = "weekendfe"
 
 const nextConfig = {
-  analyzeServer: ["server", "both"].includes(process.env.BUNDLE_ANALYZE),
-  analyzeBrowser: ["browser", "both"].includes(process.env.BUNDLE_ANALYZE),
+  analyzeServer: ["server", "both"].includes(
+    process.env.BUNDLE_ANALYZE
+  ),
+  analyzeBrowser: ["browser", "both"].includes(
+    process.env.BUNDLE_ANALYZE
+  ),
   bundleAnalyzerConfig: {
     server: {
       analyzerMode: "static",
@@ -16,10 +21,10 @@ const nextConfig = {
       reportFilename: "../bundles/client.html"
     }
   },
-  assetPrefix: debug ? "" : `/${repoName}/`,
-  webpack(config) {
-    return config
-  }
+  assetPrefix: debug ? "" : `/${repoName}/`
+  // webpack(config) {
+  //   return config
+  // }
 }
 
 module.exports = withBundleAnalyzer(nextConfig)

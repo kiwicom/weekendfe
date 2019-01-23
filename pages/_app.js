@@ -19,7 +19,7 @@ GlobalStyle.defaultProps = {
   theme: defaultTheme
 }
 
-const foundation = {
+export const foundation = {
   palette: {
     product: {
       light: "black",
