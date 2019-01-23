@@ -131,7 +131,6 @@ const DatePicker = ({
 }) => (
   <StyledDatePickerWrapper ref={openRef}>
     <InputField
-      ref={openRef}
       inlineLabel
       label={label}
       onFocus={onFocus}
