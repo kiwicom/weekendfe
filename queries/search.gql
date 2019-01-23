@@ -1,0 +1,23 @@
+query Search($params: SearchParams!) {
+  search(params: $params) {
+    price
+    bookingToken
+    route {
+      from {
+        country
+        city
+      }
+      to {
+        country
+        city
+      }
+      parts {
+        type
+        carrier
+      }
+      interests {
+        name
+      }
+    }
+  }
+}
