@@ -10,7 +10,8 @@ export default class MyDocument extends Document {
     const originalRenderPage = ctx.renderPage
     ctx.renderPage = () =>
       originalRenderPage({
-        enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
+        enhanceApp: App => props =>
+          sheet.collectStyles(<App {...props} />)
       })
 
     const initialProps = await Document.getInitialProps(ctx)
@@ -28,11 +29,15 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700"
             rel="stylesheet"
           />
-          <link href="https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css" rel="stylesheet" />
+          <link
+            href="https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css"
+            rel="stylesheet"
+          />
         </Head>
         <Body>
           <Main />
           <NextScript />
+          <div id="modals" />
         </Body>
       </html>
     )
