@@ -12,7 +12,7 @@ import ChevronUp from "@kiwicom/orbit-components/lib/icons/ChevronUp"
 import useOnClickOutside from "./useOnClickOutside"
 
 const Popover = styled.div`
-  width: 250px;
+  width: 120px;
   display: flex;
   flex-direction: row;
   align-items: center;
