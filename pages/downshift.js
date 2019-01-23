@@ -30,11 +30,12 @@ const defaultValues = {
   places: [["Italy", [2, 5]]]
 }
 
-const TopPart = ({ from, to, start, end }) => {
+const TopPart = ({ from, to, start, end, adults }) => {
   const [tripFrom, setFrom] = useUrl(
     from || defaultValues.from,
     "from"
   )
+  const [tripAdults, setAdults] = useUrl(adults, "adults")
 
   const [showDestination, setDestinationVisibility] = useState(false)
   const [tripTo, setDestination] = useUrl(to, "to")
@@ -87,8 +88,8 @@ const TopPart = ({ from, to, start, end }) => {
           <Stepper
             min={1}
             max={9}
-            defaultValue={1}
-            onChange={value => console.log(value)}
+            defaultValue={tripAdults}
+            onChange={setAdults}
           />
         </Stack>
       </Stack>

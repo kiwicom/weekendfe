@@ -18,7 +18,7 @@ const Popover = styled.div`
   align-items: center;
   position: absolute;
   padding: ${({ theme }) => theme.orbit.spaceMedium};
-  top: calc(100% + ${({ theme }) => theme.orbit.spaceSmall});
+  top: calc(100% + ${({ theme }) => theme.orbit.spaceXXXSmall});
   z-index: 10;
   background: ${({ theme }) => theme.orbit.paletteWhite};
   border-radius: ${({ theme }) => theme.orbit.borderRadiusNormal};
@@ -70,14 +70,15 @@ const Stepper = ({
   max,
   onChange
 }) => {
+  const value = Number(defaultValue)
   const ref = useRef()
-  const [count, setCount] = useState(defaultValue)
+  const [count, setCount] = useState(value <= 9 ? value : 9)
   const [isOpen, setVisibility] = useState(false)
 
   useOnClickOutside(ref, () => setVisibility(false))
 
   const incrementCounter = () => {
-    const newValue = count + step
+    const newValue = Number(count + step)
     if (newValue >= +max ? min : newValue) {
       setCount(newValue)
       if (onChange) onChange(newValue)
@@ -85,7 +86,7 @@ const Stepper = ({
   }
 
   const decrementCounter = () => {
-    const newValue = count - step
+    const newValue = Number(count - step)
     if (newValue <= +min ? min : newValue) {
       setCount(newValue)
       if (onChange) onChange(newValue)
