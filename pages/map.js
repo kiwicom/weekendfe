@@ -31,6 +31,8 @@ const LoadingContainer = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.6);
 `
 
 const TagTimeline = styled.div`
@@ -78,33 +80,35 @@ const MapPage = function() {
         context={{ uri: "https://weekend-api.now.sh/" }}
       >
         {({ loading, error, data }) => {
-          if (loading) {
-            const loadingText = `Loading locations in ${search.city}`
-            return (
-              <LoadingContainer>
-                <Loading loading text={loadingText} />
-              </LoadingContainer>
-            )
-          }
-          if (error) {
-            return (
-              <Portal element="modals">
-                <Modal>
-                  <ModalSection>
-                    <Alert
-                      type="critical"
-                      title="Something went wrong."
-                    >
-                      The map could not be loaded.
-                      <br />
-                      Please reload the page.
-                    </Alert>
-                  </ModalSection>
-                </Modal>
-              </Portal>
-            )
-          }
-          return <DynamicMap places={data.interests} />
+          return (
+            <>
+              {loading ? (
+                <LoadingContainer>
+                  <Loading
+                    loading
+                    text={`Loading locations in ${search.city}`}
+                  />
+                </LoadingContainer>
+              ) : null}
+              {error ? (
+                <Portal element="modals">
+                  <Modal>
+                    <ModalSection>
+                      <Alert
+                        type="critical"
+                        title="Something went wrong."
+                      >
+                        The map could not be loaded.
+                        <br />
+                        Please reload the page.
+                      </Alert>
+                    </ModalSection>
+                  </Modal>
+                </Portal>
+              ) : null}
+              <DynamicMap places={data.interests} />
+            </>
+          )
         }}
       </Query>
 
@@ -119,10 +123,10 @@ const MapPage = function() {
           </Tag>
           <Tag
             onClick={() =>
-              setSearchParams({ city: "Prague", country: "CZ" })
+              setSearchParams({ city: "Bratislava", country: "SK" })
             }
           >
-            Prague
+            Bratislava
           </Tag>
           <Tag
             onClick={() =>
