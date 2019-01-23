@@ -1,4 +1,3 @@
-import { useState } from "react"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Cocktail from "@kiwicom/orbit-components/lib/icons/Cocktail"
 import Meal from "@kiwicom/orbit-components/lib/icons/Meal"
@@ -6,9 +5,13 @@ import Sightseeing from "@kiwicom/orbit-components/lib/icons/Sightseeing"
 import GenderWoman from "@kiwicom/orbit-components/lib/icons/GenderWoman"
 
 import InterestCard from "./InterestCard"
+import useUrl from "./useUrl"
 
-export default function Interests() {
-  const [interest, setInterest] = useState("party")
+export default function Interests({ defaultValue }) {
+  const [interest, setInterest] = useUrl(
+    defaultValue || "party",
+    "interest"
+  )
   const changeRadio = e => {
     setInterest(e.target.value)
   }
