@@ -30,6 +30,10 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
           <link
+            href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700"
+            rel="stylesheet"
+          />
+          <link
             href="https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css"
             rel="stylesheet"
           />

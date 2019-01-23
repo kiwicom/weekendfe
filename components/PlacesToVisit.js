@@ -1,4 +1,4 @@
-import { useState, useRef } from "react"
+import { useState, useRef, useReducer } from "react"
 import Heading from "@kiwicom/orbit-components/lib/Heading"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Button from "@kiwicom/orbit-components/lib/Button"
@@ -58,27 +58,40 @@ const PlaceToVisit = ({
   )
 }
 
-const PlacesToVisit = () => {
-  const defaultDays = [2, 5]
-  const [places, changePlaces] = useState([
-    ["Australia", defaultDays]
-  ])
-  const addPlace = () => changePlaces(places.concat([[null, [1, 3]]]))
-  const removePlace = indexToRemove => () =>
-    changePlaces(
-      places.filter((val, index) => index !== indexToRemove)
-    )
-  const changeDays = index => days => {
-    const newPlaces = places.concat()
-    newPlaces[index][1] = days
-    changePlaces(newPlaces)
-  }
-  const changePlace = index => place => {
-    const newPlaces = places.concat()
-    newPlaces[index][0] = place
-    changePlaces(newPlaces)
-  }
+const defaultDays = [2, 5]
 
+function reducer(places, { type, payload }) {
+  const newPlaces = places && places.concat()
+  switch (type) {
+    case "reset":
+      return [["Australia", defaultDays]]
+    case "addPlace":
+      return places.concat([[null, [1, 3]]])
+    case "removePlace":
+      return places.filter((val, index) => index !== payload.index)
+    case "changeDays":
+      newPlaces[payload.index][1] = payload.days
+      return newPlaces
+    case "changePlace":
+      newPlaces[payload.index][0] = payload.place
+      return newPlaces
+    default:
+      // A reducer must always return a valid state.
+      // Alternatively you can throw an error if an invalid action is dispatched.
+      return places
+  }
+}
+
+const PlacesToVisit = () => {
+  const [places, dispatch] = useReducer(reducer, null, {
+    type: "reset"
+  })
+  const action = (type, payload) => dispatch({ type, payload })
+  const removePlace = index => () => action("removePlace", { index })
+  const changeDays = index => days =>
+    action("changeDays", { index, days })
+  const changePlace = index => place =>
+    action("changePlace", { index, place })
   return (
     <>
       <Heading type="title2" spaceAfter="medium">
@@ -104,7 +117,7 @@ const PlacesToVisit = () => {
             iconLeft={<Plus />}
             block
             disabled={!places[places.length - 1][0]}
-            onClick={addPlace}
+            onClick={() => action("addPlace")}
           >
             Add destination
           </Button>
