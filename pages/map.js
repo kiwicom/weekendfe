@@ -79,37 +79,35 @@ const MapPage = function() {
         variables={search}
         context={{ uri: "https://weekend-api.now.sh/" }}
       >
-        {({ loading, error, data }) => {
-          return (
-            <>
-              {loading ? (
-                <LoadingContainer>
-                  <Loading
-                    loading
-                    text={`Loading locations in ${search.city}`}
-                  />
-                </LoadingContainer>
-              ) : null}
-              {error ? (
-                <Portal element="modals">
-                  <Modal>
-                    <ModalSection>
-                      <Alert
-                        type="critical"
-                        title="Something went wrong."
-                      >
-                        The map could not be loaded.
-                        <br />
-                        Please reload the page.
-                      </Alert>
-                    </ModalSection>
-                  </Modal>
-                </Portal>
-              ) : null}
-              <DynamicMap places={data.interests} />
-            </>
-          )
-        }}
+        {({ loading, error, data }) => (
+          <>
+            {loading ? (
+              <LoadingContainer>
+                <Loading
+                  loading
+                  text={`Loading locations in ${search.city}`}
+                />
+              </LoadingContainer>
+            ) : null}
+            {error ? (
+              <Portal element="modals">
+                <Modal>
+                  <ModalSection>
+                    <Alert
+                      type="critical"
+                      title="Something went wrong."
+                    >
+                      The map could not be loaded.
+                      <br />
+                      Please reload the page.
+                    </Alert>
+                  </ModalSection>
+                </Modal>
+              </Portal>
+            ) : null}
+            <DynamicMap places={data.interests} />
+          </>
+        )}
       </Query>
 
       <NavBar>
@@ -145,17 +143,21 @@ const MapPage = function() {
         </TagTimeline>
         <Line />
       </NavBar>
-      <Footer>
-        <ButtonLink type="secondary" icon={<Share />}>
-          Share
-        </ButtonLink>
-        <Stack direction="row" justify="end" shrink>
-          <Button type="secondary" iconLeft={<ChevronLeft />}>
-            Show flights
-          </Button>
-          <Button iconLeft={<List />}>Show places</Button>
-        </Stack>
-      </Footer>
+      <Footer
+        leftActions={
+          <ButtonLink type="secondary" icon={<Share />}>
+            Share
+          </ButtonLink>
+        }
+        rightActions={
+          <Stack direction="row" justify="end" shrink>
+            <Button type="secondary" iconLeft={<ChevronLeft />}>
+              Show flights
+            </Button>
+            <Button iconLeft={<List />}>Show places</Button>
+          </Stack>
+        }
+      />
     </div>
   )
 }

@@ -1,8 +1,20 @@
 import { format, addDays } from "date-fns"
+import styled from "styled-components"
+import Button from "@kiwicom/orbit-components/lib/Button"
+import Stack from "@kiwicom/orbit-components/lib/Stack"
+import Heading from "@kiwicom/orbit-components/lib/Heading"
+import ChevronLeft from "@kiwicom/orbit-components/lib/icons/ChevronLeft"
 
 import Query from "../components/query"
 import search from "../queries/search.gql"
 import Debug from "../components/debug"
+import ContentContainer from "../components/ContentContainer"
+import Footer from "../components/Footer"
+import Itinerary from "../components/Itinerary"
+
+const ResultsContainer = styled.div`
+  max-width: 1024px;
+`
 
 /*
 For usage online
@@ -79,7 +91,27 @@ const Result = ({ query }) => (
       query={search}
       variables={getParamsFromQuery(query)}
       context={{ uri: "https://weekend-api.now.sh/" }}
-    />
+    >
+      {({ data }) => (
+        <ContentContainer>
+          <ResultsContainer>
+            <Stack direction="column" spacing="extraLoose">
+              <Heading type="title1" spaceAfter="largest">
+                Choose your flight combination
+              </Heading>
+              <Itinerary flights={data.search.slice(0, 2)} />
+            </Stack>
+            <Footer
+              leftActions={
+                <Button type="secondary" iconLeft={<ChevronLeft />}>
+                  Previous Step
+                </Button>
+              }
+            />
+          </ResultsContainer>
+        </ContentContainer>
+      )}
+    </Query>
   </>
 )
 

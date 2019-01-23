@@ -29,8 +29,9 @@ const Itinerary = ({ flights }) => (
                 </Text>
               </Stack>
               <Stack direction="column" shrink>
-                {flight.routes.map(route => (
-                  <Route {...route} />
+                {flight.route.map((route, key) => (
+                  // eslint-disable-next-line
+                  <Route {...route} key={key} />
                 ))}
               </Stack>
               <Hide
