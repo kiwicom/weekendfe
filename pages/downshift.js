@@ -6,7 +6,7 @@ import styled from "styled-components"
 import { format, addDays } from "date-fns"
 
 import ContentContainer from "../components/ContentContainer"
-import PlacePicker from "../components/PlacePicker"
+import PlacePicker from "../components/PlacePickerLocations"
 import DatePicker from "../components/DatePicker"
 import Interests from "../components/Interests"
 import useOnClickOutside from "../components/useOnClickOutside"
