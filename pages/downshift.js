@@ -24,7 +24,7 @@ const StyledOrigin = styled.div`
 
 const defaultValues = {
   interest: "gastronomy",
-  from: "Czech Republic",
+  from: { id: "brno_cz", name: "Brno" },
   start: new Date(),
   places: [["Italy", [2, 5]]]
 }
@@ -32,7 +32,8 @@ const defaultValues = {
 const TopPart = ({ from, to, start, end }) => {
   const [tripFrom, setFrom] = useUrl(
     from || defaultValues.from,
-    "from"
+    "from",
+    item => item.id
   )
 
   const [showDestination, setDestinationVisibility] = useState(false)
@@ -177,7 +178,14 @@ const DownShift = ({ query, places }) => (
         <Heading type="title1" spaceAfter="largest">
           What destinations do you want to visit?
         </Heading>
-        <TopPart {...query} />
+        <TopPart
+          {...query}
+          from={
+            query.from
+              ? { id: query.from, name: `[${query.from}]` }
+              : defaultValues.from
+          }
+        />
       </StyledOrigin>
       <PlacesToVisit
         onChange={changePlacesState}

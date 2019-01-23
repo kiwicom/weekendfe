@@ -1,10 +1,8 @@
-import { useState } from "react"
 import styled from "styled-components"
 import ListChoice from "@kiwicom/orbit-components/lib/ListChoice"
 import City from "@kiwicom/orbit-components/lib/icons/City"
 import InputField from "@kiwicom/orbit-components/lib/InputField"
 import Downshift from "downshift"
-import debounce from "lodash.debounce"
 
 import Query from "./query"
 import locationsQuery from "../queries/locations.gql"
@@ -33,83 +31,77 @@ const PlacePicker = ({
   defaultValue,
   onChange = () => {},
   label = "Via"
-}) => {
-  const [value, setValue] = useState(defaultValue)
-  return (
-    <StyledPlacePicker>
-      <Downshift
-        onStateChange={debounce(({ inputValue }) => {
-          if (inputValue) {
-            setValue(inputValue)
-          }
-        }, 50)}
-        onChange={onChange}
-      >
-        {({
-          getInputProps,
-          getItemProps,
-          isOpen,
-          selectedItem,
-          openMenu,
-          highlightedIndex
-        }) => (
-          /* TODO: use InputWrapper, needs getRootProps */
-          <div style={{ position: "relative" }}>
-            <InputField
-              {...getInputProps({
-                // here's the interesting part
-                onFocus: openMenu
-              })}
-              inlineLabel
-              label={label}
-            />
-            {isOpen ? (
-              <ResultsList>
-                <Query
-                  query={locationsQuery}
-                  variables={{
-                    query: value
-                  }}
-                  context={{
-                    uri: "https://weekend-api.now.sh"
-                  }}
-                >
-                  {({ data: { locations } }) =>
-                    locations.map(({ name }, index) => (
-                      <div
+}) => (
+  <StyledPlacePicker>
+    <Downshift
+      itemToString={item => (item ? item.name : "")}
+      initialSelectedItem={defaultValue}
+      onChange={onChange}
+    >
+      {({
+        getInputProps,
+        getItemProps,
+        isOpen,
+        inputValue,
+        selectedItem,
+        openMenu,
+        highlightedIndex
+      }) => (
+        <div style={{ position: "relative" }}>
+          <InputField
+            {...getInputProps({
+              // here's the interesting part
+              onFocus: openMenu
+            })}
+            inlineLabel
+            label={label}
+          />
+          {isOpen ? (
+            <ResultsList>
+              <Query
+                query={locationsQuery}
+                variables={{
+                  query: inputValue
+                }}
+                context={{
+                  uri: "https://weekend-api.now.sh"
+                }}
+              >
+                {({ data: { locations } }) =>
+                  locations.map(({ name, id, code }, index) => (
+                    <div
+                      {...getItemProps({
+                        item: { name, id, code },
+                        index
+                      })}
+                      key={id}
+                    >
+                      <ListChoice
+                        key={name}
+                        icon={<City />}
+                        selectable
+                        selected={selectedItem === name}
+                        title={`${name} [${code}/${id}]`}
+                        description={
+                          highlightedIndex === index
+                            ? "press for select"
+                            : ""
+                        }
                         {...getItemProps({
-                          item: name,
+                          item: { name, id, code },
                           index
                         })}
-                        key={name}
-                      >
-                        <ListChoice
-                          key={name}
-                          icon={<City />}
-                          selectable
-                          selected={selectedItem === name}
-                          title={name}
-                          description={
-                            highlightedIndex === index
-                              ? "press for select"
-                              : ""
-                          }
-                          {...getItemProps({
-                            item: name,
-                            index
-                          })}
-                        />
-                      </div>
-                    ))
-                  }
-                </Query>
-              </ResultsList>
-            ) : null}
-          </div>
-        )}
-      </Downshift>
-    </StyledPlacePicker>
-  )
-}
+                      />
+                    </div>
+                  ))
+                }
+              </Query>
+            </ResultsList>
+          ) : null}
+        </div>
+      )}
+    </Downshift>
+  </StyledPlacePicker>
+)
 
 export default PlacePicker
