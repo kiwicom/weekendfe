@@ -33,20 +33,6 @@ For usage online
 }
 */
 
-const sampleValues = {
-  params: {
-    adults: 1,
-    dateFrom: "29/01/2019",
-    dateTo: "29/03/2019",
-    flyFrom: "vienna_at",
-    flyTo: "vienna_at",
-    stopovers: [
-      { locations: ["LON"], nightsFrom: 1, nightsTo: 7 },
-      { locations: ["PAR"], nightsFrom: 1, nightsTo: 7 }
-    ]
-  }
-}
-
 const getStopovers = placesInUrl => {
   if (!placesInUrl) return undefined
   const items = placesInUrl.split("-")
@@ -86,7 +72,7 @@ const getParamsFromQuery = ({
 
 const Result = ({ query }) => (
   <>
-    <Debug queryParams={getParamsFromQuery(query)} />
+    {query.debug && <Debug queryParams={getParamsFromQuery(query)} />}
     <Query
       query={search}
       variables={getParamsFromQuery(query)}

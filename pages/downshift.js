@@ -166,9 +166,8 @@ const placesToUrl = places =>
     .replace(/,/g, "-")
 
 const changePlacesState = newPlaces => {
-  // if (typeof window === "undefined") return
   const newUrl = {
-    pathname: "/downshift",
+    pathname: Router.pathname,
     query: {
       ...Router.query,
       places: placesToUrl(newPlaces)
