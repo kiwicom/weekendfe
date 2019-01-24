@@ -375,9 +375,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _kiwicom_orbit_components_lib_Radio__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Radio */ "./node_modules/@kiwicom/orbit-components/lib/Radio/index.js");
 /* harmony import */ var _kiwicom_orbit_components_lib_Radio__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Radio__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _kiwicom_orbit_components_lib_defaultTokens__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/defaultTokens */ "./node_modules/@kiwicom/orbit-components/lib/defaultTokens.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_defaultTokens__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_defaultTokens__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _kiwicom_orbit_components_lib_Hide__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Hide */ "./node_modules/@kiwicom/orbit-components/lib/Hide/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Hide__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Hide__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _kiwicom_orbit_components_lib_defaultTokens__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/defaultTokens */ "./node_modules/@kiwicom/orbit-components/lib/defaultTokens.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_defaultTokens__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_defaultTokens__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/Users/petrsnobelt/Projects/js-weekend-brno-fe/components/InterestCard.js";
+
 
 
 
@@ -404,7 +407,7 @@ var StyledInterestCard = styled_components__WEBPACK_IMPORTED_MODULE_1__["default
   return theme.orbit.durationFast;
 });
 StyledInterestCard.defaultProps = {
-  theme: _kiwicom_orbit_components_lib_defaultTokens__WEBPACK_IMPORTED_MODULE_5___default.a
+  theme: _kiwicom_orbit_components_lib_defaultTokens__WEBPACK_IMPORTED_MODULE_6___default.a
 };
 var StyledContent = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "InterestCard__StyledContent",
@@ -436,7 +439,7 @@ var InterestCard = function InterestCard(_ref6) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 60
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -445,38 +448,45 @@ var InterestCard = function InterestCard(_ref6) {
     align: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 61
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Hide__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    on: ["largeMobile"],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](StyledIcon, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 63
     },
     __self: this
-  }, icon), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](StyledContent, {
+  }, icon)), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](StyledContent, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 65
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_3___default.a, {
     weight: "bold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 66
     },
     __self: this
   }, title), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_3___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 67
     },
     __self: this
   }, description)), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](StyledRadio, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 69
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Radio__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -486,7 +496,7 @@ var InterestCard = function InterestCard(_ref6) {
     onChange: onChange,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 70
     },
     __self: this
   }))));
@@ -508,18 +518,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Interests; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Stack */ "./node_modules/@kiwicom/orbit-components/lib/Stack/index.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _kiwicom_orbit_components_lib_icons_Cocktail__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/icons/Cocktail */ "./node_modules/@kiwicom/orbit-components/lib/icons/Cocktail.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_icons_Cocktail__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_icons_Cocktail__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _kiwicom_orbit_components_lib_icons_Meal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/icons/Meal */ "./node_modules/@kiwicom/orbit-components/lib/icons/Meal.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_icons_Meal__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_icons_Meal__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _kiwicom_orbit_components_lib_icons_Sightseeing__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/icons/Sightseeing */ "./node_modules/@kiwicom/orbit-components/lib/icons/Sightseeing.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_icons_Sightseeing__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_icons_Sightseeing__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _kiwicom_orbit_components_lib_icons_GenderWoman__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/icons/GenderWoman */ "./node_modules/@kiwicom/orbit-components/lib/icons/GenderWoman.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_icons_GenderWoman__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_icons_GenderWoman__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _InterestCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./InterestCard */ "./components/InterestCard.js");
-/* harmony import */ var _useUrl__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./useUrl */ "./components/useUrl.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_Cocktail__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/icons/Cocktail */ "./node_modules/@kiwicom/orbit-components/lib/icons/Cocktail.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_Cocktail__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_icons_Cocktail__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_Meal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/icons/Meal */ "./node_modules/@kiwicom/orbit-components/lib/icons/Meal.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_Meal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_icons_Meal__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_Sightseeing__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/icons/Sightseeing */ "./node_modules/@kiwicom/orbit-components/lib/icons/Sightseeing.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_Sightseeing__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_icons_Sightseeing__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_GenderWoman__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/icons/GenderWoman */ "./node_modules/@kiwicom/orbit-components/lib/icons/GenderWoman.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_GenderWoman__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_icons_GenderWoman__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _kiwicom_orbit_components_lib_defaultTokens__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/defaultTokens */ "./node_modules/@kiwicom/orbit-components/lib/defaultTokens.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_defaultTokens__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_defaultTokens__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _kiwicom_orbit_components_lib_utils_mediaQuery__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/utils/mediaQuery */ "./node_modules/@kiwicom/orbit-components/lib/utils/mediaQuery/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_utils_mediaQuery__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_utils_mediaQuery__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _InterestCard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./InterestCard */ "./components/InterestCard.js");
+/* harmony import */ var _useUrl__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./useUrl */ "./components/useUrl.js");
 var _jsxFileName = "/Users/petrsnobelt/Projects/js-weekend-brno-fe/components/Interests.js";
 
 
@@ -538,10 +551,28 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-function Interests(_ref) {
-  var defaultValue = _ref.defaultValue;
 
-  var _useUrl = Object(_useUrl__WEBPACK_IMPORTED_MODULE_7__["default"])(defaultValue || "party", "interest"),
+
+var StyledInterests = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div.withConfig({
+  displayName: "Interests__StyledInterests",
+  componentId: "helzsi-0"
+})(["display:flex;flex-direction:column;max-width:890px;margin-bottom:", ";> *{margin-bottom:", ";}", ""], function (_ref) {
+  var theme = _ref.theme;
+  return theme.orbit.spaceXLarge;
+}, function (_ref2) {
+  var theme = _ref2.theme;
+  return theme.orbit.spaceSmall;
+}, _kiwicom_orbit_components_lib_utils_mediaQuery__WEBPACK_IMPORTED_MODULE_6___default.a.largeMobile(Object(styled_components__WEBPACK_IMPORTED_MODULE_7__["css"])(["flex-direction:row;> *{margin-bottom:0;margin-right:", ";}"], function (_ref3) {
+  var theme = _ref3.theme;
+  return theme.orbit.spaceSmall;
+})));
+StyledInterests.defaultProps = {
+  theme: _kiwicom_orbit_components_lib_defaultTokens__WEBPACK_IMPORTED_MODULE_5___default.a
+};
+function Interests(_ref4) {
+  var defaultValue = _ref4.defaultValue;
+
+  var _useUrl = Object(_useUrl__WEBPACK_IMPORTED_MODULE_9__["default"])(defaultValue || "party", "interest"),
       _useUrl2 = _slicedToArray(_useUrl, 2),
       interest = _useUrl2[0],
       setInterest = _useUrl2[1];
@@ -550,89 +581,82 @@ function Interests(_ref) {
     setInterest(e.target.value);
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    direction: "column",
-    spacing: "natural",
-    spaceAfter: "largest",
-    desktop: {
-      direction: "row",
-      spacing: "extraLoose"
-    },
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledInterests, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 46
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InterestCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InterestCard__WEBPACK_IMPORTED_MODULE_8__["default"], {
     title: "Party life",
     description: "Type something",
     value: "party",
     checked: interest === "party",
     onChange: changeRadio,
-    icon: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_Cocktail__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    icon: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_Cocktail__WEBPACK_IMPORTED_MODULE_1___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 53
       },
       __self: this
     }),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 47
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InterestCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InterestCard__WEBPACK_IMPORTED_MODULE_8__["default"], {
     title: "Gastronomy",
     description: "Type something",
     value: "gastronomy",
     checked: interest === "gastronomy",
     onChange: changeRadio,
-    icon: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_Meal__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    icon: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_Meal__WEBPACK_IMPORTED_MODULE_2___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 61
       },
       __self: this
     }),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 55
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InterestCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InterestCard__WEBPACK_IMPORTED_MODULE_8__["default"], {
     title: "Sightseeing",
     description: "Type something",
     value: "sightseeing",
     checked: interest === "sightseeing",
     onChange: changeRadio,
-    icon: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_Sightseeing__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    icon: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_Sightseeing__WEBPACK_IMPORTED_MODULE_3___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 69
       },
       __self: this
     }),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 63
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InterestCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InterestCard__WEBPACK_IMPORTED_MODULE_8__["default"], {
     title: "Hookers",
     description: "Type something",
     value: "hookers",
     checked: interest === "hookers",
     onChange: changeRadio,
-    icon: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_GenderWoman__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    icon: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_GenderWoman__WEBPACK_IMPORTED_MODULE_4___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 77
       },
       __self: this
     }),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 71
     },
     __self: this
   }));
@@ -658,12 +682,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _kiwicom_orbit_components_lib_icons_City__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_icons_City__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _kiwicom_orbit_components_lib_InputField__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/InputField */ "./node_modules/@kiwicom/orbit-components/lib/InputField/index.js");
 /* harmony import */ var _kiwicom_orbit_components_lib_InputField__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_InputField__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var downshift__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! downshift */ "./node_modules/downshift/dist/downshift.esm.js");
-/* harmony import */ var _query__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./query */ "./components/query.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_ButtonLink__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/ButtonLink */ "./node_modules/@kiwicom/orbit-components/lib/ButtonLink/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_ButtonLink__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_ButtonLink__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_Close__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/icons/Close */ "./node_modules/@kiwicom/orbit-components/lib/icons/Close.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_Close__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_icons_Close__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var downshift__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! downshift */ "./node_modules/downshift/dist/downshift.esm.js");
+/* harmony import */ var _useDebounce__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./useDebounce */ "./components/useDebounce.js");
+/* harmony import */ var _query__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./query */ "./components/query.js");
 var _jsxFileName = "/Users/petrsnobelt/Projects/js-weekend-brno-fe/components/PlacePickerLocations.js";
 
-
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
 
 
 
@@ -676,8 +716,8 @@ var StyledPlacePicker = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"
   displayName: "PlacePickerLocations__StyledPlacePicker",
   componentId: "sc-4xwrz9-0"
 })(["width:100%;"]);
-var ResultsList = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
-  displayName: "PlacePickerLocations__ResultsList",
+var StyledResults = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "PlacePickerLocations__StyledResults",
   componentId: "sc-4xwrz9-1"
 })(["width:100%;max-height:270px;position:absolute;top:", ";z-index:10;background:", ";border-radius:", ";overflow-x:hidden;overflow-y:auto;box-shadow:", ";"], function (_ref) {
   var theme = _ref.theme;
@@ -699,119 +739,166 @@ var PlacePicker = function PlacePicker(_ref5) {
       onChange = _ref5$onChange === void 0 ? function () {} : _ref5$onChange,
       _ref5$label = _ref5.label,
       label = _ref5$label === void 0 ? "Via" : _ref5$label;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(defaultValue),
+      _useState2 = _slicedToArray(_useState, 2),
+      value = _useState2[0],
+      setValue = _useState2[1];
+
+  var debouncedValue = Object(_useDebounce__WEBPACK_IMPORTED_MODULE_8__["default"])(value, 150);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledPlacePicker, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 43
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(downshift__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(downshift__WEBPACK_IMPORTED_MODULE_7__["default"], {
     itemToString: function itemToString(item) {
       return item ? item.name : "";
     },
     initialSelectedItem: defaultValue,
+    onStateChange: function onStateChange(_ref6) {
+      var inputValue = _ref6.inputValue;
+
+      if (inputValue) {
+        setValue(inputValue);
+      }
+    },
     onChange: onChange,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 44
     },
     __self: this
-  }, function (_ref6) {
-    var getInputProps = _ref6.getInputProps,
-        getItemProps = _ref6.getItemProps,
-        isOpen = _ref6.isOpen,
-        inputValue = _ref6.inputValue,
-        selectedItem = _ref6.selectedItem,
-        openMenu = _ref6.openMenu,
-        highlightedIndex = _ref6.highlightedIndex;
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      style: {
-        position: "relative"
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 50
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_InputField__WEBPACK_IMPORTED_MODULE_4___default.a, _extends({}, getInputProps({
-      // here's the interesting part
-      onFocus: openMenu
-    }), {
-      inlineLabel: true,
-      label: label,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 51
-      },
-      __self: this
-    })), isOpen ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ResultsList, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 60
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      query: locationsQuery,
-      variables: {
-        query: inputValue
-      },
-      context: {
-        uri: "https://weekend-api.now.sh"
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 61
-      },
-      __self: this
-    }, function (_ref7) {
-      var locations = _ref7.data.locations;
-      return locations.map(function (_ref8, index) {
-        var name = _ref8.name,
-            id = _ref8.id,
-            code = _ref8.code;
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", _extends({}, getItemProps({
-          item: {
-            name: name,
-            id: id,
-            code: code
-          },
-          index: index
-        }), {
-          key: id,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 72
-          },
-          __self: this
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_ListChoice__WEBPACK_IMPORTED_MODULE_2___default.a, _extends({
-          key: name,
-          icon: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_City__WEBPACK_IMPORTED_MODULE_3___default.a, {
+  }, function (_ref7) {
+    var getInputProps = _ref7.getInputProps,
+        getItemProps = _ref7.getItemProps,
+        isOpen = _ref7.isOpen,
+        selectedItem = _ref7.selectedItem,
+        openMenu = _ref7.openMenu,
+        highlightedIndex = _ref7.highlightedIndex,
+        clearSelection = _ref7.clearSelection;
+    return (
+      /* TODO: use InputWrapper, needs getRootProps */
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          position: "relative"
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_InputField__WEBPACK_IMPORTED_MODULE_4___default.a, _extends({}, getInputProps({
+        // here's the interesting part
+        onFocus: openMenu
+      }), {
+        inlineLabel: true,
+        label: label,
+        suffix: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_ButtonLink__WEBPACK_IMPORTED_MODULE_5___default.a, {
+          onClick: clearSelection,
+          transparent: true,
+          iconLeft: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_Close__WEBPACK_IMPORTED_MODULE_6___default.a, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 81
+              lineNumber: 76
             },
             __self: this
           }),
-          selectable: true,
-          selected: selectedItem === name,
-          title: "".concat(name, " [").concat(code, "/").concat(id, "]"),
-          description: highlightedIndex === index ? "press for select" : ""
-        }, getItemProps({
-          item: {
-            name: name,
-            id: id,
-            code: code
-          },
-          index: index
-        }), {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 79
+            lineNumber: 73
           },
           __self: this
-        })));
-      });
-    })) : null);
+        }),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 65
+        },
+        __self: this
+      })), isOpen ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Results, {
+        value: debouncedValue,
+        highlightedIndex: highlightedIndex,
+        selectedItem: selectedItem,
+        getItemProps: getItemProps,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 81
+        },
+        __self: this
+      }) : null)
+    );
+  }));
+};
+
+var Results = function Results(_ref8) {
+  var value = _ref8.value,
+      selectedItem = _ref8.selectedItem,
+      highlightedIndex = _ref8.highlightedIndex,
+      getItemProps = _ref8.getItemProps;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledResults, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 101
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    query: locationsQuery,
+    variables: {
+      query: value.name || value
+    },
+    context: {
+      uri: "https://weekend-api.now.sh"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 102
+    },
+    __self: this
+  }, function (_ref9) {
+    var locations = _ref9.data.locations;
+    return locations.map(function (_ref10, index) {
+      var name = _ref10.name,
+          code = _ref10.code,
+          id = _ref10.id;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", _extends({}, getItemProps({
+        item: name,
+        index: index
+      }), {
+        key: name,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 113
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_ListChoice__WEBPACK_IMPORTED_MODULE_2___default.a, _extends({
+        key: name,
+        icon: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_City__WEBPACK_IMPORTED_MODULE_3___default.a, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 122
+          },
+          __self: this
+        }),
+        selectable: true,
+        selected: selectedItem === name,
+        title: "".concat(name, " [").concat(code, "/").concat(id, "]"),
+        description: highlightedIndex === index ? "press for select" : ""
+      }, getItemProps({
+        item: {
+          name: name,
+          id: id,
+          code: code
+        },
+        index: index
+      }), {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 120
+        },
+        __self: this
+      })));
+    });
   }));
 };
 
@@ -1699,7 +1786,7 @@ Popover.defaultProps = {
 var StyledStepper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "Stepper__StyledStepper",
   componentId: "sc-1946n3c-1"
-})(["display:flex;justify-content:flex-end;width:100%;position:relative;"]);
+})(["display:flex;justify-content:flex-end;width:100%;position:relative;> button{flex-shrink:0;}"]);
 var StyledStepperInput = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input.withConfig({
   displayName: "Stepper__StyledStepperInput",
   componentId: "sc-1946n3c-2"
@@ -1766,7 +1853,7 @@ var Stepper = function Stepper(_ref9) {
     ref: ref,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 101
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_ButtonLink__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -1776,20 +1863,20 @@ var Stepper = function Stepper(_ref9) {
     iconLeft: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_Passengers__WEBPACK_IMPORTED_MODULE_7___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 102
+        lineNumber: 106
       },
       __self: this
     }),
     iconRight: isOpen ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_ChevronUp__WEBPACK_IMPORTED_MODULE_9___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 103
+        lineNumber: 107
       },
       __self: this
     }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_ChevronDown__WEBPACK_IMPORTED_MODULE_8___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 103
+        lineNumber: 107
       },
       __self: this
     }),
@@ -1798,13 +1885,13 @@ var Stepper = function Stepper(_ref9) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 102
     },
     __self: this
   }, count, " ", count <= 1 ? "adult" : "adults"), isOpen && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Popover, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 113
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -1812,7 +1899,7 @@ var Stepper = function Stepper(_ref9) {
     iconLeft: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_Minus__WEBPACK_IMPORTED_MODULE_5___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 112
+        lineNumber: 116
       },
       __self: this
     }),
@@ -1823,7 +1910,7 @@ var Stepper = function Stepper(_ref9) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 110
+      lineNumber: 114
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledStepperInput, {
@@ -1834,7 +1921,7 @@ var Stepper = function Stepper(_ref9) {
     readOnly: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 121
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -1842,7 +1929,7 @@ var Stepper = function Stepper(_ref9) {
     iconLeft: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_Plus__WEBPACK_IMPORTED_MODULE_6___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 126
+        lineNumber: 130
       },
       __self: this
     }),
@@ -1853,7 +1940,7 @@ var Stepper = function Stepper(_ref9) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 128
     },
     __self: this
   })));
@@ -1963,6 +2050,48 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
     }));
   });
 });
+
+/***/ }),
+
+/***/ "./components/useDebounce.js":
+/*!***********************************!*\
+  !*** ./components/useDebounce.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+var useDebounce = function useDebounce(value, delay) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(value),
+      _useState2 = _slicedToArray(_useState, 2),
+      debouncedValue = _useState2[0],
+      setDebouncedValue = _useState2[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    var handler = setTimeout(function () {
+      setDebouncedValue(value);
+    }, delay);
+    return function () {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+  return debouncedValue;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (useDebounce);
 
 /***/ }),
 
@@ -24872,6 +25001,63 @@ var Heading = function Heading(_ref7) {
 };
 
 var _default = Heading;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@kiwicom/orbit-components/lib/Hide/index.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/Hide/index.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _styledComponents = _interopRequireWildcard(__webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js"));
+
+var _mediaQuery = _interopRequireDefault(__webpack_require__(/*! ../utils/mediaQuery */ "./node_modules/@kiwicom/orbit-components/lib/utils/mediaQuery/index.js"));
+
+var _consts = __webpack_require__(/*! ../utils/mediaQuery/consts */ "./node_modules/@kiwicom/orbit-components/lib/utils/mediaQuery/consts.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+// it's need to be sorted for rendering other: from lowest to the highest
+var sortedBreakpoints = Object.keys(_consts.DEVICES).sort(function (a, b) {
+  return _consts.DEVICES[a] - _consts.DEVICES[b];
+});
+
+var StyledHide = _styledComponents.default.span.withConfig({
+  displayName: "Hide__StyledHide",
+  componentId: "ji2pgq-0"
+})(["", ";"], function (_ref) {
+  var on = _ref.on;
+  return sortedBreakpoints.map(function (viewport) {
+    return viewport in _mediaQuery.default ? (0, _styledComponents.css)(["", ";"], _mediaQuery.default[viewport]((0, _styledComponents.css)(["display:", ";"], on.indexOf(viewport) !== -1 ? "none" : "inline-block"))) : // "smallMobile" is not media query so we need to check it explicitly
+    viewport === "smallMobile" && on.indexOf(viewport) !== -1 && (0, _styledComponents.css)(["display:none;"]);
+  });
+});
+
+var Hide = function Hide(_ref2) {
+  var _ref2$on = _ref2.on,
+      on = _ref2$on === void 0 ? [] : _ref2$on,
+      children = _ref2.children;
+  return React.createElement(StyledHide, {
+    on: on
+  }, children);
+};
+
+var _default = Hide;
 exports.default = _default;
 
 /***/ }),
@@ -65332,7 +65518,7 @@ var TopPart = function TopPart(_ref) {
       adults = _ref.adults;
 
   var _useUrl = Object(_components_useUrl__WEBPACK_IMPORTED_MODULE_15__["default"])(flyFrom || defaultValues.flyFrom, "flyFrom", function (item) {
-    return item.id;
+    return item ? item.id : undefined;
   }),
       _useUrl2 = _slicedToArray(_useUrl, 2),
       tripFrom = _useUrl2[0],
@@ -65613,7 +65799,7 @@ var FlyForm = function FlyForm(_ref4) {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_Heading__WEBPACK_IMPORTED_MODULE_2___default.a, {
     type: "title1",
-    spaceAfter: "largest",
+    spaceAfter: "medium",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 210
