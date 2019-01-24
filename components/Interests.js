@@ -1,11 +1,37 @@
-import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Cocktail from "@kiwicom/orbit-components/lib/icons/Cocktail"
 import Meal from "@kiwicom/orbit-components/lib/icons/Meal"
 import Sightseeing from "@kiwicom/orbit-components/lib/icons/Sightseeing"
 import GenderWoman from "@kiwicom/orbit-components/lib/icons/GenderWoman"
+import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
+import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"
+import styled, { css } from "styled-components"
 
 import InterestCard from "./InterestCard"
 import useUrl from "./useUrl"
+
+const StyledInterests = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 890px;
+  margin-bottom: ${({ theme }) => theme.orbit.spaceXLarge};
+
+  > * {
+    margin-bottom: ${({ theme }) => theme.orbit.spaceSmall};
+  }
+
+  ${mq.largeMobile(css`
+    flex-direction: row;
+
+    > * {
+      margin-bottom: 0;
+      margin-right: ${({ theme }) => theme.orbit.spaceSmall};
+    }
+  `)}
+`
+
+StyledInterests.defaultProps = {
+  theme: defaultTheme
+}
 
 export default function Interests({ defaultValue }) {
   const [interest, setInterest] = useUrl(
@@ -17,12 +43,7 @@ export default function Interests({ defaultValue }) {
   }
 
   return (
-    <Stack
-      direction="column"
-      spacing="natural"
-      spaceAfter="largest"
-      desktop={{ direction: "row", spacing: "extraLoose" }}
-    >
+    <StyledInterests>
       <InterestCard
         title="Party life"
         description="Type something"
@@ -55,6 +76,6 @@ export default function Interests({ defaultValue }) {
         onChange={changeRadio}
         icon={<GenderWoman />}
       />
-    </Stack>
+    </StyledInterests>
   )
 }

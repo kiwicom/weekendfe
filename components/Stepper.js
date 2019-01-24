@@ -36,6 +36,10 @@ const StyledStepper = styled.div`
   justify-content: flex-end;
   width: 100%;
   position: relative;
+
+  > button {
+    flex-shrink: 0;
+  }
 `
 
 const StyledStepperInput = styled.input`
