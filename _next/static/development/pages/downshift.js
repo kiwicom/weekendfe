@@ -25,7 +25,7 @@ var StyledContentWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["defau
   componentId: "sc-10g2j1g-0"
 })(["box-sizing:border-box;display:block;width:100%;padding:", ";", ""], function (_ref) {
   var theme = _ref.theme;
-  return theme.orbit.spaceMedium;
+  return "".concat(theme.orbit.spaceXXXLarge, " ").concat(theme.orbit.spaceMedium);
 }, _kiwicom_orbit_components_lib_utils_mediaQuery__WEBPACK_IMPORTED_MODULE_3___default.a.desktop(Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["padding:", ";"], function (_ref2) {
   var theme = _ref2.theme;
   return theme.orbit.spaceXXXLarge;
@@ -43,13 +43,13 @@ var ContentContainer = function ContentContainer(_ref3) {
   return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](StyledContentWrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 28
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](StyledContentContainer, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 29
     },
     __self: this
   }, children));
@@ -1012,7 +1012,9 @@ var PlacesToVisit = function PlacesToVisit(_ref3) {
       onChange = _ref3$onChange === void 0 ? function (state) {
     return console.log("new places to visit", state);
   } : _ref3$onChange,
-      onSearchClick = _ref3.onSearchClick;
+      onSearchClick = _ref3.onSearchClick,
+      _ref3$showDebug = _ref3.showDebug,
+      showDebug = _ref3$showDebug === void 0 ? false : _ref3$showDebug;
   var loggReducer = logReducer(reducer, onChange);
 
   var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_0__["useReducer"])(loggReducer, defaultValue, {
@@ -1061,14 +1063,14 @@ var PlacesToVisit = function PlacesToVisit(_ref3) {
     spaceAfter: "medium",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114
+      lineNumber: 115
     },
     __self: this
   }, "Places to visit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default.a, {
     spaceAfter: "medium",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 118
     },
     __self: this
   }, places.map(function (_ref4, i) {
@@ -1084,21 +1086,21 @@ var PlacesToVisit = function PlacesToVisit(_ref3) {
       changePlace: changePlace(i),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 120
+        lineNumber: 121
       },
       __self: this
     }));
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledButtons, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 131
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default.a, {
     direction: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 132
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -1106,7 +1108,7 @@ var PlacesToVisit = function PlacesToVisit(_ref3) {
     iconLeft: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_Plus__WEBPACK_IMPORTED_MODULE_5___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 134
+        lineNumber: 135
       },
       __self: this
     }),
@@ -1117,14 +1119,14 @@ var PlacesToVisit = function PlacesToVisit(_ref3) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 133
     },
     __self: this
   }, "Add destination"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_3___default.a, {
     iconLeft: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_Search__WEBPACK_IMPORTED_MODULE_6___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 142
+        lineNumber: 143
       },
       __self: this
     }),
@@ -1135,22 +1137,22 @@ var PlacesToVisit = function PlacesToVisit(_ref3) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 142
     },
     __self: this
-  }, "Search"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+  }, "Search"))), showDebug && [react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 153
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_debug__WEBPACK_IMPORTED_MODULE_10__["default"], _extends({}, places, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 153
     },
     __self: this
-  })));
+  }))]);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (PlacesToVisit);
@@ -1621,6 +1623,246 @@ function (_React$Component) {
 
 /***/ }),
 
+/***/ "./components/Stepper.js":
+/*!*******************************!*\
+  !*** ./components/Stepper.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_defaultTokens__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/defaultTokens */ "./node_modules/@kiwicom/orbit-components/lib/defaultTokens.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_defaultTokens__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_defaultTokens__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Button */ "./node_modules/@kiwicom/orbit-components/lib/Button/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _kiwicom_orbit_components_lib_ButtonLink__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/ButtonLink */ "./node_modules/@kiwicom/orbit-components/lib/ButtonLink/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_ButtonLink__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_ButtonLink__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_Minus__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/icons/Minus */ "./node_modules/@kiwicom/orbit-components/lib/icons/Minus.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_Minus__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_icons_Minus__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_Plus__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/icons/Plus */ "./node_modules/@kiwicom/orbit-components/lib/icons/Plus.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_Plus__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_icons_Plus__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_Passengers__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/icons/Passengers */ "./node_modules/@kiwicom/orbit-components/lib/icons/Passengers.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_Passengers__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_icons_Passengers__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_ChevronDown__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/icons/ChevronDown */ "./node_modules/@kiwicom/orbit-components/lib/icons/ChevronDown.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_ChevronDown__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_icons_ChevronDown__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_ChevronUp__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/icons/ChevronUp */ "./node_modules/@kiwicom/orbit-components/lib/icons/ChevronUp.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_ChevronUp__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_icons_ChevronUp__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _useOnClickOutside__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./useOnClickOutside */ "./components/useOnClickOutside.js");
+var _jsxFileName = "/Users/petrsnobelt/Projects/js-weekend-brno-fe/components/Stepper.js";
+
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+
+var Popover = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "Stepper__Popover",
+  componentId: "sc-1946n3c-0"
+})(["width:120px;display:flex;flex-direction:row;align-items:center;position:absolute;padding:", ";top:calc(100% + ", ");z-index:10;background:", ";border-radius:", ";overflow-x:hidden;overflow-y:auto;box-shadow:", ";"], function (_ref) {
+  var theme = _ref.theme;
+  return theme.orbit.spaceMedium;
+}, function (_ref2) {
+  var theme = _ref2.theme;
+  return theme.orbit.spaceXXXSmall;
+}, function (_ref3) {
+  var theme = _ref3.theme;
+  return theme.orbit.paletteWhite;
+}, function (_ref4) {
+  var theme = _ref4.theme;
+  return theme.orbit.borderRadiusNormal;
+}, function (_ref5) {
+  var theme = _ref5.theme;
+  return theme.orbit.boxShadowElevatedLevel1;
+});
+Popover.defaultProps = {
+  theme: _kiwicom_orbit_components_lib_defaultTokens__WEBPACK_IMPORTED_MODULE_2___default.a
+};
+var StyledStepper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "Stepper__StyledStepper",
+  componentId: "sc-1946n3c-1"
+})(["display:flex;justify-content:flex-end;width:100%;position:relative;"]);
+var StyledStepperInput = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input.withConfig({
+  displayName: "Stepper__StyledStepperInput",
+  componentId: "sc-1946n3c-2"
+})(["width:100%;height:32px;padding:0;border:0;font-size:", ";font-weight:", ";color:", ";text-align:center;&::-webkit-inner-spin-button,&::-webkit-outer-spin-button{-webkit-appearance:none;margin:0;}&:focus{outline:none;}"], function (_ref6) {
+  var theme = _ref6.theme;
+  return theme.orbit.fontSizeInputNormal;
+}, function (_ref7) {
+  var theme = _ref7.theme;
+  return theme.orbit.fontWeightBold;
+}, function (_ref8) {
+  var theme = _ref8.theme;
+  return theme.orbit.paletteInkNormal;
+});
+StyledStepperInput.defaultProps = {
+  theme: _kiwicom_orbit_components_lib_defaultTokens__WEBPACK_IMPORTED_MODULE_2___default.a
+};
+
+var Stepper = function Stepper(_ref9) {
+  var _ref9$step = _ref9.step,
+      step = _ref9$step === void 0 ? 1 : _ref9$step,
+      _ref9$defaultValue = _ref9.defaultValue,
+      defaultValue = _ref9$defaultValue === void 0 ? 1 : _ref9$defaultValue,
+      _ref9$min = _ref9.min,
+      min = _ref9$min === void 0 ? 1 : _ref9$min,
+      _ref9$max = _ref9.max,
+      max = _ref9$max === void 0 ? 9 : _ref9$max,
+      onChange = _ref9.onChange;
+  var value = Number(defaultValue);
+  var ref = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(value <= max ? value : max),
+      _useState2 = _slicedToArray(_useState, 2),
+      count = _useState2[0],
+      setCount = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState4 = _slicedToArray(_useState3, 2),
+      isOpen = _useState4[0],
+      setVisibility = _useState4[1];
+
+  Object(_useOnClickOutside__WEBPACK_IMPORTED_MODULE_10__["default"])(ref, function () {
+    return setVisibility(false);
+  });
+
+  var incrementCounter = function incrementCounter() {
+    var newValue = Number(count + step);
+
+    if (newValue >= +max ? min : newValue) {
+      setCount(newValue);
+      if (onChange) onChange(newValue);
+    }
+  };
+
+  var decrementCounter = function decrementCounter() {
+    var newValue = Number(count - step);
+
+    if (newValue <= +min ? min : newValue) {
+      setCount(newValue);
+      if (onChange) onChange(newValue);
+    }
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledStepper, {
+    ref: ref,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 97
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_ButtonLink__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    transparent: true,
+    type: "secondary",
+    size: "small",
+    iconLeft: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_Passengers__WEBPACK_IMPORTED_MODULE_7___default.a, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 102
+      },
+      __self: this
+    }),
+    iconRight: isOpen ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_ChevronUp__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 103
+      },
+      __self: this
+    }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_ChevronDown__WEBPACK_IMPORTED_MODULE_8___default.a, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 103
+      },
+      __self: this
+    }),
+    onClick: function onClick() {
+      return setVisibility(true);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 98
+    },
+    __self: this
+  }, count, " ", count <= 1 ? "adult" : "adults"), isOpen && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Popover, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 109
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    disabled: count <= +min,
+    iconLeft: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_Minus__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 112
+      },
+      __self: this
+    }),
+    type: "secondary",
+    size: "small",
+    onClick: function onClick() {
+      return decrementCounter();
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 110
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledStepperInput, {
+    type: "text",
+    value: count || 0,
+    min: min,
+    max: max,
+    readOnly: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 117
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    disabled: count >= +max,
+    iconLeft: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_Plus__WEBPACK_IMPORTED_MODULE_6___default.a, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 126
+      },
+      __self: this
+    }),
+    type: "secondary",
+    size: "small",
+    onClick: function onClick() {
+      return incrementCounter();
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 124
+    },
+    __self: this
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Stepper);
+
+/***/ }),
+
 /***/ "./components/debug.js":
 /*!*****************************!*\
   !*** ./components/debug.js ***!
@@ -1709,6 +1951,8 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
       __self: this
     }, "$", error.message);
     return props.children ? props.children({
+      loading: loading,
+      error: error,
       data: data
     }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_debug__WEBPACK_IMPORTED_MODULE_4__["default"], _extends({}, data, {
       __source: {
@@ -1800,7 +2044,7 @@ var useUrl = function useUrl(defaultValue, paramName) {
     var newQuery = _objectSpread({}, next_router__WEBPACK_IMPORTED_MODULE_1___default.a.query, _defineProperty({}, paramName, serializer(newValue)));
 
     var newUrl = {
-      pathname: "/downshift",
+      pathname: next_router__WEBPACK_IMPORTED_MODULE_1___default.a.pathname,
       query: newQuery // eslint-disable-next-line fp/no-mutating-methods
 
     };
@@ -26804,6 +27048,52 @@ function Check(props) {
 
 /***/ }),
 
+/***/ "./node_modules/@kiwicom/orbit-components/lib/icons/ChevronDown.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/icons/ChevronDown.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = ChevronDown;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _Icon = _interopRequireDefault(__webpack_require__(/*! ../Icon */ "./node_modules/@kiwicom/orbit-components/lib/Icon/index.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+/* eslint-disable */
+function ChevronDown(props) {
+  var color = props.color,
+      size = props.size,
+      customColor = props.customColor,
+      className = props.className,
+      dataTest = props.dataTest,
+      ariaHidden = props.ariaHidden;
+  return React.createElement(_Icon.default, {
+    viewBox: "0 0 24 24",
+    size: size,
+    color: color,
+    customColor: customColor,
+    className: className,
+    dataTest: dataTest,
+    ariaHidden: ariaHidden
+  }, React.createElement("path", {
+    d: "M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+  }));
+}
+
+/***/ }),
+
 /***/ "./node_modules/@kiwicom/orbit-components/lib/icons/ChevronLeft.js":
 /*!*************************************************************************!*\
   !*** ./node_modules/@kiwicom/orbit-components/lib/icons/ChevronLeft.js ***!
@@ -26891,6 +27181,52 @@ function ChevronRight(props) {
     ariaHidden: ariaHidden
   }, React.createElement("path", {
     d: "M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+  }));
+}
+
+/***/ }),
+
+/***/ "./node_modules/@kiwicom/orbit-components/lib/icons/ChevronUp.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/icons/ChevronUp.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = ChevronUp;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _Icon = _interopRequireDefault(__webpack_require__(/*! ../Icon */ "./node_modules/@kiwicom/orbit-components/lib/Icon/index.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+/* eslint-disable */
+function ChevronUp(props) {
+  var color = props.color,
+      size = props.size,
+      customColor = props.customColor,
+      className = props.className,
+      dataTest = props.dataTest,
+      ariaHidden = props.ariaHidden;
+  return React.createElement(_Icon.default, {
+    viewBox: "0 0 24 24",
+    size: size,
+    color: color,
+    customColor: customColor,
+    className: className,
+    dataTest: dataTest,
+    ariaHidden: ariaHidden
+  }, React.createElement("path", {
+    d: "M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
   }));
 }
 
@@ -27259,6 +27595,98 @@ function Meal(props) {
     ariaHidden: ariaHidden
   }, React.createElement("path", {
     d: "M17 13c1.654 0 3 1.346 3 3H4c0-1.654 1.346-3 3-3 .307 0 .61.049.9.142A4.974 4.974 0 0 1 12 11c1.664 0 3.179.814 4.1 2.142.29-.093.593-.142.9-.142zM2 17h20v2h-2.465l-1.703 2.555A1.001 1.001 0 0 1 17 22H7c-.334 0-.646-.167-.832-.445L4.465 19H2v-2zm5.707-8.707L6.293 9.707c-2.353-2.353-1.289-5.125 0-6.414l1.418 1.41c-.296.304-1.688 1.906-.004 3.59zm3.586-2c1.179-1.18.294-2.282-.006-2.592l1.42-1.408c1.088 1.088 1.986 3.428 0 5.414l-1.414-1.414zm6.111 2c1.404-1.404-.109-3.715-.125-3.738l1.664-1.11c.85 1.274 1.916 4.222-.125 6.262l-1.414-1.414z"
+  }));
+}
+
+/***/ }),
+
+/***/ "./node_modules/@kiwicom/orbit-components/lib/icons/Minus.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/icons/Minus.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Minus;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _Icon = _interopRequireDefault(__webpack_require__(/*! ../Icon */ "./node_modules/@kiwicom/orbit-components/lib/Icon/index.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+/* eslint-disable */
+function Minus(props) {
+  var color = props.color,
+      size = props.size,
+      customColor = props.customColor,
+      className = props.className,
+      dataTest = props.dataTest,
+      ariaHidden = props.ariaHidden;
+  return React.createElement(_Icon.default, {
+    viewBox: "0 0 24 24",
+    size: size,
+    color: color,
+    customColor: customColor,
+    className: className,
+    dataTest: dataTest,
+    ariaHidden: ariaHidden
+  }, React.createElement("path", {
+    d: "M19 13H5v-2h14z"
+  }));
+}
+
+/***/ }),
+
+/***/ "./node_modules/@kiwicom/orbit-components/lib/icons/Passengers.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/icons/Passengers.js ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Passengers;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _Icon = _interopRequireDefault(__webpack_require__(/*! ../Icon */ "./node_modules/@kiwicom/orbit-components/lib/Icon/index.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+/* eslint-disable */
+function Passengers(props) {
+  var color = props.color,
+      size = props.size,
+      customColor = props.customColor,
+      className = props.className,
+      dataTest = props.dataTest,
+      ariaHidden = props.ariaHidden;
+  return React.createElement(_Icon.default, {
+    viewBox: "0 0 24 24",
+    size: size,
+    color: color,
+    customColor: customColor,
+    className: className,
+    dataTest: dataTest,
+    ariaHidden: ariaHidden
+  }, React.createElement("path", {
+    d: "M9.298 9.192C11.424 9.768 13 11.694 13 14v2a1 1 0 0 1-1 1h-1v3a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-3H4a1 1 0 0 1-1-1v-2c0-2.306 1.577-4.232 3.702-4.808A2.995 2.995 0 0 1 5 6.5c0-1.655 1.346-3 3-3s3 1.345 3 3a2.995 2.995 0 0 1-1.702 2.692zm9.456 6.23C20.079 16.076 21 17.428 21 19v1a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1v-1c0-1.573.92-2.925 2.246-3.577A2.993 2.993 0 0 1 14 13c0-1.654 1.346-3 3-3s3 1.346 3 3c0 .998-.495 1.877-1.246 2.423z"
   }));
 }
 
@@ -64834,7 +65262,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Interests__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/Interests */ "./components/Interests.js");
 /* harmony import */ var _components_useOnClickOutside__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/useOnClickOutside */ "./components/useOnClickOutside.js");
 /* harmony import */ var _components_PlacesToVisit__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/PlacesToVisit */ "./components/PlacesToVisit.js");
-/* harmony import */ var _components_useUrl__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/useUrl */ "./components/useUrl.js");
+/* harmony import */ var _components_Stepper__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/Stepper */ "./components/Stepper.js");
+/* harmony import */ var _components_useUrl__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/useUrl */ "./components/useUrl.js");
 
 var _jsxFileName = "/Users/petrsnobelt/Projects/js-weekend-brno-fe/pages/downshift.js";
 
@@ -64871,6 +65300,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var NomadForm = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div.withConfig({
   displayName: "downshift__NomadForm",
   componentId: "sc-11ojhqj-0"
@@ -64880,6 +65310,7 @@ var StyledOrigin = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div
   componentId: "sc-11ojhqj-1"
 })(["max-width:640px;"]);
 var defaultValues = {
+  adults: 2,
   interest: "gastronomy",
   flyFrom: {
     id: "brno_cz",
@@ -64897,50 +65328,56 @@ var TopPart = function TopPart(_ref) {
   var flyFrom = _ref.flyFrom,
       flyTo = _ref.flyTo,
       dateFrom = _ref.dateFrom,
-      dateTo = _ref.dateTo;
+      dateTo = _ref.dateTo,
+      adults = _ref.adults;
 
-  var _useUrl = Object(_components_useUrl__WEBPACK_IMPORTED_MODULE_14__["default"])(flyFrom || defaultValues.flyFrom, "flyFrom", function (item) {
+  var _useUrl = Object(_components_useUrl__WEBPACK_IMPORTED_MODULE_15__["default"])(flyFrom || defaultValues.flyFrom, "flyFrom", function (item) {
     return item.id;
   }),
       _useUrl2 = _slicedToArray(_useUrl, 2),
       tripFrom = _useUrl2[0],
       setFrom = _useUrl2[1];
 
+  var _useUrl3 = Object(_components_useUrl__WEBPACK_IMPORTED_MODULE_15__["default"])(adults, "adults"),
+      _useUrl4 = _slicedToArray(_useUrl3, 2),
+      tripAdults = _useUrl4[0],
+      setAdults = _useUrl4[1];
+
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(Boolean(flyTo)),
       _useState2 = _slicedToArray(_useState, 2),
       showDestination = _useState2[0],
       setDestinationVisibility = _useState2[1];
 
-  var _useUrl3 = Object(_components_useUrl__WEBPACK_IMPORTED_MODULE_14__["default"])(flyTo, "flyTo", function (item) {
+  var _useUrl5 = Object(_components_useUrl__WEBPACK_IMPORTED_MODULE_15__["default"])(flyTo, "flyTo", function (item) {
     return item ? item.id : undefined;
   }),
-      _useUrl4 = _slicedToArray(_useUrl3, 2),
-      tripTo = _useUrl4[0],
-      setDestination = _useUrl4[1];
+      _useUrl6 = _slicedToArray(_useUrl5, 2),
+      tripTo = _useUrl6[0],
+      setDestination = _useUrl6[1];
 
   var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(Boolean(dateTo)),
       _useState4 = _slicedToArray(_useState3, 2),
       showReturnDate = _useState4[0],
       setReturnDateVisibility = _useState4[1];
 
-  var _useUrl5 = Object(_components_useUrl__WEBPACK_IMPORTED_MODULE_14__["default"])(dateFrom ? new Date(dateFrom) : defaultValues.dateFrom, "dateFrom", function (date) {
+  var _useUrl7 = Object(_components_useUrl__WEBPACK_IMPORTED_MODULE_15__["default"])(dateFrom ? new Date(dateFrom) : defaultValues.dateFrom, "dateFrom", function (date) {
     return Object(date_fns__WEBPACK_IMPORTED_MODULE_6__["format"])(date, "YYYY-MM-DD");
   }),
-      _useUrl6 = _slicedToArray(_useUrl5, 2),
-      departureDate = _useUrl6[0],
-      setDepartureDate = _useUrl6[1];
+      _useUrl8 = _slicedToArray(_useUrl7, 2),
+      departureDate = _useUrl8[0],
+      setDepartureDate = _useUrl8[1];
 
   var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false),
       _useState6 = _slicedToArray(_useState5, 2),
       departureDatePickerOpened = _useState6[0],
       setDepartureDatePickerVisibility = _useState6[1];
 
-  var _useUrl7 = Object(_components_useUrl__WEBPACK_IMPORTED_MODULE_14__["default"])(dateTo ? new Date(dateTo) : Object(date_fns__WEBPACK_IMPORTED_MODULE_6__["addDays"])(new Date(), 10), "dateTo", function (date) {
+  var _useUrl9 = Object(_components_useUrl__WEBPACK_IMPORTED_MODULE_15__["default"])(dateTo ? new Date(dateTo) : Object(date_fns__WEBPACK_IMPORTED_MODULE_6__["addDays"])(new Date(), 10), "dateTo", function (date) {
     return date ? Object(date_fns__WEBPACK_IMPORTED_MODULE_6__["format"])(date, "YYYY-MM-DD") : undefined;
   }),
-      _useUrl8 = _slicedToArray(_useUrl7, 2),
-      returnDate = _useUrl8[0],
-      setReturnDate = _useUrl8[1];
+      _useUrl10 = _slicedToArray(_useUrl9, 2),
+      returnDate = _useUrl10[0],
+      setReturnDate = _useUrl10[1];
 
   var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false),
       _useState8 = _slicedToArray(_useState7, 2),
@@ -64969,14 +65406,41 @@ var TopPart = function TopPart(_ref) {
     spaceAfter: "largest",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 93
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_3___default.a, {
     direction: "row",
+    justify: "end",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 94
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    basis: "calc(25% - 16px)",
+    shrink: false,
+    grow: false,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 95
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Stepper__WEBPACK_IMPORTED_MODULE_14__["default"], {
+    min: 1,
+    max: 20,
+    defaultValue: tripAdults,
+    onChange: setAdults,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 96
+    },
+    __self: this
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    direction: "row",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 104
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_PlacePickerLocations__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -64985,7 +65449,7 @@ var TopPart = function TopPart(_ref) {
     onChange: setFrom,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 105
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_DatePicker__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -64999,14 +65463,14 @@ var TopPart = function TopPart(_ref) {
     onDateSelected: selectDepartureDate,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 110
     },
     __self: this
   })), (showDestination || showReturnDate) && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_3___default.a, {
     direction: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 120
     },
     __self: this
   }, showDestination && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_PlacePickerLocations__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -65015,7 +65479,7 @@ var TopPart = function TopPart(_ref) {
     onChange: setDestination,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 122
     },
     __self: this
   }), showReturnDate && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_DatePicker__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -65029,14 +65493,14 @@ var TopPart = function TopPart(_ref) {
     onDateSelected: selectReturnDate,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 129
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_3___default.a, {
     direction: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 140
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_Checkbox__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -65048,7 +65512,7 @@ var TopPart = function TopPart(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 141
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_Checkbox__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -65060,7 +65524,7 @@ var TopPart = function TopPart(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 149
     },
     __self: this
   })));
@@ -65077,9 +65541,8 @@ var placesToUrl = function placesToUrl(places) {
 };
 
 var changePlacesState = function changePlacesState(newPlaces) {
-  // if (typeof window === "undefined") return
   var newUrl = {
-    pathname: "/downshift",
+    pathname: next_router__WEBPACK_IMPORTED_MODULE_7___default.a.pathname,
     query: _objectSpread({}, next_router__WEBPACK_IMPORTED_MODULE_7___default.a.query, {
       places: placesToUrl(newPlaces)
     }) // eslint-disable-next-line fp/no-mutating-methods
@@ -65118,7 +65581,7 @@ var FlyForm = function FlyForm(_ref4) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ContentContainer__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 189
+      lineNumber: 201
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_Heading__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -65126,26 +65589,26 @@ var FlyForm = function FlyForm(_ref4) {
     spaceAfter: "largest",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 190
+      lineNumber: 202
     },
     __self: this
   }, "What are you interested in?"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Interests__WEBPACK_IMPORTED_MODULE_11__["default"], {
     defaultValue: query.interest || defaultValues.interest,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 193
+      lineNumber: 205
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NomadForm, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 196
+      lineNumber: 208
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledOrigin, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 197
+      lineNumber: 209
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_Heading__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -65153,15 +65616,16 @@ var FlyForm = function FlyForm(_ref4) {
     spaceAfter: "largest",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 198
+      lineNumber: 210
     },
     __self: this
   }, "What destinations do you want to visit?"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TopPart, _extends({}, query, {
+    adults: query.adults || defaultValues.adults,
     flyFrom: getPlaceFromString(query.flyFrom),
     flyTo: getPlaceFromString(query.flyTo),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 201
+      lineNumber: 213
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_PlacesToVisit__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -65184,7 +65648,7 @@ var FlyForm = function FlyForm(_ref4) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 207
+      lineNumber: 220
     },
     __self: this
   })));
@@ -65244,7 +65708,7 @@ function () {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!**********************************!*\
   !*** multi ./pages/downshift.js ***!
   \**********************************/
@@ -65269,5 +65733,5 @@ module.exports = dll_6b580bfd958c73d2b4ce;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]));;
+},[[4,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=downshift.js.map
