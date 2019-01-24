@@ -113,11 +113,6 @@ const PlacePicker = ({
                           selectable
                           selected={selectedItem === name}
                           title={name}
-                          description={
-                            highlightedIndex === index
-                              ? "press for select"
-                              : ""
-                          }
                           {...getItemProps({
                             item: name,
                             index

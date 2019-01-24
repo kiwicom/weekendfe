@@ -113,9 +113,6 @@ const Results = ({
               selectable
               selected={selectedItem === name}
               title={`${name} [${code}/${id}]`}
-              description={
-                highlightedIndex === index ? "press for select" : ""
-              }
               {...getItemProps({
                 item: { name, id, code },
                 index
