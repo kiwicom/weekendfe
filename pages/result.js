@@ -15,6 +15,7 @@ import Itinerary from "../components/Itinerary"
 
 const ResultsContainer = styled.div`
   max-width: 1024px;
+  padding-bottom: 90px;
 `
 
 /*
@@ -86,7 +87,7 @@ const Result = ({ query }) => (
               <Heading type="title1" spaceAfter="largest">
                 Choose your flight combination
               </Heading>
-              <Itinerary flights={data.search.slice(0, 2)} />
+              <Itinerary flights={data.search.slice(0, 10)} />
             </Stack>
             <Footer
               leftActions={
