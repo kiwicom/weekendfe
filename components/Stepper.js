@@ -66,13 +66,13 @@ StyledStepperInput.defaultProps = {
 const Stepper = ({
   step = 1,
   defaultValue = 1,
-  min,
-  max,
+  min = 1,
+  max = 9,
   onChange
 }) => {
   const value = Number(defaultValue)
   const ref = useRef()
-  const [count, setCount] = useState(value <= 9 ? value : 9)
+  const [count, setCount] = useState(value <= max ? value : max)
   const [isOpen, setVisibility] = useState(false)
 
   useOnClickOutside(ref, () => setVisibility(false))
