@@ -26,7 +26,7 @@ const defaultValues = {
   interest: "gastronomy",
   flyFrom: { id: "brno_cz", name: "Brno" },
   dateFrom: new Date(),
-  places: [["Italy", [2, 5]]]
+  places: [[{ name: "Italy", id: "IT", code: "IT" }, [2, 5]]]
 }
 
 const TopPart = ({ flyFrom, flyTo, dateFrom, dateTo }) => {
@@ -145,19 +145,27 @@ const TopPart = ({ flyFrom, flyTo, dateFrom, dateTo }) => {
   )
 }
 
+const placesToUrl = places =>
+  places
+    .map(([place, days]) => [place && place.code, days])
+    .toString()
+    .replace(/,/g, "-")
+
 const changePlacesState = newPlaces => {
-  if (typeof window === "undefined") return
-  // debugger
+  // if (typeof window === "undefined") return
   const newUrl = {
     pathname: "/downshift",
     query: {
       ...Router.query,
-      places: newPlaces.toString().replace(/,/g, "-")
+      places: placesToUrl(newPlaces)
     }
   }
   // eslint-disable-next-line fp/no-mutating-methods
   Router.push(newUrl, newUrl, { shallow: true })
 }
+
+const getDefaultValue = code =>
+  typeof code === "string" ? { name: `[${code}]`, code } : code
 
 // Mexico,2,5,Poland,1,3 => [["Mexico", defaultDays]]
 const UrlToPlaces = url => {
@@ -167,11 +175,14 @@ const UrlToPlaces = url => {
   // eslint-disable-next-line
   for (let i = 0; i < items.length; i += 3)
     // eslint-disable-next-line fp/no-mutating-methods
-    result.push([items[i], [items[i + 1], items[i + 2]]])
+    result.push([
+      getDefaultValue(items[i]),
+      [items[i + 1], items[i + 2]]
+    ])
   return result
 }
 
-const DownShift = ({ query, places }) => (
+const FlyForm = ({ query, places }) => (
   <ContentContainer>
     <Heading type="title1" spaceAfter="largest">
       What are you interested in?
@@ -201,18 +212,37 @@ const DownShift = ({ query, places }) => (
       <PlacesToVisit
         onChange={changePlacesState}
         defaultValue={places}
-        onSearchClick={places => {
+        onSearchClick={selectedPlaces => {
           const values = { ...defaultValues, ...Router.query }
-          alert(JSON.stringify(values, null, 2))
+          const newUrl = {
+            pathname: "/result",
+            query: {
+              ...values,
+              dateFrom: format(
+                new Date(values.dateFrom),
+                "DD/MM/YYYY"
+              ),
+              flyFrom:
+                typeof values.flyFrom === "string"
+                  ? values.flyFrom
+                  : values.flyFrom.id,
+              dateTo:
+                values.dateTo &&
+                format(new Date(values.dateTo), "DD/MM/YYYY"),
+              stopovers: placesToUrl(selectedPlaces),
+              places: undefined
+            }
+          }
+          Router.push(newUrl) // eslint-disable-line
         }}
       />
     </NomadForm>
   </ContentContainer>
 )
 
-DownShift.getInitialProps = async ({ req, query }) => {
+FlyForm.getInitialProps = async ({ req, query }) => {
   const places = UrlToPlaces(query.places) || defaultValues.places
   return { query, places }
 }
 
-export default DownShift
+export default FlyForm
