@@ -207,7 +207,7 @@ const FlyForm = ({ query, places }) => (
     />
     <NomadForm>
       <StyledOrigin>
-        <Heading type="title1" spaceAfter="largest">
+        <Heading type="title1" spaceAfter="medium">
           What destinations do you want to visit?
         </Heading>
         <TopPart

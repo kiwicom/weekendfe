@@ -25,6 +25,17 @@ export default class MyDocument extends Document {
     return (
       <html lang="en-GB">
         <Head>
+          <title>JS Weekend</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+          <link
+            rel="shortcut icon"
+            href="/static/favicon.ico"
+            type="image/x-icon"
+          />
+          <link rel="icon" href="/favicon.ico" type="image/x-icon" />
           <link
             href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700"
             rel="stylesheet"

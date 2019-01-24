@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Text from "@kiwicom/orbit-components/lib/Text"
 import Radio from "@kiwicom/orbit-components/lib/Radio"
+import Hide from "@kiwicom/orbit-components/lib/Hide"
 import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
 
 const StyledInterestCard = styled.div`
@@ -58,7 +59,9 @@ const InterestCard = ({
 }) => (
   <StyledInterestCard onClick={() => onChange({ target: { value } })}>
     <Stack direction="row" justify="between" align="center">
-      <StyledIcon>{icon}</StyledIcon>
+      <Hide on={["largeMobile"]}>
+        <StyledIcon>{icon}</StyledIcon>
+      </Hide>
       <StyledContent>
         <Text weight="bold">{title}</Text>
         <Text>{description}</Text>
