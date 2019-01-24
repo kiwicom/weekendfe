@@ -23,8 +23,27 @@ StyledFooter.defaultProps = {
   theme: defaultTheme
 }
 
-const Footer = ({ children }) => (
-  <StyledFooter>{children}</StyledFooter>
+const LeftActions = styled.div`
+  display: flex;
+  justify-content: flex-start;
+
+  > * {
+    margin-right: 16px;
+    :last-child {
+      margin: 0;
+    }
+  }
+`
+
+const RightActions = styled(LeftActions)`
+  justify-content: flex-end;
+`
+
+const Footer = ({ leftActions, rightActions }) => (
+  <StyledFooter>
+    <LeftActions>{leftActions}</LeftActions>
+    <RightActions>{rightActions}</RightActions>
+  </StyledFooter>
 )
 
 export default Footer

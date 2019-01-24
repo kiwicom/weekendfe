@@ -9,7 +9,7 @@ const useUrl = (defaultValue, paramName, serializer = val => val) => {
       [paramName]: serializer(newValue)
     }
     const newUrl = {
-      pathname: "/downshift",
+      pathname: Router.pathname,
       query: newQuery
     }
     // eslint-disable-next-line fp/no-mutating-methods

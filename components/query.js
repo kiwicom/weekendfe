@@ -15,7 +15,7 @@ export default props => (
           </Alert>
         )
       return props.children ? (
-        props.children({ data })
+        props.children({ loading, error, data })
       ) : (
         <Debug {...data} />
       )

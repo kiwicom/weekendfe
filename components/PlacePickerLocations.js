@@ -58,6 +58,8 @@ const PlacePicker = ({
   return (
     <StyledPlacePicker>
       <Downshift
+        itemToString={item => (item ? item.name : "")}
+        initialSelectedItem={defaultValue}
         onStateChange={({ inputValue }) => {
           if (inputValue) {
             setValue(inputValue)
@@ -128,12 +130,12 @@ const Results = ({
               icon={<City />}
               selectable
               selected={selectedItem === name}
-              title={name}
+              title={`${name} [${code}/${id}]`}
               description={
                 highlightedIndex === index ? "press for select" : ""
               }
               {...getItemProps({
-                item: name,
+                item: { name, id, code },
                 index
               })}
             />

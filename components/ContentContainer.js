@@ -7,7 +7,8 @@ const StyledContentWrapper = styled.main`
   box-sizing: border-box;
   display: block;
   width: 100%;
-  padding: ${({ theme }) => theme.orbit.spaceMedium};
+  padding: ${({ theme }) =>
+    `${theme.orbit.spaceXXXLarge} ${theme.orbit.spaceMedium}`};
 
   ${mq.desktop(css`
     padding: ${({ theme }) => theme.orbit.spaceXXXLarge};
