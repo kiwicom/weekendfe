@@ -96,7 +96,8 @@ const logReducer = (fn, logger) =>
 const PlacesToVisit = ({
   defaultValue = [["Mexico", defaultDays]],
   onChange = state => console.log("new places to visit", state),
-  onSearchClick
+  onSearchClick,
+  showDebug = false
 }) => {
   const loggReducer = logReducer(reducer, onChange)
   const [places, dispatch] = useReducer(loggReducer, defaultValue, {
@@ -148,8 +149,8 @@ const PlacesToVisit = ({
           </Button>
         </Stack>
       </StyledButtons>
-      <hr />
-      <Debug {...places} />
+
+      {showDebug && [<hr />, <Debug {...places} />]}
     </>
   )
 }
