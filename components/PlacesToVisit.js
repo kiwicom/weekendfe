@@ -7,7 +7,7 @@ import Plus from "@kiwicom/orbit-components/lib/icons/Plus"
 import Search from "@kiwicom/orbit-components/lib/icons/Search"
 import styled from "styled-components"
 
-import PlacePicker from "./PlacePicker"
+import PlacePicker from "./PlacePickerLocations"
 import Slider from "./Slider"
 import Debug from "./debug"
 import useOnClickOutside from "./useOnClickOutside"
@@ -87,7 +87,8 @@ const logReducer = (fn, logger) =>
   function() {
     // eslint-disable-next-line
     const before = arguments[0]
-    const result = fn.apply(null, arguments)
+    // eslint-disable-next-line
+    const result = fn(...arguments) // fn.apply(null, arguments)
     if (logger && before !== result) logger(result)
     return result
   }

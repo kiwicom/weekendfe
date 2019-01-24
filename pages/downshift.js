@@ -24,24 +24,31 @@ const StyledOrigin = styled.div`
 
 const defaultValues = {
   interest: "gastronomy",
-  from: "Czech Republic",
-  start: new Date(),
-  places: [["Italy", [2, 5]]]
+  flyFrom: { id: "brno_cz", name: "Brno" },
+  dateFrom: new Date(),
+  places: [[{ name: "Italy", id: "IT", code: "IT" }, [2, 5]]]
 }
 
-const TopPart = ({ from, to, start, end }) => {
+const TopPart = ({ flyFrom, flyTo, dateFrom, dateTo }) => {
   const [tripFrom, setFrom] = useUrl(
-    from || defaultValues.from,
-    "from"
+    flyFrom || defaultValues.flyFrom,
+    "flyFrom",
+    item => item.id
   )
 
-  const [showDestination, setDestinationVisibility] = useState(false)
-  const [tripTo, setDestination] = useUrl(to, "to")
+  const [showDestination, setDestinationVisibility] = useState(
+    Boolean(flyTo)
+  )
+  const [tripTo, setDestination] = useUrl(flyTo, "flyTo", item =>
+    item ? item.id : undefined
+  )
 
-  const [showReturnDate, setReturnDateVisibility] = useState(false)
+  const [showReturnDate, setReturnDateVisibility] = useState(
+    Boolean(dateTo)
+  )
   const [departureDate, setDepartureDate] = useUrl(
-    start ? new Date(start) : defaultValues.start,
-    "start",
+    dateFrom ? new Date(dateFrom) : defaultValues.dateFrom,
+    "dateFrom",
     date => format(date, "YYYY-MM-DD")
   )
   const [
@@ -50,9 +57,9 @@ const TopPart = ({ from, to, start, end }) => {
   ] = useState(false)
 
   const [returnDate, setReturnDate] = useUrl(
-    end ? new Date(end) : addDays(new Date(), 10),
-    "end",
-    date => format(date, "YYYY-MM-DD")
+    dateTo ? new Date(dateTo) : addDays(new Date(), 10),
+    "dateTo",
+    date => (date ? format(date, "YYYY-MM-DD") : undefined)
   )
   const [
     returnDatePickerOpened,
@@ -131,6 +138,7 @@ const TopPart = ({ from, to, start, end }) => {
           checked={showReturnDate}
           onChange={e => {
             setReturnDateVisibility(e.target.checked)
+            setReturnDate(null)
           }}
         />
       </Stack>
@@ -138,19 +146,29 @@ const TopPart = ({ from, to, start, end }) => {
   )
 }
 
+const placesToUrl = places =>
+  places
+    .map(([place, days]) => [place && place.code, days])
+    .toString()
+    .replace(/,/g, "-")
+
 const changePlacesState = newPlaces => {
-  if (typeof window === "undefined") return
-  // debugger
+  // if (typeof window === "undefined") return
   const newUrl = {
     pathname: "/downshift",
     query: {
       ...Router.query,
-      places: newPlaces.toString().replace(/,/g, "-")
+      places: placesToUrl(newPlaces)
     }
   }
   // eslint-disable-next-line fp/no-mutating-methods
   Router.push(newUrl, newUrl, { shallow: true })
 }
+
+const getPlaceFromString = val =>
+  typeof val === "string"
+    ? { name: `[${val}]`, code: val, id: val }
+    : val
 
 // Mexico,2,5,Poland,1,3 => [["Mexico", defaultDays]]
 const UrlToPlaces = url => {
@@ -160,11 +178,14 @@ const UrlToPlaces = url => {
   // eslint-disable-next-line
   for (let i = 0; i < items.length; i += 3)
     // eslint-disable-next-line fp/no-mutating-methods
-    result.push([items[i], [items[i + 1], items[i + 2]]])
+    result.push([
+      getPlaceFromString(items[i]),
+      [items[i + 1], items[i + 2]]
+    ])
   return result
 }
 
-const DownShift = ({ query, places }) => (
+const FlyForm = ({ query, places }) => (
   <ContentContainer>
     <Heading type="title1" spaceAfter="largest">
       What are you interested in?
@@ -177,23 +198,46 @@ const DownShift = ({ query, places }) => (
         <Heading type="title1" spaceAfter="largest">
           What destinations do you want to visit?
         </Heading>
-        <TopPart {...query} />
+        <TopPart
+          {...query}
+          flyFrom={getPlaceFromString(query.flyFrom)}
+          flyTo={getPlaceFromString(query.flyTo)}
+        />
       </StyledOrigin>
       <PlacesToVisit
         onChange={changePlacesState}
         defaultValue={places}
-        onSearchClick={places => {
+        onSearchClick={selectedPlaces => {
           const values = { ...defaultValues, ...Router.query }
-          alert(JSON.stringify(values, null, 2))
+          const newUrl = {
+            pathname: "/result",
+            query: {
+              ...values,
+              dateFrom: format(
+                new Date(values.dateFrom),
+                "DD/MM/YYYY"
+              ),
+              flyFrom:
+                typeof values.flyFrom === "string"
+                  ? values.flyFrom
+                  : values.flyFrom.id,
+              dateTo:
+                values.dateTo &&
+                format(new Date(values.dateTo), "DD/MM/YYYY"),
+              stopovers: placesToUrl(selectedPlaces),
+              places: undefined
+            }
+          }
+          Router.push(newUrl) // eslint-disable-line
         }}
       />
     </NomadForm>
   </ContentContainer>
 )
 
-DownShift.getInitialProps = async ({ req, query }) => {
+FlyForm.getInitialProps = async ({ req, query }) => {
   const places = UrlToPlaces(query.places) || defaultValues.places
   return { query, places }
 }
 
-export default DownShift
+export default FlyForm
