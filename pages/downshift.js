@@ -59,7 +59,7 @@ const TopPart = ({ flyFrom, flyTo, dateFrom, dateTo }) => {
   const [returnDate, setReturnDate] = useUrl(
     dateTo ? new Date(dateTo) : addDays(new Date(), 10),
     "dateTo",
-    date => format(date, "YYYY-MM-DD")
+    date => (date ? format(date, "YYYY-MM-DD") : undefined)
   )
   const [
     returnDatePickerOpened,
@@ -138,6 +138,7 @@ const TopPart = ({ flyFrom, flyTo, dateFrom, dateTo }) => {
           checked={showReturnDate}
           onChange={e => {
             setReturnDateVisibility(e.target.checked)
+            setReturnDate(null)
           }}
         />
       </Stack>
@@ -164,8 +165,10 @@ const changePlacesState = newPlaces => {
   Router.push(newUrl, newUrl, { shallow: true })
 }
 
-const getDefaultValue = code =>
-  typeof code === "string" ? { name: `[${code}]`, code } : code
+const getPlaceFromString = val =>
+  typeof val === "string"
+    ? { name: `[${val}]`, code: val, id: val }
+    : val
 
 // Mexico,2,5,Poland,1,3 => [["Mexico", defaultDays]]
 const UrlToPlaces = url => {
@@ -176,7 +179,7 @@ const UrlToPlaces = url => {
   for (let i = 0; i < items.length; i += 3)
     // eslint-disable-next-line fp/no-mutating-methods
     result.push([
-      getDefaultValue(items[i]),
+      getPlaceFromString(items[i]),
       [items[i + 1], items[i + 2]]
     ])
   return result
@@ -197,16 +200,8 @@ const FlyForm = ({ query, places }) => (
         </Heading>
         <TopPart
           {...query}
-          flyFrom={
-            query.flyFrom
-              ? { id: query.flyFrom, name: `[${query.flyFrom}]` }
-              : defaultValues.flyFrom
-          }
-          flyTo={
-            query.flyTo
-              ? { id: query.flyTo, name: `[${query.flyTo}]` }
-              : undefined
-          }
+          flyFrom={getPlaceFromString(query.flyFrom)}
+          flyTo={getPlaceFromString(query.flyTo)}
         />
       </StyledOrigin>
       <PlacesToVisit
