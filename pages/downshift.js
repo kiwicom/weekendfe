@@ -35,7 +35,7 @@ const TopPart = ({ flyFrom, flyTo, dateFrom, dateTo, adults }) => {
   const [tripFrom, setFrom] = useUrl(
     flyFrom || defaultValues.flyFrom,
     "flyFrom",
-    item => item.id
+    item => (item ? item.id : undefined)
   )
   const [tripAdults, setAdults] = useUrl(adults, "adults")
 
