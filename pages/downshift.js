@@ -24,6 +24,7 @@ const StyledOrigin = styled.div`
 `
 
 const defaultValues = {
+  adults: 2,
   interest: "gastronomy",
   flyFrom: { id: "brno_cz", name: "Brno" },
   dateFrom: new Date(),
@@ -94,7 +95,7 @@ const TopPart = ({ flyFrom, flyTo, dateFrom, dateTo, adults }) => {
         <Stack basis="calc(25% - 16px)" shrink={false} grow={false}>
           <Stepper
             min={1}
-            max={9}
+            max={20}
             defaultValue={tripAdults}
             onChange={setAdults}
           />
@@ -212,6 +213,7 @@ const FlyForm = ({ query, places }) => (
         </Heading>
         <TopPart
           {...query}
+          adults={query.adults || defaultValues.adults}
           flyFrom={getPlaceFromString(query.flyFrom)}
           flyTo={getPlaceFromString(query.flyTo)}
         />
