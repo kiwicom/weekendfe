@@ -4,6 +4,7 @@ import Button from "@kiwicom/orbit-components/lib/Button"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Heading from "@kiwicom/orbit-components/lib/Heading"
 import ChevronLeft from "@kiwicom/orbit-components/lib/icons/ChevronLeft"
+import Router from "next/router"
 
 import Query from "../components/query"
 import search from "../queries/search.gql"
@@ -89,7 +90,17 @@ const Result = ({ query }) => (
             </Stack>
             <Footer
               leftActions={
-                <Button type="secondary" iconLeft={<ChevronLeft />}>
+                <Button
+                  type="secondary"
+                  iconLeft={<ChevronLeft />}
+                  onClick={() =>
+                    // eslint-disable-next-line fp/no-mutating-methods
+                    Router.push({
+                      pathname: "/downshift",
+                      query: Router.query
+                    })
+                  }
+                >
                   Previous Step
                 </Button>
               }
