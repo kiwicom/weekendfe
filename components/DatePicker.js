@@ -10,6 +10,10 @@ import ChevronRight from "@kiwicom/orbit-components/lib/icons/ChevronRight"
 import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
 import { format } from "date-fns"
 
+const today = new Date()
+const day = 60 * 60 * 24 * 1000
+const minDate = new Date(today.getTime() - day)
+
 const monthNamesShort = [
   "Jan",
   "Feb",
@@ -143,6 +147,7 @@ const DatePicker = ({
         onDateSelected={onDateSelected}
         selected={currentDate}
         monthsToDisplay={2}
+        minDate={minDate}
         render={({
           calendars,
           getBackProps,
@@ -208,7 +213,7 @@ const DatePicker = ({
                               selectable={selectable}
                               selected={selected}
                             >
-                              {selectable ? date.getDate() : "X"}
+                              {date.getDate()}
                             </StyledDay>
                           )
                         })

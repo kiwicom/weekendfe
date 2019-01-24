@@ -1,4 +1,4 @@
-import * as React from "react"
+import { useState } from "react"
 import Heading from "@kiwicom/orbit-components/lib/Heading"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
 import ButtonLink from "@kiwicom/orbit-components/lib/ButtonLink"
@@ -16,6 +16,7 @@ import ContentContainer from "../components/ContentContainer"
 import PlaceCard from "../components/PlaceCard"
 import Footer from "../components/Footer"
 import Timeline from "../components/Timeline"
+import ShareModal from "../components/ShareModal"
 
 const Places = styled.div`
   display: block;
@@ -40,131 +41,134 @@ const Summary = styled.div`
   `)}
 `
 
-const RightButtons = styled.div`
-  display: flex;
-  justify-content: flex-end;
+const DownShift = () => {
+  const [isVisibleShareModal, setVisibleShareModal] = useState(false)
 
-  > * {
-    margin-right: 16px;
-    :last-child {
-      margin: 0;
-    }
-  }
-`
-
-const DownShift = () => (
-  <ContentContainer>
-    <Stack
-      direction="column"
-      spacing="extraLoose"
-      desktop={{ direction: "row" }}
-    >
-      <Places>
-        <Heading type="title1" spaceAfter="largest">
-          Choose places you want to visit
-        </Heading>
-        <Card>
-          <CardSection expandable>
-            <PlaceCard
-              city="Barcelona"
-              places={[
-                {
-                  name: "Tinta Roja",
-                  description: "Lorem ipsum dolor sit amet."
-                },
-                {
-                  name: "Tinta Roja",
-                  description: "Lorem ipsum dolor sit amet."
-                },
-                {
-                  name: "Tinta Roja",
-                  description: "Lorem ipsum dolor sit amet."
-                }
-              ]}
-            />
-          </CardSection>
-          <CardSection expandable>
-            <PlaceCard
-              city="New York"
-              places={[
-                {
-                  name: "Tinta Roja",
-                  description: "Lorem ipsum dolor sit amet."
-                },
-                {
-                  name: "Tinta Roja",
-                  description: "Lorem ipsum dolor sit amet."
-                },
-                {
-                  name: "Tinta Roja",
-                  description: "Lorem ipsum dolor sit amet."
-                }
-              ]}
-            />
-          </CardSection>
-          <CardSection expandable>
-            <PlaceCard
-              city="Paris"
-              places={[
-                {
-                  name: "Tinta Roja",
-                  description: "Lorem ipsum dolor sit amet."
-                },
-                {
-                  name: "Tinta Roja",
-                  description: "Lorem ipsum dolor sit amet."
-                },
-                {
-                  name: "Tinta Roja",
-                  description: "Lorem ipsum dolor sit amet."
-                }
-              ]}
-            />
-          </CardSection>
-        </Card>
-      </Places>
-      <Summary>
-        <Heading type="title1" spaceAfter="largest">
-          Summary
-        </Heading>
-        <Timeline
-          from="London"
-          departureDate="14.01.2019"
-          returnDate="27.01.2019"
-          to="London"
-          stops={[
-            {
-              city: "Barcelona",
-              nights: 6,
-              places: [
-                { name: "Tinta Roja" },
-                { name: "Belushi's Barcelona" }
-              ]
-            },
-            {
-              city: "Barcelona",
-              nights: 6,
-              places: [
-                { name: "Tinta Roja" },
-                { name: "Belushi's Barcelona" }
-              ]
-            }
-          ]}
-        />
-      </Summary>
-    </Stack>
-    <Footer>
-      <ButtonLink type="secondary" icon={<Share />}>
-        Share
-      </ButtonLink>
-      <RightButtons>
-        <Button type="secondary" iconLeft={<ChevronLeft />}>
-          Previous Step
-        </Button>
-        <Button iconLeft={<Map />}>Show on the Map</Button>
-      </RightButtons>
-    </Footer>
-  </ContentContainer>
-)
+  return (
+    <ContentContainer>
+      <Stack
+        direction="column"
+        spacing="extraLoose"
+        desktop={{ direction: "row" }}
+      >
+        <Places>
+          <Heading type="title1" spaceAfter="largest">
+            Choose places you want to visit
+          </Heading>
+          <Card>
+            <CardSection expandable>
+              <PlaceCard
+                city="Barcelona"
+                places={[
+                  {
+                    name: "Tinta Roja",
+                    description: "Lorem ipsum dolor sit amet."
+                  },
+                  {
+                    name: "Tinta Roja",
+                    description: "Lorem ipsum dolor sit amet."
+                  },
+                  {
+                    name: "Tinta Roja",
+                    description: "Lorem ipsum dolor sit amet."
+                  }
+                ]}
+              />
+            </CardSection>
+            <CardSection expandable>
+              <PlaceCard
+                city="New York"
+                places={[
+                  {
+                    name: "Tinta Roja",
+                    description: "Lorem ipsum dolor sit amet."
+                  },
+                  {
+                    name: "Tinta Roja",
+                    description: "Lorem ipsum dolor sit amet."
+                  },
+                  {
+                    name: "Tinta Roja",
+                    description: "Lorem ipsum dolor sit amet."
+                  }
+                ]}
+              />
+            </CardSection>
+            <CardSection expandable>
+              <PlaceCard
+                city="Paris"
+                places={[
+                  {
+                    name: "Tinta Roja",
+                    description: "Lorem ipsum dolor sit amet."
+                  },
+                  {
+                    name: "Tinta Roja",
+                    description: "Lorem ipsum dolor sit amet."
+                  },
+                  {
+                    name: "Tinta Roja",
+                    description: "Lorem ipsum dolor sit amet."
+                  }
+                ]}
+              />
+            </CardSection>
+          </Card>
+        </Places>
+        <Summary>
+          <Heading type="title1" spaceAfter="largest">
+            Summary
+          </Heading>
+          <Timeline
+            from="London"
+            departureDate="14.01.2019"
+            returnDate="27.01.2019"
+            to="London"
+            stops={[
+              {
+                city: "Barcelona",
+                nights: 6,
+                places: [
+                  { name: "Tinta Roja" },
+                  { name: "Belushi's Barcelona" }
+                ]
+              },
+              {
+                city: "Barcelona",
+                nights: 6,
+                places: [
+                  { name: "Tinta Roja" },
+                  { name: "Belushi's Barcelona" }
+                ]
+              }
+            ]}
+          />
+        </Summary>
+      </Stack>
+      <Footer
+        leftActions={
+          <ButtonLink
+            type="secondary"
+            icon={<Share />}
+            onClick={() => setVisibleShareModal(true)}
+          >
+            Share
+          </ButtonLink>
+        }
+        rightActions={
+          <Stack direction="row" justify="end" shrink>
+            <Button type="secondary" iconLeft={<ChevronLeft />}>
+              Previous Step
+            </Button>
+            <Button iconLeft={<Map />}>Show on the Map</Button>
+          </Stack>
+        }
+      />
+      {isVisibleShareModal && (
+        <ShareModal onClose={setVisibleShareModal} />
+      )}
+    </ContentContainer>
+  )
+}
 
 export default DownShift

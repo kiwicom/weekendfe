@@ -18,6 +18,7 @@ import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
 
 import interestsQuery from "../queries/interests.gql"
 import NavBar from "../components/NavBar"
+import ShareModal from "../components/ShareModal"
 import Footer from "../components/Footer"
 
 const LoadingContainer = styled.div`
@@ -72,6 +73,8 @@ const MapPage = function() {
     country: "CZ"
   })
   const search = { ...searchParams, interests: "drinks" }
+
+  const [isVisibleShareModal, setVisibleShareModal] = useState(false)
   return (
     <div>
       <Query
@@ -145,7 +148,11 @@ const MapPage = function() {
       </NavBar>
       <Footer
         leftActions={
-          <ButtonLink type="secondary" icon={<Share />}>
+          <ButtonLink
+            type="secondary"
+            icon={<Share />}
+            onClick={() => setVisibleShareModal(true)}
+          >
             Share
           </ButtonLink>
         }
@@ -158,6 +165,9 @@ const MapPage = function() {
           </Stack>
         }
       />
+      {isVisibleShareModal && (
+        <ShareModal onClose={setVisibleShareModal} />
+      )}
     </div>
   )
 }
