@@ -12,6 +12,7 @@ import DatePicker from "../components/DatePicker"
 import Interests from "../components/Interests"
 import useOnClickOutside from "../components/useOnClickOutside"
 import PlacesToVisit from "../components/PlacesToVisit"
+import Stepper from "../components/Stepper"
 import useUrl from "../components/useUrl"
 
 const NomadForm = styled.div`
@@ -29,12 +30,13 @@ const defaultValues = {
   places: [[{ name: "Italy", id: "IT", code: "IT" }, [2, 5]]]
 }
 
-const TopPart = ({ flyFrom, flyTo, dateFrom, dateTo }) => {
+const TopPart = ({ flyFrom, flyTo, dateFrom, dateTo, adults }) => {
   const [tripFrom, setFrom] = useUrl(
     flyFrom || defaultValues.flyFrom,
     "flyFrom",
     item => item.id
   )
+  const [tripAdults, setAdults] = useUrl(adults, "adults")
 
   const [showDestination, setDestinationVisibility] = useState(
     Boolean(flyTo)
@@ -88,6 +90,16 @@ const TopPart = ({ flyFrom, flyTo, dateFrom, dateTo }) => {
 
   return (
     <Stack spaceAfter="largest">
+      <Stack direction="row" justify="end">
+        <Stack basis="calc(25% - 16px)" shrink={false} grow={false}>
+          <Stepper
+            min={1}
+            max={9}
+            defaultValue={tripAdults}
+            onChange={setAdults}
+          />
+        </Stack>
+      </Stack>
       <Stack direction="row">
         <PlacePicker
           label="From"
