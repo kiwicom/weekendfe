@@ -1,10 +1,9 @@
-import { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import ListChoice from "@kiwicom/orbit-components/lib/ListChoice"
 import City from "@kiwicom/orbit-components/lib/icons/City"
 import InputField from "@kiwicom/orbit-components/lib/InputField"
 import Downshift from "downshift"
-import debounce from "lodash.debounce"
 
 import Query from "./query"
 import locationsQuery from "../queries/locations.gql"
@@ -13,7 +12,7 @@ const StyledPlacePicker = styled.div`
   width: 100%;
 `
 
-const ResultsList = styled.div`
+const StyledResults = styled.div`
   width: 100%;
   max-height: 270px;
   position: absolute;
@@ -29,20 +28,41 @@ const ResultsList = styled.div`
   box-shadow: ${({ theme }) => theme.orbit.boxShadowElevatedLevel1};
 `
 
+const useDebounce = (value, delay) => {
+  const [debouncedValue, setDebouncedValue] = useState(value)
+
+  useEffect(
+    () => {
+      const handler = setTimeout(() => {
+        setDebouncedValue(value)
+      }, delay)
+
+      return () => {
+        clearTimeout(handler)
+      }
+    },
+    [value, delay]
+  )
+
+  return debouncedValue
+}
+
 const PlacePicker = ({
   defaultValue,
   onChange = () => {},
   label = "Via"
 }) => {
   const [value, setValue] = useState(defaultValue)
+  const debouncedValue = useDebounce(value, 150)
+
   return (
     <StyledPlacePicker>
       <Downshift
-        onStateChange={debounce(({ inputValue }) => {
+        onStateChange={({ inputValue }) => {
           if (inputValue) {
             setValue(inputValue)
           }
-        }, 50)}
+        }}
         onChange={onChange}
       >
         {({
@@ -64,46 +84,12 @@ const PlacePicker = ({
               label={label}
             />
             {isOpen ? (
-              <ResultsList>
-                <Query
-                  query={locationsQuery}
-                  variables={{
-                    query: value
-                  }}
-                  context={{
-                    uri: "https://weekend-api.now.sh"
-                  }}
-                >
-                  {({ data: { locations } }) =>
-                    locations.map(({ name }, index) => (
-                      <div
-                        {...getItemProps({
-                          item: name,
-                          index
-                        })}
-                        key={name}
-                      >
-                        <ListChoice
-                          key={name}
-                          icon={<City />}
-                          selectable
-                          selected={selectedItem === name}
-                          title={name}
-                          description={
-                            highlightedIndex === index
-                              ? "press for select"
-                              : ""
-                          }
-                          {...getItemProps({
-                            item: name,
-                            index
-                          })}
-                        />
-                      </div>
-                    ))
-                  }
-                </Query>
-              </ResultsList>
+              <Results
+                value={debouncedValue}
+                highlightedIndex={highlightedIndex}
+                selectedItem={selectedItem}
+                getItemProps={getItemProps}
+              />
             ) : null}
           </div>
         )}
@@ -111,5 +97,51 @@ const PlacePicker = ({
     </StyledPlacePicker>
   )
 }
+
+const Results = ({
+  value,
+  selectedItem,
+  highlightedIndex,
+  getItemProps
+}) => (
+  <StyledResults>
+    <Query
+      query={locationsQuery}
+      variables={{
+        query: value
+      }}
+      context={{
+        uri: "https://weekend-api.now.sh"
+      }}
+    >
+      {({ data: { locations } }) =>
+        locations.map(({ name }, index) => (
+          <div
+            {...getItemProps({
+              item: name,
+              index
+            })}
+            key={name}
+          >
+            <ListChoice
+              key={name}
+              icon={<City />}
+              selectable
+              selected={selectedItem === name}
+              title={name}
+              description={
+                highlightedIndex === index ? "press for select" : ""
+              }
+              {...getItemProps({
+                item: name,
+                index
+              })}
+            />
+          </div>
+        ))
+      }
+    </Query>
+  </StyledResults>
+)
 
 export default PlacePicker
