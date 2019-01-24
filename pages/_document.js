@@ -1,7 +1,13 @@
+import fs from "fs"
 import Document, { Head, Main, NextScript } from "next/document"
 import { ServerStyleSheet } from "styled-components"
 
 import Body from "../components/Body"
+
+const pages = fs
+  .readdirSync("./pages")
+  .filter(name => !name.startsWith("_"))
+  .map(name => name.replace(".js", ""))
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -10,8 +16,10 @@ export default class MyDocument extends Document {
     const originalRenderPage = ctx.renderPage
     ctx.renderPage = () =>
       originalRenderPage({
-        enhanceApp: App => props =>
-          sheet.collectStyles(<App {...props} />)
+        enhanceApp: App => props => {
+          props.pageProps.pages = pages // eslint-disable-line no-param-reassign
+          return sheet.collectStyles(<App {...props} pages={pages} />)
+        }
       })
 
     const initialProps = await Document.getInitialProps(ctx)
