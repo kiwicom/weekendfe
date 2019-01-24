@@ -4,16 +4,24 @@ query Search($params: SearchParams!) {
     bookingToken
     route {
       from {
-        country
         city
+        iata
+        timeLocal
       }
       to {
-        country
         city
+        iata
+        timeLocal
       }
       parts {
         type
         carrier
+        from {
+          timeLocal
+        }
+        to {
+          timeLocal
+        }
       }
       interests {
         name
