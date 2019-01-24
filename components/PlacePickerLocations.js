@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import ListChoice from "@kiwicom/orbit-components/lib/ListChoice"
 import City from "@kiwicom/orbit-components/lib/icons/City"
 import InputField from "@kiwicom/orbit-components/lib/InputField"
 import Downshift from "downshift"
 
+import useDebounce from "./useDebounce"
 import Query from "./query"
 import locationsQuery from "../queries/locations.gql"
 
@@ -27,25 +28,6 @@ const StyledResults = styled.div`
   overflow-y: auto;
   box-shadow: ${({ theme }) => theme.orbit.boxShadowElevatedLevel1};
 `
-
-const useDebounce = (value, delay) => {
-  const [debouncedValue, setDebouncedValue] = useState(value)
-
-  useEffect(
-    () => {
-      const handler = setTimeout(() => {
-        setDebouncedValue(value)
-      }, delay)
-
-      return () => {
-        clearTimeout(handler)
-      }
-    },
-    [value, delay]
-  )
-
-  return debouncedValue
-}
 
 const PlacePicker = ({
   defaultValue,
@@ -110,14 +92,14 @@ const Results = ({
     <Query
       query={locationsQuery}
       variables={{
-        query: value
+        query: value.name || value
       }}
       context={{
         uri: "https://weekend-api.now.sh"
       }}
     >
       {({ data: { locations } }) =>
-        locations.map(({ name }, index) => (
+        locations.map(({ name, code, id }, index) => (
           <div
             {...getItemProps({
               item: name,
