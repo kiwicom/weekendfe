@@ -1,5 +1,6 @@
 import * as React from "react"
 import App, { Container } from "next/app"
+import Head from "next/head"
 import { ApolloProvider } from "react-apollo"
 import { getTokens, defaultTheme } from "@kiwicom/orbit-components"
 import { ThemeProvider, createGlobalStyle } from "styled-components"
@@ -19,36 +20,15 @@ GlobalStyle.defaultProps = {
   theme: defaultTheme
 }
 
-export const foundation = {
-  palette: {
-    product: {
-      light: "black",
-      lightHover: "#bde9e2",
-      lightActive: "#9addd3",
-      normal: "#00a991",
-      normalHover: "#009882",
-      normalActive: "#008f7b",
-      dark: "#00826f"
-    }
-  },
-  base: {
-    fontFamily: "'Source Sans Pro', sans-serif",
-    borderRadius: "7px",
-    fontWeightMedium: "600"
-  }
-}
-
-const tokens = getTokens(foundation)
-
-// TODO: overwrite necessary tokens
-const customTokens = tokens
-
 class MyApp extends App {
   render() {
     const { Component, pageProps, apolloClient } = this.props
     return (
       <Container>
-        <ThemeProvider theme={{ orbit: customTokens }}>
+        <Head>
+          <title>JS Weekend</title>
+        </Head>
+        <ThemeProvider theme={{ orbit: getTokens() }}>
           <>
             <GlobalStyle />
             <ApolloProvider client={apolloClient}>
