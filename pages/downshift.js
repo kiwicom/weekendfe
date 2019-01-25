@@ -223,7 +223,7 @@ const FlyForm = ({ query, places }) => (
         onSearchClick={selectedPlaces => {
           const values = { ...defaultValues, ...Router.query }
           const newUrl = {
-            pathname: "/result",
+            pathname: `${BASE_URL}/result`,
             query: {
               ...values,
               dateFrom: format(
