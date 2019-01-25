@@ -29,15 +29,13 @@ Line.defaultProps = {
   theme: defaultTheme
 }
 
-const Timeline = ({ places, onClick, selected }) => (
+const Timeline = ({ places, onSelect, selected }) => (
   <>
     <TagTimeline>
-      {places.map(place => (
+      {places.map((place, i) => (
         <Button
-          onClick={() =>
-            onClick({ city: place.city, country: place.country })
-          }
-          type={place.city === selected ? "primary" : "secondary"}
+          onClick={() => onSelect(i)}
+          type={i === selected ? "primary" : "secondary"}
           size="small"
         >
           {place.city}

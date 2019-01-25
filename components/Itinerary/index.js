@@ -1,11 +1,12 @@
-import * as React from "react"
-import Stack from "@kiwicom/orbit-components/lib/Stack"
+import Button from "@kiwicom/orbit-components/lib/Button"
 import Card from "@kiwicom/orbit-components/lib/Card"
 import CardSection from "@kiwicom/orbit-components/lib/Card/CardSection"
-import Text from "@kiwicom/orbit-components/lib/Text"
-import Button from "@kiwicom/orbit-components/lib/Button"
 import Hide from "@kiwicom/orbit-components/lib/Hide"
+import Stack from "@kiwicom/orbit-components/lib/Stack"
+import Text from "@kiwicom/orbit-components/lib/Text"
 import { differenceInHours } from "date-fns"
+import Router from "next/router"
+import * as React from "react"
 
 import Route from "./Route"
 
@@ -23,7 +24,7 @@ const getNights = (routes, route, routeKey) => {
   }
   return null
 }
-const Itinerary = ({ flights }) => (
+const Itinerary = ({ flights, interest }) => (
   <Stack direction="column" shrink spacing="loose">
     {flights.map((flight, flightKey) => {
       const routes = flight.route
@@ -51,7 +52,7 @@ const Itinerary = ({ flights }) => (
                     const nights = getNights(routes, route, key)
                     return (
                       // eslint-disable-next-line
-                        <Route {...route} key={key} nights={nights}/>
+                      <Route {...route} key={key} nights={nights} />
                     )
                   })}
                 </Stack>
@@ -65,7 +66,16 @@ const Itinerary = ({ flights }) => (
                     basis="150px"
                   >
                     <Button
-                      onClick={() => console.log(flight.bookingToken)}
+                      onClick={() => {
+                        // eslint-disable-next-line fp/no-mutating-methods
+                        Router.push({
+                          pathname: "/places",
+                          query: {
+                            bookingToken: flight.bookingToken,
+                            interest
+                          }
+                        })
+                      }}
                     >
                       Select this flight
                     </Button>
@@ -80,7 +90,16 @@ const Itinerary = ({ flights }) => (
               >
                 <Hide on={["tablet", "desktop", "largeDesktop"]}>
                   <Button
-                    onClick={() => console.log(flight.bookingToken)}
+                    onClick={() =>
+                      // eslint-disable-next-line fp/no-mutating-methods
+                      Router.push({
+                        pathname: "/places",
+                        query: {
+                          bookingToken: flight.bookingToken,
+                          interest
+                        }
+                      })
+                    }
                   >
                     Select this flight
                   </Button>

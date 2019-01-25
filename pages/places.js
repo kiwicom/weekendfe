@@ -19,7 +19,7 @@ import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
 import PlaceCard from "../components/PlaceCard"
 import Footer from "../components/Footer"
 import ShareModal from "../components/ShareModal"
-import interestsQuery from "../queries/interests.gql"
+import itemsQuery from "../queries/items.gql"
 import NavBar from "../components/NavBar"
 import Timeline from "../components/Timeline"
 import MapLoading from "../components/MapLoading"
@@ -77,111 +77,107 @@ const LeftSide = styled.div`
   `)}
 `
 
-const DownShift = () => {
-  const [searchParams, setSearchParams] = useState({
-    city: "Brno",
-    country: "CZ"
-  })
-  const search = { ...searchParams, interests: "drinks" }
+function ErrorModal() {
+  return (
+    <Portal element="modals">
+      <Modal>
+        <ModalSection>
+          <Alert type="critical" title="Something went wrong.">
+            The map could not be loaded.
+            <br />
+            Please reload the page.
+          </Alert>
+        </ModalSection>
+      </Modal>
+    </Portal>
+  )
+}
+
+const PlacesPage = ({ query }) => {
+  const [cityIndex, setCityIndex] = useState(0)
 
   const [isVisibleShareModal, setVisibleShareModal] = useState(false)
+
   return (
     <PlacesContainer>
-      <NavBar>
-        <Timeline
-          onClick={setSearchParams}
-          places={[
-            { city: "Brno", country: "CZ" },
-            { city: "Bratislava", country: "SK" },
-            { city: "Dubai", country: "AE" },
-            { city: "Košice", country: "SK" }
-          ]}
-          selected="Brno"
-        />
-      </NavBar>
-      <Stack direction="row">
-        <LeftSide>
-          <Query
-            query={interestsQuery}
-            variables={search}
-            context={{ uri: "https://weekend-api.now.sh/" }}
-          >
-            {({ loading, error, data }) => (
-              <>
-                {loading ? (
-                  <MapLoading
-                    text={`Loading locations in ${search.city}`}
-                  />
-                ) : null}
-                {error ? (
-                  <Portal element="modals">
-                    <Modal>
-                      <ModalSection>
-                        <Alert
-                          type="critical"
-                          title="Something went wrong."
-                        >
-                          The map could not be loaded.
-                          <br />
-                          Please reload the page.
-                        </Alert>
-                      </ModalSection>
-                    </Modal>
-                  </Portal>
-                ) : null}
-                {data.interests && (
-                  <DynamicMap places={data.interests} />
+      <Query
+        query={itemsQuery}
+        variables={{
+          interest: query.interest,
+          bookingToken: query.bookingToken
+        }}
+        context={{ uri: "https://weekend-api.now.sh/" }}
+      >
+        {({ loading, error, data }) => {
+          if (loading) {
+            return <MapLoading text="Loading" />
+          }
+          if (error) {
+            return <ErrorModal />
+          }
+
+          const { interests } = data.item.route[cityIndex]
+
+          const places = data.item.route.map(
+            route => route.destination
+          )
+
+          return (
+            <>
+              <NavBar>
+                <Timeline
+                  onSelect={setCityIndex}
+                  places={places}
+                  selected={cityIndex}
+                />
+              </NavBar>
+              <Stack direction="row">
+                <LeftSide>
+                  <DynamicMap places={interests} />
+                </LeftSide>
+                <Places>
+                  <Heading type="title2" spaceAfter="largest">
+                    Places to visit in Barcelona
+                  </Heading>
+                  <PlaceCard places={interests} />
+                </Places>
+                <Footer
+                  leftActions={
+                    <ButtonLink
+                      type="secondary"
+                      icon={<Share />}
+                      onClick={() => setVisibleShareModal(true)}
+                    >
+                      Share
+                    </ButtonLink>
+                  }
+                  rightActions={
+                    <Stack direction="row" justify="end" shrink>
+                      <Button
+                        type="secondary"
+                        iconLeft={<ChevronLeft />}
+                      >
+                        Previous Step
+                      </Button>
+                      <Button iconLeft={<Kiwicom />}>
+                        Book the flight
+                      </Button>
+                    </Stack>
+                  }
+                />
+                {isVisibleShareModal && (
+                  <ShareModal onClose={setVisibleShareModal} />
                 )}
-              </>
-            )}
-          </Query>
-        </LeftSide>
-        <Places>
-          <Heading type="title2" spaceAfter="largest">
-            Places to visit in Barcelona
-          </Heading>
-          <PlaceCard
-            places={[
-              {
-                name: "Tinta Roja",
-                description: "Lorem ipsum dolor sit amet."
-              },
-              {
-                name: "Tinta Roja",
-                description: "Lorem ipsum dolor sit amet."
-              },
-              {
-                name: "Tinta Roja",
-                description: "Lorem ipsum dolor sit amet."
-              }
-            ]}
-          />
-        </Places>
-        <Footer
-          leftActions={
-            <ButtonLink
-              type="secondary"
-              icon={<Share />}
-              onClick={() => setVisibleShareModal(true)}
-            >
-              Share
-            </ButtonLink>
-          }
-          rightActions={
-            <Stack direction="row" justify="end" shrink>
-              <Button type="secondary" iconLeft={<ChevronLeft />}>
-                Previous Step
-              </Button>
-              <Button iconLeft={<Kiwicom />}>Book the flight</Button>
-            </Stack>
-          }
-        />
-        {isVisibleShareModal && (
-          <ShareModal onClose={setVisibleShareModal} />
-        )}
-      </Stack>
+              </Stack>
+            </>
+          )
+        }}
+      </Query>
     </PlacesContainer>
   )
 }
 
-export default DownShift
+// enable passing query to main component
+PlacesPage.getInitialProps = async ({ query }) => ({ query })
+
+export default PlacesPage

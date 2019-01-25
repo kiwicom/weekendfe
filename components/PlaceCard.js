@@ -55,11 +55,11 @@ const PlaceCard = ({ places }) => (
   <Stack direction="column">
     {places.map(place => (
       <StyledPlaceCard key={place.name}>
-        <Checkbox checked />
+        {/* <Checkbox checked /> */}
         <Stack spacing="extraTight">
           <Text weight="bold">{place.name}</Text>
           <Text type="secondary" element="div">
-            {place.description}
+            {place.address}
           </Text>
         </Stack>
         <ButtonLink
