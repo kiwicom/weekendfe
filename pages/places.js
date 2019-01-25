@@ -116,7 +116,9 @@ const PlacesPage = ({ query }) => {
             return <ErrorModal />
           }
 
-          const { interests } = data.item.route[cityIndex]
+          const { interests, destination } = data.item.route[
+            cityIndex
+          ]
 
           const places = data.item.route.map(
             route => route.destination
@@ -137,7 +139,7 @@ const PlacesPage = ({ query }) => {
                 </LeftSide>
                 <Places>
                   <Heading type="title2" spaceAfter="largest">
-                    Places to visit in Barcelona
+                    Places to visit in {destination.city}
                   </Heading>
                   <PlaceCard places={interests} />
                 </Places>
@@ -153,13 +155,20 @@ const PlacesPage = ({ query }) => {
                   }
                   rightActions={
                     <Stack direction="row" justify="end" shrink>
-                      <Button
+                      {/* <Button
                         type="secondary"
                         iconLeft={<ChevronLeft />}
+                        onClick={}
                       >
                         Previous Step
-                      </Button>
-                      <Button iconLeft={<Kiwicom />}>
+                      </Button> */}
+                      <Button
+                        href={`https://www.kiwi.com/en/booking?token=${
+                          query.bookingToken
+                        }`}
+                        external
+                        iconLeft={<Kiwicom />}
+                      >
                         Book the flight
                       </Button>
                     </Stack>

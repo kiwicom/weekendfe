@@ -53,8 +53,8 @@ StyledPlaceCard.defaultProps = {
 
 const PlaceCard = ({ places }) => (
   <Stack direction="column">
-    {places.map(place => (
-      <StyledPlaceCard key={place.name}>
+    {places.map((place, i) => (
+      <StyledPlaceCard key={place.name + place.address}>
         {/* <Checkbox checked /> */}
         <Stack spacing="extraTight">
           <Text weight="bold">{place.name}</Text>
@@ -62,14 +62,6 @@ const PlaceCard = ({ places }) => (
             {place.address}
           </Text>
         </Stack>
-        <ButtonLink
-          type="secondary"
-          size="small"
-          onClick={() => console.log("open modal")}
-          iconRight={<ChevronRight />}
-        >
-          More info
-        </ButtonLink>
       </StyledPlaceCard>
     ))}
   </Stack>
