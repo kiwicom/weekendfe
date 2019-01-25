@@ -6,7 +6,6 @@ import Text from "@kiwicom/orbit-components/lib/Text"
 import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
 import { getTokens } from "@kiwicom/orbit-components"
 
-import { foundation } from "../pages/_app"
 import RatingStars from "./RatingStars"
 
 mapboxgl.accessToken =
@@ -100,7 +99,7 @@ function Map({ places }) {
           .addTo(mapObject)
         setTimeout(() => {
           ReactDOM.render(
-            <ThemeProvider theme={{ orbit: getTokens(foundation) }}>
+            <ThemeProvider theme={{ orbit: getTokens() }}>
               <StyledMarker>
                 <StyledImage bg={place.img} />
                 <StyledText>

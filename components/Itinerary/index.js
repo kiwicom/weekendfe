@@ -38,11 +38,7 @@ const Itinerary = ({ flights, interest }) => (
               desktop={{ spacing: "tight" }}
             >
               <Stack direction="row" align="center" spacing="comfy">
-                <Stack
-                  basis="30px"
-                  justify="center"
-                  desktop={{ basis: "50px" }}
-                >
+                <Stack basis="50px" justify="center" shrink={false}>
                   <Text weight="bold" size="large">
                     {flight.price} €
                   </Text>

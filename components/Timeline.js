@@ -37,6 +37,7 @@ const Timeline = ({ places, onSelect, selected }) => (
           onClick={() => onSelect(i)}
           type={i === selected ? "primary" : "secondary"}
           size="small"
+          key={place.city}
         >
           {place.city}
         </Button>
