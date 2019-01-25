@@ -219,8 +219,8 @@ const FlyForm = ({ query, places }) => (
         <TopPart
           {...query}
           adults={query.adults || defaultValues.adults}
-          flyFrom={getPlaceFromString(query.flyFrom)}
-          flyTo={getPlaceFromString(query.flyTo)}
+          flyFrom={query.flyFrom}
+          flyTo={query.flyTo}
         />
       </StyledOrigin>
       <PlacesToVisit

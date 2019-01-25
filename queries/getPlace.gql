@@ -1,0 +1,9 @@
+# https://weekend-api.now.sh/
+
+query Place ($id: String!) {
+  place(id: $id) {
+    id
+    code
+    name
+  }
+}
