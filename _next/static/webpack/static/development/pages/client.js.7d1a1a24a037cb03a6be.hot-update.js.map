@@ -1,0 +1,1 @@
+{"version":3,"file":"static/webpack/static/development/pages/client.js.7d1a1a24a037cb03a6be.hot-update.js","sources":["webpack:///./pages/client.js"],"sourcesContent":["export default props => {\n  return <h1>{JSON.stringify(props)}</h1>\n}\n"],"mappings":";;;;;;;;;;;;;;;AAAA;AACA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AACA;;;;;;;;;;;;;;;;;;;;;;;A","sourceRoot":""}
