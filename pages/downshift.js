@@ -16,11 +16,11 @@ import Stepper from "../components/Stepper"
 import useUrl from "../components/useUrl"
 
 const NomadForm = styled.div`
-  max-width: 696px;
+  max-width: 816px;
 `
 
 const StyledOrigin = styled.div`
-  max-width: 640px;
+  max-width: 756px;
 `
 
 const today = new Date()

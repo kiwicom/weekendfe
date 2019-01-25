@@ -13,7 +13,7 @@ import Debug from "./debug"
 import useOnClickOutside from "./useOnClickOutside"
 
 const StyledButtons = styled.div`
-  max-width: 640px;
+  max-width: 756px;
 `
 
 const PlaceToVisit = ({

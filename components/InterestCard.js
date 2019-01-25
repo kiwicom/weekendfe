@@ -1,9 +1,10 @@
 import * as React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Text from "@kiwicom/orbit-components/lib/Text"
 import Radio from "@kiwicom/orbit-components/lib/Radio"
 import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
+import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"
 
 const StyledInterestCard = styled.div`
   width: 100%;
@@ -18,7 +19,10 @@ const StyledInterestCard = styled.div`
   transition: box-shadow ${({ theme }) => theme.orbit.durationFast}
       ease-in-out,
     transform ${({ theme }) => theme.orbit.durationFast} ease-in-out;
-  max-width: 180px;
+
+  ${mq.largeMobile(css`
+    max-width: 180px;
+  `)};
 
   :hover,
   :focus {
