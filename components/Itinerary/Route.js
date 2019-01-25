@@ -1,12 +1,17 @@
 import * as React from "react"
-import styled from "styled-components"
+import styled, { ThemeProvider } from "styled-components"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Text from "@kiwicom/orbit-components/lib/Text"
 import Hide from "@kiwicom/orbit-components/lib/Hide"
 import CarrierLogo from "@kiwicom/orbit-components/lib/CarrierLogo"
 import FlightDirect from "@kiwicom/orbit-components/lib/icons/FlightDirect"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
-import { format } from "date-fns"
+import defaultTokens from "@kiwicom/orbit-components/lib/defaultTokens"
+import {
+  format,
+  differenceInHours,
+  differenceInMinutes
+} from "date-fns"
+import { getTokens } from "@kiwicom/orbit-components"
 
 const StyledNights = styled.div`
   display: flex;
@@ -23,25 +28,32 @@ const StyledLine = styled.div`
 `
 
 StyledNights.defaultProps = {
-  theme: defaultTheme
+  theme: defaultTokens
 }
 
 const getCarrierFromParts = parts =>
-  parts.map(part => ({ code: part.carrier }))
+  parts.map(part => ({
+    code: part.carrier
+  }))
 
 const Route = props => {
-  const { parts, from, to } = props
-  const nights = 1
+  const { parts, from, to, nights } = props
   const carriers = getCarrierFromParts(parts)
-  console.log(parts)
-  const timeFrom = Math.max.apply(
-    null,
-    parts.map(part => part.from.timeLocal)
+
+  const departureTimeLocal = new Date(from.timeLocal * 1000)
+  const arrivalTimeLocal = new Date(to.timeLocal * 1000)
+  const departureTime = format(departureTimeLocal, "HH:mm")
+  const departureArrival = format(arrivalTimeLocal, "HH:mm")
+
+  const hours = differenceInHours(
+    arrivalTimeLocal,
+    departureTimeLocal
   )
-  const timeTo = Math.max.apply(
-    null,
-    parts.map(part => part.to.timeLocal)
-  )
+
+  const minutes =
+    differenceInMinutes(arrivalTimeLocal, departureTimeLocal) -
+    hours * 60
+
   return (
     <Stack direction="row" shrink>
       <Stack direction="column" shrink>
@@ -53,7 +65,9 @@ const Route = props => {
             spacing="comfy"
           >
             <Stack direction="row" align="center">
-              <CarrierLogo carriers={carriers} />
+              <ThemeProvider theme={{ orbit: getTokens() }}>
+                <CarrierLogo carriers={carriers} />
+              </ThemeProvider>
               <Text type="secondary" size="small">
                 {carriers.map(carrier => carrier.code).join(", ")}
               </Text>
@@ -66,18 +80,17 @@ const Route = props => {
             spacing="compact"
           >
             <Stack direction="column" spacing="extraTight">
-              <Text weight="bold">
-                {format(timeFrom, "HH:mm")} -{" "}
-                {format(timeTo, "HH:mm")}
-              </Text>
+              <Text weight="bold">{`${departureTime} - ${departureArrival}`}</Text>
               <Text size="small">
-                {format(from.timeLocal, "ddd D MMM")}
+                {format(departureTimeLocal, "ddd D MMM")}
               </Text>
             </Stack>
           </Stack>
           <Stack direction="column" spacing="extraTight" shrink>
             <Hide on={["smallMobile", "mediumMobile", "largeMobile"]}>
-              <Text>1h 10m</Text>
+              <Text>
+                {hours && `${hours}h`} {minutes && `${minutes}m`}
+              </Text>
               <Stack direction="row" align="center" spacing="tight">
                 <Text size="small" type="secondary">
                   {from.city} {from.iata}
@@ -95,7 +108,10 @@ const Route = props => {
             <StyledLine />
             <StyledNights>
               <Text type="secondary" size="small">
-                {nights} in Brno
+                {nights <= 1
+                  ? `${nights} night `
+                  : `${nights} nights `}
+                in {to.city}
               </Text>
             </StyledNights>
           </Stack>
