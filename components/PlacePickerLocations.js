@@ -76,7 +76,7 @@ const PlacePicker = ({
                 />
               }
             />
-            {isOpen ? (
+            {isOpen && debouncedValue ? (
               <Results
                 value={debouncedValue}
                 highlightedIndex={highlightedIndex}
