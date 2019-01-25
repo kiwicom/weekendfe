@@ -9,6 +9,9 @@
     "prettier/react",
     "plugin:fp/recommended"
   ],
+  "globals": {
+    "BASE_URL": true
+  },
   "plugins": ["prettier", "fp", "react-hooks"],
   "rules": {
     "prettier/prettier": "error",
