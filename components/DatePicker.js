@@ -145,6 +145,7 @@ const DatePicker = ({
       onFocus={onFocus}
       onBlur={onBlur}
       value={format(currentDate, "MM/DD/YYYY")}
+      readOnly
     />
     {shown && (
       <Dayzed

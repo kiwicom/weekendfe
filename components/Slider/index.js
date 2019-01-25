@@ -96,6 +96,7 @@ class SliderComponent extends React.Component {
           label="Length"
           onFocus={onFocus}
           value={convertValues(values)}
+          readOnly
         />
         {isOpen && (
           <StyledSlider ref={openRef}>

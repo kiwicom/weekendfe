@@ -105,7 +105,7 @@ const Results = ({ value, highlightedIndex, getItemProps }) => (
       {({ data: { locations } }) =>
         locations.map(({ name, code, id }, index) => (
           <ListChoice
-            key={name}
+            key={`${name}-${id}`}
             title={`${name} [${code}/${id}]`}
             selected={highlightedIndex === index}
             {...getItemProps({

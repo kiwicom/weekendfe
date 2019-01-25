@@ -23,11 +23,15 @@ const StyledOrigin = styled.div`
   max-width: 640px;
 `
 
+const today = new Date()
+const day = 60 * 60 * 24 * 1000
+
 const defaultValues = {
   adults: 2,
   interest: "drinks",
   flyFrom: { id: "brno_cz", name: "Brno" },
   dateFrom: new Date(),
+  dateTo: new Date(today.getTime() + day * 7),
   places: [[{ name: "Italy", id: "IT", code: "IT" }, [2, 5]]]
 }
 
@@ -151,7 +155,9 @@ const TopPart = ({ flyFrom, flyTo, dateFrom, dateTo, adults }) => {
           checked={showReturnDate}
           onChange={e => {
             setReturnDateVisibility(e.target.checked)
-            setReturnDate(null)
+            setReturnDate(
+              showReturnDate ? null : defaultValues.dateTo
+            )
           }}
         />
       </Stack>

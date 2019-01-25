@@ -70,6 +70,7 @@ const PlacePicker = ({
               // here's the interesting part
               onFocus: openMenu
             })}
+            readOnly
             inlineLabel
             label={label}
             suffix={
