@@ -3,6 +3,9 @@ import { ServerStyleSheet } from "styled-components"
 
 import Body from "../components/Body"
 
+const basePath =
+  process.env.NODE_ENV !== "production" ? "" : "/weekendfe"
+
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet()
@@ -32,10 +35,14 @@ export default class MyDocument extends Document {
           />
           <link
             rel="shortcut icon"
-            href="/static/favicon.ico"
+            href={`${basePath}/static/favicon.ico`}
             type="image/x-icon"
           />
-          <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+          <link
+            rel="icon"
+            href={`${basePath}/static/favicon.ico`}
+            type="image/x-icon"
+          />
           <link
             href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700"
             rel="stylesheet"
