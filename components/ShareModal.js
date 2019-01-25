@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { withRouter } from "next/router"
 import Portal from "@kiwicom/orbit-components/lib/Portal"
 import Modal from "@kiwicom/orbit-components/lib/Modal"
 import ModalSection from "@kiwicom/orbit-components/lib/Modal/ModalSection"
@@ -9,12 +8,10 @@ import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Text from "@kiwicom/orbit-components/lib/Text"
 import { CopyToClipboard } from "react-copy-to-clipboard"
 
-const ShareModal = ({ onClose, router, host }) => {
+const ShareModal = ({ onClose }) => {
   const [copied, setCopied] = useState(false)
 
-  const path = window
-    ? window.location.href
-    : `${host}/${router.asPath}`
+  const path = window && window.location.href
 
   return (
     <Portal element="modals">
@@ -40,4 +37,4 @@ const ShareModal = ({ onClose, router, host }) => {
   )
 }
 
-export default withRouter(ShareModal)
+export default ShareModal
