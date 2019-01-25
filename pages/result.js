@@ -87,7 +87,10 @@ const Result = ({ query }) => (
               <Heading type="title1" spaceAfter="largest">
                 Choose your flight combination
               </Heading>
-              <Itinerary flights={data.search.slice(0, 10)} />
+              <Itinerary
+                flights={data.search.slice(0, 10)}
+                interest={query.interest}
+              />
             </Stack>
             <Footer
               leftActions={

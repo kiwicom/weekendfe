@@ -1,0 +1,23 @@
+# https://weekend-api.now.sh/
+
+query Items($interest: String!, $bookingToken: String!) {
+  item(interest: $interest, bookingToken: $bookingToken) {
+    price
+    route {
+      destination {
+        city
+        country
+      }
+      interests {
+        name
+        coords {
+          lat
+          lon
+        }
+        img
+        score
+        address
+      }
+    }
+  }
+}

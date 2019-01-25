@@ -102,7 +102,7 @@ const Results = ({
     <Query
       query={locationsQuery}
       variables={{
-        query: value.name || value
+        query: value ? value.name || value : null
       }}
       context={{
         uri: "https://weekend-api.now.sh"
