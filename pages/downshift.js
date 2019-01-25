@@ -25,7 +25,7 @@ const StyledOrigin = styled.div`
 
 const defaultValues = {
   adults: 2,
-  interest: "gastronomy",
+  interest: "drinks",
   flyFrom: { id: "brno_cz", name: "Brno" },
   dateFrom: new Date(),
   places: [[{ name: "Italy", id: "IT", code: "IT" }, [2, 5]]]

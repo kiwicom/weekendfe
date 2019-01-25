@@ -1,7 +1,5 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import ListChoice from "@kiwicom/orbit-components/lib/ListChoice"
-import City from "@kiwicom/orbit-components/lib/icons/City"
 import InputField from "@kiwicom/orbit-components/lib/InputField"
 import ButtonLink from "@kiwicom/orbit-components/lib/ButtonLink"
 import Close from "@kiwicom/orbit-components/lib/icons/Close"
@@ -10,6 +8,7 @@ import Downshift from "downshift"
 import useDebounce from "./useDebounce"
 import Query from "./query"
 import locationsQuery from "../queries/locations.gql"
+import ListChoice from "./ListChoice"
 
 const StyledPlacePicker = styled.div`
   width: 100%;
@@ -92,12 +91,7 @@ const PlacePicker = ({
   )
 }
 
-const Results = ({
-  value,
-  selectedItem,
-  highlightedIndex,
-  getItemProps
-}) => (
+const Results = ({ value, highlightedIndex, getItemProps }) => (
   <StyledResults>
     <Query
       query={locationsQuery}
@@ -110,28 +104,15 @@ const Results = ({
     >
       {({ data: { locations } }) =>
         locations.map(({ name, code, id }, index) => (
-          <div
+          <ListChoice
+            key={name}
+            title={`${name} [${code}/${id}]`}
+            selected={highlightedIndex === index}
             {...getItemProps({
-              item: name,
+              item: { name, id, code },
               index
             })}
-            key={name}
-          >
-            <ListChoice
-              key={name}
-              icon={<City />}
-              selectable
-              selected={selectedItem === name}
-              title={`${name} [${code}/${id}]`}
-              description={
-                highlightedIndex === index ? "press for select" : ""
-              }
-              {...getItemProps({
-                item: { name, id, code },
-                index
-              })}
-            />
-          </div>
+          />
         ))
       }
     </Query>

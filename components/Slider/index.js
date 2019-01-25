@@ -1,9 +1,10 @@
 import * as React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
 import InputField from "@kiwicom/orbit-components/lib/InputField"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Heading from "@kiwicom/orbit-components/lib/Heading"
+import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"
 import { Slider, Rail, Handles, Tracks } from "react-compound-slider"
 
 import Track from "./Track"
@@ -20,13 +21,18 @@ const StyledSlider = styled.div`
   display: flex;
   justify-content: center;
   height: 100px;
-  width: 100%;
+  width: 200%;
+  right: 0;
   background-color: ${({ theme }) => theme.orbit.paletteWhite};
   box-shadow: ${({ theme }) => theme.orbit.boxShadowElevatedLevel1};
   box-sizing: border-box;
   overflow: hidden;
   padding: ${({ theme }) => theme.orbit.spaceLarge};
   border-radius: ${({ theme }) => theme.orbit.borderRadiusNormal};
+
+  ${mq.mediumMobile(css`
+    width: 100%;
+  `)};
 `
 
 StyledSlider.defaultProps = {

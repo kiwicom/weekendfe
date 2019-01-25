@@ -8,6 +8,7 @@ import InputField from "@kiwicom/orbit-components/lib/InputField"
 import ChevronLeft from "@kiwicom/orbit-components/lib/icons/ChevronLeft"
 import ChevronRight from "@kiwicom/orbit-components/lib/icons/ChevronRight"
 import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
+import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"
 import { format } from "date-fns"
 
 const today = new Date()
@@ -52,11 +53,15 @@ const StyledDatePicker = styled.div`
   z-index: 999;
   box-sizing: border-box;
   background: ${({ theme }) => theme.orbit.paletteWhite};
-  max-width: 800px;
   padding: 24px;
   border-radius: ${({ theme }) => theme.orbit.borderRadiusNormal};
   overflow: hidden;
   box-shadow: ${({ theme }) => theme.orbit.boxShadowElevatedLevel1};
+  right: 0;
+
+  ${mq.largeMobile(css`
+    max-width: 400px;
+  `)}
 `
 
 StyledDatePicker.defaultProps = {
@@ -100,7 +105,7 @@ const StyledDay = styled.button`
 const StyledCalendarPart = styled.div`
   display: flex;
   flex-direction: row;
-  width: 50%;
+  width: 100%;
   flex-wrap: wrap;
 `
 const StyledCalendarYear = styled.div`
@@ -139,14 +144,13 @@ const DatePicker = ({
       label={label}
       onFocus={onFocus}
       onBlur={onBlur}
-      // TODO: do date formation
       value={format(currentDate, "MM/DD/YYYY")}
     />
     {shown && (
       <Dayzed
         onDateSelected={onDateSelected}
         selected={currentDate}
-        monthsToDisplay={2}
+        monthsToDisplay={1}
         minDate={minDate}
         render={({
           calendars,

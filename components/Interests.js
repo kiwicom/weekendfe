@@ -1,7 +1,7 @@
 import Cocktail from "@kiwicom/orbit-components/lib/icons/Cocktail"
 import Meal from "@kiwicom/orbit-components/lib/icons/Meal"
-import Sightseeing from "@kiwicom/orbit-components/lib/icons/Sightseeing"
-import GenderWoman from "@kiwicom/orbit-components/lib/icons/GenderWoman"
+import Coffee from "@kiwicom/orbit-components/lib/icons/Coffee"
+import Shopping from "@kiwicom/orbit-components/lib/icons/Shopping"
 import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
 import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"
 import styled, { css } from "styled-components"
@@ -12,20 +12,17 @@ import useUrl from "./useUrl"
 const StyledInterests = styled.div`
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   max-width: 890px;
-  margin-bottom: ${({ theme }) => theme.orbit.spaceXLarge};
+  margin-bottom: ${({ theme }) => theme.orbit.spaceXXXLarge};
 
   > * {
     margin-bottom: ${({ theme }) => theme.orbit.spaceSmall};
+    margin-right: ${({ theme }) => theme.orbit.spaceSmall};
   }
 
-  ${mq.largeMobile(css`
+  ${mq.mediumMobile(css`
     flex-direction: row;
-
-    > * {
-      margin-bottom: 0;
-      margin-right: ${({ theme }) => theme.orbit.spaceSmall};
-    }
   `)}
 `
 
@@ -46,35 +43,31 @@ export default function Interests({ defaultValue }) {
     <StyledInterests>
       <InterestCard
         title="Party life"
-        description="Type something"
-        value="party"
-        checked={interest === "party"}
+        value="drinks"
+        checked={interest === "drinks"}
         onChange={changeRadio}
         icon={<Cocktail />}
       />
       <InterestCard
-        title="Gastronomy"
-        description="Type something"
-        value="gastronomy"
-        checked={interest === "gastronomy"}
+        title="Food"
+        value="food"
+        checked={interest === "food"}
         onChange={changeRadio}
         icon={<Meal />}
       />
       <InterestCard
-        title="Sightseeing"
-        description="Type something"
-        value="sightseeing"
-        checked={interest === "sightseeing"}
+        title="Coffee"
+        value="coffee"
+        checked={interest === "coffee"}
         onChange={changeRadio}
-        icon={<Sightseeing />}
+        icon={<Coffee />}
       />
       <InterestCard
-        title="Hookers"
-        description="Type something"
-        value="hookers"
-        checked={interest === "hookers"}
+        title="Shops"
+        value="shops"
+        checked={interest === "shops"}
         onChange={changeRadio}
-        icon={<GenderWoman />}
+        icon={<Shopping />}
       />
     </StyledInterests>
   )
