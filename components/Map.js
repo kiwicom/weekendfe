@@ -3,11 +3,9 @@ import React, { useEffect, useRef, useState } from "react"
 import ReactDOM from "react-dom"
 import styled, { ThemeProvider } from "styled-components"
 import Text from "@kiwicom/orbit-components/lib/Text"
-import Airplane from "@kiwicom/orbit-components/lib/icons/Airplane"
 import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
 import { getTokens } from "@kiwicom/orbit-components"
 
-import { foundation } from "../pages/_app"
 import RatingStars from "./RatingStars"
 
 mapboxgl.accessToken =
@@ -18,7 +16,7 @@ const MapWrapper = styled.div`
   top: 90px;
   display: block;
   height: calc(100% - 180px);
-  width: 100%;
+  width: 66%;
 `
 
 const StyledMarker = styled.div`
@@ -101,7 +99,7 @@ function Map({ places }) {
           .addTo(mapObject)
         setTimeout(() => {
           ReactDOM.render(
-            <ThemeProvider theme={{ orbit: getTokens(foundation) }}>
+            <ThemeProvider theme={{ orbit: getTokens() }}>
               <StyledMarker>
                 <StyledImage bg={place.img} />
                 <StyledText>

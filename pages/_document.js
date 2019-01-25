@@ -3,6 +3,8 @@ import { ServerStyleSheet } from "styled-components"
 
 import Body from "../components/Body"
 
+const faviconUrl = `${BASE_URL}/static/favicon.ico`
+
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet()
@@ -25,17 +27,16 @@ export default class MyDocument extends Document {
     return (
       <html lang="en-GB">
         <Head>
-          <title>JS Weekend</title>
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
           <link
             rel="shortcut icon"
-            href="/static/favicon.ico"
+            href={faviconUrl}
             type="image/x-icon"
           />
-          <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+          <link rel="icon" href={faviconUrl} type="image/x-icon" />
           <link
             href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700"
             rel="stylesheet"
