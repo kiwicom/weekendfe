@@ -9,10 +9,12 @@ import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Text from "@kiwicom/orbit-components/lib/Text"
 import { CopyToClipboard } from "react-copy-to-clipboard"
 
-const ShareModal = ({ onClose, router }) => {
+const ShareModal = ({ onClose, router, host }) => {
   const [copied, setCopied] = useState(false)
 
-  const path = BASE_URL === "" ? "http://localhost:3000" : BASE_URL
+  const path = window
+    ? window.location.href
+    : `${host}/${router.asPath}`
 
   return (
     <Portal element="modals">
@@ -24,7 +26,7 @@ const ShareModal = ({ onClose, router }) => {
               Just click to copy the URL
             </Text>
             <CopyToClipboard
-              text={`${path}${router.asPath}`}
+              text={path}
               onCopy={() => setCopied(true)}
             >
               <Button type="secondary">
