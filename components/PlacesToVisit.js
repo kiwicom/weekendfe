@@ -37,10 +37,9 @@ const PlaceToVisit = ({
   const [isOpenSlider, setSliderVisibility] = useState(false)
   // Call hook passing in the ref and a function to call on outside click
   useOnClickOutside(ref, () => setSliderVisibility(false))
-
   return (
     <Stack direction="row">
-      <PlacePicker defaultValue={place} onChange={changePlace} />
+      <PlacePicker defaultValue={place.id} onChange={changePlace} />
       <Slider
         openRef={ref}
         isOpen={isOpenSlider}
@@ -116,17 +115,19 @@ const PlacesToVisit = ({
         Places to visit
       </Heading>
       <Stack spaceAfter="medium">
-        {places.map(([place, days], i) => (
-          <>
-            <PlaceToVisit
-              onRemoveClick={i !== 0 && removePlace(i)}
-              place={place}
-              days={days}
-              changeDays={changeDays(i)}
-              changePlace={changePlace(i)}
-            />
-          </>
-        ))}
+        {places.map(([place, days], i) => {
+          return (
+            <>
+              <PlaceToVisit
+                onRemoveClick={i !== 0 && removePlace(i)}
+                place={place}
+                days={days}
+                changeDays={changeDays(i)}
+                changePlace={changePlace(i)}
+              />
+            </>
+          )
+        })}
       </Stack>
       <StyledButtons>
         <Stack direction="row">

@@ -10,6 +10,7 @@ import Downshift from "downshift"
 import useDebounce from "./useDebounce"
 import Query from "./query"
 import locationsQuery from "../queries/locations.gql"
+import getPlaceQuery from "../queries/getPlace.gql"
 
 const StyledPlacePicker = styled.div`
   width: 100%;
@@ -37,6 +38,7 @@ const PlacePicker = ({
   label = "Via"
 }) => {
   const [value, setValue] = useState(defaultValue)
+  const [changed, setChanged] = useState(false)
   const debouncedValue = useDebounce(value, 150)
 
   return (
@@ -47,6 +49,7 @@ const PlacePicker = ({
         onStateChange={({ inputValue }) => {
           if (inputValue) {
             setValue(inputValue)
+            setChanged(true)
           }
         }}
         onChange={onChange}
@@ -62,21 +65,52 @@ const PlacePicker = ({
         }) => (
           /* TODO: use InputWrapper, needs getRootProps */
           <div style={{ position: "relative" }}>
-            <InputField
-              {...getInputProps({
-                // here's the interesting part
-                onFocus: openMenu
-              })}
-              inlineLabel
-              label={label}
-              suffix={
-                <ButtonLink
-                  onClick={clearSelection}
-                  transparent
-                  iconLeft={<Close />}
-                />
-              }
-            />
+            {typeof defaultValue === "string" && !changed ? (
+              <Query
+                query={getPlaceQuery}
+                variables={{
+                  id: value
+                }}
+                context={{
+                  uri: "https://weekend-api.now.sh"
+                }}
+              >
+                {({ data }) => (
+                  <InputField
+                    {...getInputProps({
+                      // here's the interesting part
+                      value: data.place.name,
+                      onFocus: openMenu
+                    })}
+                    inlineLabel
+                    label={label}
+                    suffix={
+                      <ButtonLink
+                        onClick={clearSelection}
+                        transparent
+                        iconLeft={<Close />}
+                      />
+                    }
+                  />
+                )}
+              </Query>
+            ) : (
+              <InputField
+                {...getInputProps({
+                  // here's the interesting part
+                  onFocus: openMenu
+                })}
+                inlineLabel
+                label={label}
+                suffix={
+                  <ButtonLink
+                    onClick={clearSelection}
+                    transparent
+                    iconLeft={<Close />}
+                  />
+                }
+              />
+            )}
             {isOpen ? (
               <Results
                 value={debouncedValue}
