@@ -13,7 +13,7 @@ import Debug from "./debug"
 import useOnClickOutside from "./useOnClickOutside"
 
 const StyledButtons = styled.div`
-  max-width: 640px;
+  max-width: 756px;
 `
 
 const PlaceToVisit = ({
@@ -117,15 +117,15 @@ const PlacesToVisit = ({
       </Heading>
       <Stack spaceAfter="medium">
         {places.map(([place, days], i) => (
-          <>
-            <PlaceToVisit
-              onRemoveClick={i !== 0 && removePlace(i)}
-              place={place}
-              days={days}
-              changeDays={changeDays(i)}
-              changePlace={changePlace(i)}
-            />
-          </>
+          <PlaceToVisit
+            onRemoveClick={i !== 0 ? removePlace(i) : undefined}
+            place={place}
+            days={days}
+            // eslint-disable-next-line
+            key={i}
+            changeDays={changeDays(i)}
+            changePlace={changePlace(i)}
+          />
         ))}
       </Stack>
       <StyledButtons>

@@ -1,10 +1,10 @@
 import * as React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Text from "@kiwicom/orbit-components/lib/Text"
 import Radio from "@kiwicom/orbit-components/lib/Radio"
-import Hide from "@kiwicom/orbit-components/lib/Hide"
 import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
+import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"
 
 const StyledInterestCard = styled.div`
   width: 100%;
@@ -19,6 +19,11 @@ const StyledInterestCard = styled.div`
   transition: box-shadow ${({ theme }) => theme.orbit.durationFast}
       ease-in-out,
     transform ${({ theme }) => theme.orbit.durationFast} ease-in-out;
+
+  ${mq.largeMobile(css`
+    max-width: 180px;
+  `)};
+
   :hover,
   :focus {
     box-shadow: 0 4px 12px 0 rgba(23, 27, 30, 0.1);
@@ -49,22 +54,12 @@ const StyledRadio = styled.div`
     width: auto;
   }
 `
-const InterestCard = ({
-  title,
-  description,
-  icon,
-  checked,
-  value,
-  onChange
-}) => (
+const InterestCard = ({ title, icon, checked, value, onChange }) => (
   <StyledInterestCard onClick={() => onChange({ target: { value } })}>
     <Stack direction="row" justify="between" align="center">
-      <Hide on={["largeMobile"]}>
-        <StyledIcon>{icon}</StyledIcon>
-      </Hide>
+      <StyledIcon>{icon}</StyledIcon>
       <StyledContent>
         <Text weight="bold">{title}</Text>
-        <Text>{description}</Text>
       </StyledContent>
       <StyledRadio>
         <Radio
