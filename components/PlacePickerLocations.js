@@ -64,7 +64,7 @@ const PlacePicker = ({
         }) => (
           /* TODO: use InputWrapper, needs getRootProps */
           <div style={{ position: "relative" }}>
-            {typeof defaultValue === "string" && !changed ? (
+            {typeof defaultValue === "string" && !changed && value ? (
               <Query
                 query={getPlaceQuery}
                 variables={{
@@ -110,7 +110,7 @@ const PlacePicker = ({
                 }
               />
             )}
-            {isOpen ? (
+            {isOpen && debouncedValue ? (
               <Results
                 value={debouncedValue}
                 highlightedIndex={highlightedIndex}
