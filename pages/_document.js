@@ -27,7 +27,6 @@ export default class MyDocument extends Document {
     return (
       <html lang="en-GB">
         <Head>
-          <title>JS Weekend</title>
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
