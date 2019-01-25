@@ -9,7 +9,6 @@ const StyledNavBar = styled.div`
   width: 100%;
   height: 90px;
   background: white;
-  position: fixed;
   justify-content: space-between;
   align-items: center;
   z-index: 10;
