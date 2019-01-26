@@ -37,10 +37,9 @@ const PlaceToVisit = ({
   const [isOpenSlider, setSliderVisibility] = useState(false)
   // Call hook passing in the ref and a function to call on outside click
   useOnClickOutside(ref, () => setSliderVisibility(false))
-
   return (
     <Stack direction="row">
-      <PlacePicker defaultValue={place} onChange={changePlace} />
+      <PlacePicker defaultValue={place && place.id} onChange={changePlace} />
       <Slider
         openRef={ref}
         isOpen={isOpenSlider}

@@ -1,43 +1,114 @@
-import gql from "graphql-tag"
-import Alert from "@kiwicom/orbit-components/lib/Alert"
-import Illustration from "@kiwicom/orbit-components/lib/Illustration"
+import * as React from "react"
+import Heading from "@kiwicom/orbit-components/lib/Heading"
+import styled from "styled-components"
+import { format } from "date-fns"
+import Router from "next/router"
 
-import Query from "../components/query"
-import czechCountryQuery from "../queries/country.gql"
+import ContentContainer from "../components/ContentContainer"
+import Interests from "../components/Interests"
+import PlacesToVisit from "../components/PlacesToVisit"
+import TopPart, { defaultValues } from "../components/TopPart"
 
-export const continentsQuery = gql`
-  query {
-    continents {
-      name
-    }
-  }
+const NomadForm = styled.div`
+  max-width: 816px;
 `
 
-export default () => (
-  <>
-    <Alert type="success">Hello, Welcome to JS WEEKEND!</Alert>
-    <Illustration
-      size="medium"
-      name="Accommodation"
-      dataTest="test"
-      spaceAfter={null}
+const StyledOrigin = styled.div`
+  max-width: 756px;
+`
+
+const placesToUrl = places =>
+  places
+    .map(([place, days]) => [place && place.code, days])
+    .toString()
+    .replace(/,/g, "-")
+
+const changePlacesState = newPlaces => {
+  const newUrl = {
+    pathname: Router.pathname,
+    query: {
+      ...Router.query,
+      stopovers: placesToUrl(newPlaces)
+    }
+  }
+  // eslint-disable-next-line fp/no-mutating-methods
+  Router.push(newUrl, newUrl, { shallow: true })
+}
+
+const getPlaceFromString = val =>
+  typeof val === "string"
+    ? { name: `[${val}]`, code: val, id: val }
+    : val
+
+// Mexico,2,5,Poland,1,3 => [["Mexico", defaultDays]]
+const UrlToPlaces = url => {
+  if (!url) return undefined
+  const items = url.split("-")
+  const result = []
+  // eslint-disable-next-line
+  for (let i = 0; i < items.length; i += 3)
+    // eslint-disable-next-line fp/no-mutating-methods
+    result.push([
+      getPlaceFromString(items[i]),
+      [items[i + 1], items[i + 2]]
+    ])
+  return result
+}
+
+const FlyForm = ({ query, places }) => (
+  <ContentContainer>
+    <Heading type="title1" spaceAfter="largest">
+      What are you interested in?
+    </Heading>
+    <Interests
+      defaultValue={query.interest || defaultValues.interest}
     />
-    <br />
-    {"this time in "}
-    <Query
-      query={czechCountryQuery}
-      variables={{ code: "CZ" }}
-      context={{ uri: "https://countries.trevorblades.com/" }}
-    >
-      {({ data }) => (
-        <b>
-          {data.country.emoji} {data.country.name}
-        </b>
-      )}
-    </Query>
-    <Query
-      query={continentsQuery}
-      context={{ uri: "https://countries.trevorblades.com/" }}
-    />
-  </>
+    <NomadForm>
+      <StyledOrigin>
+        <Heading type="title1" spaceAfter="medium">
+          What destinations do you want to visit?
+        </Heading>
+        <TopPart
+          {...query}
+          adults={query.adults || defaultValues.adults}
+          flyFrom={query.flyFrom}
+          flyTo={query.flyTo}
+        />
+      </StyledOrigin>
+      <PlacesToVisit
+        onChange={changePlacesState}
+        defaultValue={places}
+        onSearchClick={selectedPlaces => {
+          const values = { ...defaultValues, ...Router.query }
+          const newUrl = {
+            pathname: `${BASE_URL}/result`,
+            query: {
+              ...values,
+              dateFrom: format(
+                new Date(values.dateFrom),
+                "DD/MM/YYYY"
+              ),
+              flyFrom:
+                typeof values.flyFrom === "string"
+                  ? values.flyFrom
+                  : values.flyFrom.id,
+              dateTo:
+                values.dateTo &&
+                format(new Date(values.dateTo), "DD/MM/YYYY"),
+              stopovers: placesToUrl(selectedPlaces),
+              places: undefined
+            }
+          }
+          Router.push(newUrl) // eslint-disable-line
+        }}
+      />
+    </NomadForm>
+  </ContentContainer>
 )
+
+FlyForm.getInitialProps = async ({ req, query }) => {
+  const places = UrlToPlaces(query.stopovers) || defaultValues.places
+  return { query, places }
+}
+
+export default FlyForm

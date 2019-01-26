@@ -100,7 +100,7 @@ const Result = ({ query }) => (
                   onClick={() =>
                     // eslint-disable-next-line fp/no-mutating-methods
                     Router.push({
-                      pathname: "/downshift",
+                      pathname: "/",
                       query: Router.query
                     })
                   }

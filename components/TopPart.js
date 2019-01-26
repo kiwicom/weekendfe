@@ -1,32 +1,18 @@
-import { useState, useRef } from "react"
-import Heading from "@kiwicom/orbit-components/lib/Heading"
+import { useRef, useState } from "react"
+import { addDays, format } from "date-fns"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Checkbox from "@kiwicom/orbit-components/lib/Checkbox"
-import styled from "styled-components"
-import { format, addDays } from "date-fns"
-import Router from "next/router"
 
-import ContentContainer from "../components/ContentContainer"
-import PlacePicker from "../components/PlacePickerLocations"
-import DatePicker from "../components/DatePicker"
-import Interests from "../components/Interests"
-import useOnClickOutside from "../components/useOnClickOutside"
-import PlacesToVisit from "../components/PlacesToVisit"
-import Stepper from "../components/Stepper"
-import useUrl from "../components/useUrl"
-
-const NomadForm = styled.div`
-  max-width: 816px;
-`
-
-const StyledOrigin = styled.div`
-  max-width: 756px;
-`
+import useUrl from "./useUrl"
+import Stepper from "./Stepper"
+import PlacePicker from "./PlacePickerLocations"
+import DatePicker from "./DatePicker"
+import useOnClickOutside from "./useOnClickOutside"
 
 const today = new Date()
 const day = 60 * 60 * 24 * 1000
 
-const defaultValues = {
+export const defaultValues = {
   adults: 2,
   interest: "drinks",
   flyFrom: { id: "brno_cz", name: "Brno" },
@@ -36,10 +22,8 @@ const defaultValues = {
 }
 
 const TopPart = ({ flyFrom, flyTo, dateFrom, dateTo, adults }) => {
-  const [tripFrom, setFrom] = useUrl(
-    flyFrom || defaultValues.flyFrom,
-    "flyFrom",
-    item => (item ? item.id : undefined)
+  const [tripFrom, setFrom] = useUrl(flyFrom, "flyFrom", item =>
+    item ? item.id : undefined
   )
   const [tripAdults, setAdults] = useUrl(adults, "adults")
 
@@ -165,98 +149,4 @@ const TopPart = ({ flyFrom, flyTo, dateFrom, dateTo, adults }) => {
   )
 }
 
-const placesToUrl = places =>
-  places
-    .map(([place, days]) => [place && place.code, days])
-    .toString()
-    .replace(/,/g, "-")
-
-const changePlacesState = newPlaces => {
-  const newUrl = {
-    pathname: Router.pathname,
-    query: {
-      ...Router.query,
-      places: placesToUrl(newPlaces)
-    }
-  }
-  // eslint-disable-next-line fp/no-mutating-methods
-  Router.push(newUrl, newUrl, { shallow: true })
-}
-
-const getPlaceFromString = val =>
-  typeof val === "string"
-    ? { name: `[${val}]`, code: val, id: val }
-    : val
-
-// Mexico,2,5,Poland,1,3 => [["Mexico", defaultDays]]
-const UrlToPlaces = url => {
-  if (!url) return undefined
-  const items = url.split("-")
-  const result = []
-  // eslint-disable-next-line
-  for (let i = 0; i < items.length; i += 3)
-    // eslint-disable-next-line fp/no-mutating-methods
-    result.push([
-      getPlaceFromString(items[i]),
-      [items[i + 1], items[i + 2]]
-    ])
-  return result
-}
-
-const FlyForm = ({ query, places }) => (
-  <ContentContainer>
-    <Heading type="title1" spaceAfter="largest">
-      What are you interested in?
-    </Heading>
-    <Interests
-      defaultValue={query.interest || defaultValues.interest}
-    />
-    <NomadForm>
-      <StyledOrigin>
-        <Heading type="title1" spaceAfter="medium">
-          What destinations do you want to visit?
-        </Heading>
-        <TopPart
-          {...query}
-          adults={query.adults || defaultValues.adults}
-          flyFrom={getPlaceFromString(query.flyFrom)}
-          flyTo={getPlaceFromString(query.flyTo)}
-        />
-      </StyledOrigin>
-      <PlacesToVisit
-        onChange={changePlacesState}
-        defaultValue={places}
-        onSearchClick={selectedPlaces => {
-          const values = { ...defaultValues, ...Router.query }
-          const newUrl = {
-            pathname: `${BASE_URL}/result`,
-            query: {
-              ...values,
-              dateFrom: format(
-                new Date(values.dateFrom),
-                "DD/MM/YYYY"
-              ),
-              flyFrom:
-                typeof values.flyFrom === "string"
-                  ? values.flyFrom
-                  : values.flyFrom.id,
-              dateTo:
-                values.dateTo &&
-                format(new Date(values.dateTo), "DD/MM/YYYY"),
-              stopovers: placesToUrl(selectedPlaces),
-              places: undefined
-            }
-          }
-          Router.push(newUrl) // eslint-disable-line
-        }}
-      />
-    </NomadForm>
-  </ContentContainer>
-)
-
-FlyForm.getInitialProps = async ({ req, query }) => {
-  const places = UrlToPlaces(query.places) || defaultValues.places
-  return { query, places }
-}
-
-export default FlyForm
+export default TopPart
