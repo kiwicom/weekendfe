@@ -1,0 +1,1118 @@
+{
+  "item": {
+    "price": 556.51,
+    "route": [
+      {
+        "destination": {
+          "city": "Milan",
+          "country": "IT",
+          "__typename": "RouteRendezvous"
+        },
+        "interests": [
+          {
+            "name": "Sempione Park",
+            "coords": {
+              "lat": 45.474502220952616,
+              "lon": 9.17618313358591,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/11979255_7P5GEznTJALJup7vQh7DZWp-cOqXdXqbCotc6RvaFRc.jpg",
+            "score": 9.5,
+            "address": "Parco Sempione, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Piazza del Duomo",
+            "coords": {
+              "lat": 45.46419037150217,
+              "lon": 9.189527034759521,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/7074523_-pXzPV16TsSj8oU5T3fYG7XmKD9XRl8r4dK3PWAoTPs.jpg",
+            "score": 9.5,
+            "address": "Piazza del Duomo, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Orsonero",
+            "coords": {
+              "lat": 45.477673441693405,
+              "lon": 9.211384070969343,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/137725356__GyquNTt6Plw3n2EMr1ncCiKhgCUA_BYWI_lLIN5Azo.jpg",
+            "score": 9.5,
+            "address": "Via Broggi 15 (Via Morgagni), Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Louis Vuitton",
+            "coords": {
+              "lat": 45.467175725829215,
+              "lon": 9.196642935276031,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/16771917_iNAF5IskRsbwxbFvzhHFZ2JCpAkhYxbVElp3VcqB2HU.jpg",
+            "score": 9.5,
+            "address": "Via Montenapoleone 2, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Galleria Vittorio Emanuele II",
+            "coords": {
+              "lat": 45.46564771412014,
+              "lon": 9.190046931759772,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/36305744_p0QTwZmjLssAH98it6n7zVYcFLMbV2KwZO_ZqlVN4zo.jpg",
+            "score": 9.5,
+            "address": "Piazza Del Duomo, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Antica Osteria il Ronchettino",
+            "coords": {
+              "lat": 45.404269909684686,
+              "lon": 9.174118221895814,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/1222799_pUewJ6gzJdNSj2ya48aINn_gkOXw9BuTVrFTwxkgMzA.jpg",
+            "score": 9.4,
+            "address": "Via Lelio Basso 9, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Villa Necchi Campiglio",
+            "coords": {
+              "lat": 45.46818078439628,
+              "lon": 9.201570364505626,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/1556115_dOkYN9wuBfPimEZrACKc6zn_r3xtTPEGkKjEF33dx1I.jpg",
+            "score": 9.4,
+            "address": "Via Mozart 14, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Apple Piazza Liberty",
+            "coords": {
+              "lat": 45.465427,
+              "lon": 9.193965,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/9340704_FFNCr6JMzT9LBVAPoEcp2kL6NpDK2Xbp-zWc-_58EZk.jpg",
+            "score": 9.4,
+            "address": "Piazza del Liberty, 1, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Piazza Gae Aulenti",
+            "coords": {
+              "lat": 45.48371322128777,
+              "lon": 9.189663867627216,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/11581144_A0Wlc30dGFrkdxdWdJvOocwXb9pCrif5HXJtyGMeB8Y.jpg",
+            "score": 9.4,
+            "address": "Piazza Gae Aulenti, 1, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Ceresio 7 Pools & Restaurant",
+            "coords": {
+              "lat": 45.48402456390375,
+              "lon": 9.179849343941378,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/12443504_Xmj7L-H971x9OBUCv0jPO8U9h0QiuoO1oXIj2g0gNMc.jpg",
+            "score": 9.4,
+            "address": "Via Ceresio, 7, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Sforza Castle",
+            "coords": {
+              "lat": 45.46954541745923,
+              "lon": 9.180423646008808,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/50199218_vbipPcg78QhdGlye2Gnv5rCul6H7VVb4HW9V35w_oB8.jpg",
+            "score": 9.4,
+            "address": "Piazza Castello, 3, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Ostello Bello Grande",
+            "coords": {
+              "lat": 45.484187537488964,
+              "lon": 9.205570918525439,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/28377542_Aj7NdR2fcajLRXXvO5qY9vzBOkLyvxbMom2seCTjU58.jpg",
+            "score": 9.4,
+            "address": "Via Roberto Lepetit 33, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Piz",
+            "coords": {
+              "lat": 45.462163,
+              "lon": 9.185767,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/469541094_fAP1si-S_9jKdKAPzdkzaPpQE9Wc7txuKuOIAJ37x20.jpg",
+            "score": 9.4,
+            "address": "Via Torino 34, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Arco della Pace",
+            "coords": {
+              "lat": 45.47572835143987,
+              "lon": 9.172446727752686,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/N2KD550TZUI1LUSBVA5B1XBITDWECSPZYWFFVK3C4DNJPSUM.jpg",
+            "score": 9.4,
+            "address": "Piazza Sempione, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Hotel Principe di Savoia",
+            "coords": {
+              "lat": 45.4797,
+              "lon": 9.19675,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/1084350_SyNupTNeu-d5rqyFkQB_5AzT3N2a1hNXbL_phs6adDc.jpg",
+            "score": 9.4,
+            "address": "Piazza della Repubblica, 17, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Giardini Indro Montanelli",
+            "coords": {
+              "lat": 45.47356290238914,
+              "lon": 9.201245697521243,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/15339915_-jnktMLiJk0FXDYlijItORADRrfWbop-auKG1t6cZN8.jpg",
+            "score": 9.3,
+            "address": "Corso Porta Venezia (Via Palestro), Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Terrazze del Duomo",
+            "coords": {
+              "lat": 45.46420695931899,
+              "lon": 9.191074802686652,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/33625142_-Y6Md1h9hfhEzza55h6g-csxArGnYqkms4-wkk7STMo.jpg",
+            "score": 9.3,
+            "address": "Piazza del Duomo, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Pirelli HangarBicocca",
+            "coords": {
+              "lat": 45.520988361342766,
+              "lon": 9.219256699208465,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/40464167_qLsdZfpTHOxQhdBAO6v1yScyew6JuktyHfGZJLQ-cCs.jpg",
+            "score": 9.3,
+            "address": "Via Chiese 2, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Dolce&Gabbana",
+            "coords": {
+              "lat": 45.46829127464144,
+              "lon": 9.198761515801888,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/30900653_yxzsVq0HGEdEbGskfsqkNAVBlxJ_hoOKPl2_2xGZNfw.jpg",
+            "score": 9.3,
+            "address": "Corso Venezia, 15, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Park Hyatt Milan",
+            "coords": {
+              "lat": 45.465532315835496,
+              "lon": 9.18891108598589,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/46134135_cvr3JwhK0rWeRM-scPOo36TVkcsc-EIFRxmAI3JAQlA.jpg",
+            "score": 9.3,
+            "address": "Via Tommaso Grossi 1, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Montecristo",
+            "coords": {
+              "lat": 45.47963785991583,
+              "lon": 9.167876337282072,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/369528295_0xsGbPFnq-9BDbrIIAXHscTigXaJBZV8EpZEN_C60FY.jpg",
+            "score": 9.3,
+            "address": "Corso Sempione (Via Giuseppe Prina, 17), Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Artico Gelateria Tradizionale",
+            "coords": {
+              "lat": 45.48917854903405,
+              "lon": 9.186669204848661,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/kGqpDf6b-mA7QZTe3xmrKGX7bMRNyMNjZk-Y_08Zosc.jpg",
+            "score": 9.3,
+            "address": "Via Luigi Porro Lambertenghi, 15, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Parco di CityLife",
+            "coords": {
+              "lat": 45.476115781018784,
+              "lon": 9.156122142405946,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/28816765_n4cSplCqIToyInY09TUUzPCoF0YEg-wkkkznuXJJZ5Y.jpg",
+            "score": 9.3,
+            "address": "Via Demetrio Stratos, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Excelsior Hotel Gallia",
+            "coords": {
+              "lat": 45.4855612,
+              "lon": 9.2013872,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/16999799_r90eRTIr6-ZPVbykFw0DmhAd93h5_KE8-Uwdn82xZYo.jpg",
+            "score": 9.3,
+            "address": "Piazza Duca D'Aosta 9, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Temakinho Brera",
+            "coords": {
+              "lat": 45.4746512477258,
+              "lon": 9.183356059190302,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/33125119_0UUscUBIJmElqkNMHnalYmqwaa16BYfcrcnFpA-mGJE.jpg",
+            "score": 9.3,
+            "address": "Corso Garibaldi, 59, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Ostello Bello",
+            "coords": {
+              "lat": 45.460875254294194,
+              "lon": 9.181144874926735,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/15579121_hypuVHrRAakNJevclrSGuuCFuekPca2uU_zaHpc2sro.jpg",
+            "score": 9.3,
+            "address": "Via Medici 4, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Four Seasons Hotel Milano",
+            "coords": {
+              "lat": 45.46937155285305,
+              "lon": 9.195465506036397,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/15277206_snB_tQlq3ld4dTJOa-_Y0EwS8JqUdWxHuAdKb8fcjXY.jpg",
+            "score": 9.3,
+            "address": "Via Gesù 6/8 (Via della Spiga), Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Pavè",
+            "coords": {
+              "lat": 45.479130985317944,
+              "lon": 9.2027347317893,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/18717176_mcI1VhA9nDNoj-uQLTfoqyJaA0HtKy2f8EmQrwrAS0Q.jpg",
+            "score": 9.3,
+            "address": "Via Felice Casati 27, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "El Porteño",
+            "coords": {
+              "lat": 45.45267108732772,
+              "lon": 9.184384917906723,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/5512788_CbEBTWizK50TDJTkOeYJxegSaiuQ0DLl2XKnGGVYTO0.jpg",
+            "score": 9.3,
+            "address": "Viale Gian Galeazzo 25, Milano",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Palazzo Reale",
+            "coords": {
+              "lat": 45.46295958166468,
+              "lon": 9.191347534052955,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/1298313_FkMkYAyGXkV4G-Oslc38AvFZYKiB3ohPk3lXHSWh8g8.jpg",
+            "score": 9.3,
+            "address": "Piazza del Duomo 12, Milano",
+            "__typename": "Interest"
+          }
+        ],
+        "__typename": "Route"
+      },
+      {
+        "destination": {
+          "city": "Dubai",
+          "country": "AE",
+          "__typename": "RouteRendezvous"
+        },
+        "interests": [
+          {
+            "name": "La Mer",
+            "coords": {
+              "lat": 25.22878006291373,
+              "lon": 55.25779724121094,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/11932582_0OoJX7eyUXyiPN14XN1ZEnxpzr8ENQHGY5xJpufxWso.jpg",
+            "score": 9.6,
+            "address": "Jumeirah Beach Rd (at 39b St), دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "The Dubai Mall",
+            "coords": {
+              "lat": 25.197291523720832,
+              "lon": 55.27946949005127,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/25344207_rsQtSrZcuFSgw67A22b_TSOvas9BCOPLnwmsi-i957Y.jpg",
+            "score": 9.6,
+            "address": "Mohammed bin Rashid Blvd. (بوليفارد محمد بن راشد), دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "The Walk at JBR",
+            "coords": {
+              "lat": 25.076693067433684,
+              "lon": 55.132957157535955,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/HkDLChS9eIi5XVAEEOt8s01aqjYyZ6cRHhu3b8SnWwc.jpg",
+            "score": 9.6,
+            "address": "JBR Rd. (at Al Gharbi St), دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Jumeirah Beach",
+            "coords": {
+              "lat": 25.186612302799922,
+              "lon": 55.22483825683594,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/25951183_VQYUo63y-_YVj6EKs3yBiDuJeZl25xaUIEGjvg0HvOI.jpg",
+            "score": 9.6,
+            "address": "Near Jumeirah Beach Hotel & Burj Al Arab (Umm Al Sheif St), دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Books Kinokuniya",
+            "coords": {
+              "lat": 25.19720738548365,
+              "lon": 55.27731026634251,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/55718820_BYbM513YNPNIfSusnktSGncoQULhSy14tHp82r4ysBY.jpg",
+            "score": 9.6,
+            "address": "The Dubai Mall, دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Al Qasr Hotel",
+            "coords": {
+              "lat": 25.132017162484207,
+              "lon": 55.18430471420288,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/34660423_5Ha9l-6bQEoRt4ErTtI4q8QrFi4pRcvft1x6TgB4WMo.jpg",
+            "score": 9.6,
+            "address": "Madinat Jumeirah, Al Sufouh Road (شارع الصفوح - مدينة جميرا), دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "The Dubai Fountain",
+            "coords": {
+              "lat": 25.1954411729922,
+              "lon": 55.2755856513977,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/409719_jW0nCJmhSXEE3Q_GhHwq1XDrM-7YLmMuoTWQ2ILnuY4.jpg",
+            "score": 9.5,
+            "address": "D 55 (Emaar Blvd), دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Dubai Creek Golf & Yacht Club",
+            "coords": {
+              "lat": 25.24168761994129,
+              "lon": 55.33341407775879,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/10715637_XZBpZi9bVrVZqLiBE8bPN1aHNINQrkNzfM6XbIFEsxM.jpg",
+            "score": 9.5,
+            "address": "Sheikh Rashid Road, دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Dubai Opera",
+            "coords": {
+              "lat": 25.19563145175193,
+              "lon": 55.27170181274414,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/175733983_IWjpOXBnb4NFWRPG1_39-OP1fh9yIOus3rlaFVf7yDY.jpg",
+            "score": 9.5,
+            "address": "Downtown Dubai (Sheikh Mohammed Bin Rashid Blvd), دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "The Palace Downtown Dubai",
+            "coords": {
+              "lat": 25.193560373970183,
+              "lon": 55.275879890623834,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/15268870_HZJCZOadsoYqdlQgYc65fvwPC4mAfyfavtp1bgx7iS4.jpg",
+            "score": 9.5,
+            "address": "Downtown Dubai (Sheikh Mohammed Bin Zayed Blvd), دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Jumeirah Al Naseem",
+            "coords": {
+              "lat": 25.136754295871643,
+              "lon": 55.187088592919075,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/134477598_k6FJleewlCHADGPPETQzfUZvNpSTqoAtsk-snNFGOTg.jpg",
+            "score": 9.5,
+            "address": "Madinat Jumeirah (Jumeirah Rd), دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Madinat Jumeirah",
+            "coords": {
+              "lat": 25.13335757044343,
+              "lon": 55.18657922744751,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/20548971_6EbsJA-jsTcBE6PPej7NwkFxmM3jWa9tKmjx8gTakVw.jpg",
+            "score": 9.5,
+            "address": "Jumeirah Beach Road, Next to Wild Wadi (بعد فندق شاطئ جميرا - شارع جميرا الصفوح), دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Four Seasons Resort",
+            "coords": {
+              "lat": 25.20220429676473,
+              "lon": 55.239778366991786,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/124916789_YKFPmH8nCNK827r5-eCm3unh-0MzWVd8R5GTFlFkBLU.jpg",
+            "score": 9.5,
+            "address": "Jumeirah Beach Rd, دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Level Shoe District",
+            "coords": {
+              "lat": 25.196075785983904,
+              "lon": 55.27909855093776,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/21244477_vBlW3PIEYA6Y186JzluOUekf5jsz3sxCgoRCa8RyzM8.jpg",
+            "score": 9.5,
+            "address": "Dubai Mall, دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "City Walk",
+            "coords": {
+              "lat": 25.210268373786914,
+              "lon": 55.25997463387112,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/3185260_p6jyEeNPHg8HvIICqPqGrZMovTlT6KpUGel3NUifTJg.jpg",
+            "score": 9.5,
+            "address": "Al Wasl Rd (Al Safa St), دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Dubai Marina Walk",
+            "coords": {
+              "lat": 25.077212974487157,
+              "lon": 55.139533281326294,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/34076439_pk5UGZAAUll4Iocqm9_y7odQ0KST77Zgx4M5s6HC2-g.jpg",
+            "score": 9.5,
+            "address": "Dubai Marina, دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Burj Khalifa",
+            "coords": {
+              "lat": 25.197233275964653,
+              "lon": 55.27414798736572,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/31018526_pyfw58-4OtW28USWM7GoH0CP3nCILLmjvkJTKgsiprI.jpg",
+            "score": 9.5,
+            "address": "1 Mohammed bin Rashid Blvd (at Doha St), دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Zuma",
+            "coords": {
+              "lat": 25.213923483319164,
+              "lon": 55.28339907463437,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/43093100_BP4PVdFnRPKXC18OeGtRl1uZh62fI6iseeLvXutd0MA.jpg",
+            "score": 9.5,
+            "address": "Gate Village 06, DIFC, دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Address Dubai Mall",
+            "coords": {
+              "lat": 25.199543748925933,
+              "lon": 55.27764558792114,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/GVI2KAC3AYXLOQTPQE01JCHCKJZ5DXMNLRGUSK3QAGQUTVFQ.jpg",
+            "score": 9.5,
+            "address": "The Dubai Mall (Emaar Blvd.), دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Reel Cinemas",
+            "coords": {
+              "lat": 25.196242678461832,
+              "lon": 55.280624511129986,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/46297682_EJ0EUCw-LjgUeLU9gpiHjw8U7d4u6U2V3eXELH5X7Eo.jpg",
+            "score": 9.5,
+            "address": "The Dubai Mall, دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Address Downtown",
+            "coords": {
+              "lat": 25.194305897732292,
+              "lon": 55.27906993092919,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/845525_oBhvvx1a7cCfQOpkho2yvrBzxHTKFo1tWym3cOwFJwE.jpg",
+            "score": 9.4,
+            "address": "Emaar Blvd, دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Jumeirah Zabeel Saray",
+            "coords": {
+              "lat": 25.098681258588627,
+              "lon": 55.12363538421659,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/44020647_3i2qrT2NYSjp7YPoqXihy_Gofip0EXDjpgrQROp7E1E.jpg",
+            "score": 9.4,
+            "address": "The Palm Jumeirah (West Crescent Road), دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Mall of the Emirates",
+            "coords": {
+              "lat": 25.11830903907959,
+              "lon": 55.200551610739055,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/22257549_1z94vyfsfLJEE-YkD3oy4L94MjObS61qbX1lQkSBrIs.jpg",
+            "score": 9.4,
+            "address": "Sheikh Zayed Rd. (at Umm Suqeim St.), دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "La Petite Maison",
+            "coords": {
+              "lat": 25.213174600485242,
+              "lon": 55.28247389929357,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/3aHbVoI6ggdE4ZkNJh1AwGBVjnn_qvIvFQ-CEvsRhQE.jpg",
+            "score": 9.4,
+            "address": "Gate Village 08 (DIFC), دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "PF Chang's",
+            "coords": {
+              "lat": 25.195335329012185,
+              "lon": 55.2782818558436,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/81sj5Aw_tesyZtgLyoT9gECgN40skO5xs7RN-gGKgRw.jpg",
+            "score": 9.4,
+            "address": "The Dubai Mall (at Doha St.), دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Aquaventure Waterpark",
+            "coords": {
+              "lat": 25.132133720282052,
+              "lon": 55.11890709400177,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/22388142_JTXq6K2HViPLQU9FUyrqFTrh0QaxKlH3wLnmcO-zZ1Q.jpg",
+            "score": 9.4,
+            "address": "Atlantis The Palm (Crescent Road, Palm Island), دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Jetty Lounge",
+            "coords": {
+              "lat": 25.09712394099629,
+              "lon": 55.150314910884724,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/7MKAKy52mNAYTlu4yt1y2eTiLXR0M7yMra7yDLgIKoI.jpg",
+            "score": 9.4,
+            "address": "One & Only Royal Mirage (Al Sufouh Road), دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Rove Downtown Dubai",
+            "coords": {
+              "lat": 25.20303029856088,
+              "lon": 55.27938439922631,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/512731256_JClSZjCtP3DwQvbGgA1hFTNPjf2t2Ou-lkNMsXY-fDo.jpg",
+            "score": 9.4,
+            "address": "Financial Centre Road, دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Address Boulevard Lobby Lounge",
+            "coords": {
+              "lat": 25.2014011793038,
+              "lon": 55.276044011571685,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/80511401_XZ-Eyki2kwMzJkwFEDyRznbLEchvUnQNdtRHCEUnGEg.jpg",
+            "score": 9.4,
+            "address": "دبي",
+            "__typename": "Interest"
+          },
+          {
+            "name": "VOX Rooftop Cinema",
+            "coords": {
+              "lat": 25.20735654558348,
+              "lon": 55.25454485942061,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/146083391_Yn00gI1xguMKWL8_KUkvCANgCeUuPn9PssavwQBaVPo.jpg",
+            "score": 9.4,
+            "address": "Galleria Mall",
+            "__typename": "Interest"
+          }
+        ],
+        "__typename": "Route"
+      },
+      {
+        "destination": {
+          "city": "Brno",
+          "country": "CZ",
+          "__typename": "RouteRendezvous"
+        },
+        "interests": [
+          {
+            "name": "Infinit Maximus",
+            "coords": {
+              "lat": 49.24327441333917,
+              "lon": 16.515805580920787,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/25174454_6glLmxeFYHPpmGk-aNOmCLjoVqCVAQcRVJWzeHvPOJw.jpg",
+            "score": 9.5,
+            "address": "Hrázní 327/4a, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Park Lužánky",
+            "coords": {
+              "lat": 49.206635459496205,
+              "lon": 16.60862445831299,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/31507362_cJsKzCm5IdDkdfY3EEQ2TKN2jPkab0pELFihGh3OCT0.jpg",
+            "score": 9.5,
+            "address": "Lidická (Pionýrská), Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Městský park Špilberk",
+            "coords": {
+              "lat": 49.194156971840606,
+              "lon": 16.601672172546387,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/1532039_yg6K8n52LcsHRuENHkwvg2XGtjggSYM8Kr88eA29Yoo.jpg",
+            "score": 9.5,
+            "address": "Špilberk (Pellicova), Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Koishi",
+            "coords": {
+              "lat": 49.196809125892386,
+              "lon": 16.60137242593802,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/3400624__7m18RbnnRjZEaeR00cYqIskoopMa24GahR7lD1U3kk.jpg",
+            "score": 9.5,
+            "address": "Údolní 326/11, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Bar, který neexistuje",
+            "coords": {
+              "lat": 49.19577404527292,
+              "lon": 16.609799261089755,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/20863771_oORo_xUbHDMYEPIAkYPWSts2VlI0ELH0TIbVcNo9PIQ.jpg",
+            "score": 9.5,
+            "address": "Dvořákova 1 (Kozí), Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Hvězdárna a planetárium Brno",
+            "coords": {
+              "lat": 49.2045378125952,
+              "lon": 16.583704530073586,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/37537139_oRU6fjwXDSRW_s-C88C0RUNFK20EQWb7FfsEi_hVhBE.jpg",
+            "score": 9.4,
+            "address": "Kravi Hora 2, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Zelný trh",
+            "coords": {
+              "lat": 49.192567932497056,
+              "lon": 16.60907055689292,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/29269160_8Nmpe6HmRtwipuChkMjSGZucaIz-fEmaSe_wSpp_pWg.jpg",
+            "score": 9.4,
+            "address": "Zelný trh, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Hostinec U Bláhovky",
+            "coords": {
+              "lat": 49.19911731321189,
+              "lon": 16.592305437394632,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/bOpL97fGGfcy1uqnOfUmCD1ZlwD3rPvtvNn2P2ye66I.jpg",
+            "score": 9.4,
+            "address": "Gorkého 96/54, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Kofi-Kofi",
+            "coords": {
+              "lat": 49.19758078194979,
+              "lon": 16.605183282497368,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/1484930_0FAwKnEyIuVWRYOp_6V4c_-XlnmQYj-TOSkwb_OL7jo.jpg",
+            "score": 9.4,
+            "address": "Česká (Joštova), Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Būcheck",
+            "coords": {
+              "lat": 49.01056080353683,
+              "lon": 16.960515991218394,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/53541041_jBeeObu72jTIpmSAOhJY749pcw-iYaIHKOhLQaHK60o.jpg",
+            "score": 9.3,
+            "address": "Zelný trh, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Burger Inn",
+            "coords": {
+              "lat": 49.19628720164818,
+              "lon": 16.60892618132526,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/140167893_4UgDHWye6DJJdmBsO65sZ3bK5HlO7r07WaQhDXbqz0c.jpg",
+            "score": 9.3,
+            "address": "Běhounská 9, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Infinit Wellness & Fitness",
+            "coords": {
+              "lat": 49.23521271078288,
+              "lon": 16.62437028315808,
+              "__typename": "Coords"
+            },
+            "img": null,
+            "score": 9.3,
+            "address": "Majdalenky 10, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "U Alberta",
+            "coords": {
+              "lat": 49.19266086516919,
+              "lon": 16.600908290245158,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/202927_Urr0AQZrbGwOwkbewHldFHx7VGRJnd2rTC9PmgM5vVQ.jpg",
+            "score": 9.3,
+            "address": "Pellicova 10, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "SKØG Urban Hub",
+            "coords": {
+              "lat": 49.19379,
+              "lon": 16.607193,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/14841030_1yRbbgjQpmsi3yoLC7QLYirtjE46z-UDcpytUB0kbrg.jpg",
+            "score": 9.3,
+            "address": "Dominikánské náměstí 5, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Vila Tugendhat",
+            "coords": {
+              "lat": 49.20735260727428,
+              "lon": 16.616063413750954,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/50603671_UkMaSTqRISFV21ReqluPk0SPRdxFcKniJ6UgBcQkMdY.jpg",
+            "score": 9.2,
+            "address": "Černopolní 45, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Kraví hora",
+            "coords": {
+              "lat": 49.203380950896396,
+              "lon": 16.58399049770207,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/6062678_iGKYcdmPNrW6C6EAwgggQNDLh6njoZWGX5LhY3CA-Kc.jpg",
+            "score": 9.2,
+            "address": "Kraví hora (nám. Míru), Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Cukrářství Martinák",
+            "coords": {
+              "lat": 49.1995381113522,
+              "lon": 16.602278638597216,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/25528528_GFwUrb6N4qixKqT86-AnwS0PTN6Ed2JJR1Cb6utTD28.jpg",
+            "score": 9.2,
+            "address": "Veveří 14, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Božský kopeček",
+            "coords": {
+              "lat": 49.192310908615354,
+              "lon": 16.608639669021812,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/6107060_Ony-2rTJd3dx4CRl5HeyJx_QEkK_zyJWO33aJh7pu4M.jpg",
+            "score": 9.2,
+            "address": "Zelný trh, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "V Melounovém cukru",
+            "coords": {
+              "lat": 49.19288028298338,
+              "lon": 16.61186283333189,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/4537814_i73FB0ev0IGLM9mtMBVTKre3qYq9skRYV8p8xlS6BpU.jpg",
+            "score": 9.2,
+            "address": "Františkánská 17 (Josefská), Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "4pokoje",
+            "coords": {
+              "lat": 49.19582078543175,
+              "lon": 16.611686978896397,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/62799470_fTstkD5-QmKdomjPVhde_sGcd5OseYzmc-LCE7i8C3U.jpg",
+            "score": 9.2,
+            "address": "Vachova 6, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Výčep Na stojáka",
+            "coords": {
+              "lat": 49.196791,
+              "lon": 16.60928,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/89484_kAl7OHhsY32PKNt4dz15xBvGDCoyrFTA0hGGvimgW-0.jpg",
+            "score": 9.2,
+            "address": "Běhounská 16 (Jakubské nám.), Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Industra",
+            "coords": {
+              "lat": 49.18246788109299,
+              "lon": 16.626775717286584,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/15654760_7s643HF4hmEBVTG8F977WABzDA4MS5Jjld6pTxVcR5I.jpg",
+            "score": 9.2,
+            "address": "Masná 9, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Vietnamské bagety",
+            "coords": {
+              "lat": 49.192177674426034,
+              "lon": 16.603085384452964,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/202927_q1KDCklH0yQ1RcKR8Sc8OCvgJAhvzDGx4VIZSJX1EyA.jpg",
+            "score": 9.2,
+            "address": "Pekařská 388/19, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Koupaliště Kraví hora",
+            "coords": {
+              "lat": 49.20181465783117,
+              "lon": 16.58533913313788,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/MGSFP1UCZXNEFQ5QLNXRY52BGAH3NGY43VJZQNFM5JVO0JLU.jpg",
+            "score": 9.2,
+            "address": "Údolní 532/76, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Gỗ",
+            "coords": {
+              "lat": 49.19586233529007,
+              "lon": 16.608952719593354,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/9187478_dcX0L8SWHKqcZ81L5914ed9R_NwzJaoGZ8LP9GgaYj0.jpg",
+            "score": 9.2,
+            "address": "Běhounská 115/4, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Čajovna za zrcadlem",
+            "coords": {
+              "lat": 49.198823324441406,
+              "lon": 16.600696848753607,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/454323328_EagmqFL6q7mfHRf8qyFjmfK5_Vr8pGyKj0z09087SJI.jpg",
+            "score": 9.2,
+            "address": "Jaselská 16, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "La Speranza",
+            "coords": {
+              "lat": 49.202716992669174,
+              "lon": 16.607417464256287,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/123538793_TWFddg5H5pWsTNxYCExzmAQFKrKdOqwdpEMQ6uHkbIE.jpg",
+            "score": 9.2,
+            "address": "Lidická 32, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Barceló Brno Palace",
+            "coords": {
+              "lat": 49.19204806530283,
+              "lon": 16.605616585239844,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/64584964_SA3ArMWmYnrGTiHm_A3npmFQ5iP8GLSelTVPmiB-Lnw.jpg",
+            "score": 9.1,
+            "address": "Šilingrovo náměstí 2, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Brněnská přehrada",
+            "coords": {
+              "lat": 49.23006136846415,
+              "lon": 16.515591798632943,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/42468851_iS_VOA1nbWqCvFTgLhnBHfnF3g5DIMZflGZs4ZqUy3c.jpg",
+            "score": 9.1,
+            "address": "Hrázní, Brno",
+            "__typename": "Interest"
+          },
+          {
+            "name": "Otevřená zahrada",
+            "coords": {
+              "lat": 49.19709979578448,
+              "lon": 16.598415665317145,
+              "__typename": "Coords"
+            },
+            "img": "https://fastly.4sqi.net/img/general/300x300/825965_tUc1DY-IgCEhdY5NWHL5FpOUlk9FouLEOVvOy-uOct0.jpg",
+            "score": 9.1,
+            "address": "Údolní 567/33, Brno",
+            "__typename": "Interest"
+          }
+        ],
+        "__typename": "Route"
+      }
+    ],
+    "__typename": "Item"
+  }
+}

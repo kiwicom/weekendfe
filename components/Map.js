@@ -72,68 +72,7 @@ const StyledText = styled.div`
 `
 
 function Map({ places }) {
-  const mapRef = useRef(null)
-  const [mapObject, setMapObject] = useState()
-
-  useEffect(() => {
-    setMapObject(
-      new mapboxgl.Map({
-        container: mapRef.current,
-        style: "mapbox://styles/mapbox/streets-v9"
-      })
-    )
-  }, [])
-
-  useEffect(
-    () => {
-      if (!mapObject) {
-        return null
-      }
-
-      const markers = places.map(place => {
-        const el = document.createElement("div") // eslint-disable-line
-        el.className = "marker"
-        const marker = new mapboxgl.Marker(el)
-        marker
-          .setLngLat([place.coords.lon, place.coords.lat])
-          .addTo(mapObject)
-        setTimeout(() => {
-          ReactDOM.render(
-            <ThemeProvider theme={{ orbit: getTokens() }}>
-              <StyledMarker>
-                <StyledImage bg={place.img} />
-                <StyledText>
-                  <Text type="white">{place.name}</Text>
-                  <RatingStars rating={place.score} />
-                </StyledText>
-              </StyledMarker>
-            </ThemeProvider>,
-            el
-          )
-        })
-        return marker
-      })
-
-      const bounds = new mapboxgl.LngLatBounds()
-
-      places.forEach(place => {
-        bounds.extend([place.coords.lon, place.coords.lat])
-      })
-
-      mapObject.fitBounds(bounds, {
-        padding: { top: 100, bottom: 100, left: 100, right: 100 }
-      })
-
-      return () => {
-        markers.forEach(marker => {
-          marker.remove()
-        })
-      }
-    },
-    [JSON.stringify(places), mapObject]
-  )
-
-  return <MapWrapper ref={mapRef} />
+  return <div>here will be a map</div>
 }
 
 export default Map
