@@ -1,0 +1,16 @@
+{
+  "env": {
+    "mocha": true
+  },
+  "globals": {
+    "cy": false
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ]
+  }
+}
