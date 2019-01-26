@@ -50,6 +50,8 @@ const getStopovers = placesInUrl => {
   return result
 }
 
+const formatDate = date => format(date, "DD/MM/YYYY")
+
 const getParamsFromQuery = ({
   adults = 1,
   dateFrom,
@@ -60,9 +62,12 @@ const getParamsFromQuery = ({
 }) => ({
   params: {
     adults: Number(adults),
-    dateFrom:
-      dateFrom || format(addDays(new Date(), 1), "DD/MM/YYYY"),
-    dateTo: dateTo || format(addDays(new Date(), 30), "DD/MM/YYYY"),
+    dateFrom: formatDate(
+      dateFrom ? new Date(dateFrom) : addDays(new Date(), 1)
+    ),
+    dateTo: formatDate(
+      dateTo ? new Date(dateTo) : addDays(new Date(), 30)
+    ),
     flyFrom,
     flyTo: flyTo || flyFrom,
     stopovers: getStopovers(stopovers) || [

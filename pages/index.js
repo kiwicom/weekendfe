@@ -84,17 +84,12 @@ const FlyForm = ({ query, places }) => (
             pathname: `${BASE_URL}/result`,
             query: {
               ...values,
-              dateFrom: format(
-                new Date(values.dateFrom),
-                "DD/MM/YYYY"
-              ),
+              dateFrom: format(values.dateFrom, "YYYY-MM-DD"),
+              dateTo: format(values.dateTo, "YYYY-MM-DD"),
               flyFrom:
                 typeof values.flyFrom === "string"
                   ? values.flyFrom
                   : values.flyFrom.id,
-              dateTo:
-                values.dateTo &&
-                format(new Date(values.dateTo), "DD/MM/YYYY"),
               stopovers: placesToUrl(selectedPlaces),
               places: undefined
             }
