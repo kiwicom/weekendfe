@@ -71,7 +71,7 @@ const FlyForm = ({ query, places }) => (
         <TopPart
           {...query}
           adults={query.adults || defaultValues.adults}
-          flyFrom={query.flyFrom}
+          flyFrom={query.flyFrom || defaultValues.flyFrom}
           flyTo={query.flyTo}
         />
       </StyledOrigin>
