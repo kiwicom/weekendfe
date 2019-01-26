@@ -68994,7 +68994,6 @@ function (_App) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Component, _extends({}, pageProps, {
-        client: apolloClient,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 35
