@@ -22,7 +22,7 @@ const nextConfig = {
       reportFilename: "../bundles/client.html"
     }
   },
-  assetPrefix: debug ? "" : `/${repoName}/`,
+  // assetPrefix: debug ? "" : `/${repoName}/`,
   webpack(config) {
     config.plugins = [
       ...(config.plugins || []),
