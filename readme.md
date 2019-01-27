@@ -8,6 +8,10 @@
 
 ## TODO
 
+- [ ] key problem with stopovers
+- [ ] bind history to url
+- [ ] fix CI together with gh-pages
+
 ## Used nextjs samples
 
 - with styled-components
