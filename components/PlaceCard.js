@@ -1,14 +1,9 @@
 import * as React from "react"
 import styled from "styled-components"
-import Checkbox, {
-  Label
-} from "@kiwicom/orbit-components/lib/Checkbox"
+import { Label } from "@kiwicom/orbit-components/lib/Checkbox"
 import Text from "@kiwicom/orbit-components/lib/Text"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
-import ButtonLink, {
-  StyledButtonLink
-} from "@kiwicom/orbit-components/lib/ButtonLink"
-import ChevronRight from "@kiwicom/orbit-components/lib/icons/ChevronRight"
+import { StyledButtonLink } from "@kiwicom/orbit-components/lib/ButtonLink"
 import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
 
 const StyledPlaces = styled.div`
@@ -53,7 +48,7 @@ StyledPlaceCard.defaultProps = {
 
 const PlaceCard = ({ places }) => (
   <Stack direction="column">
-    {places.map((place, i) => (
+    {places.map(place => (
       <StyledPlaceCard key={place.name + place.address}>
         {/* <Checkbox checked /> */}
         <Stack spacing="extraTight">

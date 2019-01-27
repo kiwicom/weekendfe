@@ -39,7 +39,10 @@ const PlaceToVisit = ({
   useOnClickOutside(ref, () => setSliderVisibility(false))
   return (
     <Stack direction="row">
-      <PlacePicker defaultValue={place && place.id} onChange={changePlace} />
+      <PlacePicker
+        defaultValue={place && place.id}
+        onChange={changePlace}
+      />
       <Slider
         openRef={ref}
         isOpen={isOpenSlider}

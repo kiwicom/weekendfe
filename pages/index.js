@@ -101,7 +101,7 @@ const FlyForm = ({ query, places }) => (
   </ContentContainer>
 )
 
-FlyForm.getInitialProps = async ({ req, query }) => {
+FlyForm.getInitialProps = async ({ query }) => {
   const places = UrlToPlaces(query.stopovers) || defaultValues.places
   return { query, places }
 }

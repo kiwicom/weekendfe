@@ -13,7 +13,9 @@ StyledWizard.defaultProps = {
 }
 
 const Wizard = ({ active }) => (
-  <StyledWizard>this is the wizard</StyledWizard>
+  <StyledWizard>
+    this is {active ? "active" : ""}the wizard
+  </StyledWizard>
 )
 
 export default Wizard
