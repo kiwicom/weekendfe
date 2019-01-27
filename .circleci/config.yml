@@ -40,5 +40,5 @@ jobs:
 
       - run: yarn build
       - run: yarn export
-      - run: serve out -p:3000
+      - run: yarn serve out -p 3000
       - run: yarn cypress:run
