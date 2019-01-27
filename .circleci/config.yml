@@ -22,18 +22,18 @@ jobs:
       - checkout
 
       # Download and cache dependencies
-      # - restore_cache:
-      #     keys:
-      #       - v1-dependencies-{{ checksum "yarn.lock" }}
-      #       # fallback to using the latest cache if no exact match is found
-      #       - v1-dependencies-
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "yarn.lock" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
 
       - run: yarn install
 
       - save_cache:
           paths:
             - node_modules
-            - /home/circleci/.cache/Cypress
+            - ~/.cache ## cache both yarn and Cypress!
           key: v1-dependencies-{{ checksum "yarn.lock" }}
 
       # run tests!
@@ -41,5 +41,4 @@ jobs:
 
       - run: yarn build
       - run: yarn export
-      - run: yarn add cypress
       - run: yarn serve out -p 3000 & yarn cypress:run
