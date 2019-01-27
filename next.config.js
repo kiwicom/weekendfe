@@ -27,7 +27,7 @@ const nextConfig = {
     config.plugins = [
       ...(config.plugins || []),
       new webpack.DefinePlugin({
-        BASE_URL: debug ? "''" : `'/${repoName}/'`
+        BASE_URL: debug ? "''" : "''" //`'/${repoName}/'`
       })
     ]
 

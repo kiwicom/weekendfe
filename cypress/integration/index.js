@@ -11,6 +11,7 @@ describe("JSWeekend", () => {
     // Set from/where to Brno
     cy.get("input[type=text]")
       .eq(0) // placepicker
+      .clear()
       .type("brno", { delay: 100 })
       .wait(3000)
       .type("{downarrow}{downarrow}")
