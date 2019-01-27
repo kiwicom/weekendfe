@@ -1195,7 +1195,7 @@ var PlaceToVisit = function PlaceToVisit(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 46
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -1203,7 +1203,7 @@ var PlaceToVisit = function PlaceToVisit(_ref) {
     iconLeft: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_CloseCircle__WEBPACK_IMPORTED_MODULE_4___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 55
       },
       __self: this
     }),
@@ -1211,7 +1211,7 @@ var PlaceToVisit = function PlaceToVisit(_ref) {
     onClick: onRemoveClick,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 53
     },
     __self: this
   }));
@@ -1323,14 +1323,14 @@ var PlacesToVisit = function PlacesToVisit(_ref3) {
     spaceAfter: "medium",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114
+      lineNumber: 117
     },
     __self: this
   }, "Places to visit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default.a, {
     spaceAfter: "medium",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 120
     },
     __self: this
   }, places.map(function (_ref4, i) {
@@ -1348,21 +1348,21 @@ var PlacesToVisit = function PlacesToVisit(_ref3) {
       changePlace: changePlace(i),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 119
+        lineNumber: 122
       },
       __self: this
     });
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledButtons, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 133
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default.a, {
     direction: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 134
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -1370,7 +1370,7 @@ var PlacesToVisit = function PlacesToVisit(_ref3) {
     iconLeft: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_Plus__WEBPACK_IMPORTED_MODULE_5___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 134
+        lineNumber: 137
       },
       __self: this
     }),
@@ -1381,14 +1381,14 @@ var PlacesToVisit = function PlacesToVisit(_ref3) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 135
     },
     __self: this
   }, "Add destination"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_3___default.a, {
     iconLeft: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_icons_Search__WEBPACK_IMPORTED_MODULE_6___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 142
+        lineNumber: 145
       },
       __self: this
     }),
@@ -1399,19 +1399,19 @@ var PlacesToVisit = function PlacesToVisit(_ref3) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 144
     },
     __self: this
   }, "Search"))), showDebug && [react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 155
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_debug__WEBPACK_IMPORTED_MODULE_10__["default"], _extends({}, places, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 155
     },
     __self: this
   }))]);
@@ -65885,12 +65885,12 @@ function () {
   var _ref5 = _asyncToGenerator(
   /*#__PURE__*/
   _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref4) {
-    var req, query, places;
+    var query, places;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            req = _ref4.req, query = _ref4.query;
+            query = _ref4.query;
             places = UrlToPlaces(query.stopovers) || _components_TopPart__WEBPACK_IMPORTED_MODULE_9__["defaultValues"].places;
             return _context.abrupt("return", {
               query: query,
