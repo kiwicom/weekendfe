@@ -590,9 +590,9 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0":
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.2.0.tgz#b03e42eeddf5898e00646e4c840fa07ba8dcad7f"
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.3.1":
+  version "7.3.1"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.3.1.tgz#574b03e8e8a9898eaf4a872a92ea20b7846f6f2a"
   dependencies:
     regenerator-runtime "^0.12.0"
 
@@ -4320,11 +4320,11 @@ react-apollo@^2.3.3:
     lodash.isequal "^4.5.0"
     prop-types "^15.6.0"
 
-react-compound-slider@^0.18.1:
-  version "0.18.1"
-  resolved "https://registry.yarnpkg.com/react-compound-slider/-/react-compound-slider-0.18.1.tgz#4ef7ceb74dcafb5836c7bc449f3568b5c3927298"
+react-compound-slider@^0.20.1:
+  version "0.20.1"
+  resolved "https://registry.yarnpkg.com/react-compound-slider/-/react-compound-slider-0.20.1.tgz#39b30d7a2977d30dc39f65923965c3e8094eb103"
   dependencies:
-    "@babel/runtime" "^7.2.0"
+    "@babel/runtime" "^7.3.1"
     d3-array "^1.2.4"
     prop-types "^15.6.2"
     warning "^3.0.0"
