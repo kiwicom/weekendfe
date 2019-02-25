@@ -28,7 +28,7 @@
     "isomorphic-unfetch": "^3.0.0",
     "mapbox-gl": "^0.52.0",
     "match-sorter": "^2.3.0",
-    "next": "^7.0.2",
+    "next": "^8.0.3",
     "react": "^16.8.0-alpha.0",
     "react-apollo": "^2.3.3",
     "react-compound-slider": "^0.18.1",
