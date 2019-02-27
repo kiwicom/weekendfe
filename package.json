@@ -22,7 +22,7 @@
     "apollo-boost": "^0.1.23",
     "date-fns": "^1.30.1",
     "dayzed": "^2.2.0",
-    "downshift": "^3.1.12",
+    "downshift": "^3.2.6",
     "graphql": "^14.0.2",
     "graphql-tag": "^2.10.0",
     "isomorphic-unfetch": "^3.0.0",
