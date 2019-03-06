@@ -29,7 +29,7 @@
     "mapbox-gl": "^0.52.0",
     "match-sorter": "^2.3.0",
     "next": "^7.0.2",
-    "react": "^16.8.0-alpha.0",
+    "react": "^16.8.4",
     "react-apollo": "^2.3.3",
     "react-compound-slider": "^0.18.1",
     "react-copy-to-clipboard": "^5.0.1",
