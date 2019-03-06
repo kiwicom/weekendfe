@@ -1023,11 +1023,19 @@ apollo-link@^1.0.0, apollo-link@^1.0.6, apollo-link@^1.2.6:
     apollo-utilities "^1.0.0"
     zen-observable-ts "^0.8.13"
 
-apollo-utilities@1.0.27, apollo-utilities@^1.0.0, apollo-utilities@^1.0.27, apollo-utilities@^1.0.8:
+apollo-utilities@1.0.27:
   version "1.0.27"
   resolved "https://registry.yarnpkg.com/apollo-utilities/-/apollo-utilities-1.0.27.tgz#77c550f9086552376eca3a48e234a1466b5b057e"
   dependencies:
     fast-json-stable-stringify "^2.0.0"
+
+apollo-utilities@^1.0.0, apollo-utilities@^1.0.27, apollo-utilities@^1.0.8, apollo-utilities@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/apollo-utilities/-/apollo-utilities-1.2.1.tgz#1c3a1ebf5607d7c8efe7636daaf58e7463b41b3c"
+  dependencies:
+    fast-json-stable-stringify "^2.0.0"
+    ts-invariant "^0.2.1"
+    tslib "^1.9.3"
 
 aproba@^1.0.3, aproba@^1.1.1:
   version "1.2.0"
@@ -1713,7 +1721,7 @@ core-js@^1.0.0:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
 
-core-js@^2.4.0, core-js@^2.4.1, core-js@^2.5.7:
+core-js@^2.4.0, core-js@^2.5.7:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.1.tgz#87416ae817de957a3f249b3b5ca475d4aaed6042"
 
@@ -2424,28 +2432,11 @@ fast-levenshtein@~2.0.4:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
 
-fbjs-css-vars@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/fbjs-css-vars/-/fbjs-css-vars-1.0.2.tgz#216551136ae02fe255932c3ec8775f18e2c078b8"
-
 fbjs@^0.8.5:
   version "0.8.17"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   dependencies:
     core-js "^1.0.0"
-    isomorphic-fetch "^2.1.1"
-    loose-envify "^1.0.0"
-    object-assign "^4.1.0"
-    promise "^7.1.1"
-    setimmediate "^1.0.5"
-    ua-parser-js "^0.7.18"
-
-fbjs@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-1.0.0.tgz#52c215e0883a3c86af2a7a776ed51525ae8e0a5a"
-  dependencies:
-    core-js "^2.4.1"
-    fbjs-css-vars "^1.0.0"
     isomorphic-fetch "^2.1.1"
     loose-envify "^1.0.0"
     object-assign "^4.1.0"
@@ -3298,10 +3289,6 @@ locate-path@^3.0.0:
 lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
-
-lodash.flowright@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/lodash.flowright/-/lodash.flowright-3.5.0.tgz#2b5fff399716d7e7dc5724fe9349f67065184d67"
 
 lodash.get@^4.3.0, lodash.get@^4.4.2:
   version "4.4.2"
@@ -4309,16 +4296,16 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-apollo@^2.3.3:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/react-apollo/-/react-apollo-2.3.3.tgz#a4609f3112d4351a1e363090d8cd363b04e2cc91"
+react-apollo@^2.5.2:
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/react-apollo/-/react-apollo-2.5.2.tgz#6732c6af55e6adc9ebf97bf189e867a893c449d3"
   dependencies:
-    fbjs "^1.0.0"
+    apollo-utilities "^1.2.1"
     hoist-non-react-statics "^3.0.0"
-    invariant "^2.2.2"
-    lodash.flowright "^3.5.0"
     lodash.isequal "^4.5.0"
     prop-types "^15.6.0"
+    ts-invariant "^0.3.0"
+    tslib "^1.9.3"
 
 react-compound-slider@^0.18.1:
   version "0.18.1"
@@ -5194,7 +5181,19 @@ tryer@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/tryer/-/tryer-1.0.1.tgz#f2c85406800b9b0f74c9f7465b81eaad241252f8"
 
-tslib@^1.9.0:
+ts-invariant@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/ts-invariant/-/ts-invariant-0.2.1.tgz#3d587f9d6e3bded97bf9ec17951dd9814d5a9d3f"
+  dependencies:
+    tslib "^1.9.3"
+
+ts-invariant@^0.3.0:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/ts-invariant/-/ts-invariant-0.3.2.tgz#89a2ffeb70879b777258df1df1c59383c35209b0"
+  dependencies:
+    tslib "^1.9.3"
+
+tslib@^1.9.0, tslib@^1.9.3:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
 
