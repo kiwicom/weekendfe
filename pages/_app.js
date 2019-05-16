@@ -1,7 +1,6 @@
 import * as React from "react"
 import App, { Container } from "next/app"
 import Head from "next/head"
-import { ApolloProvider } from "react-apollo"
 import { getTokens, defaultTheme } from "@kiwicom/orbit-components"
 import { ThemeProvider, createGlobalStyle } from "styled-components"
 
@@ -31,9 +30,7 @@ class MyApp extends App {
         <ThemeProvider theme={{ orbit: getTokens() }}>
           <>
             <GlobalStyle />
-            <ApolloProvider client={apolloClient}>
-              <Component {...pageProps} />
-            </ApolloProvider>
+            <Component {...pageProps} />
           </>
         </ThemeProvider>
       </Container>

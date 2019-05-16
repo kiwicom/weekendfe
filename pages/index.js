@@ -1,4 +1,5 @@
 import * as React from "react"
+import { graphql, QueryRenderer } from '@kiwicom/relay';
 import Heading from "@kiwicom/orbit-components/lib/Heading"
 import styled from "styled-components"
 import { format } from "date-fns"
