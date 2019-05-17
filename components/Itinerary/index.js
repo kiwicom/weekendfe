@@ -1,6 +1,7 @@
 import { graphql, createFragmentContainer } from "@kiwicom/relay"
 import Button from "@kiwicom/orbit-components/lib/Button"
 import Card from "@kiwicom/orbit-components/lib/Card"
+import Illustration from "@kiwicom/orbit-components/lib/Illustration"
 import CardSection from "@kiwicom/orbit-components/lib/Card/CardSection"
 import Hide from "@kiwicom/orbit-components/lib/Hide"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
@@ -27,43 +28,72 @@ const getNights = (routes, route, routeKey) => {
 }
 const Itinerary = ({ flights, interest }) => (
   <Stack direction="column" shrink spacing="loose">
-    {flights.search.map((flight, flightKey) => {
-      const routes = flight.route
-      return (
-        // eslint-disable-next-line
+    {flights.search.length ? (
+      flights.search.map((flight, flightKey) => {
+        const routes = flight.route
+        return (
+          // eslint-disable-next-line
         <Card key={flightKey}>
-          <CardSection>
-            <Stack
-              direction="column"
-              spacing="loose"
-              desktop={{ spacing: "tight" }}
-            >
-              <Stack direction="row" align="center" spacing="comfy">
-                <Stack basis="50px" justify="center" shrink={false}>
-                  <Text weight="bold" size="large">
-                    {flight.price} €
-                  </Text>
-                </Stack>
-                <Stack direction="column" shrink>
-                  {routes.map((route, key) => {
-                    const nights = getNights(routes, route, key)
-                    return (
-                      // eslint-disable-next-line
+            <CardSection>
+              <Stack
+                direction="column"
+                spacing="loose"
+                desktop={{ spacing: "tight" }}
+              >
+                <Stack direction="row" align="center" spacing="comfy">
+                  <Stack basis="50px" justify="center" shrink={false}>
+                    <Text weight="bold" size="large">
+                      {flight.price} €
+                    </Text>
+                  </Stack>
+                  <Stack direction="column" shrink>
+                    {routes.map((route, key) => {
+                      const nights = getNights(routes, route, key)
+                      return (
+                        // eslint-disable-next-line
                       <Route flight={route} key={key} nights={nights} />
-                    )
-                  })}
-                </Stack>
-                <Hide
-                  on={["smallMobile", "mediumMobile", "largeMobile"]}
-                >
-                  <Stack
-                    align="center"
-                    justify="end"
-                    shrink
-                    basis="150px"
+                      )
+                    })}
+                  </Stack>
+                  <Hide
+                    on={[
+                      "smallMobile",
+                      "mediumMobile",
+                      "largeMobile"
+                    ]}
                   >
+                    <Stack
+                      align="center"
+                      justify="end"
+                      shrink
+                      basis="150px"
+                    >
+                      <Button
+                        onClick={() => {
+                          // eslint-disable-next-line fp/no-mutating-methods
+                          Router.push({
+                            pathname: "/places",
+                            query: {
+                              bookingToken: flight.bookingToken,
+                              interest
+                            }
+                          })
+                        }}
+                      >
+                        Select this flight
+                      </Button>
+                    </Stack>
+                  </Hide>
+                </Stack>
+                <Stack
+                  justify="center"
+                  direction="row"
+                  align="center"
+                  shrink
+                >
+                  <Hide on={["tablet", "desktop", "largeDesktop"]}>
                     <Button
-                      onClick={() => {
+                      onClick={() =>
                         // eslint-disable-next-line fp/no-mutating-methods
                         Router.push({
                           pathname: "/places",
@@ -72,41 +102,30 @@ const Itinerary = ({ flights, interest }) => (
                             interest
                           }
                         })
-                      }}
+                      }
                     >
                       Select this flight
                     </Button>
-                  </Stack>
-                </Hide>
+                  </Hide>
+                </Stack>
               </Stack>
-              <Stack
-                justify="center"
-                direction="row"
-                align="center"
-                shrink
-              >
-                <Hide on={["tablet", "desktop", "largeDesktop"]}>
-                  <Button
-                    onClick={() =>
-                      // eslint-disable-next-line fp/no-mutating-methods
-                      Router.push({
-                        pathname: "/places",
-                        query: {
-                          bookingToken: flight.bookingToken,
-                          interest
-                        }
-                      })
-                    }
-                  >
-                    Select this flight
-                  </Button>
-                </Hide>
-              </Stack>
-            </Stack>
-          </CardSection>
-        </Card>
-      )
-    })}
+            </CardSection>
+          </Card>
+        )
+      })
+    ) : (
+      <>
+        <Illustration
+          size="medium"
+          name="NoResults"
+          dataTest="test"
+          spaceAfter={null}
+        />
+        <Text type="secondary" element="p" size="large">
+          No results, try another combination ¯\_(ツ)_/¯
+        </Text>
+      </>
+    )}
   </Stack>
 )
 
