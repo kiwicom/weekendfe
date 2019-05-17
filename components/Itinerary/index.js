@@ -1,3 +1,4 @@
+import { graphql, createFragmentContainer } from "@kiwicom/relay"
 import Button from "@kiwicom/orbit-components/lib/Button"
 import Card from "@kiwicom/orbit-components/lib/Card"
 import CardSection from "@kiwicom/orbit-components/lib/Card/CardSection"
@@ -26,7 +27,7 @@ const getNights = (routes, route, routeKey) => {
 }
 const Itinerary = ({ flights, interest }) => (
   <Stack direction="column" shrink spacing="loose">
-    {flights.map((flight, flightKey) => {
+    {flights.search.map((flight, flightKey) => {
       const routes = flight.route
       return (
         // eslint-disable-next-line
@@ -48,7 +49,7 @@ const Itinerary = ({ flights, interest }) => (
                     const nights = getNights(routes, route, key)
                     return (
                       // eslint-disable-next-line
-                      <Route {...route} key={key} nights={nights} />
+                      <Route flight={route} key={key} nights={nights} />
                     )
                   })}
                 </Stack>
@@ -109,4 +110,23 @@ const Itinerary = ({ flights, interest }) => (
   </Stack>
 )
 
-export default Itinerary
+export default createFragmentContainer(Itinerary, {
+  flights: graphql`
+    fragment Itinerary_flights on Query
+      @argumentDefinitions(params: { type: "SearchParams!" }) {
+      search(params: $params) {
+        price
+        bookingToken
+        route {
+          ...Route_flight
+          from {
+            timeLocal
+          }
+          to {
+            timeLocal
+          }
+        }
+      }
+    }
+  `
+})

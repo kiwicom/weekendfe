@@ -78,7 +78,7 @@ const getParamsFromQuery = ({
   }
 })
 
-const renderQueryRendererResponse = (data, query) => (
+const renderQueryRendererResponse = (rendererProps, query) => (
   <ContentContainer>
     <ResultsContainer>
       <Stack direction="column" spacing="extraLoose">
@@ -86,7 +86,7 @@ const renderQueryRendererResponse = (data, query) => (
           Choose your flight combination
         </Heading>
         <Itinerary
-          flights={data.search.slice(0, 10)}
+          flights={rendererProps}
           interest={query.interest}
         />
       </Stack>
@@ -118,35 +118,7 @@ const Result = ({ query }) => (
       clientID="https://github.com/kiwicom/weekendfe"
       query={graphql`
         query resultQuery($params: SearchParams!) {
-          search(params: $params) {
-            price
-            bookingToken
-            route {
-              from {
-                city
-                iata
-                timeLocal
-              }
-              to {
-                city
-                iata
-                timeLocal
-              }
-              parts {
-                type
-                carrier
-                from {
-                  timeLocal
-                }
-                to {
-                  timeLocal
-                }
-              }
-              interests {
-                name
-              }
-            }
-          }
+          ...Itinerary_flights @arguments(params: $params)
         }
       `}
       variables={getParamsFromQuery(query)}
@@ -154,8 +126,8 @@ const Result = ({ query }) => (
       onLoading={() => (
         <Loading type="pageLoader" text="Loading results" />
       )}
-      onResponse={renderProps =>
-        renderQueryRendererResponse(renderProps, query)
+      onResponse={rendererProps =>
+        renderQueryRendererResponse(rendererProps, query)
       }
     />
   </>

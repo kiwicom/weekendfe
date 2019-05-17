@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 40c47cf0a0de0c485781389199ab0ae2
+ * @relayHash e13848904fb605d55e147fbc585594bc
  */
 
 /* eslint-disable */
@@ -9,6 +9,7 @@
 
 /*::
 import type { ConcreteRequest } from 'relay-runtime';
+type Itinerary_flights$ref = any;
 export type SearchParams = {|
   adults?: ?number,
   children?: ?number,
@@ -30,35 +31,7 @@ export type resultQueryVariables = {|
   params: SearchParams
 |};
 export type resultQueryResponse = {|
-  +search: ?$ReadOnlyArray<?{|
-    +price: ?number,
-    +bookingToken: ?string,
-    +route: ?$ReadOnlyArray<?{|
-      +from: ?{|
-        +city: ?string,
-        +iata: ?string,
-        +timeLocal: ?number,
-      |},
-      +to: ?{|
-        +city: ?string,
-        +iata: ?string,
-        +timeLocal: ?number,
-      |},
-      +parts: ?$ReadOnlyArray<?{|
-        +type: ?string,
-        +carrier: ?string,
-        +from: ?{|
-          +timeLocal: ?number
-        |},
-        +to: ?{|
-          +timeLocal: ?number
-        |},
-      |}>,
-      +interests: ?$ReadOnlyArray<?{|
-        +name: string
-      |}>,
-    |}>,
-  |}>
+  +$fragmentRefs: Itinerary_flights$ref
 |};
 export type resultQuery = {|
   variables: resultQueryVariables,
@@ -71,34 +44,48 @@ export type resultQuery = {|
 query resultQuery(
   $params: SearchParams!
 ) {
+  ...Itinerary_flights_35PWgj
+}
+
+fragment Itinerary_flights_35PWgj on Query {
   search(params: $params) {
     price
     bookingToken
     route {
+      ...Route_flight
       from {
-        city
-        iata
         timeLocal
       }
       to {
-        city
-        iata
         timeLocal
       }
-      parts {
-        type
-        carrier
-        from {
-          timeLocal
-        }
-        to {
-          timeLocal
-        }
-      }
-      interests {
-        name
-      }
     }
+  }
+}
+
+fragment Route_flight on Route {
+  from {
+    city
+    iata
+    timeLocal
+  }
+  to {
+    city
+    iata
+    timeLocal
+  }
+  parts {
+    type
+    carrier
+    from {
+      timeLocal
+    }
+    to {
+      timeLocal
+    }
+  }
+  interests {
+    name
   }
 }
 */
@@ -112,14 +99,21 @@ var v0 = [
     "defaultValue": null
   }
 ],
-v1 = {
+v1 = [
+  {
+    "kind": "Variable",
+    "name": "params",
+    "variableName": "params"
+  }
+],
+v2 = {
   "kind": "ScalarField",
   "alias": null,
   "name": "timeLocal",
   "args": null,
   "storageKey": null
 },
-v2 = [
+v3 = [
   {
     "kind": "ScalarField",
     "alias": null,
@@ -134,137 +128,10 @@ v2 = [
     "args": null,
     "storageKey": null
   },
-  (v1/*: any*/)
-],
-v3 = [
-  (v1/*: any*/)
+  (v2/*: any*/)
 ],
 v4 = [
-  {
-    "kind": "LinkedField",
-    "alias": null,
-    "name": "search",
-    "storageKey": null,
-    "args": [
-      {
-        "kind": "Variable",
-        "name": "params",
-        "variableName": "params"
-      }
-    ],
-    "concreteType": "Item",
-    "plural": true,
-    "selections": [
-      {
-        "kind": "ScalarField",
-        "alias": null,
-        "name": "price",
-        "args": null,
-        "storageKey": null
-      },
-      {
-        "kind": "ScalarField",
-        "alias": null,
-        "name": "bookingToken",
-        "args": null,
-        "storageKey": null
-      },
-      {
-        "kind": "LinkedField",
-        "alias": null,
-        "name": "route",
-        "storageKey": null,
-        "args": null,
-        "concreteType": "Route",
-        "plural": true,
-        "selections": [
-          {
-            "kind": "LinkedField",
-            "alias": null,
-            "name": "from",
-            "storageKey": null,
-            "args": null,
-            "concreteType": "RouteRendezvous",
-            "plural": false,
-            "selections": (v2/*: any*/)
-          },
-          {
-            "kind": "LinkedField",
-            "alias": null,
-            "name": "to",
-            "storageKey": null,
-            "args": null,
-            "concreteType": "RouteRendezvous",
-            "plural": false,
-            "selections": (v2/*: any*/)
-          },
-          {
-            "kind": "LinkedField",
-            "alias": null,
-            "name": "parts",
-            "storageKey": null,
-            "args": null,
-            "concreteType": "Part",
-            "plural": true,
-            "selections": [
-              {
-                "kind": "ScalarField",
-                "alias": null,
-                "name": "type",
-                "args": null,
-                "storageKey": null
-              },
-              {
-                "kind": "ScalarField",
-                "alias": null,
-                "name": "carrier",
-                "args": null,
-                "storageKey": null
-              },
-              {
-                "kind": "LinkedField",
-                "alias": null,
-                "name": "from",
-                "storageKey": null,
-                "args": null,
-                "concreteType": "PartRendezvous",
-                "plural": false,
-                "selections": (v3/*: any*/)
-              },
-              {
-                "kind": "LinkedField",
-                "alias": null,
-                "name": "to",
-                "storageKey": null,
-                "args": null,
-                "concreteType": "PartRendezvous",
-                "plural": false,
-                "selections": (v3/*: any*/)
-              }
-            ]
-          },
-          {
-            "kind": "LinkedField",
-            "alias": null,
-            "name": "interests",
-            "storageKey": null,
-            "args": null,
-            "concreteType": "Interest",
-            "plural": true,
-            "selections": [
-              {
-                "kind": "ScalarField",
-                "alias": null,
-                "name": "name",
-                "args": null,
-                "storageKey": null
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+  (v2/*: any*/)
 ];
 return {
   "kind": "Request",
@@ -274,23 +141,149 @@ return {
     "type": "Query",
     "metadata": null,
     "argumentDefinitions": (v0/*: any*/),
-    "selections": (v4/*: any*/)
+    "selections": [
+      {
+        "kind": "FragmentSpread",
+        "name": "Itinerary_flights",
+        "args": (v1/*: any*/)
+      }
+    ]
   },
   "operation": {
     "kind": "Operation",
     "name": "resultQuery",
     "argumentDefinitions": (v0/*: any*/),
-    "selections": (v4/*: any*/)
+    "selections": [
+      {
+        "kind": "LinkedField",
+        "alias": null,
+        "name": "search",
+        "storageKey": null,
+        "args": (v1/*: any*/),
+        "concreteType": "Item",
+        "plural": true,
+        "selections": [
+          {
+            "kind": "ScalarField",
+            "alias": null,
+            "name": "price",
+            "args": null,
+            "storageKey": null
+          },
+          {
+            "kind": "ScalarField",
+            "alias": null,
+            "name": "bookingToken",
+            "args": null,
+            "storageKey": null
+          },
+          {
+            "kind": "LinkedField",
+            "alias": null,
+            "name": "route",
+            "storageKey": null,
+            "args": null,
+            "concreteType": "Route",
+            "plural": true,
+            "selections": [
+              {
+                "kind": "LinkedField",
+                "alias": null,
+                "name": "from",
+                "storageKey": null,
+                "args": null,
+                "concreteType": "RouteRendezvous",
+                "plural": false,
+                "selections": (v3/*: any*/)
+              },
+              {
+                "kind": "LinkedField",
+                "alias": null,
+                "name": "to",
+                "storageKey": null,
+                "args": null,
+                "concreteType": "RouteRendezvous",
+                "plural": false,
+                "selections": (v3/*: any*/)
+              },
+              {
+                "kind": "LinkedField",
+                "alias": null,
+                "name": "parts",
+                "storageKey": null,
+                "args": null,
+                "concreteType": "Part",
+                "plural": true,
+                "selections": [
+                  {
+                    "kind": "ScalarField",
+                    "alias": null,
+                    "name": "type",
+                    "args": null,
+                    "storageKey": null
+                  },
+                  {
+                    "kind": "ScalarField",
+                    "alias": null,
+                    "name": "carrier",
+                    "args": null,
+                    "storageKey": null
+                  },
+                  {
+                    "kind": "LinkedField",
+                    "alias": null,
+                    "name": "from",
+                    "storageKey": null,
+                    "args": null,
+                    "concreteType": "PartRendezvous",
+                    "plural": false,
+                    "selections": (v4/*: any*/)
+                  },
+                  {
+                    "kind": "LinkedField",
+                    "alias": null,
+                    "name": "to",
+                    "storageKey": null,
+                    "args": null,
+                    "concreteType": "PartRendezvous",
+                    "plural": false,
+                    "selections": (v4/*: any*/)
+                  }
+                ]
+              },
+              {
+                "kind": "LinkedField",
+                "alias": null,
+                "name": "interests",
+                "storageKey": null,
+                "args": null,
+                "concreteType": "Interest",
+                "plural": true,
+                "selections": [
+                  {
+                    "kind": "ScalarField",
+                    "alias": null,
+                    "name": "name",
+                    "args": null,
+                    "storageKey": null
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "params": {
     "operationKind": "query",
     "name": "resultQuery",
     "id": null,
-    "text": "query resultQuery(\n  $params: SearchParams!\n) {\n  search(params: $params) {\n    price\n    bookingToken\n    route {\n      from {\n        city\n        iata\n        timeLocal\n      }\n      to {\n        city\n        iata\n        timeLocal\n      }\n      parts {\n        type\n        carrier\n        from {\n          timeLocal\n        }\n        to {\n          timeLocal\n        }\n      }\n      interests {\n        name\n      }\n    }\n  }\n}\n",
+    "text": "query resultQuery(\n  $params: SearchParams!\n) {\n  ...Itinerary_flights_35PWgj\n}\n\nfragment Itinerary_flights_35PWgj on Query {\n  search(params: $params) {\n    price\n    bookingToken\n    route {\n      ...Route_flight\n      from {\n        timeLocal\n      }\n      to {\n        timeLocal\n      }\n    }\n  }\n}\n\nfragment Route_flight on Route {\n  from {\n    city\n    iata\n    timeLocal\n  }\n  to {\n    city\n    iata\n    timeLocal\n  }\n  parts {\n    type\n    carrier\n    from {\n      timeLocal\n    }\n    to {\n      timeLocal\n    }\n  }\n  interests {\n    name\n  }\n}\n",
     "metadata": {}
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '71188e1da88d12fecd3bfec3cf41ec47';
+(node/*: any*/).hash = 'f930ed9a8dc75ac7ca068ed0708b0965';
 module.exports = node;
