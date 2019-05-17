@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { graphql, QueryRenderer } from "@kiwicom/relay"
 import styled from "styled-components"
+import Loading from "@kiwicom/orbit-components/lib/Loading"
 import InputField from "@kiwicom/orbit-components/lib/InputField"
 import ButtonLink from "@kiwicom/orbit-components/lib/ButtonLink"
 import Close from "@kiwicom/orbit-components/lib/icons/Close"
@@ -87,6 +88,7 @@ const PlacePicker = ({
                 `}
                 variables={{ id: value }}
                 environment={weekendapiEnvironment}
+                onLoading={() => <Loading type="searchLoader" />}
                 onResponse={renderProps =>
                   renderQueryRendererResponse({
                     label,
