@@ -25,7 +25,7 @@ const renderQueryRendererResponse = ({
   <InputField
     {...getInputProps({
       // here's the interesting part
-      value: renderProps.place.name,
+      value: renderProps.place ? renderProps.place.name : "",
       onFocus: openMenu
     })}
     inlineLabel
@@ -80,8 +80,6 @@ const PlacePicker = ({
                 query={graphql`
                   query PlacePickerLocationsQuery($id: String!) {
                     place(id: $id) {
-                      id
-                      code
                       name
                     }
                   }

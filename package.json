@@ -10,7 +10,7 @@
     "start": "next start",
     "export": "next export",
     "schema": "graphql get-schema",
-    "relay": "relay-compiler --src=./ --schema=./schema.graphql --exclude='**/node_modules/**', '**/.next/**', '**/out/**'",
+    "relay": "relay-compiler --src=./ --schema=./schema.graphql --exclude='**/node_modules/**', '**/.next/**', '**/out/**', '**/__generated__/**'",
     "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages",
     "analyze": "BUNDLE_ANALYZE=both next build",
     "analyze:server": "BUNDLE_ANALYZE=server next build",

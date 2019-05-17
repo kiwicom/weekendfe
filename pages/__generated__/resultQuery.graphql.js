@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash e13848904fb605d55e147fbc585594bc
+ * @relayHash 9f36d39503507bd8a4b0b8d3f7627030
  */
 
 /* eslint-disable */
@@ -75,17 +75,7 @@ fragment Route_flight on Route {
     timeLocal
   }
   parts {
-    type
     carrier
-    from {
-      timeLocal
-    }
-    to {
-      timeLocal
-    }
-  }
-  interests {
-    name
   }
 }
 */
@@ -106,14 +96,7 @@ v1 = [
     "variableName": "params"
   }
 ],
-v2 = {
-  "kind": "ScalarField",
-  "alias": null,
-  "name": "timeLocal",
-  "args": null,
-  "storageKey": null
-},
-v3 = [
+v2 = [
   {
     "kind": "ScalarField",
     "alias": null,
@@ -128,10 +111,13 @@ v3 = [
     "args": null,
     "storageKey": null
   },
-  (v2/*: any*/)
-],
-v4 = [
-  (v2/*: any*/)
+  {
+    "kind": "ScalarField",
+    "alias": null,
+    "name": "timeLocal",
+    "args": null,
+    "storageKey": null
+  }
 ];
 return {
   "kind": "Request",
@@ -194,7 +180,7 @@ return {
                 "args": null,
                 "concreteType": "RouteRendezvous",
                 "plural": false,
-                "selections": (v3/*: any*/)
+                "selections": (v2/*: any*/)
               },
               {
                 "kind": "LinkedField",
@@ -204,7 +190,7 @@ return {
                 "args": null,
                 "concreteType": "RouteRendezvous",
                 "plural": false,
-                "selections": (v3/*: any*/)
+                "selections": (v2/*: any*/)
               },
               {
                 "kind": "LinkedField",
@@ -218,52 +204,7 @@ return {
                   {
                     "kind": "ScalarField",
                     "alias": null,
-                    "name": "type",
-                    "args": null,
-                    "storageKey": null
-                  },
-                  {
-                    "kind": "ScalarField",
-                    "alias": null,
                     "name": "carrier",
-                    "args": null,
-                    "storageKey": null
-                  },
-                  {
-                    "kind": "LinkedField",
-                    "alias": null,
-                    "name": "from",
-                    "storageKey": null,
-                    "args": null,
-                    "concreteType": "PartRendezvous",
-                    "plural": false,
-                    "selections": (v4/*: any*/)
-                  },
-                  {
-                    "kind": "LinkedField",
-                    "alias": null,
-                    "name": "to",
-                    "storageKey": null,
-                    "args": null,
-                    "concreteType": "PartRendezvous",
-                    "plural": false,
-                    "selections": (v4/*: any*/)
-                  }
-                ]
-              },
-              {
-                "kind": "LinkedField",
-                "alias": null,
-                "name": "interests",
-                "storageKey": null,
-                "args": null,
-                "concreteType": "Interest",
-                "plural": true,
-                "selections": [
-                  {
-                    "kind": "ScalarField",
-                    "alias": null,
-                    "name": "name",
                     "args": null,
                     "storageKey": null
                   }
@@ -279,7 +220,7 @@ return {
     "operationKind": "query",
     "name": "resultQuery",
     "id": null,
-    "text": "query resultQuery(\n  $params: SearchParams!\n) {\n  ...Itinerary_flights_35PWgj\n}\n\nfragment Itinerary_flights_35PWgj on Query {\n  search(params: $params) {\n    price\n    bookingToken\n    route {\n      ...Route_flight\n      from {\n        timeLocal\n      }\n      to {\n        timeLocal\n      }\n    }\n  }\n}\n\nfragment Route_flight on Route {\n  from {\n    city\n    iata\n    timeLocal\n  }\n  to {\n    city\n    iata\n    timeLocal\n  }\n  parts {\n    type\n    carrier\n    from {\n      timeLocal\n    }\n    to {\n      timeLocal\n    }\n  }\n  interests {\n    name\n  }\n}\n",
+    "text": "query resultQuery(\n  $params: SearchParams!\n) {\n  ...Itinerary_flights_35PWgj\n}\n\nfragment Itinerary_flights_35PWgj on Query {\n  search(params: $params) {\n    price\n    bookingToken\n    route {\n      ...Route_flight\n      from {\n        timeLocal\n      }\n      to {\n        timeLocal\n      }\n    }\n  }\n}\n\nfragment Route_flight on Route {\n  from {\n    city\n    iata\n    timeLocal\n  }\n  to {\n    city\n    iata\n    timeLocal\n  }\n  parts {\n    carrier\n  }\n}\n",
     "metadata": {}
   }
 };

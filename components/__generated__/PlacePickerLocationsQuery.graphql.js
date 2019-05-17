@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 3b25ecde709c7c25bd48be465df02cdd
+ * @relayHash 7839dfd1df9615fe81eec580790975d0
  */
 
 /* eslint-disable */
@@ -14,9 +14,7 @@ export type PlacePickerLocationsQueryVariables = {|
 |};
 export type PlacePickerLocationsQueryResponse = {|
   +place: ?{|
-    +id: ?string,
-    +code: ?string,
-    +name: ?string,
+    +name: ?string
   |}
 |};
 export type PlacePickerLocationsQuery = {|
@@ -31,8 +29,6 @@ query PlacePickerLocationsQuery(
   $id: String!
 ) {
   place(id: $id) {
-    id
-    code
     name
   }
 }
@@ -66,20 +62,6 @@ v1 = [
       {
         "kind": "ScalarField",
         "alias": null,
-        "name": "id",
-        "args": null,
-        "storageKey": null
-      },
-      {
-        "kind": "ScalarField",
-        "alias": null,
-        "name": "code",
-        "args": null,
-        "storageKey": null
-      },
-      {
-        "kind": "ScalarField",
-        "alias": null,
         "name": "name",
         "args": null,
         "storageKey": null
@@ -107,11 +89,11 @@ return {
     "operationKind": "query",
     "name": "PlacePickerLocationsQuery",
     "id": null,
-    "text": "query PlacePickerLocationsQuery(\n  $id: String!\n) {\n  place(id: $id) {\n    id\n    code\n    name\n  }\n}\n",
+    "text": "query PlacePickerLocationsQuery(\n  $id: String!\n) {\n  place(id: $id) {\n    name\n  }\n}\n",
     "metadata": {}
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = 'a0ae9b5d3795e4d5839c8328565e2f47';
+(node/*: any*/).hash = '9e3b5ac548f2f444f876ff1907fe31ac';
 module.exports = node;

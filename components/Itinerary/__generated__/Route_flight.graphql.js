@@ -23,17 +23,7 @@ export type Route_flight = {|
     +timeLocal: ?number,
   |},
   +parts: ?$ReadOnlyArray<?{|
-    +type: ?string,
-    +carrier: ?string,
-    +from: ?{|
-      +timeLocal: ?number
-    |},
-    +to: ?{|
-      +timeLocal: ?number
-    |},
-  |}>,
-  +interests: ?$ReadOnlyArray<?{|
-    +name: string
+    +carrier: ?string
   |}>,
   +$refType: Route_flight$ref,
 |};
@@ -46,14 +36,7 @@ export type Route_flight$key = {
 
 
 const node/*: ReaderFragment*/ = (function(){
-var v0 = {
-  "kind": "ScalarField",
-  "alias": null,
-  "name": "timeLocal",
-  "args": null,
-  "storageKey": null
-},
-v1 = [
+var v0 = [
   {
     "kind": "ScalarField",
     "alias": null,
@@ -68,10 +51,13 @@ v1 = [
     "args": null,
     "storageKey": null
   },
-  (v0/*: any*/)
-],
-v2 = [
-  (v0/*: any*/)
+  {
+    "kind": "ScalarField",
+    "alias": null,
+    "name": "timeLocal",
+    "args": null,
+    "storageKey": null
+  }
 ];
 return {
   "kind": "Fragment",
@@ -88,7 +74,7 @@ return {
       "args": null,
       "concreteType": "RouteRendezvous",
       "plural": false,
-      "selections": (v1/*: any*/)
+      "selections": (v0/*: any*/)
     },
     {
       "kind": "LinkedField",
@@ -98,7 +84,7 @@ return {
       "args": null,
       "concreteType": "RouteRendezvous",
       "plural": false,
-      "selections": (v1/*: any*/)
+      "selections": (v0/*: any*/)
     },
     {
       "kind": "LinkedField",
@@ -112,52 +98,7 @@ return {
         {
           "kind": "ScalarField",
           "alias": null,
-          "name": "type",
-          "args": null,
-          "storageKey": null
-        },
-        {
-          "kind": "ScalarField",
-          "alias": null,
           "name": "carrier",
-          "args": null,
-          "storageKey": null
-        },
-        {
-          "kind": "LinkedField",
-          "alias": null,
-          "name": "from",
-          "storageKey": null,
-          "args": null,
-          "concreteType": "PartRendezvous",
-          "plural": false,
-          "selections": (v2/*: any*/)
-        },
-        {
-          "kind": "LinkedField",
-          "alias": null,
-          "name": "to",
-          "storageKey": null,
-          "args": null,
-          "concreteType": "PartRendezvous",
-          "plural": false,
-          "selections": (v2/*: any*/)
-        }
-      ]
-    },
-    {
-      "kind": "LinkedField",
-      "alias": null,
-      "name": "interests",
-      "storageKey": null,
-      "args": null,
-      "concreteType": "Interest",
-      "plural": true,
-      "selections": [
-        {
-          "kind": "ScalarField",
-          "alias": null,
-          "name": "name",
           "args": null,
           "storageKey": null
         }
@@ -167,5 +108,5 @@ return {
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '25e9dd9e7c36716a3a2d2807a90c29f0';
+(node/*: any*/).hash = '3cebdf443597d3513853438caf85ce88';
 module.exports = node;

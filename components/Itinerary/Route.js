@@ -136,17 +136,7 @@ export default createFragmentContainer(Route, {
         timeLocal
       }
       parts {
-        type
         carrier
-        from {
-          timeLocal
-        }
-        to {
-          timeLocal
-        }
-      }
-      interests {
-        name
       }
     }
   `
