@@ -1,5 +1,4 @@
 import * as React from "react"
-import { graphql, QueryRenderer } from '@kiwicom/relay';
 import Heading from "@kiwicom/orbit-components/lib/Heading"
 import styled from "styled-components"
 import { format } from "date-fns"
@@ -102,7 +101,7 @@ const FlyForm = ({ query, places }) => (
   </ContentContainer>
 )
 
-FlyForm.getInitialProps = async ({ req, query }) => {
+FlyForm.getInitialProps = async ({ query }) => {
   const places = UrlToPlaces(query.stopovers) || defaultValues.places
   return { query, places }
 }
