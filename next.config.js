@@ -3,7 +3,7 @@ const webpack = require("webpack")
 const withBundleAnalyzer = require("@zeit/next-bundle-analyzer")
 
 const debug = process.env.NODE_ENV !== "production"
-const repoName = "weekendfe"
+const repoName = ""
 
 const nextConfig = {
   analyzeServer: ["server", "both"].includes(
@@ -20,6 +20,13 @@ const nextConfig = {
     browser: {
       analyzerMode: "static",
       reportFilename: "../bundles/client.html"
+    }
+  },
+  exportPathMap() {
+    return {
+      "/": { page: "/" },
+      "/places": { page: "places" },
+      "/result": { page: "result" }
     }
   },
   assetPrefix: debug ? "" : `/${repoName}/`,
