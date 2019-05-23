@@ -1,8 +1,12 @@
 import * as React from "react"
 import App, { Container } from "next/app"
 import Head from "next/head"
-import { getTokens, defaultTheme } from "@kiwicom/orbit-components"
-import { ThemeProvider, createGlobalStyle } from "styled-components"
+import {
+  getTokens,
+  defaultTheme,
+  ThemeProvider
+} from "@kiwicom/orbit-components"
+import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
   body {

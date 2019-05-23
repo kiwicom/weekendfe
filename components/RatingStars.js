@@ -2,7 +2,7 @@ import * as React from "react"
 import styled from "styled-components"
 import StarEmpty from "@kiwicom/orbit-components/lib/icons/StarEmpty"
 import StarFull from "@kiwicom/orbit-components/lib//icons/StarFull"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
+import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
 
 const StyledRatingStars = styled.div`
   display: flex;

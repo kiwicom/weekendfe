@@ -39,7 +39,10 @@ const PlaceToVisit = ({
   useOnClickOutside(ref, () => setSliderVisibility(false))
   return (
     <Stack direction="row">
-      <PlacePicker defaultValue={place && place.id} onChange={changePlace} />
+      <PlacePicker
+        defaultValue={place && place.id}
+        onChange={changePlace}
+      />
       <Slider
         openRef={ref}
         isOpen={isOpenSlider}
@@ -60,6 +63,7 @@ const PlaceToVisit = ({
 const defaultDays = [2, 5]
 
 function reducer(places, { type, payload }) {
+  console.log(places)
   const newPlaces = places && places.concat()
   switch (type) {
     case "reset":

@@ -1,6 +1,6 @@
 import * as React from "react"
 import styled from "styled-components"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
+import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
 
 const StyledTrack = styled(({ target, source, theme, ...props }) => <div {...props} />)`
   position: absolute;

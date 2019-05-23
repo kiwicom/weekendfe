@@ -1,6 +1,6 @@
 import { useRef, useState } from "react"
 import styled from "styled-components"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
+import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
 import Button from "@kiwicom/orbit-components/lib/Button"
 import ButtonLink from "@kiwicom/orbit-components/lib/ButtonLink"
 import Minus from "@kiwicom/orbit-components/lib/icons/Minus"

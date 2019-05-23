@@ -7,7 +7,7 @@ import Checkbox, {
 import Text from "@kiwicom/orbit-components/lib/Text"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
 import { StyledButtonLink } from "@kiwicom/orbit-components/lib/ButtonLink"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
+import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
 
 const StyledPlaces = styled.div`
   display: block;

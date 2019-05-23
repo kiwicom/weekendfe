@@ -4,7 +4,7 @@ import ReactDOM from "react-dom"
 import { graphql, createFragmentContainer } from "@kiwicom/relay"
 import styled, { ThemeProvider } from "styled-components"
 import Text from "@kiwicom/orbit-components/lib/Text"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
+import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
 import { getTokens } from "@kiwicom/orbit-components"
 
 import RatingStars from "./RatingStars"

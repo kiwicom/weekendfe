@@ -7,7 +7,7 @@ import Text from "@kiwicom/orbit-components/lib/Text"
 import InputField from "@kiwicom/orbit-components/lib/InputField"
 import ChevronLeft from "@kiwicom/orbit-components/lib/icons/ChevronLeft"
 import ChevronRight from "@kiwicom/orbit-components/lib/icons/ChevronRight"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
+import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
 import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"
 import { format } from "date-fns"
 

@@ -1,8 +1,9 @@
+import React, { useCallback } from "react"
 import Cocktail from "@kiwicom/orbit-components/lib/icons/Cocktail"
 import Meal from "@kiwicom/orbit-components/lib/icons/Meal"
 import Coffee from "@kiwicom/orbit-components/lib/icons/Coffee"
 import Shopping from "@kiwicom/orbit-components/lib/icons/Shopping"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
+import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
 import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"
 import styled, { css } from "styled-components"
 
@@ -30,45 +31,44 @@ StyledInterests.defaultProps = {
   theme: defaultTheme
 }
 
+const INTERESTS = [
+  {
+    value: "drinks",
+    title: "Party Life",
+    icon: <Cocktail />
+  },
+  { value: "food", title: "Food", icon: <Meal /> },
+  { value: "coffee", title: "Coffee", icon: <Coffee /> },
+  { shops: "shops", title: "Shops", icon: <Shopping /> }
+]
+
 export default function Interests({ defaultValue }) {
   const [interest, setInterest] = useUrl(
-    defaultValue || "party",
+    defaultValue || INTERESTS[0].value,
     "interest"
   )
-  const changeRadio = e => {
+  const handleOnChange = useCallback(e => {
     setInterest(e.target.value)
-  }
+  })
+
+  const handleOnClick = useCallback(value => {
+    setInterest(value)
+  })
 
   return (
     <StyledInterests>
-      <InterestCard
-        title="Party life"
-        value="drinks"
-        checked={interest === "drinks"}
-        onChange={changeRadio}
-        icon={<Cocktail />}
-      />
-      <InterestCard
-        title="Food"
-        value="food"
-        checked={interest === "food"}
-        onChange={changeRadio}
-        icon={<Meal />}
-      />
-      <InterestCard
-        title="Coffee"
-        value="coffee"
-        checked={interest === "coffee"}
-        onChange={changeRadio}
-        icon={<Coffee />}
-      />
-      <InterestCard
-        title="Shops"
-        value="shops"
-        checked={interest === "shops"}
-        onChange={changeRadio}
-        icon={<Shopping />}
-      />
+      {INTERESTS.map((item, key) => (
+        <InterestCard
+          // eslint-disable-next-line
+            key={key}
+          title={item.title}
+          value={item.value}
+          checked={interest === item.value}
+          onChange={handleOnChange}
+          onClick={handleOnClick}
+          icon={item.icon}
+        />
+      ))}
     </StyledInterests>
   )
 }

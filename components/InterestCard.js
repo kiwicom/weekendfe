@@ -3,7 +3,7 @@ import styled, { css } from "styled-components"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Text from "@kiwicom/orbit-components/lib/Text"
 import Radio from "@kiwicom/orbit-components/lib/Radio"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
+import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
 import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"
 
 const StyledInterestCard = styled.div`
@@ -28,6 +28,10 @@ const StyledInterestCard = styled.div`
   :focus {
     box-shadow: 0 4px 12px 0 rgba(23, 27, 30, 0.1);
     outline: none;
+  }
+  :focus {
+    box-shadow: 0 4px 12px 0 rgba(23, 27, 30, 0.1),
+      inset 0 0 0 2px ${({ theme }) => theme.orbit.paletteBlueNormal};
   }
   :active {
     transform: scale(0.98);
@@ -54,23 +58,44 @@ const StyledRadio = styled.div`
     width: auto;
   }
 `
-const InterestCard = ({ title, icon, checked, value, onChange }) => (
-  <StyledInterestCard onClick={() => onChange({ target: { value } })}>
-    <Stack direction="row" justify="between" align="center">
-      <StyledIcon>{icon}</StyledIcon>
-      <StyledContent>
-        <Text weight="bold">{title}</Text>
-      </StyledContent>
-      <StyledRadio>
-        <Radio
-          checked={checked}
-          value={value}
-          name="interest"
-          onChange={onChange}
-        />
-      </StyledRadio>
-    </Stack>
-  </StyledInterestCard>
-)
+const InterestCard = ({
+  title,
+  icon,
+  checked,
+  value,
+  onChange,
+  onClick
+}) => {
+  const handleKeyDown = event => {
+    if (onClick) {
+      if (event.keyCode === 32) {
+        onClick(value)
+      }
+    }
+  }
+  return (
+    <StyledInterestCard
+      onClick={() => onClick(value)}
+      tabIndex={0}
+      onKeyDown={handleKeyDown}
+    >
+      <Stack direction="row" justify="between" align="center">
+        <StyledIcon>{icon}</StyledIcon>
+        <StyledContent>
+          <Text weight="bold">{title}</Text>
+        </StyledContent>
+        <StyledRadio>
+          <Radio
+            checked={checked}
+            value={value}
+            name="interest"
+            onChange={onChange}
+            tabIndex={-1}
+          />
+        </StyledRadio>
+      </Stack>
+    </StyledInterestCard>
+  )
+}
 
 export default InterestCard

@@ -1,6 +1,6 @@
 import * as React from "react"
 import styled from "styled-components"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
+import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
 
 const StyledHandle = styled.button`
   display: flex;
@@ -19,7 +19,8 @@ const StyledHandle = styled.button`
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
   opacity: ${({ disabled }) => disabled && "0.4"};
   background-color: ${({ theme }) => theme.orbit.paletteWhite};
-  transition: transform ${({ theme }) => theme.orbit.durationFast} ease-in-out;
+  transition: transform ${({ theme }) => theme.orbit.durationFast}
+    ease-in-out;
 
   :hover,
   :focus,

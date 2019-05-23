@@ -1,6 +1,6 @@
 import * as React from "react"
 import styled, { css } from "styled-components"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
+import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
 import InputField from "@kiwicom/orbit-components/lib/InputField"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Heading from "@kiwicom/orbit-components/lib/Heading"

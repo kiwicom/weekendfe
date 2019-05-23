@@ -6,7 +6,7 @@ import Text from "@kiwicom/orbit-components/lib/Text"
 import Hide from "@kiwicom/orbit-components/lib/Hide"
 import CarrierLogo from "@kiwicom/orbit-components/lib/CarrierLogo"
 import FlightDirect from "@kiwicom/orbit-components/lib/icons/FlightDirect"
-import defaultTokens from "@kiwicom/orbit-components/lib/defaultTokens"
+import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
 import {
   format,
   differenceInHours,
@@ -29,7 +29,7 @@ const StyledLine = styled.div`
 `
 
 StyledNights.defaultProps = {
-  theme: defaultTokens
+  theme: defaultTheme
 }
 
 const getCarrierFromParts = parts =>

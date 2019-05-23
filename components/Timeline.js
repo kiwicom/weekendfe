@@ -1,7 +1,7 @@
 import * as React from "react"
 import styled from "styled-components"
 import Button from "@kiwicom/orbit-components/lib/Button"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
+import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
 
 const TagTimeline = styled.div`
   display: flex;

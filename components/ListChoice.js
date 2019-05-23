@@ -8,7 +8,7 @@ import Checkbox, {
 } from "@kiwicom/orbit-components/lib/Checkbox"
 import Text from "@kiwicom/orbit-components/lib/Text"
 import City from "@kiwicom/orbit-components/lib/icons/City"
-import defaultTokens from "@kiwicom/orbit-components/lib/defaultTokens"
+import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
 import { getSize } from "@kiwicom/orbit-components/lib/Icon"
 
 const StyledListChoiceIcon = styled.div`
@@ -27,7 +27,7 @@ const StyledListChoiceIcon = styled.div`
 `
 
 StyledListChoiceIcon.defaultProps = {
-  theme: defaultTokens
+  theme: defaultTheme
 }
 
 const StyledListChoice = styled.div`
@@ -64,7 +64,7 @@ const StyledListChoice = styled.div`
 `
 
 StyledListChoice.defaultProps = {
-  theme: defaultTokens
+  theme: defaultTheme
 }
 
 const StyledListChoiceContent = styled.div`
@@ -80,7 +80,7 @@ const StyledListChoiceContent = styled.div`
 `
 
 StyledListChoiceContent.defaultProps = {
-  theme: defaultTokens
+  theme: defaultTheme
 }
 
 const ListChoice = ({
