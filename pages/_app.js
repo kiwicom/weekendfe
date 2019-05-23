@@ -1,11 +1,8 @@
 import * as React from "react"
 import App, { Container } from "next/app"
 import Head from "next/head"
-import { ApolloProvider } from "react-apollo"
 import { getTokens, defaultTheme } from "@kiwicom/orbit-components"
 import { ThemeProvider, createGlobalStyle } from "styled-components"
-
-import withApolloClient from "../lib/with-apollo-client"
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -22,7 +19,7 @@ GlobalStyle.defaultProps = {
 
 class MyApp extends App {
   render() {
-    const { Component, pageProps, apolloClient } = this.props
+    const { Component, pageProps } = this.props
     return (
       <Container>
         <Head>
@@ -31,9 +28,7 @@ class MyApp extends App {
         <ThemeProvider theme={{ orbit: getTokens() }}>
           <>
             <GlobalStyle />
-            <ApolloProvider client={apolloClient}>
-              <Component {...pageProps} />
-            </ApolloProvider>
+            <Component {...pageProps} />
           </>
         </ThemeProvider>
       </Container>
@@ -41,4 +36,4 @@ class MyApp extends App {
   }
 }
 
-export default withApolloClient(MyApp)
+export default MyApp

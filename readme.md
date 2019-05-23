@@ -1,7 +1,8 @@
 # DONE
 
 - [x] NextJS
-- [x] Orbit-components, apollo client
+- [x] Orbit-components
+- [x] Relay client
 - [x] eslint, prettier
 - [x] GitHub pages publish
 - [x] graphql compile query

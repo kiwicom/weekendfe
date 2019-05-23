@@ -1,4 +1,5 @@
 import * as React from "react"
+import { graphql, createFragmentContainer } from "@kiwicom/relay"
 import styled, { ThemeProvider } from "styled-components"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Text from "@kiwicom/orbit-components/lib/Text"
@@ -36,8 +37,8 @@ const getCarrierFromParts = parts =>
     code: part.carrier
   }))
 
-const Route = props => {
-  const { parts, from, to, nights } = props
+const Route = ({ flight, nights }) => {
+  const { parts, from, to } = flight
   const carriers = getCarrierFromParts(parts)
 
   const departureTimeLocal = new Date(from.timeLocal * 1000)
@@ -121,4 +122,22 @@ const Route = props => {
   )
 }
 
-export default Route
+export default createFragmentContainer(Route, {
+  flight: graphql`
+    fragment Route_flight on Route {
+      from {
+        city
+        iata
+        timeLocal
+      }
+      to {
+        city
+        iata
+        timeLocal
+      }
+      parts {
+        carrier
+      }
+    }
+  `
+})

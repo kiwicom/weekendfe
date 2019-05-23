@@ -1,6 +1,7 @@
 import mapboxgl from "mapbox-gl/dist/mapbox-gl"
 import React, { useEffect, useRef, useState } from "react"
 import ReactDOM from "react-dom"
+import { graphql, createFragmentContainer } from "@kiwicom/relay"
 import styled, { ThemeProvider } from "styled-components"
 import Text from "@kiwicom/orbit-components/lib/Text"
 import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
@@ -90,7 +91,7 @@ function Map({ places }) {
         return null
       }
 
-      const markers = places.map(place => {
+      const markers = places.interests.map(place => {
         const el = document.createElement("div") // eslint-disable-line
         el.className = "marker"
         const marker = new mapboxgl.Marker(el)
@@ -116,7 +117,7 @@ function Map({ places }) {
 
       const bounds = new mapboxgl.LngLatBounds()
 
-      places.forEach(place => {
+      places.interests.forEach(place => {
         bounds.extend([place.coords.lon, place.coords.lat])
       })
 
@@ -136,4 +137,18 @@ function Map({ places }) {
   return <MapWrapper ref={mapRef} />
 }
 
-export default Map
+export default createFragmentContainer(Map, {
+  places: graphql`
+    fragment Map_places on Route {
+      interests {
+        name
+        coords {
+          lat
+          lon
+        }
+        img
+        score
+      }
+    }
+  `
+})

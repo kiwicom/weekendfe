@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { graphql, QueryRenderer } from "@kiwicom/relay"
 import Heading from "@kiwicom/orbit-components/lib/Heading"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
 import ButtonLink from "@kiwicom/orbit-components/lib/ButtonLink"
@@ -16,14 +17,13 @@ import ModalSection from "@kiwicom/orbit-components/lib/Modal/ModalSection"
 import { Alert } from "@kiwicom/orbit-components/"
 import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
 
+import { weekendapiEnvironment } from "../lib/enviroment"
 import PlaceCard from "../components/PlaceCard"
 import Footer from "../components/Footer"
 import ShareModal from "../components/ShareModal"
-import itemsQuery from "../queries/items.gql"
 import NavBar from "../components/NavBar"
 import Timeline from "../components/Timeline"
 import MapLoading from "../components/MapLoading"
-import Query from "../components/query"
 
 const Places = styled.div`
   display: block;
@@ -52,7 +52,7 @@ Places.defaultProps = {
   theme: defaultTheme
 }
 
-const DynamicMap = dynamic(() => import("./../components/Map"), {
+const Map = dynamic(() => import("./../components/Map"), {
   loading: () => <MapLoading text="Loading..." />,
   ssr: false
 })
@@ -93,96 +93,125 @@ function ErrorModal() {
   )
 }
 
+const renderQueryRendererResponse = ({
+  rendererProps,
+  query,
+  cityIndex,
+  setCityIndex,
+  isVisibleShareModal,
+  setVisibleShareModal
+}) => {
+  const trip = rendererProps.item.route[cityIndex]
+  const { destination } = trip
+
+  const places = rendererProps.item.route.map(
+    route => route.destination
+  )
+
+  return (
+    <PlacesContainer>
+      <NavBar>
+        <Timeline
+          onSelect={setCityIndex}
+          places={places}
+          selected={cityIndex}
+        />
+      </NavBar>
+      <Stack direction="row">
+        <LeftSide>
+          <Map places={trip} />
+        </LeftSide>
+        <Places>
+          <Heading type="title2" spaceAfter="largest">
+            Places to visit in {destination.city}
+          </Heading>
+          <PlaceCard places={trip} />
+        </Places>
+        <Footer
+          leftActions={
+            <ButtonLink
+              type="secondary"
+              icon={<Share />}
+              onClick={() => setVisibleShareModal(true)}
+            >
+              Share
+            </ButtonLink>
+          }
+          rightActions={
+            <Stack direction="row" justify="end" shrink>
+              {/* 
+                <Button
+                  type="secondary"
+                  iconLeft={<ChevronLeft />}
+                  onClick={}
+                >
+                  Previous Step
+                </Button>
+              */}
+              <Button
+                href={`https://www.kiwi.com/en/booking?token=${
+                  query.bookingToken
+                }`}
+                external
+                iconLeft={<Kiwicom />}
+              >
+                Book the flight
+              </Button>
+            </Stack>
+          }
+        />
+        {isVisibleShareModal && (
+          <ShareModal onClose={setVisibleShareModal} />
+        )}
+      </Stack>
+    </PlacesContainer>
+  )
+}
+
 const PlacesPage = ({ query }) => {
   const [cityIndex, setCityIndex] = useState(0)
 
   const [isVisibleShareModal, setVisibleShareModal] = useState(false)
 
   return (
-    <PlacesContainer>
-      <Query
-        query={itemsQuery}
-        variables={{
-          interest: query.interest,
-          bookingToken: query.bookingToken
-        }}
-        context={{ uri: "https://weekend-api.now.sh/" }}
-      >
-        {({ loading, error, data }) => {
-          if (loading) {
-            return <MapLoading text="Loading" />
+    <QueryRenderer
+      clientID="https://github.com/kiwicom/weekendfe"
+      query={graphql`
+        query placesQuery(
+          $interest: String!
+          $bookingToken: String!
+        ) {
+          item(interest: $interest, bookingToken: $bookingToken) {
+            price
+            route {
+              ...Map_places
+              ...PlaceCard_places
+              destination {
+                city
+                country
+              }
+            }
           }
-          if (error) {
-            return <ErrorModal />
-          }
-
-          const { interests, destination } = data.item.route[
-            cityIndex
-          ]
-
-          const places = data.item.route.map(
-            route => route.destination
-          )
-
-          return (
-            <>
-              <NavBar>
-                <Timeline
-                  onSelect={setCityIndex}
-                  places={places}
-                  selected={cityIndex}
-                />
-              </NavBar>
-              <Stack direction="row">
-                <LeftSide>
-                  <DynamicMap places={interests} />
-                </LeftSide>
-                <Places>
-                  <Heading type="title2" spaceAfter="largest">
-                    Places to visit in {destination.city}
-                  </Heading>
-                  <PlaceCard places={interests} />
-                </Places>
-                <Footer
-                  leftActions={
-                    <ButtonLink
-                      type="secondary"
-                      icon={<Share />}
-                      onClick={() => setVisibleShareModal(true)}
-                    >
-                      Share
-                    </ButtonLink>
-                  }
-                  rightActions={
-                    <Stack direction="row" justify="end" shrink>
-                      {/* <Button
-                        type="secondary"
-                        iconLeft={<ChevronLeft />}
-                        onClick={}
-                      >
-                        Previous Step
-                      </Button> */}
-                      <Button
-                        href={`https://www.kiwi.com/en/booking?token=${
-                          query.bookingToken
-                        }`}
-                        external
-                        iconLeft={<Kiwicom />}
-                      >
-                        Book the flight
-                      </Button>
-                    </Stack>
-                  }
-                />
-                {isVisibleShareModal && (
-                  <ShareModal onClose={setVisibleShareModal} />
-                )}
-              </Stack>
-            </>
-          )
-        }}
-      </Query>
-    </PlacesContainer>
+        }
+      `}
+      variables={{
+        interest: query.interest,
+        bookingToken: query.bookingToken
+      }}
+      environment={weekendapiEnvironment}
+      onLoading={() => <MapLoading text="Loading" />}
+      onSystemError={() => <ErrorModal />}
+      onResponse={rendererProps =>
+        renderQueryRendererResponse({
+          rendererProps,
+          query,
+          cityIndex,
+          setCityIndex,
+          isVisibleShareModal,
+          setVisibleShareModal
+        })
+      }
+    />
   )
 }
 
