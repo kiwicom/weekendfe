@@ -1,6 +1,5 @@
 import * as React from "react"
 import styled from "styled-components"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
 
 const StyledHandle = styled.button`
   display: flex;
@@ -30,10 +29,6 @@ const StyledHandle = styled.button`
   }
 `
 
-StyledHandle.defaultProps = {
-  theme: defaultTheme
-}
-
 const StyledHandleCircle = styled.div`
   flex-shrink: 0;
   height: 14px;
@@ -43,10 +38,6 @@ const StyledHandleCircle = styled.div`
   top: 50%;
   left: 50%;
 `
-
-StyledHandleCircle.defaultProps = {
-  theme: defaultTheme
-}
 
 const Handle = ({
   domain: [min, max],

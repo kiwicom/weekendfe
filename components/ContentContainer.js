@@ -1,6 +1,5 @@
 import * as React from "react"
 import styled, { css } from "styled-components"
-import { defaultTheme } from "@kiwicom/orbit-components"
 import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"
 
 const StyledContentWrapper = styled.main`
@@ -19,10 +18,6 @@ const StyledContentContainer = styled.div`
   max-width: 1280px;
   margin: 0 auto;
 `
-
-StyledContentContainer.defaultProps = {
-  theme: defaultTheme
-}
 
 const ContentContainer = ({ children }) => (
   <StyledContentWrapper>

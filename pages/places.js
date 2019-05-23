@@ -1,20 +1,20 @@
 import { useState } from "react"
 import { graphql, QueryRenderer } from "@kiwicom/relay"
-import Heading from "@kiwicom/orbit-components/lib/Heading"
-import Stack from "@kiwicom/orbit-components/lib/Stack"
-import ButtonLink from "@kiwicom/orbit-components/lib/ButtonLink"
-import Button from "@kiwicom/orbit-components/lib/Button"
-import Share from "@kiwicom/orbit-components/lib/icons/Share"
-import Kiwicom from "@kiwicom/orbit-components/lib/icons/Kiwicom"
+import {
+  Heading,
+  Stack,
+  ButtonLink,
+  Button,
+  Alert,
+  Modal,
+  Portal
+} from "@kiwicom/orbit-components"
+import { Share, Kiwicom } from "@kiwicom/orbit-components/lib/icons"
 import { StyledCardSectionContent } from "@kiwicom/orbit-components/lib/Card/CardSection/CardSectionContent"
 import styled, { css } from "styled-components"
 import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"
 import dynamic from "next/dynamic"
-import Portal from "@kiwicom/orbit-components/lib/Portal"
-import Modal from "@kiwicom/orbit-components/lib/Modal"
 import ModalSection from "@kiwicom/orbit-components/lib/Modal/ModalSection"
-import { Alert } from "@kiwicom/orbit-components/"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
 
 import { weekendapiEnvironment } from "../lib/enviroment"
 import PlaceCard from "../components/PlaceCard"
@@ -46,10 +46,6 @@ const Places = styled.div`
     width: 70%;
   `)}
 `
-
-Places.defaultProps = {
-  theme: defaultTheme
-}
 
 const Map = dynamic(() => import("./../components/Map"), {
   loading: () => <MapLoading text="Loading..." />,

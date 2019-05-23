@@ -1,7 +1,6 @@
-import { useRef, useState } from "react"
+import React, { useRef, useState } from "react"
 import { addDays, format } from "date-fns"
-import Stack from "@kiwicom/orbit-components/lib/Stack"
-import Checkbox from "@kiwicom/orbit-components/lib/Checkbox"
+import { Stack, Checkbox } from "@kiwicom/orbit-components"
 
 import useUrl from "./useUrl"
 import Stepper from "./Stepper"

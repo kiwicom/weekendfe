@@ -1,7 +1,6 @@
 import * as React from "react"
 import styled from "styled-components"
-import Button from "@kiwicom/orbit-components/lib/Button"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
+import { Button } from "@kiwicom/orbit-components"
 
 const TagTimeline = styled.div`
   display: flex;
@@ -12,10 +11,6 @@ const TagTimeline = styled.div`
   z-index: 10;
 `
 
-TagTimeline.defaultProps = {
-  theme: defaultTheme
-}
-
 const Line = styled.div`
   display: block;
   position: absolute;
@@ -24,10 +19,6 @@ const Line = styled.div`
   background-color: ${({ theme }) => theme.orbit.paletteCloudLight};
   z-index: 9;
 `
-
-Line.defaultProps = {
-  theme: defaultTheme
-}
 
 const Timeline = ({ places, onSelect, selected }) => (
   <>

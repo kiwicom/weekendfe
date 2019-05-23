@@ -1,11 +1,13 @@
 import { format, addDays } from "date-fns"
 import styled from "styled-components"
 import { graphql, QueryRenderer } from "@kiwicom/relay"
-import Button from "@kiwicom/orbit-components/lib/Button"
-import Stack from "@kiwicom/orbit-components/lib/Stack"
-import Heading from "@kiwicom/orbit-components/lib/Heading"
-import Loading from "@kiwicom/orbit-components/lib/Loading"
-import ChevronLeft from "@kiwicom/orbit-components/lib/icons/ChevronLeft"
+import {
+  Stack,
+  Button,
+  Heading,
+  Loading
+} from "@kiwicom/orbit-components"
+import { ChevronLeft } from "@kiwicom/orbit-components/lib/icons"
 import Router from "next/router"
 
 import { weekendapiEnvironment } from "../lib/enviroment"

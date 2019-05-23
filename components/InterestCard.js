@@ -1,9 +1,6 @@
 import * as React from "react"
 import styled, { css } from "styled-components"
-import Stack from "@kiwicom/orbit-components/lib/Stack"
-import Text from "@kiwicom/orbit-components/lib/Text"
-import Radio from "@kiwicom/orbit-components/lib/Radio"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
+import { Stack, Hide, Text, Radio } from "@kiwicom/orbit-components/"
 import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"
 
 const StyledInterestCard = styled.div`
@@ -21,7 +18,8 @@ const StyledInterestCard = styled.div`
     transform ${({ theme }) => theme.orbit.durationFast} ease-in-out;
 
   ${mq.largeMobile(css`
-    max-width: 180px;
+    max-width: 177px;
+    flex-shrink: 1;
   `)};
 
   :hover,
@@ -37,10 +35,6 @@ const StyledInterestCard = styled.div`
     transform: scale(0.98);
   }
 `
-
-StyledInterestCard.defaultProps = {
-  theme: defaultTheme
-}
 
 const StyledContent = styled.div`
   width: 100%;
@@ -79,8 +73,10 @@ const InterestCard = ({
       tabIndex={0}
       onKeyDown={handleKeyDown}
     >
-      <Stack direction="row" justify="between" align="center">
-        <StyledIcon>{icon}</StyledIcon>
+      <Stack direction="row" justify="between" align="center" shrink>
+        <Hide on={["largeMobile"]}>
+          <StyledIcon>{icon}</StyledIcon>
+        </Hide>
         <StyledContent>
           <Text weight="bold">{title}</Text>
         </StyledContent>

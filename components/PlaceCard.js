@@ -1,22 +1,9 @@
 import * as React from "react"
 import { graphql, createFragmentContainer } from "@kiwicom/relay"
 import styled from "styled-components"
-import Checkbox, {
-  Label
-} from "@kiwicom/orbit-components/lib/Checkbox"
-import Text from "@kiwicom/orbit-components/lib/Text"
-import Stack from "@kiwicom/orbit-components/lib/Stack"
+import { Label } from "@kiwicom/orbit-components/lib/Checkbox"
+import { Text, Stack } from "@kiwicom/orbit-components"
 import { StyledButtonLink } from "@kiwicom/orbit-components/lib/ButtonLink"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
-
-const StyledPlaces = styled.div`
-  display: block;
-  width: 100%;
-`
-
-StyledPlaces.defaultProps = {
-  theme: defaultTheme
-}
 
 const StyledPlaceCard = styled.div`
   width: 100%;
@@ -44,10 +31,6 @@ const StyledPlaceCard = styled.div`
     flex-shrink: 0;
   }
 `
-
-StyledPlaceCard.defaultProps = {
-  theme: defaultTheme
-}
 
 const PlaceCard = ({ places }) => (
   <Stack direction="column">

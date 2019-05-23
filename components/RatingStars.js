@@ -1,8 +1,9 @@
 import * as React from "react"
 import styled from "styled-components"
-import StarEmpty from "@kiwicom/orbit-components/lib/icons/StarEmpty"
-import StarFull from "@kiwicom/orbit-components/lib//icons/StarFull"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
+import {
+  StarEmpty,
+  StarFull
+} from "@kiwicom/orbit-components/lib/icons"
 
 const StyledRatingStars = styled.div`
   display: flex;
@@ -15,10 +16,6 @@ const StyledRatingStars = styled.div`
     color: ${({ theme }) => theme.orbit.paletteProductNormal};
   }
 `
-
-StyledRatingStars.defaultProps = {
-  theme: defaultTheme
-}
 
 const maxStars = 5
 

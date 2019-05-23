@@ -1,11 +1,13 @@
 import { graphql, createFragmentContainer } from "@kiwicom/relay"
-import Button from "@kiwicom/orbit-components/lib/Button"
-import Card from "@kiwicom/orbit-components/lib/Card"
-import Illustration from "@kiwicom/orbit-components/lib/Illustration"
+import {
+  Button,
+  Card,
+  Illustration,
+  Hide,
+  Stack,
+  Text
+} from "@kiwicom/orbit-components"
 import CardSection from "@kiwicom/orbit-components/lib/Card/CardSection"
-import Hide from "@kiwicom/orbit-components/lib/Hide"
-import Stack from "@kiwicom/orbit-components/lib/Stack"
-import Text from "@kiwicom/orbit-components/lib/Text"
 import { differenceInHours } from "date-fns"
 import Router from "next/router"
 import * as React from "react"
