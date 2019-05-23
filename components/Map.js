@@ -10,7 +10,7 @@ import { getTokens } from "@kiwicom/orbit-components"
 import RatingStars from "./RatingStars"
 
 mapboxgl.accessToken =
-  "pk.eyJ1IjoibWljaGFlbGtpd2kiLCJhIjoiY2pyM2FjcGUyMGU2dTQycDE3ajQ3b3B6eiJ9.iJ4UL0VhJj1xvIG3vozlrQ"
+  "pk.eyJ1IjoidmVwb3IiLCJhIjoiY2p3MGxnM3FnMGJidDQ5bzJ5c3NzaWg1OCJ9.ev9US4E_fo-a1xIOfpydmA"
 
 const MapWrapper = styled.div`
   position: absolute;
