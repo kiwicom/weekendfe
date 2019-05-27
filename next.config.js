@@ -4,7 +4,6 @@ const withBundleAnalyzer = require("@zeit/next-bundle-analyzer")
 const dotenv = require("dotenv")
 
 dotenv.config()
-console.log(dotenv)
 const env = name => process.env[name] || ""
 
 const debug = process.env.NODE_ENV !== "production"
