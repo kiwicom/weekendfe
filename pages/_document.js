@@ -3,7 +3,7 @@ import { ServerStyleSheet } from "styled-components"
 
 import Body from "../components/Body"
 
-const faviconUrl = `${BASE_URL}/static/favicon.ico`
+const faviconUrl = `/static/favicon.ico`
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {

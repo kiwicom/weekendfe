@@ -28,17 +28,6 @@ const nextConfig = {
       "/places": { page: "places" },
       "/result": { page: "result" }
     }
-  },
-  // assetPrefix: debug ? "" : `/${repoName}/`,
-  webpack(config) {
-    config.plugins = [
-      ...(config.plugins || []),
-      new webpack.DefinePlugin({
-        BASE_URL: debug ? "" : "" // `'/${repoName}/'`
-      })
-    ]
-
-    return config
   }
 }
 

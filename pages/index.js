@@ -38,7 +38,7 @@ const changePlacesState = newPlaces => {
 const handleOnSearchClick = selectedPlaces => {
   const values = { ...defaultValues, ...Router.query }
   const newUrl = {
-    pathname: `${BASE_URL}/result`,
+    pathname: `/result`,
     query: {
       ...values,
       dateFrom: format(values.dateFrom, "YYYY-MM-DD"),
