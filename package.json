@@ -10,6 +10,7 @@
     "start": "next start",
     "export": "next export",
     "schema": "graphql get-schema",
+    "lint": "eslint components",
     "relay": "relay-compiler --src=./ --schema=./schema.graphql --exclude='**/node_modules/**', '**/.next/**', '**/out/**', '**/__generated__/**'",
     "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages",
     "analyze": "BUNDLE_ANALYZE=both next build",
@@ -51,6 +52,7 @@
     "eslint-plugin-react-hooks": "^1.6.0",
     "graphql": "^14.3.0",
     "graphql-cli": "3.0.11",
-    "prettier": "^1.15.3"
+    "prettier": "^1.15.3",
+    "webpack": "^4.32.2"
   }
 }
