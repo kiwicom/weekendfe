@@ -1,11 +1,7 @@
 import * as React from "react"
 import App, { Container } from "next/app"
 import Head from "next/head"
-import {
-  getTokens,
-  defaultTheme,
-  ThemeProvider
-} from "@kiwicom/orbit-components"
+import { getTokens, ThemeProvider } from "@kiwicom/orbit-components"
 import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
@@ -16,10 +12,6 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.orbit.paletteCloudLight};
   }
 `
-
-GlobalStyle.defaultProps = {
-  theme: defaultTheme
-}
 
 class MyApp extends App {
   render() {

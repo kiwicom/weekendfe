@@ -10,7 +10,7 @@ import {
 import {
   ChevronLeft,
   ChevronRight
-} from "@kiwicom/orbit-components/lib/icons/ChevronLeft"
+} from "@kiwicom/orbit-components/lib/icons"
 import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"
 import { format } from "date-fns"
 
@@ -126,8 +126,6 @@ const StyledCalendarWeekday = styled.div`
   width: 50px;
 `
 
-// TODO: range selected if wanted
-
 const DatePicker = ({
   label,
   onFocus,
@@ -167,12 +165,14 @@ const DatePicker = ({
                     icon={<ChevronLeft />}
                     type="secondary"
                     size="small"
+                    title="Previous"
                   />
                   <Button
                     {...getForwardProps({ calendars })}
                     icon={<ChevronRight />}
                     type="secondary"
                     size="small"
+                    title="Next"
                   />
                 </Stack>
                 <Stack direction="row" spacing="extraLoose">

@@ -4,17 +4,13 @@ import {
   Heading,
   Stack,
   ButtonLink,
-  Button,
-  Alert,
-  Modal,
-  Portal
+  Button
 } from "@kiwicom/orbit-components"
 import { Share, Kiwicom } from "@kiwicom/orbit-components/lib/icons"
 import { StyledCardSectionContent } from "@kiwicom/orbit-components/lib/Card/CardSection/CardSectionContent"
 import styled, { css } from "styled-components"
 import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"
 import dynamic from "next/dynamic"
-import ModalSection from "@kiwicom/orbit-components/lib/Modal/ModalSection"
 
 import { weekendapiEnvironment } from "../lib/enviroment"
 import PlaceCard from "../components/PlaceCard"
@@ -23,6 +19,7 @@ import ShareModal from "../components/ShareModal"
 import NavBar from "../components/NavBar"
 import Timeline from "../components/Timeline"
 import MapLoading from "../components/MapLoading"
+import ErrorModal from "../components/ErrorModal"
 
 const Places = styled.div`
   display: block;
@@ -72,22 +69,6 @@ const LeftSide = styled.div`
   `)}
 `
 
-function ErrorModal() {
-  return (
-    <Portal element="modals">
-      <Modal>
-        <ModalSection>
-          <Alert type="critical" title="Something went wrong.">
-            The map could not be loaded.
-            <br />
-            Please reload the page.
-          </Alert>
-        </ModalSection>
-      </Modal>
-    </Portal>
-  )
-}
-
 const renderQueryRendererResponse = ({
   rendererProps,
   query,
@@ -134,15 +115,6 @@ const renderQueryRendererResponse = ({
           }
           rightActions={
             <Stack direction="row" justify="end" shrink>
-              {/*
-                <Button
-                  type="secondary"
-                  iconLeft={<ChevronLeft />}
-                  onClick={}
-                >
-                  Previous Step
-                </Button>
-              */}
               <Button
                 href={`https://www.kiwi.com/en/booking?token=${
                   query.bookingToken

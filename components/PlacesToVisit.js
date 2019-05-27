@@ -55,6 +55,7 @@ const PlaceToVisit = ({
         iconLeft={<CloseCircle />}
         disabled={!onRemoveClick}
         onClick={onRemoveClick}
+        title="Remove"
       />
     </Stack>
   )
@@ -63,7 +64,6 @@ const PlaceToVisit = ({
 const defaultDays = [2, 5]
 
 function reducer(places, { type, payload }) {
-  console.log(places)
   const newPlaces = places && places.concat()
   switch (type) {
     case "reset":

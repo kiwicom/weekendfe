@@ -65,6 +65,7 @@ const PlacePicker = ({
                 onClick={clearSelection}
                 transparent
                 iconLeft={<Close />}
+                title="Delete"
               />
             }
           />

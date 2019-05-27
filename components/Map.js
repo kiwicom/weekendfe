@@ -51,8 +51,8 @@ StyledMarker.defaultProps = {
 
 const StyledImage = styled.div`
   display: block;
-  width: 48px;
-  height: 48px;
+  width: 51px;
+  height: 51px;
   background-image: ${({ bg }) => `url(${bg})`};
   background-repeat: no-repeat;
   background-size: cover;

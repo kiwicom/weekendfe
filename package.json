@@ -1,5 +1,5 @@
 {
-  "name": "js-weekend-brno-fe",
+  "name": "weekendfe",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -36,6 +36,7 @@
     "styled-components": "4.2.0"
   },
   "devDependencies": {
+    "@kiwicom/babel-plugin-orbit-components": "^1.2.0",
     "babel-eslint": "^10.0.1",
     "babel-plugin-import-graphql": "^2.6.2",
     "babel-plugin-styled-components": "^1.10.0",
@@ -47,7 +48,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.3",
-    "eslint-plugin-react-hooks": "^0.0.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
     "graphql": "^14.3.0",
     "graphql-cli": "3.0.11",
     "prettier": "^1.15.3"

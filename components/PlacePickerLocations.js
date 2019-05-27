@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useCallback } from "react"
 import { graphql, QueryRenderer } from "@kiwicom/relay"
 import styled from "styled-components"
 import {
@@ -51,17 +51,19 @@ const PlacePicker = ({
   const [changed, setChanged] = useState(false)
   const debouncedValue = useDebounce(value, 150)
 
+  const handleStateChange = ({ inputValue }) => {
+    if (inputValue) {
+      setValue(inputValue)
+      setChanged(true)
+    }
+  }
+
   return (
     <StyledPlacePicker>
       <Downshift
         itemToString={item => (item ? item.name : "")}
         initialSelectedItem={defaultValue}
-        onStateChange={({ inputValue }) => {
-          if (inputValue) {
-            setValue(inputValue)
-            setChanged(true)
-          }
-        }}
+        onStateChange={handleStateChange}
         onChange={onChange}
       >
         {(
@@ -112,6 +114,7 @@ const PlacePicker = ({
                     onClick={clearSelection}
                     transparent
                     iconLeft={<Close />}
+                    title="Delete"
                   />
                 }
               />

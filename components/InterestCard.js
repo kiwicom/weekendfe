@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useCallback } from "react"
 import styled, { css } from "styled-components"
 import { Stack, Hide, Text, Radio } from "@kiwicom/orbit-components/"
 import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"
@@ -60,16 +60,27 @@ const InterestCard = ({
   onChange,
   onClick
 }) => {
-  const handleKeyDown = event => {
-    if (onClick) {
-      if (event.keyCode === 32) {
+  const handleKeyDown = useCallback(
+    event => {
+      if (onClick) {
+        if (event.keyCode === 32) {
+          onClick(value)
+        }
+      }
+    },
+    [onClick, value]
+  )
+  const handleClick = useCallback(
+    () => {
+      if (onClick) {
         onClick(value)
       }
-    }
-  }
+    },
+    [onClick, value]
+  )
   return (
     <StyledInterestCard
-      onClick={() => onClick(value)}
+      onClick={handleClick}
       tabIndex={0}
       onKeyDown={handleKeyDown}
     >

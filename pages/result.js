@@ -1,4 +1,4 @@
-import { format, addDays } from "date-fns"
+import React, { format, addDays } from "date-fns"
 import styled from "styled-components"
 import { graphql, QueryRenderer } from "@kiwicom/relay"
 import {

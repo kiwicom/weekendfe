@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useCallback } from "react"
 import styled from "styled-components"
 import {
   ButtonLink,
@@ -28,10 +28,13 @@ const Stepper = ({
   const [count, setCount] = useState(value)
   const [isOpen, setOpen] = useState(false)
 
-  const handleChange = newValue => {
-    if (onChange) onChange(newValue)
-    setCount(newValue)
-  }
+  const handleChange = useCallback(
+    newValue => {
+      if (onChange) onChange(newValue)
+      setCount(newValue)
+    },
+    [onChange]
+  )
 
   return (
     <StyledStepper>

@@ -2,6 +2,7 @@
   "presets": ["next/babel"],
   "plugins": [
     ["styled-components", { "ssr": true, "transpileTemplateLiterals": true }],
+    ["@kiwicom/orbit-components"],
     ["import-graphql"],
     ["relay"]
   ]

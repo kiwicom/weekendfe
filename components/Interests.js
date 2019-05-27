@@ -6,8 +6,6 @@ import {
   Shopping
 } from "@kiwicom/orbit-components/lib/icons"
 import { Stack } from "@kiwicom/orbit-components"
-import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"
-import styled, { css } from "styled-components"
 
 import InterestCard from "./InterestCard"
 import useUrl from "./useUrl"
@@ -28,13 +26,16 @@ export default function Interests({ defaultValue }) {
     defaultValue || INTERESTS[0].value,
     "interest"
   )
-  const handleOnChange = useCallback(e => {
+  const handleOnChange = e => {
     setInterest(e.target.value)
-  })
+  }
 
-  const handleOnClick = useCallback(value => {
-    setInterest(value)
-  })
+  const handleOnClick = useCallback(
+    value => {
+      setInterest(value)
+    },
+    [setInterest]
+  )
 
   return (
     <Stack
@@ -45,7 +46,7 @@ export default function Interests({ defaultValue }) {
       {INTERESTS.map((item, key) => (
         <InterestCard
           // eslint-disable-next-line
-            key={key}
+          key={key}
           title={item.title}
           value={item.value}
           checked={interest === item.value}
