@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react"
+import React, { useState } from "react"
 import { graphql, QueryRenderer } from "@kiwicom/relay"
 import styled from "styled-components"
 import {

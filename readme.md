@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/kiwicom/weekendfe.svg?style=svg)](https://circleci.com/gh/kiwicom/weekendfe)
 # DONE
 
 - [x] NextJS
