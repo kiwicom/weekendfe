@@ -1,3 +1,4 @@
+// @flow
 import * as React from "react"
 import styled from "styled-components"
 
@@ -7,6 +8,8 @@ const StyledBody = styled.body`
   margin: 0;
 `
 
-const Body = ({ children }) => <StyledBody>{children}</StyledBody>
+const Body = ({ children }: { children: React.Node }) => (
+  <StyledBody>{children}</StyledBody>
+)
 
 export default Body
