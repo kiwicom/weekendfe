@@ -14,7 +14,7 @@ const {
   publicRuntimeConfig: { mapToken }
 } = getConfig()
 
-mapboxgl.accessToken = mapToken
+mapboxgl.accessToken = mapToken || ""
 
 const MapWrapper = styled.div`
   position: absolute;
