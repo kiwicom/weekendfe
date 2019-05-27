@@ -23,6 +23,10 @@
 
 ## sources
 
+### MapBox
+- register https://account.mapbox.com/auth/signup/ and create API key
+- create `.env` file with `MAP_TOKEN` variable
+
 ### Hooks
 
 - https://usehooks.com
