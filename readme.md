@@ -37,4 +37,4 @@
 
 ### Flow
 - https://flow.org
-- https://egghead.io/lessons/javascript-up-and-running-with-facebook-flow-for-typed-javascript
+- https://www.youtube.com/watch?v=V1po0BT7kac
