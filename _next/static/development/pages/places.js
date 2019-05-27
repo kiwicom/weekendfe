@@ -1,9 +1,9 @@
-((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/result.js"],{
+((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/places.js"],{
 
-/***/ "./components/ContentContainer.js":
-/*!****************************************!*\
-  !*** ./components/ContentContainer.js ***!
-  \****************************************/
+/***/ "./components/ErrorModal.js":
+/*!**********************************!*\
+  !*** ./components/ErrorModal.js ***!
+  \**********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -11,46 +11,59 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_utils_mediaQuery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/utils/mediaQuery */ "./node_modules/@kiwicom/orbit-components/lib/utils/mediaQuery/index.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_utils_mediaQuery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_utils_mediaQuery__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/ludekveprek/WebstormProjects/weekendfe/components/ContentContainer.js";
+/* harmony import */ var _kiwicom_orbit_components_lib_Portal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Portal */ "./node_modules/@kiwicom/orbit-components/lib/Portal/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Portal__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Portal__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _kiwicom_orbit_components_lib_Modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Modal */ "./node_modules/@kiwicom/orbit-components/lib/Modal/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Modal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Modal__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _kiwicom_orbit_components_lib_Alert__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Alert */ "./node_modules/@kiwicom/orbit-components/lib/Alert/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Alert__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Alert__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _kiwicom_orbit_components_lib_Modal_ModalSection__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Modal/ModalSection */ "./node_modules/@kiwicom/orbit-components/lib/Modal/ModalSection/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Modal_ModalSection__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Modal_ModalSection__WEBPACK_IMPORTED_MODULE_4__);
+var _jsxFileName = "/Users/ludekveprek/WebstormProjects/weekendfe/components/ErrorModal.js";
 
 
 
-var StyledContentWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].main.withConfig({
-  displayName: "ContentContainer__StyledContentWrapper",
-  componentId: "sc-18spmi2-0"
-})(["box-sizing:border-box;display:block;width:100%;padding:", ";", ""], function (_ref) {
-  var theme = _ref.theme;
-  return "".concat(theme.orbit.spaceXXXLarge, " ").concat(theme.orbit.spaceMedium);
-}, _kiwicom_orbit_components_lib_utils_mediaQuery__WEBPACK_IMPORTED_MODULE_2___default.a.desktop(Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["padding:", ";"], function (_ref2) {
-  var theme = _ref2.theme;
-  return theme.orbit.spaceXXXLarge;
-})));
-var StyledContentContainer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
-  displayName: "ContentContainer__StyledContentContainer",
-  componentId: "sc-18spmi2-1"
-})(["max-width:1280px;margin:0 auto;"]);
 
-var ContentContainer = function ContentContainer(_ref3) {
-  var children = _ref3.children;
-  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](StyledContentWrapper, {
+
+
+var ErrorModal = function ErrorModal() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Portal__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    element: "modals",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 6
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](StyledContentContainer, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Modal__WEBPACK_IMPORTED_MODULE_2___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 7
     },
     __self: this
-  }, children));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Modal_ModalSection__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Alert__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    type: "critical",
+    title: "Something went wrong.",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, "The map could not be loaded.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }), "Please reload the page."))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (ContentContainer);
+/* harmony default export */ __webpack_exports__["default"] = (ErrorModal);
 
 /***/ }),
 
@@ -110,10 +123,91 @@ var Footer = function Footer(_ref) {
 
 /***/ }),
 
-/***/ "./components/Itinerary/Route.js":
-/*!***************************************!*\
-  !*** ./components/Itinerary/Route.js ***!
-  \***************************************/
+/***/ "./components/MapLoading.js":
+/*!**********************************!*\
+  !*** ./components/MapLoading.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Loading__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Loading */ "./node_modules/@kiwicom/orbit-components/lib/Loading/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Loading__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Loading__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/ludekveprek/WebstormProjects/weekendfe/components/MapLoading.js";
+
+
+
+var LoadingContainer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "MapLoading__LoadingContainer",
+  componentId: "prftf9-0"
+})(["display:flex;align-items:center;justify-content:center;width:66%;height:100%;position:absolute;top:0;left:0;right:0;bottom:0;z-index:3;background-color:rgba(0,0,0,0.6);"]);
+
+var MapLoading = function MapLoading(_ref) {
+  var text = _ref.text;
+  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](LoadingContainer, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Loading__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    loading: true,
+    text: text,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (MapLoading);
+
+/***/ }),
+
+/***/ "./components/NavBar.js":
+/*!******************************!*\
+  !*** ./components/NavBar.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+var _jsxFileName = "/Users/ludekveprek/WebstormProjects/weekendfe/components/NavBar.js";
+
+
+var StyledNavBar = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "NavBar__StyledNavBar",
+  componentId: "sc-1buc4nu-0"
+})(["display:flex;box-sizing:border-box;padding:0 24px;width:100%;height:90px;background:white;justify-content:space-between;align-items:center;z-index:10;top:0;left:0;right:0;box-shadow:0 2px 8px rgba(23,27,30,0.15);"]);
+
+var NavBar = function NavBar(_ref) {
+  var children = _ref.children;
+  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](StyledNavBar, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, children);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (NavBar);
+
+/***/ }),
+
+/***/ "./components/PlaceCard.js":
+/*!*********************************!*\
+  !*** ./components/PlaceCard.js ***!
+  \*********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -124,21 +218,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _kiwicom_relay__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @kiwicom/relay */ "./node_modules/@kiwicom/relay/src/index.js");
 /* harmony import */ var _kiwicom_relay__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_relay__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_getTokens__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/getTokens */ "./node_modules/@kiwicom/orbit-components/lib/getTokens.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_getTokens__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_getTokens__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _kiwicom_orbit_components_lib_CarrierLogo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/CarrierLogo */ "./node_modules/@kiwicom/orbit-components/lib/CarrierLogo/index.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_CarrierLogo__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_CarrierLogo__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _kiwicom_orbit_components_lib_Hide__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Hide */ "./node_modules/@kiwicom/orbit-components/lib/Hide/index.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_Hide__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Hide__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Text */ "./node_modules/@kiwicom/orbit-components/lib/Text/index.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Stack */ "./node_modules/@kiwicom/orbit-components/lib/Stack/index.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _kiwicom_orbit_components_lib_icons_FlightDirect__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/icons/FlightDirect */ "./node_modules/@kiwicom/orbit-components/lib/icons/FlightDirect.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_icons_FlightDirect__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_icons_FlightDirect__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/index.js");
-/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(date_fns__WEBPACK_IMPORTED_MODULE_9__);
-var _jsxFileName = "/Users/ludekveprek/WebstormProjects/weekendfe/components/Itinerary/Route.js";
+/* harmony import */ var _kiwicom_orbit_components_lib_Checkbox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Checkbox */ "./node_modules/@kiwicom/orbit-components/lib/Checkbox/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Checkbox__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Checkbox__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Stack */ "./node_modules/@kiwicom/orbit-components/lib/Stack/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Text */ "./node_modules/@kiwicom/orbit-components/lib/Text/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _kiwicom_orbit_components_lib_ButtonLink__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/ButtonLink */ "./node_modules/@kiwicom/orbit-components/lib/ButtonLink/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_ButtonLink__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_ButtonLink__WEBPACK_IMPORTED_MODULE_6__);
+var _jsxFileName = "/Users/ludekveprek/WebstormProjects/weekendfe/components/PlaceCard.js";
 
 
 
@@ -146,753 +234,93 @@ var _jsxFileName = "/Users/ludekveprek/WebstormProjects/weekendfe/components/Iti
 
 
 
-
-
-
-var StyledNights = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
-  displayName: "Route__StyledNights",
-  componentId: "sc-2qnjaq-0"
-})(["display:flex;flex-direction:row;align-items:center;width:150px;"]);
-var StyledLine = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
-  displayName: "Route__StyledLine",
-  componentId: "sc-2qnjaq-1"
-})(["display:block;height:1px;width:150px;background-color:", ";"], function (_ref) {
+var StyledPlaceCard = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
+  displayName: "PlaceCard__StyledPlaceCard",
+  componentId: "sb75dw-0"
+})(["width:100%;display:flex;box-sizing:border-box;flex-direction:row;justify-content:space-between;align-items:center;background-color:", ";padding:", ";border-radius:", ";border-bottom:1px solid ", ";box-shadow:", ";border-radius:", ";", "{width:auto;align-self:flex-start;padding-right:", ";}", "{flex-shrink:0;}"], function (_ref) {
   var theme = _ref.theme;
-  return theme.orbit.paletteCloudNormal;
-});
+  return theme.orbit.paletteWhite;
+}, function (_ref2) {
+  var theme = _ref2.theme;
+  return "".concat(theme.orbit.spaceMedium, " ").concat(theme.orbit.spaceLarge);
+}, function (_ref3) {
+  var theme = _ref3.theme;
+  return theme.orbit.borderRadiusNormal;
+}, function (_ref4) {
+  var theme = _ref4.theme;
+  return theme.orbit.paletteCloudLight;
+}, function (_ref5) {
+  var theme = _ref5.theme;
+  return theme.orbit.boxShadowActionable;
+}, function (_ref6) {
+  var theme = _ref6.theme;
+  return theme.orbit.borderRadiusNormal;
+}, _kiwicom_orbit_components_lib_Checkbox__WEBPACK_IMPORTED_MODULE_3__["Label"], function (_ref7) {
+  var theme = _ref7.theme;
+  return theme.orbit.spaceXSmall;
+}, _kiwicom_orbit_components_lib_ButtonLink__WEBPACK_IMPORTED_MODULE_6__["StyledButtonLink"]);
 
-var getCarrierFromParts = function getCarrierFromParts(parts) {
-  return parts.map(function (part) {
-    return {
-      code: part.carrier
-    };
-  });
+var PlaceCard = function PlaceCard(_ref8) {
+  var places = _ref8.places;
+  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    direction: "column",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: this
+  }, places.interests.map(function (place) {
+    return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](StyledPlaceCard, {
+      key: place.name + place.address,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      spacing: "extraTight",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 40
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      weight: "bold",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }, place.name), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      type: "secondary",
+      element: "div",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    }, place.address)));
+  }));
 };
 
-var Route = function Route(_ref2) {
-  var flight = _ref2.flight,
-      nights = _ref2.nights;
-  var parts = flight.parts,
-      from = flight.from,
-      to = flight.to;
-  var carriers = getCarrierFromParts(parts);
-  var departureTimeLocal = new Date(from.timeLocal * 1000);
-  var arrivalTimeLocal = new Date(to.timeLocal * 1000);
-  var departureTime = Object(date_fns__WEBPACK_IMPORTED_MODULE_9__["format"])(departureTimeLocal, "HH:mm");
-  var departureArrival = Object(date_fns__WEBPACK_IMPORTED_MODULE_9__["format"])(arrivalTimeLocal, "HH:mm");
-  var hours = Object(date_fns__WEBPACK_IMPORTED_MODULE_9__["differenceInHours"])(arrivalTimeLocal, departureTimeLocal);
-  var minutes = Object(date_fns__WEBPACK_IMPORTED_MODULE_9__["differenceInMinutes"])(arrivalTimeLocal, departureTimeLocal) - hours * 60;
-  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_7___default.a, {
-    direction: "row",
-    shrink: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 56
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_7___default.a, {
-    direction: "column",
-    shrink: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 57
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_7___default.a, {
-    direction: "row",
-    shrink: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 58
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_7___default.a, {
-    direction: "column",
-    grow: false,
-    basis: "150px",
-    spacing: "comfy",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_7___default.a, {
-    direction: "row",
-    align: "center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](styled_components__WEBPACK_IMPORTED_MODULE_2__["ThemeProvider"], {
-    theme: {
-      orbit: _kiwicom_orbit_components_lib_getTokens__WEBPACK_IMPORTED_MODULE_3___default()()
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 66
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_CarrierLogo__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    carriers: carriers,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 67
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_6___default.a, {
-    type: "secondary",
-    size: "small",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: this
-  }, carriers.map(function (carrier) {
-    return carrier.code;
-  }).join(", ")))), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_7___default.a, {
-    direction: "column",
-    shrink: true,
-    basis: "250px",
-    spacing: "compact",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_7___default.a, {
-    direction: "column",
-    spacing: "extraTight",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 80
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_6___default.a, {
-    weight: "bold",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 81
-    },
-    __self: this
-  }, "".concat(departureTime, " - ").concat(departureArrival)), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_6___default.a, {
-    size: "small",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 82
-    },
-    __self: this
-  }, Object(date_fns__WEBPACK_IMPORTED_MODULE_9__["format"])(departureTimeLocal, "ddd D MMM")))), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_7___default.a, {
-    direction: "column",
-    spacing: "extraTight",
-    shrink: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 87
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Hide__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    on: ["smallMobile", "mediumMobile", "largeMobile"],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 88
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_6___default.a, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 89
-    },
-    __self: this
-  }, hours && "".concat(hours, "h"), " ", minutes && "".concat(minutes, "m")), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_7___default.a, {
-    direction: "row",
-    align: "center",
-    spacing: "tight",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 92
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_6___default.a, {
-    size: "small",
-    type: "secondary",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 93
-    },
-    __self: this
-  }, from.city, " ", from.iata), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_icons_FlightDirect__WEBPACK_IMPORTED_MODULE_8___default.a, {
-    color: "secondary",
-    size: "small",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 96
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_6___default.a, {
-    size: "small",
-    type: "secondary",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 97
-    },
-    __self: this
-  }, to.city, " ", to.iata))))), nights && react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_7___default.a, {
-    direction: "row",
-    shrink: true,
-    grow: false,
-    align: "center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 105
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](StyledLine, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 106
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](StyledNights, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 107
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_6___default.a, {
-    type: "secondary",
-    size: "small",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 108
-    },
-    __self: this
-  }, nights <= 1 ? "".concat(nights, " night ") : "".concat(nights, " nights "), "in ", to.city)))));
-};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_kiwicom_relay__WEBPACK_IMPORTED_MODULE_1__["createFragmentContainer"])(PlaceCard, {
+  places: function places() {
+    var node = __webpack_require__(/*! ./__generated__/PlaceCard_places.graphql */ "./components/__generated__/PlaceCard_places.graphql.js");
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(_kiwicom_relay__WEBPACK_IMPORTED_MODULE_1__["createFragmentContainer"])(Route, {
-  flight: function flight() {
-    var node = __webpack_require__(/*! ./__generated__/Route_flight.graphql */ "./components/Itinerary/__generated__/Route_flight.graphql.js");
-
-    if (node.hash && node.hash !== "3cebdf443597d3513853438caf85ce88") {
-      console.error("The definition of 'Route_flight' appears to have changed. Run `relay-compiler` to update the generated files to receive the expected data.");
+    if (node.hash && node.hash !== "19545d583ca0fc7428279d509c3910e0") {
+      console.error("The definition of 'PlaceCard_places' appears to have changed. Run `relay-compiler` to update the generated files to receive the expected data.");
     }
 
-    return __webpack_require__(/*! ./__generated__/Route_flight.graphql */ "./components/Itinerary/__generated__/Route_flight.graphql.js");
+    return __webpack_require__(/*! ./__generated__/PlaceCard_places.graphql */ "./components/__generated__/PlaceCard_places.graphql.js");
   }
 }));
 
 /***/ }),
 
-/***/ "./components/Itinerary/__generated__/Itinerary_flights.graphql.js":
-/*!*************************************************************************!*\
-  !*** ./components/Itinerary/__generated__/Itinerary_flights.graphql.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * @flow
- */
-
-/* eslint-disable */
-
-/*::
-import type { ReaderFragment } from 'relay-runtime';
-type Route_flight$ref = any;
-import type { FragmentReference } from "relay-runtime";
-declare export opaque type Itinerary_flights$ref: FragmentReference;
-declare export opaque type Itinerary_flights$fragmentType: Itinerary_flights$ref;
-export type Itinerary_flights = {|
-  +search: ?$ReadOnlyArray<?{|
-    +price: ?number,
-    +bookingToken: ?string,
-    +route: ?$ReadOnlyArray<?{|
-      +from: ?{|
-        +timeLocal: ?number
-      |},
-      +to: ?{|
-        +timeLocal: ?number
-      |},
-      +$fragmentRefs: Route_flight$ref,
-    |}>,
-  |}>,
-  +$refType: Itinerary_flights$ref,
-|};
-export type Itinerary_flights$data = Itinerary_flights;
-export type Itinerary_flights$key = {
-  +$data?: Itinerary_flights$data,
-  +$fragmentRefs: Itinerary_flights$ref,
-};
-*/
-
-var node
-/*: ReaderFragment*/
-= function () {
-  var v0 = [{
-    "kind": "ScalarField",
-    "alias": null,
-    "name": "timeLocal",
-    "args": null,
-    "storageKey": null
-  }];
-  return {
-    "kind": "Fragment",
-    "name": "Itinerary_flights",
-    "type": "Query",
-    "metadata": null,
-    "argumentDefinitions": [{
-      "kind": "LocalArgument",
-      "name": "params",
-      "type": "SearchParams!",
-      "defaultValue": null
-    }],
-    "selections": [{
-      "kind": "LinkedField",
-      "alias": null,
-      "name": "search",
-      "storageKey": null,
-      "args": [{
-        "kind": "Variable",
-        "name": "params",
-        "variableName": "params"
-      }],
-      "concreteType": "Item",
-      "plural": true,
-      "selections": [{
-        "kind": "ScalarField",
-        "alias": null,
-        "name": "price",
-        "args": null,
-        "storageKey": null
-      }, {
-        "kind": "ScalarField",
-        "alias": null,
-        "name": "bookingToken",
-        "args": null,
-        "storageKey": null
-      }, {
-        "kind": "LinkedField",
-        "alias": null,
-        "name": "route",
-        "storageKey": null,
-        "args": null,
-        "concreteType": "Route",
-        "plural": true,
-        "selections": [{
-          "kind": "LinkedField",
-          "alias": null,
-          "name": "from",
-          "storageKey": null,
-          "args": null,
-          "concreteType": "RouteRendezvous",
-          "plural": false,
-          "selections": v0
-          /*: any*/
-
-        }, {
-          "kind": "LinkedField",
-          "alias": null,
-          "name": "to",
-          "storageKey": null,
-          "args": null,
-          "concreteType": "RouteRendezvous",
-          "plural": false,
-          "selections": v0
-          /*: any*/
-
-        }, {
-          "kind": "FragmentSpread",
-          "name": "Route_flight",
-          "args": null
-        }]
-      }]
-    }]
-  };
-}(); // prettier-ignore
-
-
-node
-/*: any*/
-.hash = 'b67a8317b5bd2febe6d75786bffa8bb6';
-module.exports = node;
-
-/***/ }),
-
-/***/ "./components/Itinerary/__generated__/Route_flight.graphql.js":
-/*!********************************************************************!*\
-  !*** ./components/Itinerary/__generated__/Route_flight.graphql.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * @flow
- */
-
-/* eslint-disable */
-
-/*::
-import type { ReaderFragment } from 'relay-runtime';
-import type { FragmentReference } from "relay-runtime";
-declare export opaque type Route_flight$ref: FragmentReference;
-declare export opaque type Route_flight$fragmentType: Route_flight$ref;
-export type Route_flight = {|
-  +from: ?{|
-    +city: ?string,
-    +iata: ?string,
-    +timeLocal: ?number,
-  |},
-  +to: ?{|
-    +city: ?string,
-    +iata: ?string,
-    +timeLocal: ?number,
-  |},
-  +parts: ?$ReadOnlyArray<?{|
-    +carrier: ?string
-  |}>,
-  +$refType: Route_flight$ref,
-|};
-export type Route_flight$data = Route_flight;
-export type Route_flight$key = {
-  +$data?: Route_flight$data,
-  +$fragmentRefs: Route_flight$ref,
-};
-*/
-
-var node
-/*: ReaderFragment*/
-= function () {
-  var v0 = [{
-    "kind": "ScalarField",
-    "alias": null,
-    "name": "city",
-    "args": null,
-    "storageKey": null
-  }, {
-    "kind": "ScalarField",
-    "alias": null,
-    "name": "iata",
-    "args": null,
-    "storageKey": null
-  }, {
-    "kind": "ScalarField",
-    "alias": null,
-    "name": "timeLocal",
-    "args": null,
-    "storageKey": null
-  }];
-  return {
-    "kind": "Fragment",
-    "name": "Route_flight",
-    "type": "Route",
-    "metadata": null,
-    "argumentDefinitions": [],
-    "selections": [{
-      "kind": "LinkedField",
-      "alias": null,
-      "name": "from",
-      "storageKey": null,
-      "args": null,
-      "concreteType": "RouteRendezvous",
-      "plural": false,
-      "selections": v0
-      /*: any*/
-
-    }, {
-      "kind": "LinkedField",
-      "alias": null,
-      "name": "to",
-      "storageKey": null,
-      "args": null,
-      "concreteType": "RouteRendezvous",
-      "plural": false,
-      "selections": v0
-      /*: any*/
-
-    }, {
-      "kind": "LinkedField",
-      "alias": null,
-      "name": "parts",
-      "storageKey": null,
-      "args": null,
-      "concreteType": "Part",
-      "plural": true,
-      "selections": [{
-        "kind": "ScalarField",
-        "alias": null,
-        "name": "carrier",
-        "args": null,
-        "storageKey": null
-      }]
-    }]
-  };
-}(); // prettier-ignore
-
-
-node
-/*: any*/
-.hash = '3cebdf443597d3513853438caf85ce88';
-module.exports = node;
-
-/***/ }),
-
-/***/ "./components/Itinerary/index.js":
-/*!***************************************!*\
-  !*** ./components/Itinerary/index.js ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _kiwicom_relay__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @kiwicom/relay */ "./node_modules/@kiwicom/relay/src/index.js");
-/* harmony import */ var _kiwicom_relay__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_relay__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Text */ "./node_modules/@kiwicom/orbit-components/lib/Text/index.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Stack */ "./node_modules/@kiwicom/orbit-components/lib/Stack/index.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _kiwicom_orbit_components_lib_Hide__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Hide */ "./node_modules/@kiwicom/orbit-components/lib/Hide/index.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_Hide__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Hide__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _kiwicom_orbit_components_lib_Illustration__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Illustration */ "./node_modules/@kiwicom/orbit-components/lib/Illustration/index.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_Illustration__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Illustration__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _kiwicom_orbit_components_lib_Card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Card */ "./node_modules/@kiwicom/orbit-components/lib/Card/index.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_Card__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Card__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Button */ "./node_modules/@kiwicom/orbit-components/lib/Button/index.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _kiwicom_orbit_components_lib_Card_CardSection__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Card/CardSection */ "./node_modules/@kiwicom/orbit-components/lib/Card/CardSection/index.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_Card_CardSection__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Card_CardSection__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/index.js");
-/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(date_fns__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next/router */ "./node_modules/next/router.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _Route__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Route */ "./components/Itinerary/Route.js");
-var _jsxFileName = "/Users/ludekveprek/WebstormProjects/weekendfe/components/Itinerary/index.js";
-
-
-
-
-
-
-
-
-
-
-
-
-
-var getNights = function getNights(routes, route, routeKey) {
-  // Don't show nights count for the last route
-  if (routeKey !== routes.length - 1) {
-    var departureTimeLocal = route.to.timeLocal;
-    var arrivalTimeLocal = routes[routeKey + 1].from.timeLocal;
-    var hours = Object(date_fns__WEBPACK_IMPORTED_MODULE_8__["differenceInHours"])(new Date(arrivalTimeLocal * 1000), new Date(departureTimeLocal * 1000));
-    return Math.ceil(hours / 24);
-  }
-
-  return null;
-};
-
-var Itinerary = function Itinerary(_ref) {
-  var flights = _ref.flights,
-      interest = _ref.interest;
-  return react__WEBPACK_IMPORTED_MODULE_10__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    direction: "column",
-    shrink: true,
-    spacing: "loose",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, flights.search.length ? flights.search.map(function (flight, flightKey) {
-    var routes = flight.route;
-    return (// eslint-disable-next-line
-      react__WEBPACK_IMPORTED_MODULE_10__["createElement"](_kiwicom_orbit_components_lib_Card__WEBPACK_IMPORTED_MODULE_5___default.a, {
-        key: flightKey,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 38
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_10__["createElement"](_kiwicom_orbit_components_lib_Card_CardSection__WEBPACK_IMPORTED_MODULE_7___default.a, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 39
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_10__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default.a, {
-        direction: "column",
-        spacing: "loose",
-        desktop: {
-          spacing: "tight"
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 40
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_10__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default.a, {
-        direction: "row",
-        align: "center",
-        spacing: "comfy",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 45
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_10__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default.a, {
-        basis: "50px",
-        justify: "center",
-        shrink: false,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 46
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_10__["createElement"](_kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_1___default.a, {
-        weight: "bold",
-        size: "large",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 47
-        },
-        __self: this
-      }, flight.price, " \u20AC")), react__WEBPACK_IMPORTED_MODULE_10__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default.a, {
-        direction: "column",
-        shrink: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 51
-        },
-        __self: this
-      }, routes.map(function (route, key) {
-        var nights = getNights(routes, route, key);
-        return (// eslint-disable-next-line
-          react__WEBPACK_IMPORTED_MODULE_10__["createElement"](_Route__WEBPACK_IMPORTED_MODULE_11__["default"], {
-            flight: route,
-            key: key,
-            nights: nights,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 56
-            },
-            __self: this
-          })
-        );
-      })), react__WEBPACK_IMPORTED_MODULE_10__["createElement"](_kiwicom_orbit_components_lib_Hide__WEBPACK_IMPORTED_MODULE_3___default.a, {
-        on: ["smallMobile", "mediumMobile", "largeMobile"],
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 60
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_10__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default.a, {
-        align: "center",
-        justify: "end",
-        shrink: true,
-        basis: "150px",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 67
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_10__["createElement"](_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        onClick: function onClick() {
-          // eslint-disable-next-line fp/no-mutating-methods
-          next_router__WEBPACK_IMPORTED_MODULE_9___default.a.push({
-            pathname: "/places",
-            query: {
-              bookingToken: flight.bookingToken,
-              interest: interest
-            }
-          });
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 73
-        },
-        __self: this
-      }, "Select this flight")))), react__WEBPACK_IMPORTED_MODULE_10__["createElement"](_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default.a, {
-        justify: "center",
-        direction: "row",
-        align: "center",
-        shrink: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 90
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_10__["createElement"](_kiwicom_orbit_components_lib_Hide__WEBPACK_IMPORTED_MODULE_3___default.a, {
-        on: ["tablet", "desktop", "largeDesktop"],
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 96
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_10__["createElement"](_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        onClick: function onClick() {
-          return (// eslint-disable-next-line fp/no-mutating-methods
-            next_router__WEBPACK_IMPORTED_MODULE_9___default.a.push({
-              pathname: "/places",
-              query: {
-                bookingToken: flight.bookingToken,
-                interest: interest
-              }
-            })
-          );
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 97
-        },
-        __self: this
-      }, "Select this flight"))))))
-    );
-  }) : react__WEBPACK_IMPORTED_MODULE_10__["createElement"](react__WEBPACK_IMPORTED_MODULE_10__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_10__["createElement"](_kiwicom_orbit_components_lib_Illustration__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    size: "medium",
-    name: "NoResults",
-    dataTest: "test",
-    spaceAfter: null,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 120
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_10__["createElement"](_kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    type: "secondary",
-    element: "p",
-    size: "large",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 126
-    },
-    __self: this
-  }, "No results, try another combination \xAF\\_(\u30C4)_/\xAF")));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(_kiwicom_relay__WEBPACK_IMPORTED_MODULE_0__["createFragmentContainer"])(Itinerary, {
-  flights: function flights() {
-    var node = __webpack_require__(/*! ./__generated__/Itinerary_flights.graphql */ "./components/Itinerary/__generated__/Itinerary_flights.graphql.js");
-
-    if (node.hash && node.hash !== "b67a8317b5bd2febe6d75786bffa8bb6") {
-      console.error("The definition of 'Itinerary_flights' appears to have changed. Run `relay-compiler` to update the generated files to receive the expected data.");
-    }
-
-    return __webpack_require__(/*! ./__generated__/Itinerary_flights.graphql */ "./components/Itinerary/__generated__/Itinerary_flights.graphql.js");
-  }
-}));
-
-/***/ }),
-
-/***/ "./components/debug.js":
-/*!*****************************!*\
-  !*** ./components/debug.js ***!
-  \*****************************/
+/***/ "./components/ShareModal.js":
+/*!**********************************!*\
+  !*** ./components/ShareModal.js ***!
+  \**********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -900,23 +328,256 @@ var Itinerary = function Itinerary(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ludekveprek/WebstormProjects/weekendfe/components/debug.js";
+/* harmony import */ var _kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Text */ "./node_modules/@kiwicom/orbit-components/lib/Text/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Stack */ "./node_modules/@kiwicom/orbit-components/lib/Stack/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Button */ "./node_modules/@kiwicom/orbit-components/lib/Button/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _kiwicom_orbit_components_lib_Modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Modal */ "./node_modules/@kiwicom/orbit-components/lib/Modal/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Modal__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Modal__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _kiwicom_orbit_components_lib_Portal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Portal */ "./node_modules/@kiwicom/orbit-components/lib/Portal/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Portal__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Portal__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _kiwicom_orbit_components_lib_Modal_ModalSection__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Modal/ModalSection */ "./node_modules/@kiwicom/orbit-components/lib/Modal/ModalSection/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Modal_ModalSection__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Modal_ModalSection__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _kiwicom_orbit_components_lib_Modal_ModalHeader__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Modal/ModalHeader */ "./node_modules/@kiwicom/orbit-components/lib/Modal/ModalHeader/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Modal_ModalHeader__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Modal_ModalHeader__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_copy_to_clipboard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-copy-to-clipboard */ "./node_modules/react-copy-to-clipboard/lib/index.js");
+/* harmony import */ var react_copy_to_clipboard__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_copy_to_clipboard__WEBPACK_IMPORTED_MODULE_8__);
+var _jsxFileName = "/Users/ludekveprek/WebstormProjects/weekendfe/components/ShareModal.js";
 
-/* harmony default export */ __webpack_exports__["default"] = (function (props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("code", {
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+var ShareModal = function ShareModal(_ref) {
+  var _onClose = _ref.onClose;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      copied = _useState2[0],
+      setCopied = _useState2[1];
+
+  var path = window && window.location.href;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Portal__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    element: "modals",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 2
+      lineNumber: 19
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("pre", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Modal__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    onClose: function onClose() {
+      return _onClose(false);
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 3
+      lineNumber: 20
     },
     __self: this
-  }, JSON.stringify(props, null, 2)));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Modal_ModalHeader__WEBPACK_IMPORTED_MODULE_7___default.a, {
+    title: "Share the trip with your friends!",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Modal_ModalSection__WEBPACK_IMPORTED_MODULE_6___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    align: "center",
+    justify: "between",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Text__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    weight: "bold",
+    size: "large",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, "Just click to copy the URL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_copy_to_clipboard__WEBPACK_IMPORTED_MODULE_8__["CopyToClipboard"], {
+    text: path,
+    onCopy: function onCopy() {
+      return setCopied(true);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    type: "secondary",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }, copied ? "Copied" : "Copy"))))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ShareModal);
+
+/***/ }),
+
+/***/ "./components/Timeline.js":
+/*!********************************!*\
+  !*** ./components/Timeline.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Button */ "./node_modules/@kiwicom/orbit-components/lib/Button/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/ludekveprek/WebstormProjects/weekendfe/components/Timeline.js";
+
+
+
+var TagTimeline = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "Timeline__TagTimeline",
+  componentId: "sc-1hdg8y0-0"
+})(["display:flex;align-items:center;justify-content:space-between;position:relative;width:100%;z-index:10;"]);
+var Line = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "Timeline__Line",
+  componentId: "sc-1hdg8y0-1"
+})(["display:block;position:absolute;height:2px;width:96%;background-color:", ";z-index:9;"], function (_ref) {
+  var theme = _ref.theme;
+  return theme.orbit.paletteCloudLight;
 });
+
+var Timeline = function Timeline(_ref2) {
+  var places = _ref2.places,
+      onSelect = _ref2.onSelect,
+      selected = _ref2.selected;
+  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](TagTimeline, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, places.map(function (place, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      onClick: function onClick() {
+        return onSelect(i);
+      },
+      type: i === selected ? "primary" : "secondary",
+      size: "small",
+      key: place.city,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: this
+    }, place.city);
+  })), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Line, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: this
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Timeline);
+
+/***/ }),
+
+/***/ "./components/__generated__/PlaceCard_places.graphql.js":
+/*!**************************************************************!*\
+  !*** ./components/__generated__/PlaceCard_places.graphql.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * @flow
+ */
+
+/* eslint-disable */
+
+/*::
+import type { ReaderFragment } from 'relay-runtime';
+import type { FragmentReference } from "relay-runtime";
+declare export opaque type PlaceCard_places$ref: FragmentReference;
+declare export opaque type PlaceCard_places$fragmentType: PlaceCard_places$ref;
+export type PlaceCard_places = {|
+  +interests: ?$ReadOnlyArray<?{|
+    +name: string,
+    +address: ?string,
+  |}>,
+  +$refType: PlaceCard_places$ref,
+|};
+export type PlaceCard_places$data = PlaceCard_places;
+export type PlaceCard_places$key = {
+  +$data?: PlaceCard_places$data,
+  +$fragmentRefs: PlaceCard_places$ref,
+};
+*/
+
+var node
+/*: ReaderFragment*/
+= {
+  "kind": "Fragment",
+  "name": "PlaceCard_places",
+  "type": "Route",
+  "metadata": null,
+  "argumentDefinitions": [],
+  "selections": [{
+    "kind": "LinkedField",
+    "alias": null,
+    "name": "interests",
+    "storageKey": null,
+    "args": null,
+    "concreteType": "Interest",
+    "plural": true,
+    "selections": [{
+      "kind": "ScalarField",
+      "alias": null,
+      "name": "name",
+      "args": null,
+      "storageKey": null
+    }, {
+      "kind": "ScalarField",
+      "alias": null,
+      "name": "address",
+      "args": null,
+      "storageKey": null
+    }]
+  }]
+}; // prettier-ignore
+
+node
+/*: any*/
+.hash = '19545d583ca0fc7428279d509c3910e0';
+module.exports = node;
 
 /***/ }),
 
@@ -966,6 +627,17 @@ module.exports = __webpack_require__(/*! core-js/library/fn/array/is-array */ ".
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/get-iterator */ "./node_modules/core-js/library/fn/get-iterator.js");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/map.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/map.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/map */ "./node_modules/core-js/library/fn/map.js");
 
 /***/ }),
 
@@ -1068,28 +740,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/promise */ "./node_m
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/reflect/construct.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/reflect/construct.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/reflect/construct */ "./node_modules/core-js/library/fn/reflect/construct.js");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/set.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/set.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/set */ "./node_modules/core-js/library/fn/set.js");
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/symbol.js":
 /*!***************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/symbol.js ***!
@@ -1112,23 +762,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/symbol/iterator */ "
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/arrayWithHoles.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/arrayWithHoles.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _Array$isArray = __webpack_require__(/*! ../core-js/array/is-array */ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js");
-
-function _arrayWithHoles(arr) {
-  if (_Array$isArray(arr)) return arr;
-}
-
-module.exports = _arrayWithHoles;
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/assertThisInitialized.js":
 /*!******************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/assertThisInitialized.js ***!
@@ -1148,55 +781,6 @@ module.exports = _assertThisInitialized;
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/asyncToGenerator.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/asyncToGenerator.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _Promise = __webpack_require__(/*! ../core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
-  try {
-    var info = gen[key](arg);
-    var value = info.value;
-  } catch (error) {
-    reject(error);
-    return;
-  }
-
-  if (info.done) {
-    resolve(value);
-  } else {
-    _Promise.resolve(value).then(_next, _throw);
-  }
-}
-
-function _asyncToGenerator(fn) {
-  return function () {
-    var self = this,
-        args = arguments;
-    return new _Promise(function (resolve, reject) {
-      var gen = fn.apply(self, args);
-
-      function _next(value) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
-      }
-
-      function _throw(err) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
-      }
-
-      _next(undefined);
-    });
-  };
-}
-
-module.exports = _asyncToGenerator;
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js":
 /*!***********************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js ***!
@@ -1211,51 +795,6 @@ function _classCallCheck(instance, Constructor) {
 }
 
 module.exports = _classCallCheck;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/construct.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/construct.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _Reflect$construct = __webpack_require__(/*! ../core-js/reflect/construct */ "./node_modules/@babel/runtime-corejs2/core-js/reflect/construct.js");
-
-var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/setPrototypeOf.js");
-
-function isNativeReflectConstruct() {
-  if (typeof Reflect === "undefined" || !_Reflect$construct) return false;
-  if (_Reflect$construct.sham) return false;
-  if (typeof Proxy === "function") return true;
-
-  try {
-    Date.prototype.toString.call(_Reflect$construct(Date, [], function () {}));
-    return true;
-  } catch (e) {
-    return false;
-  }
-}
-
-function _construct(Parent, args, Class) {
-  if (isNativeReflectConstruct()) {
-    module.exports = _construct = _Reflect$construct;
-  } else {
-    module.exports = _construct = function _construct(Parent, args, Class) {
-      var a = [null];
-      a.push.apply(a, args);
-      var Constructor = Function.bind.apply(Parent, a);
-      var instance = new Constructor();
-      if (Class) setPrototypeOf(instance, Class.prototype);
-      return instance;
-    };
-  }
-
-  return _construct.apply(null, arguments);
-}
-
-module.exports = _construct;
 
 /***/ }),
 
@@ -1386,100 +925,6 @@ module.exports = _interopRequireDefault;
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _Object$getOwnPropertyDescriptor = __webpack_require__(/*! ../core-js/object/get-own-property-descriptor */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js");
-
-var _Object$defineProperty = __webpack_require__(/*! ../core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-function _interopRequireWildcard(obj) {
-  if (obj && obj.__esModule) {
-    return obj;
-  } else {
-    var newObj = {};
-
-    if (obj != null) {
-      for (var key in obj) {
-        if (Object.prototype.hasOwnProperty.call(obj, key)) {
-          var desc = _Object$defineProperty && _Object$getOwnPropertyDescriptor ? _Object$getOwnPropertyDescriptor(obj, key) : {};
-
-          if (desc.get || desc.set) {
-            _Object$defineProperty(newObj, key, desc);
-          } else {
-            newObj[key] = obj[key];
-          }
-        }
-      }
-    }
-
-    newObj.default = obj;
-    return newObj;
-  }
-}
-
-module.exports = _interopRequireWildcard;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/iterableToArrayLimit.js":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/iterableToArrayLimit.js ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _getIterator = __webpack_require__(/*! ../core-js/get-iterator */ "./node_modules/@babel/runtime-corejs2/core-js/get-iterator.js");
-
-function _iterableToArrayLimit(arr, i) {
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = _getIterator(arr), _s; !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-
-module.exports = _iterableToArrayLimit;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/nonIterableRest.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/nonIterableRest.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance");
-}
-
-module.exports = _nonIterableRest;
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/objectSpread.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/objectSpread.js ***!
@@ -1564,27 +1009,6 @@ module.exports = _setPrototypeOf;
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/slicedToArray.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/slicedToArray.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayWithHoles = __webpack_require__(/*! ./arrayWithHoles */ "./node_modules/@babel/runtime-corejs2/helpers/arrayWithHoles.js");
-
-var iterableToArrayLimit = __webpack_require__(/*! ./iterableToArrayLimit */ "./node_modules/@babel/runtime-corejs2/helpers/iterableToArrayLimit.js");
-
-var nonIterableRest = __webpack_require__(/*! ./nonIterableRest */ "./node_modules/@babel/runtime-corejs2/helpers/nonIterableRest.js");
-
-function _slicedToArray(arr, i) {
-  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || nonIterableRest();
-}
-
-module.exports = _slicedToArray;
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/typeof.js":
 /*!***************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/typeof.js ***!
@@ -1613,18 +1037,6 @@ function _typeof(obj) {
 }
 
 module.exports = _typeof;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/regenerator/index.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/regenerator/index.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime-module.js");
-
 
 /***/ }),
 
@@ -2501,6 +1913,285 @@ function warning(condition, format) {
 
 /***/ }),
 
+/***/ "./node_modules/@kiwicom/orbit-components/lib/Alert/consts.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/Alert/consts.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CLOSE_BUTTON_DATA_TEST = exports.TOKENS = exports.TYPE_OPTIONS = void 0;
+var TYPE_OPTIONS = {
+  INFO: "info",
+  SUCCESS: "success",
+  WARNING: "warning",
+  CRITICAL: "critical"
+};
+exports.TYPE_OPTIONS = TYPE_OPTIONS;
+var TOKENS = {
+  backgroundAlert: "backgroundAlert",
+  colorIconAlert: "colorIconAlert",
+  colorTextAlert: "colorTextAlert",
+  colorTextLinkAlertHover: "colorTextLinkAlertHover"
+};
+exports.TOKENS = TOKENS;
+var CLOSE_BUTTON_DATA_TEST = "AlertCloseButton";
+exports.CLOSE_BUTTON_DATA_TEST = CLOSE_BUTTON_DATA_TEST;
+
+/***/ }),
+
+/***/ "./node_modules/@kiwicom/orbit-components/lib/Alert/index.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/Alert/index.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _styledComponents = _interopRequireDefault(__webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js"));
+
+var _defaultTheme = _interopRequireDefault(__webpack_require__(/*! ../defaultTheme */ "./node_modules/@kiwicom/orbit-components/lib/defaultTheme.js"));
+
+var _InformationCircle = _interopRequireDefault(__webpack_require__(/*! ../icons/InformationCircle */ "./node_modules/@kiwicom/orbit-components/lib/icons/InformationCircle.js"));
+
+var _Check = _interopRequireDefault(__webpack_require__(/*! ../icons/Check */ "./node_modules/@kiwicom/orbit-components/lib/icons/Check.js"));
+
+var _Alert = _interopRequireDefault(__webpack_require__(/*! ../icons/Alert */ "./node_modules/@kiwicom/orbit-components/lib/icons/Alert.js"));
+
+var _AlertCircle = _interopRequireDefault(__webpack_require__(/*! ../icons/AlertCircle */ "./node_modules/@kiwicom/orbit-components/lib/icons/AlertCircle.js"));
+
+var _Close = _interopRequireDefault(__webpack_require__(/*! ../icons/Close */ "./node_modules/@kiwicom/orbit-components/lib/icons/Close.js"));
+
+var _ButtonLink = _interopRequireDefault(__webpack_require__(/*! ../ButtonLink */ "./node_modules/@kiwicom/orbit-components/lib/ButtonLink/index.js"));
+
+var _TextLink = __webpack_require__(/*! ../TextLink */ "./node_modules/@kiwicom/orbit-components/lib/TextLink/index.js");
+
+var _consts = __webpack_require__(/*! ./consts */ "./node_modules/@kiwicom/orbit-components/lib/Alert/consts.js");
+
+var _rtl = __webpack_require__(/*! ../utils/rtl */ "./node_modules/@kiwicom/orbit-components/lib/utils/rtl/index.js");
+
+var _getSpacingToken = _interopRequireDefault(__webpack_require__(/*! ../common/getSpacingToken */ "./node_modules/@kiwicom/orbit-components/lib/common/getSpacingToken/index.js"));
+
+var _ListItem = __webpack_require__(/*! ../List/ListItem */ "./node_modules/@kiwicom/orbit-components/lib/List/ListItem/index.js");
+
+var _Text = __webpack_require__(/*! ../Text */ "./node_modules/@kiwicom/orbit-components/lib/Text/index.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var getTypeToken = function getTypeToken(name) {
+  return function (_ref) {
+    var _TOKENS$colorIconAler, _TOKENS$backgroundAle, _TOKENS$colorTextAler, _TOKENS$colorTextLink, _tokens;
+
+    var theme = _ref.theme,
+        type = _ref.type;
+    var tokens = (_tokens = {}, _defineProperty(_tokens, _consts.TOKENS.colorIconAlert, (_TOKENS$colorIconAler = {}, _defineProperty(_TOKENS$colorIconAler, _consts.TYPE_OPTIONS.INFO, theme.orbit.colorAlertIconInfo), _defineProperty(_TOKENS$colorIconAler, _consts.TYPE_OPTIONS.SUCCESS, theme.orbit.colorAlertIconSuccess), _defineProperty(_TOKENS$colorIconAler, _consts.TYPE_OPTIONS.WARNING, theme.orbit.colorAlertIconWarning), _defineProperty(_TOKENS$colorIconAler, _consts.TYPE_OPTIONS.CRITICAL, theme.orbit.colorAlertIconCritical), _TOKENS$colorIconAler)), _defineProperty(_tokens, _consts.TOKENS.backgroundAlert, (_TOKENS$backgroundAle = {}, _defineProperty(_TOKENS$backgroundAle, _consts.TYPE_OPTIONS.INFO, theme.orbit.backgroundAlertInfo), _defineProperty(_TOKENS$backgroundAle, _consts.TYPE_OPTIONS.SUCCESS, theme.orbit.backgroundAlertSuccess), _defineProperty(_TOKENS$backgroundAle, _consts.TYPE_OPTIONS.WARNING, theme.orbit.backgroundAlertWarning), _defineProperty(_TOKENS$backgroundAle, _consts.TYPE_OPTIONS.CRITICAL, theme.orbit.backgroundAlertCritical), _TOKENS$backgroundAle)), _defineProperty(_tokens, _consts.TOKENS.colorTextAlert, (_TOKENS$colorTextAler = {}, _defineProperty(_TOKENS$colorTextAler, _consts.TYPE_OPTIONS.INFO, theme.orbit.colorTextAlertInfo), _defineProperty(_TOKENS$colorTextAler, _consts.TYPE_OPTIONS.SUCCESS, theme.orbit.colorTextAlertSuccess), _defineProperty(_TOKENS$colorTextAler, _consts.TYPE_OPTIONS.WARNING, theme.orbit.colorTextAlertWarning), _defineProperty(_TOKENS$colorTextAler, _consts.TYPE_OPTIONS.CRITICAL, theme.orbit.colorTextAlertCritical), _TOKENS$colorTextAler)), _defineProperty(_tokens, _consts.TOKENS.colorTextLinkAlertHover, (_TOKENS$colorTextLink = {}, _defineProperty(_TOKENS$colorTextLink, _consts.TYPE_OPTIONS.INFO, theme.orbit.paletteBlueDarkHover), _defineProperty(_TOKENS$colorTextLink, _consts.TYPE_OPTIONS.SUCCESS, theme.orbit.paletteGreenDarkHover), _defineProperty(_TOKENS$colorTextLink, _consts.TYPE_OPTIONS.WARNING, theme.orbit.paletteOrangeDarkHover), _defineProperty(_TOKENS$colorTextLink, _consts.TYPE_OPTIONS.CRITICAL, theme.orbit.paletteRedDarkActive), _TOKENS$colorTextLink)), _tokens);
+    return tokens[name][type];
+  };
+};
+
+var Icon = function Icon(_ref2) {
+  var icon = _ref2.icon,
+      type = _ref2.type;
+
+  // Icon should be boolean and TRUE
+  if (typeof icon === "boolean" && icon) {
+    if (type === _consts.TYPE_OPTIONS.INFO) {
+      return React.createElement(_InformationCircle.default, null);
+    }
+
+    if (type === _consts.TYPE_OPTIONS.SUCCESS) {
+      return React.createElement(_Check.default, null);
+    }
+
+    if (type === _consts.TYPE_OPTIONS.WARNING) {
+      return React.createElement(_Alert.default, null);
+    }
+
+    if (type === _consts.TYPE_OPTIONS.CRITICAL) {
+      return React.createElement(_AlertCircle.default, null);
+    }
+  }
+
+  return icon;
+};
+
+var StyledDiv = function StyledDiv(_ref3) {
+  var className = _ref3.className,
+      children = _ref3.children,
+      dataTest = _ref3.dataTest;
+  return React.createElement("div", {
+    className: className,
+    "data-test": dataTest
+  }, children);
+};
+
+var StyledAlert = (0, _styledComponents.default)(StyledDiv).withConfig({
+  displayName: "Alert__StyledAlert",
+  componentId: "svgppc-0"
+})(["position:relative;display:flex;width:100%;padding:", ";border-radius:", ";background:", ";color:", ";font-family:", ";font-size:", ";box-sizing:border-box;margin-bottom:", ";"], function (_ref4) {
+  var theme = _ref4.theme,
+      icon = _ref4.icon,
+      closable = _ref4.closable;
+  return (0, _rtl.rtlSpacing)(closable ? icon && "".concat(theme.orbit.paddingAlert, " ").concat(theme.orbit.spaceXXLarge, " ").concat(theme.orbit.paddingAlert, " ").concat(theme.orbit.paddingAlert) || "".concat(theme.orbit.paddingAlert, " ").concat(theme.orbit.spaceXXLarge, " ").concat(theme.orbit.paddingAlert, " ").concat(theme.orbit.paddingAlert) : icon && "".concat(theme.orbit.paddingAlert, " ").concat(theme.orbit.paddingAlert, " ").concat(theme.orbit.paddingAlert, " ").concat(theme.orbit.paddingAlert) || "".concat(theme.orbit.paddingAlert));
+}, function (_ref5) {
+  var theme = _ref5.theme;
+  return theme.orbit.borderRadiusNormal;
+}, getTypeToken(_consts.TOKENS.backgroundAlert), getTypeToken(_consts.TOKENS.colorTextAlert), function (_ref6) {
+  var theme = _ref6.theme;
+  return theme.orbit.fontFamily;
+}, function (_ref7) {
+  var theme = _ref7.theme;
+  return theme.orbit.fontSizeTextNormal;
+}, _getSpacingToken.default);
+StyledAlert.defaultProps = {
+  theme: _defaultTheme.default
+};
+var IconContainer = (0, _styledComponents.default)(StyledDiv).withConfig({
+  displayName: "Alert__IconContainer",
+  componentId: "svgppc-1"
+})(["flex-shrink:0;margin:", ";color:", ";"], function (_ref8) {
+  var theme = _ref8.theme;
+  return (0, _rtl.rtlSpacing)("0 ".concat(theme.orbit.spaceSmall, " 0 0"));
+}, getTypeToken(_consts.TOKENS.colorIconAlert));
+IconContainer.defaultProps = {
+  theme: _defaultTheme.default
+};
+var ContentWrapper = (0, _styledComponents.default)(StyledDiv).withConfig({
+  displayName: "Alert__ContentWrapper",
+  componentId: "svgppc-2"
+})(["flex:1;display:flex;flex-direction:", ";align-items:", ";"], function (_ref9) {
+  var title = _ref9.title;
+  return title && "column";
+}, function (_ref10) {
+  var title = _ref10.title;
+  return !title && "center";
+});
+var Title = (0, _styledComponents.default)(StyledDiv).withConfig({
+  displayName: "Alert__Title",
+  componentId: "svgppc-3"
+})(["display:flex;align-items:center;margin-bottom:", ";font-weight:", ";line-height:", ";min-height:", ";"], function (_ref11) {
+  var theme = _ref11.theme,
+      hasChildren = _ref11.hasChildren;
+  return hasChildren && theme.orbit.spaceXSmall;
+}, function (_ref12) {
+  var theme = _ref12.theme;
+  return theme.orbit.fontWeightBold;
+}, function (_ref13) {
+  var theme = _ref13.theme;
+  return theme.orbit.lineHeightHeading;
+}, function (_ref14) {
+  var theme = _ref14.theme;
+  return theme.orbit.heightIconMedium;
+});
+Title.defaultProps = {
+  theme: _defaultTheme.default
+};
+var Content = (0, _styledComponents.default)(StyledDiv).withConfig({
+  displayName: "Alert__Content",
+  componentId: "svgppc-4"
+})(["display:block;margin-bottom:", ";line-height:", ";& a,& ", "{color:", ";font-weight:", ";transition:color ", " ease-in-out;&:hover,&:focus,&:active{color:", ";}}& ", ",", "{color:", ";}"], function (_ref15) {
+  var theme = _ref15.theme,
+      title = _ref15.title;
+  return title && theme.orbit.spaceXXSmall;
+}, function (_ref16) {
+  var theme = _ref16.theme;
+  return theme.orbit.lineHeightText;
+}, _TextLink.StyledTextLink, getTypeToken(_consts.TOKENS.colorTextAlert), function (_ref17) {
+  var theme = _ref17.theme;
+  return theme.orbit.fontWeightMedium;
+}, function (_ref18) {
+  var theme = _ref18.theme;
+  return theme.orbit.durationFast;
+}, getTypeToken(_consts.TOKENS.colorTextLinkAlertHover), _ListItem.Item, _Text.StyledText, getTypeToken(_consts.TOKENS.colorTextAlert));
+Content.defaultProps = {
+  theme: _defaultTheme.default
+};
+var CloseContainer = (0, _styledComponents.default)(StyledDiv).withConfig({
+  displayName: "Alert__CloseContainer",
+  componentId: "svgppc-5"
+})(["position:absolute;top:", ";margin-top:", ";", ":0;margin-", ":", ";"], function (_ref19) {
+  var hasChildren = _ref19.hasChildren;
+  return hasChildren ? 0 : "50%";
+}, function (_ref20) {
+  var hasChildren = _ref20.hasChildren,
+      theme = _ref20.theme;
+  return !hasChildren && "-".concat(theme.orbit.widthIconSmall);
+}, _rtl.right, _rtl.right, function (_ref21) {
+  var hasChildren = _ref21.hasChildren,
+      theme = _ref21.theme;
+  return !hasChildren && theme.orbit.spaceXSmall;
+});
+CloseContainer.defaultProps = {
+  theme: _defaultTheme.default
+};
+
+var Alert = function Alert(props) {
+  var _props$type = props.type,
+      type = _props$type === void 0 ? _consts.TYPE_OPTIONS.INFO : _props$type,
+      title = props.title,
+      closable = props.closable,
+      icon = props.icon,
+      _props$onClose = props.onClose,
+      onClose = _props$onClose === void 0 ? function () {} : _props$onClose,
+      children = props.children,
+      dataTest = props.dataTest,
+      spaceAfter = props.spaceAfter;
+  return React.createElement(StyledAlert, {
+    type: type,
+    icon: icon,
+    closable: closable,
+    dataTest: dataTest,
+    spaceAfter: spaceAfter
+  }, icon && React.createElement(IconContainer, {
+    type: type
+  }, React.createElement(Icon, {
+    type: type,
+    icon: icon
+  })), React.createElement(ContentWrapper, {
+    title: title
+  }, title && React.createElement(Title, {
+    hasChildren: children
+  }, title), children && React.createElement(Content, {
+    title: title,
+    type: type
+  }, children)), closable && React.createElement(CloseContainer, {
+    hasChildren: children
+  }, React.createElement(_ButtonLink.default, {
+    dataTest: _consts.CLOSE_BUTTON_DATA_TEST,
+    onClick: onClose,
+    size: "small",
+    icon: React.createElement(_Close.default, {
+      size: "small",
+      color: type
+    }),
+    transparent: true
+  })));
+};
+
+var _default = Alert;
+exports.default = _default;
+
+/***/ }),
+
 /***/ "./node_modules/@kiwicom/orbit-components/lib/Button/consts.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/@kiwicom/orbit-components/lib/Button/consts.js ***!
@@ -3244,112 +2935,6 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ "./node_modules/@kiwicom/orbit-components/lib/Card/CardHeader/index.js":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/@kiwicom/orbit-components/lib/Card/CardHeader/index.js ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = exports.StyledCardHeader = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _styledComponents = _interopRequireWildcard(__webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js"));
-
-var _defaultTheme = _interopRequireDefault(__webpack_require__(/*! ../../defaultTheme */ "./node_modules/@kiwicom/orbit-components/lib/defaultTheme.js"));
-
-var _Heading = _interopRequireWildcard(__webpack_require__(/*! ../../Heading */ "./node_modules/@kiwicom/orbit-components/lib/Heading/index.js"));
-
-var _Text = _interopRequireDefault(__webpack_require__(/*! ../../Text */ "./node_modules/@kiwicom/orbit-components/lib/Text/index.js"));
-
-var _rtl = __webpack_require__(/*! ../../utils/rtl */ "./node_modules/@kiwicom/orbit-components/lib/utils/rtl/index.js");
-
-var _mediaQuery = _interopRequireDefault(__webpack_require__(/*! ../../utils/mediaQuery */ "./node_modules/@kiwicom/orbit-components/lib/utils/mediaQuery/index.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-var StyledCardHeader = _styledComponents.default.div.withConfig({
-  displayName: "CardHeader__StyledCardHeader",
-  componentId: "lvjkay-0"
-})(["position:relative;width:100%;padding:", ";box-sizing:border-box;color:", ";", ""], function (_ref) {
-  var theme = _ref.theme;
-  return theme.orbit.spaceMedium;
-}, function (_ref2) {
-  var theme = _ref2.theme;
-  return theme.orbit.colorHeading;
-}, _mediaQuery.default.desktop((0, _styledComponents.css)(["padding:", ";"], function (_ref3) {
-  var theme = _ref3.theme;
-  return theme.orbit.spaceLarge;
-})));
-
-exports.StyledCardHeader = StyledCardHeader;
-StyledCardHeader.defaultProps = {
-  theme: _defaultTheme.default
-};
-
-var StyledHeadingWrapper = _styledComponents.default.div.withConfig({
-  displayName: "CardHeader__StyledHeadingWrapper",
-  componentId: "lvjkay-1"
-})(["display:flex;align-items:center;", "{width:100%;}"], _Heading.StyledHeading);
-
-var StyledSubTitle = _styledComponents.default.div.withConfig({
-  displayName: "CardHeader__StyledSubTitle",
-  componentId: "lvjkay-2"
-})(["display:flex;margin-top:", ";"], function (_ref4) {
-  var theme = _ref4.theme;
-  return theme.orbit.spaceXXSmall;
-});
-
-StyledSubTitle.defaultProps = {
-  theme: _defaultTheme.default
-};
-
-var StyledIcon = _styledComponents.default.div.withConfig({
-  displayName: "CardHeader__StyledIcon",
-  componentId: "lvjkay-3"
-})(["color:", ";display:flex;align-items:center;margin:", ";"], function (_ref5) {
-  var theme = _ref5.theme;
-  return theme.orbit.colorHeading;
-}, function (_ref6) {
-  var theme = _ref6.theme;
-  return (0, _rtl.rtlSpacing)("0 ".concat(theme.orbit.spaceSmall, " 0 0"));
-});
-
-StyledIcon.defaultProps = {
-  theme: _defaultTheme.default
-};
-
-var CardHeader = function CardHeader(_ref7) {
-  var icon = _ref7.icon,
-      title = _ref7.title,
-      subTitle = _ref7.subTitle,
-      actions = _ref7.actions,
-      dataTest = _ref7.dataTest,
-      dataA11ySection = _ref7.dataA11ySection;
-  return React.createElement(StyledCardHeader, {
-    "data-test": dataTest
-  }, React.createElement(StyledHeadingWrapper, null, icon && React.createElement(StyledIcon, null, icon), React.createElement(_Heading.default, {
-    type: "title3",
-    element: "h2",
-    dataA11ySection: dataA11ySection
-  }, title), actions), subTitle && React.createElement(StyledSubTitle, null, React.createElement(_Text.default, null, subTitle)));
-};
-
-CardHeader.displayName = "CardHeader";
-var _default = CardHeader;
-exports.default = _default;
-
-/***/ }),
-
 /***/ "./node_modules/@kiwicom/orbit-components/lib/Card/CardSection/CardSectionContent/index.js":
 /*!*************************************************************************************************!*\
   !*** ./node_modules/@kiwicom/orbit-components/lib/Card/CardSection/CardSectionContent/index.js ***!
@@ -3973,10 +3558,10 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ "./node_modules/@kiwicom/orbit-components/lib/Card/consts.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@kiwicom/orbit-components/lib/Card/consts.js ***!
-  \*******************************************************************/
+/***/ "./node_modules/@kiwicom/orbit-components/lib/Checkbox/consts.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/Checkbox/consts.js ***!
+  \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3987,16 +3572,19 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var CLOSE_BUTTON_DATA_TEST = "CardCloseButton";
-var _default = CLOSE_BUTTON_DATA_TEST;
+var TOKENS = {
+  borderColor: "borderColor",
+  iconColor: "iconColor"
+};
+var _default = TOKENS;
 exports.default = _default;
 
 /***/ }),
 
-/***/ "./node_modules/@kiwicom/orbit-components/lib/Card/index.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@kiwicom/orbit-components/lib/Card/index.js ***!
-  \******************************************************************/
+/***/ "./node_modules/@kiwicom/orbit-components/lib/Checkbox/index.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/Checkbox/index.js ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4006,31 +3594,7 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "CardSection", {
-  enumerable: true,
-  get: function get() {
-    return _CardSection.default;
-  }
-});
-Object.defineProperty(exports, "CardHeader", {
-  enumerable: true,
-  get: function get() {
-    return _CardHeader.default;
-  }
-});
-Object.defineProperty(exports, "CardSectionContent", {
-  enumerable: true,
-  get: function get() {
-    return _CardSectionContent.default;
-  }
-});
-Object.defineProperty(exports, "CardSectionHeader", {
-  enumerable: true,
-  get: function get() {
-    return _CardSectionHeader.default;
-  }
-});
-exports.default = void 0;
+exports.default = exports.Label = void 0;
 
 var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
@@ -4038,491 +3602,213 @@ var _styledComponents = _interopRequireDefault(__webpack_require__(/*! styled-co
 
 var _defaultTheme = _interopRequireDefault(__webpack_require__(/*! ../defaultTheme */ "./node_modules/@kiwicom/orbit-components/lib/defaultTheme.js"));
 
-var _Close = _interopRequireDefault(__webpack_require__(/*! ../icons/Close */ "./node_modules/@kiwicom/orbit-components/lib/icons/Close.js"));
+var _consts = _interopRequireDefault(__webpack_require__(/*! ./consts */ "./node_modules/@kiwicom/orbit-components/lib/Checkbox/consts.js"));
 
-var _ButtonLink = _interopRequireDefault(__webpack_require__(/*! ../ButtonLink */ "./node_modules/@kiwicom/orbit-components/lib/ButtonLink/index.js"));
+var _Check = _interopRequireDefault(__webpack_require__(/*! ../icons/Check */ "./node_modules/@kiwicom/orbit-components/lib/icons/Check.js"));
 
-var _CardSection = _interopRequireWildcard(__webpack_require__(/*! ./CardSection */ "./node_modules/@kiwicom/orbit-components/lib/Card/CardSection/index.js"));
-
-var _CardHeader = _interopRequireWildcard(__webpack_require__(/*! ./CardHeader */ "./node_modules/@kiwicom/orbit-components/lib/Card/CardHeader/index.js"));
-
-var _CardSectionContent = _interopRequireWildcard(__webpack_require__(/*! ./CardSection/CardSectionContent */ "./node_modules/@kiwicom/orbit-components/lib/Card/CardSection/CardSectionContent/index.js"));
-
-var _Loading = _interopRequireWildcard(__webpack_require__(/*! ../Loading */ "./node_modules/@kiwicom/orbit-components/lib/Loading/index.js"));
-
-var _getSpacingToken = _interopRequireDefault(__webpack_require__(/*! ../common/getSpacingToken */ "./node_modules/@kiwicom/orbit-components/lib/common/getSpacingToken/index.js"));
+var _Text = __webpack_require__(/*! ../Text */ "./node_modules/@kiwicom/orbit-components/lib/Text/index.js");
 
 var _rtl = __webpack_require__(/*! ../utils/rtl */ "./node_modules/@kiwicom/orbit-components/lib/utils/rtl/index.js");
 
-var _consts = _interopRequireDefault(__webpack_require__(/*! ./consts */ "./node_modules/@kiwicom/orbit-components/lib/Card/consts.js"));
-
-var _CardSectionHeader = _interopRequireDefault(__webpack_require__(/*! ./CardSection/CardSectionHeader */ "./node_modules/@kiwicom/orbit-components/lib/Card/CardSection/CardSectionHeader/index.js"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var getBorder = function getBorder(_ref) {
-  var theme = _ref.theme;
-  return "".concat(theme.orbit.borderWidthCard, " ").concat(theme.orbit.borderStyleCard, " ").concat(theme.orbit.borderColorCard);
+var getToken = function getToken(name) {
+  return function (_ref) {
+    var _tokens;
+
+    var theme = _ref.theme,
+        hasError = _ref.hasError,
+        disabled = _ref.disabled,
+        checked = _ref.checked;
+    var tokens = (_tokens = {}, _defineProperty(_tokens, _consts.default.borderColor, hasError && !disabled && !checked ? theme.orbit.borderColorCheckboxRadioError : theme.orbit.borderColorCheckboxRadio), _defineProperty(_tokens, _consts.default.iconColor, disabled ? theme.orbit.colorIconCheckboxRadioDisabled : theme.orbit.colorIconCheckboxRadio), _tokens);
+    return tokens[name];
+  };
 };
 
-var getBorderRadius = function getBorderRadius(_ref2) {
+var IconContainer = _styledComponents.default.div.withConfig({
+  displayName: "Checkbox__IconContainer",
+  componentId: "sc-1x6twh3-0"
+})(["position:relative;box-sizing:border-box;flex:0 0 auto;display:flex;align-items:center;justify-content:center;background-color:", ";height:", ";width:", ";border-radius:", ";transform:scale(1);transition:all ", " ease-in-out;& > svg{visibility:hidden;display:flex;align-items:center;justify-content:center;width:16px;height:16px;}"], function (_ref2) {
   var theme = _ref2.theme;
-  return theme.orbit.borderRadiusNormal;
-}; // Logic of borders radius
-
-
-var StyledChildWrapper = _styledComponents.default.div.withConfig({
-  displayName: "Card__StyledChildWrapper",
-  componentId: "ff0z2v-0"
-})(["margin:", ";transition:margin ", " ease-in-out;", ",", ",> ", "{border-top-left-radius:", ";border-top-right-radius:", ";border-bottom-left-radius:", ";border-bottom-right-radius:", ";box-shadow:", ";border-left:", ";border-right:", ";border-bottom:", ";background:", ";}+ div ", ",", "{border-top:", ";}"], function (_ref3) {
-  var theme = _ref3.theme,
-      expanded = _ref3.expanded;
-  return expanded && "".concat(theme.orbit.spaceXSmall, " 0");
+  return theme.orbit.backgroundInput;
+}, function (_ref3) {
+  var theme = _ref3.theme;
+  return theme.orbit.heightCheckbox;
 }, function (_ref4) {
-  var theme = _ref4.theme,
-      initialExpanded = _ref4.initialExpanded;
-  return !initialExpanded && theme.orbit.durationFast;
-}, _CardSection.StyledCardSection, _CardHeader.StyledCardHeader, _Loading.StyledLoading, function (_ref5) {
-  var roundedTopBorders = _ref5.roundedTopBorders;
-  return roundedTopBorders && getBorderRadius;
-}, function (_ref6) {
-  var roundedTopBorders = _ref6.roundedTopBorders;
-  return roundedTopBorders && getBorderRadius;
-}, function (_ref7) {
-  var roundedBottomBorders = _ref7.roundedBottomBorders;
-  return roundedBottomBorders && getBorderRadius;
-}, function (_ref8) {
-  var roundedBottomBorders = _ref8.roundedBottomBorders;
-  return roundedBottomBorders && getBorderRadius;
-}, function (_ref9) {
-  var expanded = _ref9.expanded;
-  return expanded && "0 4px 12px 0 rgba(23, 27, 30, 0.1)";
-}, getBorder, getBorder, getBorder, function (_ref10) {
-  var theme = _ref10.theme;
-  return theme.orbit.backgroundCard;
-}, _CardSection.StyledCardSection, _CardSection.StyledCardSection, function (_ref11) {
-  var expanded = _ref11.expanded;
-  return expanded && getBorder;
-});
-
-StyledChildWrapper.defaultProps = {
-  theme: _defaultTheme.default
-};
-
-var StyledCard = _styledComponents.default.div.withConfig({
-  displayName: "Card__StyledCard",
-  componentId: "ff0z2v-1"
-})(["width:100%;box-sizing:border-box;position:relative;font-family:", ";margin-bottom:", ";", "{padding-", ":", ";border-bottom:", ";}", "{&:first-of-type{", ",", ",> ", "{border-top:", ";border-top-left-radius:", ";border-top-right-radius:", ";}+ ", " ", "{padding-top:", ";", ":first-of-type{padding-top:", ";}}}&:last-of-type{", ",", "{border-bottom-left-radius:", ";border-bottom-right-radius:", ";}}}"], function (_ref12) {
-  var theme = _ref12.theme;
-  return theme.orbit.fontFamily;
-}, _getSpacingToken.default, _CardHeader.StyledCardHeader, _rtl.right, function (_ref13) {
-  var theme = _ref13.theme,
-      closable = _ref13.closable;
-  return closable && theme.orbit.spaceLarge;
-}, function (_ref14) {
-  var hasAdjustedHeader = _ref14.hasAdjustedHeader;
-  return hasAdjustedHeader && 0;
-}, StyledChildWrapper, _CardHeader.StyledCardHeader, _CardSection.StyledCardSection, _Loading.StyledLoading, getBorder, getBorderRadius, getBorderRadius, StyledChildWrapper, _CardSection.StyledCardSection, function (_ref15) {
-  var hasAdjustedHeader = _ref15.hasAdjustedHeader;
-  return hasAdjustedHeader && 0;
-}, _CardSectionContent.StyledCardSectionContent, function (_ref16) {
-  var hasAdjustedHeader = _ref16.hasAdjustedHeader;
-  return hasAdjustedHeader && 0;
-}, _CardHeader.StyledCardHeader, _CardSection.StyledCardSection, getBorderRadius, getBorderRadius);
-
-StyledCard.defaultProps = {
-  theme: _defaultTheme.default
-};
-
-var CloseContainer = _styledComponents.default.div.withConfig({
-  displayName: "Card__CloseContainer",
-  componentId: "ff0z2v-2"
-})(["position:absolute;top:0;", ":0;z-index:1;"], _rtl.right);
-
-var Card =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(Card, _React$Component);
-
-  function Card() {
-    var _getPrototypeOf2;
-
-    var _this;
-
-    _classCallCheck(this, Card);
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Card)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-    _defineProperty(_assertThisInitialized(_this), "state", {
-      expandedSections: [],
-      initialExpandedSections: []
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "getRoundedBorders", function (index) {
-      var expandedSections = _this.state.expandedSections;
-      var topBorder = expandedSections.indexOf(index - 1) !== -1 || expandedSections.indexOf(index) !== -1;
-      var bottomBorder = expandedSections.indexOf(index + 1) !== -1 || expandedSections.indexOf(index) !== -1;
-      return {
-        top: topBorder,
-        bottom: bottomBorder
-      };
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "getChildren", function () {
-      var _children$0$type, _children$0$props;
-
-      // Loading Card Logic
-      var children = React.Children.toArray(_this.props.children);
-
-      if (children[0] === undefined) {
-        // Jest test
-        return [];
-      }
-
-      if (_Loading.default.name !== "" && ((_children$0$type = children[0].type) === null || _children$0$type === void 0 ? void 0 : _children$0$type.name) === _Loading.default.name && !((_children$0$props = children[0].props) === null || _children$0$props === void 0 ? void 0 : _children$0$props.loading)) {
-        var _children$0$props2, _children$0$props3, _children$0$props3$ch;
-
-        if (!Array.isArray((_children$0$props2 = children[0].props) === null || _children$0$props2 === void 0 ? void 0 : _children$0$props2.children) && String((_children$0$props3 = children[0].props) === null || _children$0$props3 === void 0 ? void 0 : (_children$0$props3$ch = _children$0$props3.children) === null || _children$0$props3$ch === void 0 ? void 0 : _children$0$props3$ch.type) === React.Fragment.toString()) {
-          var _children$0$props4, _children$0$props4$ch, _children$0$props4$ch2;
-
-          return (_children$0$props4 = children[0].props) === null || _children$0$props4 === void 0 ? void 0 : (_children$0$props4$ch = _children$0$props4.children) === null || _children$0$props4$ch === void 0 ? void 0 : (_children$0$props4$ch2 = _children$0$props4$ch.props) === null || _children$0$props4$ch2 === void 0 ? void 0 : _children$0$props4$ch2.children;
-        }
-      }
-
-      return children;
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "setInitialExpandedSection", function (index) {
-      _this.setState({
-        initialExpandedSections: [].concat(_toConsumableArray(_this.state.initialExpandedSections), [index])
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "isExpanded", function (index) {
-      return _this.state.expandedSections.indexOf(index) !== -1;
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "isInitialExpanded", function (index) {
-      return _this.state.initialExpandedSections.indexOf(index) !== -1;
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "isExpandableCardSection", function (item) {
-      return item.type.name === _CardSection.default.name && item.props.expandable;
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "handleToggleSection", function (index) {
-      _this.setState({
-        expandedSections: _this.state.expandedSections.indexOf(index) === -1 ? [].concat(_toConsumableArray(_this.state.expandedSections), [index]) : _this.state.expandedSections.filter(function (value) {
-          return value !== index;
-        }),
-        initialExpandedSections: _toConsumableArray(_this.state.initialExpandedSections.filter(function (sectionIndex) {
-          return sectionIndex !== index;
-        }))
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "hasAdjustedHeader", function () {
-      var children = _this.getChildren();
-
-      if (children === undefined) {
-        return false;
-      } // Check if first element is Header
-
-
-      if (children && children[0] !== undefined && children[0].type.name !== _CardHeader.default.name) {
-        return false;
-      } // Check if first section exists
-
-
-      if (children && children[1] === undefined) {
-        return false;
-      }
-
-      return !_this.isExpandableCardSection(children[1]);
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "renderSection", function (section, index) {
-      var isExpanded = _this.isExpanded(index);
-
-      var isInitialExpanded = _this.isInitialExpanded(index);
-
-      var roundedBorders = _this.getRoundedBorders(index);
-
-      return React.createElement(StyledChildWrapper, {
-        roundedTopBorders: roundedBorders.top,
-        roundedBottomBorders: roundedBorders.bottom,
-        expanded: isExpanded,
-        initialExpanded: isInitialExpanded
-      }, React.cloneElement(section, {
-        expanded: isExpanded,
-        handleToggleSection: function handleToggleSection() {
-          return _this.handleToggleSection(index);
-        },
-        setInitialExpandedSection: function setInitialExpandedSection() {
-          return _this.setInitialExpandedSection(index);
-        }
-      }));
-    });
-
-    return _this;
-  }
-
-  _createClass(Card, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      var _this$props = this.props,
-          closable = _this$props.closable,
-          dataTest = _this$props.dataTest,
-          spaceAfter = _this$props.spaceAfter,
-          onClose = _this$props.onClose;
-      var children = this.getChildren();
-      return React.createElement(StyledCard, {
-        closable: closable,
-        "data-test": dataTest,
-        spaceAfter: spaceAfter,
-        hasAdjustedHeader: this.hasAdjustedHeader()
-      }, children && React.Children.map(children, function (item, index) {
-        return _this2.renderSection(item, index);
-      }), closable && React.createElement(CloseContainer, null, React.createElement(_ButtonLink.default, {
-        dataTest: _consts.default,
-        type: "secondary",
-        size: "small",
-        icon: React.createElement(_Close.default, null),
-        onClick: onClose,
-        transparent: true
-      })));
-    }
-  }]);
-
-  return Card;
-}(React.Component);
-
-var _default = Card;
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@kiwicom/orbit-components/lib/CarrierLogo/consts.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@kiwicom/orbit-components/lib/CarrierLogo/consts.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.BASE_URL = exports.CARRIER_TYPE_OPTIONS = exports.SIZE_OPTIONS = void 0;
-var SIZE_OPTIONS = {
-  SMALL: "small",
-  MEDIUM: "medium",
-  LARGE: "large"
-};
-exports.SIZE_OPTIONS = SIZE_OPTIONS;
-var CARRIER_TYPE_OPTIONS = {
-  AIRLINE: "airline",
-  BUS: "bus",
-  TRAIN: "train"
-};
-exports.CARRIER_TYPE_OPTIONS = CARRIER_TYPE_OPTIONS;
-var BASE_URL = "//images.kiwi.com";
-exports.BASE_URL = BASE_URL;
-
-/***/ }),
-
-/***/ "./node_modules/@kiwicom/orbit-components/lib/CarrierLogo/index.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/@kiwicom/orbit-components/lib/CarrierLogo/index.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = exports.StyledCarrierLogo = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _styledComponents = _interopRequireDefault(__webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js"));
-
-var _defaultTheme = _interopRequireDefault(__webpack_require__(/*! ../defaultTheme */ "./node_modules/@kiwicom/orbit-components/lib/defaultTheme.js"));
-
-var _consts = __webpack_require__(/*! ./consts */ "./node_modules/@kiwicom/orbit-components/lib/CarrierLogo/consts.js");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var getRenderSize = function getRenderSize(_ref) {
-  var _renderSizes;
-
-  var theme = _ref.theme,
-      size = _ref.size;
-  var renderSizes = (_renderSizes = {}, _defineProperty(_renderSizes, _consts.SIZE_OPTIONS.SMALL, parseInt(theme.orbit.heightIconSmall, 10)), _defineProperty(_renderSizes, _consts.SIZE_OPTIONS.MEDIUM, parseInt(theme.orbit.heightIconMedium, 10)), _defineProperty(_renderSizes, _consts.SIZE_OPTIONS.LARGE, parseInt(theme.orbit.heightIconLarge, 10)), _renderSizes);
-  return renderSizes[size];
-};
-
-var getCarrierLogoSize = function getCarrierLogoSize(_ref2) {
-  var theme = _ref2.theme,
-      carriersLength = _ref2.carriersLength,
-      size = _ref2.size;
-  var defaultSizes = carriersLength > 1 ? getRenderSize({
-    theme: theme,
-    size: _consts.SIZE_OPTIONS.SMALL
-  }) : getRenderSize({
-    theme: theme,
-    size: size
-  });
-  return "".concat(defaultSizes - (carriersLength > 2 ? 1 : 0), "px");
-};
-
-var getURLSizes = function getURLSizes(_ref3) {
-  var _base, _retina;
-
-  var size = _ref3.size;
-  var urlSizes = {
-    base: (_base = {}, _defineProperty(_base, _consts.SIZE_OPTIONS.SMALL, 16), _defineProperty(_base, _consts.SIZE_OPTIONS.MEDIUM, 32), _defineProperty(_base, _consts.SIZE_OPTIONS.LARGE, 32), _base),
-    retina: (_retina = {}, _defineProperty(_retina, _consts.SIZE_OPTIONS.SMALL, 32), _defineProperty(_retina, _consts.SIZE_OPTIONS.MEDIUM, 64), _defineProperty(_retina, _consts.SIZE_OPTIONS.LARGE, 64), _retina)
-  };
-  return {
-    base: urlSizes.base[size],
-    retina: urlSizes.retina[size]
-  };
-};
-
-var StyledImage = _styledComponents.default.img.attrs(function (_ref4) {
-  var _ref4$carrierType = _ref4.carrierType,
-      carrierType = _ref4$carrierType === void 0 ? "airline" : _ref4$carrierType,
-      carriersLength = _ref4.carriersLength,
-      size = _ref4.size,
-      code = _ref4.code;
-  var urlSizes = carriersLength > 1 ? getURLSizes({
-    size: _consts.SIZE_OPTIONS.SMALL
-  }) : getURLSizes({
-    size: size
-  });
-  return {
-    src: "".concat(_consts.BASE_URL, "/airlines/").concat(urlSizes.base, "/").concat(code, ".png?default=").concat(carrierType, ".png"),
-    srcSet: "".concat(_consts.BASE_URL, "/airlines/").concat(urlSizes.retina, "/").concat(code, ".png?default=").concat(carrierType, ".png 2x")
-  };
-}).withConfig({
-  displayName: "CarrierLogo__StyledImage",
-  componentId: "d4doc9-0"
-})(["background-color:", ";border-radius:", ";height:", ";width:", ";&:last-child{align-self:flex-end;}"], function (_ref5) {
+  var theme = _ref4.theme;
+  return theme.orbit.widthCheckbox;
+}, function (_ref5) {
   var theme = _ref5.theme;
-  return theme.orbit.backgroundCarrierLogo;
+  return theme.orbit.borderRadiusNormal;
 }, function (_ref6) {
   var theme = _ref6.theme;
-  return theme.orbit.borderRadiusNormal;
-}, getCarrierLogoSize, getCarrierLogoSize);
-
-StyledImage.defaultProps = {
-  theme: _defaultTheme.default
-};
-
-var StyledCarrierLogo = _styledComponents.default.div.withConfig({
-  displayName: "CarrierLogo__StyledCarrierLogo",
-  componentId: "d4doc9-1"
-})(["background-color:", ";height:", ";width:", ";display:flex;flex-direction:", ";flex-wrap:", ";align-content:space-between;justify-content:space-between;"], function (_ref7) {
-  var theme = _ref7.theme;
-  return theme.orbit.backgroundCarrierLogo;
-}, function (_ref8) {
-  var theme = _ref8.theme,
-      carriers = _ref8.carriers,
-      size = _ref8.size;
-  return carriers.length > 1 ? theme.orbit.heightIconLarge : "".concat(getRenderSize({
-    theme: theme,
-    size: size
-  }), "px");
-}, function (_ref9) {
-  var theme = _ref9.theme,
-      carriers = _ref9.carriers,
-      size = _ref9.size;
-  return carriers.length > 1 ? theme.orbit.widthIconLarge : "".concat(getRenderSize({
-    theme: theme,
-    size: size
-  }), "px");
-}, function (_ref10) {
-  var carriers = _ref10.carriers;
-  return carriers.length > 1 ? "column" : "row";
-}, function (_ref11) {
-  var carriers = _ref11.carriers;
-  return carriers.length > 2 && "wrap";
+  return theme.orbit.durationFast;
 });
 
-exports.StyledCarrierLogo = StyledCarrierLogo;
-StyledCarrierLogo.defaultProps = {
+IconContainer.defaultProps = {
   theme: _defaultTheme.default
 };
 
-var CarrierLogo = function CarrierLogo(_ref12) {
-  var _ref12$size = _ref12.size,
-      size = _ref12$size === void 0 ? _consts.SIZE_OPTIONS.LARGE : _ref12$size,
-      carriers = _ref12.carriers,
-      dataTest = _ref12.dataTest;
-  return React.createElement(StyledCarrierLogo, {
-    carriers: carriers,
-    size: size,
-    "data-test": dataTest
-  }, carriers.slice(0, 4).map(function (carrierImage) {
-    return React.createElement(StyledImage, {
-      key: carrierImage.code,
-      carrierType: carrierImage.type,
-      carriersLength: carriers.length,
-      code: carrierImage.code,
-      size: size,
-      alt: carrierImage.name,
-      title: carrierImage.name
-    });
-  }));
+var TextContainer = _styledComponents.default.div.withConfig({
+  displayName: "Checkbox__TextContainer",
+  componentId: "sc-1x6twh3-1"
+})(["display:flex;flex-direction:column;margin:", ";flex:1;"], function (_ref7) {
+  var theme = _ref7.theme;
+  return (0, _rtl.rtlSpacing)("0 0 0 ".concat(theme.orbit.spaceXSmall));
+});
+
+TextContainer.defaultProps = {
+  theme: _defaultTheme.default
 };
 
-var _default = CarrierLogo;
+var Info = _styledComponents.default.span.withConfig({
+  displayName: "Checkbox__Info",
+  componentId: "sc-1x6twh3-2"
+})(["font-size:", ";color:", ";line-height:", ";"], function (_ref8) {
+  var theme = _ref8.theme;
+  return theme.orbit.fontSizeFormFeedback;
+}, function (_ref9) {
+  var theme = _ref9.theme;
+  return theme.orbit.colorInfoCheckBoxRadio;
+}, function (_ref10) {
+  var theme = _ref10.theme;
+  return theme.orbit.lineHeightText;
+});
+
+Info.defaultProps = {
+  theme: _defaultTheme.default
+};
+
+var LabelText = _styledComponents.default.span.withConfig({
+  displayName: "Checkbox__LabelText",
+  componentId: "sc-1x6twh3-3"
+})(["font-family:", ";font-weight:", ";font-size:", ";color:", ";line-height:", ";", "{font-weight:", ";font-size:", ";color:", ";line-height:", ";}"], function (_ref11) {
+  var theme = _ref11.theme;
+  return theme.orbit.fontFamily;
+}, function (_ref12) {
+  var theme = _ref12.theme;
+  return theme.orbit.fontWeightNormal;
+}, function (_ref13) {
+  var theme = _ref13.theme;
+  return theme.orbit.fontSizeFormLabel;
+}, function (_ref14) {
+  var theme = _ref14.theme;
+  return theme.orbit.colorFormLabel;
+}, function (_ref15) {
+  var theme = _ref15.theme;
+  return theme.orbit.heightCheckbox;
+}, _Text.StyledText, function (_ref16) {
+  var theme = _ref16.theme;
+  return theme.orbit.fontWeightNormal;
+}, function (_ref17) {
+  var theme = _ref17.theme;
+  return theme.orbit.fontSizeFormLabel;
+}, function (_ref18) {
+  var theme = _ref18.theme;
+  return theme.orbit.colorFormLabel;
+}, function (_ref19) {
+  var theme = _ref19.theme;
+  return theme.orbit.heightCheckbox;
+});
+
+LabelText.defaultProps = {
+  theme: _defaultTheme.default
+};
+
+var Input = _styledComponents.default.input.withConfig({
+  displayName: "Checkbox__Input",
+  componentId: "sc-1x6twh3-4"
+})(["opacity:0;z-index:-1;position:absolute;&:checked ~ ", " > ", "{font-weight:", ";& > ", "{font-weight:", ";}}&:checked + ", " > svg{visibility:visible;}&:focus + ", "{border:", ";}&:active + ", "{border-color:", ";transform:", ";}"], TextContainer, LabelText, function (_ref20) {
+  var theme = _ref20.theme;
+  return theme.orbit.fontWeightMedium;
+}, _Text.StyledText, function (_ref21) {
+  var theme = _ref21.theme;
+  return theme.orbit.fontWeightMedium;
+}, IconContainer, IconContainer, function (_ref22) {
+  var theme = _ref22.theme;
+  return "2px ".concat(theme.orbit.borderStyleInput, " ").concat(theme.orbit.borderColorCheckboxRadioFocus);
+}, IconContainer, function (_ref23) {
+  var disabled = _ref23.disabled,
+      theme = _ref23.theme;
+  return disabled ? getToken(_consts.default.borderColor) : theme.orbit.borderColorCheckboxRadioActive;
+}, function (_ref24) {
+  var disabled = _ref24.disabled,
+      theme = _ref24.theme;
+  return !disabled && "scale(".concat(theme.orbit.modifierScaleCheckboxRadioActive, ")");
+});
+
+Input.defaultProps = {
+  theme: _defaultTheme.default
+};
+var Label = (0, _styledComponents.default)(function (_ref25) {
+  var className = _ref25.className,
+      children = _ref25.children,
+      dataTest = _ref25.dataTest;
+  return React.createElement("label", {
+    className: className,
+    "data-test": dataTest
+  }, children);
+}).withConfig({
+  displayName: "Checkbox__Label",
+  componentId: "sc-1x6twh3-5"
+})(["font-family:", ";display:flex;width:100%;flex-direction:row;align-items:self-start;opacity:", ";cursor:", ";position:relative;", "{color:", ";border:1px solid ", ";}&:hover ", "{border-color:", ";}"], function (_ref26) {
+  var theme = _ref26.theme;
+  return theme.orbit.fontFamily;
+}, function (_ref27) {
+  var disabled = _ref27.disabled,
+      theme = _ref27.theme;
+  return disabled ? theme.orbit.opacityCheckboxDisabled : "1";
+}, function (_ref28) {
+  var disabled = _ref28.disabled;
+  return disabled ? "not-allowed" : "pointer";
+}, IconContainer, getToken(_consts.default.iconColor), getToken(_consts.default.borderColor), IconContainer, function (_ref29) {
+  var disabled = _ref29.disabled,
+      theme = _ref29.theme;
+  return !disabled && theme.orbit.borderColorCheckboxRadioHover;
+});
+exports.Label = Label;
+Label.defaultProps = {
+  theme: _defaultTheme.default
+}; // $FlowExpected
+
+var Checkbox = React.forwardRef(function (props, ref) {
+  var label = props.label,
+      value = props.value,
+      _props$hasError = props.hasError,
+      hasError = _props$hasError === void 0 ? false : _props$hasError,
+      _props$disabled = props.disabled,
+      disabled = _props$disabled === void 0 ? false : _props$disabled,
+      _props$checked = props.checked,
+      checked = _props$checked === void 0 ? false : _props$checked,
+      name = props.name,
+      onChange = props.onChange,
+      dataTest = props.dataTest,
+      info = props.info,
+      readOnly = props.readOnly,
+      tabIndex = props.tabIndex;
+  return React.createElement(Label, {
+    disabled: disabled,
+    hasError: hasError,
+    checked: checked
+  }, React.createElement(Input, {
+    "data-test": dataTest,
+    value: value,
+    type: "checkbox",
+    disabled: disabled,
+    name: name,
+    tabIndex: tabIndex,
+    checked: checked,
+    onChange: onChange,
+    ref: ref,
+    readOnly: readOnly
+  }), React.createElement(IconContainer, null, React.createElement(_Check.default, null)), (label || info) && React.createElement(TextContainer, null, label && React.createElement(LabelText, null, label), info && React.createElement(Info, null, info)));
+});
+Checkbox.displayName = "Checkbox";
+var _default = Checkbox;
 exports.default = _default;
 
 /***/ }),
@@ -4667,73 +3953,6 @@ var Heading = function Heading(_ref7) {
 };
 
 var _default = Heading;
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@kiwicom/orbit-components/lib/Hide/index.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@kiwicom/orbit-components/lib/Hide/index.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _styledComponents = _interopRequireWildcard(__webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js"));
-
-var _mediaQuery = _interopRequireDefault(__webpack_require__(/*! ../utils/mediaQuery */ "./node_modules/@kiwicom/orbit-components/lib/utils/mediaQuery/index.js"));
-
-var _consts = __webpack_require__(/*! ../utils/mediaQuery/consts */ "./node_modules/@kiwicom/orbit-components/lib/utils/mediaQuery/consts.js");
-
-var _defaultTheme = _interopRequireDefault(__webpack_require__(/*! ../defaultTheme */ "./node_modules/@kiwicom/orbit-components/lib/defaultTheme.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-var getDisplay = function getDisplay() {
-  return function (_ref) {
-    var block = _ref.block;
-    return block ? "block" : "inline-block";
-  };
-};
-
-var StyledHide = _styledComponents.default.span.withConfig({
-  displayName: "Hide__StyledHide",
-  componentId: "ji2pgq-0"
-})(["", ";"], function (_ref2) {
-  var on = _ref2.on;
-  return _consts.DEVICES.map(function (viewport) {
-    return viewport in _mediaQuery.default ? (0, _styledComponents.css)(["", ";"], _mediaQuery.default[viewport]((0, _styledComponents.css)(["display:", ";"], on.indexOf(viewport) !== -1 ? "none" : getDisplay()))) : // "smallMobile" is not media query so we need to check it explicitly
-    viewport === "smallMobile" && on.indexOf(viewport) !== -1 && (0, _styledComponents.css)(["display:none;"]);
-  });
-});
-
-StyledHide.defaultProps = {
-  theme: _defaultTheme.default
-};
-
-var Hide = function Hide(_ref3) {
-  var _ref3$on = _ref3.on,
-      on = _ref3$on === void 0 ? [] : _ref3$on,
-      block = _ref3.block,
-      children = _ref3.children;
-  return React.createElement(StyledHide, {
-    on: on,
-    block: block
-  }, children);
-};
-
-var _default = Hide;
 exports.default = _default;
 
 /***/ }),
@@ -4895,9 +4114,9 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ "./node_modules/@kiwicom/orbit-components/lib/Illustration/consts.js":
+/***/ "./node_modules/@kiwicom/orbit-components/lib/List/ListItem/index.js":
 /*!***************************************************************************!*\
-  !*** ./node_modules/@kiwicom/orbit-components/lib/Illustration/consts.js ***!
+  !*** ./node_modules/@kiwicom/orbit-components/lib/List/ListItem/index.js ***!
   \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -4908,105 +4127,62 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.baseURL = exports.SIZE_OPTIONS = exports.NAMES = void 0;
-var NAMES = ["Accommodation", "AirHelp", "AirportTransport", // TODO: Get rid off 22.11
-"AirportTransportTaxi", // TODO: Get rid off 22.11
-"AirportShuttle", "BaggageDrop", "Boarding", "BoardingPass", "BusinessTravel", "CabinBaggage", "DesktopSearch", "EnjoyApp", "Error", "FastTrack", "Feedback", "Help", "Improve", "Insurance", "InviteAFriend", "Login", "Lounge", "Mailbox", "Meal", "MobileApp", "Money", "MusicalInstruments", "NetVerify", "NoBookings", // TODO: Get rid off 22.11
-"NoFavoriteFlights", "Nomad", "NoNotification", "NoResults", "Offline", "OnlineCheckIn", "OpenSearch", "Parking", "Pets", "PlaceholderAirport", "PlaceholderDestination", "PlaceholderHotel", "PlaceholderTours", "PlaneAndMoney", "PriorityBoarding", "Rating", "ReferAFriend", "RentalCar", "Seating", "SpecialAssistance", "SportsEquipment", "Success", "Time", "TimelineBoarding", // TODO: Get rid off 22.11
-"TimelineDropBaggage", // TODO: Get rid off 22.11
-"TimelineLeave", "TimelinePick", "Tours", "Train", "TransportBus", "TransportTaxi"];
-exports.NAMES = NAMES;
-var SIZE_OPTIONS = {
-  SMALL: "small",
-  MEDIUM: "medium"
-};
-exports.SIZE_OPTIONS = SIZE_OPTIONS;
-var baseURL = "//images.kiwi.com";
-exports.baseURL = baseURL;
-
-/***/ }),
-
-/***/ "./node_modules/@kiwicom/orbit-components/lib/Illustration/index.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@kiwicom/orbit-components/lib/Illustration/index.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = exports.StyledImage = void 0;
+exports.default = exports.IconContainer = exports.Item = void 0;
 
 var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
 var _styledComponents = _interopRequireDefault(__webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js"));
 
-var _defaultTheme = _interopRequireDefault(__webpack_require__(/*! ../defaultTheme */ "./node_modules/@kiwicom/orbit-components/lib/defaultTheme.js"));
+var _defaultTheme = _interopRequireDefault(__webpack_require__(/*! ../../defaultTheme */ "./node_modules/@kiwicom/orbit-components/lib/defaultTheme.js"));
 
-var _consts = __webpack_require__(/*! ./consts */ "./node_modules/@kiwicom/orbit-components/lib/Illustration/consts.js");
+var _CircleSmall = _interopRequireDefault(__webpack_require__(/*! ../../icons/CircleSmall */ "./node_modules/@kiwicom/orbit-components/lib/icons/CircleSmall.js"));
 
-var _getSpacingToken = _interopRequireDefault(__webpack_require__(/*! ../common/getSpacingToken */ "./node_modules/@kiwicom/orbit-components/lib/common/getSpacingToken/index.js"));
+var _rtl = __webpack_require__(/*! ../../utils/rtl */ "./node_modules/@kiwicom/orbit-components/lib/utils/rtl/index.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+var Item = _styledComponents.default.li.withConfig({
+  displayName: "ListItem__Item",
+  componentId: "sc-1vswvev-0"
+})(["font-family:", ";display:flex;flex-direction:row;align-items:flex-start;margin-bottom:", ";&:last-child,&:last-of-type{margin:0;}"], function (_ref) {
+  var theme = _ref.theme;
+  return theme.orbit.fontFamily;
+}, function (_ref2) {
+  var theme = _ref2.theme;
+  return theme.orbit.spaceXXSmall;
+});
 
-var getHeightToken = function getHeightToken(_ref) {
-  var _tokens;
-
-  var theme = _ref.theme,
-      size = _ref.size;
-  var tokens = (_tokens = {}, _defineProperty(_tokens, _consts.SIZE_OPTIONS.SMALL, theme.orbit.heightIllustrationSmall), _defineProperty(_tokens, _consts.SIZE_OPTIONS.MEDIUM, theme.orbit.heightIllustrationMedium), _tokens);
-  return tokens[size];
-};
-
-var StyledImage = _styledComponents.default.img.attrs(function (_ref2) {
-  var theme = _ref2.theme,
-      size = _ref2.size,
-      illustrationName = _ref2.illustrationName;
-  var height = parseInt(getHeightToken({
-    theme: theme,
-    size: size
-  }), 10);
-  return {
-    src: "".concat(_consts.baseURL, "/illustrations/0x").concat(height, "/").concat(illustrationName, ".png"),
-    srcSet: "".concat(_consts.baseURL, "/illustrations/0x").concat(height * 2, "/").concat(illustrationName, ".png 2x, ").concat(_consts.baseURL, "/illustrations/0x").concat(height * 3, "/").concat(illustrationName, ".png 3x")
-  };
-}).withConfig({
-  displayName: "Illustration__StyledImage",
-  componentId: "uskdow-0"
-})(["display:inline-block;margin:auto 0;max-height:", ";max-width:100%;background-color:", ";margin-bottom:", ";"], getHeightToken, function (_ref3) {
-  var theme = _ref3.theme;
-  return theme.orbit.backgroundIllustration;
-}, _getSpacingToken.default);
-
-exports.StyledImage = StyledImage;
-StyledImage.defaultProps = {
+exports.Item = Item;
+Item.defaultProps = {
   theme: _defaultTheme.default
 };
 
-var Illustration = function Illustration(_ref4) {
-  var name = _ref4.name,
-      _ref4$size = _ref4.size,
-      size = _ref4$size === void 0 ? _consts.SIZE_OPTIONS.MEDIUM : _ref4$size,
-      dataTest = _ref4.dataTest,
-      spaceAfter = _ref4.spaceAfter;
-  return React.createElement(StyledImage, {
-    illustrationName: name,
-    alt: name,
-    size: size,
-    "data-test": dataTest,
-    spaceAfter: spaceAfter
-  });
+var IconContainer = _styledComponents.default.div.withConfig({
+  displayName: "ListItem__IconContainer",
+  componentId: "sc-1vswvev-1"
+})(["display:flex;align-items:center;margin:", ";"], function (_ref3) {
+  var theme = _ref3.theme;
+  return (0, _rtl.rtlSpacing)("0 ".concat(theme.orbit.spaceXSmall, " 0 0"));
+});
+
+exports.IconContainer = IconContainer;
+IconContainer.defaultProps = {
+  theme: _defaultTheme.default
 };
 
-var _default = Illustration;
+var ListItem = function ListItem(_ref4) {
+  var children = _ref4.children,
+      _ref4$icon = _ref4.icon,
+      icon = _ref4$icon === void 0 ? React.createElement(_CircleSmall.default, null) : _ref4$icon,
+      dataTest = _ref4.dataTest;
+  return React.createElement(Item, {
+    "data-test": dataTest
+  }, React.createElement(IconContainer, null, icon), children);
+};
+
+var _default = ListItem;
 exports.default = _default;
 
 /***/ }),
@@ -5216,6 +4392,1493 @@ var Loading = function Loading(props) {
 Loading.displayName = "Loading";
 var _default = Loading;
 exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@kiwicom/orbit-components/lib/Modal/ModalContext.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/Modal/ModalContext.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.withModalContext = exports.ModalContext = void 0;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+var ModalContext = React.createContext({
+  setDimensions: function setDimensions() {},
+  decideFixedFooter: function decideFixedFooter() {},
+  setHasModalSection: function setHasModalSection() {},
+  removeHasModalSection: function removeHasModalSection() {},
+  manageFocus: function manageFocus() {},
+  hasModalSection: false,
+  isMobileFullPage: false
+});
+exports.ModalContext = ModalContext;
+
+var withModalContext = function withModalContext(Component) {
+  return function (props) {
+    return React.createElement(ModalContext.Consumer, null, function (contextProps) {
+      return React.createElement(Component, _extends({}, props, contextProps));
+    });
+  };
+};
+
+exports.withModalContext = withModalContext;
+
+/***/ }),
+
+/***/ "./node_modules/@kiwicom/orbit-components/lib/Modal/ModalFooter/index.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/Modal/ModalFooter/index.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.StyledModalFooter = void 0;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _styledComponents = _interopRequireWildcard(__webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js"));
+
+var _mediaQuery = _interopRequireWildcard(__webpack_require__(/*! ../../utils/mediaQuery */ "./node_modules/@kiwicom/orbit-components/lib/utils/mediaQuery/index.js"));
+
+var _defaultTheme = _interopRequireDefault(__webpack_require__(/*! ../../defaultTheme */ "./node_modules/@kiwicom/orbit-components/lib/defaultTheme.js"));
+
+var _Button = __webpack_require__(/*! ../../Button */ "./node_modules/@kiwicom/orbit-components/lib/Button/index.js");
+
+var _rtl = __webpack_require__(/*! ../../utils/rtl */ "./node_modules/@kiwicom/orbit-components/lib/utils/rtl/index.js");
+
+var _ButtonLink = __webpack_require__(/*! ../../ButtonLink */ "./node_modules/@kiwicom/orbit-components/lib/ButtonLink/index.js");
+
+var _ModalContext = __webpack_require__(/*! ../ModalContext */ "./node_modules/@kiwicom/orbit-components/lib/Modal/ModalContext.js");
+
+var _consts = __webpack_require__(/*! ../../utils/mediaQuery/consts */ "./node_modules/@kiwicom/orbit-components/lib/utils/mediaQuery/consts.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var StyledChild = _styledComponents.default.div.withConfig({
+  displayName: "ModalFooter__StyledChild",
+  componentId: "sc-17ld6v4-0"
+})(["flex:", ";box-sizing:border-box;padding:", ";", ";"], function (_ref) {
+  var flex = _ref.flex;
+  return flex;
+}, function (_ref2) {
+  var theme = _ref2.theme;
+  return (0, _rtl.rtlSpacing)("0 ".concat(theme.orbit.spaceMedium, " 0 0"));
+}, _mediaQuery.default.largeMobile((0, _styledComponents.css)(["flex:none;"])));
+
+StyledChild.defaultProps = {
+  theme: _defaultTheme.default
+};
+
+var StyledModalFooter = _styledComponents.default.div.withConfig({
+  displayName: "ModalFooter__StyledModalFooter",
+  componentId: "sc-17ld6v4-1"
+})(["display:flex;z-index:800;width:100%;background-color:", ";padding:", ";box-sizing:border-box;transition:box-shadow ", " ease-in-out;@media (max-width:", "px){", ",", "{font-size:", ";height:", ";}}", ";", ":last-of-type{padding:0;}"], function (_ref3) {
+  var theme = _ref3.theme;
+  return theme.orbit.paletteWhite;
+}, function (_ref4) {
+  var theme = _ref4.theme;
+  return (0, _rtl.rtlSpacing)("0 ".concat(theme.orbit.spaceMedium, " ").concat(theme.orbit.spaceMedium));
+}, function (_ref5) {
+  var theme = _ref5.theme;
+  return theme.orbit.durationFast;
+}, function (_ref6) {
+  var theme = _ref6.theme;
+  return +(0, _mediaQuery.getBreakpointWidth)(_consts.QUERIES.LARGEMOBILE, theme, true) - 1;
+}, _Button.StyledButton, _ButtonLink.StyledButtonLink, function (_ref7) {
+  var theme = _ref7.theme;
+  return theme.orbit.fontSizeButtonNormal;
+}, function (_ref8) {
+  var theme = _ref8.theme;
+  return theme.orbit.heightButtonNormal;
+}, _mediaQuery.default.largeMobile((0, _styledComponents.css)(["justify-content:", ";border-bottom-left-radius:", ";border-bottom-right-radius:", ";"], function (_ref9) {
+  var children = _ref9.children;
+  return children.length > 1 ? "space-between" : "flex-end";
+}, function (_ref10) {
+  var isMobileFullPage = _ref10.isMobileFullPage;
+  return !isMobileFullPage && "9px";
+}, function (_ref11) {
+  var isMobileFullPage = _ref11.isMobileFullPage;
+  return !isMobileFullPage && "9px";
+})), StyledChild);
+
+exports.StyledModalFooter = StyledModalFooter;
+StyledModalFooter.defaultProps = {
+  theme: _defaultTheme.default
+};
+
+var ModalFooter =
+/*#__PURE__*/
+function (_React$PureComponent) {
+  _inherits(ModalFooter, _React$PureComponent);
+
+  function ModalFooter() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, ModalFooter);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(ModalFooter)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_this), "callContextFunctions", function () {
+      var _this$props = _this.props,
+          setDimensions = _this$props.setDimensions,
+          decideFixedFooter = _this$props.decideFixedFooter;
+
+      if (setDimensions) {
+        setDimensions();
+      }
+
+      if (decideFixedFooter) {
+        decideFixedFooter();
+      }
+    });
+
+    return _this;
+  }
+
+  _createClass(ModalFooter, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.callContextFunctions();
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      if (prevProps !== this.props) {
+        this.callContextFunctions();
+        var manageFocus = this.props.manageFocus;
+
+        if (manageFocus) {
+          manageFocus();
+        }
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props2 = this.props,
+          _this$props2$flex = _this$props2.flex,
+          flex = _this$props2$flex === void 0 ? "0 1 auto" : _this$props2$flex,
+          children = _this$props2.children,
+          dataTest = _this$props2.dataTest,
+          isMobileFullPage = _this$props2.isMobileFullPage;
+      return React.createElement(StyledModalFooter, {
+        "data-test": dataTest,
+        isMobileFullPage: isMobileFullPage
+      }, _typeof(children) === "object" ? React.Children.map(children, function (item, key) {
+        if (item) {
+          var childFlex = Array.isArray(flex) && flex.length !== 1 ? flex[key] || flex[0] : flex;
+          return React.createElement(StyledChild, {
+            flex: childFlex
+          }, React.createElement(item.type, item.props));
+        }
+
+        return null;
+      }) : children);
+    }
+  }]);
+
+  return ModalFooter;
+}(React.PureComponent);
+
+var DecoratedComponent = (0, _ModalContext.withModalContext)(ModalFooter);
+DecoratedComponent.displayName = "ModalFooter";
+var _default = DecoratedComponent;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@kiwicom/orbit-components/lib/Modal/ModalHeader/index.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/Modal/ModalHeader/index.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.MobileHeader = exports.StyledModalHeader = void 0;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _styledComponents = _interopRequireWildcard(__webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js"));
+
+var _Text = _interopRequireDefault(__webpack_require__(/*! ../../Text */ "./node_modules/@kiwicom/orbit-components/lib/Text/index.js"));
+
+var _Heading = _interopRequireWildcard(__webpack_require__(/*! ../../Heading */ "./node_modules/@kiwicom/orbit-components/lib/Heading/index.js"));
+
+var _defaultTheme = _interopRequireDefault(__webpack_require__(/*! ../../defaultTheme */ "./node_modules/@kiwicom/orbit-components/lib/defaultTheme.js"));
+
+var _mediaQuery = _interopRequireDefault(__webpack_require__(/*! ../../utils/mediaQuery */ "./node_modules/@kiwicom/orbit-components/lib/utils/mediaQuery/index.js"));
+
+var _ModalSection = __webpack_require__(/*! ../ModalSection */ "./node_modules/@kiwicom/orbit-components/lib/Modal/ModalSection/index.js");
+
+var _rtl = __webpack_require__(/*! ../../utils/rtl */ "./node_modules/@kiwicom/orbit-components/lib/utils/rtl/index.js");
+
+var _ModalContext = __webpack_require__(/*! ../ModalContext */ "./node_modules/@kiwicom/orbit-components/lib/Modal/ModalContext.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var ModalTitle = _styledComponents.default.div.withConfig({
+  displayName: "ModalHeader__ModalTitle",
+  componentId: "sc-13vyf6i-0"
+})(["margin-top:", ";", "{padding-", ":", ";}", ";"], function (_ref) {
+  var theme = _ref.theme,
+      illustration = _ref.illustration;
+  return illustration && theme.orbit.spaceXSmall;
+}, _Heading.StyledHeading, _rtl.right, function (_ref2) {
+  var theme = _ref2.theme;
+  return theme.orbit.spaceXLarge;
+}, _mediaQuery.default.desktop((0, _styledComponents.css)(["", "{padding:0;}"], _Heading.StyledHeading)));
+
+ModalTitle.defaultProps = {
+  theme: _defaultTheme.default
+};
+
+var ModalDescription = _styledComponents.default.div.withConfig({
+  displayName: "ModalHeader__ModalDescription",
+  componentId: "sc-13vyf6i-1"
+})(["margin-top:", ";"], function (_ref3) {
+  var theme = _ref3.theme;
+  return theme.orbit.spaceXSmall;
+});
+
+ModalDescription.defaultProps = {
+  theme: _defaultTheme.default
+};
+
+var StyledModalHeader = _styledComponents.default.div.withConfig({
+  displayName: "ModalHeader__StyledModalHeader",
+  componentId: "sc-13vyf6i-2"
+})(["width:100%;display:block;padding:", ";border-top-left-radius:", ";border-top-right-radius:", ";box-sizing:border-box;background-color:", ";& ~ ", ":first-of-type{border-top:", ";border-top-left-radius:0;border-top-right-radius:0;margin-top:", ";}", ";"], function (_ref4) {
+  var theme = _ref4.theme,
+      illustration = _ref4.illustration,
+      suppressed = _ref4.suppressed;
+  return (0, _rtl.rtlSpacing)(illustration && suppressed && "".concat(theme.orbit.spaceXLarge, " ").concat(theme.orbit.spaceMedium, " ").concat(theme.orbit.spaceLarge, " ").concat(theme.orbit.spaceMedium) || illustration && !suppressed && "".concat(theme.orbit.spaceXLarge, " ").concat(theme.orbit.spaceMedium, " 0 ").concat(theme.orbit.spaceMedium) || !illustration && suppressed && "".concat(theme.orbit.spaceLarge, " ").concat(theme.orbit.spaceMedium, " ").concat(theme.orbit.spaceLarge, " ").concat(theme.orbit.spaceMedium) || "".concat(theme.orbit.spaceLarge, " ").concat(theme.orbit.spaceMedium, " 0 ").concat(theme.orbit.spaceMedium));
+}, function (_ref5) {
+  var isMobileFullPage = _ref5.isMobileFullPage;
+  return !isMobileFullPage && "9px";
+}, function (_ref6) {
+  var isMobileFullPage = _ref6.isMobileFullPage;
+  return !isMobileFullPage && "9px";
+}, function (_ref7) {
+  var suppressed = _ref7.suppressed,
+      theme = _ref7.theme;
+  return suppressed ? theme.orbit.paletteCloudLight : theme.orbit.paletteWhite;
+}, _ModalSection.StyledModalSection, function (_ref8) {
+  var suppressed = _ref8.suppressed,
+      theme = _ref8.theme;
+  return suppressed && "1px solid ".concat(theme.orbit.paletteCloudNormal);
+}, function (_ref9) {
+  var suppressed = _ref9.suppressed;
+  return suppressed && "0!important";
+}, _mediaQuery.default.largeMobile((0, _styledComponents.css)(["padding:", ";& ~ ", ":first-of-type{border-top-left-radius:0;border-top-right-radius:0;}"], function (_ref10) {
+  var theme = _ref10.theme,
+      illustration = _ref10.illustration,
+      suppressed = _ref10.suppressed;
+  return (0, _rtl.rtlSpacing)(illustration ? "".concat(theme.orbit.spaceXLarge, " ").concat(theme.orbit.spaceXXLarge, " ").concat(suppressed ? theme.orbit.spaceXXLarge : "0", " ").concat(theme.orbit.spaceXXLarge) : "".concat(theme.orbit.spaceXXLarge, " ").concat(theme.orbit.spaceXXLarge, " ").concat(suppressed ? theme.orbit.spaceXXLarge : "0", " ").concat(theme.orbit.spaceXXLarge));
+}, _ModalSection.StyledModalSection)));
+
+exports.StyledModalHeader = StyledModalHeader;
+StyledModalHeader.defaultProps = {
+  theme: _defaultTheme.default
+};
+
+var MobileHeader = _styledComponents.default.div.withConfig({
+  displayName: "ModalHeader__MobileHeader",
+  componentId: "sc-13vyf6i-3"
+})(["display:inline-block;position:fixed;visibility:hidden;height:52px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;top:", ";", ":48px;", ":0;font-family:", ";font-weight:", ";font-size:18px;color:", ";line-height:52px;box-sizing:border-box;padding:", ";opacity:0;transition:top ", " ease-in-out,opacity ", " ease-in-out,visibility ", " ease-in-out;z-index:800;", ";"], function (_ref11) {
+  var isMobileFullPage = _ref11.isMobileFullPage;
+  return isMobileFullPage ? "0" : "16px";
+}, _rtl.right, _rtl.left, function (_ref12) {
+  var theme = _ref12.theme;
+  return theme.orbit.fontFamily;
+}, function (_ref13) {
+  var theme = _ref13.theme;
+  return theme.orbit.fontWeightHeadingDisplay;
+}, function (_ref14) {
+  var theme = _ref14.theme;
+  return theme.orbit.colorHeading;
+}, function (_ref15) {
+  var theme = _ref15.theme;
+  return (0, _rtl.rtlSpacing)("0 0 0 ".concat(theme.orbit.spaceLarge));
+}, function (_ref16) {
+  var theme = _ref16.theme;
+  return theme.orbit.durationFast;
+}, function (_ref17) {
+  var theme = _ref17.theme;
+  return theme.orbit.durationFast;
+}, function (_ref18) {
+  var theme = _ref18.theme;
+  return theme.orbit.durationFast;
+}, _mediaQuery.default.largeMobile((0, _styledComponents.css)(["left:auto;right:auto;padding:0;"])));
+
+exports.MobileHeader = MobileHeader;
+MobileHeader.defaultProps = {
+  theme: _defaultTheme.default
+};
+
+var StyledModalHeaderContent = _styledComponents.default.div.withConfig({
+  displayName: "ModalHeader__StyledModalHeaderContent",
+  componentId: "sc-13vyf6i-4"
+})(["margin-top:", ";"], function (_ref19) {
+  var description = _ref19.description;
+  return description ? "32px" : "16px";
+});
+
+var ModalHeader =
+/*#__PURE__*/
+function (_React$PureComponent) {
+  _inherits(ModalHeader, _React$PureComponent);
+
+  function ModalHeader() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, ModalHeader);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(ModalHeader)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_this), "callContextFunctions", function () {
+      var _this$props = _this.props,
+          setDimensions = _this$props.setDimensions,
+          decideFixedFooter = _this$props.decideFixedFooter;
+
+      if (setDimensions) {
+        setDimensions();
+      }
+
+      if (decideFixedFooter) {
+        decideFixedFooter();
+      }
+    });
+
+    return _this;
+  }
+
+  _createClass(ModalHeader, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.callContextFunctions();
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      if (prevProps !== this.props) {
+        this.callContextFunctions();
+        var manageFocus = this.props.manageFocus;
+
+        if (manageFocus) {
+          manageFocus();
+        }
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props2 = this.props,
+          title = _this$props2.title,
+          illustration = _this$props2.illustration,
+          description = _this$props2.description,
+          children = _this$props2.children,
+          suppressed = _this$props2.suppressed,
+          dataTest = _this$props2.dataTest,
+          isMobileFullPage = _this$props2.isMobileFullPage;
+      var hasHeader = title || description;
+      return React.createElement(StyledModalHeader, {
+        illustration: !!illustration,
+        suppressed: suppressed,
+        "data-test": dataTest,
+        isMobileFullPage: isMobileFullPage
+      }, illustration, hasHeader && React.createElement(ModalTitle, {
+        illustration: !!illustration
+      }, title && React.createElement(_Heading.default, {
+        type: "title1"
+      }, title), description && React.createElement(ModalDescription, null, React.createElement(_Text.default, {
+        size: "large",
+        element: "div"
+      }, description))), children && React.createElement(StyledModalHeaderContent, {
+        description: !!description
+      }, children), title && React.createElement(MobileHeader, {
+        isMobileFullPage: isMobileFullPage
+      }, title));
+    }
+  }]);
+
+  return ModalHeader;
+}(React.PureComponent);
+
+var DecoratedComponent = (0, _ModalContext.withModalContext)(ModalHeader);
+DecoratedComponent.displayName = "ModalHeader";
+var _default = DecoratedComponent;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@kiwicom/orbit-components/lib/Modal/ModalSection/index.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/Modal/ModalSection/index.js ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.StyledModalSection = void 0;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _styledComponents = _interopRequireWildcard(__webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js"));
+
+var _defaultTheme = _interopRequireDefault(__webpack_require__(/*! ../../defaultTheme */ "./node_modules/@kiwicom/orbit-components/lib/defaultTheme.js"));
+
+var _mediaQuery = _interopRequireDefault(__webpack_require__(/*! ../../utils/mediaQuery */ "./node_modules/@kiwicom/orbit-components/lib/utils/mediaQuery/index.js"));
+
+var _ModalFooter = __webpack_require__(/*! ../ModalFooter */ "./node_modules/@kiwicom/orbit-components/lib/Modal/ModalFooter/index.js");
+
+var _ModalContext = __webpack_require__(/*! ../ModalContext */ "./node_modules/@kiwicom/orbit-components/lib/Modal/ModalContext.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var StyledModalSection = _styledComponents.default.section.withConfig({
+  displayName: "ModalSection__StyledModalSection",
+  componentId: "sc-1ayrdn8-0"
+})(["width:100%;padding:", ";background-color:", ";border-bottom:1px solid ", ";box-sizing:border-box;&:first-of-type{border-top:", ";border-top-left-radius:", ";border-top-right-radius:", ";margin-top:", ";}&:last-of-type{border-bottom:", ";border-bottom-left-radius:", ";border-bottom-right-radius:", ";& ~ ", "{margin-top:", ";}&:not(:last-child){border-radius:0;}}", ";"], function (_ref) {
+  var theme = _ref.theme;
+  return "".concat(theme.orbit.spaceLarge, " ").concat(theme.orbit.spaceMedium);
+}, function (_ref2) {
+  var theme = _ref2.theme,
+      suppressed = _ref2.suppressed;
+  return suppressed ? theme.orbit.paletteCloudLight : theme.orbit.paletteWhite;
+}, function (_ref3) {
+  var theme = _ref3.theme;
+  return theme.orbit.paletteCloudNormal;
+}, function (_ref4) {
+  var suppressed = _ref4.suppressed,
+      theme = _ref4.theme;
+  return suppressed && "1px solid ".concat(theme.orbit.paletteCloudNormal);
+}, function (_ref5) {
+  var isMobileFullPage = _ref5.isMobileFullPage;
+  return !isMobileFullPage && "9px";
+}, function (_ref6) {
+  var isMobileFullPage = _ref6.isMobileFullPage;
+  return !isMobileFullPage && "9px";
+}, function (_ref7) {
+  var suppressed = _ref7.suppressed,
+      theme = _ref7.theme;
+  return suppressed && theme.orbit.spaceLarge;
+}, function (_ref8) {
+  var suppressed = _ref8.suppressed,
+      theme = _ref8.theme;
+  return suppressed ? "1px solid ".concat(theme.orbit.paletteCloudNormal) : "0";
+}, function (_ref9) {
+  var isMobileFullPage = _ref9.isMobileFullPage;
+  return !isMobileFullPage && "9px";
+}, function (_ref10) {
+  var isMobileFullPage = _ref10.isMobileFullPage;
+  return !isMobileFullPage && "9px";
+}, _ModalFooter.StyledModalFooter, function (_ref11) {
+  var theme = _ref11.theme,
+      suppressed = _ref11.suppressed;
+  return suppressed && theme.orbit.spaceMedium;
+}, _mediaQuery.default.largeMobile((0, _styledComponents.css)(["padding:", ";&:first-of-type{margin-top:", ";}&:last-of-type{& ~ ", "{padding-top:", ";margin-top:0;}}"], function (_ref12) {
+  var theme = _ref12.theme;
+  return theme.orbit.spaceXXLarge;
+}, function (_ref13) {
+  var suppressed = _ref13.suppressed,
+      theme = _ref13.theme;
+  return suppressed && theme.orbit.spaceXXLarge;
+}, _ModalFooter.StyledModalFooter, function (_ref14) {
+  var suppressed = _ref14.suppressed;
+  return !suppressed && "0";
+})));
+
+exports.StyledModalSection = StyledModalSection;
+StyledModalSection.defaultProps = {
+  theme: _defaultTheme.default
+};
+
+var ModalSection =
+/*#__PURE__*/
+function (_React$PureComponent) {
+  _inherits(ModalSection, _React$PureComponent);
+
+  function ModalSection() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, ModalSection);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(ModalSection)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_this), "callContextFunctions", function () {
+      var _this$props = _this.props,
+          setDimensions = _this$props.setDimensions,
+          decideFixedFooter = _this$props.decideFixedFooter;
+
+      if (setDimensions) {
+        setDimensions();
+      }
+
+      if (decideFixedFooter) {
+        decideFixedFooter();
+      }
+    });
+
+    return _this;
+  }
+
+  _createClass(ModalSection, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var setHasModalSection = this.props.setHasModalSection;
+      this.callContextFunctions();
+
+      if (setHasModalSection) {
+        setHasModalSection();
+      }
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      if (prevProps !== this.props) {
+        this.callContextFunctions();
+        var _this$props2 = this.props,
+            setHasModalSection = _this$props2.setHasModalSection,
+            manageFocus = _this$props2.manageFocus;
+
+        if (setHasModalSection) {
+          setHasModalSection();
+        }
+
+        if (manageFocus) {
+          manageFocus();
+        }
+      }
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      var removeHasModalSection = this.props.removeHasModalSection;
+      this.callContextFunctions();
+
+      if (removeHasModalSection) {
+        removeHasModalSection();
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props3 = this.props,
+          suppressed = _this$props3.suppressed,
+          children = _this$props3.children,
+          dataTest = _this$props3.dataTest,
+          isMobileFullPage = _this$props3.isMobileFullPage;
+      return React.createElement(StyledModalSection, {
+        suppressed: suppressed,
+        "data-test": dataTest,
+        isMobileFullPage: isMobileFullPage
+      }, children);
+    }
+  }]);
+
+  return ModalSection;
+}(React.PureComponent);
+
+var DecoratedComponent = (0, _ModalContext.withModalContext)(ModalSection);
+DecoratedComponent.displayName = "ModalSection";
+var _default = DecoratedComponent;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@kiwicom/orbit-components/lib/Modal/consts.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/Modal/consts.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.FOCUSABLE_ELEMENT_SELECTORS = exports.CLOSE_BUTTON_DATA_TEST = exports.SIZES = void 0;
+var SIZES = {
+  SMALL: "small",
+  NORMAL: "normal",
+  LARGE: "large"
+};
+exports.SIZES = SIZES;
+var CLOSE_BUTTON_DATA_TEST = "ModalCloseButton";
+exports.CLOSE_BUTTON_DATA_TEST = CLOSE_BUTTON_DATA_TEST;
+var FOCUSABLE_ELEMENT_SELECTORS = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, [tabindex="0"], [contenteditable]';
+exports.FOCUSABLE_ELEMENT_SELECTORS = FOCUSABLE_ELEMENT_SELECTORS;
+
+/***/ }),
+
+/***/ "./node_modules/@kiwicom/orbit-components/lib/Modal/index.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/Modal/index.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "ModalFooter", {
+  enumerable: true,
+  get: function get() {
+    return _ModalFooter.default;
+  }
+});
+Object.defineProperty(exports, "ModalHeader", {
+  enumerable: true,
+  get: function get() {
+    return _ModalHeader.default;
+  }
+});
+Object.defineProperty(exports, "ModalSection", {
+  enumerable: true,
+  get: function get() {
+    return _ModalSection.default;
+  }
+});
+exports.default = exports.PureModal = void 0;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _styledComponents = _interopRequireWildcard(__webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js"));
+
+var _defaultTheme = _interopRequireDefault(__webpack_require__(/*! ../defaultTheme */ "./node_modules/@kiwicom/orbit-components/lib/defaultTheme.js"));
+
+var _ButtonLink = _interopRequireWildcard(__webpack_require__(/*! ../ButtonLink */ "./node_modules/@kiwicom/orbit-components/lib/ButtonLink/index.js"));
+
+var _Close = _interopRequireDefault(__webpack_require__(/*! ../icons/Close */ "./node_modules/@kiwicom/orbit-components/lib/icons/Close.js"));
+
+var _consts = __webpack_require__(/*! ./consts */ "./node_modules/@kiwicom/orbit-components/lib/Modal/consts.js");
+
+var _keyMaps = _interopRequireDefault(__webpack_require__(/*! ../common/keyMaps */ "./node_modules/@kiwicom/orbit-components/lib/common/keyMaps.js"));
+
+var _mediaQuery = _interopRequireWildcard(__webpack_require__(/*! ../utils/mediaQuery */ "./node_modules/@kiwicom/orbit-components/lib/utils/mediaQuery/index.js"));
+
+var _ModalFooter = _interopRequireWildcard(__webpack_require__(/*! ./ModalFooter */ "./node_modules/@kiwicom/orbit-components/lib/Modal/ModalFooter/index.js"));
+
+var _ModalHeader = _interopRequireWildcard(__webpack_require__(/*! ./ModalHeader */ "./node_modules/@kiwicom/orbit-components/lib/Modal/ModalHeader/index.js"));
+
+var _ModalSection = _interopRequireWildcard(__webpack_require__(/*! ./ModalSection */ "./node_modules/@kiwicom/orbit-components/lib/Modal/ModalSection/index.js"));
+
+var _Heading = __webpack_require__(/*! ../Heading */ "./node_modules/@kiwicom/orbit-components/lib/Heading/index.js");
+
+var _rtl = __webpack_require__(/*! ../utils/rtl */ "./node_modules/@kiwicom/orbit-components/lib/utils/rtl/index.js");
+
+var _transition = _interopRequireDefault(__webpack_require__(/*! ../utils/transition */ "./node_modules/@kiwicom/orbit-components/lib/utils/transition/index.js"));
+
+var _ModalContext = __webpack_require__(/*! ./ModalContext */ "./node_modules/@kiwicom/orbit-components/lib/Modal/ModalContext.js");
+
+var _consts2 = __webpack_require__(/*! ../utils/mediaQuery/consts */ "./node_modules/@kiwicom/orbit-components/lib/utils/mediaQuery/consts.js");
+
+var _randomID = _interopRequireDefault(__webpack_require__(/*! ../utils/randomID */ "./node_modules/@kiwicom/orbit-components/lib/utils/randomID/index.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var getSizeToken = function getSizeToken() {
+  return function (_ref) {
+    var _tokens;
+
+    var size = _ref.size,
+        theme = _ref.theme;
+    var tokens = (_tokens = {}, _defineProperty(_tokens, _consts.SIZES.SMALL, theme.orbit.widthModalSmall), _defineProperty(_tokens, _consts.SIZES.NORMAL, theme.orbit.widthModalNormal), _defineProperty(_tokens, _consts.SIZES.LARGE, theme.orbit.widthModalLarge), _tokens);
+    return tokens[size];
+  };
+}; // media query only for IE 10+, not Edge
+
+
+var onlyIE = function onlyIE(style) {
+  var breakpoint = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "all";
+  return (0, _styledComponents.css)(["@media ", " and (-ms-high-contrast:none),(-ms-high-contrast:active){", ";}"], breakpoint, style);
+};
+
+var ModalBody = _styledComponents.default.div.withConfig({
+  displayName: "Modal__ModalBody",
+  componentId: "sc-1f0srsl-0"
+})(["width:100%;height:100%;position:fixed;top:0;right:0;bottom:0;left:0;z-index:", ";box-sizing:border-box;outline:none;overflow-x:hidden;background-color:rgba(0,0,0,0.5);font-family:", ";-webkit-overflow-scrolling:auto;", ";", ";"], function (_ref2) {
+  var theme = _ref2.theme;
+  return theme.orbit.zIndexModalOverlay;
+}, function (_ref3) {
+  var theme = _ref3.theme;
+  return theme.orbit.fontfamily;
+}, _mediaQuery.default.largeMobile((0, _styledComponents.css)(["overflow-y:auto;padding:", ";"], function (_ref4) {
+  var theme = _ref4.theme;
+  return theme.orbit.spaceXXLarge;
+})), onlyIE((0, _styledComponents.css)(["position:-ms-page;"])));
+
+ModalBody.defaultProps = {
+  theme: _defaultTheme.default
+};
+
+var ModalWrapper = _styledComponents.default.div.withConfig({
+  displayName: "Modal__ModalWrapper",
+  componentId: "sc-1f0srsl-1"
+})(["box-sizing:border-box;min-height:100%;display:flex;align-items:flex-start;margin:0 auto;position:fixed;width:100%;border-top-left-radius:", ";border-top-right-radius:", ";transition:", ";top:", ";", ";", ";"], function (_ref5) {
+  var isMobileFullPage = _ref5.isMobileFullPage;
+  return !isMobileFullPage && "9px";
+}, function (_ref6) {
+  var isMobileFullPage = _ref6.isMobileFullPage;
+  return !isMobileFullPage && "9px";
+}, (0, _transition.default)(["top"], "normal", "ease-in-out"), function (_ref7) {
+  var loaded = _ref7.loaded,
+      isMobileFullPage = _ref7.isMobileFullPage;
+  return loaded ? !isMobileFullPage && "32px" : "100%";
+}, onlyIE((0, _styledComponents.css)(["height:1px;"])), _mediaQuery.default.largeMobile((0, _styledComponents.css)(["position:relative;top:0;max-width:", ";align-items:center;"], getSizeToken)));
+
+ModalWrapper.defaultProps = {
+  theme: _defaultTheme.default
+};
+
+var CloseContainer = _styledComponents.default.div.withConfig({
+  displayName: "Modal__CloseContainer",
+  componentId: "sc-1f0srsl-2"
+})(["display:flex;", ";position:", ";top:", ";right:0;z-index:800;justify-content:flex-end;align-items:center;box-sizing:border-box;height:52px;width:100%;max-width:", ";box-shadow:", ";background-color:", ";border-top-left-radius:", ";border-top-right-radius:", ";transition:", ";", ";& + ", ":first-of-type{padding-top:52px;border-top:0;margin:0;}", "{margin-", ":", ";& svg{transition:", ";color:", ";}&:hover svg{color:", ";}&:active svg{color:", ";}}"], function (_ref8) {
+  var scrolled = _ref8.scrolled,
+      fixedClose = _ref8.fixedClose,
+      theme = _ref8.theme;
+  return fixedClose || scrolled ? (0, _styledComponents.css)(["position:fixed;", ";"], onlyIE((0, _styledComponents.css)(["position:-ms-page;"]), "(max-width:".concat(+(0, _mediaQuery.getBreakpointWidth)(_consts2.QUERIES.LARGEMOBILE, theme, true) - 1, "px)"))) : (0, _styledComponents.css)(["position:absolute;"]);
+}, function (_ref9) {
+  var scrolled = _ref9.scrolled,
+      fixedClose = _ref9.fixedClose;
+  return fixedClose || scrolled ? "fixed" : "absolute";
+}, function (_ref10) {
+  var scrolled = _ref10.scrolled,
+      fixedClose = _ref10.fixedClose,
+      isMobileFullPage = _ref10.isMobileFullPage;
+  return !isMobileFullPage && (fixedClose || scrolled) ? "32px" : "0";
+}, function (_ref11) {
+  var modalWidth = _ref11.modalWidth;
+  return modalWidth ? "".concat(modalWidth, "px") : getSizeToken;
+}, function (_ref12) {
+  var scrolled = _ref12.scrolled;
+  return scrolled && "0 2px 4px 0 rgba(23, 27, 30, 0.1)";
+}, function (_ref13) {
+  var theme = _ref13.theme,
+      scrolled = _ref13.scrolled;
+  return scrolled && theme.orbit.paletteWhite;
+}, function (_ref14) {
+  var isMobileFullPage = _ref14.isMobileFullPage;
+  return !isMobileFullPage && "9px";
+}, function (_ref15) {
+  var isMobileFullPage = _ref15.isMobileFullPage;
+  return !isMobileFullPage && "9px";
+}, (0, _transition.default)(["box-shadow", "background-color"], "fast", "ease-in-out"), _mediaQuery.default.largeMobile((0, _styledComponents.css)(["top:", ";right:", ";"], function (_ref16) {
+  var scrolled = _ref16.scrolled,
+      fixedClose = _ref16.fixedClose;
+  return (fixedClose || scrolled) && "0";
+}, function (_ref17) {
+  var scrolled = _ref17.scrolled,
+      fixedClose = _ref17.fixedClose;
+  return (fixedClose || scrolled) && "auto";
+})), _ModalSection.StyledModalSection, _ButtonLink.StyledButtonLink, _rtl.right, function (_ref18) {
+  var theme = _ref18.theme;
+  return theme.orbit.spaceXXSmall;
+}, (0, _transition.default)(["color"], "fast", "ease-in-out"), function (_ref19) {
+  var theme = _ref19.theme;
+  return theme.orbit.paletteInkLight;
+}, function (_ref20) {
+  var theme = _ref20.theme;
+  return theme.orbit.paletteInkLightHover;
+}, function (_ref21) {
+  var theme = _ref21.theme;
+  return theme.orbit.paletteInkLightActive;
+});
+
+CloseContainer.defaultProps = {
+  theme: _defaultTheme.default
+};
+
+var ModalWrapperContent = _styledComponents.default.div.withConfig({
+  displayName: "Modal__ModalWrapperContent",
+  componentId: "sc-1f0srsl-3"
+})(["position:absolute;box-sizing:border-box;border-top-left-radius:", ";border-top-right-radius:", ";background-color:", ";font-family:", ";width:100%;", ";bottom:", ";box-shadow:", ";overflow-y:auto;overflow-x:hidden;", ";", "{top:", ";opacity:", ";visibility:", ";transition:", ";}", "};", "{margin-bottom:", ";}", ";", ";", ";"], function (_ref22) {
+  var isMobileFullPage = _ref22.isMobileFullPage;
+  return !isMobileFullPage && "9px";
+}, function (_ref23) {
+  var isMobileFullPage = _ref23.isMobileFullPage;
+  return !isMobileFullPage && "9px";
+}, function (_ref24) {
+  var theme = _ref24.theme;
+  return theme.orbit.backgroundModal;
+}, function (_ref25) {
+  var theme = _ref25.theme;
+  return theme.orbit.fontFamily;
+}, function (_ref26) {
+  var theme = _ref26.theme,
+      fixedFooter = _ref26.fixedFooter,
+      footerHeight = _ref26.footerHeight,
+      isMobileFullPage = _ref26.isMobileFullPage;
+  return isMobileFullPage ? (0, _styledComponents.css)(["max-height:100%;top:0;"]) : (0, _styledComponents.css)(["max-height:calc( 100% - ", " - ", " );"], theme.orbit.spaceXLarge, "".concat(fixedFooter && !!footerHeight ? footerHeight : 0, "px"));
+}, function (_ref27) {
+  var fixedFooter = _ref27.fixedFooter,
+      footerHeight = _ref27.footerHeight,
+      isMobileFullPage = _ref27.isMobileFullPage,
+      theme = _ref27.theme;
+  return "".concat((!isMobileFullPage ? parseInt(theme.orbit.spaceXLarge, 10) : 0) + (fixedFooter && !!footerHeight ? footerHeight : 0), "px");
+}, function (_ref28) {
+  var theme = _ref28.theme;
+  return theme.orbit.boxShadowModal;
+}, function (_ref29) {
+  var fixedFooter = _ref29.fixedFooter,
+      theme = _ref29.theme,
+      footerHeight = _ref29.footerHeight,
+      fullyScrolled = _ref29.fullyScrolled;
+  return fixedFooter && footerHeight && (0, _styledComponents.css)(["", "{bottom:0;padding:", ";box-shadow:", ";position:fixed;transition:", ";}", ":last-of-type{padding-bottom:", ";margin-bottom:0;}"], _ModalFooter.StyledModalFooter, theme.orbit.spaceMedium, fullyScrolled ? "inset 0 1px 0 ".concat(theme.orbit.paletteCloudNormal, ", 0 -2px 4px 0 rgba(23, 27, 30, 0)") : "inset 0 0 0 transparent, 0 -2px 4px 0 rgba(23, 27, 30, 0.1)", (0, _transition.default)(["box-shadow"], "fast", "ease-in-out"), _ModalSection.StyledModalSection, theme.orbit.spaceLarge);
+}, _ModalHeader.MobileHeader, function (_ref30) {
+  var scrolled = _ref30.scrolled,
+      theme = _ref30.theme,
+      isMobileFullPage = _ref30.isMobileFullPage;
+  return !isMobileFullPage && scrolled && theme.orbit.spaceXLarge;
+}, function (_ref31) {
+  var scrolled = _ref31.scrolled;
+  return scrolled && "1";
+}, function (_ref32) {
+  var scrolled = _ref32.scrolled;
+  return scrolled && "visible";
+}, function (_ref33) {
+  var scrolled = _ref33.scrolled,
+      theme = _ref33.theme;
+  return scrolled && "top ".concat(theme.orbit.durationNormal, " ease-in-out,\n    opacity ").concat(theme.orbit.durationFast, " ease-in-out,\n    visibility ").concat(theme.orbit.durationFast, " ease-in-out ").concat(theme.orbit.durationFast);
+}, function (_ref34) {
+  var scrolled = _ref34.scrolled;
+  return scrolled && onlyIE((0, _styledComponents.css)(["", "{position:-ms-page;}"], _ModalHeader.MobileHeader));
+}, _ModalHeader.StyledModalHeader, function (_ref35) {
+  var hasModalSection = _ref35.hasModalSection,
+      theme = _ref35.theme;
+  return !hasModalSection && theme.orbit.spaceXLarge;
+}, _mediaQuery.default.largeMobile((0, _styledComponents.css)(["position:relative;bottom:auto;border-radius:", ";padding-bottom:0;height:auto;overflow:visible;max-height:100%;", ":last-of-type{padding-bottom:", ";margin-bottom:", ";&::after{content:none;}}", "{margin-bottom:", ";}", "{padding:", ";max-width:", ";position:", ";box-shadow:", ";}", "{top:", ";width:", ";}"], function (_ref36) {
+  var isMobileFullPage = _ref36.isMobileFullPage;
+  return !isMobileFullPage && "9px";
+}, _ModalSection.StyledModalSection, function (_ref37) {
+  var theme = _ref37.theme;
+  return theme.orbit.spaceXXLarge;
+}, function (_ref38) {
+  var fixedFooter = _ref38.fixedFooter,
+      footerHeight = _ref38.footerHeight;
+  return fixedFooter ? "".concat(footerHeight, "px") : "0";
+}, _ModalHeader.StyledModalHeader, function (_ref39) {
+  var hasModalSection = _ref39.hasModalSection,
+      fixedFooter = _ref39.fixedFooter,
+      footerHeight = _ref39.footerHeight;
+  return !hasModalSection && fixedFooter ? "".concat(footerHeight, "px") : "0";
+}, _ModalFooter.StyledModalFooter, function (_ref40) {
+  var theme = _ref40.theme,
+      fixedFooter = _ref40.fixedFooter;
+  return fixedFooter ? "".concat(theme.orbit.spaceXLarge, " ").concat(theme.orbit.spaceXXLarge, "!important") : theme.orbit.spaceXXLarge;
+}, function (_ref41) {
+  var modalWidth = _ref41.modalWidth;
+  return modalWidth ? "".concat(modalWidth, "px") : getSizeToken;
+}, function (_ref42) {
+  var fullyScrolled = _ref42.fullyScrolled,
+      fixedFooter = _ref42.fixedFooter;
+  return fixedFooter && fullyScrolled && "absolute";
+}, function (_ref43) {
+  var fullyScrolled = _ref43.fullyScrolled;
+  return fullyScrolled && "none";
+}, _ModalHeader.MobileHeader, function (_ref44) {
+  var scrolled = _ref44.scrolled,
+      theme = _ref44.theme;
+  return scrolled ? "0" : "-".concat(theme.orbit.spaceXXLarge);
+}, function (_ref45) {
+  var modalWidth = _ref45.modalWidth,
+      theme = _ref45.theme;
+  return "calc(".concat(modalWidth, "px - 48px - ").concat(theme.orbit.spaceXXLarge, ")");
+})), onlyIE((0, _styledComponents.css)(["", "{position:", ";}"], _ModalFooter.StyledModalFooter, function (_ref46) {
+  var fixedFooter = _ref46.fixedFooter;
+  return fixedFooter && "-ms-page";
+})), function (_ref47) {
+  var theme = _ref47.theme;
+  return onlyIE((0, _styledComponents.css)(["", "{position:", ";box-shadow:", ";}", ";"], _ModalFooter.StyledModalFooter, function (_ref48) {
+    var fullyScrolled = _ref48.fullyScrolled,
+        fixedFooter = _ref48.fixedFooter;
+    return fullyScrolled && fixedFooter && "static" || fixedFooter && "fixed";
+  }, function (_ref49) {
+    var fixedFooter = _ref49.fixedFooter;
+    return !fixedFooter && "inset 0 0 0 1px ".concat(theme.orbit.paletteWhite);
+  }, function (_ref50) {
+    var fullyScrolled = _ref50.fullyScrolled,
+        fixedFooter = _ref50.fixedFooter;
+    return fullyScrolled && fixedFooter && (0, _styledComponents.css)(["", ":last-of-type{margin-bottom:0;}", "{margin-bottom:", ";}"], _ModalSection.StyledModalSection, _ModalHeader.StyledModalHeader, function (_ref51) {
+      var hasModalSection = _ref51.hasModalSection;
+      return !hasModalSection && "0";
+    });
+  }), (0, _mediaQuery.getBreakpointWidth)(_consts2.QUERIES.LARGEMOBILE, theme));
+});
+
+ModalWrapperContent.defaultProps = {
+  theme: _defaultTheme.default
+};
+
+var PureModal =
+/*#__PURE__*/
+function (_React$PureComponent) {
+  _inherits(PureModal, _React$PureComponent);
+
+  function PureModal() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, PureModal);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(PureModal)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_this), "state", {
+      scrolled: false,
+      loaded: false,
+      fixedClose: false,
+      fullyScrolled: false,
+      modalWidth: 0,
+      footerHeight: 0,
+      hasModalSection: false
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "modalContent", React.createRef());
+
+    _defineProperty(_assertThisInitialized(_this), "modalBody", React.createRef());
+
+    _defineProperty(_assertThisInitialized(_this), "closeButton", React.createRef());
+
+    _defineProperty(_assertThisInitialized(_this), "offset", 40);
+
+    _defineProperty(_assertThisInitialized(_this), "focusTriggered", false);
+
+    _defineProperty(_assertThisInitialized(_this), "setScrollPosition", function (value) {
+      var _window, _modalContent$current;
+
+      var _assertThisInitialize = _assertThisInitialized(_this),
+          modalContent = _assertThisInitialize.modalContent,
+          modalBody = _assertThisInitialize.modalBody;
+
+      if (((_window = window) === null || _window === void 0 ? void 0 : _window.innerWidth) >= (0, _mediaQuery.getBreakpointWidth)(_consts2.QUERIES.LARGEMOBILE, _this.props.theme, true)) {
+        var _modalBody$current;
+
+        if (modalBody === null || modalBody === void 0 ? void 0 : (_modalBody$current = modalBody.current) === null || _modalBody$current === void 0 ? void 0 : _modalBody$current.scrollTop) {
+          modalBody.current.scrollTop = value;
+        }
+      } else if (modalContent === null || modalContent === void 0 ? void 0 : (_modalContent$current = modalContent.current) === null || _modalContent$current === void 0 ? void 0 : _modalContent$current.scrollTop) {
+        modalContent.current.scrollTop = value;
+      }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "setDimensions", function () {
+      var content = _this.modalContent.current;
+
+      if (content) {
+        // added in 4.0.3, interpolation of styled component return static className
+        var footerEl = content.querySelector("".concat(_ModalFooter.StyledModalFooter));
+        var headingEl = content.querySelector("".concat(_Heading.StyledHeading));
+        _this.offset = (headingEl === null || headingEl === void 0 ? void 0 : headingEl.clientHeight) + (headingEl === null || headingEl === void 0 ? void 0 : headingEl.offsetTop);
+        var contentDimensions = content.getBoundingClientRect();
+        var modalWidth = contentDimensions.width;
+        var footerHeight = footerEl === null || footerEl === void 0 ? void 0 : footerEl.clientHeight;
+
+        _this.setState({
+          modalWidth: modalWidth,
+          footerHeight: footerHeight
+        });
+      }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "setHasModalSection", function () {
+      if (!_this.state.hasModalSection) {
+        _this.setState({
+          hasModalSection: true
+        });
+      }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "removeHasModalSection", function () {
+      if (_this.state.hasModalSection) _this.setState({
+        hasModalSection: false
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "decideFixedFooter", function () {
+      // if the content height is smaller than window height, we need to explicitly set fullyScrolled to true
+      var content = _this.modalContent.current;
+      var body = _this.modalBody.current; // when scrollHeight + topPadding - scrollingElementHeight is smaller or even than window height
+
+      var fullyScrolled = (content === null || content === void 0 ? void 0 : content.scrollHeight) + 40 - (body === null || body === void 0 ? void 0 : body.scrollTop) <= window.innerHeight;
+
+      _this.setState({
+        fullyScrolled: fullyScrolled
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleResize", function () {
+      _this.setDimensions();
+
+      _this.decideFixedFooter();
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "resolveAndSetStates", function (target, fullScrollOffset, fixCloseOffset) {
+      _this.setState({
+        scrolled: target.scrollTop >= _this.offset,
+        fixedClose: target.scrollTop >= fixCloseOffset,
+        fullyScrolled: _this.props.fixedFooter && // set fullyScrolled state sooner than the exact end of the scroll (with fullScrollOffset value)
+        target.scrollTop >= target.scrollHeight - target.clientHeight - fullScrollOffset
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleMobileScroll", function (ev) {
+      if (ev.target instanceof HTMLDivElement && ev.target === _this.modalContent.current) {
+        _this.resolveAndSetStates(ev.target, 10, 1);
+      }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleScroll", function (ev) {
+      if (ev.target instanceof HTMLDivElement && ev.target === _this.modalBody.current) {
+        _this.resolveAndSetStates(ev.target, 40, 40);
+      }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleKeyDown", function (ev) {
+      var onClose = _this.props.onClose;
+
+      if (onClose && ev.key === "Escape") {
+        ev.stopPropagation();
+        onClose(ev);
+      }
+
+      _this.keyboardHandler(ev);
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleClickOutside", function (ev) {
+      var _this$modalContent;
+
+      var onClose = _this.props.onClose;
+
+      if (onClose && ((_this$modalContent = _this.modalContent) === null || _this$modalContent === void 0 ? void 0 : _this$modalContent.current) && ev.target instanceof Node && !_this.modalContent.current.contains(ev.target)) {
+        // If is clicked outside of modal
+        onClose(ev);
+      }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "keyboardHandler", function (e) {
+      if (e.keyCode === _keyMaps.default.TAB) {
+        // Rotate Focus
+        if (!_this.focusTriggered) {
+          _this.focusTriggered = true;
+
+          _this.manageFocus();
+        }
+
+        if (e.shiftKey && (document.activeElement === _this.firstFocusableEl || document.activeElement === _this.modalBody.current)) {
+          e.preventDefault();
+
+          _this.lastFocusableEl.focus();
+        } else if (!e.shiftKey && document.activeElement === _this.lastFocusableEl) {
+          e.preventDefault();
+
+          _this.firstFocusableEl.focus();
+        }
+      }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "manageFocus", function () {
+      if (_this.focusTriggered) {
+        var focusableElements = _this.modalContent.current.querySelectorAll(_consts.FOCUSABLE_ELEMENT_SELECTORS);
+
+        if (focusableElements.length > 0) {
+          var firstFocusableEl = focusableElements[0];
+          var lastFocusableEl = focusableElements[focusableElements.length - 1];
+          _this.firstFocusableEl = firstFocusableEl;
+          _this.lastFocusableEl = lastFocusableEl;
+        }
+      }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "firstFocusableEl", void 0);
+
+    _defineProperty(_assertThisInitialized(_this), "lastFocusableEl", void 0);
+
+    _defineProperty(_assertThisInitialized(_this), "timeout", void 0);
+
+    _defineProperty(_assertThisInitialized(_this), "modalID", void 0);
+
+    return _this;
+  }
+
+  _createClass(PureModal, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      this.timeout = setTimeout(function () {
+        _this2.setState({
+          loaded: true
+        });
+
+        _this2.decideFixedFooter();
+
+        _this2.setDimensions();
+
+        _this2.setFirstFocus();
+      }, 15);
+      this.modalID = (0, _randomID.default)("modal-");
+      window.addEventListener("resize", this.handleResize);
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      if (this.props.children !== prevProps.children) {
+        this.decideFixedFooter();
+        this.setDimensions();
+      }
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      window.removeEventListener("resize", this.handleResize);
+
+      if (this.timeout) {
+        clearTimeout(this.timeout);
+      }
+    }
+  }, {
+    key: "setFirstFocus",
+    value: function setFirstFocus() {
+      if (this.modalBody.current) this.modalBody.current.focus();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          onClose = _this$props.onClose,
+          children = _this$props.children,
+          _this$props$size = _this$props.size,
+          size = _this$props$size === void 0 ? _consts.SIZES.NORMAL : _this$props$size,
+          _this$props$fixedFoot = _this$props.fixedFooter,
+          fixedFooter = _this$props$fixedFoot === void 0 ? false : _this$props$fixedFoot,
+          dataTest = _this$props.dataTest,
+          _this$props$isMobileF = _this$props.isMobileFullPage,
+          isMobileFullPage = _this$props$isMobileF === void 0 ? false : _this$props$isMobileF;
+      var _this$state = this.state,
+          scrolled = _this$state.scrolled,
+          loaded = _this$state.loaded,
+          fixedClose = _this$state.fixedClose,
+          fullyScrolled = _this$state.fullyScrolled,
+          modalWidth = _this$state.modalWidth,
+          footerHeight = _this$state.footerHeight,
+          hasModalSection = _this$state.hasModalSection;
+      return React.createElement(ModalBody, {
+        tabIndex: "0",
+        onKeyDown: this.handleKeyDown,
+        onScroll: this.handleScroll,
+        onClick: this.handleClickOutside,
+        "data-test": dataTest,
+        ref: this.modalBody,
+        role: "dialog",
+        "aria-modal": "true",
+        "aria-labelledby": this.modalID
+      }, React.createElement(ModalWrapper, {
+        size: size,
+        loaded: loaded,
+        onScroll: this.handleMobileScroll,
+        fixedFooter: fixedFooter,
+        id: this.modalID,
+        isMobileFullPage: isMobileFullPage
+      }, React.createElement(ModalWrapperContent, {
+        size: size,
+        fixedFooter: fixedFooter,
+        scrolled: scrolled,
+        ref: this.modalContent,
+        fixedClose: fixedClose,
+        fullyScrolled: fullyScrolled,
+        modalWidth: modalWidth,
+        footerHeight: footerHeight,
+        hasModalSection: hasModalSection,
+        isMobileFullPage: isMobileFullPage
+      }, React.createElement(CloseContainer, {
+        modalWidth: modalWidth,
+        size: size,
+        scrolled: scrolled,
+        fixedClose: fixedClose,
+        isMobileFullPage: isMobileFullPage
+      }, onClose && React.createElement(_ButtonLink.default, {
+        onClick: onClose,
+        size: "normal",
+        icon: React.createElement(_Close.default, null),
+        transparent: true,
+        dataTest: _consts.CLOSE_BUTTON_DATA_TEST,
+        ref: this.closeButton
+      })), React.createElement(_ModalContext.ModalContext.Provider, {
+        value: {
+          setDimensions: this.setDimensions,
+          decideFixedFooter: this.decideFixedFooter,
+          setHasModalSection: this.setHasModalSection,
+          removeHasModalSection: this.removeHasModalSection,
+          manageFocus: this.manageFocus,
+          hasModalSection: hasModalSection,
+          isMobileFullPage: isMobileFullPage
+        }
+      }, children))));
+    }
+  }]);
+
+  return PureModal;
+}(React.PureComponent);
+
+exports.PureModal = PureModal;
+
+_defineProperty(PureModal, "defaultProps", {
+  theme: _defaultTheme.default
+});
+
+var ThemedModal = (0, _styledComponents.withTheme)(PureModal);
+ThemedModal.displayName = "Modal";
+var _default = ThemedModal;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@kiwicom/orbit-components/lib/Portal/index.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/Portal/index.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _reactDom = _interopRequireDefault(__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var Portal =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Portal, _React$Component);
+
+  function Portal(props) {
+    var _this;
+
+    _classCallCheck(this, Portal);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Portal).call(this, props));
+
+    _defineProperty(_assertThisInitialized(_this), "node", void 0);
+
+    _defineProperty(_assertThisInitialized(_this), "el", void 0);
+
+    if (typeof window !== "undefined") {
+      _this.node = _this.props.element && document.getElementById(_this.props.element) ? document.getElementById(_this.props.element) : document.body;
+      _this.el = document.createElement("div");
+    }
+
+    return _this;
+  }
+
+  _createClass(Portal, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      if (this.node && this.el) {
+        this.node.appendChild(this.el);
+      }
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      if (this.node && this.el) {
+        this.node.removeChild(this.el);
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var children = this.props.children;
+
+      if (typeof window !== "undefined" && this.el) {
+        return _reactDom.default.createPortal(children, this.el);
+      }
+
+      return null;
+    }
+  }]);
+
+  return Portal;
+}(React.Component);
+
+exports.default = Portal;
 
 /***/ }),
 
@@ -6412,6 +7075,31 @@ exports.default = _default;
 
 /***/ }),
 
+/***/ "./node_modules/@kiwicom/orbit-components/lib/common/keyMaps.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/common/keyMaps.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  TAB: 9,
+  ENTER: 13,
+  SPACE: 32,
+  ARROW_UP: 38,
+  ARROW_DOWN: 40
+};
+exports.default = _default;
+
+/***/ }),
+
 /***/ "./node_modules/@kiwicom/orbit-components/lib/defaultTheme.js":
 /*!********************************************************************!*\
   !*** ./node_modules/@kiwicom/orbit-components/lib/defaultTheme.js ***!
@@ -6437,10 +7125,10 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ "./node_modules/@kiwicom/orbit-components/lib/getTokens.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/@kiwicom/orbit-components/lib/getTokens.js ***!
-  \*****************************************************************/
+/***/ "./node_modules/@kiwicom/orbit-components/lib/icons/Alert.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/icons/Alert.js ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6450,14 +7138,140 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "default", {
-  enumerable: true,
-  get: function get() {
-    return _orbitDesignTokens.getTokens;
-  }
-});
+exports.default = Alert;
 
-var _orbitDesignTokens = __webpack_require__(/*! @kiwicom/orbit-design-tokens */ "./node_modules/@kiwicom/orbit-design-tokens/es/index.js");
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _Icon = _interopRequireDefault(__webpack_require__(/*! ../Icon */ "./node_modules/@kiwicom/orbit-components/lib/Icon/index.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+/* eslint-disable */
+function Alert(props) {
+  var color = props.color,
+      size = props.size,
+      customColor = props.customColor,
+      className = props.className,
+      dataTest = props.dataTest,
+      ariaHidden = props.ariaHidden,
+      ariaLabel = props.ariaLabel,
+      reverseOnRtl = props.reverseOnRtl;
+  return React.createElement(_Icon.default, {
+    viewBox: "0 0 24 24",
+    size: size,
+    color: color,
+    customColor: customColor,
+    className: className,
+    dataTest: dataTest,
+    ariaHidden: ariaHidden,
+    reverseOnRtl: reverseOnRtl,
+    ariaLabel: ariaLabel
+  }, React.createElement("path", {
+    d: "M12 19.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zM11 10h2v6h-2v-6zm10.895 10.553l-9-18c-.339-.678-1.451-.678-1.79 0l-9 18c-.154.31-.138.678.044.973.183.294.504.474.851.474h18c.347 0 .668-.18.851-.474.182-.295.198-.663.044-.973z"
+  }));
+}
+
+/***/ }),
+
+/***/ "./node_modules/@kiwicom/orbit-components/lib/icons/AlertCircle.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/icons/AlertCircle.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = AlertCircle;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _Icon = _interopRequireDefault(__webpack_require__(/*! ../Icon */ "./node_modules/@kiwicom/orbit-components/lib/Icon/index.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+/* eslint-disable */
+function AlertCircle(props) {
+  var color = props.color,
+      size = props.size,
+      customColor = props.customColor,
+      className = props.className,
+      dataTest = props.dataTest,
+      ariaHidden = props.ariaHidden,
+      ariaLabel = props.ariaLabel,
+      reverseOnRtl = props.reverseOnRtl;
+  return React.createElement(_Icon.default, {
+    viewBox: "0 0 24 24",
+    size: size,
+    color: color,
+    customColor: customColor,
+    className: className,
+    dataTest: dataTest,
+    ariaHidden: ariaHidden,
+    reverseOnRtl: reverseOnRtl,
+    ariaLabel: ariaLabel
+  }, React.createElement("path", {
+    d: "M12 17.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zM11 6h2v7h-2V6zm1-4C6.486 2 2 6.486 2 12c0 5.515 4.486 10 10 10s10-4.485 10-10c0-5.514-4.486-10-10-10z"
+  }));
+}
+
+/***/ }),
+
+/***/ "./node_modules/@kiwicom/orbit-components/lib/icons/Check.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/icons/Check.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Check;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _Icon = _interopRequireDefault(__webpack_require__(/*! ../Icon */ "./node_modules/@kiwicom/orbit-components/lib/Icon/index.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+/* eslint-disable */
+function Check(props) {
+  var color = props.color,
+      size = props.size,
+      customColor = props.customColor,
+      className = props.className,
+      dataTest = props.dataTest,
+      ariaHidden = props.ariaHidden,
+      ariaLabel = props.ariaLabel,
+      reverseOnRtl = props.reverseOnRtl;
+  return React.createElement(_Icon.default, {
+    viewBox: "0 0 24 24",
+    size: size,
+    color: color,
+    customColor: customColor,
+    className: className,
+    dataTest: dataTest,
+    ariaHidden: ariaHidden,
+    reverseOnRtl: reverseOnRtl,
+    ariaLabel: ariaLabel
+  }, React.createElement("path", {
+    d: "M8.926 18.652L4 13.725l1.767-1.768 3.074 3.074L17.959 5l1.849 1.682z"
+  }));
+}
 
 /***/ }),
 
@@ -6511,9 +7325,9 @@ function ChevronDown(props) {
 
 /***/ }),
 
-/***/ "./node_modules/@kiwicom/orbit-components/lib/icons/ChevronLeft.js":
+/***/ "./node_modules/@kiwicom/orbit-components/lib/icons/CircleSmall.js":
 /*!*************************************************************************!*\
-  !*** ./node_modules/@kiwicom/orbit-components/lib/icons/ChevronLeft.js ***!
+  !*** ./node_modules/@kiwicom/orbit-components/lib/icons/CircleSmall.js ***!
   \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -6524,7 +7338,7 @@ function ChevronDown(props) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = ChevronLeft;
+exports.default = CircleSmall;
 
 var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
@@ -6535,7 +7349,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 /* eslint-disable */
-function ChevronLeft(props) {
+function CircleSmall(props) {
   var color = props.color,
       size = props.size,
       customColor = props.customColor,
@@ -6555,7 +7369,7 @@ function ChevronLeft(props) {
     reverseOnRtl: reverseOnRtl,
     ariaLabel: ariaLabel
   }, React.createElement("path", {
-    d: "M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+    d: "M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z"
   }));
 }
 
@@ -6611,10 +7425,10 @@ function Close(props) {
 
 /***/ }),
 
-/***/ "./node_modules/@kiwicom/orbit-components/lib/icons/FlightDirect.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@kiwicom/orbit-components/lib/icons/FlightDirect.js ***!
-  \**************************************************************************/
+/***/ "./node_modules/@kiwicom/orbit-components/lib/icons/InformationCircle.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/icons/InformationCircle.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6624,7 +7438,7 @@ function Close(props) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = FlightDirect;
+exports.default = InformationCircle;
 
 var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
@@ -6635,7 +7449,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 /* eslint-disable */
-function FlightDirect(props) {
+function InformationCircle(props) {
   var color = props.color,
       size = props.size,
       customColor = props.customColor,
@@ -6655,7 +7469,107 @@ function FlightDirect(props) {
     reverseOnRtl: reverseOnRtl,
     ariaLabel: ariaLabel
   }, React.createElement("path", {
-    d: "M17.75 12l-4.083-3.5v2.333H6v2.334h7.667V15.5z"
+    d: "M15 17H9v-2h2v-3h-1v-2h2a1 1 0 0 1 1 1v4h2v2zM12 6.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 2C6.486 2 2 6.486 2 12c0 5.515 4.486 10 10 10s10-4.485 10-10c0-5.514-4.486-10-10-10z"
+  }));
+}
+
+/***/ }),
+
+/***/ "./node_modules/@kiwicom/orbit-components/lib/icons/Kiwicom.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/icons/Kiwicom.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Kiwicom;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _Icon = _interopRequireDefault(__webpack_require__(/*! ../Icon */ "./node_modules/@kiwicom/orbit-components/lib/Icon/index.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+/* eslint-disable */
+function Kiwicom(props) {
+  var color = props.color,
+      size = props.size,
+      customColor = props.customColor,
+      className = props.className,
+      dataTest = props.dataTest,
+      ariaHidden = props.ariaHidden,
+      ariaLabel = props.ariaLabel,
+      reverseOnRtl = props.reverseOnRtl;
+  return React.createElement(_Icon.default, {
+    viewBox: "0 0 24 24",
+    size: size,
+    color: color,
+    customColor: customColor,
+    className: className,
+    dataTest: dataTest,
+    ariaHidden: ariaHidden,
+    reverseOnRtl: reverseOnRtl,
+    ariaLabel: ariaLabel
+  }, React.createElement("path", {
+    d: "M14.79 8.984a.6.6 0 0 1 0 .876l-2.405 2.4 2.405 2.398c.12.12.187.272.19.43a.607.607 0 0 1-.19.445.616.616 0 0 1-.437.19.626.626 0 0 1-.44-.19l-2.83-2.823a.618.618 0 0 1-.184-.454.612.612 0 0 1 .183-.447l2.83-2.825a.623.623 0 0 1 .44-.19c.162 0 .314.066.438.19zm-4.273.43v5.69a.63.63 0 0 1-.169.439.604.604 0 0 1-.447.18.598.598 0 0 1-.617-.62v-5.69c0-.352.265-.62.617-.62a.61.61 0 0 1 .441.181.623.623 0 0 1 .175.44zm10.923 2.345a.676.676 0 1 1-.001 1.352.676.676 0 0 1 0-1.352zm-.967 4.1c.273.203.332.59.128.864-.895 1.21-2.147 2.223-3.624 2.924-1.51.718-3.231 1.097-4.977 1.097-2.008 0-3.95-.494-5.612-1.425-1.638-.919-2.914-2.208-3.69-3.726a7.31 7.31 0 0 1-.813-3.35c0-1.162.274-2.288.814-3.348.517-1.015 1.254-1.923 2.192-2.7C6.796 4.614 9.32 3.743 12 3.743c1.75 0 3.474.38 4.988 1.101 1.479.706 2.733 1.72 3.626 2.937a.617.617 0 1 1-.995.73c-.772-1.052-1.866-1.935-3.162-2.552-1.348-.643-2.89-.982-4.458-.982-1.798 0-3.53.437-5.008 1.267-1.426.8-2.53 1.91-3.193 3.21a6.094 6.094 0 0 0-.68 2.789c.002.964.23 1.903.68 2.787.44.864 1.071 1.641 1.88 2.31 1.681 1.399 3.927 2.168 6.319 2.168 1.568 0 3.106-.339 4.451-.978 1.295-.615 2.388-1.494 3.161-2.543a.618.618 0 0 1 .863-.13z"
+  }));
+}
+
+/***/ }),
+
+/***/ "./node_modules/@kiwicom/orbit-components/lib/icons/Share.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/icons/Share.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Share;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _Icon = _interopRequireDefault(__webpack_require__(/*! ../Icon */ "./node_modules/@kiwicom/orbit-components/lib/Icon/index.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+/* eslint-disable */
+function Share(props) {
+  var color = props.color,
+      size = props.size,
+      customColor = props.customColor,
+      className = props.className,
+      dataTest = props.dataTest,
+      ariaHidden = props.ariaHidden,
+      ariaLabel = props.ariaLabel,
+      reverseOnRtl = props.reverseOnRtl;
+  return React.createElement(_Icon.default, {
+    viewBox: "0 0 24 24",
+    size: size,
+    color: color,
+    customColor: customColor,
+    className: className,
+    dataTest: dataTest,
+    ariaHidden: ariaHidden,
+    reverseOnRtl: reverseOnRtl,
+    ariaLabel: ariaLabel
+  }, React.createElement("path", {
+    d: "M2.476 21h-.02A.489.489 0 0 1 2 20.496c.002-.123.275-12.155 11.429-12.487V4.5c0-.193.106-.369.271-.45a.456.456 0 0 1 .504.062l7.62 6.5a.517.517 0 0 1 .002.777l-7.62 6.501a.462.462 0 0 1-.506.063.501.501 0 0 1-.271-.451v-3.497c-9.924.19-10.46 6.268-10.478 6.53a.485.485 0 0 1-.475.465z"
   }));
 }
 
@@ -6922,6 +7836,30 @@ exports.default = _default;
 
 /***/ }),
 
+/***/ "./node_modules/@kiwicom/orbit-components/lib/utils/randomID/index.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/utils/randomID/index.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var randomID = function randomID(name) {
+  return "".concat(name + Math.floor(Math.random() * 100000), "-id-").concat(Math.floor(Math.random() * 100000));
+};
+
+var _default = randomID;
+exports.default = _default;
+
+/***/ }),
+
 /***/ "./node_modules/@kiwicom/orbit-components/lib/utils/rtl/index.js":
 /*!***********************************************************************!*\
   !*** ./node_modules/@kiwicom/orbit-components/lib/utils/rtl/index.js ***!
@@ -7024,6 +7962,46 @@ var translate3d = function translate3d(value) {
 };
 
 exports.translate3d = translate3d;
+
+/***/ }),
+
+/***/ "./node_modules/@kiwicom/orbit-components/lib/utils/transition/index.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@kiwicom/orbit-components/lib/utils/transition/index.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var DURATIONS = {
+  SLOW: "slow",
+  NORMAL: "normal",
+  FAST: "fast"
+};
+
+var transition = function transition(properties, duration, timingFunction) {
+  return function (_ref) {
+    var _tokens;
+
+    var theme = _ref.theme;
+    var tokens = (_tokens = {}, _defineProperty(_tokens, DURATIONS.SLOW, theme.orbit.durationSlow), _defineProperty(_tokens, DURATIONS.NORMAL, theme.orbit.durationNormal), _defineProperty(_tokens, DURATIONS.FAST, theme.orbit.durationFast), _tokens);
+    return "\n    ".concat(properties.map(function (property) {
+      return "".concat(property, " ").concat(tokens[duration], " ").concat(timingFunction);
+    }).join(","), ";\n  ");
+  };
+};
+
+var _default = transition;
+exports.default = _default;
 
 /***/ }),
 
@@ -8683,6 +9661,96 @@ rawAsap.makeRequestCallFromTimer = makeRequestCallFromTimer;
 
 /***/ }),
 
+/***/ "./node_modules/copy-to-clipboard/index.js":
+/*!*************************************************!*\
+  !*** ./node_modules/copy-to-clipboard/index.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var deselectCurrent = __webpack_require__(/*! toggle-selection */ "./node_modules/toggle-selection/index.js");
+
+var defaultMessage = 'Copy to clipboard: #{key}, Enter';
+
+function format(message) {
+  var copyKey = (/mac os x/i.test(navigator.userAgent) ? '⌘' : 'Ctrl') + '+C';
+  return message.replace(/#{\s*key\s*}/g, copyKey);
+}
+
+function copy(text, options) {
+  var debug, message, reselectPrevious, range, selection, mark, success = false;
+  if (!options) { options = {}; }
+  debug = options.debug || false;
+  try {
+    reselectPrevious = deselectCurrent();
+
+    range = document.createRange();
+    selection = document.getSelection();
+
+    mark = document.createElement('span');
+    mark.textContent = text;
+    // reset user styles for span element
+    mark.style.all = 'unset';
+    // prevents scrolling to the end of the page
+    mark.style.position = 'fixed';
+    mark.style.top = 0;
+    mark.style.clip = 'rect(0, 0, 0, 0)';
+    // used to preserve spaces and line breaks
+    mark.style.whiteSpace = 'pre';
+    // do not inherit user-select (it may be `none`)
+    mark.style.webkitUserSelect = 'text';
+    mark.style.MozUserSelect = 'text';
+    mark.style.msUserSelect = 'text';
+    mark.style.userSelect = 'text';
+
+    document.body.appendChild(mark);
+
+    range.selectNode(mark);
+    selection.addRange(range);
+
+    var successful = document.execCommand('copy');
+    if (!successful) {
+      throw new Error('copy command was unsuccessful');
+    }
+    success = true;
+  } catch (err) {
+    debug && console.error('unable to copy using execCommand: ', err);
+    debug && console.warn('trying IE specific stuff');
+    try {
+      window.clipboardData.setData('text', text);
+      success = true;
+    } catch (err) {
+      debug && console.error('unable to copy using clipboardData: ', err);
+      debug && console.error('falling back to prompt');
+      message = format('message' in options ? options.message : defaultMessage);
+      window.prompt(message, text);
+    }
+  } finally {
+    if (selection) {
+      if (typeof selection.removeRange == 'function') {
+        selection.removeRange(range);
+      } else {
+        selection.removeAllRanges();
+      }
+    }
+
+    if (mark) {
+      document.body.removeChild(mark);
+    }
+    reselectPrevious();
+  }
+
+  return success;
+}
+
+module.exports = copy;
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/library/fn/array/is-array.js":
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/library/fn/array/is-array.js ***!
@@ -8706,6 +9774,25 @@ module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/
 __webpack_require__(/*! ../modules/web.dom.iterable */ "./node_modules/core-js/library/modules/web.dom.iterable.js");
 __webpack_require__(/*! ../modules/es6.string.iterator */ "./node_modules/core-js/library/modules/es6.string.iterator.js");
 module.exports = __webpack_require__(/*! ../modules/core.get-iterator */ "./node_modules/core-js/library/modules/core.get-iterator.js");
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/fn/map.js":
+/*!************************************************!*\
+  !*** ./node_modules/core-js/library/fn/map.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../modules/es6.object.to-string */ "./node_modules/core-js/library/modules/es6.object.to-string.js");
+__webpack_require__(/*! ../modules/es6.string.iterator */ "./node_modules/core-js/library/modules/es6.string.iterator.js");
+__webpack_require__(/*! ../modules/web.dom.iterable */ "./node_modules/core-js/library/modules/web.dom.iterable.js");
+__webpack_require__(/*! ../modules/es6.map */ "./node_modules/core-js/library/modules/es6.map.js");
+__webpack_require__(/*! ../modules/es7.map.to-json */ "./node_modules/core-js/library/modules/es7.map.to-json.js");
+__webpack_require__(/*! ../modules/es7.map.of */ "./node_modules/core-js/library/modules/es7.map.of.js");
+__webpack_require__(/*! ../modules/es7.map.from */ "./node_modules/core-js/library/modules/es7.map.from.js");
+module.exports = __webpack_require__(/*! ../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Map;
 
 
 /***/ }),
@@ -8837,38 +9924,6 @@ __webpack_require__(/*! ../modules/es6.promise */ "./node_modules/core-js/librar
 __webpack_require__(/*! ../modules/es7.promise.finally */ "./node_modules/core-js/library/modules/es7.promise.finally.js");
 __webpack_require__(/*! ../modules/es7.promise.try */ "./node_modules/core-js/library/modules/es7.promise.try.js");
 module.exports = __webpack_require__(/*! ../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Promise;
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/fn/reflect/construct.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/core-js/library/fn/reflect/construct.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ../../modules/es6.reflect.construct */ "./node_modules/core-js/library/modules/es6.reflect.construct.js");
-module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Reflect.construct;
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/fn/set.js":
-/*!************************************************!*\
-  !*** ./node_modules/core-js/library/fn/set.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ../modules/es6.object.to-string */ "./node_modules/core-js/library/modules/es6.object.to-string.js");
-__webpack_require__(/*! ../modules/es6.string.iterator */ "./node_modules/core-js/library/modules/es6.string.iterator.js");
-__webpack_require__(/*! ../modules/web.dom.iterable */ "./node_modules/core-js/library/modules/web.dom.iterable.js");
-__webpack_require__(/*! ../modules/es6.set */ "./node_modules/core-js/library/modules/es6.set.js");
-__webpack_require__(/*! ../modules/es7.set.to-json */ "./node_modules/core-js/library/modules/es7.set.to-json.js");
-__webpack_require__(/*! ../modules/es7.set.of */ "./node_modules/core-js/library/modules/es7.set.of.js");
-__webpack_require__(/*! ../modules/es7.set.from */ "./node_modules/core-js/library/modules/es7.set.from.js");
-module.exports = __webpack_require__(/*! ../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Set;
 
 
 /***/ }),
@@ -9108,43 +10163,6 @@ var speciesConstructor = __webpack_require__(/*! ./_array-species-constructor */
 
 module.exports = function (original, length) {
   return new (speciesConstructor(original))(length);
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/_bind.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/core-js/library/modules/_bind.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var aFunction = __webpack_require__(/*! ./_a-function */ "./node_modules/core-js/library/modules/_a-function.js");
-var isObject = __webpack_require__(/*! ./_is-object */ "./node_modules/core-js/library/modules/_is-object.js");
-var invoke = __webpack_require__(/*! ./_invoke */ "./node_modules/core-js/library/modules/_invoke.js");
-var arraySlice = [].slice;
-var factories = {};
-
-var construct = function (F, len, args) {
-  if (!(len in factories)) {
-    for (var n = [], i = 0; i < len; i++) n[i] = 'a[' + i + ']';
-    // eslint-disable-next-line no-new-func
-    factories[len] = Function('F,a', 'return new F(' + n.join(',') + ')');
-  } return factories[len](F, args);
-};
-
-module.exports = Function.bind || function bind(that /* , ...args */) {
-  var fn = aFunction(this);
-  var partArgs = arraySlice.call(arguments, 1);
-  var bound = function (/* args... */) {
-    var args = partArgs.concat(arraySlice.call(arguments));
-    return this instanceof bound ? construct(fn, args.length, args) : invoke(fn, args, that);
-  };
-  if (isObject(fn.prototype)) bound.prototype = fn.prototype;
-  return bound;
 };
 
 
@@ -11315,6 +12333,37 @@ addToUnscopables('entries');
 
 /***/ }),
 
+/***/ "./node_modules/core-js/library/modules/es6.map.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/core-js/library/modules/es6.map.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var strong = __webpack_require__(/*! ./_collection-strong */ "./node_modules/core-js/library/modules/_collection-strong.js");
+var validate = __webpack_require__(/*! ./_validate-collection */ "./node_modules/core-js/library/modules/_validate-collection.js");
+var MAP = 'Map';
+
+// 23.1 Map Objects
+module.exports = __webpack_require__(/*! ./_collection */ "./node_modules/core-js/library/modules/_collection.js")(MAP, function (get) {
+  return function Map() { return get(this, arguments.length > 0 ? arguments[0] : undefined); };
+}, {
+  // 23.1.3.6 Map.prototype.get(key)
+  get: function get(key) {
+    var entry = strong.getEntry(validate(this, MAP), key);
+    return entry && entry.v;
+  },
+  // 23.1.3.9 Map.prototype.set(key, value)
+  set: function set(key, value) {
+    return strong.def(validate(this, MAP), key === 0 ? 0 : key, value);
+  }
+}, strong, true);
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/library/modules/es6.object.assign.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/core-js/library/modules/es6.object.assign.js ***!
@@ -11741,90 +12790,6 @@ $export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(/*! ./_iter-
 
 /***/ }),
 
-/***/ "./node_modules/core-js/library/modules/es6.reflect.construct.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es6.reflect.construct.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 26.1.2 Reflect.construct(target, argumentsList [, newTarget])
-var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/library/modules/_export.js");
-var create = __webpack_require__(/*! ./_object-create */ "./node_modules/core-js/library/modules/_object-create.js");
-var aFunction = __webpack_require__(/*! ./_a-function */ "./node_modules/core-js/library/modules/_a-function.js");
-var anObject = __webpack_require__(/*! ./_an-object */ "./node_modules/core-js/library/modules/_an-object.js");
-var isObject = __webpack_require__(/*! ./_is-object */ "./node_modules/core-js/library/modules/_is-object.js");
-var fails = __webpack_require__(/*! ./_fails */ "./node_modules/core-js/library/modules/_fails.js");
-var bind = __webpack_require__(/*! ./_bind */ "./node_modules/core-js/library/modules/_bind.js");
-var rConstruct = (__webpack_require__(/*! ./_global */ "./node_modules/core-js/library/modules/_global.js").Reflect || {}).construct;
-
-// MS Edge supports only 2 arguments and argumentsList argument is optional
-// FF Nightly sets third argument as `new.target`, but does not create `this` from it
-var NEW_TARGET_BUG = fails(function () {
-  function F() { /* empty */ }
-  return !(rConstruct(function () { /* empty */ }, [], F) instanceof F);
-});
-var ARGS_BUG = !fails(function () {
-  rConstruct(function () { /* empty */ });
-});
-
-$export($export.S + $export.F * (NEW_TARGET_BUG || ARGS_BUG), 'Reflect', {
-  construct: function construct(Target, args /* , newTarget */) {
-    aFunction(Target);
-    anObject(args);
-    var newTarget = arguments.length < 3 ? Target : aFunction(arguments[2]);
-    if (ARGS_BUG && !NEW_TARGET_BUG) return rConstruct(Target, args, newTarget);
-    if (Target == newTarget) {
-      // w/o altered newTarget, optimization for 0-4 arguments
-      switch (args.length) {
-        case 0: return new Target();
-        case 1: return new Target(args[0]);
-        case 2: return new Target(args[0], args[1]);
-        case 3: return new Target(args[0], args[1], args[2]);
-        case 4: return new Target(args[0], args[1], args[2], args[3]);
-      }
-      // w/o altered newTarget, lot of arguments case
-      var $args = [null];
-      $args.push.apply($args, args);
-      return new (bind.apply(Target, $args))();
-    }
-    // with altered newTarget, not support built-in constructors
-    var proto = newTarget.prototype;
-    var instance = create(isObject(proto) ? proto : Object.prototype);
-    var result = Function.apply.call(Target, instance, args);
-    return isObject(result) ? result : instance;
-  }
-});
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/es6.set.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es6.set.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var strong = __webpack_require__(/*! ./_collection-strong */ "./node_modules/core-js/library/modules/_collection-strong.js");
-var validate = __webpack_require__(/*! ./_validate-collection */ "./node_modules/core-js/library/modules/_validate-collection.js");
-var SET = 'Set';
-
-// 23.2 Set Objects
-module.exports = __webpack_require__(/*! ./_collection */ "./node_modules/core-js/library/modules/_collection.js")(SET, function (get) {
-  return function Set() { return get(this, arguments.length > 0 ? arguments[0] : undefined); };
-}, {
-  // 23.2.3.1 Set.prototype.add(value)
-  add: function add(value) {
-    return strong.def(validate(this, SET), value = value === 0 ? 0 : value, value);
-  }
-}, strong);
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/library/modules/es6.string.iterator.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/library/modules/es6.string.iterator.js ***!
@@ -12100,6 +13065,47 @@ setToStringTag(global.JSON, 'JSON', true);
 
 /***/ }),
 
+/***/ "./node_modules/core-js/library/modules/es7.map.from.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/core-js/library/modules/es7.map.from.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://tc39.github.io/proposal-setmap-offrom/#sec-map.from
+__webpack_require__(/*! ./_set-collection-from */ "./node_modules/core-js/library/modules/_set-collection-from.js")('Map');
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/modules/es7.map.of.js":
+/*!************************************************************!*\
+  !*** ./node_modules/core-js/library/modules/es7.map.of.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://tc39.github.io/proposal-setmap-offrom/#sec-map.of
+__webpack_require__(/*! ./_set-collection-of */ "./node_modules/core-js/library/modules/_set-collection-of.js")('Map');
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/modules/es7.map.to-json.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/core-js/library/modules/es7.map.to-json.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://github.com/DavidBruant/Map-Set.prototype.toJSON
+var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/library/modules/_export.js");
+
+$export($export.P + $export.R, 'Map', { toJSON: __webpack_require__(/*! ./_collection-to-json */ "./node_modules/core-js/library/modules/_collection-to-json.js")('Map') });
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/library/modules/es7.promise.finally.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/library/modules/es7.promise.finally.js ***!
@@ -12152,47 +13158,6 @@ $export($export.S, 'Promise', { 'try': function (callbackfn) {
   (result.e ? promiseCapability.reject : promiseCapability.resolve)(result.v);
   return promiseCapability.promise;
 } });
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/es7.set.from.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es7.set.from.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://tc39.github.io/proposal-setmap-offrom/#sec-set.from
-__webpack_require__(/*! ./_set-collection-from */ "./node_modules/core-js/library/modules/_set-collection-from.js")('Set');
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/es7.set.of.js":
-/*!************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es7.set.of.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://tc39.github.io/proposal-setmap-offrom/#sec-set.of
-__webpack_require__(/*! ./_set-collection-of */ "./node_modules/core-js/library/modules/_set-collection-of.js")('Set');
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/es7.set.to-json.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es7.set.to-json.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://github.com/DavidBruant/Map-Set.prototype.toJSON
-var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/library/modules/_export.js");
-
-$export($export.P + $export.R, 'Set', { toJSON: __webpack_require__(/*! ./_collection-to-json */ "./node_modules/core-js/library/modules/_collection-to-json.js")('Set') });
 
 
 /***/ }),
@@ -12804,7585 +13769,6 @@ module.exports = exports
 
 /***/ }),
 
-/***/ "./node_modules/date-fns/_lib/getTimezoneOffsetInMilliseconds/index.js":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/date-fns/_lib/getTimezoneOffsetInMilliseconds/index.js ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var MILLISECONDS_IN_MINUTE = 60000
-
-/**
- * Google Chrome as of 67.0.3396.87 introduced timezones with offset that includes seconds.
- * They usually appear for dates that denote time before the timezones were introduced
- * (e.g. for 'Europe/Prague' timezone the offset is GMT+00:57:44 before 1 October 1891
- * and GMT+01:00:00 after that date)
- *
- * Date#getTimezoneOffset returns the offset in minutes and would return 57 for the example above,
- * which would lead to incorrect calculations.
- *
- * This function returns the timezone offset in milliseconds that takes seconds in account.
- */
-module.exports = function getTimezoneOffsetInMilliseconds (dirtyDate) {
-  var date = new Date(dirtyDate.getTime())
-  var baseTimezoneOffset = date.getTimezoneOffset()
-  date.setSeconds(0, 0)
-  var millisecondsPartOfTimezoneOffset = date.getTime() % MILLISECONDS_IN_MINUTE
-
-  return baseTimezoneOffset * MILLISECONDS_IN_MINUTE + millisecondsPartOfTimezoneOffset
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/add_days/index.js":
-/*!*************************************************!*\
-  !*** ./node_modules/date-fns/add_days/index.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Day Helpers
- * @summary Add the specified number of days to the given date.
- *
- * @description
- * Add the specified number of days to the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} amount - the amount of days to be added
- * @returns {Date} the new date with the days added
- *
- * @example
- * // Add 10 days to 1 September 2014:
- * var result = addDays(new Date(2014, 8, 1), 10)
- * //=> Thu Sep 11 2014 00:00:00
- */
-function addDays (dirtyDate, dirtyAmount) {
-  var date = parse(dirtyDate)
-  var amount = Number(dirtyAmount)
-  date.setDate(date.getDate() + amount)
-  return date
-}
-
-module.exports = addDays
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/add_hours/index.js":
-/*!**************************************************!*\
-  !*** ./node_modules/date-fns/add_hours/index.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var addMilliseconds = __webpack_require__(/*! ../add_milliseconds/index.js */ "./node_modules/date-fns/add_milliseconds/index.js")
-
-var MILLISECONDS_IN_HOUR = 3600000
-
-/**
- * @category Hour Helpers
- * @summary Add the specified number of hours to the given date.
- *
- * @description
- * Add the specified number of hours to the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} amount - the amount of hours to be added
- * @returns {Date} the new date with the hours added
- *
- * @example
- * // Add 2 hours to 10 July 2014 23:00:00:
- * var result = addHours(new Date(2014, 6, 10, 23, 0), 2)
- * //=> Fri Jul 11 2014 01:00:00
- */
-function addHours (dirtyDate, dirtyAmount) {
-  var amount = Number(dirtyAmount)
-  return addMilliseconds(dirtyDate, amount * MILLISECONDS_IN_HOUR)
-}
-
-module.exports = addHours
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/add_iso_years/index.js":
-/*!******************************************************!*\
-  !*** ./node_modules/date-fns/add_iso_years/index.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var getISOYear = __webpack_require__(/*! ../get_iso_year/index.js */ "./node_modules/date-fns/get_iso_year/index.js")
-var setISOYear = __webpack_require__(/*! ../set_iso_year/index.js */ "./node_modules/date-fns/set_iso_year/index.js")
-
-/**
- * @category ISO Week-Numbering Year Helpers
- * @summary Add the specified number of ISO week-numbering years to the given date.
- *
- * @description
- * Add the specified number of ISO week-numbering years to the given date.
- *
- * ISO week-numbering year: http://en.wikipedia.org/wiki/ISO_week_date
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} amount - the amount of ISO week-numbering years to be added
- * @returns {Date} the new date with the ISO week-numbering years added
- *
- * @example
- * // Add 5 ISO week-numbering years to 2 July 2010:
- * var result = addISOYears(new Date(2010, 6, 2), 5)
- * //=> Fri Jun 26 2015 00:00:00
- */
-function addISOYears (dirtyDate, dirtyAmount) {
-  var amount = Number(dirtyAmount)
-  return setISOYear(dirtyDate, getISOYear(dirtyDate) + amount)
-}
-
-module.exports = addISOYears
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/add_milliseconds/index.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/date-fns/add_milliseconds/index.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Millisecond Helpers
- * @summary Add the specified number of milliseconds to the given date.
- *
- * @description
- * Add the specified number of milliseconds to the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} amount - the amount of milliseconds to be added
- * @returns {Date} the new date with the milliseconds added
- *
- * @example
- * // Add 750 milliseconds to 10 July 2014 12:45:30.000:
- * var result = addMilliseconds(new Date(2014, 6, 10, 12, 45, 30, 0), 750)
- * //=> Thu Jul 10 2014 12:45:30.750
- */
-function addMilliseconds (dirtyDate, dirtyAmount) {
-  var timestamp = parse(dirtyDate).getTime()
-  var amount = Number(dirtyAmount)
-  return new Date(timestamp + amount)
-}
-
-module.exports = addMilliseconds
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/add_minutes/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/date-fns/add_minutes/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var addMilliseconds = __webpack_require__(/*! ../add_milliseconds/index.js */ "./node_modules/date-fns/add_milliseconds/index.js")
-
-var MILLISECONDS_IN_MINUTE = 60000
-
-/**
- * @category Minute Helpers
- * @summary Add the specified number of minutes to the given date.
- *
- * @description
- * Add the specified number of minutes to the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} amount - the amount of minutes to be added
- * @returns {Date} the new date with the minutes added
- *
- * @example
- * // Add 30 minutes to 10 July 2014 12:00:00:
- * var result = addMinutes(new Date(2014, 6, 10, 12, 0), 30)
- * //=> Thu Jul 10 2014 12:30:00
- */
-function addMinutes (dirtyDate, dirtyAmount) {
-  var amount = Number(dirtyAmount)
-  return addMilliseconds(dirtyDate, amount * MILLISECONDS_IN_MINUTE)
-}
-
-module.exports = addMinutes
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/add_months/index.js":
-/*!***************************************************!*\
-  !*** ./node_modules/date-fns/add_months/index.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-var getDaysInMonth = __webpack_require__(/*! ../get_days_in_month/index.js */ "./node_modules/date-fns/get_days_in_month/index.js")
-
-/**
- * @category Month Helpers
- * @summary Add the specified number of months to the given date.
- *
- * @description
- * Add the specified number of months to the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} amount - the amount of months to be added
- * @returns {Date} the new date with the months added
- *
- * @example
- * // Add 5 months to 1 September 2014:
- * var result = addMonths(new Date(2014, 8, 1), 5)
- * //=> Sun Feb 01 2015 00:00:00
- */
-function addMonths (dirtyDate, dirtyAmount) {
-  var date = parse(dirtyDate)
-  var amount = Number(dirtyAmount)
-  var desiredMonth = date.getMonth() + amount
-  var dateWithDesiredMonth = new Date(0)
-  dateWithDesiredMonth.setFullYear(date.getFullYear(), desiredMonth, 1)
-  dateWithDesiredMonth.setHours(0, 0, 0, 0)
-  var daysInMonth = getDaysInMonth(dateWithDesiredMonth)
-  // Set the last day of the new month
-  // if the original date was the last day of the longer month
-  date.setMonth(desiredMonth, Math.min(daysInMonth, date.getDate()))
-  return date
-}
-
-module.exports = addMonths
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/add_quarters/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/date-fns/add_quarters/index.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var addMonths = __webpack_require__(/*! ../add_months/index.js */ "./node_modules/date-fns/add_months/index.js")
-
-/**
- * @category Quarter Helpers
- * @summary Add the specified number of year quarters to the given date.
- *
- * @description
- * Add the specified number of year quarters to the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} amount - the amount of quarters to be added
- * @returns {Date} the new date with the quarters added
- *
- * @example
- * // Add 1 quarter to 1 September 2014:
- * var result = addQuarters(new Date(2014, 8, 1), 1)
- * //=> Mon Dec 01 2014 00:00:00
- */
-function addQuarters (dirtyDate, dirtyAmount) {
-  var amount = Number(dirtyAmount)
-  var months = amount * 3
-  return addMonths(dirtyDate, months)
-}
-
-module.exports = addQuarters
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/add_seconds/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/date-fns/add_seconds/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var addMilliseconds = __webpack_require__(/*! ../add_milliseconds/index.js */ "./node_modules/date-fns/add_milliseconds/index.js")
-
-/**
- * @category Second Helpers
- * @summary Add the specified number of seconds to the given date.
- *
- * @description
- * Add the specified number of seconds to the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} amount - the amount of seconds to be added
- * @returns {Date} the new date with the seconds added
- *
- * @example
- * // Add 30 seconds to 10 July 2014 12:45:00:
- * var result = addSeconds(new Date(2014, 6, 10, 12, 45, 0), 30)
- * //=> Thu Jul 10 2014 12:45:30
- */
-function addSeconds (dirtyDate, dirtyAmount) {
-  var amount = Number(dirtyAmount)
-  return addMilliseconds(dirtyDate, amount * 1000)
-}
-
-module.exports = addSeconds
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/add_weeks/index.js":
-/*!**************************************************!*\
-  !*** ./node_modules/date-fns/add_weeks/index.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var addDays = __webpack_require__(/*! ../add_days/index.js */ "./node_modules/date-fns/add_days/index.js")
-
-/**
- * @category Week Helpers
- * @summary Add the specified number of weeks to the given date.
- *
- * @description
- * Add the specified number of week to the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} amount - the amount of weeks to be added
- * @returns {Date} the new date with the weeks added
- *
- * @example
- * // Add 4 weeks to 1 September 2014:
- * var result = addWeeks(new Date(2014, 8, 1), 4)
- * //=> Mon Sep 29 2014 00:00:00
- */
-function addWeeks (dirtyDate, dirtyAmount) {
-  var amount = Number(dirtyAmount)
-  var days = amount * 7
-  return addDays(dirtyDate, days)
-}
-
-module.exports = addWeeks
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/add_years/index.js":
-/*!**************************************************!*\
-  !*** ./node_modules/date-fns/add_years/index.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var addMonths = __webpack_require__(/*! ../add_months/index.js */ "./node_modules/date-fns/add_months/index.js")
-
-/**
- * @category Year Helpers
- * @summary Add the specified number of years to the given date.
- *
- * @description
- * Add the specified number of years to the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} amount - the amount of years to be added
- * @returns {Date} the new date with the years added
- *
- * @example
- * // Add 5 years to 1 September 2014:
- * var result = addYears(new Date(2014, 8, 1), 5)
- * //=> Sun Sep 01 2019 00:00:00
- */
-function addYears (dirtyDate, dirtyAmount) {
-  var amount = Number(dirtyAmount)
-  return addMonths(dirtyDate, amount * 12)
-}
-
-module.exports = addYears
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/are_ranges_overlapping/index.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/date-fns/are_ranges_overlapping/index.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Range Helpers
- * @summary Is the given date range overlapping with another date range?
- *
- * @description
- * Is the given date range overlapping with another date range?
- *
- * @param {Date|String|Number} initialRangeStartDate - the start of the initial range
- * @param {Date|String|Number} initialRangeEndDate - the end of the initial range
- * @param {Date|String|Number} comparedRangeStartDate - the start of the range to compare it with
- * @param {Date|String|Number} comparedRangeEndDate - the end of the range to compare it with
- * @returns {Boolean} whether the date ranges are overlapping
- * @throws {Error} startDate of a date range cannot be after its endDate
- *
- * @example
- * // For overlapping date ranges:
- * areRangesOverlapping(
- *   new Date(2014, 0, 10), new Date(2014, 0, 20), new Date(2014, 0, 17), new Date(2014, 0, 21)
- * )
- * //=> true
- *
- * @example
- * // For non-overlapping date ranges:
- * areRangesOverlapping(
- *   new Date(2014, 0, 10), new Date(2014, 0, 20), new Date(2014, 0, 21), new Date(2014, 0, 22)
- * )
- * //=> false
- */
-function areRangesOverlapping (dirtyInitialRangeStartDate, dirtyInitialRangeEndDate, dirtyComparedRangeStartDate, dirtyComparedRangeEndDate) {
-  var initialStartTime = parse(dirtyInitialRangeStartDate).getTime()
-  var initialEndTime = parse(dirtyInitialRangeEndDate).getTime()
-  var comparedStartTime = parse(dirtyComparedRangeStartDate).getTime()
-  var comparedEndTime = parse(dirtyComparedRangeEndDate).getTime()
-
-  if (initialStartTime > initialEndTime || comparedStartTime > comparedEndTime) {
-    throw new Error('The start of the range cannot be after the end of the range')
-  }
-
-  return initialStartTime < comparedEndTime && comparedStartTime < initialEndTime
-}
-
-module.exports = areRangesOverlapping
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/closest_index_to/index.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/date-fns/closest_index_to/index.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Common Helpers
- * @summary Return an index of the closest date from the array comparing to the given date.
- *
- * @description
- * Return an index of the closest date from the array comparing to the given date.
- *
- * @param {Date|String|Number} dateToCompare - the date to compare with
- * @param {Date[]|String[]|Number[]} datesArray - the array to search
- * @returns {Number} an index of the date closest to the given date
- * @throws {TypeError} the second argument must be an instance of Array
- *
- * @example
- * // Which date is closer to 6 September 2015?
- * var dateToCompare = new Date(2015, 8, 6)
- * var datesArray = [
- *   new Date(2015, 0, 1),
- *   new Date(2016, 0, 1),
- *   new Date(2017, 0, 1)
- * ]
- * var result = closestIndexTo(dateToCompare, datesArray)
- * //=> 1
- */
-function closestIndexTo (dirtyDateToCompare, dirtyDatesArray) {
-  if (!(dirtyDatesArray instanceof Array)) {
-    throw new TypeError(toString.call(dirtyDatesArray) + ' is not an instance of Array')
-  }
-
-  var dateToCompare = parse(dirtyDateToCompare)
-  var timeToCompare = dateToCompare.getTime()
-
-  var result
-  var minDistance
-
-  dirtyDatesArray.forEach(function (dirtyDate, index) {
-    var currentDate = parse(dirtyDate)
-    var distance = Math.abs(timeToCompare - currentDate.getTime())
-    if (result === undefined || distance < minDistance) {
-      result = index
-      minDistance = distance
-    }
-  })
-
-  return result
-}
-
-module.exports = closestIndexTo
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/closest_to/index.js":
-/*!***************************************************!*\
-  !*** ./node_modules/date-fns/closest_to/index.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Common Helpers
- * @summary Return a date from the array closest to the given date.
- *
- * @description
- * Return a date from the array closest to the given date.
- *
- * @param {Date|String|Number} dateToCompare - the date to compare with
- * @param {Date[]|String[]|Number[]} datesArray - the array to search
- * @returns {Date} the date from the array closest to the given date
- * @throws {TypeError} the second argument must be an instance of Array
- *
- * @example
- * // Which date is closer to 6 September 2015: 1 January 2000 or 1 January 2030?
- * var dateToCompare = new Date(2015, 8, 6)
- * var result = closestTo(dateToCompare, [
- *   new Date(2000, 0, 1),
- *   new Date(2030, 0, 1)
- * ])
- * //=> Tue Jan 01 2030 00:00:00
- */
-function closestTo (dirtyDateToCompare, dirtyDatesArray) {
-  if (!(dirtyDatesArray instanceof Array)) {
-    throw new TypeError(toString.call(dirtyDatesArray) + ' is not an instance of Array')
-  }
-
-  var dateToCompare = parse(dirtyDateToCompare)
-  var timeToCompare = dateToCompare.getTime()
-
-  var result
-  var minDistance
-
-  dirtyDatesArray.forEach(function (dirtyDate) {
-    var currentDate = parse(dirtyDate)
-    var distance = Math.abs(timeToCompare - currentDate.getTime())
-    if (result === undefined || distance < minDistance) {
-      result = currentDate
-      minDistance = distance
-    }
-  })
-
-  return result
-}
-
-module.exports = closestTo
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/compare_asc/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/date-fns/compare_asc/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Common Helpers
- * @summary Compare the two dates and return -1, 0 or 1.
- *
- * @description
- * Compare the two dates and return 1 if the first date is after the second,
- * -1 if the first date is before the second or 0 if dates are equal.
- *
- * @param {Date|String|Number} dateLeft - the first date to compare
- * @param {Date|String|Number} dateRight - the second date to compare
- * @returns {Number} the result of the comparison
- *
- * @example
- * // Compare 11 February 1987 and 10 July 1989:
- * var result = compareAsc(
- *   new Date(1987, 1, 11),
- *   new Date(1989, 6, 10)
- * )
- * //=> -1
- *
- * @example
- * // Sort the array of dates:
- * var result = [
- *   new Date(1995, 6, 2),
- *   new Date(1987, 1, 11),
- *   new Date(1989, 6, 10)
- * ].sort(compareAsc)
- * //=> [
- * //   Wed Feb 11 1987 00:00:00,
- * //   Mon Jul 10 1989 00:00:00,
- * //   Sun Jul 02 1995 00:00:00
- * // ]
- */
-function compareAsc (dirtyDateLeft, dirtyDateRight) {
-  var dateLeft = parse(dirtyDateLeft)
-  var timeLeft = dateLeft.getTime()
-  var dateRight = parse(dirtyDateRight)
-  var timeRight = dateRight.getTime()
-
-  if (timeLeft < timeRight) {
-    return -1
-  } else if (timeLeft > timeRight) {
-    return 1
-  } else {
-    return 0
-  }
-}
-
-module.exports = compareAsc
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/compare_desc/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/date-fns/compare_desc/index.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Common Helpers
- * @summary Compare the two dates reverse chronologically and return -1, 0 or 1.
- *
- * @description
- * Compare the two dates and return -1 if the first date is after the second,
- * 1 if the first date is before the second or 0 if dates are equal.
- *
- * @param {Date|String|Number} dateLeft - the first date to compare
- * @param {Date|String|Number} dateRight - the second date to compare
- * @returns {Number} the result of the comparison
- *
- * @example
- * // Compare 11 February 1987 and 10 July 1989 reverse chronologically:
- * var result = compareDesc(
- *   new Date(1987, 1, 11),
- *   new Date(1989, 6, 10)
- * )
- * //=> 1
- *
- * @example
- * // Sort the array of dates in reverse chronological order:
- * var result = [
- *   new Date(1995, 6, 2),
- *   new Date(1987, 1, 11),
- *   new Date(1989, 6, 10)
- * ].sort(compareDesc)
- * //=> [
- * //   Sun Jul 02 1995 00:00:00,
- * //   Mon Jul 10 1989 00:00:00,
- * //   Wed Feb 11 1987 00:00:00
- * // ]
- */
-function compareDesc (dirtyDateLeft, dirtyDateRight) {
-  var dateLeft = parse(dirtyDateLeft)
-  var timeLeft = dateLeft.getTime()
-  var dateRight = parse(dirtyDateRight)
-  var timeRight = dateRight.getTime()
-
-  if (timeLeft > timeRight) {
-    return -1
-  } else if (timeLeft < timeRight) {
-    return 1
-  } else {
-    return 0
-  }
-}
-
-module.exports = compareDesc
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/difference_in_calendar_days/index.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/date-fns/difference_in_calendar_days/index.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var startOfDay = __webpack_require__(/*! ../start_of_day/index.js */ "./node_modules/date-fns/start_of_day/index.js")
-
-var MILLISECONDS_IN_MINUTE = 60000
-var MILLISECONDS_IN_DAY = 86400000
-
-/**
- * @category Day Helpers
- * @summary Get the number of calendar days between the given dates.
- *
- * @description
- * Get the number of calendar days between the given dates.
- *
- * @param {Date|String|Number} dateLeft - the later date
- * @param {Date|String|Number} dateRight - the earlier date
- * @returns {Number} the number of calendar days
- *
- * @example
- * // How many calendar days are between
- * // 2 July 2011 23:00:00 and 2 July 2012 00:00:00?
- * var result = differenceInCalendarDays(
- *   new Date(2012, 6, 2, 0, 0),
- *   new Date(2011, 6, 2, 23, 0)
- * )
- * //=> 366
- */
-function differenceInCalendarDays (dirtyDateLeft, dirtyDateRight) {
-  var startOfDayLeft = startOfDay(dirtyDateLeft)
-  var startOfDayRight = startOfDay(dirtyDateRight)
-
-  var timestampLeft = startOfDayLeft.getTime() -
-    startOfDayLeft.getTimezoneOffset() * MILLISECONDS_IN_MINUTE
-  var timestampRight = startOfDayRight.getTime() -
-    startOfDayRight.getTimezoneOffset() * MILLISECONDS_IN_MINUTE
-
-  // Round the number of days to the nearest integer
-  // because the number of milliseconds in a day is not constant
-  // (e.g. it's different in the day of the daylight saving time clock shift)
-  return Math.round((timestampLeft - timestampRight) / MILLISECONDS_IN_DAY)
-}
-
-module.exports = differenceInCalendarDays
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/difference_in_calendar_iso_weeks/index.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/date-fns/difference_in_calendar_iso_weeks/index.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var startOfISOWeek = __webpack_require__(/*! ../start_of_iso_week/index.js */ "./node_modules/date-fns/start_of_iso_week/index.js")
-
-var MILLISECONDS_IN_MINUTE = 60000
-var MILLISECONDS_IN_WEEK = 604800000
-
-/**
- * @category ISO Week Helpers
- * @summary Get the number of calendar ISO weeks between the given dates.
- *
- * @description
- * Get the number of calendar ISO weeks between the given dates.
- *
- * ISO week-numbering year: http://en.wikipedia.org/wiki/ISO_week_date
- *
- * @param {Date|String|Number} dateLeft - the later date
- * @param {Date|String|Number} dateRight - the earlier date
- * @returns {Number} the number of calendar ISO weeks
- *
- * @example
- * // How many calendar ISO weeks are between 6 July 2014 and 21 July 2014?
- * var result = differenceInCalendarISOWeeks(
- *   new Date(2014, 6, 21),
- *   new Date(2014, 6, 6)
- * )
- * //=> 3
- */
-function differenceInCalendarISOWeeks (dirtyDateLeft, dirtyDateRight) {
-  var startOfISOWeekLeft = startOfISOWeek(dirtyDateLeft)
-  var startOfISOWeekRight = startOfISOWeek(dirtyDateRight)
-
-  var timestampLeft = startOfISOWeekLeft.getTime() -
-    startOfISOWeekLeft.getTimezoneOffset() * MILLISECONDS_IN_MINUTE
-  var timestampRight = startOfISOWeekRight.getTime() -
-    startOfISOWeekRight.getTimezoneOffset() * MILLISECONDS_IN_MINUTE
-
-  // Round the number of days to the nearest integer
-  // because the number of milliseconds in a week is not constant
-  // (e.g. it's different in the week of the daylight saving time clock shift)
-  return Math.round((timestampLeft - timestampRight) / MILLISECONDS_IN_WEEK)
-}
-
-module.exports = differenceInCalendarISOWeeks
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/difference_in_calendar_iso_years/index.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/date-fns/difference_in_calendar_iso_years/index.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var getISOYear = __webpack_require__(/*! ../get_iso_year/index.js */ "./node_modules/date-fns/get_iso_year/index.js")
-
-/**
- * @category ISO Week-Numbering Year Helpers
- * @summary Get the number of calendar ISO week-numbering years between the given dates.
- *
- * @description
- * Get the number of calendar ISO week-numbering years between the given dates.
- *
- * ISO week-numbering year: http://en.wikipedia.org/wiki/ISO_week_date
- *
- * @param {Date|String|Number} dateLeft - the later date
- * @param {Date|String|Number} dateRight - the earlier date
- * @returns {Number} the number of calendar ISO week-numbering years
- *
- * @example
- * // How many calendar ISO week-numbering years are 1 January 2010 and 1 January 2012?
- * var result = differenceInCalendarISOYears(
- *   new Date(2012, 0, 1),
- *   new Date(2010, 0, 1)
- * )
- * //=> 2
- */
-function differenceInCalendarISOYears (dirtyDateLeft, dirtyDateRight) {
-  return getISOYear(dirtyDateLeft) - getISOYear(dirtyDateRight)
-}
-
-module.exports = differenceInCalendarISOYears
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/difference_in_calendar_months/index.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/date-fns/difference_in_calendar_months/index.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Month Helpers
- * @summary Get the number of calendar months between the given dates.
- *
- * @description
- * Get the number of calendar months between the given dates.
- *
- * @param {Date|String|Number} dateLeft - the later date
- * @param {Date|String|Number} dateRight - the earlier date
- * @returns {Number} the number of calendar months
- *
- * @example
- * // How many calendar months are between 31 January 2014 and 1 September 2014?
- * var result = differenceInCalendarMonths(
- *   new Date(2014, 8, 1),
- *   new Date(2014, 0, 31)
- * )
- * //=> 8
- */
-function differenceInCalendarMonths (dirtyDateLeft, dirtyDateRight) {
-  var dateLeft = parse(dirtyDateLeft)
-  var dateRight = parse(dirtyDateRight)
-
-  var yearDiff = dateLeft.getFullYear() - dateRight.getFullYear()
-  var monthDiff = dateLeft.getMonth() - dateRight.getMonth()
-
-  return yearDiff * 12 + monthDiff
-}
-
-module.exports = differenceInCalendarMonths
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/difference_in_calendar_quarters/index.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/date-fns/difference_in_calendar_quarters/index.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var getQuarter = __webpack_require__(/*! ../get_quarter/index.js */ "./node_modules/date-fns/get_quarter/index.js")
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Quarter Helpers
- * @summary Get the number of calendar quarters between the given dates.
- *
- * @description
- * Get the number of calendar quarters between the given dates.
- *
- * @param {Date|String|Number} dateLeft - the later date
- * @param {Date|String|Number} dateRight - the earlier date
- * @returns {Number} the number of calendar quarters
- *
- * @example
- * // How many calendar quarters are between 31 December 2013 and 2 July 2014?
- * var result = differenceInCalendarQuarters(
- *   new Date(2014, 6, 2),
- *   new Date(2013, 11, 31)
- * )
- * //=> 3
- */
-function differenceInCalendarQuarters (dirtyDateLeft, dirtyDateRight) {
-  var dateLeft = parse(dirtyDateLeft)
-  var dateRight = parse(dirtyDateRight)
-
-  var yearDiff = dateLeft.getFullYear() - dateRight.getFullYear()
-  var quarterDiff = getQuarter(dateLeft) - getQuarter(dateRight)
-
-  return yearDiff * 4 + quarterDiff
-}
-
-module.exports = differenceInCalendarQuarters
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/difference_in_calendar_weeks/index.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/date-fns/difference_in_calendar_weeks/index.js ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var startOfWeek = __webpack_require__(/*! ../start_of_week/index.js */ "./node_modules/date-fns/start_of_week/index.js")
-
-var MILLISECONDS_IN_MINUTE = 60000
-var MILLISECONDS_IN_WEEK = 604800000
-
-/**
- * @category Week Helpers
- * @summary Get the number of calendar weeks between the given dates.
- *
- * @description
- * Get the number of calendar weeks between the given dates.
- *
- * @param {Date|String|Number} dateLeft - the later date
- * @param {Date|String|Number} dateRight - the earlier date
- * @param {Object} [options] - the object with options
- * @param {Number} [options.weekStartsOn=0] - the index of the first day of the week (0 - Sunday)
- * @returns {Number} the number of calendar weeks
- *
- * @example
- * // How many calendar weeks are between 5 July 2014 and 20 July 2014?
- * var result = differenceInCalendarWeeks(
- *   new Date(2014, 6, 20),
- *   new Date(2014, 6, 5)
- * )
- * //=> 3
- *
- * @example
- * // If the week starts on Monday,
- * // how many calendar weeks are between 5 July 2014 and 20 July 2014?
- * var result = differenceInCalendarWeeks(
- *   new Date(2014, 6, 20),
- *   new Date(2014, 6, 5),
- *   {weekStartsOn: 1}
- * )
- * //=> 2
- */
-function differenceInCalendarWeeks (dirtyDateLeft, dirtyDateRight, dirtyOptions) {
-  var startOfWeekLeft = startOfWeek(dirtyDateLeft, dirtyOptions)
-  var startOfWeekRight = startOfWeek(dirtyDateRight, dirtyOptions)
-
-  var timestampLeft = startOfWeekLeft.getTime() -
-    startOfWeekLeft.getTimezoneOffset() * MILLISECONDS_IN_MINUTE
-  var timestampRight = startOfWeekRight.getTime() -
-    startOfWeekRight.getTimezoneOffset() * MILLISECONDS_IN_MINUTE
-
-  // Round the number of days to the nearest integer
-  // because the number of milliseconds in a week is not constant
-  // (e.g. it's different in the week of the daylight saving time clock shift)
-  return Math.round((timestampLeft - timestampRight) / MILLISECONDS_IN_WEEK)
-}
-
-module.exports = differenceInCalendarWeeks
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/difference_in_calendar_years/index.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/date-fns/difference_in_calendar_years/index.js ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Year Helpers
- * @summary Get the number of calendar years between the given dates.
- *
- * @description
- * Get the number of calendar years between the given dates.
- *
- * @param {Date|String|Number} dateLeft - the later date
- * @param {Date|String|Number} dateRight - the earlier date
- * @returns {Number} the number of calendar years
- *
- * @example
- * // How many calendar years are between 31 December 2013 and 11 February 2015?
- * var result = differenceInCalendarYears(
- *   new Date(2015, 1, 11),
- *   new Date(2013, 11, 31)
- * )
- * //=> 2
- */
-function differenceInCalendarYears (dirtyDateLeft, dirtyDateRight) {
-  var dateLeft = parse(dirtyDateLeft)
-  var dateRight = parse(dirtyDateRight)
-
-  return dateLeft.getFullYear() - dateRight.getFullYear()
-}
-
-module.exports = differenceInCalendarYears
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/difference_in_days/index.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/date-fns/difference_in_days/index.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-var differenceInCalendarDays = __webpack_require__(/*! ../difference_in_calendar_days/index.js */ "./node_modules/date-fns/difference_in_calendar_days/index.js")
-var compareAsc = __webpack_require__(/*! ../compare_asc/index.js */ "./node_modules/date-fns/compare_asc/index.js")
-
-/**
- * @category Day Helpers
- * @summary Get the number of full days between the given dates.
- *
- * @description
- * Get the number of full days between the given dates.
- *
- * @param {Date|String|Number} dateLeft - the later date
- * @param {Date|String|Number} dateRight - the earlier date
- * @returns {Number} the number of full days
- *
- * @example
- * // How many full days are between
- * // 2 July 2011 23:00:00 and 2 July 2012 00:00:00?
- * var result = differenceInDays(
- *   new Date(2012, 6, 2, 0, 0),
- *   new Date(2011, 6, 2, 23, 0)
- * )
- * //=> 365
- */
-function differenceInDays (dirtyDateLeft, dirtyDateRight) {
-  var dateLeft = parse(dirtyDateLeft)
-  var dateRight = parse(dirtyDateRight)
-
-  var sign = compareAsc(dateLeft, dateRight)
-  var difference = Math.abs(differenceInCalendarDays(dateLeft, dateRight))
-  dateLeft.setDate(dateLeft.getDate() - sign * difference)
-
-  // Math.abs(diff in full days - diff in calendar days) === 1 if last calendar day is not full
-  // If so, result must be decreased by 1 in absolute value
-  var isLastDayNotFull = compareAsc(dateLeft, dateRight) === -sign
-  return sign * (difference - isLastDayNotFull)
-}
-
-module.exports = differenceInDays
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/difference_in_hours/index.js":
-/*!************************************************************!*\
-  !*** ./node_modules/date-fns/difference_in_hours/index.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var differenceInMilliseconds = __webpack_require__(/*! ../difference_in_milliseconds/index.js */ "./node_modules/date-fns/difference_in_milliseconds/index.js")
-
-var MILLISECONDS_IN_HOUR = 3600000
-
-/**
- * @category Hour Helpers
- * @summary Get the number of hours between the given dates.
- *
- * @description
- * Get the number of hours between the given dates.
- *
- * @param {Date|String|Number} dateLeft - the later date
- * @param {Date|String|Number} dateRight - the earlier date
- * @returns {Number} the number of hours
- *
- * @example
- * // How many hours are between 2 July 2014 06:50:00 and 2 July 2014 19:00:00?
- * var result = differenceInHours(
- *   new Date(2014, 6, 2, 19, 0),
- *   new Date(2014, 6, 2, 6, 50)
- * )
- * //=> 12
- */
-function differenceInHours (dirtyDateLeft, dirtyDateRight) {
-  var diff = differenceInMilliseconds(dirtyDateLeft, dirtyDateRight) / MILLISECONDS_IN_HOUR
-  return diff > 0 ? Math.floor(diff) : Math.ceil(diff)
-}
-
-module.exports = differenceInHours
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/difference_in_iso_years/index.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/date-fns/difference_in_iso_years/index.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-var differenceInCalendarISOYears = __webpack_require__(/*! ../difference_in_calendar_iso_years/index.js */ "./node_modules/date-fns/difference_in_calendar_iso_years/index.js")
-var compareAsc = __webpack_require__(/*! ../compare_asc/index.js */ "./node_modules/date-fns/compare_asc/index.js")
-var subISOYears = __webpack_require__(/*! ../sub_iso_years/index.js */ "./node_modules/date-fns/sub_iso_years/index.js")
-
-/**
- * @category ISO Week-Numbering Year Helpers
- * @summary Get the number of full ISO week-numbering years between the given dates.
- *
- * @description
- * Get the number of full ISO week-numbering years between the given dates.
- *
- * ISO week-numbering year: http://en.wikipedia.org/wiki/ISO_week_date
- *
- * @param {Date|String|Number} dateLeft - the later date
- * @param {Date|String|Number} dateRight - the earlier date
- * @returns {Number} the number of full ISO week-numbering years
- *
- * @example
- * // How many full ISO week-numbering years are between 1 January 2010 and 1 January 2012?
- * var result = differenceInISOYears(
- *   new Date(2012, 0, 1),
- *   new Date(2010, 0, 1)
- * )
- * //=> 1
- */
-function differenceInISOYears (dirtyDateLeft, dirtyDateRight) {
-  var dateLeft = parse(dirtyDateLeft)
-  var dateRight = parse(dirtyDateRight)
-
-  var sign = compareAsc(dateLeft, dateRight)
-  var difference = Math.abs(differenceInCalendarISOYears(dateLeft, dateRight))
-  dateLeft = subISOYears(dateLeft, sign * difference)
-
-  // Math.abs(diff in full ISO years - diff in calendar ISO years) === 1
-  // if last calendar ISO year is not full
-  // If so, result must be decreased by 1 in absolute value
-  var isLastISOYearNotFull = compareAsc(dateLeft, dateRight) === -sign
-  return sign * (difference - isLastISOYearNotFull)
-}
-
-module.exports = differenceInISOYears
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/difference_in_milliseconds/index.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/date-fns/difference_in_milliseconds/index.js ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Millisecond Helpers
- * @summary Get the number of milliseconds between the given dates.
- *
- * @description
- * Get the number of milliseconds between the given dates.
- *
- * @param {Date|String|Number} dateLeft - the later date
- * @param {Date|String|Number} dateRight - the earlier date
- * @returns {Number} the number of milliseconds
- *
- * @example
- * // How many milliseconds are between
- * // 2 July 2014 12:30:20.600 and 2 July 2014 12:30:21.700?
- * var result = differenceInMilliseconds(
- *   new Date(2014, 6, 2, 12, 30, 21, 700),
- *   new Date(2014, 6, 2, 12, 30, 20, 600)
- * )
- * //=> 1100
- */
-function differenceInMilliseconds (dirtyDateLeft, dirtyDateRight) {
-  var dateLeft = parse(dirtyDateLeft)
-  var dateRight = parse(dirtyDateRight)
-  return dateLeft.getTime() - dateRight.getTime()
-}
-
-module.exports = differenceInMilliseconds
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/difference_in_minutes/index.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/date-fns/difference_in_minutes/index.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var differenceInMilliseconds = __webpack_require__(/*! ../difference_in_milliseconds/index.js */ "./node_modules/date-fns/difference_in_milliseconds/index.js")
-
-var MILLISECONDS_IN_MINUTE = 60000
-
-/**
- * @category Minute Helpers
- * @summary Get the number of minutes between the given dates.
- *
- * @description
- * Get the number of minutes between the given dates.
- *
- * @param {Date|String|Number} dateLeft - the later date
- * @param {Date|String|Number} dateRight - the earlier date
- * @returns {Number} the number of minutes
- *
- * @example
- * // How many minutes are between 2 July 2014 12:07:59 and 2 July 2014 12:20:00?
- * var result = differenceInMinutes(
- *   new Date(2014, 6, 2, 12, 20, 0),
- *   new Date(2014, 6, 2, 12, 7, 59)
- * )
- * //=> 12
- */
-function differenceInMinutes (dirtyDateLeft, dirtyDateRight) {
-  var diff = differenceInMilliseconds(dirtyDateLeft, dirtyDateRight) / MILLISECONDS_IN_MINUTE
-  return diff > 0 ? Math.floor(diff) : Math.ceil(diff)
-}
-
-module.exports = differenceInMinutes
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/difference_in_months/index.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/date-fns/difference_in_months/index.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-var differenceInCalendarMonths = __webpack_require__(/*! ../difference_in_calendar_months/index.js */ "./node_modules/date-fns/difference_in_calendar_months/index.js")
-var compareAsc = __webpack_require__(/*! ../compare_asc/index.js */ "./node_modules/date-fns/compare_asc/index.js")
-
-/**
- * @category Month Helpers
- * @summary Get the number of full months between the given dates.
- *
- * @description
- * Get the number of full months between the given dates.
- *
- * @param {Date|String|Number} dateLeft - the later date
- * @param {Date|String|Number} dateRight - the earlier date
- * @returns {Number} the number of full months
- *
- * @example
- * // How many full months are between 31 January 2014 and 1 September 2014?
- * var result = differenceInMonths(
- *   new Date(2014, 8, 1),
- *   new Date(2014, 0, 31)
- * )
- * //=> 7
- */
-function differenceInMonths (dirtyDateLeft, dirtyDateRight) {
-  var dateLeft = parse(dirtyDateLeft)
-  var dateRight = parse(dirtyDateRight)
-
-  var sign = compareAsc(dateLeft, dateRight)
-  var difference = Math.abs(differenceInCalendarMonths(dateLeft, dateRight))
-  dateLeft.setMonth(dateLeft.getMonth() - sign * difference)
-
-  // Math.abs(diff in full months - diff in calendar months) === 1 if last calendar month is not full
-  // If so, result must be decreased by 1 in absolute value
-  var isLastMonthNotFull = compareAsc(dateLeft, dateRight) === -sign
-  return sign * (difference - isLastMonthNotFull)
-}
-
-module.exports = differenceInMonths
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/difference_in_quarters/index.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/date-fns/difference_in_quarters/index.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var differenceInMonths = __webpack_require__(/*! ../difference_in_months/index.js */ "./node_modules/date-fns/difference_in_months/index.js")
-
-/**
- * @category Quarter Helpers
- * @summary Get the number of full quarters between the given dates.
- *
- * @description
- * Get the number of full quarters between the given dates.
- *
- * @param {Date|String|Number} dateLeft - the later date
- * @param {Date|String|Number} dateRight - the earlier date
- * @returns {Number} the number of full quarters
- *
- * @example
- * // How many full quarters are between 31 December 2013 and 2 July 2014?
- * var result = differenceInQuarters(
- *   new Date(2014, 6, 2),
- *   new Date(2013, 11, 31)
- * )
- * //=> 2
- */
-function differenceInQuarters (dirtyDateLeft, dirtyDateRight) {
-  var diff = differenceInMonths(dirtyDateLeft, dirtyDateRight) / 3
-  return diff > 0 ? Math.floor(diff) : Math.ceil(diff)
-}
-
-module.exports = differenceInQuarters
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/difference_in_seconds/index.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/date-fns/difference_in_seconds/index.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var differenceInMilliseconds = __webpack_require__(/*! ../difference_in_milliseconds/index.js */ "./node_modules/date-fns/difference_in_milliseconds/index.js")
-
-/**
- * @category Second Helpers
- * @summary Get the number of seconds between the given dates.
- *
- * @description
- * Get the number of seconds between the given dates.
- *
- * @param {Date|String|Number} dateLeft - the later date
- * @param {Date|String|Number} dateRight - the earlier date
- * @returns {Number} the number of seconds
- *
- * @example
- * // How many seconds are between
- * // 2 July 2014 12:30:07.999 and 2 July 2014 12:30:20.000?
- * var result = differenceInSeconds(
- *   new Date(2014, 6, 2, 12, 30, 20, 0),
- *   new Date(2014, 6, 2, 12, 30, 7, 999)
- * )
- * //=> 12
- */
-function differenceInSeconds (dirtyDateLeft, dirtyDateRight) {
-  var diff = differenceInMilliseconds(dirtyDateLeft, dirtyDateRight) / 1000
-  return diff > 0 ? Math.floor(diff) : Math.ceil(diff)
-}
-
-module.exports = differenceInSeconds
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/difference_in_weeks/index.js":
-/*!************************************************************!*\
-  !*** ./node_modules/date-fns/difference_in_weeks/index.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var differenceInDays = __webpack_require__(/*! ../difference_in_days/index.js */ "./node_modules/date-fns/difference_in_days/index.js")
-
-/**
- * @category Week Helpers
- * @summary Get the number of full weeks between the given dates.
- *
- * @description
- * Get the number of full weeks between the given dates.
- *
- * @param {Date|String|Number} dateLeft - the later date
- * @param {Date|String|Number} dateRight - the earlier date
- * @returns {Number} the number of full weeks
- *
- * @example
- * // How many full weeks are between 5 July 2014 and 20 July 2014?
- * var result = differenceInWeeks(
- *   new Date(2014, 6, 20),
- *   new Date(2014, 6, 5)
- * )
- * //=> 2
- */
-function differenceInWeeks (dirtyDateLeft, dirtyDateRight) {
-  var diff = differenceInDays(dirtyDateLeft, dirtyDateRight) / 7
-  return diff > 0 ? Math.floor(diff) : Math.ceil(diff)
-}
-
-module.exports = differenceInWeeks
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/difference_in_years/index.js":
-/*!************************************************************!*\
-  !*** ./node_modules/date-fns/difference_in_years/index.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-var differenceInCalendarYears = __webpack_require__(/*! ../difference_in_calendar_years/index.js */ "./node_modules/date-fns/difference_in_calendar_years/index.js")
-var compareAsc = __webpack_require__(/*! ../compare_asc/index.js */ "./node_modules/date-fns/compare_asc/index.js")
-
-/**
- * @category Year Helpers
- * @summary Get the number of full years between the given dates.
- *
- * @description
- * Get the number of full years between the given dates.
- *
- * @param {Date|String|Number} dateLeft - the later date
- * @param {Date|String|Number} dateRight - the earlier date
- * @returns {Number} the number of full years
- *
- * @example
- * // How many full years are between 31 December 2013 and 11 February 2015?
- * var result = differenceInYears(
- *   new Date(2015, 1, 11),
- *   new Date(2013, 11, 31)
- * )
- * //=> 1
- */
-function differenceInYears (dirtyDateLeft, dirtyDateRight) {
-  var dateLeft = parse(dirtyDateLeft)
-  var dateRight = parse(dirtyDateRight)
-
-  var sign = compareAsc(dateLeft, dateRight)
-  var difference = Math.abs(differenceInCalendarYears(dateLeft, dateRight))
-  dateLeft.setFullYear(dateLeft.getFullYear() - sign * difference)
-
-  // Math.abs(diff in full years - diff in calendar years) === 1 if last calendar year is not full
-  // If so, result must be decreased by 1 in absolute value
-  var isLastYearNotFull = compareAsc(dateLeft, dateRight) === -sign
-  return sign * (difference - isLastYearNotFull)
-}
-
-module.exports = differenceInYears
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/distance_in_words/index.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/date-fns/distance_in_words/index.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var compareDesc = __webpack_require__(/*! ../compare_desc/index.js */ "./node_modules/date-fns/compare_desc/index.js")
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-var differenceInSeconds = __webpack_require__(/*! ../difference_in_seconds/index.js */ "./node_modules/date-fns/difference_in_seconds/index.js")
-var differenceInMonths = __webpack_require__(/*! ../difference_in_months/index.js */ "./node_modules/date-fns/difference_in_months/index.js")
-var enLocale = __webpack_require__(/*! ../locale/en/index.js */ "./node_modules/date-fns/locale/en/index.js")
-
-var MINUTES_IN_DAY = 1440
-var MINUTES_IN_ALMOST_TWO_DAYS = 2520
-var MINUTES_IN_MONTH = 43200
-var MINUTES_IN_TWO_MONTHS = 86400
-
-/**
- * @category Common Helpers
- * @summary Return the distance between the given dates in words.
- *
- * @description
- * Return the distance between the given dates in words.
- *
- * | Distance between dates                                            | Result              |
- * |-------------------------------------------------------------------|---------------------|
- * | 0 ... 30 secs                                                     | less than a minute  |
- * | 30 secs ... 1 min 30 secs                                         | 1 minute            |
- * | 1 min 30 secs ... 44 mins 30 secs                                 | [2..44] minutes     |
- * | 44 mins ... 30 secs ... 89 mins 30 secs                           | about 1 hour        |
- * | 89 mins 30 secs ... 23 hrs 59 mins 30 secs                        | about [2..24] hours |
- * | 23 hrs 59 mins 30 secs ... 41 hrs 59 mins 30 secs                 | 1 day               |
- * | 41 hrs 59 mins 30 secs ... 29 days 23 hrs 59 mins 30 secs         | [2..30] days        |
- * | 29 days 23 hrs 59 mins 30 secs ... 44 days 23 hrs 59 mins 30 secs | about 1 month       |
- * | 44 days 23 hrs 59 mins 30 secs ... 59 days 23 hrs 59 mins 30 secs | about 2 months      |
- * | 59 days 23 hrs 59 mins 30 secs ... 1 yr                           | [2..12] months      |
- * | 1 yr ... 1 yr 3 months                                            | about 1 year        |
- * | 1 yr 3 months ... 1 yr 9 month s                                  | over 1 year         |
- * | 1 yr 9 months ... 2 yrs                                           | almost 2 years      |
- * | N yrs ... N yrs 3 months                                          | about N years       |
- * | N yrs 3 months ... N yrs 9 months                                 | over N years        |
- * | N yrs 9 months ... N+1 yrs                                        | almost N+1 years    |
- *
- * With `options.includeSeconds == true`:
- * | Distance between dates | Result               |
- * |------------------------|----------------------|
- * | 0 secs ... 5 secs      | less than 5 seconds  |
- * | 5 secs ... 10 secs     | less than 10 seconds |
- * | 10 secs ... 20 secs    | less than 20 seconds |
- * | 20 secs ... 40 secs    | half a minute        |
- * | 40 secs ... 60 secs    | less than a minute   |
- * | 60 secs ... 90 secs    | 1 minute             |
- *
- * @param {Date|String|Number} dateToCompare - the date to compare with
- * @param {Date|String|Number} date - the other date
- * @param {Object} [options] - the object with options
- * @param {Boolean} [options.includeSeconds=false] - distances less than a minute are more detailed
- * @param {Boolean} [options.addSuffix=false] - result indicates if the second date is earlier or later than the first
- * @param {Object} [options.locale=enLocale] - the locale object
- * @returns {String} the distance in words
- *
- * @example
- * // What is the distance between 2 July 2014 and 1 January 2015?
- * var result = distanceInWords(
- *   new Date(2014, 6, 2),
- *   new Date(2015, 0, 1)
- * )
- * //=> '6 months'
- *
- * @example
- * // What is the distance between 1 January 2015 00:00:15
- * // and 1 January 2015 00:00:00, including seconds?
- * var result = distanceInWords(
- *   new Date(2015, 0, 1, 0, 0, 15),
- *   new Date(2015, 0, 1, 0, 0, 0),
- *   {includeSeconds: true}
- * )
- * //=> 'less than 20 seconds'
- *
- * @example
- * // What is the distance from 1 January 2016
- * // to 1 January 2015, with a suffix?
- * var result = distanceInWords(
- *   new Date(2016, 0, 1),
- *   new Date(2015, 0, 1),
- *   {addSuffix: true}
- * )
- * //=> 'about 1 year ago'
- *
- * @example
- * // What is the distance between 1 August 2016 and 1 January 2015 in Esperanto?
- * var eoLocale = require('date-fns/locale/eo')
- * var result = distanceInWords(
- *   new Date(2016, 7, 1),
- *   new Date(2015, 0, 1),
- *   {locale: eoLocale}
- * )
- * //=> 'pli ol 1 jaro'
- */
-function distanceInWords (dirtyDateToCompare, dirtyDate, dirtyOptions) {
-  var options = dirtyOptions || {}
-
-  var comparison = compareDesc(dirtyDateToCompare, dirtyDate)
-
-  var locale = options.locale
-  var localize = enLocale.distanceInWords.localize
-  if (locale && locale.distanceInWords && locale.distanceInWords.localize) {
-    localize = locale.distanceInWords.localize
-  }
-
-  var localizeOptions = {
-    addSuffix: Boolean(options.addSuffix),
-    comparison: comparison
-  }
-
-  var dateLeft, dateRight
-  if (comparison > 0) {
-    dateLeft = parse(dirtyDateToCompare)
-    dateRight = parse(dirtyDate)
-  } else {
-    dateLeft = parse(dirtyDate)
-    dateRight = parse(dirtyDateToCompare)
-  }
-
-  var seconds = differenceInSeconds(dateRight, dateLeft)
-  var offset = dateRight.getTimezoneOffset() - dateLeft.getTimezoneOffset()
-  var minutes = Math.round(seconds / 60) - offset
-  var months
-
-  // 0 up to 2 mins
-  if (minutes < 2) {
-    if (options.includeSeconds) {
-      if (seconds < 5) {
-        return localize('lessThanXSeconds', 5, localizeOptions)
-      } else if (seconds < 10) {
-        return localize('lessThanXSeconds', 10, localizeOptions)
-      } else if (seconds < 20) {
-        return localize('lessThanXSeconds', 20, localizeOptions)
-      } else if (seconds < 40) {
-        return localize('halfAMinute', null, localizeOptions)
-      } else if (seconds < 60) {
-        return localize('lessThanXMinutes', 1, localizeOptions)
-      } else {
-        return localize('xMinutes', 1, localizeOptions)
-      }
-    } else {
-      if (minutes === 0) {
-        return localize('lessThanXMinutes', 1, localizeOptions)
-      } else {
-        return localize('xMinutes', minutes, localizeOptions)
-      }
-    }
-
-  // 2 mins up to 0.75 hrs
-  } else if (minutes < 45) {
-    return localize('xMinutes', minutes, localizeOptions)
-
-  // 0.75 hrs up to 1.5 hrs
-  } else if (minutes < 90) {
-    return localize('aboutXHours', 1, localizeOptions)
-
-  // 1.5 hrs up to 24 hrs
-  } else if (minutes < MINUTES_IN_DAY) {
-    var hours = Math.round(minutes / 60)
-    return localize('aboutXHours', hours, localizeOptions)
-
-  // 1 day up to 1.75 days
-  } else if (minutes < MINUTES_IN_ALMOST_TWO_DAYS) {
-    return localize('xDays', 1, localizeOptions)
-
-  // 1.75 days up to 30 days
-  } else if (minutes < MINUTES_IN_MONTH) {
-    var days = Math.round(minutes / MINUTES_IN_DAY)
-    return localize('xDays', days, localizeOptions)
-
-  // 1 month up to 2 months
-  } else if (minutes < MINUTES_IN_TWO_MONTHS) {
-    months = Math.round(minutes / MINUTES_IN_MONTH)
-    return localize('aboutXMonths', months, localizeOptions)
-  }
-
-  months = differenceInMonths(dateRight, dateLeft)
-
-  // 2 months up to 12 months
-  if (months < 12) {
-    var nearestMonth = Math.round(minutes / MINUTES_IN_MONTH)
-    return localize('xMonths', nearestMonth, localizeOptions)
-
-  // 1 year up to max Date
-  } else {
-    var monthsSinceStartOfYear = months % 12
-    var years = Math.floor(months / 12)
-
-    // N years up to 1 years 3 months
-    if (monthsSinceStartOfYear < 3) {
-      return localize('aboutXYears', years, localizeOptions)
-
-    // N years 3 months up to N years 9 months
-    } else if (monthsSinceStartOfYear < 9) {
-      return localize('overXYears', years, localizeOptions)
-
-    // N years 9 months up to N year 12 months
-    } else {
-      return localize('almostXYears', years + 1, localizeOptions)
-    }
-  }
-}
-
-module.exports = distanceInWords
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/distance_in_words_strict/index.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/date-fns/distance_in_words_strict/index.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var compareDesc = __webpack_require__(/*! ../compare_desc/index.js */ "./node_modules/date-fns/compare_desc/index.js")
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-var differenceInSeconds = __webpack_require__(/*! ../difference_in_seconds/index.js */ "./node_modules/date-fns/difference_in_seconds/index.js")
-var enLocale = __webpack_require__(/*! ../locale/en/index.js */ "./node_modules/date-fns/locale/en/index.js")
-
-var MINUTES_IN_DAY = 1440
-var MINUTES_IN_MONTH = 43200
-var MINUTES_IN_YEAR = 525600
-
-/**
- * @category Common Helpers
- * @summary Return the distance between the given dates in words.
- *
- * @description
- * Return the distance between the given dates in words, using strict units.
- * This is like `distanceInWords`, but does not use helpers like 'almost', 'over',
- * 'less than' and the like.
- *
- * | Distance between dates | Result              |
- * |------------------------|---------------------|
- * | 0 ... 59 secs          | [0..59] seconds     |
- * | 1 ... 59 mins          | [1..59] minutes     |
- * | 1 ... 23 hrs           | [1..23] hours       |
- * | 1 ... 29 days          | [1..29] days        |
- * | 1 ... 11 months        | [1..11] months      |
- * | 1 ... N years          | [1..N]  years       |
- *
- * @param {Date|String|Number} dateToCompare - the date to compare with
- * @param {Date|String|Number} date - the other date
- * @param {Object} [options] - the object with options
- * @param {Boolean} [options.addSuffix=false] - result indicates if the second date is earlier or later than the first
- * @param {'s'|'m'|'h'|'d'|'M'|'Y'} [options.unit] - if specified, will force a unit
- * @param {'floor'|'ceil'|'round'} [options.partialMethod='floor'] - which way to round partial units
- * @param {Object} [options.locale=enLocale] - the locale object
- * @returns {String} the distance in words
- *
- * @example
- * // What is the distance between 2 July 2014 and 1 January 2015?
- * var result = distanceInWordsStrict(
- *   new Date(2014, 6, 2),
- *   new Date(2015, 0, 2)
- * )
- * //=> '6 months'
- *
- * @example
- * // What is the distance between 1 January 2015 00:00:15
- * // and 1 January 2015 00:00:00?
- * var result = distanceInWordsStrict(
- *   new Date(2015, 0, 1, 0, 0, 15),
- *   new Date(2015, 0, 1, 0, 0, 0),
- * )
- * //=> '15 seconds'
- *
- * @example
- * // What is the distance from 1 January 2016
- * // to 1 January 2015, with a suffix?
- * var result = distanceInWordsStrict(
- *   new Date(2016, 0, 1),
- *   new Date(2015, 0, 1),
- *   {addSuffix: true}
- * )
- * //=> '1 year ago'
- *
- * @example
- * // What is the distance from 1 January 2016
- * // to 1 January 2015, in minutes?
- * var result = distanceInWordsStrict(
- *   new Date(2016, 0, 1),
- *   new Date(2015, 0, 1),
- *   {unit: 'm'}
- * )
- * //=> '525600 minutes'
- *
- * @example
- * // What is the distance from 1 January 2016
- * // to 28 January 2015, in months, rounded up?
- * var result = distanceInWordsStrict(
- *   new Date(2015, 0, 28),
- *   new Date(2015, 0, 1),
- *   {unit: 'M', partialMethod: 'ceil'}
- * )
- * //=> '1 month'
- *
- * @example
- * // What is the distance between 1 August 2016 and 1 January 2015 in Esperanto?
- * var eoLocale = require('date-fns/locale/eo')
- * var result = distanceInWordsStrict(
- *   new Date(2016, 7, 1),
- *   new Date(2015, 0, 1),
- *   {locale: eoLocale}
- * )
- * //=> '1 jaro'
- */
-function distanceInWordsStrict (dirtyDateToCompare, dirtyDate, dirtyOptions) {
-  var options = dirtyOptions || {}
-
-  var comparison = compareDesc(dirtyDateToCompare, dirtyDate)
-
-  var locale = options.locale
-  var localize = enLocale.distanceInWords.localize
-  if (locale && locale.distanceInWords && locale.distanceInWords.localize) {
-    localize = locale.distanceInWords.localize
-  }
-
-  var localizeOptions = {
-    addSuffix: Boolean(options.addSuffix),
-    comparison: comparison
-  }
-
-  var dateLeft, dateRight
-  if (comparison > 0) {
-    dateLeft = parse(dirtyDateToCompare)
-    dateRight = parse(dirtyDate)
-  } else {
-    dateLeft = parse(dirtyDate)
-    dateRight = parse(dirtyDateToCompare)
-  }
-
-  var unit
-  var mathPartial = Math[options.partialMethod ? String(options.partialMethod) : 'floor']
-  var seconds = differenceInSeconds(dateRight, dateLeft)
-  var offset = dateRight.getTimezoneOffset() - dateLeft.getTimezoneOffset()
-  var minutes = mathPartial(seconds / 60) - offset
-  var hours, days, months, years
-
-  if (options.unit) {
-    unit = String(options.unit)
-  } else {
-    if (minutes < 1) {
-      unit = 's'
-    } else if (minutes < 60) {
-      unit = 'm'
-    } else if (minutes < MINUTES_IN_DAY) {
-      unit = 'h'
-    } else if (minutes < MINUTES_IN_MONTH) {
-      unit = 'd'
-    } else if (minutes < MINUTES_IN_YEAR) {
-      unit = 'M'
-    } else {
-      unit = 'Y'
-    }
-  }
-
-  // 0 up to 60 seconds
-  if (unit === 's') {
-    return localize('xSeconds', seconds, localizeOptions)
-
-  // 1 up to 60 mins
-  } else if (unit === 'm') {
-    return localize('xMinutes', minutes, localizeOptions)
-
-  // 1 up to 24 hours
-  } else if (unit === 'h') {
-    hours = mathPartial(minutes / 60)
-    return localize('xHours', hours, localizeOptions)
-
-  // 1 up to 30 days
-  } else if (unit === 'd') {
-    days = mathPartial(minutes / MINUTES_IN_DAY)
-    return localize('xDays', days, localizeOptions)
-
-  // 1 up to 12 months
-  } else if (unit === 'M') {
-    months = mathPartial(minutes / MINUTES_IN_MONTH)
-    return localize('xMonths', months, localizeOptions)
-
-  // 1 year up to max Date
-  } else if (unit === 'Y') {
-    years = mathPartial(minutes / MINUTES_IN_YEAR)
-    return localize('xYears', years, localizeOptions)
-  }
-
-  throw new Error('Unknown unit: ' + unit)
-}
-
-module.exports = distanceInWordsStrict
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/distance_in_words_to_now/index.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/date-fns/distance_in_words_to_now/index.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var distanceInWords = __webpack_require__(/*! ../distance_in_words/index.js */ "./node_modules/date-fns/distance_in_words/index.js")
-
-/**
- * @category Common Helpers
- * @summary Return the distance between the given date and now in words.
- *
- * @description
- * Return the distance between the given date and now in words.
- *
- * | Distance to now                                                   | Result              |
- * |-------------------------------------------------------------------|---------------------|
- * | 0 ... 30 secs                                                     | less than a minute  |
- * | 30 secs ... 1 min 30 secs                                         | 1 minute            |
- * | 1 min 30 secs ... 44 mins 30 secs                                 | [2..44] minutes     |
- * | 44 mins ... 30 secs ... 89 mins 30 secs                           | about 1 hour        |
- * | 89 mins 30 secs ... 23 hrs 59 mins 30 secs                        | about [2..24] hours |
- * | 23 hrs 59 mins 30 secs ... 41 hrs 59 mins 30 secs                 | 1 day               |
- * | 41 hrs 59 mins 30 secs ... 29 days 23 hrs 59 mins 30 secs         | [2..30] days        |
- * | 29 days 23 hrs 59 mins 30 secs ... 44 days 23 hrs 59 mins 30 secs | about 1 month       |
- * | 44 days 23 hrs 59 mins 30 secs ... 59 days 23 hrs 59 mins 30 secs | about 2 months      |
- * | 59 days 23 hrs 59 mins 30 secs ... 1 yr                           | [2..12] months      |
- * | 1 yr ... 1 yr 3 months                                            | about 1 year        |
- * | 1 yr 3 months ... 1 yr 9 month s                                  | over 1 year         |
- * | 1 yr 9 months ... 2 yrs                                           | almost 2 years      |
- * | N yrs ... N yrs 3 months                                          | about N years       |
- * | N yrs 3 months ... N yrs 9 months                                 | over N years        |
- * | N yrs 9 months ... N+1 yrs                                        | almost N+1 years    |
- *
- * With `options.includeSeconds == true`:
- * | Distance to now     | Result               |
- * |---------------------|----------------------|
- * | 0 secs ... 5 secs   | less than 5 seconds  |
- * | 5 secs ... 10 secs  | less than 10 seconds |
- * | 10 secs ... 20 secs | less than 20 seconds |
- * | 20 secs ... 40 secs | half a minute        |
- * | 40 secs ... 60 secs | less than a minute   |
- * | 60 secs ... 90 secs | 1 minute             |
- *
- * @param {Date|String|Number} date - the given date
- * @param {Object} [options] - the object with options
- * @param {Boolean} [options.includeSeconds=false] - distances less than a minute are more detailed
- * @param {Boolean} [options.addSuffix=false] - result specifies if the second date is earlier or later than the first
- * @param {Object} [options.locale=enLocale] - the locale object
- * @returns {String} the distance in words
- *
- * @example
- * // If today is 1 January 2015, what is the distance to 2 July 2014?
- * var result = distanceInWordsToNow(
- *   new Date(2014, 6, 2)
- * )
- * //=> '6 months'
- *
- * @example
- * // If now is 1 January 2015 00:00:00,
- * // what is the distance to 1 January 2015 00:00:15, including seconds?
- * var result = distanceInWordsToNow(
- *   new Date(2015, 0, 1, 0, 0, 15),
- *   {includeSeconds: true}
- * )
- * //=> 'less than 20 seconds'
- *
- * @example
- * // If today is 1 January 2015,
- * // what is the distance to 1 January 2016, with a suffix?
- * var result = distanceInWordsToNow(
- *   new Date(2016, 0, 1),
- *   {addSuffix: true}
- * )
- * //=> 'in about 1 year'
- *
- * @example
- * // If today is 1 January 2015,
- * // what is the distance to 1 August 2016 in Esperanto?
- * var eoLocale = require('date-fns/locale/eo')
- * var result = distanceInWordsToNow(
- *   new Date(2016, 7, 1),
- *   {locale: eoLocale}
- * )
- * //=> 'pli ol 1 jaro'
- */
-function distanceInWordsToNow (dirtyDate, dirtyOptions) {
-  return distanceInWords(Date.now(), dirtyDate, dirtyOptions)
-}
-
-module.exports = distanceInWordsToNow
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/each_day/index.js":
-/*!*************************************************!*\
-  !*** ./node_modules/date-fns/each_day/index.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Day Helpers
- * @summary Return the array of dates within the specified range.
- *
- * @description
- * Return the array of dates within the specified range.
- *
- * @param {Date|String|Number} startDate - the first date
- * @param {Date|String|Number} endDate - the last date
- * @param {Number} [step=1] - the step between each day
- * @returns {Date[]} the array with starts of days from the day of startDate to the day of endDate
- * @throws {Error} startDate cannot be after endDate
- *
- * @example
- * // Each day between 6 October 2014 and 10 October 2014:
- * var result = eachDay(
- *   new Date(2014, 9, 6),
- *   new Date(2014, 9, 10)
- * )
- * //=> [
- * //   Mon Oct 06 2014 00:00:00,
- * //   Tue Oct 07 2014 00:00:00,
- * //   Wed Oct 08 2014 00:00:00,
- * //   Thu Oct 09 2014 00:00:00,
- * //   Fri Oct 10 2014 00:00:00
- * // ]
- */
-function eachDay (dirtyStartDate, dirtyEndDate, dirtyStep) {
-  var startDate = parse(dirtyStartDate)
-  var endDate = parse(dirtyEndDate)
-  var step = dirtyStep !== undefined ? dirtyStep : 1
-
-  var endTime = endDate.getTime()
-
-  if (startDate.getTime() > endTime) {
-    throw new Error('The first date cannot be after the second date')
-  }
-
-  var dates = []
-
-  var currentDate = startDate
-  currentDate.setHours(0, 0, 0, 0)
-
-  while (currentDate.getTime() <= endTime) {
-    dates.push(parse(currentDate))
-    currentDate.setDate(currentDate.getDate() + step)
-  }
-
-  return dates
-}
-
-module.exports = eachDay
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/end_of_day/index.js":
-/*!***************************************************!*\
-  !*** ./node_modules/date-fns/end_of_day/index.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Day Helpers
- * @summary Return the end of a day for the given date.
- *
- * @description
- * Return the end of a day for the given date.
- * The result will be in the local timezone.
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the end of a day
- *
- * @example
- * // The end of a day for 2 September 2014 11:55:00:
- * var result = endOfDay(new Date(2014, 8, 2, 11, 55, 0))
- * //=> Tue Sep 02 2014 23:59:59.999
- */
-function endOfDay (dirtyDate) {
-  var date = parse(dirtyDate)
-  date.setHours(23, 59, 59, 999)
-  return date
-}
-
-module.exports = endOfDay
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/end_of_hour/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/date-fns/end_of_hour/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Hour Helpers
- * @summary Return the end of an hour for the given date.
- *
- * @description
- * Return the end of an hour for the given date.
- * The result will be in the local timezone.
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the end of an hour
- *
- * @example
- * // The end of an hour for 2 September 2014 11:55:00:
- * var result = endOfHour(new Date(2014, 8, 2, 11, 55))
- * //=> Tue Sep 02 2014 11:59:59.999
- */
-function endOfHour (dirtyDate) {
-  var date = parse(dirtyDate)
-  date.setMinutes(59, 59, 999)
-  return date
-}
-
-module.exports = endOfHour
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/end_of_iso_week/index.js":
-/*!********************************************************!*\
-  !*** ./node_modules/date-fns/end_of_iso_week/index.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var endOfWeek = __webpack_require__(/*! ../end_of_week/index.js */ "./node_modules/date-fns/end_of_week/index.js")
-
-/**
- * @category ISO Week Helpers
- * @summary Return the end of an ISO week for the given date.
- *
- * @description
- * Return the end of an ISO week for the given date.
- * The result will be in the local timezone.
- *
- * ISO week-numbering year: http://en.wikipedia.org/wiki/ISO_week_date
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the end of an ISO week
- *
- * @example
- * // The end of an ISO week for 2 September 2014 11:55:00:
- * var result = endOfISOWeek(new Date(2014, 8, 2, 11, 55, 0))
- * //=> Sun Sep 07 2014 23:59:59.999
- */
-function endOfISOWeek (dirtyDate) {
-  return endOfWeek(dirtyDate, {weekStartsOn: 1})
-}
-
-module.exports = endOfISOWeek
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/end_of_iso_year/index.js":
-/*!********************************************************!*\
-  !*** ./node_modules/date-fns/end_of_iso_year/index.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var getISOYear = __webpack_require__(/*! ../get_iso_year/index.js */ "./node_modules/date-fns/get_iso_year/index.js")
-var startOfISOWeek = __webpack_require__(/*! ../start_of_iso_week/index.js */ "./node_modules/date-fns/start_of_iso_week/index.js")
-
-/**
- * @category ISO Week-Numbering Year Helpers
- * @summary Return the end of an ISO week-numbering year for the given date.
- *
- * @description
- * Return the end of an ISO week-numbering year,
- * which always starts 3 days before the year's first Thursday.
- * The result will be in the local timezone.
- *
- * ISO week-numbering year: http://en.wikipedia.org/wiki/ISO_week_date
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the end of an ISO week-numbering year
- *
- * @example
- * // The end of an ISO week-numbering year for 2 July 2005:
- * var result = endOfISOYear(new Date(2005, 6, 2))
- * //=> Sun Jan 01 2006 23:59:59.999
- */
-function endOfISOYear (dirtyDate) {
-  var year = getISOYear(dirtyDate)
-  var fourthOfJanuaryOfNextYear = new Date(0)
-  fourthOfJanuaryOfNextYear.setFullYear(year + 1, 0, 4)
-  fourthOfJanuaryOfNextYear.setHours(0, 0, 0, 0)
-  var date = startOfISOWeek(fourthOfJanuaryOfNextYear)
-  date.setMilliseconds(date.getMilliseconds() - 1)
-  return date
-}
-
-module.exports = endOfISOYear
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/end_of_minute/index.js":
-/*!******************************************************!*\
-  !*** ./node_modules/date-fns/end_of_minute/index.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Minute Helpers
- * @summary Return the end of a minute for the given date.
- *
- * @description
- * Return the end of a minute for the given date.
- * The result will be in the local timezone.
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the end of a minute
- *
- * @example
- * // The end of a minute for 1 December 2014 22:15:45.400:
- * var result = endOfMinute(new Date(2014, 11, 1, 22, 15, 45, 400))
- * //=> Mon Dec 01 2014 22:15:59.999
- */
-function endOfMinute (dirtyDate) {
-  var date = parse(dirtyDate)
-  date.setSeconds(59, 999)
-  return date
-}
-
-module.exports = endOfMinute
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/end_of_month/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/date-fns/end_of_month/index.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Month Helpers
- * @summary Return the end of a month for the given date.
- *
- * @description
- * Return the end of a month for the given date.
- * The result will be in the local timezone.
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the end of a month
- *
- * @example
- * // The end of a month for 2 September 2014 11:55:00:
- * var result = endOfMonth(new Date(2014, 8, 2, 11, 55, 0))
- * //=> Tue Sep 30 2014 23:59:59.999
- */
-function endOfMonth (dirtyDate) {
-  var date = parse(dirtyDate)
-  var month = date.getMonth()
-  date.setFullYear(date.getFullYear(), month + 1, 0)
-  date.setHours(23, 59, 59, 999)
-  return date
-}
-
-module.exports = endOfMonth
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/end_of_quarter/index.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/date-fns/end_of_quarter/index.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Quarter Helpers
- * @summary Return the end of a year quarter for the given date.
- *
- * @description
- * Return the end of a year quarter for the given date.
- * The result will be in the local timezone.
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the end of a quarter
- *
- * @example
- * // The end of a quarter for 2 September 2014 11:55:00:
- * var result = endOfQuarter(new Date(2014, 8, 2, 11, 55, 0))
- * //=> Tue Sep 30 2014 23:59:59.999
- */
-function endOfQuarter (dirtyDate) {
-  var date = parse(dirtyDate)
-  var currentMonth = date.getMonth()
-  var month = currentMonth - currentMonth % 3 + 3
-  date.setMonth(month, 0)
-  date.setHours(23, 59, 59, 999)
-  return date
-}
-
-module.exports = endOfQuarter
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/end_of_second/index.js":
-/*!******************************************************!*\
-  !*** ./node_modules/date-fns/end_of_second/index.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Second Helpers
- * @summary Return the end of a second for the given date.
- *
- * @description
- * Return the end of a second for the given date.
- * The result will be in the local timezone.
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the end of a second
- *
- * @example
- * // The end of a second for 1 December 2014 22:15:45.400:
- * var result = endOfSecond(new Date(2014, 11, 1, 22, 15, 45, 400))
- * //=> Mon Dec 01 2014 22:15:45.999
- */
-function endOfSecond (dirtyDate) {
-  var date = parse(dirtyDate)
-  date.setMilliseconds(999)
-  return date
-}
-
-module.exports = endOfSecond
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/end_of_today/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/date-fns/end_of_today/index.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var endOfDay = __webpack_require__(/*! ../end_of_day/index.js */ "./node_modules/date-fns/end_of_day/index.js")
-
-/**
- * @category Day Helpers
- * @summary Return the end of today.
- *
- * @description
- * Return the end of today.
- *
- * @returns {Date} the end of today
- *
- * @example
- * // If today is 6 October 2014:
- * var result = endOfToday()
- * //=> Mon Oct 6 2014 23:59:59.999
- */
-function endOfToday () {
-  return endOfDay(new Date())
-}
-
-module.exports = endOfToday
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/end_of_tomorrow/index.js":
-/*!********************************************************!*\
-  !*** ./node_modules/date-fns/end_of_tomorrow/index.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/**
- * @category Day Helpers
- * @summary Return the end of tomorrow.
- *
- * @description
- * Return the end of tomorrow.
- *
- * @returns {Date} the end of tomorrow
- *
- * @example
- * // If today is 6 October 2014:
- * var result = endOfTomorrow()
- * //=> Tue Oct 7 2014 23:59:59.999
- */
-function endOfTomorrow () {
-  var now = new Date()
-  var year = now.getFullYear()
-  var month = now.getMonth()
-  var day = now.getDate()
-
-  var date = new Date(0)
-  date.setFullYear(year, month, day + 1)
-  date.setHours(23, 59, 59, 999)
-  return date
-}
-
-module.exports = endOfTomorrow
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/end_of_week/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/date-fns/end_of_week/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Week Helpers
- * @summary Return the end of a week for the given date.
- *
- * @description
- * Return the end of a week for the given date.
- * The result will be in the local timezone.
- *
- * @param {Date|String|Number} date - the original date
- * @param {Object} [options] - the object with options
- * @param {Number} [options.weekStartsOn=0] - the index of the first day of the week (0 - Sunday)
- * @returns {Date} the end of a week
- *
- * @example
- * // The end of a week for 2 September 2014 11:55:00:
- * var result = endOfWeek(new Date(2014, 8, 2, 11, 55, 0))
- * //=> Sat Sep 06 2014 23:59:59.999
- *
- * @example
- * // If the week starts on Monday, the end of the week for 2 September 2014 11:55:00:
- * var result = endOfWeek(new Date(2014, 8, 2, 11, 55, 0), {weekStartsOn: 1})
- * //=> Sun Sep 07 2014 23:59:59.999
- */
-function endOfWeek (dirtyDate, dirtyOptions) {
-  var weekStartsOn = dirtyOptions ? (Number(dirtyOptions.weekStartsOn) || 0) : 0
-
-  var date = parse(dirtyDate)
-  var day = date.getDay()
-  var diff = (day < weekStartsOn ? -7 : 0) + 6 - (day - weekStartsOn)
-
-  date.setDate(date.getDate() + diff)
-  date.setHours(23, 59, 59, 999)
-  return date
-}
-
-module.exports = endOfWeek
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/end_of_year/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/date-fns/end_of_year/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Year Helpers
- * @summary Return the end of a year for the given date.
- *
- * @description
- * Return the end of a year for the given date.
- * The result will be in the local timezone.
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the end of a year
- *
- * @example
- * // The end of a year for 2 September 2014 11:55:00:
- * var result = endOfYear(new Date(2014, 8, 2, 11, 55, 00))
- * //=> Wed Dec 31 2014 23:59:59.999
- */
-function endOfYear (dirtyDate) {
-  var date = parse(dirtyDate)
-  var year = date.getFullYear()
-  date.setFullYear(year + 1, 0, 0)
-  date.setHours(23, 59, 59, 999)
-  return date
-}
-
-module.exports = endOfYear
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/end_of_yesterday/index.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/date-fns/end_of_yesterday/index.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/**
- * @category Day Helpers
- * @summary Return the end of yesterday.
- *
- * @description
- * Return the end of yesterday.
- *
- * @returns {Date} the end of yesterday
- *
- * @example
- * // If today is 6 October 2014:
- * var result = endOfYesterday()
- * //=> Sun Oct 5 2014 23:59:59.999
- */
-function endOfYesterday () {
-  var now = new Date()
-  var year = now.getFullYear()
-  var month = now.getMonth()
-  var day = now.getDate()
-
-  var date = new Date(0)
-  date.setFullYear(year, month, day - 1)
-  date.setHours(23, 59, 59, 999)
-  return date
-}
-
-module.exports = endOfYesterday
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/format/index.js":
-/*!***********************************************!*\
-  !*** ./node_modules/date-fns/format/index.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var getDayOfYear = __webpack_require__(/*! ../get_day_of_year/index.js */ "./node_modules/date-fns/get_day_of_year/index.js")
-var getISOWeek = __webpack_require__(/*! ../get_iso_week/index.js */ "./node_modules/date-fns/get_iso_week/index.js")
-var getISOYear = __webpack_require__(/*! ../get_iso_year/index.js */ "./node_modules/date-fns/get_iso_year/index.js")
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-var isValid = __webpack_require__(/*! ../is_valid/index.js */ "./node_modules/date-fns/is_valid/index.js")
-var enLocale = __webpack_require__(/*! ../locale/en/index.js */ "./node_modules/date-fns/locale/en/index.js")
-
-/**
- * @category Common Helpers
- * @summary Format the date.
- *
- * @description
- * Return the formatted date string in the given format.
- *
- * Accepted tokens:
- * | Unit                    | Token | Result examples                  |
- * |-------------------------|-------|----------------------------------|
- * | Month                   | M     | 1, 2, ..., 12                    |
- * |                         | Mo    | 1st, 2nd, ..., 12th              |
- * |                         | MM    | 01, 02, ..., 12                  |
- * |                         | MMM   | Jan, Feb, ..., Dec               |
- * |                         | MMMM  | January, February, ..., December |
- * | Quarter                 | Q     | 1, 2, 3, 4                       |
- * |                         | Qo    | 1st, 2nd, 3rd, 4th               |
- * | Day of month            | D     | 1, 2, ..., 31                    |
- * |                         | Do    | 1st, 2nd, ..., 31st              |
- * |                         | DD    | 01, 02, ..., 31                  |
- * | Day of year             | DDD   | 1, 2, ..., 366                   |
- * |                         | DDDo  | 1st, 2nd, ..., 366th             |
- * |                         | DDDD  | 001, 002, ..., 366               |
- * | Day of week             | d     | 0, 1, ..., 6                     |
- * |                         | do    | 0th, 1st, ..., 6th               |
- * |                         | dd    | Su, Mo, ..., Sa                  |
- * |                         | ddd   | Sun, Mon, ..., Sat               |
- * |                         | dddd  | Sunday, Monday, ..., Saturday    |
- * | Day of ISO week         | E     | 1, 2, ..., 7                     |
- * | ISO week                | W     | 1, 2, ..., 53                    |
- * |                         | Wo    | 1st, 2nd, ..., 53rd              |
- * |                         | WW    | 01, 02, ..., 53                  |
- * | Year                    | YY    | 00, 01, ..., 99                  |
- * |                         | YYYY  | 1900, 1901, ..., 2099            |
- * | ISO week-numbering year | GG    | 00, 01, ..., 99                  |
- * |                         | GGGG  | 1900, 1901, ..., 2099            |
- * | AM/PM                   | A     | AM, PM                           |
- * |                         | a     | am, pm                           |
- * |                         | aa    | a.m., p.m.                       |
- * | Hour                    | H     | 0, 1, ... 23                     |
- * |                         | HH    | 00, 01, ... 23                   |
- * |                         | h     | 1, 2, ..., 12                    |
- * |                         | hh    | 01, 02, ..., 12                  |
- * | Minute                  | m     | 0, 1, ..., 59                    |
- * |                         | mm    | 00, 01, ..., 59                  |
- * | Second                  | s     | 0, 1, ..., 59                    |
- * |                         | ss    | 00, 01, ..., 59                  |
- * | 1/10 of second          | S     | 0, 1, ..., 9                     |
- * | 1/100 of second         | SS    | 00, 01, ..., 99                  |
- * | Millisecond             | SSS   | 000, 001, ..., 999               |
- * | Timezone                | Z     | -01:00, +00:00, ... +12:00       |
- * |                         | ZZ    | -0100, +0000, ..., +1200         |
- * | Seconds timestamp       | X     | 512969520                        |
- * | Milliseconds timestamp  | x     | 512969520900                     |
- *
- * The characters wrapped in square brackets are escaped.
- *
- * The result may vary by locale.
- *
- * @param {Date|String|Number} date - the original date
- * @param {String} [format='YYYY-MM-DDTHH:mm:ss.SSSZ'] - the string of tokens
- * @param {Object} [options] - the object with options
- * @param {Object} [options.locale=enLocale] - the locale object
- * @returns {String} the formatted date string
- *
- * @example
- * // Represent 11 February 2014 in middle-endian format:
- * var result = format(
- *   new Date(2014, 1, 11),
- *   'MM/DD/YYYY'
- * )
- * //=> '02/11/2014'
- *
- * @example
- * // Represent 2 July 2014 in Esperanto:
- * var eoLocale = require('date-fns/locale/eo')
- * var result = format(
- *   new Date(2014, 6, 2),
- *   'Do [de] MMMM YYYY',
- *   {locale: eoLocale}
- * )
- * //=> '2-a de julio 2014'
- */
-function format (dirtyDate, dirtyFormatStr, dirtyOptions) {
-  var formatStr = dirtyFormatStr ? String(dirtyFormatStr) : 'YYYY-MM-DDTHH:mm:ss.SSSZ'
-  var options = dirtyOptions || {}
-
-  var locale = options.locale
-  var localeFormatters = enLocale.format.formatters
-  var formattingTokensRegExp = enLocale.format.formattingTokensRegExp
-  if (locale && locale.format && locale.format.formatters) {
-    localeFormatters = locale.format.formatters
-
-    if (locale.format.formattingTokensRegExp) {
-      formattingTokensRegExp = locale.format.formattingTokensRegExp
-    }
-  }
-
-  var date = parse(dirtyDate)
-
-  if (!isValid(date)) {
-    return 'Invalid Date'
-  }
-
-  var formatFn = buildFormatFn(formatStr, localeFormatters, formattingTokensRegExp)
-
-  return formatFn(date)
-}
-
-var formatters = {
-  // Month: 1, 2, ..., 12
-  'M': function (date) {
-    return date.getMonth() + 1
-  },
-
-  // Month: 01, 02, ..., 12
-  'MM': function (date) {
-    return addLeadingZeros(date.getMonth() + 1, 2)
-  },
-
-  // Quarter: 1, 2, 3, 4
-  'Q': function (date) {
-    return Math.ceil((date.getMonth() + 1) / 3)
-  },
-
-  // Day of month: 1, 2, ..., 31
-  'D': function (date) {
-    return date.getDate()
-  },
-
-  // Day of month: 01, 02, ..., 31
-  'DD': function (date) {
-    return addLeadingZeros(date.getDate(), 2)
-  },
-
-  // Day of year: 1, 2, ..., 366
-  'DDD': function (date) {
-    return getDayOfYear(date)
-  },
-
-  // Day of year: 001, 002, ..., 366
-  'DDDD': function (date) {
-    return addLeadingZeros(getDayOfYear(date), 3)
-  },
-
-  // Day of week: 0, 1, ..., 6
-  'd': function (date) {
-    return date.getDay()
-  },
-
-  // Day of ISO week: 1, 2, ..., 7
-  'E': function (date) {
-    return date.getDay() || 7
-  },
-
-  // ISO week: 1, 2, ..., 53
-  'W': function (date) {
-    return getISOWeek(date)
-  },
-
-  // ISO week: 01, 02, ..., 53
-  'WW': function (date) {
-    return addLeadingZeros(getISOWeek(date), 2)
-  },
-
-  // Year: 00, 01, ..., 99
-  'YY': function (date) {
-    return addLeadingZeros(date.getFullYear(), 4).substr(2)
-  },
-
-  // Year: 1900, 1901, ..., 2099
-  'YYYY': function (date) {
-    return addLeadingZeros(date.getFullYear(), 4)
-  },
-
-  // ISO week-numbering year: 00, 01, ..., 99
-  'GG': function (date) {
-    return String(getISOYear(date)).substr(2)
-  },
-
-  // ISO week-numbering year: 1900, 1901, ..., 2099
-  'GGGG': function (date) {
-    return getISOYear(date)
-  },
-
-  // Hour: 0, 1, ... 23
-  'H': function (date) {
-    return date.getHours()
-  },
-
-  // Hour: 00, 01, ..., 23
-  'HH': function (date) {
-    return addLeadingZeros(date.getHours(), 2)
-  },
-
-  // Hour: 1, 2, ..., 12
-  'h': function (date) {
-    var hours = date.getHours()
-    if (hours === 0) {
-      return 12
-    } else if (hours > 12) {
-      return hours % 12
-    } else {
-      return hours
-    }
-  },
-
-  // Hour: 01, 02, ..., 12
-  'hh': function (date) {
-    return addLeadingZeros(formatters['h'](date), 2)
-  },
-
-  // Minute: 0, 1, ..., 59
-  'm': function (date) {
-    return date.getMinutes()
-  },
-
-  // Minute: 00, 01, ..., 59
-  'mm': function (date) {
-    return addLeadingZeros(date.getMinutes(), 2)
-  },
-
-  // Second: 0, 1, ..., 59
-  's': function (date) {
-    return date.getSeconds()
-  },
-
-  // Second: 00, 01, ..., 59
-  'ss': function (date) {
-    return addLeadingZeros(date.getSeconds(), 2)
-  },
-
-  // 1/10 of second: 0, 1, ..., 9
-  'S': function (date) {
-    return Math.floor(date.getMilliseconds() / 100)
-  },
-
-  // 1/100 of second: 00, 01, ..., 99
-  'SS': function (date) {
-    return addLeadingZeros(Math.floor(date.getMilliseconds() / 10), 2)
-  },
-
-  // Millisecond: 000, 001, ..., 999
-  'SSS': function (date) {
-    return addLeadingZeros(date.getMilliseconds(), 3)
-  },
-
-  // Timezone: -01:00, +00:00, ... +12:00
-  'Z': function (date) {
-    return formatTimezone(date.getTimezoneOffset(), ':')
-  },
-
-  // Timezone: -0100, +0000, ... +1200
-  'ZZ': function (date) {
-    return formatTimezone(date.getTimezoneOffset())
-  },
-
-  // Seconds timestamp: 512969520
-  'X': function (date) {
-    return Math.floor(date.getTime() / 1000)
-  },
-
-  // Milliseconds timestamp: 512969520900
-  'x': function (date) {
-    return date.getTime()
-  }
-}
-
-function buildFormatFn (formatStr, localeFormatters, formattingTokensRegExp) {
-  var array = formatStr.match(formattingTokensRegExp)
-  var length = array.length
-
-  var i
-  var formatter
-  for (i = 0; i < length; i++) {
-    formatter = localeFormatters[array[i]] || formatters[array[i]]
-    if (formatter) {
-      array[i] = formatter
-    } else {
-      array[i] = removeFormattingTokens(array[i])
-    }
-  }
-
-  return function (date) {
-    var output = ''
-    for (var i = 0; i < length; i++) {
-      if (array[i] instanceof Function) {
-        output += array[i](date, formatters)
-      } else {
-        output += array[i]
-      }
-    }
-    return output
-  }
-}
-
-function removeFormattingTokens (input) {
-  if (input.match(/\[[\s\S]/)) {
-    return input.replace(/^\[|]$/g, '')
-  }
-  return input.replace(/\\/g, '')
-}
-
-function formatTimezone (offset, delimeter) {
-  delimeter = delimeter || ''
-  var sign = offset > 0 ? '-' : '+'
-  var absOffset = Math.abs(offset)
-  var hours = Math.floor(absOffset / 60)
-  var minutes = absOffset % 60
-  return sign + addLeadingZeros(hours, 2) + delimeter + addLeadingZeros(minutes, 2)
-}
-
-function addLeadingZeros (number, targetLength) {
-  var output = Math.abs(number).toString()
-  while (output.length < targetLength) {
-    output = '0' + output
-  }
-  return output
-}
-
-module.exports = format
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/get_date/index.js":
-/*!*************************************************!*\
-  !*** ./node_modules/date-fns/get_date/index.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Day Helpers
- * @summary Get the day of the month of the given date.
- *
- * @description
- * Get the day of the month of the given date.
- *
- * @param {Date|String|Number} date - the given date
- * @returns {Number} the day of month
- *
- * @example
- * // Which day of the month is 29 February 2012?
- * var result = getDate(new Date(2012, 1, 29))
- * //=> 29
- */
-function getDate (dirtyDate) {
-  var date = parse(dirtyDate)
-  var dayOfMonth = date.getDate()
-  return dayOfMonth
-}
-
-module.exports = getDate
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/get_day/index.js":
-/*!************************************************!*\
-  !*** ./node_modules/date-fns/get_day/index.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Weekday Helpers
- * @summary Get the day of the week of the given date.
- *
- * @description
- * Get the day of the week of the given date.
- *
- * @param {Date|String|Number} date - the given date
- * @returns {Number} the day of week
- *
- * @example
- * // Which day of the week is 29 February 2012?
- * var result = getDay(new Date(2012, 1, 29))
- * //=> 3
- */
-function getDay (dirtyDate) {
-  var date = parse(dirtyDate)
-  var day = date.getDay()
-  return day
-}
-
-module.exports = getDay
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/get_day_of_year/index.js":
-/*!********************************************************!*\
-  !*** ./node_modules/date-fns/get_day_of_year/index.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-var startOfYear = __webpack_require__(/*! ../start_of_year/index.js */ "./node_modules/date-fns/start_of_year/index.js")
-var differenceInCalendarDays = __webpack_require__(/*! ../difference_in_calendar_days/index.js */ "./node_modules/date-fns/difference_in_calendar_days/index.js")
-
-/**
- * @category Day Helpers
- * @summary Get the day of the year of the given date.
- *
- * @description
- * Get the day of the year of the given date.
- *
- * @param {Date|String|Number} date - the given date
- * @returns {Number} the day of year
- *
- * @example
- * // Which day of the year is 2 July 2014?
- * var result = getDayOfYear(new Date(2014, 6, 2))
- * //=> 183
- */
-function getDayOfYear (dirtyDate) {
-  var date = parse(dirtyDate)
-  var diff = differenceInCalendarDays(date, startOfYear(date))
-  var dayOfYear = diff + 1
-  return dayOfYear
-}
-
-module.exports = getDayOfYear
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/get_days_in_month/index.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/date-fns/get_days_in_month/index.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Month Helpers
- * @summary Get the number of days in a month of the given date.
- *
- * @description
- * Get the number of days in a month of the given date.
- *
- * @param {Date|String|Number} date - the given date
- * @returns {Number} the number of days in a month
- *
- * @example
- * // How many days are in February 2000?
- * var result = getDaysInMonth(new Date(2000, 1))
- * //=> 29
- */
-function getDaysInMonth (dirtyDate) {
-  var date = parse(dirtyDate)
-  var year = date.getFullYear()
-  var monthIndex = date.getMonth()
-  var lastDayOfMonth = new Date(0)
-  lastDayOfMonth.setFullYear(year, monthIndex + 1, 0)
-  lastDayOfMonth.setHours(0, 0, 0, 0)
-  return lastDayOfMonth.getDate()
-}
-
-module.exports = getDaysInMonth
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/get_days_in_year/index.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/date-fns/get_days_in_year/index.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isLeapYear = __webpack_require__(/*! ../is_leap_year/index.js */ "./node_modules/date-fns/is_leap_year/index.js")
-
-/**
- * @category Year Helpers
- * @summary Get the number of days in a year of the given date.
- *
- * @description
- * Get the number of days in a year of the given date.
- *
- * @param {Date|String|Number} date - the given date
- * @returns {Number} the number of days in a year
- *
- * @example
- * // How many days are in 2012?
- * var result = getDaysInYear(new Date(2012, 0, 1))
- * //=> 366
- */
-function getDaysInYear (dirtyDate) {
-  return isLeapYear(dirtyDate) ? 366 : 365
-}
-
-module.exports = getDaysInYear
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/get_hours/index.js":
-/*!**************************************************!*\
-  !*** ./node_modules/date-fns/get_hours/index.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Hour Helpers
- * @summary Get the hours of the given date.
- *
- * @description
- * Get the hours of the given date.
- *
- * @param {Date|String|Number} date - the given date
- * @returns {Number} the hours
- *
- * @example
- * // Get the hours of 29 February 2012 11:45:00:
- * var result = getHours(new Date(2012, 1, 29, 11, 45))
- * //=> 11
- */
-function getHours (dirtyDate) {
-  var date = parse(dirtyDate)
-  var hours = date.getHours()
-  return hours
-}
-
-module.exports = getHours
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/get_iso_day/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/date-fns/get_iso_day/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Weekday Helpers
- * @summary Get the day of the ISO week of the given date.
- *
- * @description
- * Get the day of the ISO week of the given date,
- * which is 7 for Sunday, 1 for Monday etc.
- *
- * ISO week-numbering year: http://en.wikipedia.org/wiki/ISO_week_date
- *
- * @param {Date|String|Number} date - the given date
- * @returns {Number} the day of ISO week
- *
- * @example
- * // Which day of the ISO week is 26 February 2012?
- * var result = getISODay(new Date(2012, 1, 26))
- * //=> 7
- */
-function getISODay (dirtyDate) {
-  var date = parse(dirtyDate)
-  var day = date.getDay()
-
-  if (day === 0) {
-    day = 7
-  }
-
-  return day
-}
-
-module.exports = getISODay
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/get_iso_week/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/date-fns/get_iso_week/index.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-var startOfISOWeek = __webpack_require__(/*! ../start_of_iso_week/index.js */ "./node_modules/date-fns/start_of_iso_week/index.js")
-var startOfISOYear = __webpack_require__(/*! ../start_of_iso_year/index.js */ "./node_modules/date-fns/start_of_iso_year/index.js")
-
-var MILLISECONDS_IN_WEEK = 604800000
-
-/**
- * @category ISO Week Helpers
- * @summary Get the ISO week of the given date.
- *
- * @description
- * Get the ISO week of the given date.
- *
- * ISO week-numbering year: http://en.wikipedia.org/wiki/ISO_week_date
- *
- * @param {Date|String|Number} date - the given date
- * @returns {Number} the ISO week
- *
- * @example
- * // Which week of the ISO-week numbering year is 2 January 2005?
- * var result = getISOWeek(new Date(2005, 0, 2))
- * //=> 53
- */
-function getISOWeek (dirtyDate) {
-  var date = parse(dirtyDate)
-  var diff = startOfISOWeek(date).getTime() - startOfISOYear(date).getTime()
-
-  // Round the number of days to the nearest integer
-  // because the number of milliseconds in a week is not constant
-  // (e.g. it's different in the week of the daylight saving time clock shift)
-  return Math.round(diff / MILLISECONDS_IN_WEEK) + 1
-}
-
-module.exports = getISOWeek
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/get_iso_weeks_in_year/index.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/date-fns/get_iso_weeks_in_year/index.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var startOfISOYear = __webpack_require__(/*! ../start_of_iso_year/index.js */ "./node_modules/date-fns/start_of_iso_year/index.js")
-var addWeeks = __webpack_require__(/*! ../add_weeks/index.js */ "./node_modules/date-fns/add_weeks/index.js")
-
-var MILLISECONDS_IN_WEEK = 604800000
-
-/**
- * @category ISO Week-Numbering Year Helpers
- * @summary Get the number of weeks in an ISO week-numbering year of the given date.
- *
- * @description
- * Get the number of weeks in an ISO week-numbering year of the given date.
- *
- * ISO week-numbering year: http://en.wikipedia.org/wiki/ISO_week_date
- *
- * @param {Date|String|Number} date - the given date
- * @returns {Number} the number of ISO weeks in a year
- *
- * @example
- * // How many weeks are in ISO week-numbering year 2015?
- * var result = getISOWeeksInYear(new Date(2015, 1, 11))
- * //=> 53
- */
-function getISOWeeksInYear (dirtyDate) {
-  var thisYear = startOfISOYear(dirtyDate)
-  var nextYear = startOfISOYear(addWeeks(thisYear, 60))
-  var diff = nextYear.valueOf() - thisYear.valueOf()
-  // Round the number of weeks to the nearest integer
-  // because the number of milliseconds in a week is not constant
-  // (e.g. it's different in the week of the daylight saving time clock shift)
-  return Math.round(diff / MILLISECONDS_IN_WEEK)
-}
-
-module.exports = getISOWeeksInYear
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/get_iso_year/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/date-fns/get_iso_year/index.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-var startOfISOWeek = __webpack_require__(/*! ../start_of_iso_week/index.js */ "./node_modules/date-fns/start_of_iso_week/index.js")
-
-/**
- * @category ISO Week-Numbering Year Helpers
- * @summary Get the ISO week-numbering year of the given date.
- *
- * @description
- * Get the ISO week-numbering year of the given date,
- * which always starts 3 days before the year's first Thursday.
- *
- * ISO week-numbering year: http://en.wikipedia.org/wiki/ISO_week_date
- *
- * @param {Date|String|Number} date - the given date
- * @returns {Number} the ISO week-numbering year
- *
- * @example
- * // Which ISO-week numbering year is 2 January 2005?
- * var result = getISOYear(new Date(2005, 0, 2))
- * //=> 2004
- */
-function getISOYear (dirtyDate) {
-  var date = parse(dirtyDate)
-  var year = date.getFullYear()
-
-  var fourthOfJanuaryOfNextYear = new Date(0)
-  fourthOfJanuaryOfNextYear.setFullYear(year + 1, 0, 4)
-  fourthOfJanuaryOfNextYear.setHours(0, 0, 0, 0)
-  var startOfNextYear = startOfISOWeek(fourthOfJanuaryOfNextYear)
-
-  var fourthOfJanuaryOfThisYear = new Date(0)
-  fourthOfJanuaryOfThisYear.setFullYear(year, 0, 4)
-  fourthOfJanuaryOfThisYear.setHours(0, 0, 0, 0)
-  var startOfThisYear = startOfISOWeek(fourthOfJanuaryOfThisYear)
-
-  if (date.getTime() >= startOfNextYear.getTime()) {
-    return year + 1
-  } else if (date.getTime() >= startOfThisYear.getTime()) {
-    return year
-  } else {
-    return year - 1
-  }
-}
-
-module.exports = getISOYear
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/get_milliseconds/index.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/date-fns/get_milliseconds/index.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Millisecond Helpers
- * @summary Get the milliseconds of the given date.
- *
- * @description
- * Get the milliseconds of the given date.
- *
- * @param {Date|String|Number} date - the given date
- * @returns {Number} the milliseconds
- *
- * @example
- * // Get the milliseconds of 29 February 2012 11:45:05.123:
- * var result = getMilliseconds(new Date(2012, 1, 29, 11, 45, 5, 123))
- * //=> 123
- */
-function getMilliseconds (dirtyDate) {
-  var date = parse(dirtyDate)
-  var milliseconds = date.getMilliseconds()
-  return milliseconds
-}
-
-module.exports = getMilliseconds
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/get_minutes/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/date-fns/get_minutes/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Minute Helpers
- * @summary Get the minutes of the given date.
- *
- * @description
- * Get the minutes of the given date.
- *
- * @param {Date|String|Number} date - the given date
- * @returns {Number} the minutes
- *
- * @example
- * // Get the minutes of 29 February 2012 11:45:05:
- * var result = getMinutes(new Date(2012, 1, 29, 11, 45, 5))
- * //=> 45
- */
-function getMinutes (dirtyDate) {
-  var date = parse(dirtyDate)
-  var minutes = date.getMinutes()
-  return minutes
-}
-
-module.exports = getMinutes
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/get_month/index.js":
-/*!**************************************************!*\
-  !*** ./node_modules/date-fns/get_month/index.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Month Helpers
- * @summary Get the month of the given date.
- *
- * @description
- * Get the month of the given date.
- *
- * @param {Date|String|Number} date - the given date
- * @returns {Number} the month
- *
- * @example
- * // Which month is 29 February 2012?
- * var result = getMonth(new Date(2012, 1, 29))
- * //=> 1
- */
-function getMonth (dirtyDate) {
-  var date = parse(dirtyDate)
-  var month = date.getMonth()
-  return month
-}
-
-module.exports = getMonth
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/get_overlapping_days_in_ranges/index.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/date-fns/get_overlapping_days_in_ranges/index.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-var MILLISECONDS_IN_DAY = 24 * 60 * 60 * 1000
-
-/**
- * @category Range Helpers
- * @summary Get the number of days that overlap in two date ranges
- *
- * @description
- * Get the number of days that overlap in two date ranges
- *
- * @param {Date|String|Number} initialRangeStartDate - the start of the initial range
- * @param {Date|String|Number} initialRangeEndDate - the end of the initial range
- * @param {Date|String|Number} comparedRangeStartDate - the start of the range to compare it with
- * @param {Date|String|Number} comparedRangeEndDate - the end of the range to compare it with
- * @returns {Number} the number of days that overlap in two date ranges
- * @throws {Error} startDate of a date range cannot be after its endDate
- *
- * @example
- * // For overlapping date ranges adds 1 for each started overlapping day:
- * getOverlappingDaysInRanges(
- *   new Date(2014, 0, 10), new Date(2014, 0, 20), new Date(2014, 0, 17), new Date(2014, 0, 21)
- * )
- * //=> 3
- *
- * @example
- * // For non-overlapping date ranges returns 0:
- * getOverlappingDaysInRanges(
- *   new Date(2014, 0, 10), new Date(2014, 0, 20), new Date(2014, 0, 21), new Date(2014, 0, 22)
- * )
- * //=> 0
- */
-function getOverlappingDaysInRanges (dirtyInitialRangeStartDate, dirtyInitialRangeEndDate, dirtyComparedRangeStartDate, dirtyComparedRangeEndDate) {
-  var initialStartTime = parse(dirtyInitialRangeStartDate).getTime()
-  var initialEndTime = parse(dirtyInitialRangeEndDate).getTime()
-  var comparedStartTime = parse(dirtyComparedRangeStartDate).getTime()
-  var comparedEndTime = parse(dirtyComparedRangeEndDate).getTime()
-
-  if (initialStartTime > initialEndTime || comparedStartTime > comparedEndTime) {
-    throw new Error('The start of the range cannot be after the end of the range')
-  }
-
-  var isOverlapping = initialStartTime < comparedEndTime && comparedStartTime < initialEndTime
-
-  if (!isOverlapping) {
-    return 0
-  }
-
-  var overlapStartDate = comparedStartTime < initialStartTime
-    ? initialStartTime
-    : comparedStartTime
-
-  var overlapEndDate = comparedEndTime > initialEndTime
-    ? initialEndTime
-    : comparedEndTime
-
-  var differenceInMs = overlapEndDate - overlapStartDate
-
-  return Math.ceil(differenceInMs / MILLISECONDS_IN_DAY)
-}
-
-module.exports = getOverlappingDaysInRanges
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/get_quarter/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/date-fns/get_quarter/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Quarter Helpers
- * @summary Get the year quarter of the given date.
- *
- * @description
- * Get the year quarter of the given date.
- *
- * @param {Date|String|Number} date - the given date
- * @returns {Number} the quarter
- *
- * @example
- * // Which quarter is 2 July 2014?
- * var result = getQuarter(new Date(2014, 6, 2))
- * //=> 3
- */
-function getQuarter (dirtyDate) {
-  var date = parse(dirtyDate)
-  var quarter = Math.floor(date.getMonth() / 3) + 1
-  return quarter
-}
-
-module.exports = getQuarter
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/get_seconds/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/date-fns/get_seconds/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Second Helpers
- * @summary Get the seconds of the given date.
- *
- * @description
- * Get the seconds of the given date.
- *
- * @param {Date|String|Number} date - the given date
- * @returns {Number} the seconds
- *
- * @example
- * // Get the seconds of 29 February 2012 11:45:05.123:
- * var result = getSeconds(new Date(2012, 1, 29, 11, 45, 5, 123))
- * //=> 5
- */
-function getSeconds (dirtyDate) {
-  var date = parse(dirtyDate)
-  var seconds = date.getSeconds()
-  return seconds
-}
-
-module.exports = getSeconds
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/get_time/index.js":
-/*!*************************************************!*\
-  !*** ./node_modules/date-fns/get_time/index.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Timestamp Helpers
- * @summary Get the milliseconds timestamp of the given date.
- *
- * @description
- * Get the milliseconds timestamp of the given date.
- *
- * @param {Date|String|Number} date - the given date
- * @returns {Number} the timestamp
- *
- * @example
- * // Get the timestamp of 29 February 2012 11:45:05.123:
- * var result = getTime(new Date(2012, 1, 29, 11, 45, 5, 123))
- * //=> 1330515905123
- */
-function getTime (dirtyDate) {
-  var date = parse(dirtyDate)
-  var timestamp = date.getTime()
-  return timestamp
-}
-
-module.exports = getTime
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/get_year/index.js":
-/*!*************************************************!*\
-  !*** ./node_modules/date-fns/get_year/index.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Year Helpers
- * @summary Get the year of the given date.
- *
- * @description
- * Get the year of the given date.
- *
- * @param {Date|String|Number} date - the given date
- * @returns {Number} the year
- *
- * @example
- * // Which year is 2 July 2014?
- * var result = getYear(new Date(2014, 6, 2))
- * //=> 2014
- */
-function getYear (dirtyDate) {
-  var date = parse(dirtyDate)
-  var year = date.getFullYear()
-  return year
-}
-
-module.exports = getYear
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/index.js":
-/*!****************************************!*\
-  !*** ./node_modules/date-fns/index.js ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = {
-  addDays: __webpack_require__(/*! ./add_days/index.js */ "./node_modules/date-fns/add_days/index.js"),
-  addHours: __webpack_require__(/*! ./add_hours/index.js */ "./node_modules/date-fns/add_hours/index.js"),
-  addISOYears: __webpack_require__(/*! ./add_iso_years/index.js */ "./node_modules/date-fns/add_iso_years/index.js"),
-  addMilliseconds: __webpack_require__(/*! ./add_milliseconds/index.js */ "./node_modules/date-fns/add_milliseconds/index.js"),
-  addMinutes: __webpack_require__(/*! ./add_minutes/index.js */ "./node_modules/date-fns/add_minutes/index.js"),
-  addMonths: __webpack_require__(/*! ./add_months/index.js */ "./node_modules/date-fns/add_months/index.js"),
-  addQuarters: __webpack_require__(/*! ./add_quarters/index.js */ "./node_modules/date-fns/add_quarters/index.js"),
-  addSeconds: __webpack_require__(/*! ./add_seconds/index.js */ "./node_modules/date-fns/add_seconds/index.js"),
-  addWeeks: __webpack_require__(/*! ./add_weeks/index.js */ "./node_modules/date-fns/add_weeks/index.js"),
-  addYears: __webpack_require__(/*! ./add_years/index.js */ "./node_modules/date-fns/add_years/index.js"),
-  areRangesOverlapping: __webpack_require__(/*! ./are_ranges_overlapping/index.js */ "./node_modules/date-fns/are_ranges_overlapping/index.js"),
-  closestIndexTo: __webpack_require__(/*! ./closest_index_to/index.js */ "./node_modules/date-fns/closest_index_to/index.js"),
-  closestTo: __webpack_require__(/*! ./closest_to/index.js */ "./node_modules/date-fns/closest_to/index.js"),
-  compareAsc: __webpack_require__(/*! ./compare_asc/index.js */ "./node_modules/date-fns/compare_asc/index.js"),
-  compareDesc: __webpack_require__(/*! ./compare_desc/index.js */ "./node_modules/date-fns/compare_desc/index.js"),
-  differenceInCalendarDays: __webpack_require__(/*! ./difference_in_calendar_days/index.js */ "./node_modules/date-fns/difference_in_calendar_days/index.js"),
-  differenceInCalendarISOWeeks: __webpack_require__(/*! ./difference_in_calendar_iso_weeks/index.js */ "./node_modules/date-fns/difference_in_calendar_iso_weeks/index.js"),
-  differenceInCalendarISOYears: __webpack_require__(/*! ./difference_in_calendar_iso_years/index.js */ "./node_modules/date-fns/difference_in_calendar_iso_years/index.js"),
-  differenceInCalendarMonths: __webpack_require__(/*! ./difference_in_calendar_months/index.js */ "./node_modules/date-fns/difference_in_calendar_months/index.js"),
-  differenceInCalendarQuarters: __webpack_require__(/*! ./difference_in_calendar_quarters/index.js */ "./node_modules/date-fns/difference_in_calendar_quarters/index.js"),
-  differenceInCalendarWeeks: __webpack_require__(/*! ./difference_in_calendar_weeks/index.js */ "./node_modules/date-fns/difference_in_calendar_weeks/index.js"),
-  differenceInCalendarYears: __webpack_require__(/*! ./difference_in_calendar_years/index.js */ "./node_modules/date-fns/difference_in_calendar_years/index.js"),
-  differenceInDays: __webpack_require__(/*! ./difference_in_days/index.js */ "./node_modules/date-fns/difference_in_days/index.js"),
-  differenceInHours: __webpack_require__(/*! ./difference_in_hours/index.js */ "./node_modules/date-fns/difference_in_hours/index.js"),
-  differenceInISOYears: __webpack_require__(/*! ./difference_in_iso_years/index.js */ "./node_modules/date-fns/difference_in_iso_years/index.js"),
-  differenceInMilliseconds: __webpack_require__(/*! ./difference_in_milliseconds/index.js */ "./node_modules/date-fns/difference_in_milliseconds/index.js"),
-  differenceInMinutes: __webpack_require__(/*! ./difference_in_minutes/index.js */ "./node_modules/date-fns/difference_in_minutes/index.js"),
-  differenceInMonths: __webpack_require__(/*! ./difference_in_months/index.js */ "./node_modules/date-fns/difference_in_months/index.js"),
-  differenceInQuarters: __webpack_require__(/*! ./difference_in_quarters/index.js */ "./node_modules/date-fns/difference_in_quarters/index.js"),
-  differenceInSeconds: __webpack_require__(/*! ./difference_in_seconds/index.js */ "./node_modules/date-fns/difference_in_seconds/index.js"),
-  differenceInWeeks: __webpack_require__(/*! ./difference_in_weeks/index.js */ "./node_modules/date-fns/difference_in_weeks/index.js"),
-  differenceInYears: __webpack_require__(/*! ./difference_in_years/index.js */ "./node_modules/date-fns/difference_in_years/index.js"),
-  distanceInWords: __webpack_require__(/*! ./distance_in_words/index.js */ "./node_modules/date-fns/distance_in_words/index.js"),
-  distanceInWordsStrict: __webpack_require__(/*! ./distance_in_words_strict/index.js */ "./node_modules/date-fns/distance_in_words_strict/index.js"),
-  distanceInWordsToNow: __webpack_require__(/*! ./distance_in_words_to_now/index.js */ "./node_modules/date-fns/distance_in_words_to_now/index.js"),
-  eachDay: __webpack_require__(/*! ./each_day/index.js */ "./node_modules/date-fns/each_day/index.js"),
-  endOfDay: __webpack_require__(/*! ./end_of_day/index.js */ "./node_modules/date-fns/end_of_day/index.js"),
-  endOfHour: __webpack_require__(/*! ./end_of_hour/index.js */ "./node_modules/date-fns/end_of_hour/index.js"),
-  endOfISOWeek: __webpack_require__(/*! ./end_of_iso_week/index.js */ "./node_modules/date-fns/end_of_iso_week/index.js"),
-  endOfISOYear: __webpack_require__(/*! ./end_of_iso_year/index.js */ "./node_modules/date-fns/end_of_iso_year/index.js"),
-  endOfMinute: __webpack_require__(/*! ./end_of_minute/index.js */ "./node_modules/date-fns/end_of_minute/index.js"),
-  endOfMonth: __webpack_require__(/*! ./end_of_month/index.js */ "./node_modules/date-fns/end_of_month/index.js"),
-  endOfQuarter: __webpack_require__(/*! ./end_of_quarter/index.js */ "./node_modules/date-fns/end_of_quarter/index.js"),
-  endOfSecond: __webpack_require__(/*! ./end_of_second/index.js */ "./node_modules/date-fns/end_of_second/index.js"),
-  endOfToday: __webpack_require__(/*! ./end_of_today/index.js */ "./node_modules/date-fns/end_of_today/index.js"),
-  endOfTomorrow: __webpack_require__(/*! ./end_of_tomorrow/index.js */ "./node_modules/date-fns/end_of_tomorrow/index.js"),
-  endOfWeek: __webpack_require__(/*! ./end_of_week/index.js */ "./node_modules/date-fns/end_of_week/index.js"),
-  endOfYear: __webpack_require__(/*! ./end_of_year/index.js */ "./node_modules/date-fns/end_of_year/index.js"),
-  endOfYesterday: __webpack_require__(/*! ./end_of_yesterday/index.js */ "./node_modules/date-fns/end_of_yesterday/index.js"),
-  format: __webpack_require__(/*! ./format/index.js */ "./node_modules/date-fns/format/index.js"),
-  getDate: __webpack_require__(/*! ./get_date/index.js */ "./node_modules/date-fns/get_date/index.js"),
-  getDay: __webpack_require__(/*! ./get_day/index.js */ "./node_modules/date-fns/get_day/index.js"),
-  getDayOfYear: __webpack_require__(/*! ./get_day_of_year/index.js */ "./node_modules/date-fns/get_day_of_year/index.js"),
-  getDaysInMonth: __webpack_require__(/*! ./get_days_in_month/index.js */ "./node_modules/date-fns/get_days_in_month/index.js"),
-  getDaysInYear: __webpack_require__(/*! ./get_days_in_year/index.js */ "./node_modules/date-fns/get_days_in_year/index.js"),
-  getHours: __webpack_require__(/*! ./get_hours/index.js */ "./node_modules/date-fns/get_hours/index.js"),
-  getISODay: __webpack_require__(/*! ./get_iso_day/index.js */ "./node_modules/date-fns/get_iso_day/index.js"),
-  getISOWeek: __webpack_require__(/*! ./get_iso_week/index.js */ "./node_modules/date-fns/get_iso_week/index.js"),
-  getISOWeeksInYear: __webpack_require__(/*! ./get_iso_weeks_in_year/index.js */ "./node_modules/date-fns/get_iso_weeks_in_year/index.js"),
-  getISOYear: __webpack_require__(/*! ./get_iso_year/index.js */ "./node_modules/date-fns/get_iso_year/index.js"),
-  getMilliseconds: __webpack_require__(/*! ./get_milliseconds/index.js */ "./node_modules/date-fns/get_milliseconds/index.js"),
-  getMinutes: __webpack_require__(/*! ./get_minutes/index.js */ "./node_modules/date-fns/get_minutes/index.js"),
-  getMonth: __webpack_require__(/*! ./get_month/index.js */ "./node_modules/date-fns/get_month/index.js"),
-  getOverlappingDaysInRanges: __webpack_require__(/*! ./get_overlapping_days_in_ranges/index.js */ "./node_modules/date-fns/get_overlapping_days_in_ranges/index.js"),
-  getQuarter: __webpack_require__(/*! ./get_quarter/index.js */ "./node_modules/date-fns/get_quarter/index.js"),
-  getSeconds: __webpack_require__(/*! ./get_seconds/index.js */ "./node_modules/date-fns/get_seconds/index.js"),
-  getTime: __webpack_require__(/*! ./get_time/index.js */ "./node_modules/date-fns/get_time/index.js"),
-  getYear: __webpack_require__(/*! ./get_year/index.js */ "./node_modules/date-fns/get_year/index.js"),
-  isAfter: __webpack_require__(/*! ./is_after/index.js */ "./node_modules/date-fns/is_after/index.js"),
-  isBefore: __webpack_require__(/*! ./is_before/index.js */ "./node_modules/date-fns/is_before/index.js"),
-  isDate: __webpack_require__(/*! ./is_date/index.js */ "./node_modules/date-fns/is_date/index.js"),
-  isEqual: __webpack_require__(/*! ./is_equal/index.js */ "./node_modules/date-fns/is_equal/index.js"),
-  isFirstDayOfMonth: __webpack_require__(/*! ./is_first_day_of_month/index.js */ "./node_modules/date-fns/is_first_day_of_month/index.js"),
-  isFriday: __webpack_require__(/*! ./is_friday/index.js */ "./node_modules/date-fns/is_friday/index.js"),
-  isFuture: __webpack_require__(/*! ./is_future/index.js */ "./node_modules/date-fns/is_future/index.js"),
-  isLastDayOfMonth: __webpack_require__(/*! ./is_last_day_of_month/index.js */ "./node_modules/date-fns/is_last_day_of_month/index.js"),
-  isLeapYear: __webpack_require__(/*! ./is_leap_year/index.js */ "./node_modules/date-fns/is_leap_year/index.js"),
-  isMonday: __webpack_require__(/*! ./is_monday/index.js */ "./node_modules/date-fns/is_monday/index.js"),
-  isPast: __webpack_require__(/*! ./is_past/index.js */ "./node_modules/date-fns/is_past/index.js"),
-  isSameDay: __webpack_require__(/*! ./is_same_day/index.js */ "./node_modules/date-fns/is_same_day/index.js"),
-  isSameHour: __webpack_require__(/*! ./is_same_hour/index.js */ "./node_modules/date-fns/is_same_hour/index.js"),
-  isSameISOWeek: __webpack_require__(/*! ./is_same_iso_week/index.js */ "./node_modules/date-fns/is_same_iso_week/index.js"),
-  isSameISOYear: __webpack_require__(/*! ./is_same_iso_year/index.js */ "./node_modules/date-fns/is_same_iso_year/index.js"),
-  isSameMinute: __webpack_require__(/*! ./is_same_minute/index.js */ "./node_modules/date-fns/is_same_minute/index.js"),
-  isSameMonth: __webpack_require__(/*! ./is_same_month/index.js */ "./node_modules/date-fns/is_same_month/index.js"),
-  isSameQuarter: __webpack_require__(/*! ./is_same_quarter/index.js */ "./node_modules/date-fns/is_same_quarter/index.js"),
-  isSameSecond: __webpack_require__(/*! ./is_same_second/index.js */ "./node_modules/date-fns/is_same_second/index.js"),
-  isSameWeek: __webpack_require__(/*! ./is_same_week/index.js */ "./node_modules/date-fns/is_same_week/index.js"),
-  isSameYear: __webpack_require__(/*! ./is_same_year/index.js */ "./node_modules/date-fns/is_same_year/index.js"),
-  isSaturday: __webpack_require__(/*! ./is_saturday/index.js */ "./node_modules/date-fns/is_saturday/index.js"),
-  isSunday: __webpack_require__(/*! ./is_sunday/index.js */ "./node_modules/date-fns/is_sunday/index.js"),
-  isThisHour: __webpack_require__(/*! ./is_this_hour/index.js */ "./node_modules/date-fns/is_this_hour/index.js"),
-  isThisISOWeek: __webpack_require__(/*! ./is_this_iso_week/index.js */ "./node_modules/date-fns/is_this_iso_week/index.js"),
-  isThisISOYear: __webpack_require__(/*! ./is_this_iso_year/index.js */ "./node_modules/date-fns/is_this_iso_year/index.js"),
-  isThisMinute: __webpack_require__(/*! ./is_this_minute/index.js */ "./node_modules/date-fns/is_this_minute/index.js"),
-  isThisMonth: __webpack_require__(/*! ./is_this_month/index.js */ "./node_modules/date-fns/is_this_month/index.js"),
-  isThisQuarter: __webpack_require__(/*! ./is_this_quarter/index.js */ "./node_modules/date-fns/is_this_quarter/index.js"),
-  isThisSecond: __webpack_require__(/*! ./is_this_second/index.js */ "./node_modules/date-fns/is_this_second/index.js"),
-  isThisWeek: __webpack_require__(/*! ./is_this_week/index.js */ "./node_modules/date-fns/is_this_week/index.js"),
-  isThisYear: __webpack_require__(/*! ./is_this_year/index.js */ "./node_modules/date-fns/is_this_year/index.js"),
-  isThursday: __webpack_require__(/*! ./is_thursday/index.js */ "./node_modules/date-fns/is_thursday/index.js"),
-  isToday: __webpack_require__(/*! ./is_today/index.js */ "./node_modules/date-fns/is_today/index.js"),
-  isTomorrow: __webpack_require__(/*! ./is_tomorrow/index.js */ "./node_modules/date-fns/is_tomorrow/index.js"),
-  isTuesday: __webpack_require__(/*! ./is_tuesday/index.js */ "./node_modules/date-fns/is_tuesday/index.js"),
-  isValid: __webpack_require__(/*! ./is_valid/index.js */ "./node_modules/date-fns/is_valid/index.js"),
-  isWednesday: __webpack_require__(/*! ./is_wednesday/index.js */ "./node_modules/date-fns/is_wednesday/index.js"),
-  isWeekend: __webpack_require__(/*! ./is_weekend/index.js */ "./node_modules/date-fns/is_weekend/index.js"),
-  isWithinRange: __webpack_require__(/*! ./is_within_range/index.js */ "./node_modules/date-fns/is_within_range/index.js"),
-  isYesterday: __webpack_require__(/*! ./is_yesterday/index.js */ "./node_modules/date-fns/is_yesterday/index.js"),
-  lastDayOfISOWeek: __webpack_require__(/*! ./last_day_of_iso_week/index.js */ "./node_modules/date-fns/last_day_of_iso_week/index.js"),
-  lastDayOfISOYear: __webpack_require__(/*! ./last_day_of_iso_year/index.js */ "./node_modules/date-fns/last_day_of_iso_year/index.js"),
-  lastDayOfMonth: __webpack_require__(/*! ./last_day_of_month/index.js */ "./node_modules/date-fns/last_day_of_month/index.js"),
-  lastDayOfQuarter: __webpack_require__(/*! ./last_day_of_quarter/index.js */ "./node_modules/date-fns/last_day_of_quarter/index.js"),
-  lastDayOfWeek: __webpack_require__(/*! ./last_day_of_week/index.js */ "./node_modules/date-fns/last_day_of_week/index.js"),
-  lastDayOfYear: __webpack_require__(/*! ./last_day_of_year/index.js */ "./node_modules/date-fns/last_day_of_year/index.js"),
-  max: __webpack_require__(/*! ./max/index.js */ "./node_modules/date-fns/max/index.js"),
-  min: __webpack_require__(/*! ./min/index.js */ "./node_modules/date-fns/min/index.js"),
-  parse: __webpack_require__(/*! ./parse/index.js */ "./node_modules/date-fns/parse/index.js"),
-  setDate: __webpack_require__(/*! ./set_date/index.js */ "./node_modules/date-fns/set_date/index.js"),
-  setDay: __webpack_require__(/*! ./set_day/index.js */ "./node_modules/date-fns/set_day/index.js"),
-  setDayOfYear: __webpack_require__(/*! ./set_day_of_year/index.js */ "./node_modules/date-fns/set_day_of_year/index.js"),
-  setHours: __webpack_require__(/*! ./set_hours/index.js */ "./node_modules/date-fns/set_hours/index.js"),
-  setISODay: __webpack_require__(/*! ./set_iso_day/index.js */ "./node_modules/date-fns/set_iso_day/index.js"),
-  setISOWeek: __webpack_require__(/*! ./set_iso_week/index.js */ "./node_modules/date-fns/set_iso_week/index.js"),
-  setISOYear: __webpack_require__(/*! ./set_iso_year/index.js */ "./node_modules/date-fns/set_iso_year/index.js"),
-  setMilliseconds: __webpack_require__(/*! ./set_milliseconds/index.js */ "./node_modules/date-fns/set_milliseconds/index.js"),
-  setMinutes: __webpack_require__(/*! ./set_minutes/index.js */ "./node_modules/date-fns/set_minutes/index.js"),
-  setMonth: __webpack_require__(/*! ./set_month/index.js */ "./node_modules/date-fns/set_month/index.js"),
-  setQuarter: __webpack_require__(/*! ./set_quarter/index.js */ "./node_modules/date-fns/set_quarter/index.js"),
-  setSeconds: __webpack_require__(/*! ./set_seconds/index.js */ "./node_modules/date-fns/set_seconds/index.js"),
-  setYear: __webpack_require__(/*! ./set_year/index.js */ "./node_modules/date-fns/set_year/index.js"),
-  startOfDay: __webpack_require__(/*! ./start_of_day/index.js */ "./node_modules/date-fns/start_of_day/index.js"),
-  startOfHour: __webpack_require__(/*! ./start_of_hour/index.js */ "./node_modules/date-fns/start_of_hour/index.js"),
-  startOfISOWeek: __webpack_require__(/*! ./start_of_iso_week/index.js */ "./node_modules/date-fns/start_of_iso_week/index.js"),
-  startOfISOYear: __webpack_require__(/*! ./start_of_iso_year/index.js */ "./node_modules/date-fns/start_of_iso_year/index.js"),
-  startOfMinute: __webpack_require__(/*! ./start_of_minute/index.js */ "./node_modules/date-fns/start_of_minute/index.js"),
-  startOfMonth: __webpack_require__(/*! ./start_of_month/index.js */ "./node_modules/date-fns/start_of_month/index.js"),
-  startOfQuarter: __webpack_require__(/*! ./start_of_quarter/index.js */ "./node_modules/date-fns/start_of_quarter/index.js"),
-  startOfSecond: __webpack_require__(/*! ./start_of_second/index.js */ "./node_modules/date-fns/start_of_second/index.js"),
-  startOfToday: __webpack_require__(/*! ./start_of_today/index.js */ "./node_modules/date-fns/start_of_today/index.js"),
-  startOfTomorrow: __webpack_require__(/*! ./start_of_tomorrow/index.js */ "./node_modules/date-fns/start_of_tomorrow/index.js"),
-  startOfWeek: __webpack_require__(/*! ./start_of_week/index.js */ "./node_modules/date-fns/start_of_week/index.js"),
-  startOfYear: __webpack_require__(/*! ./start_of_year/index.js */ "./node_modules/date-fns/start_of_year/index.js"),
-  startOfYesterday: __webpack_require__(/*! ./start_of_yesterday/index.js */ "./node_modules/date-fns/start_of_yesterday/index.js"),
-  subDays: __webpack_require__(/*! ./sub_days/index.js */ "./node_modules/date-fns/sub_days/index.js"),
-  subHours: __webpack_require__(/*! ./sub_hours/index.js */ "./node_modules/date-fns/sub_hours/index.js"),
-  subISOYears: __webpack_require__(/*! ./sub_iso_years/index.js */ "./node_modules/date-fns/sub_iso_years/index.js"),
-  subMilliseconds: __webpack_require__(/*! ./sub_milliseconds/index.js */ "./node_modules/date-fns/sub_milliseconds/index.js"),
-  subMinutes: __webpack_require__(/*! ./sub_minutes/index.js */ "./node_modules/date-fns/sub_minutes/index.js"),
-  subMonths: __webpack_require__(/*! ./sub_months/index.js */ "./node_modules/date-fns/sub_months/index.js"),
-  subQuarters: __webpack_require__(/*! ./sub_quarters/index.js */ "./node_modules/date-fns/sub_quarters/index.js"),
-  subSeconds: __webpack_require__(/*! ./sub_seconds/index.js */ "./node_modules/date-fns/sub_seconds/index.js"),
-  subWeeks: __webpack_require__(/*! ./sub_weeks/index.js */ "./node_modules/date-fns/sub_weeks/index.js"),
-  subYears: __webpack_require__(/*! ./sub_years/index.js */ "./node_modules/date-fns/sub_years/index.js")
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_after/index.js":
-/*!*************************************************!*\
-  !*** ./node_modules/date-fns/is_after/index.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Common Helpers
- * @summary Is the first date after the second one?
- *
- * @description
- * Is the first date after the second one?
- *
- * @param {Date|String|Number} date - the date that should be after the other one to return true
- * @param {Date|String|Number} dateToCompare - the date to compare with
- * @returns {Boolean} the first date is after the second date
- *
- * @example
- * // Is 10 July 1989 after 11 February 1987?
- * var result = isAfter(new Date(1989, 6, 10), new Date(1987, 1, 11))
- * //=> true
- */
-function isAfter (dirtyDate, dirtyDateToCompare) {
-  var date = parse(dirtyDate)
-  var dateToCompare = parse(dirtyDateToCompare)
-  return date.getTime() > dateToCompare.getTime()
-}
-
-module.exports = isAfter
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_before/index.js":
-/*!**************************************************!*\
-  !*** ./node_modules/date-fns/is_before/index.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Common Helpers
- * @summary Is the first date before the second one?
- *
- * @description
- * Is the first date before the second one?
- *
- * @param {Date|String|Number} date - the date that should be before the other one to return true
- * @param {Date|String|Number} dateToCompare - the date to compare with
- * @returns {Boolean} the first date is before the second date
- *
- * @example
- * // Is 10 July 1989 before 11 February 1987?
- * var result = isBefore(new Date(1989, 6, 10), new Date(1987, 1, 11))
- * //=> false
- */
-function isBefore (dirtyDate, dirtyDateToCompare) {
-  var date = parse(dirtyDate)
-  var dateToCompare = parse(dirtyDateToCompare)
-  return date.getTime() < dateToCompare.getTime()
-}
-
-module.exports = isBefore
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_date/index.js":
-/*!************************************************!*\
-  !*** ./node_modules/date-fns/is_date/index.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/**
- * @category Common Helpers
- * @summary Is the given argument an instance of Date?
- *
- * @description
- * Is the given argument an instance of Date?
- *
- * @param {*} argument - the argument to check
- * @returns {Boolean} the given argument is an instance of Date
- *
- * @example
- * // Is 'mayonnaise' a Date?
- * var result = isDate('mayonnaise')
- * //=> false
- */
-function isDate (argument) {
-  return argument instanceof Date
-}
-
-module.exports = isDate
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_equal/index.js":
-/*!*************************************************!*\
-  !*** ./node_modules/date-fns/is_equal/index.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Common Helpers
- * @summary Are the given dates equal?
- *
- * @description
- * Are the given dates equal?
- *
- * @param {Date|String|Number} dateLeft - the first date to compare
- * @param {Date|String|Number} dateRight - the second date to compare
- * @returns {Boolean} the dates are equal
- *
- * @example
- * // Are 2 July 2014 06:30:45.000 and 2 July 2014 06:30:45.500 equal?
- * var result = isEqual(
- *   new Date(2014, 6, 2, 6, 30, 45, 0)
- *   new Date(2014, 6, 2, 6, 30, 45, 500)
- * )
- * //=> false
- */
-function isEqual (dirtyLeftDate, dirtyRightDate) {
-  var dateLeft = parse(dirtyLeftDate)
-  var dateRight = parse(dirtyRightDate)
-  return dateLeft.getTime() === dateRight.getTime()
-}
-
-module.exports = isEqual
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_first_day_of_month/index.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/date-fns/is_first_day_of_month/index.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Month Helpers
- * @summary Is the given date the first day of a month?
- *
- * @description
- * Is the given date the first day of a month?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is the first day of a month
- *
- * @example
- * // Is 1 September 2014 the first day of a month?
- * var result = isFirstDayOfMonth(new Date(2014, 8, 1))
- * //=> true
- */
-function isFirstDayOfMonth (dirtyDate) {
-  return parse(dirtyDate).getDate() === 1
-}
-
-module.exports = isFirstDayOfMonth
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_friday/index.js":
-/*!**************************************************!*\
-  !*** ./node_modules/date-fns/is_friday/index.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Weekday Helpers
- * @summary Is the given date Friday?
- *
- * @description
- * Is the given date Friday?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is Friday
- *
- * @example
- * // Is 26 September 2014 Friday?
- * var result = isFriday(new Date(2014, 8, 26))
- * //=> true
- */
-function isFriday (dirtyDate) {
-  return parse(dirtyDate).getDay() === 5
-}
-
-module.exports = isFriday
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_future/index.js":
-/*!**************************************************!*\
-  !*** ./node_modules/date-fns/is_future/index.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Common Helpers
- * @summary Is the given date in the future?
- *
- * @description
- * Is the given date in the future?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is in the future
- *
- * @example
- * // If today is 6 October 2014, is 31 December 2014 in the future?
- * var result = isFuture(new Date(2014, 11, 31))
- * //=> true
- */
-function isFuture (dirtyDate) {
-  return parse(dirtyDate).getTime() > new Date().getTime()
-}
-
-module.exports = isFuture
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_last_day_of_month/index.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/date-fns/is_last_day_of_month/index.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-var endOfDay = __webpack_require__(/*! ../end_of_day/index.js */ "./node_modules/date-fns/end_of_day/index.js")
-var endOfMonth = __webpack_require__(/*! ../end_of_month/index.js */ "./node_modules/date-fns/end_of_month/index.js")
-
-/**
- * @category Month Helpers
- * @summary Is the given date the last day of a month?
- *
- * @description
- * Is the given date the last day of a month?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is the last day of a month
- *
- * @example
- * // Is 28 February 2014 the last day of a month?
- * var result = isLastDayOfMonth(new Date(2014, 1, 28))
- * //=> true
- */
-function isLastDayOfMonth (dirtyDate) {
-  var date = parse(dirtyDate)
-  return endOfDay(date).getTime() === endOfMonth(date).getTime()
-}
-
-module.exports = isLastDayOfMonth
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_leap_year/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/date-fns/is_leap_year/index.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Year Helpers
- * @summary Is the given date in the leap year?
- *
- * @description
- * Is the given date in the leap year?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is in the leap year
- *
- * @example
- * // Is 1 September 2012 in the leap year?
- * var result = isLeapYear(new Date(2012, 8, 1))
- * //=> true
- */
-function isLeapYear (dirtyDate) {
-  var date = parse(dirtyDate)
-  var year = date.getFullYear()
-  return year % 400 === 0 || year % 4 === 0 && year % 100 !== 0
-}
-
-module.exports = isLeapYear
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_monday/index.js":
-/*!**************************************************!*\
-  !*** ./node_modules/date-fns/is_monday/index.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Weekday Helpers
- * @summary Is the given date Monday?
- *
- * @description
- * Is the given date Monday?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is Monday
- *
- * @example
- * // Is 22 September 2014 Monday?
- * var result = isMonday(new Date(2014, 8, 22))
- * //=> true
- */
-function isMonday (dirtyDate) {
-  return parse(dirtyDate).getDay() === 1
-}
-
-module.exports = isMonday
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_past/index.js":
-/*!************************************************!*\
-  !*** ./node_modules/date-fns/is_past/index.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Common Helpers
- * @summary Is the given date in the past?
- *
- * @description
- * Is the given date in the past?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is in the past
- *
- * @example
- * // If today is 6 October 2014, is 2 July 2014 in the past?
- * var result = isPast(new Date(2014, 6, 2))
- * //=> true
- */
-function isPast (dirtyDate) {
-  return parse(dirtyDate).getTime() < new Date().getTime()
-}
-
-module.exports = isPast
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_same_day/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/date-fns/is_same_day/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var startOfDay = __webpack_require__(/*! ../start_of_day/index.js */ "./node_modules/date-fns/start_of_day/index.js")
-
-/**
- * @category Day Helpers
- * @summary Are the given dates in the same day?
- *
- * @description
- * Are the given dates in the same day?
- *
- * @param {Date|String|Number} dateLeft - the first date to check
- * @param {Date|String|Number} dateRight - the second date to check
- * @returns {Boolean} the dates are in the same day
- *
- * @example
- * // Are 4 September 06:00:00 and 4 September 18:00:00 in the same day?
- * var result = isSameDay(
- *   new Date(2014, 8, 4, 6, 0),
- *   new Date(2014, 8, 4, 18, 0)
- * )
- * //=> true
- */
-function isSameDay (dirtyDateLeft, dirtyDateRight) {
-  var dateLeftStartOfDay = startOfDay(dirtyDateLeft)
-  var dateRightStartOfDay = startOfDay(dirtyDateRight)
-
-  return dateLeftStartOfDay.getTime() === dateRightStartOfDay.getTime()
-}
-
-module.exports = isSameDay
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_same_hour/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/date-fns/is_same_hour/index.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var startOfHour = __webpack_require__(/*! ../start_of_hour/index.js */ "./node_modules/date-fns/start_of_hour/index.js")
-
-/**
- * @category Hour Helpers
- * @summary Are the given dates in the same hour?
- *
- * @description
- * Are the given dates in the same hour?
- *
- * @param {Date|String|Number} dateLeft - the first date to check
- * @param {Date|String|Number} dateRight - the second date to check
- * @returns {Boolean} the dates are in the same hour
- *
- * @example
- * // Are 4 September 2014 06:00:00 and 4 September 06:30:00 in the same hour?
- * var result = isSameHour(
- *   new Date(2014, 8, 4, 6, 0),
- *   new Date(2014, 8, 4, 6, 30)
- * )
- * //=> true
- */
-function isSameHour (dirtyDateLeft, dirtyDateRight) {
-  var dateLeftStartOfHour = startOfHour(dirtyDateLeft)
-  var dateRightStartOfHour = startOfHour(dirtyDateRight)
-
-  return dateLeftStartOfHour.getTime() === dateRightStartOfHour.getTime()
-}
-
-module.exports = isSameHour
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_same_iso_week/index.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/date-fns/is_same_iso_week/index.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isSameWeek = __webpack_require__(/*! ../is_same_week/index.js */ "./node_modules/date-fns/is_same_week/index.js")
-
-/**
- * @category ISO Week Helpers
- * @summary Are the given dates in the same ISO week?
- *
- * @description
- * Are the given dates in the same ISO week?
- *
- * ISO week-numbering year: http://en.wikipedia.org/wiki/ISO_week_date
- *
- * @param {Date|String|Number} dateLeft - the first date to check
- * @param {Date|String|Number} dateRight - the second date to check
- * @returns {Boolean} the dates are in the same ISO week
- *
- * @example
- * // Are 1 September 2014 and 7 September 2014 in the same ISO week?
- * var result = isSameISOWeek(
- *   new Date(2014, 8, 1),
- *   new Date(2014, 8, 7)
- * )
- * //=> true
- */
-function isSameISOWeek (dirtyDateLeft, dirtyDateRight) {
-  return isSameWeek(dirtyDateLeft, dirtyDateRight, {weekStartsOn: 1})
-}
-
-module.exports = isSameISOWeek
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_same_iso_year/index.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/date-fns/is_same_iso_year/index.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var startOfISOYear = __webpack_require__(/*! ../start_of_iso_year/index.js */ "./node_modules/date-fns/start_of_iso_year/index.js")
-
-/**
- * @category ISO Week-Numbering Year Helpers
- * @summary Are the given dates in the same ISO week-numbering year?
- *
- * @description
- * Are the given dates in the same ISO week-numbering year?
- *
- * ISO week-numbering year: http://en.wikipedia.org/wiki/ISO_week_date
- *
- * @param {Date|String|Number} dateLeft - the first date to check
- * @param {Date|String|Number} dateRight - the second date to check
- * @returns {Boolean} the dates are in the same ISO week-numbering year
- *
- * @example
- * // Are 29 December 2003 and 2 January 2005 in the same ISO week-numbering year?
- * var result = isSameISOYear(
- *   new Date(2003, 11, 29),
- *   new Date(2005, 0, 2)
- * )
- * //=> true
- */
-function isSameISOYear (dirtyDateLeft, dirtyDateRight) {
-  var dateLeftStartOfYear = startOfISOYear(dirtyDateLeft)
-  var dateRightStartOfYear = startOfISOYear(dirtyDateRight)
-
-  return dateLeftStartOfYear.getTime() === dateRightStartOfYear.getTime()
-}
-
-module.exports = isSameISOYear
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_same_minute/index.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/date-fns/is_same_minute/index.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var startOfMinute = __webpack_require__(/*! ../start_of_minute/index.js */ "./node_modules/date-fns/start_of_minute/index.js")
-
-/**
- * @category Minute Helpers
- * @summary Are the given dates in the same minute?
- *
- * @description
- * Are the given dates in the same minute?
- *
- * @param {Date|String|Number} dateLeft - the first date to check
- * @param {Date|String|Number} dateRight - the second date to check
- * @returns {Boolean} the dates are in the same minute
- *
- * @example
- * // Are 4 September 2014 06:30:00 and 4 September 2014 06:30:15
- * // in the same minute?
- * var result = isSameMinute(
- *   new Date(2014, 8, 4, 6, 30),
- *   new Date(2014, 8, 4, 6, 30, 15)
- * )
- * //=> true
- */
-function isSameMinute (dirtyDateLeft, dirtyDateRight) {
-  var dateLeftStartOfMinute = startOfMinute(dirtyDateLeft)
-  var dateRightStartOfMinute = startOfMinute(dirtyDateRight)
-
-  return dateLeftStartOfMinute.getTime() === dateRightStartOfMinute.getTime()
-}
-
-module.exports = isSameMinute
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_same_month/index.js":
-/*!******************************************************!*\
-  !*** ./node_modules/date-fns/is_same_month/index.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Month Helpers
- * @summary Are the given dates in the same month?
- *
- * @description
- * Are the given dates in the same month?
- *
- * @param {Date|String|Number} dateLeft - the first date to check
- * @param {Date|String|Number} dateRight - the second date to check
- * @returns {Boolean} the dates are in the same month
- *
- * @example
- * // Are 2 September 2014 and 25 September 2014 in the same month?
- * var result = isSameMonth(
- *   new Date(2014, 8, 2),
- *   new Date(2014, 8, 25)
- * )
- * //=> true
- */
-function isSameMonth (dirtyDateLeft, dirtyDateRight) {
-  var dateLeft = parse(dirtyDateLeft)
-  var dateRight = parse(dirtyDateRight)
-  return dateLeft.getFullYear() === dateRight.getFullYear() &&
-    dateLeft.getMonth() === dateRight.getMonth()
-}
-
-module.exports = isSameMonth
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_same_quarter/index.js":
-/*!********************************************************!*\
-  !*** ./node_modules/date-fns/is_same_quarter/index.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var startOfQuarter = __webpack_require__(/*! ../start_of_quarter/index.js */ "./node_modules/date-fns/start_of_quarter/index.js")
-
-/**
- * @category Quarter Helpers
- * @summary Are the given dates in the same year quarter?
- *
- * @description
- * Are the given dates in the same year quarter?
- *
- * @param {Date|String|Number} dateLeft - the first date to check
- * @param {Date|String|Number} dateRight - the second date to check
- * @returns {Boolean} the dates are in the same quarter
- *
- * @example
- * // Are 1 January 2014 and 8 March 2014 in the same quarter?
- * var result = isSameQuarter(
- *   new Date(2014, 0, 1),
- *   new Date(2014, 2, 8)
- * )
- * //=> true
- */
-function isSameQuarter (dirtyDateLeft, dirtyDateRight) {
-  var dateLeftStartOfQuarter = startOfQuarter(dirtyDateLeft)
-  var dateRightStartOfQuarter = startOfQuarter(dirtyDateRight)
-
-  return dateLeftStartOfQuarter.getTime() === dateRightStartOfQuarter.getTime()
-}
-
-module.exports = isSameQuarter
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_same_second/index.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/date-fns/is_same_second/index.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var startOfSecond = __webpack_require__(/*! ../start_of_second/index.js */ "./node_modules/date-fns/start_of_second/index.js")
-
-/**
- * @category Second Helpers
- * @summary Are the given dates in the same second?
- *
- * @description
- * Are the given dates in the same second?
- *
- * @param {Date|String|Number} dateLeft - the first date to check
- * @param {Date|String|Number} dateRight - the second date to check
- * @returns {Boolean} the dates are in the same second
- *
- * @example
- * // Are 4 September 2014 06:30:15.000 and 4 September 2014 06:30.15.500
- * // in the same second?
- * var result = isSameSecond(
- *   new Date(2014, 8, 4, 6, 30, 15),
- *   new Date(2014, 8, 4, 6, 30, 15, 500)
- * )
- * //=> true
- */
-function isSameSecond (dirtyDateLeft, dirtyDateRight) {
-  var dateLeftStartOfSecond = startOfSecond(dirtyDateLeft)
-  var dateRightStartOfSecond = startOfSecond(dirtyDateRight)
-
-  return dateLeftStartOfSecond.getTime() === dateRightStartOfSecond.getTime()
-}
-
-module.exports = isSameSecond
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_same_week/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/date-fns/is_same_week/index.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var startOfWeek = __webpack_require__(/*! ../start_of_week/index.js */ "./node_modules/date-fns/start_of_week/index.js")
-
-/**
- * @category Week Helpers
- * @summary Are the given dates in the same week?
- *
- * @description
- * Are the given dates in the same week?
- *
- * @param {Date|String|Number} dateLeft - the first date to check
- * @param {Date|String|Number} dateRight - the second date to check
- * @param {Object} [options] - the object with options
- * @param {Number} [options.weekStartsOn=0] - the index of the first day of the week (0 - Sunday)
- * @returns {Boolean} the dates are in the same week
- *
- * @example
- * // Are 31 August 2014 and 4 September 2014 in the same week?
- * var result = isSameWeek(
- *   new Date(2014, 7, 31),
- *   new Date(2014, 8, 4)
- * )
- * //=> true
- *
- * @example
- * // If week starts with Monday,
- * // are 31 August 2014 and 4 September 2014 in the same week?
- * var result = isSameWeek(
- *   new Date(2014, 7, 31),
- *   new Date(2014, 8, 4),
- *   {weekStartsOn: 1}
- * )
- * //=> false
- */
-function isSameWeek (dirtyDateLeft, dirtyDateRight, dirtyOptions) {
-  var dateLeftStartOfWeek = startOfWeek(dirtyDateLeft, dirtyOptions)
-  var dateRightStartOfWeek = startOfWeek(dirtyDateRight, dirtyOptions)
-
-  return dateLeftStartOfWeek.getTime() === dateRightStartOfWeek.getTime()
-}
-
-module.exports = isSameWeek
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_same_year/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/date-fns/is_same_year/index.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Year Helpers
- * @summary Are the given dates in the same year?
- *
- * @description
- * Are the given dates in the same year?
- *
- * @param {Date|String|Number} dateLeft - the first date to check
- * @param {Date|String|Number} dateRight - the second date to check
- * @returns {Boolean} the dates are in the same year
- *
- * @example
- * // Are 2 September 2014 and 25 September 2014 in the same year?
- * var result = isSameYear(
- *   new Date(2014, 8, 2),
- *   new Date(2014, 8, 25)
- * )
- * //=> true
- */
-function isSameYear (dirtyDateLeft, dirtyDateRight) {
-  var dateLeft = parse(dirtyDateLeft)
-  var dateRight = parse(dirtyDateRight)
-  return dateLeft.getFullYear() === dateRight.getFullYear()
-}
-
-module.exports = isSameYear
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_saturday/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/date-fns/is_saturday/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Weekday Helpers
- * @summary Is the given date Saturday?
- *
- * @description
- * Is the given date Saturday?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is Saturday
- *
- * @example
- * // Is 27 September 2014 Saturday?
- * var result = isSaturday(new Date(2014, 8, 27))
- * //=> true
- */
-function isSaturday (dirtyDate) {
-  return parse(dirtyDate).getDay() === 6
-}
-
-module.exports = isSaturday
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_sunday/index.js":
-/*!**************************************************!*\
-  !*** ./node_modules/date-fns/is_sunday/index.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Weekday Helpers
- * @summary Is the given date Sunday?
- *
- * @description
- * Is the given date Sunday?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is Sunday
- *
- * @example
- * // Is 21 September 2014 Sunday?
- * var result = isSunday(new Date(2014, 8, 21))
- * //=> true
- */
-function isSunday (dirtyDate) {
-  return parse(dirtyDate).getDay() === 0
-}
-
-module.exports = isSunday
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_this_hour/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/date-fns/is_this_hour/index.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isSameHour = __webpack_require__(/*! ../is_same_hour/index.js */ "./node_modules/date-fns/is_same_hour/index.js")
-
-/**
- * @category Hour Helpers
- * @summary Is the given date in the same hour as the current date?
- *
- * @description
- * Is the given date in the same hour as the current date?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is in this hour
- *
- * @example
- * // If now is 25 September 2014 18:30:15.500,
- * // is 25 September 2014 18:00:00 in this hour?
- * var result = isThisHour(new Date(2014, 8, 25, 18))
- * //=> true
- */
-function isThisHour (dirtyDate) {
-  return isSameHour(new Date(), dirtyDate)
-}
-
-module.exports = isThisHour
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_this_iso_week/index.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/date-fns/is_this_iso_week/index.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isSameISOWeek = __webpack_require__(/*! ../is_same_iso_week/index.js */ "./node_modules/date-fns/is_same_iso_week/index.js")
-
-/**
- * @category ISO Week Helpers
- * @summary Is the given date in the same ISO week as the current date?
- *
- * @description
- * Is the given date in the same ISO week as the current date?
- *
- * ISO week-numbering year: http://en.wikipedia.org/wiki/ISO_week_date
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is in this ISO week
- *
- * @example
- * // If today is 25 September 2014, is 22 September 2014 in this ISO week?
- * var result = isThisISOWeek(new Date(2014, 8, 22))
- * //=> true
- */
-function isThisISOWeek (dirtyDate) {
-  return isSameISOWeek(new Date(), dirtyDate)
-}
-
-module.exports = isThisISOWeek
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_this_iso_year/index.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/date-fns/is_this_iso_year/index.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isSameISOYear = __webpack_require__(/*! ../is_same_iso_year/index.js */ "./node_modules/date-fns/is_same_iso_year/index.js")
-
-/**
- * @category ISO Week-Numbering Year Helpers
- * @summary Is the given date in the same ISO week-numbering year as the current date?
- *
- * @description
- * Is the given date in the same ISO week-numbering year as the current date?
- *
- * ISO week-numbering year: http://en.wikipedia.org/wiki/ISO_week_date
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is in this ISO week-numbering year
- *
- * @example
- * // If today is 25 September 2014,
- * // is 30 December 2013 in this ISO week-numbering year?
- * var result = isThisISOYear(new Date(2013, 11, 30))
- * //=> true
- */
-function isThisISOYear (dirtyDate) {
-  return isSameISOYear(new Date(), dirtyDate)
-}
-
-module.exports = isThisISOYear
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_this_minute/index.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/date-fns/is_this_minute/index.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isSameMinute = __webpack_require__(/*! ../is_same_minute/index.js */ "./node_modules/date-fns/is_same_minute/index.js")
-
-/**
- * @category Minute Helpers
- * @summary Is the given date in the same minute as the current date?
- *
- * @description
- * Is the given date in the same minute as the current date?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is in this minute
- *
- * @example
- * // If now is 25 September 2014 18:30:15.500,
- * // is 25 September 2014 18:30:00 in this minute?
- * var result = isThisMinute(new Date(2014, 8, 25, 18, 30))
- * //=> true
- */
-function isThisMinute (dirtyDate) {
-  return isSameMinute(new Date(), dirtyDate)
-}
-
-module.exports = isThisMinute
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_this_month/index.js":
-/*!******************************************************!*\
-  !*** ./node_modules/date-fns/is_this_month/index.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isSameMonth = __webpack_require__(/*! ../is_same_month/index.js */ "./node_modules/date-fns/is_same_month/index.js")
-
-/**
- * @category Month Helpers
- * @summary Is the given date in the same month as the current date?
- *
- * @description
- * Is the given date in the same month as the current date?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is in this month
- *
- * @example
- * // If today is 25 September 2014, is 15 September 2014 in this month?
- * var result = isThisMonth(new Date(2014, 8, 15))
- * //=> true
- */
-function isThisMonth (dirtyDate) {
-  return isSameMonth(new Date(), dirtyDate)
-}
-
-module.exports = isThisMonth
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_this_quarter/index.js":
-/*!********************************************************!*\
-  !*** ./node_modules/date-fns/is_this_quarter/index.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isSameQuarter = __webpack_require__(/*! ../is_same_quarter/index.js */ "./node_modules/date-fns/is_same_quarter/index.js")
-
-/**
- * @category Quarter Helpers
- * @summary Is the given date in the same quarter as the current date?
- *
- * @description
- * Is the given date in the same quarter as the current date?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is in this quarter
- *
- * @example
- * // If today is 25 September 2014, is 2 July 2014 in this quarter?
- * var result = isThisQuarter(new Date(2014, 6, 2))
- * //=> true
- */
-function isThisQuarter (dirtyDate) {
-  return isSameQuarter(new Date(), dirtyDate)
-}
-
-module.exports = isThisQuarter
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_this_second/index.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/date-fns/is_this_second/index.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isSameSecond = __webpack_require__(/*! ../is_same_second/index.js */ "./node_modules/date-fns/is_same_second/index.js")
-
-/**
- * @category Second Helpers
- * @summary Is the given date in the same second as the current date?
- *
- * @description
- * Is the given date in the same second as the current date?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is in this second
- *
- * @example
- * // If now is 25 September 2014 18:30:15.500,
- * // is 25 September 2014 18:30:15.000 in this second?
- * var result = isThisSecond(new Date(2014, 8, 25, 18, 30, 15))
- * //=> true
- */
-function isThisSecond (dirtyDate) {
-  return isSameSecond(new Date(), dirtyDate)
-}
-
-module.exports = isThisSecond
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_this_week/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/date-fns/is_this_week/index.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isSameWeek = __webpack_require__(/*! ../is_same_week/index.js */ "./node_modules/date-fns/is_same_week/index.js")
-
-/**
- * @category Week Helpers
- * @summary Is the given date in the same week as the current date?
- *
- * @description
- * Is the given date in the same week as the current date?
- *
- * @param {Date|String|Number} date - the date to check
- * @param {Object} [options] - the object with options
- * @param {Number} [options.weekStartsOn=0] - the index of the first day of the week (0 - Sunday)
- * @returns {Boolean} the date is in this week
- *
- * @example
- * // If today is 25 September 2014, is 21 September 2014 in this week?
- * var result = isThisWeek(new Date(2014, 8, 21))
- * //=> true
- *
- * @example
- * // If today is 25 September 2014 and week starts with Monday
- * // is 21 September 2014 in this week?
- * var result = isThisWeek(new Date(2014, 8, 21), {weekStartsOn: 1})
- * //=> false
- */
-function isThisWeek (dirtyDate, dirtyOptions) {
-  return isSameWeek(new Date(), dirtyDate, dirtyOptions)
-}
-
-module.exports = isThisWeek
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_this_year/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/date-fns/is_this_year/index.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isSameYear = __webpack_require__(/*! ../is_same_year/index.js */ "./node_modules/date-fns/is_same_year/index.js")
-
-/**
- * @category Year Helpers
- * @summary Is the given date in the same year as the current date?
- *
- * @description
- * Is the given date in the same year as the current date?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is in this year
- *
- * @example
- * // If today is 25 September 2014, is 2 July 2014 in this year?
- * var result = isThisYear(new Date(2014, 6, 2))
- * //=> true
- */
-function isThisYear (dirtyDate) {
-  return isSameYear(new Date(), dirtyDate)
-}
-
-module.exports = isThisYear
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_thursday/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/date-fns/is_thursday/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Weekday Helpers
- * @summary Is the given date Thursday?
- *
- * @description
- * Is the given date Thursday?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is Thursday
- *
- * @example
- * // Is 25 September 2014 Thursday?
- * var result = isThursday(new Date(2014, 8, 25))
- * //=> true
- */
-function isThursday (dirtyDate) {
-  return parse(dirtyDate).getDay() === 4
-}
-
-module.exports = isThursday
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_today/index.js":
-/*!*************************************************!*\
-  !*** ./node_modules/date-fns/is_today/index.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var startOfDay = __webpack_require__(/*! ../start_of_day/index.js */ "./node_modules/date-fns/start_of_day/index.js")
-
-/**
- * @category Day Helpers
- * @summary Is the given date today?
- *
- * @description
- * Is the given date today?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is today
- *
- * @example
- * // If today is 6 October 2014, is 6 October 14:00:00 today?
- * var result = isToday(new Date(2014, 9, 6, 14, 0))
- * //=> true
- */
-function isToday (dirtyDate) {
-  return startOfDay(dirtyDate).getTime() === startOfDay(new Date()).getTime()
-}
-
-module.exports = isToday
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_tomorrow/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/date-fns/is_tomorrow/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var startOfDay = __webpack_require__(/*! ../start_of_day/index.js */ "./node_modules/date-fns/start_of_day/index.js")
-
-/**
- * @category Day Helpers
- * @summary Is the given date tomorrow?
- *
- * @description
- * Is the given date tomorrow?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is tomorrow
- *
- * @example
- * // If today is 6 October 2014, is 7 October 14:00:00 tomorrow?
- * var result = isTomorrow(new Date(2014, 9, 7, 14, 0))
- * //=> true
- */
-function isTomorrow (dirtyDate) {
-  var tomorrow = new Date()
-  tomorrow.setDate(tomorrow.getDate() + 1)
-  return startOfDay(dirtyDate).getTime() === startOfDay(tomorrow).getTime()
-}
-
-module.exports = isTomorrow
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_tuesday/index.js":
-/*!***************************************************!*\
-  !*** ./node_modules/date-fns/is_tuesday/index.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Weekday Helpers
- * @summary Is the given date Tuesday?
- *
- * @description
- * Is the given date Tuesday?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is Tuesday
- *
- * @example
- * // Is 23 September 2014 Tuesday?
- * var result = isTuesday(new Date(2014, 8, 23))
- * //=> true
- */
-function isTuesday (dirtyDate) {
-  return parse(dirtyDate).getDay() === 2
-}
-
-module.exports = isTuesday
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_valid/index.js":
-/*!*************************************************!*\
-  !*** ./node_modules/date-fns/is_valid/index.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isDate = __webpack_require__(/*! ../is_date/index.js */ "./node_modules/date-fns/is_date/index.js")
-
-/**
- * @category Common Helpers
- * @summary Is the given date valid?
- *
- * @description
- * Returns false if argument is Invalid Date and true otherwise.
- * Invalid Date is a Date, whose time value is NaN.
- *
- * Time value of Date: http://es5.github.io/#x15.9.1.1
- *
- * @param {Date} date - the date to check
- * @returns {Boolean} the date is valid
- * @throws {TypeError} argument must be an instance of Date
- *
- * @example
- * // For the valid date:
- * var result = isValid(new Date(2014, 1, 31))
- * //=> true
- *
- * @example
- * // For the invalid date:
- * var result = isValid(new Date(''))
- * //=> false
- */
-function isValid (dirtyDate) {
-  if (isDate(dirtyDate)) {
-    return !isNaN(dirtyDate)
-  } else {
-    throw new TypeError(toString.call(dirtyDate) + ' is not an instance of Date')
-  }
-}
-
-module.exports = isValid
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_wednesday/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/date-fns/is_wednesday/index.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Weekday Helpers
- * @summary Is the given date Wednesday?
- *
- * @description
- * Is the given date Wednesday?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is Wednesday
- *
- * @example
- * // Is 24 September 2014 Wednesday?
- * var result = isWednesday(new Date(2014, 8, 24))
- * //=> true
- */
-function isWednesday (dirtyDate) {
-  return parse(dirtyDate).getDay() === 3
-}
-
-module.exports = isWednesday
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_weekend/index.js":
-/*!***************************************************!*\
-  !*** ./node_modules/date-fns/is_weekend/index.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Weekday Helpers
- * @summary Does the given date fall on a weekend?
- *
- * @description
- * Does the given date fall on a weekend?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date falls on a weekend
- *
- * @example
- * // Does 5 October 2014 fall on a weekend?
- * var result = isWeekend(new Date(2014, 9, 5))
- * //=> true
- */
-function isWeekend (dirtyDate) {
-  var date = parse(dirtyDate)
-  var day = date.getDay()
-  return day === 0 || day === 6
-}
-
-module.exports = isWeekend
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_within_range/index.js":
-/*!********************************************************!*\
-  !*** ./node_modules/date-fns/is_within_range/index.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Range Helpers
- * @summary Is the given date within the range?
- *
- * @description
- * Is the given date within the range?
- *
- * @param {Date|String|Number} date - the date to check
- * @param {Date|String|Number} startDate - the start of range
- * @param {Date|String|Number} endDate - the end of range
- * @returns {Boolean} the date is within the range
- * @throws {Error} startDate cannot be after endDate
- *
- * @example
- * // For the date within the range:
- * isWithinRange(
- *   new Date(2014, 0, 3), new Date(2014, 0, 1), new Date(2014, 0, 7)
- * )
- * //=> true
- *
- * @example
- * // For the date outside of the range:
- * isWithinRange(
- *   new Date(2014, 0, 10), new Date(2014, 0, 1), new Date(2014, 0, 7)
- * )
- * //=> false
- */
-function isWithinRange (dirtyDate, dirtyStartDate, dirtyEndDate) {
-  var time = parse(dirtyDate).getTime()
-  var startTime = parse(dirtyStartDate).getTime()
-  var endTime = parse(dirtyEndDate).getTime()
-
-  if (startTime > endTime) {
-    throw new Error('The start of the range cannot be after the end of the range')
-  }
-
-  return time >= startTime && time <= endTime
-}
-
-module.exports = isWithinRange
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/is_yesterday/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/date-fns/is_yesterday/index.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var startOfDay = __webpack_require__(/*! ../start_of_day/index.js */ "./node_modules/date-fns/start_of_day/index.js")
-
-/**
- * @category Day Helpers
- * @summary Is the given date yesterday?
- *
- * @description
- * Is the given date yesterday?
- *
- * @param {Date|String|Number} date - the date to check
- * @returns {Boolean} the date is yesterday
- *
- * @example
- * // If today is 6 October 2014, is 5 October 14:00:00 yesterday?
- * var result = isYesterday(new Date(2014, 9, 5, 14, 0))
- * //=> true
- */
-function isYesterday (dirtyDate) {
-  var yesterday = new Date()
-  yesterday.setDate(yesterday.getDate() - 1)
-  return startOfDay(dirtyDate).getTime() === startOfDay(yesterday).getTime()
-}
-
-module.exports = isYesterday
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/last_day_of_iso_week/index.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/date-fns/last_day_of_iso_week/index.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var lastDayOfWeek = __webpack_require__(/*! ../last_day_of_week/index.js */ "./node_modules/date-fns/last_day_of_week/index.js")
-
-/**
- * @category ISO Week Helpers
- * @summary Return the last day of an ISO week for the given date.
- *
- * @description
- * Return the last day of an ISO week for the given date.
- * The result will be in the local timezone.
- *
- * ISO week-numbering year: http://en.wikipedia.org/wiki/ISO_week_date
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the last day of an ISO week
- *
- * @example
- * // The last day of an ISO week for 2 September 2014 11:55:00:
- * var result = lastDayOfISOWeek(new Date(2014, 8, 2, 11, 55, 0))
- * //=> Sun Sep 07 2014 00:00:00
- */
-function lastDayOfISOWeek (dirtyDate) {
-  return lastDayOfWeek(dirtyDate, {weekStartsOn: 1})
-}
-
-module.exports = lastDayOfISOWeek
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/last_day_of_iso_year/index.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/date-fns/last_day_of_iso_year/index.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var getISOYear = __webpack_require__(/*! ../get_iso_year/index.js */ "./node_modules/date-fns/get_iso_year/index.js")
-var startOfISOWeek = __webpack_require__(/*! ../start_of_iso_week/index.js */ "./node_modules/date-fns/start_of_iso_week/index.js")
-
-/**
- * @category ISO Week-Numbering Year Helpers
- * @summary Return the last day of an ISO week-numbering year for the given date.
- *
- * @description
- * Return the last day of an ISO week-numbering year,
- * which always starts 3 days before the year's first Thursday.
- * The result will be in the local timezone.
- *
- * ISO week-numbering year: http://en.wikipedia.org/wiki/ISO_week_date
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the end of an ISO week-numbering year
- *
- * @example
- * // The last day of an ISO week-numbering year for 2 July 2005:
- * var result = lastDayOfISOYear(new Date(2005, 6, 2))
- * //=> Sun Jan 01 2006 00:00:00
- */
-function lastDayOfISOYear (dirtyDate) {
-  var year = getISOYear(dirtyDate)
-  var fourthOfJanuary = new Date(0)
-  fourthOfJanuary.setFullYear(year + 1, 0, 4)
-  fourthOfJanuary.setHours(0, 0, 0, 0)
-  var date = startOfISOWeek(fourthOfJanuary)
-  date.setDate(date.getDate() - 1)
-  return date
-}
-
-module.exports = lastDayOfISOYear
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/last_day_of_month/index.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/date-fns/last_day_of_month/index.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Month Helpers
- * @summary Return the last day of a month for the given date.
- *
- * @description
- * Return the last day of a month for the given date.
- * The result will be in the local timezone.
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the last day of a month
- *
- * @example
- * // The last day of a month for 2 September 2014 11:55:00:
- * var result = lastDayOfMonth(new Date(2014, 8, 2, 11, 55, 0))
- * //=> Tue Sep 30 2014 00:00:00
- */
-function lastDayOfMonth (dirtyDate) {
-  var date = parse(dirtyDate)
-  var month = date.getMonth()
-  date.setFullYear(date.getFullYear(), month + 1, 0)
-  date.setHours(0, 0, 0, 0)
-  return date
-}
-
-module.exports = lastDayOfMonth
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/last_day_of_quarter/index.js":
-/*!************************************************************!*\
-  !*** ./node_modules/date-fns/last_day_of_quarter/index.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Quarter Helpers
- * @summary Return the last day of a year quarter for the given date.
- *
- * @description
- * Return the last day of a year quarter for the given date.
- * The result will be in the local timezone.
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the last day of a quarter
- *
- * @example
- * // The last day of a quarter for 2 September 2014 11:55:00:
- * var result = lastDayOfQuarter(new Date(2014, 8, 2, 11, 55, 0))
- * //=> Tue Sep 30 2014 00:00:00
- */
-function lastDayOfQuarter (dirtyDate) {
-  var date = parse(dirtyDate)
-  var currentMonth = date.getMonth()
-  var month = currentMonth - currentMonth % 3 + 3
-  date.setMonth(month, 0)
-  date.setHours(0, 0, 0, 0)
-  return date
-}
-
-module.exports = lastDayOfQuarter
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/last_day_of_week/index.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/date-fns/last_day_of_week/index.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Week Helpers
- * @summary Return the last day of a week for the given date.
- *
- * @description
- * Return the last day of a week for the given date.
- * The result will be in the local timezone.
- *
- * @param {Date|String|Number} date - the original date
- * @param {Object} [options] - the object with options
- * @param {Number} [options.weekStartsOn=0] - the index of the first day of the week (0 - Sunday)
- * @returns {Date} the last day of a week
- *
- * @example
- * // The last day of a week for 2 September 2014 11:55:00:
- * var result = lastDayOfWeek(new Date(2014, 8, 2, 11, 55, 0))
- * //=> Sat Sep 06 2014 00:00:00
- *
- * @example
- * // If the week starts on Monday, the last day of the week for 2 September 2014 11:55:00:
- * var result = lastDayOfWeek(new Date(2014, 8, 2, 11, 55, 0), {weekStartsOn: 1})
- * //=> Sun Sep 07 2014 00:00:00
- */
-function lastDayOfWeek (dirtyDate, dirtyOptions) {
-  var weekStartsOn = dirtyOptions ? (Number(dirtyOptions.weekStartsOn) || 0) : 0
-
-  var date = parse(dirtyDate)
-  var day = date.getDay()
-  var diff = (day < weekStartsOn ? -7 : 0) + 6 - (day - weekStartsOn)
-
-  date.setHours(0, 0, 0, 0)
-  date.setDate(date.getDate() + diff)
-  return date
-}
-
-module.exports = lastDayOfWeek
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/last_day_of_year/index.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/date-fns/last_day_of_year/index.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Year Helpers
- * @summary Return the last day of a year for the given date.
- *
- * @description
- * Return the last day of a year for the given date.
- * The result will be in the local timezone.
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the last day of a year
- *
- * @example
- * // The last day of a year for 2 September 2014 11:55:00:
- * var result = lastDayOfYear(new Date(2014, 8, 2, 11, 55, 00))
- * //=> Wed Dec 31 2014 00:00:00
- */
-function lastDayOfYear (dirtyDate) {
-  var date = parse(dirtyDate)
-  var year = date.getFullYear()
-  date.setFullYear(year + 1, 0, 0)
-  date.setHours(0, 0, 0, 0)
-  return date
-}
-
-module.exports = lastDayOfYear
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/locale/_lib/build_formatting_tokens_reg_exp/index.js":
-/*!************************************************************************************!*\
-  !*** ./node_modules/date-fns/locale/_lib/build_formatting_tokens_reg_exp/index.js ***!
-  \************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var commonFormatterKeys = [
-  'M', 'MM', 'Q', 'D', 'DD', 'DDD', 'DDDD', 'd',
-  'E', 'W', 'WW', 'YY', 'YYYY', 'GG', 'GGGG',
-  'H', 'HH', 'h', 'hh', 'm', 'mm',
-  's', 'ss', 'S', 'SS', 'SSS',
-  'Z', 'ZZ', 'X', 'x'
-]
-
-function buildFormattingTokensRegExp (formatters) {
-  var formatterKeys = []
-  for (var key in formatters) {
-    if (formatters.hasOwnProperty(key)) {
-      formatterKeys.push(key)
-    }
-  }
-
-  var formattingTokens = commonFormatterKeys
-    .concat(formatterKeys)
-    .sort()
-    .reverse()
-  var formattingTokensRegExp = new RegExp(
-    '(\\[[^\\[]*\\])|(\\\\)?' + '(' + formattingTokens.join('|') + '|.)', 'g'
-  )
-
-  return formattingTokensRegExp
-}
-
-module.exports = buildFormattingTokensRegExp
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/locale/en/build_distance_in_words_locale/index.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/date-fns/locale/en/build_distance_in_words_locale/index.js ***!
-  \*********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function buildDistanceInWordsLocale () {
-  var distanceInWordsLocale = {
-    lessThanXSeconds: {
-      one: 'less than a second',
-      other: 'less than {{count}} seconds'
-    },
-
-    xSeconds: {
-      one: '1 second',
-      other: '{{count}} seconds'
-    },
-
-    halfAMinute: 'half a minute',
-
-    lessThanXMinutes: {
-      one: 'less than a minute',
-      other: 'less than {{count}} minutes'
-    },
-
-    xMinutes: {
-      one: '1 minute',
-      other: '{{count}} minutes'
-    },
-
-    aboutXHours: {
-      one: 'about 1 hour',
-      other: 'about {{count}} hours'
-    },
-
-    xHours: {
-      one: '1 hour',
-      other: '{{count}} hours'
-    },
-
-    xDays: {
-      one: '1 day',
-      other: '{{count}} days'
-    },
-
-    aboutXMonths: {
-      one: 'about 1 month',
-      other: 'about {{count}} months'
-    },
-
-    xMonths: {
-      one: '1 month',
-      other: '{{count}} months'
-    },
-
-    aboutXYears: {
-      one: 'about 1 year',
-      other: 'about {{count}} years'
-    },
-
-    xYears: {
-      one: '1 year',
-      other: '{{count}} years'
-    },
-
-    overXYears: {
-      one: 'over 1 year',
-      other: 'over {{count}} years'
-    },
-
-    almostXYears: {
-      one: 'almost 1 year',
-      other: 'almost {{count}} years'
-    }
-  }
-
-  function localize (token, count, options) {
-    options = options || {}
-
-    var result
-    if (typeof distanceInWordsLocale[token] === 'string') {
-      result = distanceInWordsLocale[token]
-    } else if (count === 1) {
-      result = distanceInWordsLocale[token].one
-    } else {
-      result = distanceInWordsLocale[token].other.replace('{{count}}', count)
-    }
-
-    if (options.addSuffix) {
-      if (options.comparison > 0) {
-        return 'in ' + result
-      } else {
-        return result + ' ago'
-      }
-    }
-
-    return result
-  }
-
-  return {
-    localize: localize
-  }
-}
-
-module.exports = buildDistanceInWordsLocale
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/locale/en/build_format_locale/index.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/date-fns/locale/en/build_format_locale/index.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var buildFormattingTokensRegExp = __webpack_require__(/*! ../../_lib/build_formatting_tokens_reg_exp/index.js */ "./node_modules/date-fns/locale/_lib/build_formatting_tokens_reg_exp/index.js")
-
-function buildFormatLocale () {
-  // Note: in English, the names of days of the week and months are capitalized.
-  // If you are making a new locale based on this one, check if the same is true for the language you're working on.
-  // Generally, formatted dates should look like they are in the middle of a sentence,
-  // e.g. in Spanish language the weekdays and months should be in the lowercase.
-  var months3char = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-  var monthsFull = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-  var weekdays2char = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa']
-  var weekdays3char = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-  var weekdaysFull = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-  var meridiemUppercase = ['AM', 'PM']
-  var meridiemLowercase = ['am', 'pm']
-  var meridiemFull = ['a.m.', 'p.m.']
-
-  var formatters = {
-    // Month: Jan, Feb, ..., Dec
-    'MMM': function (date) {
-      return months3char[date.getMonth()]
-    },
-
-    // Month: January, February, ..., December
-    'MMMM': function (date) {
-      return monthsFull[date.getMonth()]
-    },
-
-    // Day of week: Su, Mo, ..., Sa
-    'dd': function (date) {
-      return weekdays2char[date.getDay()]
-    },
-
-    // Day of week: Sun, Mon, ..., Sat
-    'ddd': function (date) {
-      return weekdays3char[date.getDay()]
-    },
-
-    // Day of week: Sunday, Monday, ..., Saturday
-    'dddd': function (date) {
-      return weekdaysFull[date.getDay()]
-    },
-
-    // AM, PM
-    'A': function (date) {
-      return (date.getHours() / 12) >= 1 ? meridiemUppercase[1] : meridiemUppercase[0]
-    },
-
-    // am, pm
-    'a': function (date) {
-      return (date.getHours() / 12) >= 1 ? meridiemLowercase[1] : meridiemLowercase[0]
-    },
-
-    // a.m., p.m.
-    'aa': function (date) {
-      return (date.getHours() / 12) >= 1 ? meridiemFull[1] : meridiemFull[0]
-    }
-  }
-
-  // Generate ordinal version of formatters: M -> Mo, D -> Do, etc.
-  var ordinalFormatters = ['M', 'D', 'DDD', 'd', 'Q', 'W']
-  ordinalFormatters.forEach(function (formatterToken) {
-    formatters[formatterToken + 'o'] = function (date, formatters) {
-      return ordinal(formatters[formatterToken](date))
-    }
-  })
-
-  return {
-    formatters: formatters,
-    formattingTokensRegExp: buildFormattingTokensRegExp(formatters)
-  }
-}
-
-function ordinal (number) {
-  var rem100 = number % 100
-  if (rem100 > 20 || rem100 < 10) {
-    switch (rem100 % 10) {
-      case 1:
-        return number + 'st'
-      case 2:
-        return number + 'nd'
-      case 3:
-        return number + 'rd'
-    }
-  }
-  return number + 'th'
-}
-
-module.exports = buildFormatLocale
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/locale/en/index.js":
-/*!**************************************************!*\
-  !*** ./node_modules/date-fns/locale/en/index.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var buildDistanceInWordsLocale = __webpack_require__(/*! ./build_distance_in_words_locale/index.js */ "./node_modules/date-fns/locale/en/build_distance_in_words_locale/index.js")
-var buildFormatLocale = __webpack_require__(/*! ./build_format_locale/index.js */ "./node_modules/date-fns/locale/en/build_format_locale/index.js")
-
-/**
- * @category Locales
- * @summary English locale.
- */
-module.exports = {
-  distanceInWords: buildDistanceInWordsLocale(),
-  format: buildFormatLocale()
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/max/index.js":
-/*!********************************************!*\
-  !*** ./node_modules/date-fns/max/index.js ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Common Helpers
- * @summary Return the latest of the given dates.
- *
- * @description
- * Return the latest of the given dates.
- *
- * @param {...(Date|String|Number)} dates - the dates to compare
- * @returns {Date} the latest of the dates
- *
- * @example
- * // Which of these dates is the latest?
- * var result = max(
- *   new Date(1989, 6, 10),
- *   new Date(1987, 1, 11),
- *   new Date(1995, 6, 2),
- *   new Date(1990, 0, 1)
- * )
- * //=> Sun Jul 02 1995 00:00:00
- */
-function max () {
-  var dirtyDates = Array.prototype.slice.call(arguments)
-  var dates = dirtyDates.map(function (dirtyDate) {
-    return parse(dirtyDate)
-  })
-  var latestTimestamp = Math.max.apply(null, dates)
-  return new Date(latestTimestamp)
-}
-
-module.exports = max
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/min/index.js":
-/*!********************************************!*\
-  !*** ./node_modules/date-fns/min/index.js ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Common Helpers
- * @summary Return the earliest of the given dates.
- *
- * @description
- * Return the earliest of the given dates.
- *
- * @param {...(Date|String|Number)} dates - the dates to compare
- * @returns {Date} the earliest of the dates
- *
- * @example
- * // Which of these dates is the earliest?
- * var result = min(
- *   new Date(1989, 6, 10),
- *   new Date(1987, 1, 11),
- *   new Date(1995, 6, 2),
- *   new Date(1990, 0, 1)
- * )
- * //=> Wed Feb 11 1987 00:00:00
- */
-function min () {
-  var dirtyDates = Array.prototype.slice.call(arguments)
-  var dates = dirtyDates.map(function (dirtyDate) {
-    return parse(dirtyDate)
-  })
-  var earliestTimestamp = Math.min.apply(null, dates)
-  return new Date(earliestTimestamp)
-}
-
-module.exports = min
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/parse/index.js":
-/*!**********************************************!*\
-  !*** ./node_modules/date-fns/parse/index.js ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var getTimezoneOffsetInMilliseconds = __webpack_require__(/*! ../_lib/getTimezoneOffsetInMilliseconds/index.js */ "./node_modules/date-fns/_lib/getTimezoneOffsetInMilliseconds/index.js")
-var isDate = __webpack_require__(/*! ../is_date/index.js */ "./node_modules/date-fns/is_date/index.js")
-
-var MILLISECONDS_IN_HOUR = 3600000
-var MILLISECONDS_IN_MINUTE = 60000
-var DEFAULT_ADDITIONAL_DIGITS = 2
-
-var parseTokenDateTimeDelimeter = /[T ]/
-var parseTokenPlainTime = /:/
-
-// year tokens
-var parseTokenYY = /^(\d{2})$/
-var parseTokensYYY = [
-  /^([+-]\d{2})$/, // 0 additional digits
-  /^([+-]\d{3})$/, // 1 additional digit
-  /^([+-]\d{4})$/ // 2 additional digits
-]
-
-var parseTokenYYYY = /^(\d{4})/
-var parseTokensYYYYY = [
-  /^([+-]\d{4})/, // 0 additional digits
-  /^([+-]\d{5})/, // 1 additional digit
-  /^([+-]\d{6})/ // 2 additional digits
-]
-
-// date tokens
-var parseTokenMM = /^-(\d{2})$/
-var parseTokenDDD = /^-?(\d{3})$/
-var parseTokenMMDD = /^-?(\d{2})-?(\d{2})$/
-var parseTokenWww = /^-?W(\d{2})$/
-var parseTokenWwwD = /^-?W(\d{2})-?(\d{1})$/
-
-// time tokens
-var parseTokenHH = /^(\d{2}([.,]\d*)?)$/
-var parseTokenHHMM = /^(\d{2}):?(\d{2}([.,]\d*)?)$/
-var parseTokenHHMMSS = /^(\d{2}):?(\d{2}):?(\d{2}([.,]\d*)?)$/
-
-// timezone tokens
-var parseTokenTimezone = /([Z+-].*)$/
-var parseTokenTimezoneZ = /^(Z)$/
-var parseTokenTimezoneHH = /^([+-])(\d{2})$/
-var parseTokenTimezoneHHMM = /^([+-])(\d{2}):?(\d{2})$/
-
-/**
- * @category Common Helpers
- * @summary Convert the given argument to an instance of Date.
- *
- * @description
- * Convert the given argument to an instance of Date.
- *
- * If the argument is an instance of Date, the function returns its clone.
- *
- * If the argument is a number, it is treated as a timestamp.
- *
- * If an argument is a string, the function tries to parse it.
- * Function accepts complete ISO 8601 formats as well as partial implementations.
- * ISO 8601: http://en.wikipedia.org/wiki/ISO_8601
- *
- * If all above fails, the function passes the given argument to Date constructor.
- *
- * @param {Date|String|Number} argument - the value to convert
- * @param {Object} [options] - the object with options
- * @param {0 | 1 | 2} [options.additionalDigits=2] - the additional number of digits in the extended year format
- * @returns {Date} the parsed date in the local time zone
- *
- * @example
- * // Convert string '2014-02-11T11:30:30' to date:
- * var result = parse('2014-02-11T11:30:30')
- * //=> Tue Feb 11 2014 11:30:30
- *
- * @example
- * // Parse string '+02014101',
- * // if the additional number of digits in the extended year format is 1:
- * var result = parse('+02014101', {additionalDigits: 1})
- * //=> Fri Apr 11 2014 00:00:00
- */
-function parse (argument, dirtyOptions) {
-  if (isDate(argument)) {
-    // Prevent the date to lose the milliseconds when passed to new Date() in IE10
-    return new Date(argument.getTime())
-  } else if (typeof argument !== 'string') {
-    return new Date(argument)
-  }
-
-  var options = dirtyOptions || {}
-  var additionalDigits = options.additionalDigits
-  if (additionalDigits == null) {
-    additionalDigits = DEFAULT_ADDITIONAL_DIGITS
-  } else {
-    additionalDigits = Number(additionalDigits)
-  }
-
-  var dateStrings = splitDateString(argument)
-
-  var parseYearResult = parseYear(dateStrings.date, additionalDigits)
-  var year = parseYearResult.year
-  var restDateString = parseYearResult.restDateString
-
-  var date = parseDate(restDateString, year)
-
-  if (date) {
-    var timestamp = date.getTime()
-    var time = 0
-    var offset
-
-    if (dateStrings.time) {
-      time = parseTime(dateStrings.time)
-    }
-
-    if (dateStrings.timezone) {
-      offset = parseTimezone(dateStrings.timezone) * MILLISECONDS_IN_MINUTE
-    } else {
-      var fullTime = timestamp + time
-      var fullTimeDate = new Date(fullTime)
-
-      offset = getTimezoneOffsetInMilliseconds(fullTimeDate)
-
-      // Adjust time when it's coming from DST
-      var fullTimeDateNextDay = new Date(fullTime)
-      fullTimeDateNextDay.setDate(fullTimeDate.getDate() + 1)
-      var offsetDiff =
-        getTimezoneOffsetInMilliseconds(fullTimeDateNextDay) -
-        getTimezoneOffsetInMilliseconds(fullTimeDate)
-      if (offsetDiff > 0) {
-        offset += offsetDiff
-      }
-    }
-
-    return new Date(timestamp + time + offset)
-  } else {
-    return new Date(argument)
-  }
-}
-
-function splitDateString (dateString) {
-  var dateStrings = {}
-  var array = dateString.split(parseTokenDateTimeDelimeter)
-  var timeString
-
-  if (parseTokenPlainTime.test(array[0])) {
-    dateStrings.date = null
-    timeString = array[0]
-  } else {
-    dateStrings.date = array[0]
-    timeString = array[1]
-  }
-
-  if (timeString) {
-    var token = parseTokenTimezone.exec(timeString)
-    if (token) {
-      dateStrings.time = timeString.replace(token[1], '')
-      dateStrings.timezone = token[1]
-    } else {
-      dateStrings.time = timeString
-    }
-  }
-
-  return dateStrings
-}
-
-function parseYear (dateString, additionalDigits) {
-  var parseTokenYYY = parseTokensYYY[additionalDigits]
-  var parseTokenYYYYY = parseTokensYYYYY[additionalDigits]
-
-  var token
-
-  // YYYY or ±YYYYY
-  token = parseTokenYYYY.exec(dateString) || parseTokenYYYYY.exec(dateString)
-  if (token) {
-    var yearString = token[1]
-    return {
-      year: parseInt(yearString, 10),
-      restDateString: dateString.slice(yearString.length)
-    }
-  }
-
-  // YY or ±YYY
-  token = parseTokenYY.exec(dateString) || parseTokenYYY.exec(dateString)
-  if (token) {
-    var centuryString = token[1]
-    return {
-      year: parseInt(centuryString, 10) * 100,
-      restDateString: dateString.slice(centuryString.length)
-    }
-  }
-
-  // Invalid ISO-formatted year
-  return {
-    year: null
-  }
-}
-
-function parseDate (dateString, year) {
-  // Invalid ISO-formatted year
-  if (year === null) {
-    return null
-  }
-
-  var token
-  var date
-  var month
-  var week
-
-  // YYYY
-  if (dateString.length === 0) {
-    date = new Date(0)
-    date.setUTCFullYear(year)
-    return date
-  }
-
-  // YYYY-MM
-  token = parseTokenMM.exec(dateString)
-  if (token) {
-    date = new Date(0)
-    month = parseInt(token[1], 10) - 1
-    date.setUTCFullYear(year, month)
-    return date
-  }
-
-  // YYYY-DDD or YYYYDDD
-  token = parseTokenDDD.exec(dateString)
-  if (token) {
-    date = new Date(0)
-    var dayOfYear = parseInt(token[1], 10)
-    date.setUTCFullYear(year, 0, dayOfYear)
-    return date
-  }
-
-  // YYYY-MM-DD or YYYYMMDD
-  token = parseTokenMMDD.exec(dateString)
-  if (token) {
-    date = new Date(0)
-    month = parseInt(token[1], 10) - 1
-    var day = parseInt(token[2], 10)
-    date.setUTCFullYear(year, month, day)
-    return date
-  }
-
-  // YYYY-Www or YYYYWww
-  token = parseTokenWww.exec(dateString)
-  if (token) {
-    week = parseInt(token[1], 10) - 1
-    return dayOfISOYear(year, week)
-  }
-
-  // YYYY-Www-D or YYYYWwwD
-  token = parseTokenWwwD.exec(dateString)
-  if (token) {
-    week = parseInt(token[1], 10) - 1
-    var dayOfWeek = parseInt(token[2], 10) - 1
-    return dayOfISOYear(year, week, dayOfWeek)
-  }
-
-  // Invalid ISO-formatted date
-  return null
-}
-
-function parseTime (timeString) {
-  var token
-  var hours
-  var minutes
-
-  // hh
-  token = parseTokenHH.exec(timeString)
-  if (token) {
-    hours = parseFloat(token[1].replace(',', '.'))
-    return (hours % 24) * MILLISECONDS_IN_HOUR
-  }
-
-  // hh:mm or hhmm
-  token = parseTokenHHMM.exec(timeString)
-  if (token) {
-    hours = parseInt(token[1], 10)
-    minutes = parseFloat(token[2].replace(',', '.'))
-    return (hours % 24) * MILLISECONDS_IN_HOUR +
-      minutes * MILLISECONDS_IN_MINUTE
-  }
-
-  // hh:mm:ss or hhmmss
-  token = parseTokenHHMMSS.exec(timeString)
-  if (token) {
-    hours = parseInt(token[1], 10)
-    minutes = parseInt(token[2], 10)
-    var seconds = parseFloat(token[3].replace(',', '.'))
-    return (hours % 24) * MILLISECONDS_IN_HOUR +
-      minutes * MILLISECONDS_IN_MINUTE +
-      seconds * 1000
-  }
-
-  // Invalid ISO-formatted time
-  return null
-}
-
-function parseTimezone (timezoneString) {
-  var token
-  var absoluteOffset
-
-  // Z
-  token = parseTokenTimezoneZ.exec(timezoneString)
-  if (token) {
-    return 0
-  }
-
-  // ±hh
-  token = parseTokenTimezoneHH.exec(timezoneString)
-  if (token) {
-    absoluteOffset = parseInt(token[2], 10) * 60
-    return (token[1] === '+') ? -absoluteOffset : absoluteOffset
-  }
-
-  // ±hh:mm or ±hhmm
-  token = parseTokenTimezoneHHMM.exec(timezoneString)
-  if (token) {
-    absoluteOffset = parseInt(token[2], 10) * 60 + parseInt(token[3], 10)
-    return (token[1] === '+') ? -absoluteOffset : absoluteOffset
-  }
-
-  return 0
-}
-
-function dayOfISOYear (isoYear, week, day) {
-  week = week || 0
-  day = day || 0
-  var date = new Date(0)
-  date.setUTCFullYear(isoYear, 0, 4)
-  var fourthOfJanuaryDay = date.getUTCDay() || 7
-  var diff = week * 7 + day + 1 - fourthOfJanuaryDay
-  date.setUTCDate(date.getUTCDate() + diff)
-  return date
-}
-
-module.exports = parse
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/set_date/index.js":
-/*!*************************************************!*\
-  !*** ./node_modules/date-fns/set_date/index.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Day Helpers
- * @summary Set the day of the month to the given date.
- *
- * @description
- * Set the day of the month to the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} dayOfMonth - the day of the month of the new date
- * @returns {Date} the new date with the day of the month setted
- *
- * @example
- * // Set the 30th day of the month to 1 September 2014:
- * var result = setDate(new Date(2014, 8, 1), 30)
- * //=> Tue Sep 30 2014 00:00:00
- */
-function setDate (dirtyDate, dirtyDayOfMonth) {
-  var date = parse(dirtyDate)
-  var dayOfMonth = Number(dirtyDayOfMonth)
-  date.setDate(dayOfMonth)
-  return date
-}
-
-module.exports = setDate
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/set_day/index.js":
-/*!************************************************!*\
-  !*** ./node_modules/date-fns/set_day/index.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-var addDays = __webpack_require__(/*! ../add_days/index.js */ "./node_modules/date-fns/add_days/index.js")
-
-/**
- * @category Weekday Helpers
- * @summary Set the day of the week to the given date.
- *
- * @description
- * Set the day of the week to the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} day - the day of the week of the new date
- * @param {Object} [options] - the object with options
- * @param {Number} [options.weekStartsOn=0] - the index of the first day of the week (0 - Sunday)
- * @returns {Date} the new date with the day of the week setted
- *
- * @example
- * // Set Sunday to 1 September 2014:
- * var result = setDay(new Date(2014, 8, 1), 0)
- * //=> Sun Aug 31 2014 00:00:00
- *
- * @example
- * // If week starts with Monday, set Sunday to 1 September 2014:
- * var result = setDay(new Date(2014, 8, 1), 0, {weekStartsOn: 1})
- * //=> Sun Sep 07 2014 00:00:00
- */
-function setDay (dirtyDate, dirtyDay, dirtyOptions) {
-  var weekStartsOn = dirtyOptions ? (Number(dirtyOptions.weekStartsOn) || 0) : 0
-  var date = parse(dirtyDate)
-  var day = Number(dirtyDay)
-  var currentDay = date.getDay()
-
-  var remainder = day % 7
-  var dayIndex = (remainder + 7) % 7
-
-  var diff = (dayIndex < weekStartsOn ? 7 : 0) + day - currentDay
-  return addDays(date, diff)
-}
-
-module.exports = setDay
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/set_day_of_year/index.js":
-/*!********************************************************!*\
-  !*** ./node_modules/date-fns/set_day_of_year/index.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Day Helpers
- * @summary Set the day of the year to the given date.
- *
- * @description
- * Set the day of the year to the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} dayOfYear - the day of the year of the new date
- * @returns {Date} the new date with the day of the year setted
- *
- * @example
- * // Set the 2nd day of the year to 2 July 2014:
- * var result = setDayOfYear(new Date(2014, 6, 2), 2)
- * //=> Thu Jan 02 2014 00:00:00
- */
-function setDayOfYear (dirtyDate, dirtyDayOfYear) {
-  var date = parse(dirtyDate)
-  var dayOfYear = Number(dirtyDayOfYear)
-  date.setMonth(0)
-  date.setDate(dayOfYear)
-  return date
-}
-
-module.exports = setDayOfYear
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/set_hours/index.js":
-/*!**************************************************!*\
-  !*** ./node_modules/date-fns/set_hours/index.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Hour Helpers
- * @summary Set the hours to the given date.
- *
- * @description
- * Set the hours to the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} hours - the hours of the new date
- * @returns {Date} the new date with the hours setted
- *
- * @example
- * // Set 4 hours to 1 September 2014 11:30:00:
- * var result = setHours(new Date(2014, 8, 1, 11, 30), 4)
- * //=> Mon Sep 01 2014 04:30:00
- */
-function setHours (dirtyDate, dirtyHours) {
-  var date = parse(dirtyDate)
-  var hours = Number(dirtyHours)
-  date.setHours(hours)
-  return date
-}
-
-module.exports = setHours
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/set_iso_day/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/date-fns/set_iso_day/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-var addDays = __webpack_require__(/*! ../add_days/index.js */ "./node_modules/date-fns/add_days/index.js")
-var getISODay = __webpack_require__(/*! ../get_iso_day/index.js */ "./node_modules/date-fns/get_iso_day/index.js")
-
-/**
- * @category Weekday Helpers
- * @summary Set the day of the ISO week to the given date.
- *
- * @description
- * Set the day of the ISO week to the given date.
- * ISO week starts with Monday.
- * 7 is the index of Sunday, 1 is the index of Monday etc.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} day - the day of the ISO week of the new date
- * @returns {Date} the new date with the day of the ISO week setted
- *
- * @example
- * // Set Sunday to 1 September 2014:
- * var result = setISODay(new Date(2014, 8, 1), 7)
- * //=> Sun Sep 07 2014 00:00:00
- */
-function setISODay (dirtyDate, dirtyDay) {
-  var date = parse(dirtyDate)
-  var day = Number(dirtyDay)
-  var currentDay = getISODay(date)
-  var diff = day - currentDay
-  return addDays(date, diff)
-}
-
-module.exports = setISODay
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/set_iso_week/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/date-fns/set_iso_week/index.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-var getISOWeek = __webpack_require__(/*! ../get_iso_week/index.js */ "./node_modules/date-fns/get_iso_week/index.js")
-
-/**
- * @category ISO Week Helpers
- * @summary Set the ISO week to the given date.
- *
- * @description
- * Set the ISO week to the given date, saving the weekday number.
- *
- * ISO week-numbering year: http://en.wikipedia.org/wiki/ISO_week_date
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} isoWeek - the ISO week of the new date
- * @returns {Date} the new date with the ISO week setted
- *
- * @example
- * // Set the 53rd ISO week to 7 August 2004:
- * var result = setISOWeek(new Date(2004, 7, 7), 53)
- * //=> Sat Jan 01 2005 00:00:00
- */
-function setISOWeek (dirtyDate, dirtyISOWeek) {
-  var date = parse(dirtyDate)
-  var isoWeek = Number(dirtyISOWeek)
-  var diff = getISOWeek(date) - isoWeek
-  date.setDate(date.getDate() - diff * 7)
-  return date
-}
-
-module.exports = setISOWeek
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/set_iso_year/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/date-fns/set_iso_year/index.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-var startOfISOYear = __webpack_require__(/*! ../start_of_iso_year/index.js */ "./node_modules/date-fns/start_of_iso_year/index.js")
-var differenceInCalendarDays = __webpack_require__(/*! ../difference_in_calendar_days/index.js */ "./node_modules/date-fns/difference_in_calendar_days/index.js")
-
-/**
- * @category ISO Week-Numbering Year Helpers
- * @summary Set the ISO week-numbering year to the given date.
- *
- * @description
- * Set the ISO week-numbering year to the given date,
- * saving the week number and the weekday number.
- *
- * ISO week-numbering year: http://en.wikipedia.org/wiki/ISO_week_date
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} isoYear - the ISO week-numbering year of the new date
- * @returns {Date} the new date with the ISO week-numbering year setted
- *
- * @example
- * // Set ISO week-numbering year 2007 to 29 December 2008:
- * var result = setISOYear(new Date(2008, 11, 29), 2007)
- * //=> Mon Jan 01 2007 00:00:00
- */
-function setISOYear (dirtyDate, dirtyISOYear) {
-  var date = parse(dirtyDate)
-  var isoYear = Number(dirtyISOYear)
-  var diff = differenceInCalendarDays(date, startOfISOYear(date))
-  var fourthOfJanuary = new Date(0)
-  fourthOfJanuary.setFullYear(isoYear, 0, 4)
-  fourthOfJanuary.setHours(0, 0, 0, 0)
-  date = startOfISOYear(fourthOfJanuary)
-  date.setDate(date.getDate() + diff)
-  return date
-}
-
-module.exports = setISOYear
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/set_milliseconds/index.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/date-fns/set_milliseconds/index.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Millisecond Helpers
- * @summary Set the milliseconds to the given date.
- *
- * @description
- * Set the milliseconds to the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} milliseconds - the milliseconds of the new date
- * @returns {Date} the new date with the milliseconds setted
- *
- * @example
- * // Set 300 milliseconds to 1 September 2014 11:30:40.500:
- * var result = setMilliseconds(new Date(2014, 8, 1, 11, 30, 40, 500), 300)
- * //=> Mon Sep 01 2014 11:30:40.300
- */
-function setMilliseconds (dirtyDate, dirtyMilliseconds) {
-  var date = parse(dirtyDate)
-  var milliseconds = Number(dirtyMilliseconds)
-  date.setMilliseconds(milliseconds)
-  return date
-}
-
-module.exports = setMilliseconds
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/set_minutes/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/date-fns/set_minutes/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Minute Helpers
- * @summary Set the minutes to the given date.
- *
- * @description
- * Set the minutes to the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} minutes - the minutes of the new date
- * @returns {Date} the new date with the minutes setted
- *
- * @example
- * // Set 45 minutes to 1 September 2014 11:30:40:
- * var result = setMinutes(new Date(2014, 8, 1, 11, 30, 40), 45)
- * //=> Mon Sep 01 2014 11:45:40
- */
-function setMinutes (dirtyDate, dirtyMinutes) {
-  var date = parse(dirtyDate)
-  var minutes = Number(dirtyMinutes)
-  date.setMinutes(minutes)
-  return date
-}
-
-module.exports = setMinutes
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/set_month/index.js":
-/*!**************************************************!*\
-  !*** ./node_modules/date-fns/set_month/index.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-var getDaysInMonth = __webpack_require__(/*! ../get_days_in_month/index.js */ "./node_modules/date-fns/get_days_in_month/index.js")
-
-/**
- * @category Month Helpers
- * @summary Set the month to the given date.
- *
- * @description
- * Set the month to the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} month - the month of the new date
- * @returns {Date} the new date with the month setted
- *
- * @example
- * // Set February to 1 September 2014:
- * var result = setMonth(new Date(2014, 8, 1), 1)
- * //=> Sat Feb 01 2014 00:00:00
- */
-function setMonth (dirtyDate, dirtyMonth) {
-  var date = parse(dirtyDate)
-  var month = Number(dirtyMonth)
-  var year = date.getFullYear()
-  var day = date.getDate()
-
-  var dateWithDesiredMonth = new Date(0)
-  dateWithDesiredMonth.setFullYear(year, month, 15)
-  dateWithDesiredMonth.setHours(0, 0, 0, 0)
-  var daysInMonth = getDaysInMonth(dateWithDesiredMonth)
-  // Set the last day of the new month
-  // if the original date was the last day of the longer month
-  date.setMonth(month, Math.min(day, daysInMonth))
-  return date
-}
-
-module.exports = setMonth
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/set_quarter/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/date-fns/set_quarter/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-var setMonth = __webpack_require__(/*! ../set_month/index.js */ "./node_modules/date-fns/set_month/index.js")
-
-/**
- * @category Quarter Helpers
- * @summary Set the year quarter to the given date.
- *
- * @description
- * Set the year quarter to the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} quarter - the quarter of the new date
- * @returns {Date} the new date with the quarter setted
- *
- * @example
- * // Set the 2nd quarter to 2 July 2014:
- * var result = setQuarter(new Date(2014, 6, 2), 2)
- * //=> Wed Apr 02 2014 00:00:00
- */
-function setQuarter (dirtyDate, dirtyQuarter) {
-  var date = parse(dirtyDate)
-  var quarter = Number(dirtyQuarter)
-  var oldQuarter = Math.floor(date.getMonth() / 3) + 1
-  var diff = quarter - oldQuarter
-  return setMonth(date, date.getMonth() + diff * 3)
-}
-
-module.exports = setQuarter
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/set_seconds/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/date-fns/set_seconds/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Second Helpers
- * @summary Set the seconds to the given date.
- *
- * @description
- * Set the seconds to the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} seconds - the seconds of the new date
- * @returns {Date} the new date with the seconds setted
- *
- * @example
- * // Set 45 seconds to 1 September 2014 11:30:40:
- * var result = setSeconds(new Date(2014, 8, 1, 11, 30, 40), 45)
- * //=> Mon Sep 01 2014 11:30:45
- */
-function setSeconds (dirtyDate, dirtySeconds) {
-  var date = parse(dirtyDate)
-  var seconds = Number(dirtySeconds)
-  date.setSeconds(seconds)
-  return date
-}
-
-module.exports = setSeconds
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/set_year/index.js":
-/*!*************************************************!*\
-  !*** ./node_modules/date-fns/set_year/index.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Year Helpers
- * @summary Set the year to the given date.
- *
- * @description
- * Set the year to the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} year - the year of the new date
- * @returns {Date} the new date with the year setted
- *
- * @example
- * // Set year 2013 to 1 September 2014:
- * var result = setYear(new Date(2014, 8, 1), 2013)
- * //=> Sun Sep 01 2013 00:00:00
- */
-function setYear (dirtyDate, dirtyYear) {
-  var date = parse(dirtyDate)
-  var year = Number(dirtyYear)
-  date.setFullYear(year)
-  return date
-}
-
-module.exports = setYear
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/start_of_day/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/date-fns/start_of_day/index.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Day Helpers
- * @summary Return the start of a day for the given date.
- *
- * @description
- * Return the start of a day for the given date.
- * The result will be in the local timezone.
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the start of a day
- *
- * @example
- * // The start of a day for 2 September 2014 11:55:00:
- * var result = startOfDay(new Date(2014, 8, 2, 11, 55, 0))
- * //=> Tue Sep 02 2014 00:00:00
- */
-function startOfDay (dirtyDate) {
-  var date = parse(dirtyDate)
-  date.setHours(0, 0, 0, 0)
-  return date
-}
-
-module.exports = startOfDay
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/start_of_hour/index.js":
-/*!******************************************************!*\
-  !*** ./node_modules/date-fns/start_of_hour/index.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Hour Helpers
- * @summary Return the start of an hour for the given date.
- *
- * @description
- * Return the start of an hour for the given date.
- * The result will be in the local timezone.
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the start of an hour
- *
- * @example
- * // The start of an hour for 2 September 2014 11:55:00:
- * var result = startOfHour(new Date(2014, 8, 2, 11, 55))
- * //=> Tue Sep 02 2014 11:00:00
- */
-function startOfHour (dirtyDate) {
-  var date = parse(dirtyDate)
-  date.setMinutes(0, 0, 0)
-  return date
-}
-
-module.exports = startOfHour
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/start_of_iso_week/index.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/date-fns/start_of_iso_week/index.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var startOfWeek = __webpack_require__(/*! ../start_of_week/index.js */ "./node_modules/date-fns/start_of_week/index.js")
-
-/**
- * @category ISO Week Helpers
- * @summary Return the start of an ISO week for the given date.
- *
- * @description
- * Return the start of an ISO week for the given date.
- * The result will be in the local timezone.
- *
- * ISO week-numbering year: http://en.wikipedia.org/wiki/ISO_week_date
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the start of an ISO week
- *
- * @example
- * // The start of an ISO week for 2 September 2014 11:55:00:
- * var result = startOfISOWeek(new Date(2014, 8, 2, 11, 55, 0))
- * //=> Mon Sep 01 2014 00:00:00
- */
-function startOfISOWeek (dirtyDate) {
-  return startOfWeek(dirtyDate, {weekStartsOn: 1})
-}
-
-module.exports = startOfISOWeek
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/start_of_iso_year/index.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/date-fns/start_of_iso_year/index.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var getISOYear = __webpack_require__(/*! ../get_iso_year/index.js */ "./node_modules/date-fns/get_iso_year/index.js")
-var startOfISOWeek = __webpack_require__(/*! ../start_of_iso_week/index.js */ "./node_modules/date-fns/start_of_iso_week/index.js")
-
-/**
- * @category ISO Week-Numbering Year Helpers
- * @summary Return the start of an ISO week-numbering year for the given date.
- *
- * @description
- * Return the start of an ISO week-numbering year,
- * which always starts 3 days before the year's first Thursday.
- * The result will be in the local timezone.
- *
- * ISO week-numbering year: http://en.wikipedia.org/wiki/ISO_week_date
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the start of an ISO year
- *
- * @example
- * // The start of an ISO week-numbering year for 2 July 2005:
- * var result = startOfISOYear(new Date(2005, 6, 2))
- * //=> Mon Jan 03 2005 00:00:00
- */
-function startOfISOYear (dirtyDate) {
-  var year = getISOYear(dirtyDate)
-  var fourthOfJanuary = new Date(0)
-  fourthOfJanuary.setFullYear(year, 0, 4)
-  fourthOfJanuary.setHours(0, 0, 0, 0)
-  var date = startOfISOWeek(fourthOfJanuary)
-  return date
-}
-
-module.exports = startOfISOYear
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/start_of_minute/index.js":
-/*!********************************************************!*\
-  !*** ./node_modules/date-fns/start_of_minute/index.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Minute Helpers
- * @summary Return the start of a minute for the given date.
- *
- * @description
- * Return the start of a minute for the given date.
- * The result will be in the local timezone.
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the start of a minute
- *
- * @example
- * // The start of a minute for 1 December 2014 22:15:45.400:
- * var result = startOfMinute(new Date(2014, 11, 1, 22, 15, 45, 400))
- * //=> Mon Dec 01 2014 22:15:00
- */
-function startOfMinute (dirtyDate) {
-  var date = parse(dirtyDate)
-  date.setSeconds(0, 0)
-  return date
-}
-
-module.exports = startOfMinute
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/start_of_month/index.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/date-fns/start_of_month/index.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Month Helpers
- * @summary Return the start of a month for the given date.
- *
- * @description
- * Return the start of a month for the given date.
- * The result will be in the local timezone.
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the start of a month
- *
- * @example
- * // The start of a month for 2 September 2014 11:55:00:
- * var result = startOfMonth(new Date(2014, 8, 2, 11, 55, 0))
- * //=> Mon Sep 01 2014 00:00:00
- */
-function startOfMonth (dirtyDate) {
-  var date = parse(dirtyDate)
-  date.setDate(1)
-  date.setHours(0, 0, 0, 0)
-  return date
-}
-
-module.exports = startOfMonth
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/start_of_quarter/index.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/date-fns/start_of_quarter/index.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Quarter Helpers
- * @summary Return the start of a year quarter for the given date.
- *
- * @description
- * Return the start of a year quarter for the given date.
- * The result will be in the local timezone.
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the start of a quarter
- *
- * @example
- * // The start of a quarter for 2 September 2014 11:55:00:
- * var result = startOfQuarter(new Date(2014, 8, 2, 11, 55, 0))
- * //=> Tue Jul 01 2014 00:00:00
- */
-function startOfQuarter (dirtyDate) {
-  var date = parse(dirtyDate)
-  var currentMonth = date.getMonth()
-  var month = currentMonth - currentMonth % 3
-  date.setMonth(month, 1)
-  date.setHours(0, 0, 0, 0)
-  return date
-}
-
-module.exports = startOfQuarter
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/start_of_second/index.js":
-/*!********************************************************!*\
-  !*** ./node_modules/date-fns/start_of_second/index.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Second Helpers
- * @summary Return the start of a second for the given date.
- *
- * @description
- * Return the start of a second for the given date.
- * The result will be in the local timezone.
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the start of a second
- *
- * @example
- * // The start of a second for 1 December 2014 22:15:45.400:
- * var result = startOfSecond(new Date(2014, 11, 1, 22, 15, 45, 400))
- * //=> Mon Dec 01 2014 22:15:45.000
- */
-function startOfSecond (dirtyDate) {
-  var date = parse(dirtyDate)
-  date.setMilliseconds(0)
-  return date
-}
-
-module.exports = startOfSecond
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/start_of_today/index.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/date-fns/start_of_today/index.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var startOfDay = __webpack_require__(/*! ../start_of_day/index.js */ "./node_modules/date-fns/start_of_day/index.js")
-
-/**
- * @category Day Helpers
- * @summary Return the start of today.
- *
- * @description
- * Return the start of today.
- *
- * @returns {Date} the start of today
- *
- * @example
- * // If today is 6 October 2014:
- * var result = startOfToday()
- * //=> Mon Oct 6 2014 00:00:00
- */
-function startOfToday () {
-  return startOfDay(new Date())
-}
-
-module.exports = startOfToday
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/start_of_tomorrow/index.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/date-fns/start_of_tomorrow/index.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/**
- * @category Day Helpers
- * @summary Return the start of tomorrow.
- *
- * @description
- * Return the start of tomorrow.
- *
- * @returns {Date} the start of tomorrow
- *
- * @example
- * // If today is 6 October 2014:
- * var result = startOfTomorrow()
- * //=> Tue Oct 7 2014 00:00:00
- */
-function startOfTomorrow () {
-  var now = new Date()
-  var year = now.getFullYear()
-  var month = now.getMonth()
-  var day = now.getDate()
-
-  var date = new Date(0)
-  date.setFullYear(year, month, day + 1)
-  date.setHours(0, 0, 0, 0)
-  return date
-}
-
-module.exports = startOfTomorrow
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/start_of_week/index.js":
-/*!******************************************************!*\
-  !*** ./node_modules/date-fns/start_of_week/index.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Week Helpers
- * @summary Return the start of a week for the given date.
- *
- * @description
- * Return the start of a week for the given date.
- * The result will be in the local timezone.
- *
- * @param {Date|String|Number} date - the original date
- * @param {Object} [options] - the object with options
- * @param {Number} [options.weekStartsOn=0] - the index of the first day of the week (0 - Sunday)
- * @returns {Date} the start of a week
- *
- * @example
- * // The start of a week for 2 September 2014 11:55:00:
- * var result = startOfWeek(new Date(2014, 8, 2, 11, 55, 0))
- * //=> Sun Aug 31 2014 00:00:00
- *
- * @example
- * // If the week starts on Monday, the start of the week for 2 September 2014 11:55:00:
- * var result = startOfWeek(new Date(2014, 8, 2, 11, 55, 0), {weekStartsOn: 1})
- * //=> Mon Sep 01 2014 00:00:00
- */
-function startOfWeek (dirtyDate, dirtyOptions) {
-  var weekStartsOn = dirtyOptions ? (Number(dirtyOptions.weekStartsOn) || 0) : 0
-
-  var date = parse(dirtyDate)
-  var day = date.getDay()
-  var diff = (day < weekStartsOn ? 7 : 0) + day - weekStartsOn
-
-  date.setDate(date.getDate() - diff)
-  date.setHours(0, 0, 0, 0)
-  return date
-}
-
-module.exports = startOfWeek
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/start_of_year/index.js":
-/*!******************************************************!*\
-  !*** ./node_modules/date-fns/start_of_year/index.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
-
-/**
- * @category Year Helpers
- * @summary Return the start of a year for the given date.
- *
- * @description
- * Return the start of a year for the given date.
- * The result will be in the local timezone.
- *
- * @param {Date|String|Number} date - the original date
- * @returns {Date} the start of a year
- *
- * @example
- * // The start of a year for 2 September 2014 11:55:00:
- * var result = startOfYear(new Date(2014, 8, 2, 11, 55, 00))
- * //=> Wed Jan 01 2014 00:00:00
- */
-function startOfYear (dirtyDate) {
-  var cleanDate = parse(dirtyDate)
-  var date = new Date(0)
-  date.setFullYear(cleanDate.getFullYear(), 0, 1)
-  date.setHours(0, 0, 0, 0)
-  return date
-}
-
-module.exports = startOfYear
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/start_of_yesterday/index.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/date-fns/start_of_yesterday/index.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/**
- * @category Day Helpers
- * @summary Return the start of yesterday.
- *
- * @description
- * Return the start of yesterday.
- *
- * @returns {Date} the start of yesterday
- *
- * @example
- * // If today is 6 October 2014:
- * var result = startOfYesterday()
- * //=> Sun Oct 5 2014 00:00:00
- */
-function startOfYesterday () {
-  var now = new Date()
-  var year = now.getFullYear()
-  var month = now.getMonth()
-  var day = now.getDate()
-
-  var date = new Date(0)
-  date.setFullYear(year, month, day - 1)
-  date.setHours(0, 0, 0, 0)
-  return date
-}
-
-module.exports = startOfYesterday
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/sub_days/index.js":
-/*!*************************************************!*\
-  !*** ./node_modules/date-fns/sub_days/index.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var addDays = __webpack_require__(/*! ../add_days/index.js */ "./node_modules/date-fns/add_days/index.js")
-
-/**
- * @category Day Helpers
- * @summary Subtract the specified number of days from the given date.
- *
- * @description
- * Subtract the specified number of days from the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} amount - the amount of days to be subtracted
- * @returns {Date} the new date with the days subtracted
- *
- * @example
- * // Subtract 10 days from 1 September 2014:
- * var result = subDays(new Date(2014, 8, 1), 10)
- * //=> Fri Aug 22 2014 00:00:00
- */
-function subDays (dirtyDate, dirtyAmount) {
-  var amount = Number(dirtyAmount)
-  return addDays(dirtyDate, -amount)
-}
-
-module.exports = subDays
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/sub_hours/index.js":
-/*!**************************************************!*\
-  !*** ./node_modules/date-fns/sub_hours/index.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var addHours = __webpack_require__(/*! ../add_hours/index.js */ "./node_modules/date-fns/add_hours/index.js")
-
-/**
- * @category Hour Helpers
- * @summary Subtract the specified number of hours from the given date.
- *
- * @description
- * Subtract the specified number of hours from the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} amount - the amount of hours to be subtracted
- * @returns {Date} the new date with the hours subtracted
- *
- * @example
- * // Subtract 2 hours from 11 July 2014 01:00:00:
- * var result = subHours(new Date(2014, 6, 11, 1, 0), 2)
- * //=> Thu Jul 10 2014 23:00:00
- */
-function subHours (dirtyDate, dirtyAmount) {
-  var amount = Number(dirtyAmount)
-  return addHours(dirtyDate, -amount)
-}
-
-module.exports = subHours
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/sub_iso_years/index.js":
-/*!******************************************************!*\
-  !*** ./node_modules/date-fns/sub_iso_years/index.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var addISOYears = __webpack_require__(/*! ../add_iso_years/index.js */ "./node_modules/date-fns/add_iso_years/index.js")
-
-/**
- * @category ISO Week-Numbering Year Helpers
- * @summary Subtract the specified number of ISO week-numbering years from the given date.
- *
- * @description
- * Subtract the specified number of ISO week-numbering years from the given date.
- *
- * ISO week-numbering year: http://en.wikipedia.org/wiki/ISO_week_date
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} amount - the amount of ISO week-numbering years to be subtracted
- * @returns {Date} the new date with the ISO week-numbering years subtracted
- *
- * @example
- * // Subtract 5 ISO week-numbering years from 1 September 2014:
- * var result = subISOYears(new Date(2014, 8, 1), 5)
- * //=> Mon Aug 31 2009 00:00:00
- */
-function subISOYears (dirtyDate, dirtyAmount) {
-  var amount = Number(dirtyAmount)
-  return addISOYears(dirtyDate, -amount)
-}
-
-module.exports = subISOYears
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/sub_milliseconds/index.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/date-fns/sub_milliseconds/index.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var addMilliseconds = __webpack_require__(/*! ../add_milliseconds/index.js */ "./node_modules/date-fns/add_milliseconds/index.js")
-
-/**
- * @category Millisecond Helpers
- * @summary Subtract the specified number of milliseconds from the given date.
- *
- * @description
- * Subtract the specified number of milliseconds from the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} amount - the amount of milliseconds to be subtracted
- * @returns {Date} the new date with the milliseconds subtracted
- *
- * @example
- * // Subtract 750 milliseconds from 10 July 2014 12:45:30.000:
- * var result = subMilliseconds(new Date(2014, 6, 10, 12, 45, 30, 0), 750)
- * //=> Thu Jul 10 2014 12:45:29.250
- */
-function subMilliseconds (dirtyDate, dirtyAmount) {
-  var amount = Number(dirtyAmount)
-  return addMilliseconds(dirtyDate, -amount)
-}
-
-module.exports = subMilliseconds
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/sub_minutes/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/date-fns/sub_minutes/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var addMinutes = __webpack_require__(/*! ../add_minutes/index.js */ "./node_modules/date-fns/add_minutes/index.js")
-
-/**
- * @category Minute Helpers
- * @summary Subtract the specified number of minutes from the given date.
- *
- * @description
- * Subtract the specified number of minutes from the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} amount - the amount of minutes to be subtracted
- * @returns {Date} the new date with the mintues subtracted
- *
- * @example
- * // Subtract 30 minutes from 10 July 2014 12:00:00:
- * var result = subMinutes(new Date(2014, 6, 10, 12, 0), 30)
- * //=> Thu Jul 10 2014 11:30:00
- */
-function subMinutes (dirtyDate, dirtyAmount) {
-  var amount = Number(dirtyAmount)
-  return addMinutes(dirtyDate, -amount)
-}
-
-module.exports = subMinutes
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/sub_months/index.js":
-/*!***************************************************!*\
-  !*** ./node_modules/date-fns/sub_months/index.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var addMonths = __webpack_require__(/*! ../add_months/index.js */ "./node_modules/date-fns/add_months/index.js")
-
-/**
- * @category Month Helpers
- * @summary Subtract the specified number of months from the given date.
- *
- * @description
- * Subtract the specified number of months from the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} amount - the amount of months to be subtracted
- * @returns {Date} the new date with the months subtracted
- *
- * @example
- * // Subtract 5 months from 1 February 2015:
- * var result = subMonths(new Date(2015, 1, 1), 5)
- * //=> Mon Sep 01 2014 00:00:00
- */
-function subMonths (dirtyDate, dirtyAmount) {
-  var amount = Number(dirtyAmount)
-  return addMonths(dirtyDate, -amount)
-}
-
-module.exports = subMonths
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/sub_quarters/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/date-fns/sub_quarters/index.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var addQuarters = __webpack_require__(/*! ../add_quarters/index.js */ "./node_modules/date-fns/add_quarters/index.js")
-
-/**
- * @category Quarter Helpers
- * @summary Subtract the specified number of year quarters from the given date.
- *
- * @description
- * Subtract the specified number of year quarters from the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} amount - the amount of quarters to be subtracted
- * @returns {Date} the new date with the quarters subtracted
- *
- * @example
- * // Subtract 3 quarters from 1 September 2014:
- * var result = subQuarters(new Date(2014, 8, 1), 3)
- * //=> Sun Dec 01 2013 00:00:00
- */
-function subQuarters (dirtyDate, dirtyAmount) {
-  var amount = Number(dirtyAmount)
-  return addQuarters(dirtyDate, -amount)
-}
-
-module.exports = subQuarters
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/sub_seconds/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/date-fns/sub_seconds/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var addSeconds = __webpack_require__(/*! ../add_seconds/index.js */ "./node_modules/date-fns/add_seconds/index.js")
-
-/**
- * @category Second Helpers
- * @summary Subtract the specified number of seconds from the given date.
- *
- * @description
- * Subtract the specified number of seconds from the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} amount - the amount of seconds to be subtracted
- * @returns {Date} the new date with the seconds subtracted
- *
- * @example
- * // Subtract 30 seconds from 10 July 2014 12:45:00:
- * var result = subSeconds(new Date(2014, 6, 10, 12, 45, 0), 30)
- * //=> Thu Jul 10 2014 12:44:30
- */
-function subSeconds (dirtyDate, dirtyAmount) {
-  var amount = Number(dirtyAmount)
-  return addSeconds(dirtyDate, -amount)
-}
-
-module.exports = subSeconds
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/sub_weeks/index.js":
-/*!**************************************************!*\
-  !*** ./node_modules/date-fns/sub_weeks/index.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var addWeeks = __webpack_require__(/*! ../add_weeks/index.js */ "./node_modules/date-fns/add_weeks/index.js")
-
-/**
- * @category Week Helpers
- * @summary Subtract the specified number of weeks from the given date.
- *
- * @description
- * Subtract the specified number of weeks from the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} amount - the amount of weeks to be subtracted
- * @returns {Date} the new date with the weeks subtracted
- *
- * @example
- * // Subtract 4 weeks from 1 September 2014:
- * var result = subWeeks(new Date(2014, 8, 1), 4)
- * //=> Mon Aug 04 2014 00:00:00
- */
-function subWeeks (dirtyDate, dirtyAmount) {
-  var amount = Number(dirtyAmount)
-  return addWeeks(dirtyDate, -amount)
-}
-
-module.exports = subWeeks
-
-
-/***/ }),
-
-/***/ "./node_modules/date-fns/sub_years/index.js":
-/*!**************************************************!*\
-  !*** ./node_modules/date-fns/sub_years/index.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var addYears = __webpack_require__(/*! ../add_years/index.js */ "./node_modules/date-fns/add_years/index.js")
-
-/**
- * @category Year Helpers
- * @summary Subtract the specified number of years from the given date.
- *
- * @description
- * Subtract the specified number of years from the given date.
- *
- * @param {Date|String|Number} date - the date to be changed
- * @param {Number} amount - the amount of years to be subtracted
- * @returns {Date} the new date with the years subtracted
- *
- * @example
- * // Subtract 5 years from 1 September 2014:
- * var result = subYears(new Date(2014, 8, 1), 5)
- * //=> Tue Sep 01 2009 00:00:00
- */
-function subYears (dirtyDate, dirtyAmount) {
-  var amount = Number(dirtyAmount)
-  return addYears(dirtyDate, -amount)
-}
-
-module.exports = subYears
-
-
-/***/ }),
-
 /***/ "./node_modules/fbjs/lib/ErrorUtils.js":
 /*!*********************************************!*\
   !*** ./node_modules/fbjs/lib/ErrorUtils.js ***!
@@ -20975,86 +14361,6 @@ module.exports = warning;
 
 /***/ }),
 
-/***/ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js ***!
-  \**********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Copyright 2015, Yahoo! Inc.
- * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
- */
-var REACT_STATICS = {
-    childContextTypes: true,
-    contextTypes: true,
-    defaultProps: true,
-    displayName: true,
-    getDefaultProps: true,
-    getDerivedStateFromProps: true,
-    mixins: true,
-    propTypes: true,
-    type: true
-};
-
-var KNOWN_STATICS = {
-    name: true,
-    length: true,
-    prototype: true,
-    caller: true,
-    callee: true,
-    arguments: true,
-    arity: true
-};
-
-var defineProperty = Object.defineProperty;
-var getOwnPropertyNames = Object.getOwnPropertyNames;
-var getOwnPropertySymbols = Object.getOwnPropertySymbols;
-var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
-var getPrototypeOf = Object.getPrototypeOf;
-var objectPrototype = getPrototypeOf && getPrototypeOf(Object);
-
-function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
-    if (typeof sourceComponent !== 'string') { // don't hoist over string (html) components
-
-        if (objectPrototype) {
-            var inheritedComponent = getPrototypeOf(sourceComponent);
-            if (inheritedComponent && inheritedComponent !== objectPrototype) {
-                hoistNonReactStatics(targetComponent, inheritedComponent, blacklist);
-            }
-        }
-
-        var keys = getOwnPropertyNames(sourceComponent);
-
-        if (getOwnPropertySymbols) {
-            keys = keys.concat(getOwnPropertySymbols(sourceComponent));
-        }
-
-        for (var i = 0; i < keys.length; ++i) {
-            var key = keys[i];
-            if (!REACT_STATICS[key] && !KNOWN_STATICS[key] && (!blacklist || !blacklist[key])) {
-                var descriptor = getOwnPropertyDescriptor(sourceComponent, key);
-                try { // Avoid failures from read-only properties
-                    defineProperty(targetComponent, key, descriptor);
-                } catch (e) {}
-            }
-        }
-
-        return targetComponent;
-    }
-
-    return targetComponent;
-}
-
-module.exports = hoistNonReactStatics;
-
-
-/***/ }),
-
 /***/ "./node_modules/memoize-one/dist/memoize-one.esm.js":
 /*!**********************************************************!*\
   !*** ./node_modules/memoize-one/dist/memoize-one.esm.js ***!
@@ -21112,90 +14418,9 @@ function index (resultFn, isEqual) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/lib/EventEmitter.js":
-/*!****************************************************!*\
-  !*** ./node_modules/next/dist/lib/EventEmitter.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _set = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/set */ "./node_modules/@babel/runtime-corejs2/core-js/set.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/createClass.js"));
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/defineProperty.js"));
-
-var EventEmitter =
-/*#__PURE__*/
-function () {
-  function EventEmitter() {
-    (0, _classCallCheck2.default)(this, EventEmitter);
-    (0, _defineProperty2.default)(this, "listeners", {});
-  }
-
-  (0, _createClass2.default)(EventEmitter, [{
-    key: "on",
-    value: function on(event, cb) {
-      if (!this.listeners[event]) {
-        this.listeners[event] = new _set.default();
-      }
-
-      if (this.listeners[event].has(cb)) {
-        throw new Error("The listener already exising in event: ".concat(event));
-      }
-
-      this.listeners[event].add(cb);
-      return this;
-    }
-  }, {
-    key: "emit",
-    value: function emit(event) {
-      for (var _len = arguments.length, data = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-        data[_key - 1] = arguments[_key];
-      }
-
-      var listeners = this.listeners[event];
-      var hasListeners = listeners && listeners.size;
-
-      if (!hasListeners) {
-        return false;
-      }
-
-      listeners.forEach(function (cb) {
-        return cb.apply(void 0, data);
-      }); // eslint-disable-line standard/no-callback-literal
-
-      return true;
-    }
-  }, {
-    key: "off",
-    value: function off(event, cb) {
-      this.listeners[event].delete(cb);
-      return this;
-    }
-  }]);
-  return EventEmitter;
-}();
-
-exports.default = EventEmitter;
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/lib/p-queue.js":
+/***/ "./node_modules/next/dist/lib/dynamic.js":
 /*!***********************************************!*\
-  !*** ./node_modules/next/dist/lib/p-queue.js ***!
+  !*** ./node_modules/next/dist/lib/dynamic.js ***!
   \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -21208,359 +14433,139 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/help
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.noSSR = noSSR;
+exports.default = dynamic;
 
-var _promise = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js"));
+var _keys = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js"));
 
-var _assign = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js"));
+var _objectSpread2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/objectSpread.js"));
 
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js"));
+var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/typeof */ "./node_modules/@babel/runtime-corejs2/helpers/typeof.js"));
 
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/createClass.js"));
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
-// based on https://github.com/sindresorhus/p-queue (MIT)
-// modified for browser support
-var Queue =
-/*#__PURE__*/
-function () {
-  function Queue() {
-    (0, _classCallCheck2.default)(this, Queue);
-    this._queue = [];
-  }
+var _loadable = _interopRequireDefault(__webpack_require__(/*! ./loadable */ "./node_modules/next/dist/lib/loadable.js"));
 
-  (0, _createClass2.default)(Queue, [{
-    key: "enqueue",
-    value: function enqueue(run) {
-      this._queue.push(run);
-    }
-  }, {
-    key: "dequeue",
-    value: function dequeue() {
-      return this._queue.shift();
-    }
-  }, {
-    key: "size",
-    get: function get() {
-      return this._queue.length;
-    }
-  }]);
-  return Queue;
-}();
+var isServerSide = typeof window === 'undefined';
 
-var PQueue =
-/*#__PURE__*/
-function () {
-  function PQueue(opts) {
-    (0, _classCallCheck2.default)(this, PQueue);
-    opts = (0, _assign.default)({
-      concurrency: Infinity,
-      queueClass: Queue
-    }, opts);
+function noSSR(LoadableInitializer, loadableOptions) {
+  // Removing webpack and modules means react-loadable won't try preloading
+  delete loadableOptions.webpack;
+  delete loadableOptions.modules; // This check is neccesary to prevent react-loadable from initializing on the server
 
-    if (opts.concurrency < 1) {
-      throw new TypeError('Expected `concurrency` to be a number from 1 and up');
-    }
+  if (!isServerSide) {
+    return LoadableInitializer(loadableOptions);
+  } // This will only be rendered on the server side
 
-    this.queue = new opts.queueClass(); // eslint-disable-line new-cap
 
-    this._pendingCount = 0;
-    this._concurrency = opts.concurrency;
+  return function () {
+    return _react.default.createElement(loadableOptions.loading, {
+      error: null,
+      isLoading: true,
+      pastDelay: false,
+      timedOut: false
+    });
+  };
+}
 
-    this._resolveEmpty = function () {};
-  }
+function DefaultLoading() {
+  return _react.default.createElement("p", null, "loading...");
+}
 
-  (0, _createClass2.default)(PQueue, [{
-    key: "_next",
-    value: function _next() {
-      this._pendingCount--;
+function dynamic(dynamicOptions, options) {
+  var loadableFn = _loadable.default;
+  var loadableOptions = {
+    // A loading component is not required, so we default it
+    loading: function loading(_ref) {
+      var error = _ref.error,
+          isLoading = _ref.isLoading;
 
-      if (this.queue.size > 0) {
-        this.queue.dequeue()();
-      } else {
-        this._resolveEmpty();
+      if (true) {
+        if (isLoading) {
+          return _react.default.createElement(DefaultLoading, null);
+        }
+
+        if (error) {
+          return _react.default.createElement("p", null, error.message, _react.default.createElement("br", null), error.stack);
+        }
       }
-    }
-  }, {
-    key: "add",
-    value: function add(fn, opts) {
-      var _this = this;
 
-      return new _promise.default(function (resolve, reject) {
-        var run = function run() {
-          _this._pendingCount++;
-          fn().then(function (val) {
-            resolve(val);
+      return _react.default.createElement(DefaultLoading, null);
+    } // Support for direct import(), eg: dynamic(import('../hello-world'))
+    // Note that this is only kept for the edge case where someone is passing in a promise as first argument
+    // The react-loadable babel plugin will turn dynamic(import('../hello-world')) into dynamic(() => import('../hello-world'))
+    // To make sure we don't execute the import without rendering first
 
-            _this._next();
-          }, function (err) {
-            reject(err);
+  };
 
-            _this._next();
+  if (typeof dynamicOptions.then === 'function') {
+    loadableOptions.loader = function () {
+      return dynamicOptions;
+    }; // Support for having import as a function, eg: dynamic(() => import('../hello-world'))
+
+  } else if (typeof dynamicOptions === 'function') {
+    loadableOptions.loader = dynamicOptions; // Support for having first argument being options, eg: dynamic({loader: import('../hello-world')})
+  } else if ((0, _typeof2.default)(dynamicOptions) === 'object') {
+    loadableOptions = (0, _objectSpread2.default)({}, loadableOptions, dynamicOptions);
+  } // Support for passing options, eg: dynamic(import('../hello-world'), {loading: () => <p>Loading something</p>})
+
+
+  loadableOptions = (0, _objectSpread2.default)({}, loadableOptions, options); // Support for `render` when using a mapping, eg: `dynamic({ modules: () => {return {HelloWorld: import('../hello-world')}, render(props, loaded) {} } })
+
+  if (dynamicOptions.render) {
+    loadableOptions.render = function (loaded, props) {
+      return dynamicOptions.render(props, loaded);
+    };
+  } // Support for `modules` when using a mapping, eg: `dynamic({ modules: () => {return {HelloWorld: import('../hello-world')}, render(props, loaded) {} } })
+
+
+  if (dynamicOptions.modules) {
+    loadableFn = _loadable.default.Map;
+    var loadModules = {};
+    var modules = dynamicOptions.modules();
+    (0, _keys.default)(modules).forEach(function (key) {
+      var value = modules[key];
+
+      if (typeof value.then === 'function') {
+        loadModules[key] = function () {
+          return value.then(function (mod) {
+            return mod.default || mod;
           });
         };
 
-        if (_this._pendingCount < _this._concurrency) {
-          run();
-        } else {
-          _this.queue.enqueue(run, opts);
-        }
-      });
-    }
-  }, {
-    key: "onEmpty",
-    value: function onEmpty() {
-      var _this2 = this;
-
-      return new _promise.default(function (resolve) {
-        var existingResolve = _this2._resolveEmpty;
-
-        _this2._resolveEmpty = function () {
-          existingResolve();
-          resolve();
-        };
-      });
-    }
-  }, {
-    key: "size",
-    get: function get() {
-      return this.queue.size;
-    }
-  }, {
-    key: "pending",
-    get: function get() {
-      return this._pendingCount;
-    }
-  }]);
-  return PQueue;
-}();
-
-exports.default = PQueue;
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/lib/router/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/next/dist/lib/router/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports._rewriteUrlForNextExport = _rewriteUrlForNextExport;
-exports.makePublicRouterInstance = makePublicRouterInstance;
-Object.defineProperty(exports, "withRouter", {
-  enumerable: true,
-  get: function get() {
-    return _withRouter.default;
-  }
-});
-exports.Router = exports.createRouter = exports.default = void 0;
-
-var _objectSpread2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/objectSpread.js"));
-
-var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/typeof */ "./node_modules/@babel/runtime-corejs2/helpers/typeof.js"));
-
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/slicedToArray.js"));
-
-var _construct2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/construct */ "./node_modules/@babel/runtime-corejs2/helpers/construct.js"));
-
-var _defineProperty = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js"));
-
-var _router = _interopRequireDefault(__webpack_require__(/*! ./router */ "./node_modules/next/dist/lib/router/router.js"));
-
-var _utils = __webpack_require__(/*! ../utils */ "./node_modules/next/dist/lib/utils.js");
-
-var _withRouter = _interopRequireDefault(__webpack_require__(/*! ./with-router */ "./node_modules/next/dist/lib/router/with-router.js"));
-
-/* global window */
-var SingletonRouter = {
-  router: null,
-  // holds the actual router instance
-  readyCallbacks: [],
-  ready: function ready(cb) {
-    if (this.router) return cb();
-
-    if (typeof window !== 'undefined') {
-      this.readyCallbacks.push(cb);
-    }
-  }
-}; // Create public properties and methods of the router in the SingletonRouter
-
-var urlPropertyFields = ['pathname', 'route', 'query', 'asPath'];
-var propertyFields = ['components'];
-var routerEvents = ['routeChangeStart', 'beforeHistoryChange', 'routeChangeComplete', 'routeChangeError', 'hashChangeStart', 'hashChangeComplete'];
-var coreMethodFields = ['push', 'replace', 'reload', 'back', 'prefetch', 'beforePopState']; // Events is a static property on the router, the router doesn't have to be initialized to use it
-
-Object.defineProperty(SingletonRouter, 'events', {
-  get: function get() {
-    return _router.default.events;
-  }
-});
-propertyFields.concat(urlPropertyFields).forEach(function (field) {
-  // Here we need to use Object.defineProperty because, we need to return
-  // the property assigned to the actual router
-  // The value might get changed as we change routes and this is the
-  // proper way to access it
-  (0, _defineProperty.default)(SingletonRouter, field, {
-    get: function get() {
-      throwIfNoRouter();
-      return SingletonRouter.router[field];
-    }
-  });
-});
-coreMethodFields.forEach(function (field) {
-  SingletonRouter[field] = function () {
-    var _SingletonRouter$rout;
-
-    throwIfNoRouter();
-    return (_SingletonRouter$rout = SingletonRouter.router)[field].apply(_SingletonRouter$rout, arguments);
-  };
-});
-routerEvents.forEach(function (event) {
-  SingletonRouter.ready(function () {
-    _router.default.events.on(event, function () {
-      var eventField = "on".concat(event.charAt(0).toUpperCase()).concat(event.substring(1));
-
-      if (SingletonRouter[eventField]) {
-        try {
-          SingletonRouter[eventField].apply(SingletonRouter, arguments);
-        } catch (err) {
-          console.error("Error when running the Router event: ".concat(eventField));
-          console.error("".concat(err.message, "\n").concat(err.stack));
-        }
+        return;
       }
+
+      loadModules[key] = value;
     });
-  });
-});
-var warnAboutRouterOnAppUpdated = (0, _utils.execOnce)(function () {
-  console.warn("Router.onAppUpdated is removed - visit https://err.sh/zeit/next.js/no-on-app-updated-hook for more information.");
-});
-Object.defineProperty(SingletonRouter, 'onAppUpdated', {
-  get: function get() {
-    return null;
-  },
-  set: function set() {
-    warnAboutRouterOnAppUpdated();
-    return null;
-  }
-});
-
-function throwIfNoRouter() {
-  if (!SingletonRouter.router) {
-    var message = 'No router instance found.\n' + 'You should only use "next/router" inside the client side of your app.\n';
-    throw new Error(message);
-  }
-} // Export the SingletonRouter and this is the public API.
+    loadableOptions.loader = loadModules;
+  } // coming from build/babel/plugins/react-loadable-plugin.js
 
 
-var _default = SingletonRouter; // Reexport the withRoute HOC
-
-exports.default = _default;
-
-// INTERNAL APIS
-// -------------
-// (do not use following exports inside the app)
-// Create a router and assign it as the singleton instance.
-// This is used in client side when we are initilizing the app.
-// This should **not** use inside the server.
-var createRouter = function createRouter() {
-  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-    args[_key] = arguments[_key];
-  }
-
-  SingletonRouter.router = (0, _construct2.default)(_router.default, args);
-  SingletonRouter.readyCallbacks.forEach(function (cb) {
-    return cb();
-  });
-  SingletonRouter.readyCallbacks = [];
-  return SingletonRouter.router;
-}; // Export the actual Router class, which is usually used inside the server
+  if (loadableOptions.loadableGenerated) {
+    loadableOptions = (0, _objectSpread2.default)({}, loadableOptions, loadableOptions.loadableGenerated);
+    delete loadableOptions.loadableGenerated;
+  } // support for disabling server side rendering, eg: dynamic(import('../hello-world'), {ssr: false})
 
 
-exports.createRouter = createRouter;
-var Router = _router.default;
-exports.Router = Router;
-
-function _rewriteUrlForNextExport(url) {
-  var _url$split = url.split('#'),
-      _url$split2 = (0, _slicedToArray2.default)(_url$split, 2),
-      hash = _url$split2[1];
-
-  url = url.replace(/#.*/, '');
-
-  var _url$split3 = url.split('?'),
-      _url$split4 = (0, _slicedToArray2.default)(_url$split3, 2),
-      path = _url$split4[0],
-      qs = _url$split4[1];
-
-  path = path.replace(/\/$/, '');
-  var newPath = path; // Append a trailing slash if this path does not have an extension
-
-  if (!/\.[^/]+\/?$/.test(path)) {
-    newPath = "".concat(path, "/");
-  }
-
-  if (qs) {
-    newPath = "".concat(newPath, "?").concat(qs);
-  }
-
-  if (hash) {
-    newPath = "".concat(newPath, "#").concat(hash);
-  }
-
-  return newPath;
-} // This function is used to create the `withRouter` router instance
-
-
-function makePublicRouterInstance(router) {
-  var instance = {};
-
-  for (var _i = 0; _i < urlPropertyFields.length; _i++) {
-    var property = urlPropertyFields[_i];
-
-    if ((0, _typeof2.default)(router[property]) === 'object') {
-      instance[property] = (0, _objectSpread2.default)({}, router[property]); // makes sure query is not stateful
-
-      continue;
+  if (typeof loadableOptions.ssr === 'boolean') {
+    if (!loadableOptions.ssr) {
+      delete loadableOptions.ssr;
+      return noSSR(loadableFn, loadableOptions);
     }
 
-    instance[property] = router[property];
-  } // Events is a static property on the router, the router doesn't have to be initialized to use it
+    delete loadableOptions.ssr;
+  }
 
-
-  instance.events = _router.default.events;
-  propertyFields.forEach(function (field) {
-    // Here we need to use Object.defineProperty because, we need to return
-    // the property assigned to the actual router
-    // The value might get changed as we change routes and this is the
-    // proper way to access it
-    (0, _defineProperty.default)(instance, field, {
-      get: function get() {
-        return router[field];
-      }
-    });
-  });
-  coreMethodFields.forEach(function (field) {
-    instance[field] = function () {
-      return router[field].apply(router, arguments);
-    };
-  });
-  return instance;
+  return loadableFn(loadableOptions);
 }
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/lib/router/router.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/next/dist/lib/router/router.js ***!
-  \*****************************************************/
+/***/ "./node_modules/next/dist/lib/loadable.js":
+/*!************************************************!*\
+  !*** ./node_modules/next/dist/lib/loadable.js ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21569,840 +14574,7 @@ function makePublicRouterInstance(router) {
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/slicedToArray.js"));
-
-var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/typeof */ "./node_modules/@babel/runtime-corejs2/helpers/typeof.js"));
-
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js"));
-
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/asyncToGenerator.js"));
-
-var _objectSpread2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/objectSpread.js"));
-
-var _set = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/set */ "./node_modules/@babel/runtime-corejs2/core-js/set.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/createClass.js"));
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/defineProperty.js"));
-
-var _url2 = __webpack_require__(/*! url */ "./node_modules/url/url.js");
-
-var _EventEmitter = _interopRequireDefault(__webpack_require__(/*! ../EventEmitter */ "./node_modules/next/dist/lib/EventEmitter.js"));
-
-var _shallowEquals = _interopRequireDefault(__webpack_require__(/*! ../shallow-equals */ "./node_modules/next/dist/lib/shallow-equals.js"));
-
-var _pQueue = _interopRequireDefault(__webpack_require__(/*! ../p-queue */ "./node_modules/next/dist/lib/p-queue.js"));
-
-var _utils = __webpack_require__(/*! ../utils */ "./node_modules/next/dist/lib/utils.js");
-
-var _ = __webpack_require__(/*! ./ */ "./node_modules/next/dist/lib/router/index.js");
-
-/* global __NEXT_DATA__ */
-var Router =
-/*#__PURE__*/
-function () {
-  function Router(_pathname, _query, _as2) {
-    var _this = this;
-
-    var _ref = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {},
-        initialProps = _ref.initialProps,
-        pageLoader = _ref.pageLoader,
-        App = _ref.App,
-        Component = _ref.Component,
-        ErrorComponent = _ref.ErrorComponent,
-        err = _ref.err;
-
-    (0, _classCallCheck2.default)(this, Router);
-    (0, _defineProperty2.default)(this, "onPopState", function (e) {
-      if (!e.state) {
-        // We get state as undefined for two reasons.
-        //  1. With older safari (< 8) and older chrome (< 34)
-        //  2. When the URL changed with #
-        //
-        // In the both cases, we don't need to proceed and change the route.
-        // (as it's already changed)
-        // But we can simply replace the state with the new changes.
-        // Actually, for (1) we don't need to nothing. But it's hard to detect that event.
-        // So, doing the following for (1) does no harm.
-        var pathname = _this.pathname,
-            query = _this.query;
-
-        _this.changeState('replaceState', (0, _url2.format)({
-          pathname: pathname,
-          query: query
-        }), (0, _utils.getURL)());
-
-        return;
-      } // If the downstream application returns falsy, return.
-      // They will then be responsible for handling the event.
-
-
-      if (!_this._beforePopState(e.state)) {
-        return;
-      }
-
-      var _e$state = e.state,
-          url = _e$state.url,
-          as = _e$state.as,
-          options = _e$state.options;
-
-      if (true) {
-        if (typeof url === 'undefined' || typeof as === 'undefined') {
-          console.warn('`popstate` event triggered but `event.state` did not have `url` or `as` https://err.sh/zeit/next.js/popstate-state-empty');
-        }
-      }
-
-      _this.replace(url, as, options);
-    });
-    // represents the current component key
-    this.route = toRoute(_pathname); // set up the component cache (by route keys)
-
-    this.components = {}; // We should not keep the cache, if there's an error
-    // Otherwise, this cause issues when when going back and
-    // come again to the errored page.
-
-    if (Component !== ErrorComponent) {
-      this.components[this.route] = {
-        Component: Component,
-        props: initialProps,
-        err: err
-      };
-    }
-
-    this.components['/_app'] = {
-      Component: App // Backwards compat for Router.router.events
-      // TODO: Should be remove the following major version as it was never documented
-
-    };
-    this.events = Router.events;
-    this.pageLoader = pageLoader;
-    this.prefetchQueue = new _pQueue.default({
-      concurrency: 2
-    });
-    this.ErrorComponent = ErrorComponent;
-    this.pathname = _pathname;
-    this.query = _query;
-    this.asPath = _as2;
-    this.subscriptions = new _set.default();
-    this.componentLoadCancel = null;
-
-    this._beforePopState = function () {
-      return true;
-    };
-
-    if (typeof window !== 'undefined') {
-      // in order for `e.state` to work on the `onpopstate` event
-      // we have to register the initial route upon initialization
-      this.changeState('replaceState', (0, _url2.format)({
-        pathname: _pathname,
-        query: _query
-      }), (0, _utils.getURL)());
-      window.addEventListener('popstate', this.onPopState);
-    }
-  }
-
-  (0, _createClass2.default)(Router, [{
-    key: "update",
-    value: function update(route, Component) {
-      var data = this.components[route];
-
-      if (!data) {
-        throw new Error("Cannot update unavailable route: ".concat(route));
-      }
-
-      var newData = (0, _objectSpread2.default)({}, data, {
-        Component: Component
-      });
-      this.components[route] = newData; // pages/_app.js updated
-
-      if (route === '/_app') {
-        this.notify(this.components[this.route]);
-        return;
-      }
-
-      if (route === this.route) {
-        this.notify(newData);
-      }
-    }
-  }, {
-    key: "reload",
-    value: function () {
-      var _reload = (0, _asyncToGenerator2.default)(
-      /*#__PURE__*/
-      _regenerator.default.mark(function _callee(route) {
-        var pathname, query, url, as, routeInfo, error;
-        return _regenerator.default.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                delete this.components[route];
-                this.pageLoader.clearCache(route);
-
-                if (!(route !== this.route)) {
-                  _context.next = 4;
-                  break;
-                }
-
-                return _context.abrupt("return");
-
-              case 4:
-                pathname = this.pathname, query = this.query;
-                url = window.location.href; // This makes sure we only use pathname + query + hash, to mirror `asPath` coming from the server.
-
-                as = window.location.pathname + window.location.search + window.location.hash;
-                Router.events.emit('routeChangeStart', url);
-                _context.next = 10;
-                return this.getRouteInfo(route, pathname, query, as);
-
-              case 10:
-                routeInfo = _context.sent;
-                error = routeInfo.error;
-
-                if (!(error && error.cancelled)) {
-                  _context.next = 14;
-                  break;
-                }
-
-                return _context.abrupt("return");
-
-              case 14:
-                this.notify(routeInfo);
-
-                if (!error) {
-                  _context.next = 18;
-                  break;
-                }
-
-                Router.events.emit('routeChangeError', error, url);
-                throw error;
-
-              case 18:
-                Router.events.emit('routeChangeComplete', url);
-
-              case 19:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, this);
-      }));
-
-      return function reload(_x) {
-        return _reload.apply(this, arguments);
-      };
-    }()
-  }, {
-    key: "back",
-    value: function back() {
-      window.history.back();
-    }
-  }, {
-    key: "push",
-    value: function push(url) {
-      var as = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : url;
-      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      return this.change('pushState', url, as, options);
-    }
-  }, {
-    key: "replace",
-    value: function replace(url) {
-      var as = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : url;
-      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      return this.change('replaceState', url, as, options);
-    }
-  }, {
-    key: "change",
-    value: function () {
-      var _change = (0, _asyncToGenerator2.default)(
-      /*#__PURE__*/
-      _regenerator.default.mark(function _callee2(method, _url, _as, options) {
-        var url, as, _parse, asPathname, asQuery, _parse2, pathname, query, route, _options$shallow, shallow, routeInfo, _routeInfo, error, hash;
-
-        return _regenerator.default.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                // If url and as provided as an object representation,
-                // we'll format them into the string version here.
-                url = (0, _typeof2.default)(_url) === 'object' ? (0, _url2.format)(_url) : _url;
-                as = (0, _typeof2.default)(_as) === 'object' ? (0, _url2.format)(_as) : _as; // Add the ending slash to the paths. So, we can serve the
-                // "<page>/index.html" directly for the SSR page.
-
-                if (__NEXT_DATA__.nextExport) {
-                  as = (0, _._rewriteUrlForNextExport)(as);
-                }
-
-                this.abortComponentLoad(as); // If the url change is only related to a hash change
-                // We should not proceed. We should only change the state.
-
-                if (!this.onlyAHashChange(as)) {
-                  _context2.next = 10;
-                  break;
-                }
-
-                Router.events.emit('hashChangeStart', as);
-                this.changeState(method, url, as);
-                this.scrollToHash(as);
-                Router.events.emit('hashChangeComplete', as);
-                return _context2.abrupt("return", true);
-
-              case 10:
-                _parse = (0, _url2.parse)(as, true), asPathname = _parse.pathname, asQuery = _parse.query;
-                _parse2 = (0, _url2.parse)(url, true), pathname = _parse2.pathname, query = _parse2.query; // If asked to change the current URL we should reload the current page
-                // (not location.reload() but reload getInitialProps and other Next.js stuffs)
-                // We also need to set the method = replaceState always
-                // as this should not go into the history (That's how browsers work)
-
-                if (!this.urlIsNew(asPathname, asQuery)) {
-                  method = 'replaceState';
-                }
-
-                route = toRoute(pathname);
-                _options$shallow = options.shallow, shallow = _options$shallow === void 0 ? false : _options$shallow;
-                routeInfo = null;
-                Router.events.emit('routeChangeStart', as); // If shallow === false and other conditions met, we reuse the
-                // existing routeInfo for this route.
-                // Because of this, getInitialProps would not run.
-
-                if (!(shallow && this.isShallowRoutingPossible(route))) {
-                  _context2.next = 21;
-                  break;
-                }
-
-                routeInfo = this.components[route];
-                _context2.next = 24;
-                break;
-
-              case 21:
-                _context2.next = 23;
-                return this.getRouteInfo(route, pathname, query, as);
-
-              case 23:
-                routeInfo = _context2.sent;
-
-              case 24:
-                _routeInfo = routeInfo, error = _routeInfo.error;
-
-                if (!(error && error.cancelled)) {
-                  _context2.next = 27;
-                  break;
-                }
-
-                return _context2.abrupt("return", false);
-
-              case 27:
-                Router.events.emit('beforeHistoryChange', as);
-                this.changeState(method, url, as, options);
-                hash = window.location.hash.substring(1);
-                this.set(route, pathname, query, as, (0, _objectSpread2.default)({}, routeInfo, {
-                  hash: hash
-                }));
-
-                if (!error) {
-                  _context2.next = 34;
-                  break;
-                }
-
-                Router.events.emit('routeChangeError', error, as);
-                throw error;
-
-              case 34:
-                Router.events.emit('routeChangeComplete', as);
-                return _context2.abrupt("return", true);
-
-              case 36:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2, this);
-      }));
-
-      return function change(_x2, _x3, _x4, _x5) {
-        return _change.apply(this, arguments);
-      };
-    }()
-  }, {
-    key: "changeState",
-    value: function changeState(method, url, as) {
-      var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
-
-      if (true) {
-        if (typeof window.history === 'undefined') {
-          console.error("Warning: window.history is not available.");
-          return;
-        }
-
-        if (typeof window.history[method] === 'undefined') {
-          console.error("Warning: window.history.".concat(method, " is not available"));
-          return;
-        }
-      }
-
-      if (method !== 'pushState' || (0, _utils.getURL)() !== as) {
-        window.history[method]({
-          url: url,
-          as: as,
-          options: options
-        }, null, as);
-      }
-    }
-  }, {
-    key: "getRouteInfo",
-    value: function () {
-      var _getRouteInfo = (0, _asyncToGenerator2.default)(
-      /*#__PURE__*/
-      _regenerator.default.mark(function _callee3(route, pathname, query, as) {
-        var routeInfo, _routeInfo2, Component, ctx, _Component, _ctx;
-
-        return _regenerator.default.wrap(function _callee3$(_context3) {
-          while (1) {
-            switch (_context3.prev = _context3.next) {
-              case 0:
-                routeInfo = null;
-                _context3.prev = 1;
-                routeInfo = this.components[route];
-
-                if (routeInfo) {
-                  _context3.next = 8;
-                  break;
-                }
-
-                _context3.next = 6;
-                return this.fetchComponent(route, as);
-
-              case 6:
-                _context3.t0 = _context3.sent;
-                routeInfo = {
-                  Component: _context3.t0
-                };
-
-              case 8:
-                _routeInfo2 = routeInfo, Component = _routeInfo2.Component;
-
-                if (!(typeof Component !== 'function')) {
-                  _context3.next = 11;
-                  break;
-                }
-
-                throw new Error("The default export is not a React Component in page: \"".concat(pathname, "\""));
-
-              case 11:
-                ctx = {
-                  pathname: pathname,
-                  query: query,
-                  asPath: as
-                };
-                _context3.next = 14;
-                return this.getInitialProps(Component, ctx);
-
-              case 14:
-                routeInfo.props = _context3.sent;
-                this.components[route] = routeInfo;
-                _context3.next = 40;
-                break;
-
-              case 18:
-                _context3.prev = 18;
-                _context3.t1 = _context3["catch"](1);
-
-                if (!(_context3.t1.code === 'PAGE_LOAD_ERROR')) {
-                  _context3.next = 24;
-                  break;
-                }
-
-                // If we can't load the page it could be one of following reasons
-                //  1. Page doesn't exists
-                //  2. Page does exist in a different zone
-                //  3. Internal error while loading the page
-                // So, doing a hard reload is the proper way to deal with this.
-                window.location.href = as; // Changing the URL doesn't block executing the current code path.
-                // So, we need to mark it as a cancelled error and stop the routing logic.
-
-                _context3.t1.cancelled = true;
-                return _context3.abrupt("return", {
-                  error: _context3.t1
-                });
-
-              case 24:
-                if (!_context3.t1.cancelled) {
-                  _context3.next = 26;
-                  break;
-                }
-
-                return _context3.abrupt("return", {
-                  error: _context3.t1
-                });
-
-              case 26:
-                _Component = this.ErrorComponent;
-                routeInfo = {
-                  Component: _Component,
-                  err: _context3.t1
-                };
-                _ctx = {
-                  err: _context3.t1,
-                  pathname: pathname,
-                  query: query
-                };
-                _context3.prev = 29;
-                _context3.next = 32;
-                return this.getInitialProps(_Component, _ctx);
-
-              case 32:
-                routeInfo.props = _context3.sent;
-                _context3.next = 39;
-                break;
-
-              case 35:
-                _context3.prev = 35;
-                _context3.t2 = _context3["catch"](29);
-                console.error('Error in error page `getInitialProps`: ', _context3.t2);
-                routeInfo.props = {};
-
-              case 39:
-                routeInfo.error = _context3.t1;
-
-              case 40:
-                return _context3.abrupt("return", routeInfo);
-
-              case 41:
-              case "end":
-                return _context3.stop();
-            }
-          }
-        }, _callee3, this, [[1, 18], [29, 35]]);
-      }));
-
-      return function getRouteInfo(_x6, _x7, _x8, _x9) {
-        return _getRouteInfo.apply(this, arguments);
-      };
-    }()
-  }, {
-    key: "set",
-    value: function set(route, pathname, query, as, data) {
-      this.route = route;
-      this.pathname = pathname;
-      this.query = query;
-      this.asPath = as;
-      this.notify(data);
-    }
-  }, {
-    key: "beforePopState",
-    value: function beforePopState(cb) {
-      this._beforePopState = cb;
-    }
-  }, {
-    key: "onlyAHashChange",
-    value: function onlyAHashChange(as) {
-      if (!this.asPath) return false;
-
-      var _this$asPath$split = this.asPath.split('#'),
-          _this$asPath$split2 = (0, _slicedToArray2.default)(_this$asPath$split, 2),
-          oldUrlNoHash = _this$asPath$split2[0],
-          oldHash = _this$asPath$split2[1];
-
-      var _as$split = as.split('#'),
-          _as$split2 = (0, _slicedToArray2.default)(_as$split, 2),
-          newUrlNoHash = _as$split2[0],
-          newHash = _as$split2[1]; // Makes sure we scroll to the provided hash if the url/hash are the same
-
-
-      if (newHash && oldUrlNoHash === newUrlNoHash && oldHash === newHash) {
-        return true;
-      } // If the urls are change, there's more than a hash change
-
-
-      if (oldUrlNoHash !== newUrlNoHash) {
-        return false;
-      } // If the hash has changed, then it's a hash only change.
-      // This check is necessary to handle both the enter and
-      // leave hash === '' cases. The identity case falls through
-      // and is treated as a next reload.
-
-
-      return oldHash !== newHash;
-    }
-  }, {
-    key: "scrollToHash",
-    value: function scrollToHash(as) {
-      var _as$split3 = as.split('#'),
-          _as$split4 = (0, _slicedToArray2.default)(_as$split3, 2),
-          hash = _as$split4[1]; // Scroll to top if the hash is just `#` with no value
-
-
-      if (hash === '') {
-        window.scrollTo(0, 0);
-        return;
-      } // First we check if the element by id is found
-
-
-      var idEl = document.getElementById(hash);
-
-      if (idEl) {
-        idEl.scrollIntoView();
-        return;
-      } // If there's no element with the id, we check the `name` property
-      // To mirror browsers
-
-
-      var nameEl = document.getElementsByName(hash)[0];
-
-      if (nameEl) {
-        nameEl.scrollIntoView();
-      }
-    }
-  }, {
-    key: "urlIsNew",
-    value: function urlIsNew(pathname, query) {
-      return this.pathname !== pathname || !(0, _shallowEquals.default)(query, this.query);
-    }
-  }, {
-    key: "isShallowRoutingPossible",
-    value: function isShallowRoutingPossible(route) {
-      return (// If there's cached routeInfo for the route.
-        Boolean(this.components[route]) && // If the route is already rendered on the screen.
-        this.route === route
-      );
-    }
-  }, {
-    key: "prefetch",
-    value: function () {
-      var _prefetch = (0, _asyncToGenerator2.default)(
-      /*#__PURE__*/
-      _regenerator.default.mark(function _callee4(url) {
-        var _this2 = this;
-
-        var _parse3, pathname, route;
-
-        return _regenerator.default.wrap(function _callee4$(_context4) {
-          while (1) {
-            switch (_context4.prev = _context4.next) {
-              case 0:
-                if (false) {}
-
-                return _context4.abrupt("return");
-
-              case 2:
-                _parse3 = (0, _url2.parse)(url), pathname = _parse3.pathname;
-                route = toRoute(pathname);
-                return _context4.abrupt("return", this.prefetchQueue.add(function () {
-                  return _this2.fetchRoute(route);
-                }));
-
-              case 5:
-              case "end":
-                return _context4.stop();
-            }
-          }
-        }, _callee4, this);
-      }));
-
-      return function prefetch(_x10) {
-        return _prefetch.apply(this, arguments);
-      };
-    }()
-  }, {
-    key: "fetchComponent",
-    value: function () {
-      var _fetchComponent = (0, _asyncToGenerator2.default)(
-      /*#__PURE__*/
-      _regenerator.default.mark(function _callee5(route, as) {
-        var cancelled, cancel, Component, error;
-        return _regenerator.default.wrap(function _callee5$(_context5) {
-          while (1) {
-            switch (_context5.prev = _context5.next) {
-              case 0:
-                cancelled = false;
-
-                cancel = this.componentLoadCancel = function () {
-                  cancelled = true;
-                };
-
-                _context5.next = 4;
-                return this.fetchRoute(route);
-
-              case 4:
-                Component = _context5.sent;
-
-                if (!cancelled) {
-                  _context5.next = 9;
-                  break;
-                }
-
-                error = new Error("Abort fetching component for route: \"".concat(route, "\""));
-                error.cancelled = true;
-                throw error;
-
-              case 9:
-                if (cancel === this.componentLoadCancel) {
-                  this.componentLoadCancel = null;
-                }
-
-                return _context5.abrupt("return", Component);
-
-              case 11:
-              case "end":
-                return _context5.stop();
-            }
-          }
-        }, _callee5, this);
-      }));
-
-      return function fetchComponent(_x11, _x12) {
-        return _fetchComponent.apply(this, arguments);
-      };
-    }()
-  }, {
-    key: "getInitialProps",
-    value: function () {
-      var _getInitialProps = (0, _asyncToGenerator2.default)(
-      /*#__PURE__*/
-      _regenerator.default.mark(function _callee6(Component, ctx) {
-        var cancelled, cancel, App, props, err;
-        return _regenerator.default.wrap(function _callee6$(_context6) {
-          while (1) {
-            switch (_context6.prev = _context6.next) {
-              case 0:
-                cancelled = false;
-
-                cancel = function cancel() {
-                  cancelled = true;
-                };
-
-                this.componentLoadCancel = cancel;
-                App = this.components['/_app'].Component;
-                _context6.next = 6;
-                return (0, _utils.loadGetInitialProps)(App, {
-                  Component: Component,
-                  router: this,
-                  ctx: ctx
-                });
-
-              case 6:
-                props = _context6.sent;
-
-                if (cancel === this.componentLoadCancel) {
-                  this.componentLoadCancel = null;
-                }
-
-                if (!cancelled) {
-                  _context6.next = 12;
-                  break;
-                }
-
-                err = new Error('Loading initial props cancelled');
-                err.cancelled = true;
-                throw err;
-
-              case 12:
-                return _context6.abrupt("return", props);
-
-              case 13:
-              case "end":
-                return _context6.stop();
-            }
-          }
-        }, _callee6, this);
-      }));
-
-      return function getInitialProps(_x13, _x14) {
-        return _getInitialProps.apply(this, arguments);
-      };
-    }()
-  }, {
-    key: "fetchRoute",
-    value: function () {
-      var _fetchRoute = (0, _asyncToGenerator2.default)(
-      /*#__PURE__*/
-      _regenerator.default.mark(function _callee7(route) {
-        return _regenerator.default.wrap(function _callee7$(_context7) {
-          while (1) {
-            switch (_context7.prev = _context7.next) {
-              case 0:
-                return _context7.abrupt("return", this.pageLoader.loadPage(route));
-
-              case 1:
-              case "end":
-                return _context7.stop();
-            }
-          }
-        }, _callee7, this);
-      }));
-
-      return function fetchRoute(_x15) {
-        return _fetchRoute.apply(this, arguments);
-      };
-    }()
-  }, {
-    key: "abortComponentLoad",
-    value: function abortComponentLoad(as) {
-      if (this.componentLoadCancel) {
-        Router.events.emit('routeChangeError', new Error('Route Cancelled'), as);
-        this.componentLoadCancel();
-        this.componentLoadCancel = null;
-      }
-    }
-  }, {
-    key: "notify",
-    value: function notify(data) {
-      var App = this.components['/_app'].Component;
-      this.subscriptions.forEach(function (fn) {
-        return fn((0, _objectSpread2.default)({}, data, {
-          App: App
-        }));
-      });
-    }
-  }, {
-    key: "subscribe",
-    value: function subscribe(fn) {
-      var _this3 = this;
-
-      this.subscriptions.add(fn);
-      return function () {
-        return _this3.subscriptions.delete(fn);
-      };
-    }
-  }]);
-  return Router;
-}();
-
-exports.default = Router;
-(0, _defineProperty2.default)(Router, "events", new _EventEmitter.default());
-
-function toRoute(path) {
-  return path.replace(/\/$/, '') || '/';
-}
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/lib/router/with-router.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/next/dist/lib/router/with-router.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = withRouter;
-
-var _objectSpread2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/objectSpread.js"));
+var _isArray = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/array/is-array */ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js"));
 
 var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js"));
 
@@ -22414,217 +14586,383 @@ var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/run
 
 var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/inherits.js"));
 
+var _assertThisInitialized2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/assertThisInitialized.js"));
+
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/defineProperty.js"));
 
-var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var _getIterator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/get-iterator */ "./node_modules/@babel/runtime-corejs2/core-js/get-iterator.js"));
+
+var _assign = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js"));
+
+var _promise = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js"));
+
+var _keys = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js"));
+
+var _map = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/map */ "./node_modules/@babel/runtime-corejs2/core-js/map.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
 var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
 
-var _hoistNonReactStatics = _interopRequireDefault(__webpack_require__(/*! hoist-non-react-statics */ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js"));
+/**
+@copyright (c) 2017-present James Kyle <me@thejameskyle.com>
+ MIT License
+ Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+ The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
+*/
+// https://github.com/jamiebuilds/react-loadable/blob/v5.5.0/src/index.js
+// Modified to be compatible with webpack 4 / Next.js
+var ALL_INITIALIZERS = [];
+var READY_INITIALIZERS = new _map.default();
+var initialized = false;
 
-var _utils = __webpack_require__(/*! ../utils */ "./node_modules/next/dist/lib/utils.js");
-
-function withRouter(ComposedComponent) {
-  var displayName = (0, _utils.getDisplayName)(ComposedComponent);
-
-  var WithRouteWrapper =
-  /*#__PURE__*/
-  function (_Component) {
-    (0, _inherits2.default)(WithRouteWrapper, _Component);
-
-    function WithRouteWrapper() {
-      (0, _classCallCheck2.default)(this, WithRouteWrapper);
-      return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(WithRouteWrapper).apply(this, arguments));
-    }
-
-    (0, _createClass2.default)(WithRouteWrapper, [{
-      key: "render",
-      value: function render() {
-        var props = (0, _objectSpread2.default)({
-          router: this.context.router
-        }, this.props);
-        return _react.default.createElement(ComposedComponent, props);
-      }
-    }]);
-    return WithRouteWrapper;
-  }(_react.Component);
-
-  (0, _defineProperty2.default)(WithRouteWrapper, "contextTypes", {
-    router: _propTypes.default.object
-  });
-  (0, _defineProperty2.default)(WithRouteWrapper, "displayName", "withRouter(".concat(displayName, ")"));
-  return (0, _hoistNonReactStatics.default)(WithRouteWrapper, ComposedComponent);
-}
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/lib/shallow-equals.js":
-/*!******************************************************!*\
-  !*** ./node_modules/next/dist/lib/shallow-equals.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = shallowEquals;
-
-function shallowEquals(a, b) {
-  for (var i in a) {
-    if (b[i] !== a[i]) return false;
-  }
-
-  for (var _i in b) {
-    if (b[_i] !== a[_i]) return false;
-  }
-
-  return true;
-}
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/lib/utils.js":
-/*!*********************************************!*\
-  !*** ./node_modules/next/dist/lib/utils.js ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.execOnce = execOnce;
-exports.getDisplayName = getDisplayName;
-exports.isResSent = isResSent;
-exports.loadGetInitialProps = loadGetInitialProps;
-exports.getLocationOrigin = getLocationOrigin;
-exports.getURL = getURL;
-
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js"));
-
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/asyncToGenerator.js"));
-
-function execOnce(fn) {
-  var _this = this;
-
-  var used = false;
-  return function () {
-    if (!used) {
-      used = true;
-
-      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-      }
-
-      fn.apply(_this, args);
-    }
+function load(loader) {
+  var promise = loader();
+  var state = {
+    loading: true,
+    loaded: null,
+    error: null
   };
+  state.promise = promise.then(function (loaded) {
+    state.loading = false;
+    state.loaded = loaded;
+    return loaded;
+  }).catch(function (err) {
+    state.loading = false;
+    state.error = err;
+    throw err;
+  });
+  return state;
 }
 
-function getDisplayName(Component) {
-  if (typeof Component === 'string') {
-    return Component;
+function loadMap(obj) {
+  var state = {
+    loading: false,
+    loaded: {},
+    error: null
+  };
+  var promises = [];
+
+  try {
+    (0, _keys.default)(obj).forEach(function (key) {
+      var result = load(obj[key]);
+
+      if (!result.loading) {
+        state.loaded[key] = result.loaded;
+        state.error = result.error;
+      } else {
+        state.loading = true;
+      }
+
+      promises.push(result.promise);
+      result.promise.then(function (res) {
+        state.loaded[key] = res;
+      }).catch(function (err) {
+        state.error = err;
+      });
+    });
+  } catch (err) {
+    state.error = err;
   }
 
-  return Component.displayName || Component.name || 'Unknown';
+  state.promise = _promise.default.all(promises).then(function (res) {
+    state.loading = false;
+    return res;
+  }).catch(function (err) {
+    state.loading = false;
+    throw err;
+  });
+  return state;
 }
 
-function isResSent(res) {
-  return res.finished || res.headersSent;
+function resolve(obj) {
+  return obj && obj.__esModule ? obj.default : obj;
 }
 
-function loadGetInitialProps(_x, _x2) {
-  return _loadGetInitialProps.apply(this, arguments);
+function render(loaded, props) {
+  return _react.default.createElement(resolve(loaded), props);
 }
 
-function _loadGetInitialProps() {
-  _loadGetInitialProps = (0, _asyncToGenerator2.default)(
-  /*#__PURE__*/
-  _regenerator.default.mark(function _callee(Component, ctx) {
-    var compName, message, props, _compName, _message;
+function createLoadableComponent(loadFn, options) {
+  var _class, _temp;
 
-    return _regenerator.default.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            if (false) {}
+  var opts = (0, _assign.default)({
+    loader: null,
+    loading: null,
+    delay: 200,
+    timeout: null,
+    render: render,
+    webpack: null,
+    modules: null
+  }, options);
+  var res = null;
 
-            if (!(Component.prototype && Component.prototype.getInitialProps)) {
-              _context.next = 5;
-              break;
-            }
+  function init() {
+    if (!res) {
+      res = loadFn(opts.loader);
+    }
 
-            compName = getDisplayName(Component);
-            message = "\"".concat(compName, ".getInitialProps()\" is defined as an instance method - visit https://err.sh/zeit/next.js/get-initial-props-as-an-instance-method for more information.");
-            throw new Error(message);
+    return res.promise;
+  } // Server only
 
-          case 5:
-            if (Component.getInitialProps) {
-              _context.next = 7;
-              break;
-            }
 
-            return _context.abrupt("return", {});
+  if (typeof window === 'undefined') {
+    ALL_INITIALIZERS.push(init);
+  } // Client only
 
-          case 7:
-            _context.next = 9;
-            return Component.getInitialProps(ctx);
 
-          case 9:
-            props = _context.sent;
+  if (!initialized && typeof window !== 'undefined' && typeof opts.webpack === 'function') {
+    var moduleIds = opts.webpack();
+    var _iteratorNormalCompletion = true;
+    var _didIteratorError = false;
+    var _iteratorError = undefined;
 
-            if (!(ctx.res && isResSent(ctx.res))) {
-              _context.next = 12;
-              break;
-            }
-
-            return _context.abrupt("return", props);
-
-          case 12:
-            if (props) {
-              _context.next = 16;
-              break;
-            }
-
-            _compName = getDisplayName(Component);
-            _message = "\"".concat(_compName, ".getInitialProps()\" should resolve to an object. But found \"").concat(props, "\" instead.");
-            throw new Error(_message);
-
-          case 16:
-            return _context.abrupt("return", props);
-
-          case 17:
-          case "end":
-            return _context.stop();
+    try {
+      for (var _iterator = (0, _getIterator2.default)(moduleIds), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+        var moduleId = _step.value;
+        READY_INITIALIZERS.set(moduleId, function () {
+          return init();
+        });
+      }
+    } catch (err) {
+      _didIteratorError = true;
+      _iteratorError = err;
+    } finally {
+      try {
+        if (!_iteratorNormalCompletion && _iterator.return != null) {
+          _iterator.return();
+        }
+      } finally {
+        if (_didIteratorError) {
+          throw _iteratorError;
         }
       }
-    }, _callee, this);
-  }));
-  return _loadGetInitialProps.apply(this, arguments);
+    }
+  }
+
+  return _temp = _class =
+  /*#__PURE__*/
+  function (_React$Component) {
+    (0, _inherits2.default)(LoadableComponent, _React$Component);
+
+    function LoadableComponent(props) {
+      var _this;
+
+      (0, _classCallCheck2.default)(this, LoadableComponent);
+      _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(LoadableComponent).call(this, props));
+      (0, _defineProperty2.default)((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)), "retry", function () {
+        _this.setState({
+          error: null,
+          loading: true,
+          timedOut: false
+        });
+
+        res = loadFn(opts.loader);
+
+        _this._loadModule();
+      });
+      init();
+      _this.state = {
+        error: res.error,
+        pastDelay: false,
+        timedOut: false,
+        loading: res.loading,
+        loaded: res.loaded
+      };
+      return _this;
+    }
+
+    (0, _createClass2.default)(LoadableComponent, [{
+      key: "componentWillMount",
+      value: function componentWillMount() {
+        this._mounted = true;
+
+        this._loadModule();
+      }
+    }, {
+      key: "_loadModule",
+      value: function _loadModule() {
+        var _this2 = this;
+
+        if (this.context.loadable && (0, _isArray.default)(opts.modules)) {
+          opts.modules.forEach(function (moduleName) {
+            _this2.context.loadable.report(moduleName);
+          });
+        }
+
+        if (!res.loading) {
+          return;
+        }
+
+        if (typeof opts.delay === 'number') {
+          if (opts.delay === 0) {
+            this.setState({
+              pastDelay: true
+            });
+          } else {
+            this._delay = setTimeout(function () {
+              _this2.setState({
+                pastDelay: true
+              });
+            }, opts.delay);
+          }
+        }
+
+        if (typeof opts.timeout === 'number') {
+          this._timeout = setTimeout(function () {
+            _this2.setState({
+              timedOut: true
+            });
+          }, opts.timeout);
+        }
+
+        var update = function update() {
+          if (!_this2._mounted) {
+            return;
+          }
+
+          _this2.setState({
+            error: res.error,
+            loaded: res.loaded,
+            loading: res.loading
+          });
+
+          _this2._clearTimeouts();
+        };
+
+        res.promise.then(function () {
+          update();
+        }) // eslint-disable-next-line handle-callback-err
+        .catch(function (err) {
+          update();
+        });
+      }
+    }, {
+      key: "componentWillUnmount",
+      value: function componentWillUnmount() {
+        this._mounted = false;
+
+        this._clearTimeouts();
+      }
+    }, {
+      key: "_clearTimeouts",
+      value: function _clearTimeouts() {
+        clearTimeout(this._delay);
+        clearTimeout(this._timeout);
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        if (this.state.loading || this.state.error) {
+          return _react.default.createElement(opts.loading, {
+            isLoading: this.state.loading,
+            pastDelay: this.state.pastDelay,
+            timedOut: this.state.timedOut,
+            error: this.state.error,
+            retry: this.retry
+          });
+        } else if (this.state.loaded) {
+          return opts.render(this.state.loaded, this.props);
+        } else {
+          return null;
+        }
+      }
+    }], [{
+      key: "preload",
+      value: function preload() {
+        return init();
+      }
+    }]);
+    return LoadableComponent;
+  }(_react.default.Component), (0, _defineProperty2.default)(_class, "contextTypes", {
+    loadable: _propTypes.default.shape({
+      report: _propTypes.default.func.isRequired
+    })
+  }), _temp;
 }
 
-function getLocationOrigin() {
-  var _window$location = window.location,
-      protocol = _window$location.protocol,
-      hostname = _window$location.hostname,
-      port = _window$location.port;
-  return "".concat(protocol, "//").concat(hostname).concat(port ? ':' + port : '');
+function Loadable(opts) {
+  return createLoadableComponent(load, opts);
 }
 
-function getURL() {
-  var href = window.location.href;
-  var origin = getLocationOrigin();
-  return href.substring(origin.length);
+function LoadableMap(opts) {
+  if (typeof opts.render !== 'function') {
+    throw new Error('LoadableMap requires a `render(loaded, props)` function');
+  }
+
+  return createLoadableComponent(loadMap, opts);
 }
+
+Loadable.Map = LoadableMap;
+
+function flushInitializers(initializers) {
+  var promises = [];
+
+  while (initializers.length) {
+    var init = initializers.pop();
+    promises.push(init());
+  }
+
+  return _promise.default.all(promises).then(function () {
+    if (initializers.length) {
+      return flushInitializers(initializers);
+    }
+  });
+}
+
+Loadable.preloadAll = function () {
+  return new _promise.default(function (resolve, reject) {
+    flushInitializers(ALL_INITIALIZERS).then(resolve, reject);
+  });
+};
+
+Loadable.preloadReady = function (webpackIds) {
+  return new _promise.default(function (resolve, reject) {
+    var initializers = webpackIds.reduce(function (allInitalizers, moduleId) {
+      var initializer = READY_INITIALIZERS.get(moduleId);
+
+      if (!initializer) {
+        return allInitalizers;
+      }
+
+      allInitalizers.push(initializer);
+      return allInitalizers;
+    }, []);
+    initialized = true; // Make sure the object is cleared
+
+    READY_INITIALIZERS.clear(); // We always will resolve, errors should be handled within loading UIs.
+
+    flushInitializers(initializers).then(resolve, resolve);
+  });
+};
+
+module.exports = Loadable;
+
+/***/ }),
+
+/***/ "./node_modules/next/dynamic.js":
+/*!**************************************!*\
+  !*** ./node_modules/next/dynamic.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! ./dist/lib/dynamic */ "./node_modules/next/dist/lib/dynamic.js")
+
 
 /***/ }),
 
@@ -22980,18 +15318,6 @@ module.exports = _typeof;
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime-module.js");
-
-
-/***/ }),
-
-/***/ "./node_modules/next/router.js":
-/*!*************************************!*\
-  !*** ./node_modules/next/router.js ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! ./dist/lib/router */ "./node_modules/next/dist/lib/router/index.js")
 
 
 /***/ }),
@@ -24474,746 +16800,6 @@ module.exports = (__webpack_require__(/*! dll-reference dll_a040da6a047b41aa17e2
 
 /***/ }),
 
-/***/ "./node_modules/punycode/punycode.js":
-/*!*******************************************!*\
-  !*** ./node_modules/punycode/punycode.js ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/punycode v1.4.1 by @mathias */
-;(function(root) {
-
-	/** Detect free variables */
-	var freeExports = typeof exports == 'object' && exports &&
-		!exports.nodeType && exports;
-	var freeModule = typeof module == 'object' && module &&
-		!module.nodeType && module;
-	var freeGlobal = typeof global == 'object' && global;
-	if (
-		freeGlobal.global === freeGlobal ||
-		freeGlobal.window === freeGlobal ||
-		freeGlobal.self === freeGlobal
-	) {
-		root = freeGlobal;
-	}
-
-	/**
-	 * The `punycode` object.
-	 * @name punycode
-	 * @type Object
-	 */
-	var punycode,
-
-	/** Highest positive signed 32-bit float value */
-	maxInt = 2147483647, // aka. 0x7FFFFFFF or 2^31-1
-
-	/** Bootstring parameters */
-	base = 36,
-	tMin = 1,
-	tMax = 26,
-	skew = 38,
-	damp = 700,
-	initialBias = 72,
-	initialN = 128, // 0x80
-	delimiter = '-', // '\x2D'
-
-	/** Regular expressions */
-	regexPunycode = /^xn--/,
-	regexNonASCII = /[^\x20-\x7E]/, // unprintable ASCII chars + non-ASCII chars
-	regexSeparators = /[\x2E\u3002\uFF0E\uFF61]/g, // RFC 3490 separators
-
-	/** Error messages */
-	errors = {
-		'overflow': 'Overflow: input needs wider integers to process',
-		'not-basic': 'Illegal input >= 0x80 (not a basic code point)',
-		'invalid-input': 'Invalid input'
-	},
-
-	/** Convenience shortcuts */
-	baseMinusTMin = base - tMin,
-	floor = Math.floor,
-	stringFromCharCode = String.fromCharCode,
-
-	/** Temporary variable */
-	key;
-
-	/*--------------------------------------------------------------------------*/
-
-	/**
-	 * A generic error utility function.
-	 * @private
-	 * @param {String} type The error type.
-	 * @returns {Error} Throws a `RangeError` with the applicable error message.
-	 */
-	function error(type) {
-		throw new RangeError(errors[type]);
-	}
-
-	/**
-	 * A generic `Array#map` utility function.
-	 * @private
-	 * @param {Array} array The array to iterate over.
-	 * @param {Function} callback The function that gets called for every array
-	 * item.
-	 * @returns {Array} A new array of values returned by the callback function.
-	 */
-	function map(array, fn) {
-		var length = array.length;
-		var result = [];
-		while (length--) {
-			result[length] = fn(array[length]);
-		}
-		return result;
-	}
-
-	/**
-	 * A simple `Array#map`-like wrapper to work with domain name strings or email
-	 * addresses.
-	 * @private
-	 * @param {String} domain The domain name or email address.
-	 * @param {Function} callback The function that gets called for every
-	 * character.
-	 * @returns {Array} A new string of characters returned by the callback
-	 * function.
-	 */
-	function mapDomain(string, fn) {
-		var parts = string.split('@');
-		var result = '';
-		if (parts.length > 1) {
-			// In email addresses, only the domain name should be punycoded. Leave
-			// the local part (i.e. everything up to `@`) intact.
-			result = parts[0] + '@';
-			string = parts[1];
-		}
-		// Avoid `split(regex)` for IE8 compatibility. See #17.
-		string = string.replace(regexSeparators, '\x2E');
-		var labels = string.split('.');
-		var encoded = map(labels, fn).join('.');
-		return result + encoded;
-	}
-
-	/**
-	 * Creates an array containing the numeric code points of each Unicode
-	 * character in the string. While JavaScript uses UCS-2 internally,
-	 * this function will convert a pair of surrogate halves (each of which
-	 * UCS-2 exposes as separate characters) into a single code point,
-	 * matching UTF-16.
-	 * @see `punycode.ucs2.encode`
-	 * @see <https://mathiasbynens.be/notes/javascript-encoding>
-	 * @memberOf punycode.ucs2
-	 * @name decode
-	 * @param {String} string The Unicode input string (UCS-2).
-	 * @returns {Array} The new array of code points.
-	 */
-	function ucs2decode(string) {
-		var output = [],
-		    counter = 0,
-		    length = string.length,
-		    value,
-		    extra;
-		while (counter < length) {
-			value = string.charCodeAt(counter++);
-			if (value >= 0xD800 && value <= 0xDBFF && counter < length) {
-				// high surrogate, and there is a next character
-				extra = string.charCodeAt(counter++);
-				if ((extra & 0xFC00) == 0xDC00) { // low surrogate
-					output.push(((value & 0x3FF) << 10) + (extra & 0x3FF) + 0x10000);
-				} else {
-					// unmatched surrogate; only append this code unit, in case the next
-					// code unit is the high surrogate of a surrogate pair
-					output.push(value);
-					counter--;
-				}
-			} else {
-				output.push(value);
-			}
-		}
-		return output;
-	}
-
-	/**
-	 * Creates a string based on an array of numeric code points.
-	 * @see `punycode.ucs2.decode`
-	 * @memberOf punycode.ucs2
-	 * @name encode
-	 * @param {Array} codePoints The array of numeric code points.
-	 * @returns {String} The new Unicode string (UCS-2).
-	 */
-	function ucs2encode(array) {
-		return map(array, function(value) {
-			var output = '';
-			if (value > 0xFFFF) {
-				value -= 0x10000;
-				output += stringFromCharCode(value >>> 10 & 0x3FF | 0xD800);
-				value = 0xDC00 | value & 0x3FF;
-			}
-			output += stringFromCharCode(value);
-			return output;
-		}).join('');
-	}
-
-	/**
-	 * Converts a basic code point into a digit/integer.
-	 * @see `digitToBasic()`
-	 * @private
-	 * @param {Number} codePoint The basic numeric code point value.
-	 * @returns {Number} The numeric value of a basic code point (for use in
-	 * representing integers) in the range `0` to `base - 1`, or `base` if
-	 * the code point does not represent a value.
-	 */
-	function basicToDigit(codePoint) {
-		if (codePoint - 48 < 10) {
-			return codePoint - 22;
-		}
-		if (codePoint - 65 < 26) {
-			return codePoint - 65;
-		}
-		if (codePoint - 97 < 26) {
-			return codePoint - 97;
-		}
-		return base;
-	}
-
-	/**
-	 * Converts a digit/integer into a basic code point.
-	 * @see `basicToDigit()`
-	 * @private
-	 * @param {Number} digit The numeric value of a basic code point.
-	 * @returns {Number} The basic code point whose value (when used for
-	 * representing integers) is `digit`, which needs to be in the range
-	 * `0` to `base - 1`. If `flag` is non-zero, the uppercase form is
-	 * used; else, the lowercase form is used. The behavior is undefined
-	 * if `flag` is non-zero and `digit` has no uppercase form.
-	 */
-	function digitToBasic(digit, flag) {
-		//  0..25 map to ASCII a..z or A..Z
-		// 26..35 map to ASCII 0..9
-		return digit + 22 + 75 * (digit < 26) - ((flag != 0) << 5);
-	}
-
-	/**
-	 * Bias adaptation function as per section 3.4 of RFC 3492.
-	 * https://tools.ietf.org/html/rfc3492#section-3.4
-	 * @private
-	 */
-	function adapt(delta, numPoints, firstTime) {
-		var k = 0;
-		delta = firstTime ? floor(delta / damp) : delta >> 1;
-		delta += floor(delta / numPoints);
-		for (/* no initialization */; delta > baseMinusTMin * tMax >> 1; k += base) {
-			delta = floor(delta / baseMinusTMin);
-		}
-		return floor(k + (baseMinusTMin + 1) * delta / (delta + skew));
-	}
-
-	/**
-	 * Converts a Punycode string of ASCII-only symbols to a string of Unicode
-	 * symbols.
-	 * @memberOf punycode
-	 * @param {String} input The Punycode string of ASCII-only symbols.
-	 * @returns {String} The resulting string of Unicode symbols.
-	 */
-	function decode(input) {
-		// Don't use UCS-2
-		var output = [],
-		    inputLength = input.length,
-		    out,
-		    i = 0,
-		    n = initialN,
-		    bias = initialBias,
-		    basic,
-		    j,
-		    index,
-		    oldi,
-		    w,
-		    k,
-		    digit,
-		    t,
-		    /** Cached calculation results */
-		    baseMinusT;
-
-		// Handle the basic code points: let `basic` be the number of input code
-		// points before the last delimiter, or `0` if there is none, then copy
-		// the first basic code points to the output.
-
-		basic = input.lastIndexOf(delimiter);
-		if (basic < 0) {
-			basic = 0;
-		}
-
-		for (j = 0; j < basic; ++j) {
-			// if it's not a basic code point
-			if (input.charCodeAt(j) >= 0x80) {
-				error('not-basic');
-			}
-			output.push(input.charCodeAt(j));
-		}
-
-		// Main decoding loop: start just after the last delimiter if any basic code
-		// points were copied; start at the beginning otherwise.
-
-		for (index = basic > 0 ? basic + 1 : 0; index < inputLength; /* no final expression */) {
-
-			// `index` is the index of the next character to be consumed.
-			// Decode a generalized variable-length integer into `delta`,
-			// which gets added to `i`. The overflow checking is easier
-			// if we increase `i` as we go, then subtract off its starting
-			// value at the end to obtain `delta`.
-			for (oldi = i, w = 1, k = base; /* no condition */; k += base) {
-
-				if (index >= inputLength) {
-					error('invalid-input');
-				}
-
-				digit = basicToDigit(input.charCodeAt(index++));
-
-				if (digit >= base || digit > floor((maxInt - i) / w)) {
-					error('overflow');
-				}
-
-				i += digit * w;
-				t = k <= bias ? tMin : (k >= bias + tMax ? tMax : k - bias);
-
-				if (digit < t) {
-					break;
-				}
-
-				baseMinusT = base - t;
-				if (w > floor(maxInt / baseMinusT)) {
-					error('overflow');
-				}
-
-				w *= baseMinusT;
-
-			}
-
-			out = output.length + 1;
-			bias = adapt(i - oldi, out, oldi == 0);
-
-			// `i` was supposed to wrap around from `out` to `0`,
-			// incrementing `n` each time, so we'll fix that now:
-			if (floor(i / out) > maxInt - n) {
-				error('overflow');
-			}
-
-			n += floor(i / out);
-			i %= out;
-
-			// Insert `n` at position `i` of the output
-			output.splice(i++, 0, n);
-
-		}
-
-		return ucs2encode(output);
-	}
-
-	/**
-	 * Converts a string of Unicode symbols (e.g. a domain name label) to a
-	 * Punycode string of ASCII-only symbols.
-	 * @memberOf punycode
-	 * @param {String} input The string of Unicode symbols.
-	 * @returns {String} The resulting Punycode string of ASCII-only symbols.
-	 */
-	function encode(input) {
-		var n,
-		    delta,
-		    handledCPCount,
-		    basicLength,
-		    bias,
-		    j,
-		    m,
-		    q,
-		    k,
-		    t,
-		    currentValue,
-		    output = [],
-		    /** `inputLength` will hold the number of code points in `input`. */
-		    inputLength,
-		    /** Cached calculation results */
-		    handledCPCountPlusOne,
-		    baseMinusT,
-		    qMinusT;
-
-		// Convert the input in UCS-2 to Unicode
-		input = ucs2decode(input);
-
-		// Cache the length
-		inputLength = input.length;
-
-		// Initialize the state
-		n = initialN;
-		delta = 0;
-		bias = initialBias;
-
-		// Handle the basic code points
-		for (j = 0; j < inputLength; ++j) {
-			currentValue = input[j];
-			if (currentValue < 0x80) {
-				output.push(stringFromCharCode(currentValue));
-			}
-		}
-
-		handledCPCount = basicLength = output.length;
-
-		// `handledCPCount` is the number of code points that have been handled;
-		// `basicLength` is the number of basic code points.
-
-		// Finish the basic string - if it is not empty - with a delimiter
-		if (basicLength) {
-			output.push(delimiter);
-		}
-
-		// Main encoding loop:
-		while (handledCPCount < inputLength) {
-
-			// All non-basic code points < n have been handled already. Find the next
-			// larger one:
-			for (m = maxInt, j = 0; j < inputLength; ++j) {
-				currentValue = input[j];
-				if (currentValue >= n && currentValue < m) {
-					m = currentValue;
-				}
-			}
-
-			// Increase `delta` enough to advance the decoder's <n,i> state to <m,0>,
-			// but guard against overflow
-			handledCPCountPlusOne = handledCPCount + 1;
-			if (m - n > floor((maxInt - delta) / handledCPCountPlusOne)) {
-				error('overflow');
-			}
-
-			delta += (m - n) * handledCPCountPlusOne;
-			n = m;
-
-			for (j = 0; j < inputLength; ++j) {
-				currentValue = input[j];
-
-				if (currentValue < n && ++delta > maxInt) {
-					error('overflow');
-				}
-
-				if (currentValue == n) {
-					// Represent delta as a generalized variable-length integer
-					for (q = delta, k = base; /* no condition */; k += base) {
-						t = k <= bias ? tMin : (k >= bias + tMax ? tMax : k - bias);
-						if (q < t) {
-							break;
-						}
-						qMinusT = q - t;
-						baseMinusT = base - t;
-						output.push(
-							stringFromCharCode(digitToBasic(t + qMinusT % baseMinusT, 0))
-						);
-						q = floor(qMinusT / baseMinusT);
-					}
-
-					output.push(stringFromCharCode(digitToBasic(q, 0)));
-					bias = adapt(delta, handledCPCountPlusOne, handledCPCount == basicLength);
-					delta = 0;
-					++handledCPCount;
-				}
-			}
-
-			++delta;
-			++n;
-
-		}
-		return output.join('');
-	}
-
-	/**
-	 * Converts a Punycode string representing a domain name or an email address
-	 * to Unicode. Only the Punycoded parts of the input will be converted, i.e.
-	 * it doesn't matter if you call it on a string that has already been
-	 * converted to Unicode.
-	 * @memberOf punycode
-	 * @param {String} input The Punycoded domain name or email address to
-	 * convert to Unicode.
-	 * @returns {String} The Unicode representation of the given Punycode
-	 * string.
-	 */
-	function toUnicode(input) {
-		return mapDomain(input, function(string) {
-			return regexPunycode.test(string)
-				? decode(string.slice(4).toLowerCase())
-				: string;
-		});
-	}
-
-	/**
-	 * Converts a Unicode string representing a domain name or an email address to
-	 * Punycode. Only the non-ASCII parts of the domain name will be converted,
-	 * i.e. it doesn't matter if you call it with a domain that's already in
-	 * ASCII.
-	 * @memberOf punycode
-	 * @param {String} input The domain name or email address to convert, as a
-	 * Unicode string.
-	 * @returns {String} The Punycode representation of the given domain name or
-	 * email address.
-	 */
-	function toASCII(input) {
-		return mapDomain(input, function(string) {
-			return regexNonASCII.test(string)
-				? 'xn--' + encode(string)
-				: string;
-		});
-	}
-
-	/*--------------------------------------------------------------------------*/
-
-	/** Define the public API */
-	punycode = {
-		/**
-		 * A string representing the current Punycode.js version number.
-		 * @memberOf punycode
-		 * @type String
-		 */
-		'version': '1.4.1',
-		/**
-		 * An object of methods to convert from JavaScript's internal character
-		 * representation (UCS-2) to Unicode code points, and back.
-		 * @see <https://mathiasbynens.be/notes/javascript-encoding>
-		 * @memberOf punycode
-		 * @type Object
-		 */
-		'ucs2': {
-			'decode': ucs2decode,
-			'encode': ucs2encode
-		},
-		'decode': decode,
-		'encode': encode,
-		'toASCII': toASCII,
-		'toUnicode': toUnicode
-	};
-
-	/** Expose `punycode` */
-	// Some AMD build optimizers, like r.js, check for specific condition patterns
-	// like the following:
-	if (
-		true
-	) {
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
-			return punycode;
-		}).call(exports, __webpack_require__, exports, module),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	} else {}
-
-}(this));
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module), __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
-
-/***/ }),
-
-/***/ "./node_modules/querystring-es3/decode.js":
-/*!************************************************!*\
-  !*** ./node_modules/querystring-es3/decode.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
-// If obj.hasOwnProperty has been overridden, then calling
-// obj.hasOwnProperty(prop) will break.
-// See: https://github.com/joyent/node/issues/1707
-function hasOwnProperty(obj, prop) {
-  return Object.prototype.hasOwnProperty.call(obj, prop);
-}
-
-module.exports = function(qs, sep, eq, options) {
-  sep = sep || '&';
-  eq = eq || '=';
-  var obj = {};
-
-  if (typeof qs !== 'string' || qs.length === 0) {
-    return obj;
-  }
-
-  var regexp = /\+/g;
-  qs = qs.split(sep);
-
-  var maxKeys = 1000;
-  if (options && typeof options.maxKeys === 'number') {
-    maxKeys = options.maxKeys;
-  }
-
-  var len = qs.length;
-  // maxKeys <= 0 means that we should not limit keys count
-  if (maxKeys > 0 && len > maxKeys) {
-    len = maxKeys;
-  }
-
-  for (var i = 0; i < len; ++i) {
-    var x = qs[i].replace(regexp, '%20'),
-        idx = x.indexOf(eq),
-        kstr, vstr, k, v;
-
-    if (idx >= 0) {
-      kstr = x.substr(0, idx);
-      vstr = x.substr(idx + 1);
-    } else {
-      kstr = x;
-      vstr = '';
-    }
-
-    k = decodeURIComponent(kstr);
-    v = decodeURIComponent(vstr);
-
-    if (!hasOwnProperty(obj, k)) {
-      obj[k] = v;
-    } else if (isArray(obj[k])) {
-      obj[k].push(v);
-    } else {
-      obj[k] = [obj[k], v];
-    }
-  }
-
-  return obj;
-};
-
-var isArray = Array.isArray || function (xs) {
-  return Object.prototype.toString.call(xs) === '[object Array]';
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/querystring-es3/encode.js":
-/*!************************************************!*\
-  !*** ./node_modules/querystring-es3/encode.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
-var stringifyPrimitive = function(v) {
-  switch (typeof v) {
-    case 'string':
-      return v;
-
-    case 'boolean':
-      return v ? 'true' : 'false';
-
-    case 'number':
-      return isFinite(v) ? v : '';
-
-    default:
-      return '';
-  }
-};
-
-module.exports = function(obj, sep, eq, name) {
-  sep = sep || '&';
-  eq = eq || '=';
-  if (obj === null) {
-    obj = undefined;
-  }
-
-  if (typeof obj === 'object') {
-    return map(objectKeys(obj), function(k) {
-      var ks = encodeURIComponent(stringifyPrimitive(k)) + eq;
-      if (isArray(obj[k])) {
-        return map(obj[k], function(v) {
-          return ks + encodeURIComponent(stringifyPrimitive(v));
-        }).join(sep);
-      } else {
-        return ks + encodeURIComponent(stringifyPrimitive(obj[k]));
-      }
-    }).join(sep);
-
-  }
-
-  if (!name) return '';
-  return encodeURIComponent(stringifyPrimitive(name)) + eq +
-         encodeURIComponent(stringifyPrimitive(obj));
-};
-
-var isArray = Array.isArray || function (xs) {
-  return Object.prototype.toString.call(xs) === '[object Array]';
-};
-
-function map (xs, f) {
-  if (xs.map) return xs.map(f);
-  var res = [];
-  for (var i = 0; i < xs.length; i++) {
-    res.push(f(xs[i], i));
-  }
-  return res;
-}
-
-var objectKeys = Object.keys || function (obj) {
-  var res = [];
-  for (var key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) res.push(key);
-  }
-  return res;
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/querystring-es3/index.js":
-/*!***********************************************!*\
-  !*** ./node_modules/querystring-es3/index.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.decode = exports.parse = __webpack_require__(/*! ./decode */ "./node_modules/querystring-es3/decode.js");
-exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node_modules/querystring-es3/encode.js");
-
-
-/***/ }),
-
 /***/ "./node_modules/ramda/es/internal/_curry1.js":
 /*!***************************************************!*\
   !*** ./node_modules/ramda/es/internal/_curry1.js ***!
@@ -25560,6 +17146,124 @@ var mergeWithKey = /*#__PURE__*/Object(_internal_curry3_js__WEBPACK_IMPORTED_MOD
   return result;
 });
 /* harmony default export */ __webpack_exports__["default"] = (mergeWithKey);
+
+/***/ }),
+
+/***/ "./node_modules/react-copy-to-clipboard/lib/Component.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/react-copy-to-clipboard/lib/Component.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CopyToClipboard = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _copyToClipboard = __webpack_require__(/*! copy-to-clipboard */ "./node_modules/copy-to-clipboard/index.js");
+
+var _copyToClipboard2 = _interopRequireDefault(_copyToClipboard);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var CopyToClipboard = exports.CopyToClipboard = function (_React$PureComponent) {
+  _inherits(CopyToClipboard, _React$PureComponent);
+
+  function CopyToClipboard() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, CopyToClipboard);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = CopyToClipboard.__proto__ || Object.getPrototypeOf(CopyToClipboard)).call.apply(_ref, [this].concat(args))), _this), _this.onClick = function (event) {
+      var _this$props = _this.props,
+          text = _this$props.text,
+          onCopy = _this$props.onCopy,
+          children = _this$props.children,
+          options = _this$props.options;
+
+
+      var elem = _react2.default.Children.only(children);
+
+      var result = (0, _copyToClipboard2.default)(text, options);
+
+      if (onCopy) {
+        onCopy(text, result);
+      }
+
+      // Bypass onClick if it was present
+      if (elem && elem.props && typeof elem.props.onClick === 'function') {
+        elem.props.onClick(event);
+      }
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(CopyToClipboard, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          _text = _props.text,
+          _onCopy = _props.onCopy,
+          _options = _props.options,
+          children = _props.children,
+          props = _objectWithoutProperties(_props, ['text', 'onCopy', 'options', 'children']);
+
+      var elem = _react2.default.Children.only(children);
+
+      return _react2.default.cloneElement(elem, _extends({}, props, { onClick: this.onClick }));
+    }
+  }]);
+
+  return CopyToClipboard;
+}(_react2.default.PureComponent);
+
+CopyToClipboard.defaultProps = {
+  onCopy: undefined,
+  options: undefined
+};
+
+/***/ }),
+
+/***/ "./node_modules/react-copy-to-clipboard/lib/index.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-copy-to-clipboard/lib/index.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _require = __webpack_require__(/*! ./Component */ "./node_modules/react-copy-to-clipboard/lib/Component.js"),
+    CopyToClipboard = _require.CopyToClipboard;
+
+CopyToClipboard.CopyToClipboard = CopyToClipboard;
+module.exports = CopyToClipboard;
 
 /***/ }),
 
@@ -42190,773 +33894,51 @@ if ("development" !== 'production' && "development" !== 'test' && typeof window 
 
 /***/ }),
 
-/***/ "./node_modules/url/url.js":
-/*!*********************************!*\
-  !*** ./node_modules/url/url.js ***!
-  \*********************************/
+/***/ "./node_modules/toggle-selection/index.js":
+/*!************************************************!*\
+  !*** ./node_modules/toggle-selection/index.js ***!
+  \************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
+/***/ (function(module, exports) {
 
 
+module.exports = function () {
+  var selection = document.getSelection();
+  if (!selection.rangeCount) {
+    return function () {};
+  }
+  var active = document.activeElement;
 
-var punycode = __webpack_require__(/*! punycode */ "./node_modules/punycode/punycode.js");
-var util = __webpack_require__(/*! ./util */ "./node_modules/url/util.js");
-
-exports.parse = urlParse;
-exports.resolve = urlResolve;
-exports.resolveObject = urlResolveObject;
-exports.format = urlFormat;
-
-exports.Url = Url;
-
-function Url() {
-  this.protocol = null;
-  this.slashes = null;
-  this.auth = null;
-  this.host = null;
-  this.port = null;
-  this.hostname = null;
-  this.hash = null;
-  this.search = null;
-  this.query = null;
-  this.pathname = null;
-  this.path = null;
-  this.href = null;
-}
-
-// Reference: RFC 3986, RFC 1808, RFC 2396
-
-// define these here so at least they only have to be
-// compiled once on the first module load.
-var protocolPattern = /^([a-z0-9.+-]+:)/i,
-    portPattern = /:[0-9]*$/,
-
-    // Special case for a simple path URL
-    simplePathPattern = /^(\/\/?(?!\/)[^\?\s]*)(\?[^\s]*)?$/,
-
-    // RFC 2396: characters reserved for delimiting URLs.
-    // We actually just auto-escape these.
-    delims = ['<', '>', '"', '`', ' ', '\r', '\n', '\t'],
-
-    // RFC 2396: characters not allowed for various reasons.
-    unwise = ['{', '}', '|', '\\', '^', '`'].concat(delims),
-
-    // Allowed by RFCs, but cause of XSS attacks.  Always escape these.
-    autoEscape = ['\''].concat(unwise),
-    // Characters that are never ever allowed in a hostname.
-    // Note that any invalid chars are also handled, but these
-    // are the ones that are *expected* to be seen, so we fast-path
-    // them.
-    nonHostChars = ['%', '/', '?', ';', '#'].concat(autoEscape),
-    hostEndingChars = ['/', '?', '#'],
-    hostnameMaxLen = 255,
-    hostnamePartPattern = /^[+a-z0-9A-Z_-]{0,63}$/,
-    hostnamePartStart = /^([+a-z0-9A-Z_-]{0,63})(.*)$/,
-    // protocols that can allow "unsafe" and "unwise" chars.
-    unsafeProtocol = {
-      'javascript': true,
-      'javascript:': true
-    },
-    // protocols that never have a hostname.
-    hostlessProtocol = {
-      'javascript': true,
-      'javascript:': true
-    },
-    // protocols that always contain a // bit.
-    slashedProtocol = {
-      'http': true,
-      'https': true,
-      'ftp': true,
-      'gopher': true,
-      'file': true,
-      'http:': true,
-      'https:': true,
-      'ftp:': true,
-      'gopher:': true,
-      'file:': true
-    },
-    querystring = __webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js");
-
-function urlParse(url, parseQueryString, slashesDenoteHost) {
-  if (url && util.isObject(url) && url instanceof Url) return url;
-
-  var u = new Url;
-  u.parse(url, parseQueryString, slashesDenoteHost);
-  return u;
-}
-
-Url.prototype.parse = function(url, parseQueryString, slashesDenoteHost) {
-  if (!util.isString(url)) {
-    throw new TypeError("Parameter 'url' must be a string, not " + typeof url);
+  var ranges = [];
+  for (var i = 0; i < selection.rangeCount; i++) {
+    ranges.push(selection.getRangeAt(i));
   }
 
-  // Copy chrome, IE, opera backslash-handling behavior.
-  // Back slashes before the query string get converted to forward slashes
-  // See: https://code.google.com/p/chromium/issues/detail?id=25916
-  var queryIndex = url.indexOf('?'),
-      splitter =
-          (queryIndex !== -1 && queryIndex < url.indexOf('#')) ? '?' : '#',
-      uSplit = url.split(splitter),
-      slashRegex = /\\/g;
-  uSplit[0] = uSplit[0].replace(slashRegex, '/');
-  url = uSplit.join(splitter);
+  switch (active.tagName.toUpperCase()) { // .toUpperCase handles XHTML
+    case 'INPUT':
+    case 'TEXTAREA':
+      active.blur();
+      break;
 
-  var rest = url;
-
-  // trim before proceeding.
-  // This is to support parse stuff like "  http://foo.com  \n"
-  rest = rest.trim();
-
-  if (!slashesDenoteHost && url.split('#').length === 1) {
-    // Try fast path regexp
-    var simplePath = simplePathPattern.exec(rest);
-    if (simplePath) {
-      this.path = rest;
-      this.href = rest;
-      this.pathname = simplePath[1];
-      if (simplePath[2]) {
-        this.search = simplePath[2];
-        if (parseQueryString) {
-          this.query = querystring.parse(this.search.substr(1));
-        } else {
-          this.query = this.search.substr(1);
-        }
-      } else if (parseQueryString) {
-        this.search = '';
-        this.query = {};
-      }
-      return this;
-    }
+    default:
+      active = null;
+      break;
   }
 
-  var proto = protocolPattern.exec(rest);
-  if (proto) {
-    proto = proto[0];
-    var lowerProto = proto.toLowerCase();
-    this.protocol = lowerProto;
-    rest = rest.substr(proto.length);
-  }
+  selection.removeAllRanges();
+  return function () {
+    selection.type === 'Caret' &&
+    selection.removeAllRanges();
 
-  // figure out if it's got a host
-  // user@server is *always* interpreted as a hostname, and url
-  // resolution will treat //foo/bar as host=foo,path=bar because that's
-  // how the browser resolves relative URLs.
-  if (slashesDenoteHost || proto || rest.match(/^\/\/[^@\/]+@[^@\/]+/)) {
-    var slashes = rest.substr(0, 2) === '//';
-    if (slashes && !(proto && hostlessProtocol[proto])) {
-      rest = rest.substr(2);
-      this.slashes = true;
-    }
-  }
-
-  if (!hostlessProtocol[proto] &&
-      (slashes || (proto && !slashedProtocol[proto]))) {
-
-    // there's a hostname.
-    // the first instance of /, ?, ;, or # ends the host.
-    //
-    // If there is an @ in the hostname, then non-host chars *are* allowed
-    // to the left of the last @ sign, unless some host-ending character
-    // comes *before* the @-sign.
-    // URLs are obnoxious.
-    //
-    // ex:
-    // http://a@b@c/ => user:a@b host:c
-    // http://a@b?@c => user:a host:c path:/?@c
-
-    // v0.12 TODO(isaacs): This is not quite how Chrome does things.
-    // Review our test case against browsers more comprehensively.
-
-    // find the first instance of any hostEndingChars
-    var hostEnd = -1;
-    for (var i = 0; i < hostEndingChars.length; i++) {
-      var hec = rest.indexOf(hostEndingChars[i]);
-      if (hec !== -1 && (hostEnd === -1 || hec < hostEnd))
-        hostEnd = hec;
+    if (!selection.rangeCount) {
+      ranges.forEach(function(range) {
+        selection.addRange(range);
+      });
     }
 
-    // at this point, either we have an explicit point where the
-    // auth portion cannot go past, or the last @ char is the decider.
-    var auth, atSign;
-    if (hostEnd === -1) {
-      // atSign can be anywhere.
-      atSign = rest.lastIndexOf('@');
-    } else {
-      // atSign must be in auth portion.
-      // http://a@b/c@d => host:b auth:a path:/c@d
-      atSign = rest.lastIndexOf('@', hostEnd);
-    }
-
-    // Now we have a portion which is definitely the auth.
-    // Pull that off.
-    if (atSign !== -1) {
-      auth = rest.slice(0, atSign);
-      rest = rest.slice(atSign + 1);
-      this.auth = decodeURIComponent(auth);
-    }
-
-    // the host is the remaining to the left of the first non-host char
-    hostEnd = -1;
-    for (var i = 0; i < nonHostChars.length; i++) {
-      var hec = rest.indexOf(nonHostChars[i]);
-      if (hec !== -1 && (hostEnd === -1 || hec < hostEnd))
-        hostEnd = hec;
-    }
-    // if we still have not hit it, then the entire thing is a host.
-    if (hostEnd === -1)
-      hostEnd = rest.length;
-
-    this.host = rest.slice(0, hostEnd);
-    rest = rest.slice(hostEnd);
-
-    // pull out port.
-    this.parseHost();
-
-    // we've indicated that there is a hostname,
-    // so even if it's empty, it has to be present.
-    this.hostname = this.hostname || '';
-
-    // if hostname begins with [ and ends with ]
-    // assume that it's an IPv6 address.
-    var ipv6Hostname = this.hostname[0] === '[' &&
-        this.hostname[this.hostname.length - 1] === ']';
-
-    // validate a little.
-    if (!ipv6Hostname) {
-      var hostparts = this.hostname.split(/\./);
-      for (var i = 0, l = hostparts.length; i < l; i++) {
-        var part = hostparts[i];
-        if (!part) continue;
-        if (!part.match(hostnamePartPattern)) {
-          var newpart = '';
-          for (var j = 0, k = part.length; j < k; j++) {
-            if (part.charCodeAt(j) > 127) {
-              // we replace non-ASCII char with a temporary placeholder
-              // we need this to make sure size of hostname is not
-              // broken by replacing non-ASCII by nothing
-              newpart += 'x';
-            } else {
-              newpart += part[j];
-            }
-          }
-          // we test again with ASCII char only
-          if (!newpart.match(hostnamePartPattern)) {
-            var validParts = hostparts.slice(0, i);
-            var notHost = hostparts.slice(i + 1);
-            var bit = part.match(hostnamePartStart);
-            if (bit) {
-              validParts.push(bit[1]);
-              notHost.unshift(bit[2]);
-            }
-            if (notHost.length) {
-              rest = '/' + notHost.join('.') + rest;
-            }
-            this.hostname = validParts.join('.');
-            break;
-          }
-        }
-      }
-    }
-
-    if (this.hostname.length > hostnameMaxLen) {
-      this.hostname = '';
-    } else {
-      // hostnames are always lower case.
-      this.hostname = this.hostname.toLowerCase();
-    }
-
-    if (!ipv6Hostname) {
-      // IDNA Support: Returns a punycoded representation of "domain".
-      // It only converts parts of the domain name that
-      // have non-ASCII characters, i.e. it doesn't matter if
-      // you call it with a domain that already is ASCII-only.
-      this.hostname = punycode.toASCII(this.hostname);
-    }
-
-    var p = this.port ? ':' + this.port : '';
-    var h = this.hostname || '';
-    this.host = h + p;
-    this.href += this.host;
-
-    // strip [ and ] from the hostname
-    // the host field still retains them, though
-    if (ipv6Hostname) {
-      this.hostname = this.hostname.substr(1, this.hostname.length - 2);
-      if (rest[0] !== '/') {
-        rest = '/' + rest;
-      }
-    }
-  }
-
-  // now rest is set to the post-host stuff.
-  // chop off any delim chars.
-  if (!unsafeProtocol[lowerProto]) {
-
-    // First, make 100% sure that any "autoEscape" chars get
-    // escaped, even if encodeURIComponent doesn't think they
-    // need to be.
-    for (var i = 0, l = autoEscape.length; i < l; i++) {
-      var ae = autoEscape[i];
-      if (rest.indexOf(ae) === -1)
-        continue;
-      var esc = encodeURIComponent(ae);
-      if (esc === ae) {
-        esc = escape(ae);
-      }
-      rest = rest.split(ae).join(esc);
-    }
-  }
-
-
-  // chop off from the tail first.
-  var hash = rest.indexOf('#');
-  if (hash !== -1) {
-    // got a fragment string.
-    this.hash = rest.substr(hash);
-    rest = rest.slice(0, hash);
-  }
-  var qm = rest.indexOf('?');
-  if (qm !== -1) {
-    this.search = rest.substr(qm);
-    this.query = rest.substr(qm + 1);
-    if (parseQueryString) {
-      this.query = querystring.parse(this.query);
-    }
-    rest = rest.slice(0, qm);
-  } else if (parseQueryString) {
-    // no query string, but parseQueryString still requested
-    this.search = '';
-    this.query = {};
-  }
-  if (rest) this.pathname = rest;
-  if (slashedProtocol[lowerProto] &&
-      this.hostname && !this.pathname) {
-    this.pathname = '/';
-  }
-
-  //to support http.request
-  if (this.pathname || this.search) {
-    var p = this.pathname || '';
-    var s = this.search || '';
-    this.path = p + s;
-  }
-
-  // finally, reconstruct the href based on what has been validated.
-  this.href = this.format();
-  return this;
-};
-
-// format a parsed object into a url string
-function urlFormat(obj) {
-  // ensure it's an object, and not a string url.
-  // If it's an obj, this is a no-op.
-  // this way, you can call url_format() on strings
-  // to clean up potentially wonky urls.
-  if (util.isString(obj)) obj = urlParse(obj);
-  if (!(obj instanceof Url)) return Url.prototype.format.call(obj);
-  return obj.format();
-}
-
-Url.prototype.format = function() {
-  var auth = this.auth || '';
-  if (auth) {
-    auth = encodeURIComponent(auth);
-    auth = auth.replace(/%3A/i, ':');
-    auth += '@';
-  }
-
-  var protocol = this.protocol || '',
-      pathname = this.pathname || '',
-      hash = this.hash || '',
-      host = false,
-      query = '';
-
-  if (this.host) {
-    host = auth + this.host;
-  } else if (this.hostname) {
-    host = auth + (this.hostname.indexOf(':') === -1 ?
-        this.hostname :
-        '[' + this.hostname + ']');
-    if (this.port) {
-      host += ':' + this.port;
-    }
-  }
-
-  if (this.query &&
-      util.isObject(this.query) &&
-      Object.keys(this.query).length) {
-    query = querystring.stringify(this.query);
-  }
-
-  var search = this.search || (query && ('?' + query)) || '';
-
-  if (protocol && protocol.substr(-1) !== ':') protocol += ':';
-
-  // only the slashedProtocols get the //.  Not mailto:, xmpp:, etc.
-  // unless they had them to begin with.
-  if (this.slashes ||
-      (!protocol || slashedProtocol[protocol]) && host !== false) {
-    host = '//' + (host || '');
-    if (pathname && pathname.charAt(0) !== '/') pathname = '/' + pathname;
-  } else if (!host) {
-    host = '';
-  }
-
-  if (hash && hash.charAt(0) !== '#') hash = '#' + hash;
-  if (search && search.charAt(0) !== '?') search = '?' + search;
-
-  pathname = pathname.replace(/[?#]/g, function(match) {
-    return encodeURIComponent(match);
-  });
-  search = search.replace('#', '%23');
-
-  return protocol + host + pathname + search + hash;
-};
-
-function urlResolve(source, relative) {
-  return urlParse(source, false, true).resolve(relative);
-}
-
-Url.prototype.resolve = function(relative) {
-  return this.resolveObject(urlParse(relative, false, true)).format();
-};
-
-function urlResolveObject(source, relative) {
-  if (!source) return relative;
-  return urlParse(source, false, true).resolveObject(relative);
-}
-
-Url.prototype.resolveObject = function(relative) {
-  if (util.isString(relative)) {
-    var rel = new Url();
-    rel.parse(relative, false, true);
-    relative = rel;
-  }
-
-  var result = new Url();
-  var tkeys = Object.keys(this);
-  for (var tk = 0; tk < tkeys.length; tk++) {
-    var tkey = tkeys[tk];
-    result[tkey] = this[tkey];
-  }
-
-  // hash is always overridden, no matter what.
-  // even href="" will remove it.
-  result.hash = relative.hash;
-
-  // if the relative url is empty, then there's nothing left to do here.
-  if (relative.href === '') {
-    result.href = result.format();
-    return result;
-  }
-
-  // hrefs like //foo/bar always cut to the protocol.
-  if (relative.slashes && !relative.protocol) {
-    // take everything except the protocol from relative
-    var rkeys = Object.keys(relative);
-    for (var rk = 0; rk < rkeys.length; rk++) {
-      var rkey = rkeys[rk];
-      if (rkey !== 'protocol')
-        result[rkey] = relative[rkey];
-    }
-
-    //urlParse appends trailing / to urls like http://www.example.com
-    if (slashedProtocol[result.protocol] &&
-        result.hostname && !result.pathname) {
-      result.path = result.pathname = '/';
-    }
-
-    result.href = result.format();
-    return result;
-  }
-
-  if (relative.protocol && relative.protocol !== result.protocol) {
-    // if it's a known url protocol, then changing
-    // the protocol does weird things
-    // first, if it's not file:, then we MUST have a host,
-    // and if there was a path
-    // to begin with, then we MUST have a path.
-    // if it is file:, then the host is dropped,
-    // because that's known to be hostless.
-    // anything else is assumed to be absolute.
-    if (!slashedProtocol[relative.protocol]) {
-      var keys = Object.keys(relative);
-      for (var v = 0; v < keys.length; v++) {
-        var k = keys[v];
-        result[k] = relative[k];
-      }
-      result.href = result.format();
-      return result;
-    }
-
-    result.protocol = relative.protocol;
-    if (!relative.host && !hostlessProtocol[relative.protocol]) {
-      var relPath = (relative.pathname || '').split('/');
-      while (relPath.length && !(relative.host = relPath.shift()));
-      if (!relative.host) relative.host = '';
-      if (!relative.hostname) relative.hostname = '';
-      if (relPath[0] !== '') relPath.unshift('');
-      if (relPath.length < 2) relPath.unshift('');
-      result.pathname = relPath.join('/');
-    } else {
-      result.pathname = relative.pathname;
-    }
-    result.search = relative.search;
-    result.query = relative.query;
-    result.host = relative.host || '';
-    result.auth = relative.auth;
-    result.hostname = relative.hostname || relative.host;
-    result.port = relative.port;
-    // to support http.request
-    if (result.pathname || result.search) {
-      var p = result.pathname || '';
-      var s = result.search || '';
-      result.path = p + s;
-    }
-    result.slashes = result.slashes || relative.slashes;
-    result.href = result.format();
-    return result;
-  }
-
-  var isSourceAbs = (result.pathname && result.pathname.charAt(0) === '/'),
-      isRelAbs = (
-          relative.host ||
-          relative.pathname && relative.pathname.charAt(0) === '/'
-      ),
-      mustEndAbs = (isRelAbs || isSourceAbs ||
-                    (result.host && relative.pathname)),
-      removeAllDots = mustEndAbs,
-      srcPath = result.pathname && result.pathname.split('/') || [],
-      relPath = relative.pathname && relative.pathname.split('/') || [],
-      psychotic = result.protocol && !slashedProtocol[result.protocol];
-
-  // if the url is a non-slashed url, then relative
-  // links like ../.. should be able
-  // to crawl up to the hostname, as well.  This is strange.
-  // result.protocol has already been set by now.
-  // Later on, put the first path part into the host field.
-  if (psychotic) {
-    result.hostname = '';
-    result.port = null;
-    if (result.host) {
-      if (srcPath[0] === '') srcPath[0] = result.host;
-      else srcPath.unshift(result.host);
-    }
-    result.host = '';
-    if (relative.protocol) {
-      relative.hostname = null;
-      relative.port = null;
-      if (relative.host) {
-        if (relPath[0] === '') relPath[0] = relative.host;
-        else relPath.unshift(relative.host);
-      }
-      relative.host = null;
-    }
-    mustEndAbs = mustEndAbs && (relPath[0] === '' || srcPath[0] === '');
-  }
-
-  if (isRelAbs) {
-    // it's absolute.
-    result.host = (relative.host || relative.host === '') ?
-                  relative.host : result.host;
-    result.hostname = (relative.hostname || relative.hostname === '') ?
-                      relative.hostname : result.hostname;
-    result.search = relative.search;
-    result.query = relative.query;
-    srcPath = relPath;
-    // fall through to the dot-handling below.
-  } else if (relPath.length) {
-    // it's relative
-    // throw away the existing file, and take the new path instead.
-    if (!srcPath) srcPath = [];
-    srcPath.pop();
-    srcPath = srcPath.concat(relPath);
-    result.search = relative.search;
-    result.query = relative.query;
-  } else if (!util.isNullOrUndefined(relative.search)) {
-    // just pull out the search.
-    // like href='?foo'.
-    // Put this after the other two cases because it simplifies the booleans
-    if (psychotic) {
-      result.hostname = result.host = srcPath.shift();
-      //occationaly the auth can get stuck only in host
-      //this especially happens in cases like
-      //url.resolveObject('mailto:local1@domain1', 'local2@domain2')
-      var authInHost = result.host && result.host.indexOf('@') > 0 ?
-                       result.host.split('@') : false;
-      if (authInHost) {
-        result.auth = authInHost.shift();
-        result.host = result.hostname = authInHost.shift();
-      }
-    }
-    result.search = relative.search;
-    result.query = relative.query;
-    //to support http.request
-    if (!util.isNull(result.pathname) || !util.isNull(result.search)) {
-      result.path = (result.pathname ? result.pathname : '') +
-                    (result.search ? result.search : '');
-    }
-    result.href = result.format();
-    return result;
-  }
-
-  if (!srcPath.length) {
-    // no path at all.  easy.
-    // we've already handled the other stuff above.
-    result.pathname = null;
-    //to support http.request
-    if (result.search) {
-      result.path = '/' + result.search;
-    } else {
-      result.path = null;
-    }
-    result.href = result.format();
-    return result;
-  }
-
-  // if a url ENDs in . or .., then it must get a trailing slash.
-  // however, if it ends in anything else non-slashy,
-  // then it must NOT get a trailing slash.
-  var last = srcPath.slice(-1)[0];
-  var hasTrailingSlash = (
-      (result.host || relative.host || srcPath.length > 1) &&
-      (last === '.' || last === '..') || last === '');
-
-  // strip single dots, resolve double dots to parent dir
-  // if the path tries to go above the root, `up` ends up > 0
-  var up = 0;
-  for (var i = srcPath.length; i >= 0; i--) {
-    last = srcPath[i];
-    if (last === '.') {
-      srcPath.splice(i, 1);
-    } else if (last === '..') {
-      srcPath.splice(i, 1);
-      up++;
-    } else if (up) {
-      srcPath.splice(i, 1);
-      up--;
-    }
-  }
-
-  // if the path is allowed to go above the root, restore leading ..s
-  if (!mustEndAbs && !removeAllDots) {
-    for (; up--; up) {
-      srcPath.unshift('..');
-    }
-  }
-
-  if (mustEndAbs && srcPath[0] !== '' &&
-      (!srcPath[0] || srcPath[0].charAt(0) !== '/')) {
-    srcPath.unshift('');
-  }
-
-  if (hasTrailingSlash && (srcPath.join('/').substr(-1) !== '/')) {
-    srcPath.push('');
-  }
-
-  var isAbsolute = srcPath[0] === '' ||
-      (srcPath[0] && srcPath[0].charAt(0) === '/');
-
-  // put the host back
-  if (psychotic) {
-    result.hostname = result.host = isAbsolute ? '' :
-                                    srcPath.length ? srcPath.shift() : '';
-    //occationaly the auth can get stuck only in host
-    //this especially happens in cases like
-    //url.resolveObject('mailto:local1@domain1', 'local2@domain2')
-    var authInHost = result.host && result.host.indexOf('@') > 0 ?
-                     result.host.split('@') : false;
-    if (authInHost) {
-      result.auth = authInHost.shift();
-      result.host = result.hostname = authInHost.shift();
-    }
-  }
-
-  mustEndAbs = mustEndAbs || (result.host && srcPath.length);
-
-  if (mustEndAbs && !isAbsolute) {
-    srcPath.unshift('');
-  }
-
-  if (!srcPath.length) {
-    result.pathname = null;
-    result.path = null;
-  } else {
-    result.pathname = srcPath.join('/');
-  }
-
-  //to support request.http
-  if (!util.isNull(result.pathname) || !util.isNull(result.search)) {
-    result.path = (result.pathname ? result.pathname : '') +
-                  (result.search ? result.search : '');
-  }
-  result.auth = relative.auth || result.auth;
-  result.slashes = result.slashes || relative.slashes;
-  result.href = result.format();
-  return result;
-};
-
-Url.prototype.parseHost = function() {
-  var host = this.host;
-  var port = portPattern.exec(host);
-  if (port) {
-    port = port[0];
-    if (port !== ':') {
-      this.port = port.substr(1);
-    }
-    host = host.substr(0, host.length - port.length);
-  }
-  if (host) this.hostname = host;
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/url/util.js":
-/*!**********************************!*\
-  !*** ./node_modules/url/util.js ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = {
-  isString: function(arg) {
-    return typeof(arg) === 'string';
-  },
-  isObject: function(arg) {
-    return typeof(arg) === 'object' && arg !== null;
-  },
-  isNull: function(arg) {
-    return arg === null;
-  },
-  isNullOrUndefined: function(arg) {
-    return arg == null;
-  }
+    active &&
+    active.focus();
+  };
 };
 
 
@@ -43008,42 +33990,9 @@ module.exports = function(originalModule) {
 
 /***/ }),
 
-/***/ "./node_modules/webpack/buildin/module.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/module.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = function(module) {
-	if (!module.webpackPolyfill) {
-		module.deprecate = function() {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if (!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
-
-/***/ }),
-
-/***/ "./pages/__generated__/resultQuery.graphql.js":
+/***/ "./pages/__generated__/placesQuery.graphql.js":
 /*!****************************************************!*\
-  !*** ./pages/__generated__/resultQuery.graphql.js ***!
+  !*** ./pages/__generated__/placesQuery.graphql.js ***!
   \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -43051,79 +34000,71 @@ module.exports = function(module) {
 "use strict";
 /**
  * @flow
- * @relayHash 9f36d39503507bd8a4b0b8d3f7627030
+ * @relayHash 3be55a360339273d7765a34b638a4713
  */
 
 /* eslint-disable */
 
 /*::
 import type { ConcreteRequest } from 'relay-runtime';
-type Itinerary_flights$ref = any;
-export type SearchParams = {|
-  adults?: ?number,
-  children?: ?number,
-  infants?: ?number,
-  dateFrom: string,
-  dateTo: string,
-  returnFrom?: ?string,
-  returnTo?: ?string,
-  flyFrom: string,
-  flyTo?: ?string,
-  stopovers: $ReadOnlyArray<Stopover>,
+type Map_places$ref = any;
+type PlaceCard_places$ref = any;
+export type placesQueryVariables = {|
+  interest: string,
+  bookingToken: string,
 |};
-export type Stopover = {|
-  locations?: ?$ReadOnlyArray<?string>,
-  nightsFrom?: ?number,
-  nightsTo?: ?number,
+export type placesQueryResponse = {|
+  +item: ?{|
+    +price: ?number,
+    +route: ?$ReadOnlyArray<?{|
+      +destination: ?{|
+        +city: ?string,
+        +country: ?string,
+      |},
+      +$fragmentRefs: Map_places$ref & PlaceCard_places$ref,
+    |}>,
+  |}
 |};
-export type resultQueryVariables = {|
-  params: SearchParams
-|};
-export type resultQueryResponse = {|
-  +$fragmentRefs: Itinerary_flights$ref
-|};
-export type resultQuery = {|
-  variables: resultQueryVariables,
-  response: resultQueryResponse,
+export type placesQuery = {|
+  variables: placesQueryVariables,
+  response: placesQueryResponse,
 |};
 */
 
 /*
-query resultQuery(
-  $params: SearchParams!
+query placesQuery(
+  $interest: String!
+  $bookingToken: String!
 ) {
-  ...Itinerary_flights_35PWgj
-}
-
-fragment Itinerary_flights_35PWgj on Query {
-  search(params: $params) {
+  item(interest: $interest, bookingToken: $bookingToken) {
     price
-    bookingToken
     route {
-      ...Route_flight
-      from {
-        timeLocal
-      }
-      to {
-        timeLocal
+      ...Map_places
+      ...PlaceCard_places
+      destination {
+        city
+        country
       }
     }
   }
 }
 
-fragment Route_flight on Route {
-  from {
-    city
-    iata
-    timeLocal
+fragment Map_places on Route {
+  interests {
+    name
+    coords {
+      lat
+      lon
+    }
+    img
+    score
   }
-  to {
-    city
-    iata
-    timeLocal
-  }
-  parts {
-    carrier
+}
+
+fragment PlaceCard_places on Route {
+  interests {
+    name
+    address
   }
 }
 */
@@ -43133,81 +34074,116 @@ var node
 = function () {
   var v0 = [{
     "kind": "LocalArgument",
-    "name": "params",
-    "type": "SearchParams!",
+    "name": "interest",
+    "type": "String!",
+    "defaultValue": null
+  }, {
+    "kind": "LocalArgument",
+    "name": "bookingToken",
+    "type": "String!",
     "defaultValue": null
   }],
       v1 = [{
     "kind": "Variable",
-    "name": "params",
-    "variableName": "params"
+    "name": "bookingToken",
+    "variableName": "bookingToken"
+  }, {
+    "kind": "Variable",
+    "name": "interest",
+    "variableName": "interest"
   }],
-      v2 = [{
+      v2 = {
     "kind": "ScalarField",
     "alias": null,
-    "name": "city",
+    "name": "price",
     "args": null,
     "storageKey": null
-  }, {
-    "kind": "ScalarField",
+  },
+      v3 = {
+    "kind": "LinkedField",
     "alias": null,
-    "name": "iata",
+    "name": "destination",
+    "storageKey": null,
     "args": null,
-    "storageKey": null
-  }, {
-    "kind": "ScalarField",
-    "alias": null,
-    "name": "timeLocal",
-    "args": null,
-    "storageKey": null
-  }];
+    "concreteType": "RouteRendezvous",
+    "plural": false,
+    "selections": [{
+      "kind": "ScalarField",
+      "alias": null,
+      "name": "city",
+      "args": null,
+      "storageKey": null
+    }, {
+      "kind": "ScalarField",
+      "alias": null,
+      "name": "country",
+      "args": null,
+      "storageKey": null
+    }]
+  };
   return {
     "kind": "Request",
     "fragment": {
       "kind": "Fragment",
-      "name": "resultQuery",
+      "name": "placesQuery",
       "type": "Query",
       "metadata": null,
       "argumentDefinitions": v0
       /*: any*/
       ,
       "selections": [{
-        "kind": "FragmentSpread",
-        "name": "Itinerary_flights",
+        "kind": "LinkedField",
+        "alias": null,
+        "name": "item",
+        "storageKey": null,
         "args": v1
         /*: any*/
-
+        ,
+        "concreteType": "Item",
+        "plural": false,
+        "selections": [v2
+        /*: any*/
+        , {
+          "kind": "LinkedField",
+          "alias": null,
+          "name": "route",
+          "storageKey": null,
+          "args": null,
+          "concreteType": "Route",
+          "plural": true,
+          "selections": [v3
+          /*: any*/
+          , {
+            "kind": "FragmentSpread",
+            "name": "Map_places",
+            "args": null
+          }, {
+            "kind": "FragmentSpread",
+            "name": "PlaceCard_places",
+            "args": null
+          }]
+        }]
       }]
     },
     "operation": {
       "kind": "Operation",
-      "name": "resultQuery",
+      "name": "placesQuery",
       "argumentDefinitions": v0
       /*: any*/
       ,
       "selections": [{
         "kind": "LinkedField",
         "alias": null,
-        "name": "search",
+        "name": "item",
         "storageKey": null,
         "args": v1
         /*: any*/
         ,
         "concreteType": "Item",
-        "plural": true,
-        "selections": [{
-          "kind": "ScalarField",
-          "alias": null,
-          "name": "price",
-          "args": null,
-          "storageKey": null
-        }, {
-          "kind": "ScalarField",
-          "alias": null,
-          "name": "bookingToken",
-          "args": null,
-          "storageKey": null
-        }, {
+        "plural": false,
+        "selections": [v2
+        /*: any*/
+        , {
           "kind": "LinkedField",
           "alias": null,
           "name": "route",
@@ -43218,49 +34194,68 @@ var node
           "selections": [{
             "kind": "LinkedField",
             "alias": null,
-            "name": "from",
+            "name": "interests",
             "storageKey": null,
             "args": null,
-            "concreteType": "RouteRendezvous",
-            "plural": false,
-            "selections": v2
-            /*: any*/
-
-          }, {
-            "kind": "LinkedField",
-            "alias": null,
-            "name": "to",
-            "storageKey": null,
-            "args": null,
-            "concreteType": "RouteRendezvous",
-            "plural": false,
-            "selections": v2
-            /*: any*/
-
-          }, {
-            "kind": "LinkedField",
-            "alias": null,
-            "name": "parts",
-            "storageKey": null,
-            "args": null,
-            "concreteType": "Part",
+            "concreteType": "Interest",
             "plural": true,
             "selections": [{
               "kind": "ScalarField",
               "alias": null,
-              "name": "carrier",
+              "name": "name",
+              "args": null,
+              "storageKey": null
+            }, {
+              "kind": "LinkedField",
+              "alias": null,
+              "name": "coords",
+              "storageKey": null,
+              "args": null,
+              "concreteType": "Coords",
+              "plural": false,
+              "selections": [{
+                "kind": "ScalarField",
+                "alias": null,
+                "name": "lat",
+                "args": null,
+                "storageKey": null
+              }, {
+                "kind": "ScalarField",
+                "alias": null,
+                "name": "lon",
+                "args": null,
+                "storageKey": null
+              }]
+            }, {
+              "kind": "ScalarField",
+              "alias": null,
+              "name": "img",
+              "args": null,
+              "storageKey": null
+            }, {
+              "kind": "ScalarField",
+              "alias": null,
+              "name": "score",
+              "args": null,
+              "storageKey": null
+            }, {
+              "kind": "ScalarField",
+              "alias": null,
+              "name": "address",
               "args": null,
               "storageKey": null
             }]
-          }]
+          }, v3
+          /*: any*/
+          ]
         }]
       }]
     },
     "params": {
       "operationKind": "query",
-      "name": "resultQuery",
+      "name": "placesQuery",
       "id": null,
-      "text": "query resultQuery(\n  $params: SearchParams!\n) {\n  ...Itinerary_flights_35PWgj\n}\n\nfragment Itinerary_flights_35PWgj on Query {\n  search(params: $params) {\n    price\n    bookingToken\n    route {\n      ...Route_flight\n      from {\n        timeLocal\n      }\n      to {\n        timeLocal\n      }\n    }\n  }\n}\n\nfragment Route_flight on Route {\n  from {\n    city\n    iata\n    timeLocal\n  }\n  to {\n    city\n    iata\n    timeLocal\n  }\n  parts {\n    carrier\n  }\n}\n",
+      "text": "query placesQuery(\n  $interest: String!\n  $bookingToken: String!\n) {\n  item(interest: $interest, bookingToken: $bookingToken) {\n    price\n    route {\n      ...Map_places\n      ...PlaceCard_places\n      destination {\n        city\n        country\n      }\n    }\n  }\n}\n\nfragment Map_places on Route {\n  interests {\n    name\n    coords {\n      lat\n      lon\n    }\n    img\n    score\n  }\n}\n\nfragment PlaceCard_places on Route {\n  interests {\n    name\n    address\n  }\n}\n",
       "metadata": {}
     }
   };
@@ -43269,7 +34264,7 @@ var node
 
 node
 /*: any*/
-.hash = 'f930ed9a8dc75ac7ca068ed0708b0965';
+.hash = '1a2626eca89e08f84b3c5f73c49287b8';
 module.exports = node;
     (function (Component, route) {
       if(!Component) return
@@ -43287,14 +34282,14 @@ module.exports = node;
           next.router.update(r, Component)
         }
       }
-    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/__generated__/resultQuery.graphql")
+    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/__generated__/placesQuery.graphql")
   
 
 /***/ }),
 
-/***/ "./pages/result.js":
+/***/ "./pages/places.js":
 /*!*************************!*\
-  !*** ./pages/result.js ***!
+  !*** ./pages/places.js ***!
   \*************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -43305,37 +34300,53 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/index.js");
-/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(date_fns__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _kiwicom_relay__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @kiwicom/relay */ "./node_modules/@kiwicom/relay/src/index.js");
-/* harmony import */ var _kiwicom_relay__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_relay__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _kiwicom_orbit_components_lib_Loading__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Loading */ "./node_modules/@kiwicom/orbit-components/lib/Loading/index.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_Loading__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Loading__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _kiwicom_relay__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @kiwicom/relay */ "./node_modules/@kiwicom/relay/src/index.js");
+/* harmony import */ var _kiwicom_relay__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_relay__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Button */ "./node_modules/@kiwicom/orbit-components/lib/Button/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _kiwicom_orbit_components_lib_ButtonLink__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/ButtonLink */ "./node_modules/@kiwicom/orbit-components/lib/ButtonLink/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_ButtonLink__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_ButtonLink__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Stack */ "./node_modules/@kiwicom/orbit-components/lib/Stack/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _kiwicom_orbit_components_lib_Heading__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Heading */ "./node_modules/@kiwicom/orbit-components/lib/Heading/index.js");
 /* harmony import */ var _kiwicom_orbit_components_lib_Heading__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Heading__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Button */ "./node_modules/@kiwicom/orbit-components/lib/Button/index.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Stack */ "./node_modules/@kiwicom/orbit-components/lib/Stack/index.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _kiwicom_orbit_components_lib_icons_ChevronLeft__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/icons/ChevronLeft */ "./node_modules/@kiwicom/orbit-components/lib/icons/ChevronLeft.js");
-/* harmony import */ var _kiwicom_orbit_components_lib_icons_ChevronLeft__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_icons_ChevronLeft__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! next/router */ "./node_modules/next/router.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _lib_enviroment__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../lib/enviroment */ "./lib/enviroment.js");
-/* harmony import */ var _components_debug__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/debug */ "./components/debug.js");
-/* harmony import */ var _components_ContentContainer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/ContentContainer */ "./components/ContentContainer.js");
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/Footer */ "./components/Footer.js");
-/* harmony import */ var _components_Itinerary__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/Itinerary */ "./components/Itinerary/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_Kiwicom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/icons/Kiwicom */ "./node_modules/@kiwicom/orbit-components/lib/icons/Kiwicom.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_Kiwicom__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_icons_Kiwicom__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_Share__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/icons/Share */ "./node_modules/@kiwicom/orbit-components/lib/icons/Share.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_icons_Share__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_icons_Share__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _kiwicom_orbit_components_lib_Card_CardSection_CardSectionContent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/Card/CardSection/CardSectionContent */ "./node_modules/@kiwicom/orbit-components/lib/Card/CardSection/CardSectionContent/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_Card_CardSection_CardSectionContent__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_Card_CardSection_CardSectionContent__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_utils_mediaQuery__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @kiwicom/orbit-components/lib/utils/mediaQuery */ "./node_modules/@kiwicom/orbit-components/lib/utils/mediaQuery/index.js");
+/* harmony import */ var _kiwicom_orbit_components_lib_utils_mediaQuery__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_kiwicom_orbit_components_lib_utils_mediaQuery__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! next/dynamic */ "./node_modules/next/dynamic.js");
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _lib_enviroment__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../lib/enviroment */ "./lib/enviroment.js");
+/* harmony import */ var _components_PlaceCard__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/PlaceCard */ "./components/PlaceCard.js");
+/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/Footer */ "./components/Footer.js");
+/* harmony import */ var _components_ShareModal__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/ShareModal */ "./components/ShareModal.js");
+/* harmony import */ var _components_NavBar__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/NavBar */ "./components/NavBar.js");
+/* harmony import */ var _components_Timeline__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../components/Timeline */ "./components/Timeline.js");
+/* harmony import */ var _components_MapLoading__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../components/MapLoading */ "./components/MapLoading.js");
+/* harmony import */ var _components_ErrorModal__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../components/ErrorModal */ "./components/ErrorModal.js");
 
 
 var _graphql,
-    _jsxFileName = "/Users/ludekveprek/WebstormProjects/weekendfe/pages/result.js";
+    _jsxFileName = "/Users/ludekveprek/WebstormProjects/weekendfe/pages/places.js";
+
+
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
@@ -43351,203 +34362,261 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-var ResultsContainer = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withConfig({
-  displayName: "result__ResultsContainer",
-  componentId: "sc-1igm567-0"
-})(["max-width:1024px;padding-bottom:90px;"]);
-/*
-For usage online
-{
-  "params": {
-    "adults": 1,
-    "dateFrom": "29/01/2019",
-    "dateTo": "29/03/2019",
-    "flyFrom": "vienna_at",
-    "flyTo": "vienna_at",
-    "stopovers": [
-      {"locations": ["LON"], "nightsFrom": 1, "nightsTo": 7},
-       {"locations": ["PAR"], "nightsFrom": 1, "nightsTo": 7}
-    ]
-  }
-}
-*/
 
-var getStopovers = function getStopovers(placesInUrl) {
-  if (!placesInUrl) return undefined;
-  var items = placesInUrl.split("-");
-  var result = []; // eslint-disable-next-line
 
-  for (var i = 0; i < items.length; i += 3) {
-    // eslint-disable-next-line fp/no-mutating-methods
-    result.push({
-      locations: [items[i]],
-      nightsFrom: Number(items[i + 1]),
-      nightsTo: Number(items[i + 2])
+
+
+
+
+var Places = styled_components__WEBPACK_IMPORTED_MODULE_10__["default"].div.withConfig({
+  displayName: "places__Places",
+  componentId: "cmnttk-0"
+})(["display:block;flex:1 1 100%;width:100%;box-sizing:border-box;height:calc(100vh - 180px);max-height:100%;overflow-x:auto;padding:", ";", "{margin:0 -24px;padding-top:0;}", ""], function (_ref) {
+  var theme = _ref.theme;
+  return "".concat(theme.orbit.spaceXXLarge, " ").concat(theme.orbit.spaceMedium, " 90px ").concat(theme.orbit.spaceMedium);
+}, _kiwicom_orbit_components_lib_Card_CardSection_CardSectionContent__WEBPACK_IMPORTED_MODULE_9__["StyledCardSectionContent"], _kiwicom_orbit_components_lib_utils_mediaQuery__WEBPACK_IMPORTED_MODULE_11___default.a.desktop(Object(styled_components__WEBPACK_IMPORTED_MODULE_10__["css"])(["width:70%;"])));
+var Map = next_dynamic__WEBPACK_IMPORTED_MODULE_12___default()(function () {
+  return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./../components/Map */ "./components/Map.js"));
+}, {
+  loading: function loading() {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_MapLoading__WEBPACK_IMPORTED_MODULE_19__["default"], {
+      text: "Loading...",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      },
+      __self: this
     });
+  },
+  ssr: false,
+  loadableGenerated: {
+    webpack: function webpack() {
+      return [/*require.resolve*/(/*! ./../components/Map */ "./components/Map.js")];
+    },
+    modules: ["./../components/Map"]
   }
+});
+var PlacesContainer = styled_components__WEBPACK_IMPORTED_MODULE_10__["default"].div.withConfig({
+  displayName: "places__PlacesContainer",
+  componentId: "cmnttk-1"
+})(["display:flex;flex-direction:column;width:100vw;height:100vh;overflow:hidden;"]);
+var LeftSide = styled_components__WEBPACK_IMPORTED_MODULE_10__["default"].div.withConfig({
+  displayName: "places__LeftSide",
+  componentId: "cmnttk-2"
+})(["display:none;visibility:hidden;flex-direction:column;flex:1 0 66%;", ""], _kiwicom_orbit_components_lib_utils_mediaQuery__WEBPACK_IMPORTED_MODULE_11___default.a.tablet(Object(styled_components__WEBPACK_IMPORTED_MODULE_10__["css"])(["display:flex;visibility:visible;"])));
 
-  return result;
-};
-
-var formatDate = function formatDate(date) {
-  return Object(date_fns__WEBPACK_IMPORTED_MODULE_2__["format"])(date, "DD/MM/YYYY");
-};
-
-var getParamsFromQuery = function getParamsFromQuery(_ref) {
-  var _ref$adults = _ref.adults,
-      adults = _ref$adults === void 0 ? 1 : _ref$adults,
-      dateFrom = _ref.dateFrom,
-      dateTo = _ref.dateTo,
-      _ref$flyFrom = _ref.flyFrom,
-      flyFrom = _ref$flyFrom === void 0 ? "brno_cz" : _ref$flyFrom,
-      flyTo = _ref.flyTo,
-      stopovers = _ref.stopovers;
-  return {
-    params: {
-      adults: Number(adults),
-      dateFrom: formatDate(dateFrom ? new Date(dateFrom) : Object(date_fns__WEBPACK_IMPORTED_MODULE_2__["addDays"])(new Date(), 1)),
-      dateTo: formatDate(dateTo ? new Date(dateTo) : Object(date_fns__WEBPACK_IMPORTED_MODULE_2__["addDays"])(new Date(), 30)),
-      flyFrom: flyFrom,
-      flyTo: flyTo || flyFrom,
-      stopovers: getStopovers(stopovers) || [{
-        locations: ["LON"],
-        nightsFrom: 1,
-        nightsTo: 7
-      }, {
-        locations: ["PAR"],
-        nightsFrom: 1,
-        nightsTo: 7
-      }]
-    }
-  };
-};
-
-var renderQueryRendererResponse = function renderQueryRendererResponse(rendererProps, query) {
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ContentContainer__WEBPACK_IMPORTED_MODULE_13__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 85
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ResultsContainer, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 86
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_8___default.a, {
-    direction: "column",
-    spacing: "extraLoose",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 87
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_Heading__WEBPACK_IMPORTED_MODULE_6___default.a, {
-    type: "title1",
-    spaceAfter: "largest",
+var renderQueryRendererResponse = function renderQueryRendererResponse(_ref2) {
+  var rendererProps = _ref2.rendererProps,
+      query = _ref2.query,
+      cityIndex = _ref2.cityIndex,
+      setCityIndex = _ref2.setCityIndex,
+      isVisibleShareModal = _ref2.isVisibleShareModal,
+      setVisibleShareModal = _ref2.setVisibleShareModal;
+  var trip = rendererProps.item.route[cityIndex];
+  var destination = trip.destination;
+  var places = rendererProps.item.route.map(function (route) {
+    return route.destination;
+  });
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PlacesContainer, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 88
     },
     __self: this
-  }, "Choose your flight combination"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Itinerary__WEBPACK_IMPORTED_MODULE_15__["default"], {
-    flights: rendererProps,
-    interest: query.interest,
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_NavBar__WEBPACK_IMPORTED_MODULE_17__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 89
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_14__["default"], {
-    leftActions: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_7___default.a, {
-      type: "secondary",
-      iconLeft: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_icons_ChevronLeft__WEBPACK_IMPORTED_MODULE_9___default.a, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 100
-        },
-        __self: this
-      }),
-      onClick: function onClick() {
-        return (// eslint-disable-next-line fp/no-mutating-methods
-          next_router__WEBPACK_IMPORTED_MODULE_10___default.a.push({
-            pathname: "/",
-            query: next_router__WEBPACK_IMPORTED_MODULE_10___default.a.query
-          })
-        );
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 98
-      },
-      __self: this
-    }, "Previous Step"),
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Timeline__WEBPACK_IMPORTED_MODULE_18__["default"], {
+    onSelect: setCityIndex,
+    places: places,
+    selected: cityIndex,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    direction: "row",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 96
     },
     __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LeftSide, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 97
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Map, {
+    places: trip,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 98
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Places, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 100
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_Heading__WEBPACK_IMPORTED_MODULE_6___default.a, {
+    type: "title2",
+    spaceAfter: "largest",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 101
+    },
+    __self: this
+  }, "Places to visit in ", destination.city), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_PlaceCard__WEBPACK_IMPORTED_MODULE_14__["default"], {
+    places: trip,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 104
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_15__["default"], {
+    leftActions: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_ButtonLink__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      type: "secondary",
+      icon: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_icons_Share__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 110
+        },
+        __self: this
+      }),
+      onClick: function onClick() {
+        return setVisibleShareModal(true);
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 108
+      },
+      __self: this
+    }, "Share"),
+    rightActions: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_Stack__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      direction: "row",
+      justify: "end",
+      shrink: true,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 117
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_Button__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      href: "https://www.kiwi.com/en/booking?token=".concat(query.bookingToken),
+      external: true,
+      iconLeft: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_icons_Kiwicom__WEBPACK_IMPORTED_MODULE_7___default.a, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 123
+        },
+        __self: this
+      }),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 118
+      },
+      __self: this
+    }, "Book the flight")),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 106
+    },
+    __self: this
+  }), isVisibleShareModal && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ShareModal__WEBPACK_IMPORTED_MODULE_16__["default"], {
+    onClose: setVisibleShareModal,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 131
+    },
+    __self: this
   })));
 };
 
-var Result = function Result(_ref2) {
-  var query = _ref2.query;
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, query.debug && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_debug__WEBPACK_IMPORTED_MODULE_12__["default"], {
-    queryParams: getParamsFromQuery(query),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 119
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_relay__WEBPACK_IMPORTED_MODULE_4__["QueryRenderer"], {
+var PlacesPage = function PlacesPage(_ref3) {
+  var query = _ref3.query;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(0),
+      _useState2 = _slicedToArray(_useState, 2),
+      cityIndex = _useState2[0],
+      setCityIndex = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false),
+      _useState4 = _slicedToArray(_useState3, 2),
+      isVisibleShareModal = _useState4[0],
+      setVisibleShareModal = _useState4[1];
+
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_relay__WEBPACK_IMPORTED_MODULE_2__["QueryRenderer"], {
     clientID: "https://github.com/kiwicom/weekendfe",
     query: _graphql || (_graphql = function _graphql() {
-      var node = __webpack_require__(/*! ./__generated__/resultQuery.graphql */ "./pages/__generated__/resultQuery.graphql.js");
+      var node = __webpack_require__(/*! ./__generated__/placesQuery.graphql */ "./pages/__generated__/placesQuery.graphql.js");
 
-      if (node.hash && node.hash !== "f930ed9a8dc75ac7ca068ed0708b0965") {
-        console.error("The definition of 'resultQuery' appears to have changed. Run `relay-compiler` to update the generated files to receive the expected data.");
+      if (node.hash && node.hash !== "1a2626eca89e08f84b3c5f73c49287b8") {
+        console.error("The definition of 'placesQuery' appears to have changed. Run `relay-compiler` to update the generated files to receive the expected data.");
       }
 
-      return __webpack_require__(/*! ./__generated__/resultQuery.graphql */ "./pages/__generated__/resultQuery.graphql.js");
+      return __webpack_require__(/*! ./__generated__/placesQuery.graphql */ "./pages/__generated__/placesQuery.graphql.js");
     }),
-    variables: getParamsFromQuery(query),
-    environment: _lib_enviroment__WEBPACK_IMPORTED_MODULE_11__["weekendapiEnvironment"],
+    variables: {
+      interest: query.interest,
+      bookingToken: query.bookingToken
+    },
+    environment: _lib_enviroment__WEBPACK_IMPORTED_MODULE_13__["weekendapiEnvironment"],
     onLoading: function onLoading() {
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_kiwicom_orbit_components_lib_Loading__WEBPACK_IMPORTED_MODULE_5___default.a, {
-        type: "pageLoader",
-        text: "Loading results",
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_MapLoading__WEBPACK_IMPORTED_MODULE_19__["default"], {
+        text: "Loading",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 130
+          lineNumber: 169
+        },
+        __self: this
+      });
+    },
+    onSystemError: function onSystemError() {
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ErrorModal__WEBPACK_IMPORTED_MODULE_20__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 170
         },
         __self: this
       });
     },
     onResponse: function onResponse(rendererProps) {
-      return renderQueryRendererResponse(rendererProps, query);
+      return renderQueryRendererResponse({
+        rendererProps: rendererProps,
+        query: query,
+        cityIndex: cityIndex,
+        setCityIndex: setCityIndex,
+        isVisibleShareModal: isVisibleShareModal,
+        setVisibleShareModal: setVisibleShareModal
+      });
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 144
     },
     __self: this
-  }));
+  });
 }; // enable passing query to main component
 
 
-Result.getInitialProps =
+PlacesPage.getInitialProps =
 /*#__PURE__*/
 function () {
-  var _ref4 = _asyncToGenerator(
+  var _ref5 = _asyncToGenerator(
   /*#__PURE__*/
-  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref3) {
+  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref4) {
     var query;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            query = _ref3.query;
+            query = _ref4.query;
             return _context.abrupt("return", {
               query: query
             });
@@ -43561,11 +34630,11 @@ function () {
   }));
 
   return function (_x) {
-    return _ref4.apply(this, arguments);
+    return _ref5.apply(this, arguments);
   };
 }();
 
-/* harmony default export */ __webpack_exports__["default"] = (Result);
+/* harmony default export */ __webpack_exports__["default"] = (PlacesPage);
     (function (Component, route) {
       if(!Component) return
       if (false) {}
@@ -43582,21 +34651,21 @@ function () {
           next.router.update(r, Component)
         }
       }
-    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/result")
+    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/places")
   
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!*******************************!*\
-  !*** multi ./pages/result.js ***!
+  !*** multi ./pages/places.js ***!
   \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__NEXT_REGISTER_PAGE('/result', function() {
-module.exports = __webpack_require__(/*! ./pages/result.js */"./pages/result.js");
+__NEXT_REGISTER_PAGE('/places', function() {
+module.exports = __webpack_require__(/*! ./pages/places.js */"./pages/places.js");
 
 return { page: module.exports.default }});
 
@@ -43613,5 +34682,5 @@ module.exports = dll_a040da6a047b41aa17e2;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]));;
-//# sourceMappingURL=result.js.map
+},[[5,"static/runtime/webpack.js"]]]));;
+//# sourceMappingURL=places.js.map
