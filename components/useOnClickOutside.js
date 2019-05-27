@@ -19,5 +19,7 @@ export default function useOnClickOutside(ref, handler) {
       document.removeEventListener("mousedown", listener)
       document.removeEventListener("touchstart", listener)
     }
-  }, []) // Empty array ensures that effect is only run on mount and unmount
+    // eslint-disable-next-line react-hooks/exhaustive-deps¨
+    // Empty array ensures that effect is only run on mount and unmount
+  }, [])
 }

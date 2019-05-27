@@ -1,5 +1,5 @@
 import * as React from "react"
-import Heading from "@kiwicom/orbit-components/lib/Heading"
+import { Heading } from "@kiwicom/orbit-components/"
 import styled from "styled-components"
 import { format } from "date-fns"
 import Router from "next/router"
@@ -35,24 +35,23 @@ const changePlacesState = newPlaces => {
   Router.push(newUrl, newUrl, { shallow: true })
 }
 
-const getPlaceFromString = val =>
-  typeof val === "string"
-    ? { name: `[${val}]`, code: val, id: val }
-    : val
-
-// Mexico,2,5,Poland,1,3 => [["Mexico", defaultDays]]
-const UrlToPlaces = url => {
-  if (!url) return undefined
-  const items = url.split("-")
-  const result = []
-  // eslint-disable-next-line
-  for (let i = 0; i < items.length; i += 3)
-    // eslint-disable-next-line fp/no-mutating-methods
-    result.push([
-      getPlaceFromString(items[i]),
-      [items[i + 1], items[i + 2]]
-    ])
-  return result
+const handleOnSearchClick = selectedPlaces => {
+  const values = { ...defaultValues, ...Router.query }
+  const newUrl = {
+    pathname: `${BASE_URL}/result`,
+    query: {
+      ...values,
+      dateFrom: format(values.dateFrom, "YYYY-MM-DD"),
+      dateTo: format(values.dateTo, "YYYY-MM-DD"),
+      flyFrom:
+        typeof values.flyFrom === "string"
+          ? values.flyFrom
+          : values.flyFrom.id,
+      stopovers: placesToUrl(selectedPlaces),
+      places: undefined
+    }
+  }
+  Router.push(newUrl) // eslint-disable-line
 }
 
 const FlyForm = ({ query, places }) => (
@@ -78,28 +77,31 @@ const FlyForm = ({ query, places }) => (
       <PlacesToVisit
         onChange={changePlacesState}
         defaultValue={places}
-        onSearchClick={selectedPlaces => {
-          const values = { ...defaultValues, ...Router.query }
-          const newUrl = {
-            pathname: `${BASE_URL}/result`,
-            query: {
-              ...values,
-              dateFrom: format(values.dateFrom, "YYYY-MM-DD"),
-              dateTo: format(values.dateTo, "YYYY-MM-DD"),
-              flyFrom:
-                typeof values.flyFrom === "string"
-                  ? values.flyFrom
-                  : values.flyFrom.id,
-              stopovers: placesToUrl(selectedPlaces),
-              places: undefined
-            }
-          }
-          Router.push(newUrl) // eslint-disable-line
-        }}
+        onSearchClick={handleOnSearchClick}
       />
     </NomadForm>
   </ContentContainer>
 )
+
+const getPlaceFromString = val =>
+  typeof val === "string"
+    ? { name: `[${val}]`, code: val, id: val }
+    : val
+
+// Mexico,2,5,Poland,1,3 => [["Mexico", defaultDays]]
+const UrlToPlaces = url => {
+  if (!url) return undefined
+  const items = url.split("-")
+  const result = []
+  // eslint-disable-next-line
+  for (let i = 0; i < items.length; i += 3)
+    // eslint-disable-next-line fp/no-mutating-methods
+    result.push([
+      getPlaceFromString(items[i]),
+      [items[i + 1], items[i + 2]]
+    ])
+  return result
+}
 
 FlyForm.getInitialProps = async ({ query }) => {
   const places = UrlToPlaces(query.stopovers) || defaultValues.places

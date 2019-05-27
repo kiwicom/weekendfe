@@ -1,6 +1,5 @@
 import * as React from "react"
 import styled from "styled-components"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
 
 const StyledFooter = styled.div`
   display: flex;
@@ -18,10 +17,6 @@ const StyledFooter = styled.div`
   right: 0;
   box-shadow: 0 -2px 8px rgba(23, 27, 30, 0.15);
 `
-
-StyledFooter.defaultProps = {
-  theme: defaultTheme
-}
 
 const LeftActions = styled.div`
   display: flex;

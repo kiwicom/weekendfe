@@ -6,9 +6,8 @@ import Heading, {
 import Checkbox, {
   Label
 } from "@kiwicom/orbit-components/lib/Checkbox"
-import Text from "@kiwicom/orbit-components/lib/Text"
-import City from "@kiwicom/orbit-components/lib/icons/City"
-import defaultTokens from "@kiwicom/orbit-components/lib/defaultTokens"
+import { Text } from "@kiwicom/orbit-components"
+import { City } from "@kiwicom/orbit-components/lib/icons"
 import { getSize } from "@kiwicom/orbit-components/lib/Icon"
 
 const StyledListChoiceIcon = styled.div`
@@ -25,10 +24,6 @@ const StyledListChoiceIcon = styled.div`
       ease-in-out;
   }
 `
-
-StyledListChoiceIcon.defaultProps = {
-  theme: defaultTokens
-}
 
 const StyledListChoice = styled.div`
   display: flex;
@@ -63,10 +58,6 @@ const StyledListChoice = styled.div`
   }
 `
 
-StyledListChoice.defaultProps = {
-  theme: defaultTokens
-}
-
 const StyledListChoiceContent = styled.div`
   display: flex;
   flex-direction: column;
@@ -78,10 +69,6 @@ const StyledListChoiceContent = styled.div`
     line-height: ${({ theme }) => theme.orbit.lineHeightText};
   }
 `
-
-StyledListChoiceContent.defaultProps = {
-  theme: defaultTokens
-}
 
 const ListChoice = ({
   title,

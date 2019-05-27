@@ -1,10 +1,12 @@
-import React, { useState } from "react"
+import React, { useState, useCallback } from "react"
 import { graphql, QueryRenderer } from "@kiwicom/relay"
 import styled from "styled-components"
-import Loading from "@kiwicom/orbit-components/lib/Loading"
-import InputField from "@kiwicom/orbit-components/lib/InputField"
-import ButtonLink from "@kiwicom/orbit-components/lib/ButtonLink"
-import Close from "@kiwicom/orbit-components/lib/icons/Close"
+import {
+  Loading,
+  InputField,
+  ButtonLink
+} from "@kiwicom/orbit-components"
+import { Close } from "@kiwicom/orbit-components/lib/icons"
 import Downshift from "downshift"
 
 import { weekendapiEnvironment } from "../lib/enviroment"
@@ -35,6 +37,7 @@ const renderQueryRendererResponse = ({
         onClick={clearSelection}
         transparent
         iconLeft={<Close />}
+        title="Remove"
       />
     }
   />
@@ -49,18 +52,21 @@ const PlacePicker = ({
   const [changed, setChanged] = useState(false)
   const debouncedValue = useDebounce(value, 150)
 
+  const handleStateChange = ({ inputValue }) => {
+    if (inputValue) {
+      setValue(inputValue)
+      setChanged(true)
+    }
+  }
+
   return (
     <StyledPlacePicker>
       <Downshift
         itemToString={item => (item ? item.name : "")}
         initialSelectedItem={defaultValue}
-        onStateChange={({ inputValue }) => {
-          if (inputValue) {
-            setValue(inputValue)
-            setChanged(true)
-          }
-        }}
+        onStateChange={handleStateChange}
         onChange={onChange}
+        id="place-picker"
       >
         {(
           {
@@ -110,6 +116,7 @@ const PlacePicker = ({
                     onClick={clearSelection}
                     transparent
                     iconLeft={<Close />}
+                    title="Delete"
                   />
                 }
               />

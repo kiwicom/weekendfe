@@ -1,13 +1,16 @@
 import * as React from "react"
 import styled, { css } from "styled-components"
 import Dayzed from "dayzed"
-import Stack from "@kiwicom/orbit-components/lib/Stack"
-import Button from "@kiwicom/orbit-components/lib/Button"
-import Text from "@kiwicom/orbit-components/lib/Text"
-import InputField from "@kiwicom/orbit-components/lib/InputField"
-import ChevronLeft from "@kiwicom/orbit-components/lib/icons/ChevronLeft"
-import ChevronRight from "@kiwicom/orbit-components/lib/icons/ChevronRight"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
+import {
+  Stack,
+  Button,
+  Text,
+  InputField
+} from "@kiwicom/orbit-components"
+import {
+  ChevronLeft,
+  ChevronRight
+} from "@kiwicom/orbit-components/lib/icons"
 import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"
 import { format } from "date-fns"
 
@@ -63,10 +66,6 @@ const StyledDatePicker = styled.div`
     max-width: 400px;
   `)}
 `
-
-StyledDatePicker.defaultProps = {
-  theme: defaultTheme
-}
 
 const StyledDay = styled.button`
   display: inline-block;
@@ -127,8 +126,6 @@ const StyledCalendarWeekday = styled.div`
   width: 50px;
 `
 
-// TODO: range selected if wanted
-
 const DatePicker = ({
   label,
   onFocus,
@@ -168,12 +165,14 @@ const DatePicker = ({
                     icon={<ChevronLeft />}
                     type="secondary"
                     size="small"
+                    title="Previous"
                   />
                   <Button
                     {...getForwardProps({ calendars })}
                     icon={<ChevronRight />}
                     type="secondary"
                     size="small"
+                    title="Next"
                   />
                 </Stack>
                 <Stack direction="row" spacing="extraLoose">

@@ -1,9 +1,7 @@
 import * as React from "react"
 import styled from "styled-components"
-import InputField from "@kiwicom/orbit-components/lib/InputField"
-import ButtonLink from "@kiwicom/orbit-components/lib/ButtonLink"
-import Close from "@kiwicom/orbit-components/lib/icons/Close"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
+import { InputField, ButtonLink } from "@kiwicom/orbit-components"
+import { Close } from "@kiwicom/orbit-components/lib/icons"
 import Downshift from "downshift"
 import matchSorter from "match-sorter"
 
@@ -31,17 +29,6 @@ const ResultsList = styled.div`
   box-shadow: ${({ theme }) => theme.orbit.boxShadowElevatedLevel1};
 `
 
-const Div = styled.div`
-  background-color: ${({ theme, selected }) =>
-    selected
-      ? theme.orbit.paletteCloudLight
-      : theme.orbit.paletteWhite};
-`
-
-Div.defaultProps = {
-  theme: defaultTheme
-}
-
 const PlacePicker = ({
   defaultValue,
   onChange = () => {},
@@ -53,6 +40,7 @@ const PlacePicker = ({
       initialInputValue={defaultValue}
       // initialSelectedItem={selectedValue}
       onChange={onChange}
+      id="place-picker"
     >
       {({
         getInputProps,
@@ -78,6 +66,7 @@ const PlacePicker = ({
                 onClick={clearSelection}
                 transparent
                 iconLeft={<Close />}
+                title="Delete"
               />
             }
           />

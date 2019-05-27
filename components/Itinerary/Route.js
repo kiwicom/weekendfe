@@ -1,18 +1,19 @@
 import * as React from "react"
 import { graphql, createFragmentContainer } from "@kiwicom/relay"
 import styled, { ThemeProvider } from "styled-components"
-import Stack from "@kiwicom/orbit-components/lib/Stack"
-import Text from "@kiwicom/orbit-components/lib/Text"
-import Hide from "@kiwicom/orbit-components/lib/Hide"
-import CarrierLogo from "@kiwicom/orbit-components/lib/CarrierLogo"
-import FlightDirect from "@kiwicom/orbit-components/lib/icons/FlightDirect"
-import defaultTokens from "@kiwicom/orbit-components/lib/defaultTokens"
+import {
+  Stack,
+  Text,
+  Hide,
+  CarrierLogo,
+  getTokens
+} from "@kiwicom/orbit-components"
+import { FlightDirect } from "@kiwicom/orbit-components/lib/icons"
 import {
   format,
   differenceInHours,
   differenceInMinutes
 } from "date-fns"
-import { getTokens } from "@kiwicom/orbit-components"
 
 const StyledNights = styled.div`
   display: flex;
@@ -27,10 +28,6 @@ const StyledLine = styled.div`
   width: 150px;
   background-color: ${({ theme }) => theme.orbit.paletteCloudNormal};
 `
-
-StyledNights.defaultProps = {
-  theme: defaultTokens
-}
 
 const getCarrierFromParts = parts =>
   parts.map(part => ({
