@@ -37,6 +37,7 @@ const renderQueryRendererResponse = ({
         onClick={clearSelection}
         transparent
         iconLeft={<Close />}
+        title="Remove"
       />
     }
   />
@@ -65,6 +66,7 @@ const PlacePicker = ({
         initialSelectedItem={defaultValue}
         onStateChange={handleStateChange}
         onChange={onChange}
+        id="place-picker"
       >
         {(
           {

@@ -40,6 +40,7 @@ const PlacePicker = ({
       initialInputValue={defaultValue}
       // initialSelectedItem={selectedValue}
       onChange={onChange}
+      id="place-picker"
     >
       {({
         getInputProps,
