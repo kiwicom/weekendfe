@@ -6,11 +6,15 @@ import styled, { ThemeProvider } from "styled-components"
 import Text from "@kiwicom/orbit-components/lib/Text"
 import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
 import { getTokens } from "@kiwicom/orbit-components"
+import getConfig from "next/config"
 
 import RatingStars from "./RatingStars"
 
-mapboxgl.accessToken =
-  "pk.eyJ1IjoidmVwb3IiLCJhIjoiY2p3MGxnM3FnMGJidDQ5bzJ5c3NzaWg1OCJ9.ev9US4E_fo-a1xIOfpydmA"
+const {
+  publicRuntimeConfig: { mapToken }
+} = getConfig()
+
+mapboxgl.accessToken = mapToken || ""
 
 const MapWrapper = styled.div`
   position: absolute;
@@ -131,7 +135,7 @@ function Map({ places }) {
         })
       }
     },
-    [JSON.stringify(places), mapObject]
+    [mapObject, places.interests]
   )
 
   return <MapWrapper ref={mapRef} />
