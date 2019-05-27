@@ -29,12 +29,12 @@ const nextConfig = {
       "/result": { page: "result" }
     }
   },
-  assetPrefix: debug ? "" : `/${repoName}/`,
+  // assetPrefix: debug ? "" : `/${repoName}/`,
   webpack(config) {
     config.plugins = [
       ...(config.plugins || []),
       new webpack.DefinePlugin({
-        BASE_URL: debug ? "''" : `'/${repoName}/'`
+        BASE_URL: debug ? "''" : "''" // `'/${repoName}/'`
       })
     ]
 
