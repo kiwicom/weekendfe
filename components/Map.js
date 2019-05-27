@@ -4,7 +4,16 @@ import ReactDOM from "react-dom"
 import styled, { ThemeProvider } from "styled-components"
 import Text from "@kiwicom/orbit-components/lib/Text"
 import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
-import { getTokens } from "@kiwicom/orbit-components"
+import {
+  getTokens,
+  Portal,
+  Modal,
+  ModalHeader,
+  ModalSection,
+  ModalFooter,
+  Stack,
+  Button
+} from "@kiwicom/orbit-components"
 
 import RatingStars from "./RatingStars"
 
@@ -59,6 +68,7 @@ const StyledImage = styled.div`
     theme.orbit.borderRadiusNormal};
   border-bottom-left-radius: ${({ theme }) =>
     theme.orbit.borderRadiusNormal};
+  margin-top: ${({ theme }) => theme.orbit.spaceMedium
 `
 
 StyledImage.defaultProps = {
@@ -74,6 +84,7 @@ const StyledText = styled.div`
 function Map({ places }) {
   const mapRef = useRef(null)
   const [mapObject, setMapObject] = useState()
+  const [activeMarker, setActiveMarker] = useState(null)
 
   useEffect(() => {
     setMapObject(
@@ -100,7 +111,7 @@ function Map({ places }) {
         setTimeout(() => {
           ReactDOM.render(
             <ThemeProvider theme={{ orbit: getTokens() }}>
-              <StyledMarker>
+              <StyledMarker onClick={() => setActiveMarker(place)}>
                 <StyledImage bg={place.img} />
                 <StyledText>
                   <Text type="white">{place.name}</Text>
@@ -133,7 +144,34 @@ function Map({ places }) {
     [JSON.stringify(places), mapObject]
   )
 
-  return <MapWrapper ref={mapRef} />
+  return (
+    <>
+      <MapWrapper ref={mapRef} />
+      <Portal element="modals">
+        {activeMarker && (
+          <Modal onClose={() => setActiveMarker(null)}>
+            <ModalHeader
+              illustration={
+                <img src={activeMarker.img} height="100" />
+              }
+              title={
+                <Stack direction="row" spacing="compact">
+                  <span>{activeMarker.name}</span>{" "}
+                  <RatingStars rating={activeMarker.score} />
+                </Stack>
+              }
+            />
+            <ModalSection>{activeMarker.address}</ModalSection>
+            <ModalFooter>
+              <Button href={activeMarker.url} external>
+                Visit foursquare
+              </Button>
+            </ModalFooter>
+          </Modal>
+        )}
+      </Portal>
+    </>
+  )
 }
 
 export default Map

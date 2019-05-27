@@ -17,6 +17,7 @@ query Items($interest: String!, $bookingToken: String!) {
         img
         score
         address
+        url
       }
     }
   }
