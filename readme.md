@@ -22,7 +22,7 @@
 
 ## sources
 
-### hooks
+### Hooks
 
 - https://usehooks.com
 - https://egghead.io/courses/simplify-react-apps-with-react-hooks
@@ -33,3 +33,7 @@
 - https://www.onegraph.com/
 - https://github.com/otissv/graphql-guru-jsondb
 - https://github.com/kevzettler/gatsby-source-airtable/blob/master/src/gatsby-node.js
+
+### Flow
+- https://flow.org
+- https://egghead.io/lessons/javascript-up-and-running-with-facebook-flow-for-typed-javascript
