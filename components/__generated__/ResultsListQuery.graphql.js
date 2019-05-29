@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 4a3ca4438ffc4a1414d17042bb7d2223
+ * @relayHash bca7f7e1dfee8fcc3b2d1ec4b3597e44
  */
 
 /* eslint-disable */
@@ -14,7 +14,7 @@ export type ResultsListQueryVariables = {|
 |};
 export type ResultsListQueryResponse = {|
   +locations: ?$ReadOnlyArray<?{|
-    +id: ?string,
+    +id: string,
     +code: ?string,
     +name: ?string,
   |}>

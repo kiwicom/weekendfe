@@ -1,5 +1,5 @@
 # source: https://weekend-api.now.sh/
-# timestamp: Thu May 16 2019 16:01:38 GMT+0200 (Central European Summer Time)
+# timestamp: Wed May 29 2019 12:27:15 GMT+0200 (Central European Summer Time)
 
 directive @cacheControl(
   maxAge: Int
@@ -45,7 +45,7 @@ type KeyValue {
 }
 
 type Location {
-  id: ID
+  id: ID!
   iid: Int
   code: String
   coords: Coords!

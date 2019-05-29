@@ -1,25 +1,23 @@
-import { useState } from "react"
-import { graphql, QueryRenderer } from "@kiwicom/relay"
+import * as React from "react"
 import {
   Heading,
   Stack,
   ButtonLink,
   Button
 } from "@kiwicom/orbit-components"
+import { graphql, createFragmentContainer } from "@kiwicom/relay"
 import { Share, Kiwicom } from "@kiwicom/orbit-components/lib/icons"
 import { StyledCardSectionContent } from "@kiwicom/orbit-components/lib/Card/CardSection/CardSectionContent"
 import styled, { css } from "styled-components"
 import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"
 import dynamic from "next/dynamic"
 
-import { weekendapiEnvironment } from "../lib/enviroment"
-import PlaceCard from "../components/PlaceCard"
-import Footer from "../components/Footer"
-import ShareModal from "../components/ShareModal"
-import NavBar from "../components/NavBar"
-import Timeline from "../components/Timeline"
-import MapLoading from "../components/MapLoading"
-import ErrorModal from "../components/ErrorModal"
+import PlaceCard from "../../../components/PlaceCard"
+import Footer from "../../../components/Footer"
+import ShareModal from "../../../components/ShareModal"
+import NavBar from "../../../components/NavBar"
+import Timeline from "../../../components/Timeline"
+import MapLoading from "../../../components/MapLoading"
 
 const Places = styled.div`
   display: block;
@@ -44,7 +42,7 @@ const Places = styled.div`
   `)}
 `
 
-const Map = dynamic(() => import("./../components/Map"), {
+const Map = dynamic(() => import("../../../components/Map"), {
   loading: () => <MapLoading text="Loading..." />,
   ssr: false
 })
@@ -69,20 +67,20 @@ const LeftSide = styled.div`
   `)}
 `
 
-const renderQueryRendererResponse = ({
-  rendererProps,
+const Respond = ({
+  route,
   query,
   cityIndex,
   setCityIndex,
   isVisibleShareModal,
   setVisibleShareModal
 }) => {
-  const trip = rendererProps.item.route[cityIndex]
+  const trip = route[cityIndex]
   const { destination } = trip
 
-  const places = rendererProps.item.route.map(
-    route => route.destination
-  )
+  console.log(destination)
+
+  const places = route.map(item => item.destination)
 
   return (
     <PlacesContainer>
@@ -135,54 +133,12 @@ const renderQueryRendererResponse = ({
   )
 }
 
-const PlacesPage = ({ query }) => {
-  const [cityIndex, setCityIndex] = useState(0)
-
-  const [isVisibleShareModal, setVisibleShareModal] = useState(false)
-
-  return (
-    <QueryRenderer
-      clientID="https://github.com/kiwicom/weekendfe"
-      query={graphql`
-        query placesQuery(
-          $interest: String!
-          $bookingToken: String!
-        ) {
-          item(interest: $interest, bookingToken: $bookingToken) {
-            price
-            route {
-              ...Map_places
-              ...PlaceCard_places
-              destination {
-                city
-                country
-              }
-            }
-          }
-        }
-      `}
-      variables={{
-        interest: query.interest,
-        bookingToken: query.bookingToken
-      }}
-      environment={weekendapiEnvironment}
-      onLoading={() => <MapLoading text="Loading" />}
-      onSystemError={() => <ErrorModal />}
-      onResponse={rendererProps =>
-        renderQueryRendererResponse({
-          rendererProps,
-          query,
-          cityIndex,
-          setCityIndex,
-          isVisibleShareModal,
-          setVisibleShareModal
-        })
+export default createFragmentContainer(Respond, {
+  route: graphql`
+    fragment Respond_route on Route {
+      destination {
+        city
       }
-    />
-  )
-}
-
-// enable passing query to main component
-PlacesPage.getInitialProps = async ({ query }) => ({ query })
-
-export default PlacesPage
+    }
+  `
+})
