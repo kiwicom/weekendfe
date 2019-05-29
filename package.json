@@ -11,7 +11,7 @@
     "export": "next export",
     "schema": "graphql get-schema",
     "lint": "eslint components",
-    "relay": "relay-compiler --src src/ --schema schema.graphql --include ./pages --validate",
+    "relay": "relay-compiler --src components/ --schema schema.graphql --include ./pages --validate",
     "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages",
     "analyze": "BUNDLE_ANALYZE=both next build",
     "analyze:server": "BUNDLE_ANALYZE=server next build",
