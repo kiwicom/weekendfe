@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 7839dfd1df9615fe81eec580790975d0
+ * @relayHash d6cb4f2b349d6c2cd570029ad3d745c6
  */
 
 /* eslint-disable */
@@ -30,6 +30,7 @@ query PlacePickerLocationsQuery(
 ) {
   place(id: $id) {
     name
+    id
   }
 }
 */
@@ -45,30 +46,18 @@ var v0 = [
 ],
 v1 = [
   {
-    "kind": "LinkedField",
-    "alias": null,
-    "name": "place",
-    "storageKey": null,
-    "args": [
-      {
-        "kind": "Variable",
-        "name": "id",
-        "variableName": "id"
-      }
-    ],
-    "concreteType": "Place",
-    "plural": false,
-    "selections": [
-      {
-        "kind": "ScalarField",
-        "alias": null,
-        "name": "name",
-        "args": null,
-        "storageKey": null
-      }
-    ]
+    "kind": "Variable",
+    "name": "id",
+    "variableName": "id"
   }
-];
+],
+v2 = {
+  "kind": "ScalarField",
+  "alias": null,
+  "name": "name",
+  "args": null,
+  "storageKey": null
+};
 return {
   "kind": "Request",
   "fragment": {
@@ -77,19 +66,52 @@ return {
     "type": "Query",
     "metadata": null,
     "argumentDefinitions": (v0/*: any*/),
-    "selections": (v1/*: any*/)
+    "selections": [
+      {
+        "kind": "LinkedField",
+        "alias": null,
+        "name": "place",
+        "storageKey": null,
+        "args": (v1/*: any*/),
+        "concreteType": "Place",
+        "plural": false,
+        "selections": [
+          (v2/*: any*/)
+        ]
+      }
+    ]
   },
   "operation": {
     "kind": "Operation",
     "name": "PlacePickerLocationsQuery",
     "argumentDefinitions": (v0/*: any*/),
-    "selections": (v1/*: any*/)
+    "selections": [
+      {
+        "kind": "LinkedField",
+        "alias": null,
+        "name": "place",
+        "storageKey": null,
+        "args": (v1/*: any*/),
+        "concreteType": "Place",
+        "plural": false,
+        "selections": [
+          (v2/*: any*/),
+          {
+            "kind": "ScalarField",
+            "alias": null,
+            "name": "id",
+            "args": null,
+            "storageKey": null
+          }
+        ]
+      }
+    ]
   },
   "params": {
     "operationKind": "query",
     "name": "PlacePickerLocationsQuery",
     "id": null,
-    "text": "query PlacePickerLocationsQuery(\n  $id: String!\n) {\n  place(id: $id) {\n    name\n  }\n}\n",
+    "text": "query PlacePickerLocationsQuery(\n  $id: String!\n) {\n  place(id: $id) {\n    name\n    id\n  }\n}\n",
     "metadata": {}
   }
 };
