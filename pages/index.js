@@ -4,10 +4,10 @@ import styled from "styled-components"
 import { format } from "date-fns"
 import Router from "next/router"
 
-import ContentContainer from "../components/ContentContainer"
-import Interests from "../components/Interests"
-import PlacesToVisit from "../components/PlacesToVisit"
-import TopPart, { defaultValues } from "../components/TopPart"
+import ContentContainer from "../src/components/ContentContainer"
+import Interests from "../src/components/Interests"
+import PlacesToVisit from "../src/components/PlacesToVisit"
+import TopPart, { defaultValues } from "../src/components/TopPart"
 
 const NomadForm = styled.div`
   max-width: 816px;

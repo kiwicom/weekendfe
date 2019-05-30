@@ -1,5 +1,4 @@
 import React from "react"
-import { format, addDays } from "date-fns"
 import styled from "styled-components"
 import { graphql, QueryRenderer } from "@kiwicom/relay"
 import {
@@ -12,10 +11,11 @@ import { ChevronLeft } from "@kiwicom/orbit-components/lib/icons"
 import Router from "next/router"
 
 import { weekendapiEnvironment } from "../lib/enviroment"
-import Debug from "../components/debug"
-import ContentContainer from "../components/ContentContainer"
-import Footer from "../components/Footer"
-import Itinerary from "../components/Itinerary"
+import Debug from "../src/components/debug"
+import ContentContainer from "../src/components/ContentContainer"
+import Footer from "../src/components/Footer"
+import Itinerary from "../src/components/Itinerary"
+import getParamsFromQuery from "./services/getParamsFromQuery"
 
 const ResultsContainer = styled.div`
   max-width: 1024px;
@@ -38,49 +38,6 @@ For usage online
   }
 }
 */
-
-const getStopovers = placesInUrl => {
-  if (!placesInUrl) return undefined
-  const items = placesInUrl.split("-")
-  const result = []
-  // eslint-disable-next-line
-  for (let i = 0; i < items.length; i += 3)
-    // eslint-disable-next-line fp/no-mutating-methods
-    result.push({
-      locations: [items[i]],
-      nightsFrom: Number(items[i + 1]),
-      nightsTo: Number(items[i + 2])
-    })
-  return result
-}
-
-const formatDate = date => format(date, "DD/MM/YYYY")
-
-const getParamsFromQuery = ({
-  adults = 1,
-  dateFrom,
-  dateTo,
-  flyFrom = "brno_cz",
-  flyTo,
-  stopovers
-}) => ({
-  params: {
-    adults: Number(adults),
-    dateFrom: formatDate(
-      dateFrom ? new Date(dateFrom) : addDays(new Date(), 1)
-    ),
-    dateTo: formatDate(
-      dateTo ? new Date(dateTo) : addDays(new Date(), 30)
-    ),
-    flyFrom,
-    flyTo: flyTo || flyFrom,
-    stopovers: getStopovers(stopovers) || [
-      { locations: ["LON"], nightsFrom: 1, nightsTo: 7 },
-      { locations: ["PAR"], nightsFrom: 1, nightsTo: 7 }
-    ]
-  }
-})
-
 const renderQueryRendererResponse = (rendererProps, query) => (
   <ContentContainer>
     <ResultsContainer>
