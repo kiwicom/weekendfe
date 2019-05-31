@@ -10,7 +10,6 @@ import Post from "../components/Post" // TODO: Use this component for Post
 // 2. Show posts
 
 const HomePage = props => {
-  console.log(API_URL)
   return (
     <ContentContainer>
       <Heading type="title1" spaceAfter="largest">
