@@ -17,7 +17,7 @@
     "analyze:server": "BUNDLE_ANALYZE=server next build",
     "analyze:browser": "BUNDLE_ANALYZE=browser next build",
     "cypress:open": "cypress open",
-    "cypress:run": "yarn start & wait-on http://localhost:3000 & cypress run"
+    "cypress:run": "yarn start & npx wait-on http://localhost:3000 &  cypress run"
   },
   "author": "",
   "license": "ISC",
