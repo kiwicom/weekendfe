@@ -1,7 +1,7 @@
 import Document, { Head, Main, NextScript } from "next/document"
 import { ServerStyleSheet } from "styled-components"
 
-import Body from "../src/components/Body"
+import Body from "../components/Body"
 
 const faviconUrl = `${BASE_URL}/static/favicon.ico`
 

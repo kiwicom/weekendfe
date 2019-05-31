@@ -4,7 +4,7 @@
       "schemaPath": "schema.graphql",
       "extensions": {
         "endpoints": {
-          "default": "https://weekend-api.now.sh/"
+          "default": "https://grahql.kiwi.com/"
         }
       }
     }
