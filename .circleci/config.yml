@@ -11,3 +11,6 @@ jobs:
       - run: 
           name: lint
           command: yarn lint
+      - run: 
+          name: e2eTest
+          command: yarn cypress:run
