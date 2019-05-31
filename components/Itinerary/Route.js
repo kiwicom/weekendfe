@@ -1,17 +1,19 @@
 import * as React from "react"
+import { graphql, createFragmentContainer } from "@kiwicom/relay"
 import styled, { ThemeProvider } from "styled-components"
-import Stack from "@kiwicom/orbit-components/lib/Stack"
-import Text from "@kiwicom/orbit-components/lib/Text"
-import Hide from "@kiwicom/orbit-components/lib/Hide"
-import CarrierLogo from "@kiwicom/orbit-components/lib/CarrierLogo"
-import FlightDirect from "@kiwicom/orbit-components/lib/icons/FlightDirect"
-import defaultTokens from "@kiwicom/orbit-components/lib/defaultTokens"
+import {
+  Stack,
+  Text,
+  Hide,
+  CarrierLogo,
+  getTokens
+} from "@kiwicom/orbit-components"
+import { FlightDirect } from "@kiwicom/orbit-components/lib/icons"
 import {
   format,
   differenceInHours,
   differenceInMinutes
 } from "date-fns"
-import { getTokens } from "@kiwicom/orbit-components"
 
 const StyledNights = styled.div`
   display: flex;
@@ -27,17 +29,13 @@ const StyledLine = styled.div`
   background-color: ${({ theme }) => theme.orbit.paletteCloudNormal};
 `
 
-StyledNights.defaultProps = {
-  theme: defaultTokens
-}
-
 const getCarrierFromParts = parts =>
   parts.map(part => ({
     code: part.carrier
   }))
 
-const Route = props => {
-  const { parts, from, to, nights } = props
+const Route = ({ flight, nights }) => {
+  const { parts, from, to } = flight
   const carriers = getCarrierFromParts(parts)
 
   const departureTimeLocal = new Date(from.timeLocal * 1000)
@@ -121,4 +119,22 @@ const Route = props => {
   )
 }
 
-export default Route
+export default createFragmentContainer(Route, {
+  flight: graphql`
+    fragment Route_flight on Route {
+      from {
+        city
+        iata
+        timeLocal
+      }
+      to {
+        city
+        iata
+        timeLocal
+      }
+      parts {
+        carrier
+      }
+    }
+  `
+})

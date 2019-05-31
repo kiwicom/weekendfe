@@ -1,6 +1,5 @@
 import * as React from "react"
 import styled from "styled-components"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
 
 const StyledNavBar = styled.div`
   display: flex;
@@ -17,10 +16,6 @@ const StyledNavBar = styled.div`
   right: 0;
   box-shadow: 0 2px 8px rgba(23, 27, 30, 0.15);
 `
-
-StyledNavBar.defaultProps = {
-  theme: defaultTheme
-}
 
 const NavBar = ({ children }) => (
   <StyledNavBar>{children}</StyledNavBar>

@@ -1,11 +1,17 @@
 /* eslint-disable no-param-reassign */
 const webpack = require("webpack")
 const withBundleAnalyzer = require("@zeit/next-bundle-analyzer")
+const dotenv = require("dotenv")
+
+dotenv.config()
+const env = name => process.env[name] || ""
 
 const debug = process.env.NODE_ENV !== "production"
-const repoName = "weekendfe"
 
 const nextConfig = {
+  publicRuntimeConfig: {
+    mapToken: env("MAP_TOKEN") // Pass through env variables
+  },
   analyzeServer: ["server", "both"].includes(
     process.env.BUNDLE_ANALYZE
   ),
@@ -22,12 +28,19 @@ const nextConfig = {
       reportFilename: "../bundles/client.html"
     }
   },
-  assetPrefix: debug ? "" : `/${repoName}/`,
+  exportPathMap() {
+    return {
+      "/": { page: "/" },
+      "/places": { page: "places" },
+      "/result": { page: "result" }
+    }
+  },
+  // assetPrefix: debug ? "" : `/${repoName}/`,
   webpack(config) {
     config.plugins = [
       ...(config.plugins || []),
       new webpack.DefinePlugin({
-        BASE_URL: debug ? "''" : `'/${repoName}/'`
+        BASE_URL: debug ? "''" : "''" // `'/${repoName}/'`
       })
     ]
 

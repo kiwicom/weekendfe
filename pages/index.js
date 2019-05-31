@@ -1,5 +1,5 @@
 import * as React from "react"
-import Heading from "@kiwicom/orbit-components/lib/Heading"
+import { Heading } from "@kiwicom/orbit-components/"
 import styled from "styled-components"
 import { format } from "date-fns"
 import Router from "next/router"
@@ -35,6 +35,54 @@ const changePlacesState = newPlaces => {
   Router.push(newUrl, newUrl, { shallow: true })
 }
 
+const handleOnSearchClick = selectedPlaces => {
+  const values = { ...defaultValues, ...Router.query }
+  const newUrl = {
+    pathname: `${BASE_URL}/result`,
+    query: {
+      ...values,
+      dateFrom: format(values.dateFrom, "YYYY-MM-DD"),
+      dateTo: format(values.dateTo, "YYYY-MM-DD"),
+      flyFrom:
+        typeof values.flyFrom === "string"
+          ? values.flyFrom
+          : values.flyFrom.id,
+      stopovers: placesToUrl(selectedPlaces),
+      places: undefined
+    }
+  }
+  Router.push(newUrl) // eslint-disable-line
+}
+
+const FlyForm = ({ query, places }) => (
+  <ContentContainer>
+    <Heading type="title1" spaceAfter="largest">
+      What are you interested in?
+    </Heading>
+    <Interests
+      defaultValue={query.interest || defaultValues.interest}
+    />
+    <NomadForm>
+      <StyledOrigin>
+        <Heading type="title1" spaceAfter="medium">
+          What destinations do you want to visit?
+        </Heading>
+        <TopPart
+          {...query}
+          adults={query.adults || defaultValues.adults}
+          flyFrom={query.flyFrom || defaultValues.flyFrom}
+          flyTo={query.flyTo}
+        />
+      </StyledOrigin>
+      <PlacesToVisit
+        onChange={changePlacesState}
+        defaultValue={places}
+        onSearchClick={handleOnSearchClick}
+      />
+    </NomadForm>
+  </ContentContainer>
+)
+
 const getPlaceFromString = val =>
   typeof val === "string"
     ? { name: `[${val}]`, code: val, id: val }
@@ -55,58 +103,7 @@ const UrlToPlaces = url => {
   return result
 }
 
-const FlyForm = ({ query, places }) => (
-  <ContentContainer>
-    <Heading type="title1" spaceAfter="largest">
-      What are you interested in?
-    </Heading>
-    <Interests
-      defaultValue={query.interest || defaultValues.interest}
-    />
-    <NomadForm>
-      <StyledOrigin>
-        <Heading type="title1" spaceAfter="medium">
-          What destinations do you want to visit?
-        </Heading>
-        <TopPart
-          {...query}
-          adults={query.adults || defaultValues.adults}
-          flyFrom={query.flyFrom}
-          flyTo={query.flyTo}
-        />
-      </StyledOrigin>
-      <PlacesToVisit
-        onChange={changePlacesState}
-        defaultValue={places}
-        onSearchClick={selectedPlaces => {
-          const values = { ...defaultValues, ...Router.query }
-          const newUrl = {
-            pathname: `${BASE_URL}/result`,
-            query: {
-              ...values,
-              dateFrom: format(
-                new Date(values.dateFrom),
-                "DD/MM/YYYY"
-              ),
-              flyFrom:
-                typeof values.flyFrom === "string"
-                  ? values.flyFrom
-                  : values.flyFrom.id,
-              dateTo:
-                values.dateTo &&
-                format(new Date(values.dateTo), "DD/MM/YYYY"),
-              stopovers: placesToUrl(selectedPlaces),
-              places: undefined
-            }
-          }
-          Router.push(newUrl) // eslint-disable-line
-        }}
-      />
-    </NomadForm>
-  </ContentContainer>
-)
-
-FlyForm.getInitialProps = async ({ req, query }) => {
+FlyForm.getInitialProps = async ({ query }) => {
   const places = UrlToPlaces(query.stopovers) || defaultValues.places
   return { query, places }
 }

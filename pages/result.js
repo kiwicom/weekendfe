@@ -1,13 +1,17 @@
+import React from "react"
 import { format, addDays } from "date-fns"
 import styled from "styled-components"
-import Button from "@kiwicom/orbit-components/lib/Button"
-import Stack from "@kiwicom/orbit-components/lib/Stack"
-import Heading from "@kiwicom/orbit-components/lib/Heading"
-import ChevronLeft from "@kiwicom/orbit-components/lib/icons/ChevronLeft"
+import { graphql, QueryRenderer } from "@kiwicom/relay"
+import {
+  Stack,
+  Button,
+  Heading,
+  Loading
+} from "@kiwicom/orbit-components"
+import { ChevronLeft } from "@kiwicom/orbit-components/lib/icons"
 import Router from "next/router"
 
-import Query from "../components/query"
-import search from "../queries/search.gql"
+import { weekendapiEnvironment } from "../lib/enviroment"
 import Debug from "../components/debug"
 import ContentContainer from "../components/ContentContainer"
 import Footer from "../components/Footer"
@@ -50,6 +54,8 @@ const getStopovers = placesInUrl => {
   return result
 }
 
+const formatDate = date => format(date, "DD/MM/YYYY")
+
 const getParamsFromQuery = ({
   adults = 1,
   dateFrom,
@@ -60,9 +66,12 @@ const getParamsFromQuery = ({
 }) => ({
   params: {
     adults: Number(adults),
-    dateFrom:
-      dateFrom || format(addDays(new Date(), 1), "DD/MM/YYYY"),
-    dateTo: dateTo || format(addDays(new Date(), 30), "DD/MM/YYYY"),
+    dateFrom: formatDate(
+      dateFrom ? new Date(dateFrom) : addDays(new Date(), 1)
+    ),
+    dateTo: formatDate(
+      dateTo ? new Date(dateTo) : addDays(new Date(), 30)
+    ),
     flyFrom,
     flyTo: flyTo || flyFrom,
     stopovers: getStopovers(stopovers) || [
@@ -72,47 +81,58 @@ const getParamsFromQuery = ({
   }
 })
 
+const renderQueryRendererResponse = (rendererProps, query) => (
+  <ContentContainer>
+    <ResultsContainer>
+      <Stack direction="column" spacing="extraLoose">
+        <Heading type="title1" spaceAfter="largest">
+          Choose your flight combination
+        </Heading>
+        <Itinerary
+          flights={rendererProps}
+          interest={query.interest}
+        />
+      </Stack>
+      <Footer
+        leftActions={
+          <Button
+            type="secondary"
+            iconLeft={<ChevronLeft />}
+            onClick={() =>
+              // eslint-disable-next-line fp/no-mutating-methods
+              Router.push({
+                pathname: "/",
+                query: Router.query
+              })
+            }
+          >
+            Previous Step
+          </Button>
+        }
+      />
+    </ResultsContainer>
+  </ContentContainer>
+)
+
 const Result = ({ query }) => (
   <>
     {query.debug && <Debug queryParams={getParamsFromQuery(query)} />}
-    <Query
-      query={search}
+    <QueryRenderer
+      clientID="https://github.com/kiwicom/weekendfe"
+      query={graphql`
+        query resultQuery($params: SearchParams!) {
+          ...Itinerary_flights @arguments(params: $params)
+        }
+      `}
       variables={getParamsFromQuery(query)}
-      context={{ uri: "https://weekend-api.now.sh/" }}
-    >
-      {({ data }) => (
-        <ContentContainer>
-          <ResultsContainer>
-            <Stack direction="column" spacing="extraLoose">
-              <Heading type="title1" spaceAfter="largest">
-                Choose your flight combination
-              </Heading>
-              <Itinerary
-                flights={data.search.slice(0, 10)}
-                interest={query.interest}
-              />
-            </Stack>
-            <Footer
-              leftActions={
-                <Button
-                  type="secondary"
-                  iconLeft={<ChevronLeft />}
-                  onClick={() =>
-                    // eslint-disable-next-line fp/no-mutating-methods
-                    Router.push({
-                      pathname: "/",
-                      query: Router.query
-                    })
-                  }
-                >
-                  Previous Step
-                </Button>
-              }
-            />
-          </ResultsContainer>
-        </ContentContainer>
+      environment={weekendapiEnvironment}
+      onLoading={() => (
+        <Loading type="pageLoader" text="Loading results" />
       )}
-    </Query>
+      onResponse={rendererProps =>
+        renderQueryRendererResponse(rendererProps, query)
+      }
+    />
   </>
 )
 

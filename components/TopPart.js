@@ -1,7 +1,6 @@
-import { useRef, useState } from "react"
+import React, { useRef, useState, useCallback } from "react"
 import { addDays, format } from "date-fns"
-import Stack from "@kiwicom/orbit-components/lib/Stack"
-import Checkbox from "@kiwicom/orbit-components/lib/Checkbox"
+import { Stack, Checkbox } from "@kiwicom/orbit-components"
 
 import useUrl from "./useUrl"
 import Stepper from "./Stepper"
@@ -57,15 +56,21 @@ const TopPart = ({ flyFrom, flyTo, dateFrom, dateTo, adults }) => {
     setReturnDatePickerVisibility
   ] = useState(false)
 
-  const selectDepartureDate = date => {
-    setDepartureDate(date.date)
-    setDepartureDatePickerVisibility(false)
-  }
+  const selectDepartureDate = useCallback(
+    date => {
+      setDepartureDate(date.date)
+      setDepartureDatePickerVisibility(false)
+    },
+    [setDepartureDate]
+  )
 
-  const selectReturnDate = date => {
-    setReturnDate(date.date)
-    setReturnDatePickerVisibility(false)
-  }
+  const selectReturnDate = useCallback(
+    date => {
+      setReturnDate(date.date)
+      setReturnDatePickerVisibility(false)
+    },
+    [setReturnDate]
+  )
 
   const departureDatepickerRef = useRef()
   useOnClickOutside(departureDatepickerRef, () =>

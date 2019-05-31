@@ -8,9 +8,21 @@ const useUrl = (defaultValue, paramName, serializer = val => val) => {
       ...Router.query,
       [paramName]: serializer(newValue)
     }
+    const filterEmptyQueries = Object.keys(newQuery).reduce(
+      (accumulator, currentValue) => {
+        if (newQuery[currentValue]) {
+          return {
+            ...accumulator,
+            [currentValue]: newQuery[currentValue]
+          }
+        }
+        return accumulator
+      },
+      {}
+    )
     const newUrl = {
       pathname: Router.pathname,
-      query: newQuery
+      query: filterEmptyQueries
     }
     // eslint-disable-next-line fp/no-mutating-methods
     Router.push(newUrl, newUrl, { shallow: true })

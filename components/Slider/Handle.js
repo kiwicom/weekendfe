@@ -1,6 +1,5 @@
 import * as React from "react"
 import styled from "styled-components"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
 
 const StyledHandle = styled.button`
   display: flex;
@@ -19,7 +18,8 @@ const StyledHandle = styled.button`
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
   opacity: ${({ disabled }) => disabled && "0.4"};
   background-color: ${({ theme }) => theme.orbit.paletteWhite};
-  transition: transform ${({ theme }) => theme.orbit.durationFast} ease-in-out;
+  transition: transform ${({ theme }) => theme.orbit.durationFast}
+    ease-in-out;
 
   :hover,
   :focus,
@@ -28,10 +28,6 @@ const StyledHandle = styled.button`
     transform: scale(1.02);
   }
 `
-
-StyledHandle.defaultProps = {
-  theme: defaultTheme
-}
 
 const StyledHandleCircle = styled.div`
   flex-shrink: 0;
@@ -42,10 +38,6 @@ const StyledHandleCircle = styled.div`
   top: 50%;
   left: 50%;
 `
-
-StyledHandleCircle.defaultProps = {
-  theme: defaultTheme
-}
 
 const Handle = ({
   domain: [min, max],

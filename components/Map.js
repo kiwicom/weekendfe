@@ -1,15 +1,20 @@
 import mapboxgl from "mapbox-gl/dist/mapbox-gl"
 import React, { useEffect, useRef, useState } from "react"
 import ReactDOM from "react-dom"
+import { graphql, createFragmentContainer } from "@kiwicom/relay"
 import styled, { ThemeProvider } from "styled-components"
 import Text from "@kiwicom/orbit-components/lib/Text"
-import defaultTheme from "@kiwicom/orbit-components/lib/defaultTokens"
+import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
 import { getTokens } from "@kiwicom/orbit-components"
+import getConfig from "next/config"
 
 import RatingStars from "./RatingStars"
 
-mapboxgl.accessToken =
-  "pk.eyJ1IjoibWljaGFlbGtpd2kiLCJhIjoiY2pyM2FjcGUyMGU2dTQycDE3ajQ3b3B6eiJ9.iJ4UL0VhJj1xvIG3vozlrQ"
+const {
+  publicRuntimeConfig: { mapToken }
+} = getConfig()
+
+mapboxgl.accessToken = mapToken || ""
 
 const MapWrapper = styled.div`
   position: absolute;
@@ -50,8 +55,8 @@ StyledMarker.defaultProps = {
 
 const StyledImage = styled.div`
   display: block;
-  width: 48px;
-  height: 48px;
+  width: 51px;
+  height: 51px;
   background-image: ${({ bg }) => `url(${bg})`};
   background-repeat: no-repeat;
   background-size: cover;
@@ -90,7 +95,7 @@ function Map({ places }) {
         return null
       }
 
-      const markers = places.map(place => {
+      const markers = places.interests.map(place => {
         const el = document.createElement("div") // eslint-disable-line
         el.className = "marker"
         const marker = new mapboxgl.Marker(el)
@@ -116,7 +121,7 @@ function Map({ places }) {
 
       const bounds = new mapboxgl.LngLatBounds()
 
-      places.forEach(place => {
+      places.interests.forEach(place => {
         bounds.extend([place.coords.lon, place.coords.lat])
       })
 
@@ -130,10 +135,24 @@ function Map({ places }) {
         })
       }
     },
-    [JSON.stringify(places), mapObject]
+    [mapObject, places.interests]
   )
 
   return <MapWrapper ref={mapRef} />
 }
 
-export default Map
+export default createFragmentContainer(Map, {
+  places: graphql`
+    fragment Map_places on Route {
+      interests {
+        name
+        coords {
+          lat
+          lon
+        }
+        img
+        score
+      }
+    }
+  `
+})

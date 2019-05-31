@@ -1,10 +1,10 @@
-import { useState, useRef, useReducer } from "react"
-import Heading from "@kiwicom/orbit-components/lib/Heading"
-import Stack from "@kiwicom/orbit-components/lib/Stack"
-import Button from "@kiwicom/orbit-components/lib/Button"
-import CloseCircle from "@kiwicom/orbit-components/lib/icons/CloseCircle"
-import Plus from "@kiwicom/orbit-components/lib/icons/Plus"
-import Search from "@kiwicom/orbit-components/lib/icons/Search"
+import React, { useState, useRef, useReducer } from "react"
+import { Heading, Stack, Button } from "@kiwicom/orbit-components"
+import {
+  CloseCircle,
+  Plus,
+  Search
+} from "@kiwicom/orbit-components/lib/icons"
 import styled from "styled-components"
 
 import PlacePicker from "./PlacePickerLocations"
@@ -39,7 +39,10 @@ const PlaceToVisit = ({
   useOnClickOutside(ref, () => setSliderVisibility(false))
   return (
     <Stack direction="row">
-      <PlacePicker defaultValue={place && place.id} onChange={changePlace} />
+      <PlacePicker
+        defaultValue={place && place.id}
+        onChange={changePlace}
+      />
       <Slider
         openRef={ref}
         isOpen={isOpenSlider}
@@ -52,6 +55,7 @@ const PlaceToVisit = ({
         iconLeft={<CloseCircle />}
         disabled={!onRemoveClick}
         onClick={onRemoveClick}
+        title="Remove"
       />
     </Stack>
   )
