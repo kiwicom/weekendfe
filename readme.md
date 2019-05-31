@@ -1,4 +1,5 @@
 [![CircleCI](https://circleci.com/gh/kiwicom/weekendfe.svg?style=svg)](https://circleci.com/gh/kiwicom/weekendfe)
+
 # DONE
 
 - [x] NextJS
@@ -24,7 +25,8 @@
 ## sources
 
 ### MapBox
-- register https://account.mapbox.com/auth/signup/ and create API key
+
+- [register](https://account.mapbox.com/auth/signup/) and create API key
 - create `.env` file with `MAP_TOKEN` variable
 
 ### Hooks
@@ -40,5 +42,6 @@
 - https://github.com/kevzettler/gatsby-source-airtable/blob/master/src/gatsby-node.js
 
 ### Flow
+
 - https://flow.org
 - https://www.youtube.com/watch?v=V1po0BT7kac

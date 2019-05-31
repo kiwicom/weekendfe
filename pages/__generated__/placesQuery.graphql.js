@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 2ff768c7718ccd3188238ed569ec55f1
+ * @relayHash c86175bdb5fd45855cd5d2b25ecdf8bb
  */
 
 /* eslint-disable */
@@ -9,22 +9,14 @@
 
 /*::
 import type { ConcreteRequest } from 'relay-runtime';
-type Map_places$ref = any;
-type PlaceCard_places$ref = any;
+type PlacesRoute_item$ref = any;
 export type placesQueryVariables = {|
   interest: string,
   bookingToken: string,
 |};
 export type placesQueryResponse = {|
   +item: ?{|
-    +price: ?number,
-    +route: ?$ReadOnlyArray<?{|
-      +destination: ?{|
-        +city: ?string,
-        +country: ?string,
-      |},
-      +$fragmentRefs: Map_places$ref & PlaceCard_places$ref,
-    |}>,
+    +$fragmentRefs: PlacesRoute_item$ref
   |}
 |};
 export type placesQuery = {|
@@ -40,14 +32,16 @@ query placesQuery(
   $bookingToken: String!
 ) {
   item(interest: $interest, bookingToken: $bookingToken) {
-    price
-    route {
-      ...Map_places
-      ...PlaceCard_places
-      destination {
-        city
-        country
-      }
+    ...PlacesRoute_item
+  }
+}
+
+fragment PlacesRoute_item on Item {
+  route {
+    ...Map_places
+    ...PlaceCard_places
+    destination {
+      city
     }
   }
 }
@@ -100,39 +94,7 @@ v1 = [
     "name": "interest",
     "variableName": "interest"
   }
-],
-v2 = {
-  "kind": "ScalarField",
-  "alias": null,
-  "name": "price",
-  "args": null,
-  "storageKey": null
-},
-v3 = {
-  "kind": "LinkedField",
-  "alias": null,
-  "name": "destination",
-  "storageKey": null,
-  "args": null,
-  "concreteType": "RouteRendezvous",
-  "plural": false,
-  "selections": [
-    {
-      "kind": "ScalarField",
-      "alias": null,
-      "name": "city",
-      "args": null,
-      "storageKey": null
-    },
-    {
-      "kind": "ScalarField",
-      "alias": null,
-      "name": "country",
-      "args": null,
-      "storageKey": null
-    }
-  ]
-};
+];
 return {
   "kind": "Request",
   "fragment": {
@@ -151,28 +113,10 @@ return {
         "concreteType": "Item",
         "plural": false,
         "selections": [
-          (v2/*: any*/),
           {
-            "kind": "LinkedField",
-            "alias": null,
-            "name": "route",
-            "storageKey": null,
-            "args": null,
-            "concreteType": "Route",
-            "plural": true,
-            "selections": [
-              (v3/*: any*/),
-              {
-                "kind": "FragmentSpread",
-                "name": "Map_places",
-                "args": null
-              },
-              {
-                "kind": "FragmentSpread",
-                "name": "PlaceCard_places",
-                "args": null
-              }
-            ]
+            "kind": "FragmentSpread",
+            "name": "PlacesRoute_item",
+            "args": null
           }
         ]
       }
@@ -192,7 +136,6 @@ return {
         "concreteType": "Item",
         "plural": false,
         "selections": [
-          (v2/*: any*/),
           {
             "kind": "LinkedField",
             "alias": null,
@@ -273,7 +216,24 @@ return {
                   }
                 ]
               },
-              (v3/*: any*/)
+              {
+                "kind": "LinkedField",
+                "alias": null,
+                "name": "destination",
+                "storageKey": null,
+                "args": null,
+                "concreteType": "RouteRendezvous",
+                "plural": false,
+                "selections": [
+                  {
+                    "kind": "ScalarField",
+                    "alias": null,
+                    "name": "city",
+                    "args": null,
+                    "storageKey": null
+                  }
+                ]
+              }
             ]
           }
         ]
@@ -284,11 +244,11 @@ return {
     "operationKind": "query",
     "name": "placesQuery",
     "id": null,
-    "text": "query placesQuery(\n  $interest: String!\n  $bookingToken: String!\n) {\n  item(interest: $interest, bookingToken: $bookingToken) {\n    price\n    route {\n      ...Map_places\n      ...PlaceCard_places\n      destination {\n        city\n        country\n      }\n    }\n  }\n}\n\nfragment Map_places on Route {\n  interests {\n    name\n    coords {\n      lat\n      lon\n    }\n    img\n    score\n    id\n  }\n}\n\nfragment PlaceCard_places on Route {\n  interests {\n    name\n    address\n    id\n  }\n}\n",
+    "text": "query placesQuery(\n  $interest: String!\n  $bookingToken: String!\n) {\n  item(interest: $interest, bookingToken: $bookingToken) {\n    ...PlacesRoute_item\n  }\n}\n\nfragment PlacesRoute_item on Item {\n  route {\n    ...Map_places\n    ...PlaceCard_places\n    destination {\n      city\n    }\n  }\n}\n\nfragment Map_places on Route {\n  interests {\n    name\n    coords {\n      lat\n      lon\n    }\n    img\n    score\n    id\n  }\n}\n\nfragment PlaceCard_places on Route {\n  interests {\n    name\n    address\n    id\n  }\n}\n",
     "metadata": {}
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '1a2626eca89e08f84b3c5f73c49287b8';
+(node/*: any*/).hash = '966ac9de0fd146558d249baa1f21d232';
 module.exports = node;
