@@ -2,16 +2,9 @@ import * as React from "react"
 import App, { Container } from "next/app"
 import Head from "next/head"
 import { getTokens, ThemeProvider } from "@kiwicom/orbit-components"
-import { createGlobalStyle } from "styled-components"
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0 auto;
-    background-color: ${({ theme }) => theme.orbit.paletteCloudLight};
-  }
-`
+// we need to reset some global styles
+// width, height, margin and background-color - cloudLight
 
 class MyApp extends App {
   render() {
@@ -23,7 +16,6 @@ class MyApp extends App {
         </Head>
         <ThemeProvider theme={{ orbit: getTokens() }}>
           <>
-            <GlobalStyle />
             <Component {...pageProps} />
           </>
         </ThemeProvider>

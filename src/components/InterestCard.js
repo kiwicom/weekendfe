@@ -1,26 +1,22 @@
-import React, { useCallback } from "react"
-import styled, { css } from "styled-components"
-import { Stack, Hide, Text, Radio } from "@kiwicom/orbit-components/"
-import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"
+import React from "react"
+import styled from "styled-components"
+import { Text } from "@kiwicom/orbit-components/"
 
 const StyledInterestCard = styled.div`
   width: 100%;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
+  // make it flex with row
   cursor: pointer;
-  background: ${({ theme }) => theme.orbit.paletteWhite};
-  border-radius: ${({ theme }) => theme.orbit.borderRadiusNormal};
-  padding: ${({ theme }) => theme.orbit.spaceMedium};
+  // use background color white
+  // use basic border radius
+  // use medium spacing for padding
   box-shadow: 0 2px 4px 0 rgba(23, 27, 30, 0.1);
-  transition: box-shadow ${({ theme }) => theme.orbit.durationFast}
-      ease-in-out,
-    transform ${({ theme }) => theme.orbit.durationFast} ease-in-out;
+  // replace fast duration
+  transition: box-shadow 2s ease-in-out, transform 2s ease-in-out;
 
-  ${mq.largeMobile(css`
-    max-width: 177px;
-    flex-shrink: 1;
-  `)};
+  // setup max-width 177px and flex-shrink 1 on largeMobile
+  // https://orbit.kiwi/guidelines/media-queries/
+  // CHECK THE SYNTAX PROPERLY!!!
 
   :hover,
   :focus {
@@ -52,54 +48,29 @@ const StyledRadio = styled.div`
     width: auto;
   }
 `
-const InterestCard = ({
-  title,
-  icon,
-  checked,
-  value,
-  onChange,
-  onClick
-}) => {
-  const handleKeyDown = useCallback(
-    event => {
-      if (onClick) {
-        if (event.keyCode === 32) {
-          onClick(value)
-        }
-      }
-    },
-    [onClick, value]
-  )
-  const handleClick = useCallback(() => {
-    if (onClick) {
-      onClick(value)
-    }
-  }, [onClick, value])
-  return (
-    <StyledInterestCard
-      onClick={handleClick}
-      tabIndex={0}
-      onKeyDown={handleKeyDown}
-    >
-      <Stack direction="row" justify="between" align="center" shrink>
-        <Hide on={["largeMobile"]}>
-          <StyledIcon>{icon}</StyledIcon>
-        </Hide>
-        <StyledContent>
-          <Text weight="bold">{title}</Text>
-        </StyledContent>
-        <StyledRadio>
-          <Radio
-            checked={checked}
-            value={value}
-            name="interest"
-            onChange={onChange}
-            tabIndex={-1}
-          />
-        </StyledRadio>
-      </Stack>
-    </StyledInterestCard>
-  )
-}
+const InterestCard = ({ title, icon }) => (
+  <StyledInterestCard tabIndex={0}>
+    {/*
+    You should use stacking in row, horizontally align space-between, vertically aligned to center, the container should shrink when possible
+    https://orbit.kiwi/components/stack/
+    */}
+    {/*
+      We need to hide the icon on largeMobile viewport because there is not so much space
+      https://orbit.kiwi/components/hide/
+    */}
+    <StyledIcon>{icon}</StyledIcon>
+    <StyledContent>
+      <Text weight="bold">{title}</Text>
+    </StyledContent>
+    <StyledRadio>
+      {/*
+      We need to use Radio component here
+
+      We need to hide the icon on largeMobile viewport because there is not so much space
+      https://orbit.kiwi/components/hide/
+    */}
+    </StyledRadio>
+  </StyledInterestCard>
+)
 
 export default InterestCard

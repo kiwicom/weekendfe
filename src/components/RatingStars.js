@@ -5,33 +5,26 @@ import {
   StarFull
 } from "@kiwicom/orbit-components/lib/icons"
 
-const StyledRatingStars = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-shrink: 0;
+// make StyledRatingStars component
 
-  svg {
-    flex-shrink: 0;
-    color: ${({ theme }) => theme.orbit.paletteProductNormal};
-  }
-`
+// this container should be flex that display children in row and doesn't shrink at all
 
 const maxStars = 5
 
 const RatingStars = ({ rating }) => {
   const ratingRounded = Math.round(rating / 2)
   return (
-    <StyledRatingStars>
+    // replace the div
+    <div>
       {Array(...Array(maxStars)).map((_, index) => {
         const key = `star-${index}`
         return index <= ratingRounded - 1 ? (
-          <StarFull key={key} size="small" />
+          <StarFull key={key} size="small" customColor="white" />
         ) : (
-          <StarEmpty key={key} size="small" />
+          <StarEmpty key={key} size="small" customColor="white" />
         )
       })}
-    </StyledRatingStars>
+    </div>
   )
 }
 
