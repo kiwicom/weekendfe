@@ -30,9 +30,7 @@ const nextConfig = {
   },
   exportPathMap() {
     return {
-      "/": { page: "/" },
-      "/places": { page: "places" },
-      "/result": { page: "result" }
+      "/": { page: "/" }
     }
   },
   // assetPrefix: debug ? "" : `/${repoName}/`,
