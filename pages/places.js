@@ -1,4 +1,5 @@
-import { useState } from "react"
+// @flow
+import React, { useState } from "react"
 import { graphql, QueryRenderer } from "@kiwicom/relay"
 import {
   Heading,
