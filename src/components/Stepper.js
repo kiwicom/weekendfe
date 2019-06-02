@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react"
+import React from "react"
 import styled from "styled-components"
 import {
   ButtonLink,
@@ -18,49 +18,62 @@ const StyledStepper = styled.div`
   position: relative;
 `
 
-const Stepper = ({
-  defaultValue = 1,
-  min = 1,
-  max = 9,
-  onChange
-}) => {
-  const value = Number(defaultValue)
-  const [count, setCount] = useState(value)
-  const [isOpen, setOpen] = useState(false)
+class Stepper extends React.Component {
+  state = {
+    // eslint-disable-next-line react/destructuring-assignment
+    count: Number(this.props.defaultValue),
+    isOpen: false
+  }
 
-  const handleChange = useCallback(
-    newValue => {
-      if (onChange) onChange(newValue)
-      setCount(newValue)
-    },
-    [onChange]
-  )
+  handleChange = newValue => {
+    const { onChange } = this.props
 
-  return (
-    <StyledStepper>
-      <Popover
-        content={
-          <OrbitStepper
-            defaultValue={value}
-            minValue={min}
-            maxValue={max}
-            onChange={handleChange}
-          />
-        }
-        onClose={() => setOpen(false)}
-        onOpen={() => setOpen(true)}
-      >
-        <ButtonLink
-          type="secondary"
-          size="small"
-          iconLeft={<Passengers />}
-          iconRight={isOpen ? <ChevronDown /> : <ChevronUp />}
+    if (onChange) onChange(newValue)
+    this.setState({
+      count: newValue
+    })
+  }
+
+  render() {
+    const { defaultValue, min = 1, max = 9 } = this.props
+    const { count, isOpen } = this.state
+
+    const value = Number(defaultValue)
+
+    return (
+      <StyledStepper>
+        <Popover
+          content={
+            <OrbitStepper
+              defaultValue={value}
+              minValue={min}
+              maxValue={max}
+              onChange={this.handleChange}
+            />
+          }
+          onClose={() =>
+            this.setState({
+              isOpen: false
+            })
+          }
+          onOpen={() =>
+            this.setState({
+              isOpen: true
+            })
+          }
         >
-          {count} {count <= 1 ? "adult" : "adults"}
-        </ButtonLink>
-      </Popover>
-    </StyledStepper>
-  )
+          <ButtonLink
+            type="secondary"
+            size="small"
+            iconLeft={<Passengers />}
+            iconRight={isOpen ? <ChevronDown /> : <ChevronUp />}
+          >
+            {count} {count <= 1 ? "adult" : "adults"}
+          </ButtonLink>
+        </Popover>
+      </StyledStepper>
+    )
+  }
 }
 
 export default Stepper
