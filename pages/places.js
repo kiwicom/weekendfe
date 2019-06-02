@@ -187,3 +187,4 @@ const PlacesPage = ({ query }) => {
 PlacesPage.getInitialProps = async ({ query }) => ({ query })
 
 export default PlacesPage
+wow()!
