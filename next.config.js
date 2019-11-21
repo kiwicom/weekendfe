@@ -1,4 +1,5 @@
 /* eslint-disable no-param-reassign */
+const path = require("path")
 /* eslint-disable import/no-extraneous-dependencies */
 const webpack = require("webpack")
 const withBundleAnalyzer = require("@zeit/next-bundle-analyzer")
@@ -37,7 +38,22 @@ const nextConfig = {
     }
   },
   // assetPrefix: debug ? "" : `/${repoName}/`,
-  webpack(config) {
+
+  webpack: (config /* : any */) => {
+    const originalEntry = config.entry;
+    config.entry = async () => {
+      const entries = await originalEntry();
+
+      const keys = Object.keys(entries);
+      keys.forEach(key => {
+        if (key.includes('/__generated__/')) {
+          delete entries[key];
+        }
+      });
+
+      return entries;
+    };
+
     config.plugins = [
       ...(config.plugins || []),
       new webpack.DefinePlugin({
@@ -45,8 +61,11 @@ const nextConfig = {
       })
     ]
 
-    return config
-  }
+    config.resolve.alias["components"] = path.join(__dirname, "components")
+    config.resolve.alias["src"] = path.join(__dirname, "src")
+
+    return config;
+  },
 }
 
 module.exports = withBundleAnalyzer(nextConfig)

@@ -4,7 +4,7 @@ import { graphql, QueryRenderer } from "@kiwicom/relay"
 import { weekendapiEnvironment } from "../lib/enviroment"
 import MapLoading from "../src/components/MapLoading"
 import ErrorModal from "../src/components/ErrorModal"
-import PlacesRoute from "./components/PlacesRoute"
+import PlacesRoute from "../components/PlacesRoute"
 
 const PlacesPage = ({ query }) => {
   const [cityIndex, setCityIndex] = useState(0)

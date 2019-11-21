@@ -15,7 +15,7 @@ import Debug from "../src/components/debug"
 import ContentContainer from "../src/components/ContentContainer"
 import Footer from "../src/components/Footer"
 import Itinerary from "../src/components/Itinerary"
-import getParamsFromQuery from "./services/getParamsFromQuery"
+import getParamsFromQuery from "../services/getParamsFromQuery"
 
 const ResultsContainer = styled.div`
   max-width: 1024px;
@@ -71,27 +71,32 @@ const renderQueryRendererResponse = (rendererProps, query) => (
   </ContentContainer>
 )
 
-const Result = ({ query }) => (
-  <>
-    {query.debug && <Debug queryParams={getParamsFromQuery(query)} />}
-    <QueryRenderer
-      clientID="https://github.com/kiwicom/weekendfe"
-      query={graphql`
-        query resultQuery($params: SearchParams!) {
-          ...Itinerary_flights @arguments(params: $params)
-        }
-      `}
-      variables={getParamsFromQuery(query)}
-      environment={weekendapiEnvironment}
-      onLoading={() => (
-        <Loading type="pageLoader" text="Loading results" />
+const Result = ({ query }) => {
+  console.warn("query", query)
+  return (
+    <>
+      {query.debug && (
+        <Debug queryParams={getParamsFromQuery(query)} />
       )}
-      onResponse={rendererProps =>
-        renderQueryRendererResponse(rendererProps, query)
-      }
-    />
-  </>
-)
+      <QueryRenderer
+        clientID="https://github.com/kiwicom/weekendfe"
+        query={graphql`
+          query resultQuery($params: SearchParams!) {
+            ...Itinerary_flights @arguments(params: $params)
+          }
+        `}
+        variables={getParamsFromQuery(query)}
+        environment={weekendapiEnvironment}
+        onLoading={() => (
+          <Loading type="pageLoader" text="Loading results" />
+        )}
+        onResponse={rendererProps =>
+          renderQueryRendererResponse(rendererProps, query)
+        }
+      />
+    </>
+  )
+}
 
 // enable passing query to main component
 Result.getInitialProps = async ({ query }) => ({ query })

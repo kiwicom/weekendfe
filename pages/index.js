@@ -105,6 +105,7 @@ const UrlToPlaces = url => {
 
 FlyForm.getInitialProps = async ({ query }) => {
   const places = UrlToPlaces(query.stopovers) || defaultValues.places
+  console.log("FlyForm query", query)
   return { query, places }
 }
 
