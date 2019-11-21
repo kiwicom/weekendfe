@@ -37,7 +37,7 @@
     "camelcase": "off", // GQL
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
     "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
-    "react/prop-types": "warning",
+    "react/prop-types": "warn",
     "react/react-in-jsx-scope": "off", // next
     "fp/no-nil": "off", // Side effects
     "fp/no-class": "off", // React
