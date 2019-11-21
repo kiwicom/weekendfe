@@ -41,8 +41,8 @@ const handleOnSearchClick = selectedPlaces => {
     pathname: `${BASE_URL}/result`,
     query: {
       ...values,
-      dateFrom: format(values.dateFrom, "YYYY-MM-DD"),
-      dateTo: format(values.dateTo, "YYYY-MM-DD"),
+      dateFrom: format(values.dateFrom, "yyyy-MM-dd"),
+      dateTo: format(values.dateTo, "yyyy-MM-dd"),
       flyFrom:
         typeof values.flyFrom === "string"
           ? values.flyFrom

@@ -80,7 +80,7 @@ const Route = ({ flight, nights }) => {
             <Stack direction="column" spacing="extraTight">
               <Text weight="bold">{`${departureTime} - ${departureArrival}`}</Text>
               <Text size="small">
-                {format(departureTimeLocal, "ddd D MMM")}
+                {format(departureTimeLocal, "ddd d MMM")}
               </Text>
             </Stack>
           </Stack>

@@ -39,7 +39,7 @@ const TopPart = ({ flyFrom, flyTo, dateFrom, dateTo, adults }) => {
   const [departureDate, setDepartureDate] = useUrl(
     dateFrom ? new Date(dateFrom) : defaultValues.dateFrom,
     "dateFrom",
-    date => format(date, "YYYY-MM-DD")
+    date => format(date, "yyyy-MM-dd")
   )
   const [
     departureDatePickerOpened,
@@ -49,7 +49,7 @@ const TopPart = ({ flyFrom, flyTo, dateFrom, dateTo, adults }) => {
   const [returnDate, setReturnDate] = useUrl(
     dateTo ? new Date(dateTo) : addDays(new Date(), 10),
     "dateTo",
-    date => (date ? format(date, "YYYY-MM-DD") : undefined)
+    date => (date ? format(date, "yyyy-MM-dd") : undefined)
   )
   const [
     returnDatePickerOpened,

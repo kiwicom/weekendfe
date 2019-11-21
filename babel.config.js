@@ -12,13 +12,19 @@ type ApiType = {|
 */
 
 module.exports = function(api /*: ApiType */) {
+  api.assertVersion(7)
+  api.cache.forever()
+
   return {
-    "presets": ["next/babel"],
-    "plugins": [
-      ["styled-components", { "ssr": true, "transpileTemplateLiterals": true }],
+    presets: ["next/babel"],
+    plugins: [
+      [
+        "styled-components",
+        { ssr: true, transpileTemplateLiterals: true }
+      ],
       ["@kiwicom/orbit-components"],
       ["import-graphql"],
       ["relay"]
     ]
-  };
-};
+  }
+}
