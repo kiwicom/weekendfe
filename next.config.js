@@ -30,13 +30,13 @@ const nextConfig = {
       reportFilename: "../bundles/client.html"
     }
   },
-  exportPathMap() {
-    return {
-      "/": { page: "/" },
-      "/places": { page: "places" },
-      "/result": { page: "result" }
-    }
-  },
+  // exportPathMap() {
+  //   return {
+  //     "/": { page: "/" },
+  //     "/places": { page: "places" },
+  //     "/result": { page: "result" }
+  //   }
+  // },
   // assetPrefix: debug ? "" : `/${repoName}/`,
 
   webpack: (config /* : any */) => {
