@@ -1,10 +1,7 @@
 # source: https://weekend-api.now.sh/
-# timestamp: Wed May 29 2019 12:27:15 GMT+0200 (Central European Summer Time)
+# timestamp: Thu Nov 21 2019 17:41:31 GMT+0100 (Central European Standard Time)
 
-directive @cacheControl(
-  maxAge: Int
-  scope: CacheControlScope
-) on FIELD_DEFINITION | OBJECT | INTERFACE
+directive @cacheControl(maxAge: Int, scope: CacheControlScope) on FIELD_DEFINITION | OBJECT | INTERFACE
 
 enum CacheControlScope {
   PUBLIC
@@ -85,15 +82,13 @@ type Place {
 type Query {
   search(params: SearchParams!): [Item]
   item(bookingToken: String!, interest: String!): Item
-  interests(
-    city: String!
-    country: String
-    interest: String!
-  ): [Interest]
+  interests(city: String!, country: String, interest: String!): [Interest]
   place(id: String!): Place
   locations(query: String!, limit: Int): [Location]
   cacheFiles(filter: String): [String]
-  uptime: ServerInfo
+
+  """Informations about server"""
+  serverInfo: ServerInfo
   customList: [KeyValue]
 }
 
@@ -144,7 +139,5 @@ input Stopover {
   nightsTo: Int
 }
 
-"""
-The `Upload` scalar type represents a file upload.
-"""
+"""The `Upload` scalar type represents a file upload."""
 scalar Upload
