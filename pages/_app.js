@@ -18,7 +18,7 @@ class MyApp extends App {
     const { Component, pageProps } = this.props
     return (
       <ThemeProvider theme={{ orbit: getTokens() }}>
-      <>
+        <>
           <Head>
             <title>JS Weekend</title>
           </Head>
