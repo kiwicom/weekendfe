@@ -50,9 +50,7 @@ const StyledDatePickerWrapper = styled.div`
 const StyledDatePicker = styled.div`
   position: absolute;
   top: ${({ theme }) =>
-    `calc(${theme.orbit.heightInputNormal} + ${
-      theme.orbit.spaceXXSmall
-    })`};
+    `calc(${theme.orbit.heightInputNormal} + ${theme.orbit.spaceXXSmall})`};
   z-index: 999;
   box-sizing: border-box;
   background: ${({ theme }) => theme.orbit.paletteWhite};
@@ -189,9 +187,7 @@ const DatePicker = ({
                       <StyledCalendarWeek>
                         {weekdayNamesShort.map(weekday => (
                           <StyledCalendarWeekday
-                            key={`${calendar.month}${
-                              calendar.year
-                            }${weekday}`}
+                            key={`${calendar.month}${calendar.year}${weekday}`}
                           >
                             <Text>{weekday}</Text>
                           </StyledCalendarWeekday>
@@ -199,9 +195,7 @@ const DatePicker = ({
                       </StyledCalendarWeek>
                       {calendar.weeks.map((week, weekIndex) =>
                         week.map((dateObj, index) => {
-                          const key = `${calendar.month}${
-                            calendar.year
-                          }${weekIndex}${index}`
+                          const key = `${calendar.month}${calendar.year}${weekIndex}${index}`
                           if (!dateObj) {
                             return <StyledDay key={key} disabled />
                           }

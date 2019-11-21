@@ -39,6 +39,7 @@
     "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
     "react/prop-types": "warn",
     "react/react-in-jsx-scope": "off", // next
+    "react/jsx-props-no-spreading": "warn",
     "fp/no-nil": "off", // Side effects
     "fp/no-class": "off", // React
     "fp/no-this": "off", // React

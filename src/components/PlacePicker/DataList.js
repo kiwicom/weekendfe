@@ -11,9 +11,7 @@ const StyledResults = styled.div`
   max-height: 270px;
   position: absolute;
   top: ${({ theme }) =>
-    `calc(${theme.orbit.heightInputNormal} + ${
-      theme.orbit.spaceXSmall
-    })`};
+    `calc(${theme.orbit.heightInputNormal} + ${theme.orbit.spaceXSmall})`};
   z-index: 10;
   background: ${({ theme }) => theme.orbit.paletteWhite};
   border-radius: ${({ theme }) => theme.orbit.borderRadiusNormal};
