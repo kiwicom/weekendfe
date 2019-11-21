@@ -1,25 +1,23 @@
 /**
  * @flow
- * @relayHash 9f36d39503507bd8a4b0b8d3f7627030
+ * @relayHash cdd050933865c449c0306a7600b7890a
  */
 
 /* eslint-disable */
+// flowlint untyped-type-import:off
 
-'use strict';
-
-/*::
 import type { ConcreteRequest } from 'relay-runtime';
 type Itinerary_flights$ref = any;
 export type SearchParams = {|
   adults?: ?number,
   children?: ?number,
-  infants?: ?number,
   dateFrom: string,
   dateTo: string,
-  returnFrom?: ?string,
-  returnTo?: ?string,
   flyFrom: string,
   flyTo?: ?string,
+  infants?: ?number,
+  returnFrom?: ?string,
+  returnTo?: ?string,
   stopovers: $ReadOnlyArray<Stopover>,
 |};
 export type Stopover = {|
@@ -37,8 +35,6 @@ export type resultQuery = {|
   variables: resultQueryVariables,
   response: resultQueryResponse,
 |};
-*/
-
 
 /*
 query resultQuery(
@@ -80,7 +76,7 @@ fragment Route_flight on Route {
 }
 */
 
-const node/*: ConcreteRequest*/ = (function(){
+const node: ConcreteRequest = (function(){
 var v0 = [
   {
     "kind": "LocalArgument",
@@ -226,5 +222,5 @@ return {
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = 'f930ed9a8dc75ac7ca068ed0708b0965';
-module.exports = node;
+(node: any).hash = 'f930ed9a8dc75ac7ca068ed0708b0965';
+export default node;

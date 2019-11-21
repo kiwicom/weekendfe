@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { graphql, QueryRenderer } from "@kiwicom/relay"
+import { graphql, QueryRenderer } from "@adeira/relay"
 import {
   Stack,
   Button,

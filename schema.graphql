@@ -1,17 +1,16 @@
-# source: https://weekend-api.now.sh/
-# timestamp: Thu Nov 21 2019 17:41:31 GMT+0100 (Central European Standard Time)
+# @generated SignedSource<<f29a3aaca641676f302d5e5d716b8c02>>
 
-directive @cacheControl(maxAge: Int, scope: CacheControlScope) on FIELD_DEFINITION | OBJECT | INTERFACE
+directive @cacheControl(maxAge: Int, scope: CacheControlScope) on FIELD_DEFINITION | INTERFACE | OBJECT
 
 enum CacheControlScope {
-  PUBLIC
   PRIVATE
+  PUBLIC
 }
 
 type City {
+  country: String
   id: ID!
   name: String!
-  country: String
 }
 
 type Coords {
@@ -20,19 +19,19 @@ type Coords {
 }
 
 type Interest {
+  address: String
+  category: String
+  coords: Coords
   id: ID!
   img: String
-  score: Float
   name: String!
-  category: String
-  address: String
-  coords: Coords
+  score: Float
   url: String
 }
 
 type Item {
-  price: Float
   bookingToken: String
+  price: Float
   route: [Route]
 }
 
@@ -42,15 +41,15 @@ type KeyValue {
 }
 
 type Location {
-  id: ID!
-  iid: Int
+  city: City
   code: String
   coords: Coords!
+  id: ID!
+  iid: Int
   name: String
   slug: String
   timezone: String
   type: String
-  city: City
 }
 
 type Mutation {
@@ -58,52 +57,52 @@ type Mutation {
 }
 
 type Part {
-  type: String
   carrier: String
-  operatingCarrier: String
   from: PartRendezvous
+  operatingCarrier: String
   to: PartRendezvous
+  type: String
 }
 
 type PartRendezvous {
-  country: String
   city: String
+  country: String
   iata: String
   timeLocal: Int
   timeUtc: Int
 }
 
 type Place {
+  code: String
   id: ID
   name: String
-  code: String
 }
 
 type Query {
-  search(params: SearchParams!): [Item]
-  item(bookingToken: String!, interest: String!): Item
-  interests(city: String!, country: String, interest: String!): [Interest]
-  place(id: String!): Place
-  locations(query: String!, limit: Int): [Location]
   cacheFiles(filter: String): [String]
+  customList: [KeyValue]
+  interests(city: String!, country: String, interest: String!): [Interest]
+  item(bookingToken: String!, interest: String!): Item
+  locations(limit: Int, query: String!): [Location]
+  place(id: String!): Place
+  search(params: SearchParams!): [Item]
 
   """Informations about server"""
   serverInfo: ServerInfo
-  customList: [KeyValue]
 }
 
 type Route {
   destination: RouteRendezvous
   from: RouteRendezvous
-  to: RouteRendezvous
-  parts: [Part]
   interests: [Interest]
+  parts: [Part]
+  to: RouteRendezvous
 }
 
 type RouteRendezvous {
+  city: String
   country: String
   countryCode: String
-  city: String
   iata: String
   timeLocal: Int
   timeUtc: Int
@@ -112,23 +111,23 @@ type RouteRendezvous {
 input SearchParams {
   adults: Int
   children: Int
-  infants: Int
   dateFrom: String!
   dateTo: String!
-  returnFrom: String
-  returnTo: String
   flyFrom: String!
   flyTo: String
+  infants: Int
+  returnFrom: String
+  returnTo: String
   stopovers: [Stopover!]!
 }
 
 type ServerInfo {
+  arch: String
+  freemem: Int
+  hostname: String
+  os: String
   platform: String
   process: String
-  arch: String
-  os: String
-  hostname: String
-  freemem: Int
   release: String
   version: String
 }
@@ -141,3 +140,4 @@ input Stopover {
 
 """The `Upload` scalar type represents a file upload."""
 scalar Upload
+

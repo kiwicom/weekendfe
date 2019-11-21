@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { graphql, QueryRenderer } from "@kiwicom/relay"
+import { graphql, QueryRenderer } from "@adeira/relay"
 import { Loading } from "@kiwicom/orbit-components"
 
 import { weekendapiEnvironment } from "../lib/enviroment"

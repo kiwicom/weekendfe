@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { graphql, QueryRenderer } from "@kiwicom/relay"
+import { graphql, QueryRenderer } from "@adeira/relay"
 import styled from "styled-components"
 import {
   Loading,

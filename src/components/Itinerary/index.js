@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql, createFragmentContainer } from "@kiwicom/relay"
+import { graphql, createFragmentContainer } from "@adeira/relay"
 import {
   Button,
   Card,

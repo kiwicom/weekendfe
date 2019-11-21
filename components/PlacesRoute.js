@@ -5,7 +5,7 @@ import {
   ButtonLink,
   Button
 } from "@kiwicom/orbit-components"
-import { graphql, createFragmentContainer } from "@kiwicom/relay"
+import { graphql, createFragmentContainer } from "@adeira/relay"
 import { Share, Kiwicom } from "@kiwicom/orbit-components/lib/icons"
 import { StyledCardSectionContent } from "@kiwicom/orbit-components/lib/Card/CardSection/CardSectionContent"
 import styled, { css } from "styled-components"

@@ -3,10 +3,8 @@
  */
 
 /* eslint-disable */
+// flowlint untyped-type-import:off
 
-'use strict';
-
-/*::
 import type { ReaderFragment } from 'relay-runtime';
 type Map_places$ref = any;
 type PlaceCard_places$ref = any;
@@ -27,10 +25,9 @@ export type PlacesRoute_item$key = {
   +$data?: PlacesRoute_item$data,
   +$fragmentRefs: PlacesRoute_item$ref,
 };
-*/
 
 
-const node/*: ReaderFragment*/ = {
+const node: ReaderFragment = {
   "kind": "Fragment",
   "name": "PlacesRoute_item",
   "type": "Item",
@@ -79,5 +76,5 @@ const node/*: ReaderFragment*/ = {
   ]
 };
 // prettier-ignore
-(node/*: any*/).hash = 'fb83e35053ae45986d48a33fd7d54390';
-module.exports = node;
+(node: any).hash = 'fb83e35053ae45986d48a33fd7d54390';
+export default node;

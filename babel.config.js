@@ -16,7 +16,7 @@ module.exports = function(api /*: ApiType */) {
   api.cache.forever()
 
   return {
-    presets: ["next/babel"],
+    presets: ["next/babel", "@babel/preset-flow"],
     plugins: [
       [
         "styled-components",

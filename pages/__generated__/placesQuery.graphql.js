@@ -1,13 +1,11 @@
 /**
  * @flow
- * @relayHash c86175bdb5fd45855cd5d2b25ecdf8bb
+ * @relayHash 5e49202468cca61dc046708410065834
  */
 
 /* eslint-disable */
+// flowlint untyped-type-import:off
 
-'use strict';
-
-/*::
 import type { ConcreteRequest } from 'relay-runtime';
 type PlacesRoute_item$ref = any;
 export type placesQueryVariables = {|
@@ -23,8 +21,6 @@ export type placesQuery = {|
   variables: placesQueryVariables,
   response: placesQueryResponse,
 |};
-*/
-
 
 /*
 query placesQuery(
@@ -33,16 +29,6 @@ query placesQuery(
 ) {
   item(interest: $interest, bookingToken: $bookingToken) {
     ...PlacesRoute_item
-  }
-}
-
-fragment PlacesRoute_item on Item {
-  route {
-    ...Map_places
-    ...PlaceCard_places
-    destination {
-      city
-    }
   }
 }
 
@@ -66,9 +52,19 @@ fragment PlaceCard_places on Route {
     id
   }
 }
+
+fragment PlacesRoute_item on Item {
+  route {
+    ...Map_places
+    ...PlaceCard_places
+    destination {
+      city
+    }
+  }
+}
 */
 
-const node/*: ConcreteRequest*/ = (function(){
+const node: ConcreteRequest = (function(){
 var v0 = [
   {
     "kind": "LocalArgument",
@@ -244,11 +240,11 @@ return {
     "operationKind": "query",
     "name": "placesQuery",
     "id": null,
-    "text": "query placesQuery(\n  $interest: String!\n  $bookingToken: String!\n) {\n  item(interest: $interest, bookingToken: $bookingToken) {\n    ...PlacesRoute_item\n  }\n}\n\nfragment PlacesRoute_item on Item {\n  route {\n    ...Map_places\n    ...PlaceCard_places\n    destination {\n      city\n    }\n  }\n}\n\nfragment Map_places on Route {\n  interests {\n    name\n    coords {\n      lat\n      lon\n    }\n    img\n    score\n    id\n  }\n}\n\nfragment PlaceCard_places on Route {\n  interests {\n    name\n    address\n    id\n  }\n}\n",
+    "text": "query placesQuery(\n  $interest: String!\n  $bookingToken: String!\n) {\n  item(interest: $interest, bookingToken: $bookingToken) {\n    ...PlacesRoute_item\n  }\n}\n\nfragment Map_places on Route {\n  interests {\n    name\n    coords {\n      lat\n      lon\n    }\n    img\n    score\n    id\n  }\n}\n\nfragment PlaceCard_places on Route {\n  interests {\n    name\n    address\n    id\n  }\n}\n\nfragment PlacesRoute_item on Item {\n  route {\n    ...Map_places\n    ...PlaceCard_places\n    destination {\n      city\n    }\n  }\n}\n",
     "metadata": {}
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '966ac9de0fd146558d249baa1f21d232';
-module.exports = node;
+(node: any).hash = '966ac9de0fd146558d249baa1f21d232';
+export default node;
