@@ -40,19 +40,20 @@ const nextConfig = {
   // assetPrefix: debug ? "" : `/${repoName}/`,
 
   webpack: (config /* : any */) => {
-    const originalEntry = config.entry;
+    // https://github.com/zeit/next.js/issues/8617
+    const originalEntry = config.entry
     config.entry = async () => {
-      const entries = await originalEntry();
+      const entries = await originalEntry()
 
-      const keys = Object.keys(entries);
+      const keys = Object.keys(entries)
       keys.forEach(key => {
-        if (key.includes('/__generated__/')) {
-          delete entries[key];
+        if (key.includes("/__generated__/")) {
+          delete entries[key] // eslint-disable-line fp/no-delete
         }
-      });
+      })
 
-      return entries;
-    };
+      return entries
+    }
 
     config.plugins = [
       ...(config.plugins || []),
@@ -61,11 +62,14 @@ const nextConfig = {
       })
     ]
 
-    config.resolve.alias["components"] = path.join(__dirname, "components")
-    config.resolve.alias["src"] = path.join(__dirname, "src")
+    config.resolve.alias.components = path.join(
+      __dirname,
+      "components"
+    )
+    config.resolve.alias.src = path.join(__dirname, "src")
 
-    return config;
-  },
+    return config
+  }
 }
 
 module.exports = withBundleAnalyzer(nextConfig)
