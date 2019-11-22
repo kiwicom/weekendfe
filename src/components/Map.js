@@ -32,7 +32,7 @@ const StyledMarker = styled.div`
   border-radius: ${({ theme }) => theme.orbit.borderRadiusNormal};
   cursor: pointer;
   position: relative;
-  box-shadow: ${({ theme }) => theme.orbit.boxShadowElevatedLevel1};
+  box-shadow: ${({ theme }) => theme.orbit.boxShadowRaised};
 
   :after {
     content: " ";
@@ -91,7 +91,7 @@ function Map({ places }) {
 
   useEffect(() => {
     if (!mapObject) {
-      return null
+      return
     }
 
     const markers = places.interests.map(place => {
@@ -128,6 +128,7 @@ function Map({ places }) {
       padding: { top: 100, bottom: 100, left: 100, right: 100 }
     })
 
+    // eslint-disable-next-line consistent-return
     return () => {
       markers.forEach(marker => {
         marker.remove()

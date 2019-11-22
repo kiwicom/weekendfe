@@ -1,15 +1,14 @@
-import React, { useState, useCallback } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
-import {
-  ButtonLink,
-  Popover,
-  Stepper as OrbitStepper
-} from "@kiwicom/orbit-components"
-import {
-  Passengers,
-  ChevronUp,
-  ChevronDown
-} from "@kiwicom/orbit-components/lib/icons"
+import ButtonLink from "@kiwicom/orbit-components/lib/ButtonLink"
+import Popover from "@kiwicom/orbit-components/lib/Popover"
+import StepperStateless from "@kiwicom/orbit-components/lib/Stepper/StepperStateless"
+import Passengers from "@kiwicom/orbit-components/lib/icons/Passengers"
+import ChevronUp from "@kiwicom/orbit-components/lib/icons/ChevronUp"
+import ChevronDown from "@kiwicom/orbit-components/lib/icons/ChevronDown"
+import validateIncrement from "@kiwicom/orbit-components/lib/utils/validateIncrement"
+import validateDecrement from "@kiwicom/orbit-components/lib/utils/validateDecrement"
+import defaultTheme from "@kiwicom/orbit-components/lib/defaultTheme"
 
 const StyledStepper = styled.div`
   display: flex;
@@ -18,34 +17,74 @@ const StyledStepper = styled.div`
   position: relative;
 `
 
-const Stepper = ({
-  defaultValue = 1,
-  min = 1,
-  max = 9,
-  onChange
-}) => {
-  const value = Number(defaultValue)
-  const [count, setCount] = useState(value)
+const StyledStepperWrapper = styled.div`
+  padding: ${({ theme }) =>
+    `${theme.orbit.spaceXSmall} ${theme.orbit.spaceXXSmall}`};
+`
+
+StyledStepperWrapper.defaultProps = {
+  theme: defaultTheme
+}
+
+const Stepper = ({ onChange, defaultValue = 0, ...props }) => {
+  const [value, setValue] = useState(defaultValue)
   const [isOpen, setOpen] = useState(false)
 
-  const handleChange = useCallback(
-    newValue => {
-      if (onChange) onChange(newValue)
-      setCount(newValue)
-    },
-    [onChange]
-  )
+  const incrementCounter = () => {
+    const { maxValue = Number.POSITIVE_INFINITY, step = 1 } = props
 
+    setValue(validateIncrement({ value, maxValue, step }))
+  }
+
+  const decrementCounter = () => {
+    const { minValue = Number.NEGATIVE_INFINITY, step = 1 } = props
+
+    setValue(validateDecrement({ value, minValue, step }))
+  }
+
+  const handleKeyDown = ev => {
+    if (ev.keyCode === 40) {
+      ev.preventDefault()
+      decrementCounter()
+    }
+    if (ev.keyCode === 38) {
+      ev.preventDefault()
+      incrementCounter()
+    }
+  }
+
+  const {
+    onBlur,
+    onFocus,
+    disabled,
+    name,
+    dataTest,
+    minValue,
+    maxValue,
+    titleIncrement,
+    titleDecrement
+  } = props
   return (
     <StyledStepper>
       <Popover
         content={
-          <OrbitStepper
-            defaultValue={value}
-            minValue={min}
-            maxValue={max}
-            onChange={handleChange}
-          />
+          <StyledStepperWrapper>
+            <StepperStateless
+              disabled={disabled}
+              dataTest={dataTest}
+              value={value}
+              name={name}
+              minValue={minValue}
+              maxValue={maxValue}
+              onKeyDown={handleKeyDown}
+              onBlur={onBlur}
+              onFocus={onFocus}
+              onIncrement={incrementCounter}
+              onDecrement={decrementCounter}
+              titleIncrement={titleIncrement}
+              titleDecrement={titleDecrement}
+            />
+          </StyledStepperWrapper>
         }
         onClose={() => setOpen(false)}
         onOpen={() => setOpen(true)}
@@ -56,7 +95,7 @@ const Stepper = ({
           iconLeft={<Passengers />}
           iconRight={isOpen ? <ChevronDown /> : <ChevronUp />}
         >
-          {count} {count <= 1 ? "adult" : "adults"}
+          {value} {value <= 1 ? "adult" : "adults"}
         </ButtonLink>
       </Popover>
     </StyledStepper>
