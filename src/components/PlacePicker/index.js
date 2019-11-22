@@ -9,7 +9,7 @@ import {
 import Downshift from "downshift"
 import { Close } from "@kiwicom/orbit-components/lib/icons"
 
-import { weekendapiEnvironment } from "../../../lib/enviroment"
+import { weekendapiEnvironment } from "../../services/enviroment"
 import useDebounce from "../../services/useDebounce"
 import Results from "./DataList"
 import PlacePickerInput from "./PlacePickerInput"

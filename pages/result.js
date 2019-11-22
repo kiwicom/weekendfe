@@ -10,7 +10,7 @@ import {
 import { ChevronLeft } from "@kiwicom/orbit-components/lib/icons"
 import Router from "next/router"
 
-import { weekendapiEnvironment } from "../lib/enviroment"
+import { weekendapiEnvironment } from "../src/services/enviroment"
 import Debug from "../src/components/debug"
 import ContentContainer from "../src/components/ContentContainer"
 import Footer from "../src/components/Footer"

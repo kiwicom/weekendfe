@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { graphql, QueryRenderer } from "@adeira/relay"
 import { Loading } from "@kiwicom/orbit-components"
 
-import { weekendapiEnvironment } from "../lib/enviroment"
+import { weekendapiEnvironment } from "../src/services/enviroment"
 import MapLoading from "../src/components/MapLoading"
 import ErrorModal from "../src/components/ErrorModal"
 import PlacesRoute from "../components/PlacesRoute"
