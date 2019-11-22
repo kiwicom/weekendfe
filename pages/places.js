@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { graphql, QueryRenderer } from "@kiwicom/relay"
+import { Loading } from "@kiwicom/orbit-components"
 
 import { weekendapiEnvironment } from "../lib/enviroment"
 import MapLoading from "../src/components/MapLoading"
@@ -10,6 +11,9 @@ const PlacesPage = ({ query }) => {
   const [cityIndex, setCityIndex] = useState(0)
 
   const [isVisibleShareModal, setVisibleShareModal] = useState(false)
+
+  if (!query.bookingToken)
+    return <Loading type="pageLoader" text="Loading results" />
 
   return (
     <QueryRenderer
