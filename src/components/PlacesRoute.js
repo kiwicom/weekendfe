@@ -12,12 +12,12 @@ import styled, { css } from "styled-components"
 import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"
 import dynamic from "next/dynamic"
 
-import PlaceCard from "../src/components/PlaceCard"
-import Footer from "../src/components/Footer"
-import ShareModal from "../src/components/ShareModal"
-import NavBar from "../src/components/NavBar"
-import Timeline from "../src/components/Timeline"
-import MapLoading from "../src/components/MapLoading"
+import PlaceCard from "./PlaceCard"
+import Footer from "./Footer"
+import ShareModal from "./ShareModal"
+import NavBar from "./NavBar"
+import Timeline from "./Timeline"
+import MapLoading from "./MapLoading"
 
 const Places = styled.div`
   display: block;
@@ -40,7 +40,7 @@ const Places = styled.div`
   `)}
 `
 
-const Map = dynamic(() => import("../src/components/Map"), {
+const Map = dynamic(() => import("./Map"), {
   loading: () => <MapLoading text="Loading..." />,
   ssr: false
 })

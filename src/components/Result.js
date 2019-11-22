@@ -6,7 +6,7 @@ import {
   Button,
   Heading,
   Loading,
-  Stack,
+  Stack
 } from "@kiwicom/orbit-components"
 import { ChevronLeft } from "@kiwicom/orbit-components/lib/icons"
 
