@@ -1,0 +1,36 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/mapbox-gl/*
+<PROJECT_ROOT>/node_modules/@mapbox
+
+[include]
+
+[libs]
+<PROJECT_ROOT>/flow-typed
+
+[lints]
+; make sure to turn on at least "untyped-type-import"
+all=error
+implicit-inexact-object=off
+dynamic-export=off
+non-array-spread=off
+sketchy-null-bool=off
+unclear-type=off
+untyped-import=warn
+
+[strict]
+implicit-inexact-object
+sketchy-null-bool
+unclear-type
+untyped-import
+
+[options]
+emoji=true
+include_warnings=true
+module.ignore_non_literal_requires=true
+esproposal.optional_chaining=enable
+esproposal.nullish_coalescing=enable
+
+suppress_comment=\\(.\\|\n\\)*\\$FlowExpectedError: .+
+suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe: .+
+suppress_comment=\\(.\\|\n\\)*\\$FlowIssue: https://github.com/facebook/flow/issues/[0-9]+
+

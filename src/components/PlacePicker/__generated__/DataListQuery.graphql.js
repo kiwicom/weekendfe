@@ -4,10 +4,8 @@
  */
 
 /* eslint-disable */
+// flowlint untyped-type-import:off
 
-'use strict';
-
-/*::
 import type { ConcreteRequest } from 'relay-runtime';
 export type DataListQueryVariables = {|
   query: string
@@ -23,8 +21,6 @@ export type DataListQuery = {|
   variables: DataListQueryVariables,
   response: DataListQueryResponse,
 |};
-*/
-
 
 /*
 query DataListQuery(
@@ -38,7 +34,7 @@ query DataListQuery(
 }
 */
 
-const node/*: ConcreteRequest*/ = (function(){
+const node: ConcreteRequest = (function(){
 var v0 = [
   {
     "kind": "LocalArgument",
@@ -118,5 +114,5 @@ return {
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = 'ba45049accfc93b194e79b1b70b2d311';
-module.exports = node;
+(node: any).hash = 'ba45049accfc93b194e79b1b70b2d311';
+export default node;

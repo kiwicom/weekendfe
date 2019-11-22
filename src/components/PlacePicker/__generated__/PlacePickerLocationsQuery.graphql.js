@@ -4,10 +4,8 @@
  */
 
 /* eslint-disable */
+// flowlint untyped-type-import:off
 
-'use strict';
-
-/*::
 import type { ConcreteRequest } from 'relay-runtime';
 type PlacePickerInput_place$ref = any;
 export type PlacePickerLocationsQueryVariables = {|
@@ -22,8 +20,6 @@ export type PlacePickerLocationsQuery = {|
   variables: PlacePickerLocationsQueryVariables,
   response: PlacePickerLocationsQueryResponse,
 |};
-*/
-
 
 /*
 query PlacePickerLocationsQuery(
@@ -40,7 +36,7 @@ fragment PlacePickerInput_place on Place {
 }
 */
 
-const node/*: ConcreteRequest*/ = (function(){
+const node: ConcreteRequest = (function(){
 var v0 = [
   {
     "kind": "LocalArgument",
@@ -125,5 +121,5 @@ return {
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = 'c23d6fc879bc3b7556893add02654256';
-module.exports = node;
+(node: any).hash = 'c23d6fc879bc3b7556893add02654256';
+export default node;

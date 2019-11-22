@@ -11,6 +11,7 @@
     "export": "next export",
     "schema": "adeira-fetch-schema --resource=https://weekend-api.now.sh/",
     "lint": "eslint src pages",
+    "flow": "flow",
     "relay": "adeira-relay-compiler --src ./ --schema schema.graphql",
     "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages",
     "analyze": "BUNDLE_ANALYZE=both next build",
@@ -58,6 +59,7 @@
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.3.0",
     "eslint-plugin-relay": "^1.4.1",
+    "flow-bin": "^0.112.0",
     "graphql": "^14.5.8",
     "prettier": "^1.19.1",
     "webpack": "^4.41.2"
