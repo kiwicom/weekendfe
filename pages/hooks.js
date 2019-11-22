@@ -33,15 +33,14 @@ const Hooks = () => {
         <Context />
         <Separator />
         <Text weight="bold" size="large">
-          useEffect
-        </Text>
-        <Effect />
-        <Separator />
-        <Text weight="bold" size="large">
           useReducer
         </Text>
         <Reducer />
         <Separator />
+        <Text weight="bold" size="large">
+          useEffect
+        </Text>
+        <Effect />
       </Stack>
     </Wrapper>
   )
