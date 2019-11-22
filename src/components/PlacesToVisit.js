@@ -98,6 +98,7 @@ const logReducer = (fn, logger) =>
 
 const PlacesToVisit = ({
   defaultValue = [["Mexico", defaultDays]],
+  // eslint-disable-next-line no-console
   onChange = state => console.log("new places to visit", state),
   onSearchClick,
   showDebug = false
