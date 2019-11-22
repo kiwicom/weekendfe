@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import * as React from "react"
 import { graphql, QueryRenderer } from "@adeira/relay"
 import styled from "styled-components"
 import {
@@ -23,8 +23,8 @@ const PlacePicker = ({
   label = "Via",
   onChange = () => {}
 }) => {
-  const [value, setValue] = useState(defaultValue)
-  const [changed, setChanged] = useState(false)
+  const [value, setValue] = React.useState(defaultValue)
+  const [changed, setChanged] = React.useState(false)
   const debouncedValue = useDebounce(value, 150)
 
   const handleStateChange = ({ inputValue }) => {

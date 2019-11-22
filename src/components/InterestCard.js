@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import styled, { css } from "styled-components"
 import { Stack, Hide, Text, Radio } from "@kiwicom/orbit-components/"
 import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"

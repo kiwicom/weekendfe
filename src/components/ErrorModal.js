@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { Alert, Modal, Portal } from "@kiwicom/orbit-components"
 import ModalSection from "@kiwicom/orbit-components/lib/Modal/ModalSection"
 

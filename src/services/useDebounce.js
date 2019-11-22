@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react"
+// @flow
+
+import * as React from "react"
 
 const useDebounce = (value, delay) => {
-  const [debouncedValue, setDebouncedValue] = useState(value)
+  const [debouncedValue, setDebouncedValue] = React.useState(value)
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handler = setTimeout(() => {
       setDebouncedValue(value)
     }, delay)

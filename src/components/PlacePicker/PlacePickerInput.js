@@ -1,5 +1,5 @@
 import { InputField, ButtonLink } from "@kiwicom/orbit-components"
-import React from "react"
+import * as React from "react"
 import { graphql, createFragmentContainer } from "@adeira/relay"
 import { Close } from "@kiwicom/orbit-components/lib/icons"
 

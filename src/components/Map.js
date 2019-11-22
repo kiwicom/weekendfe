@@ -1,5 +1,5 @@
 import mapboxgl from "mapbox-gl/dist/mapbox-gl"
-import React, { useEffect, useRef, useState } from "react"
+import * as React from "react"
 import ReactDOM from "react-dom"
 import { graphql, createFragmentContainer } from "@adeira/relay"
 import styled, { ThemeProvider } from "styled-components"
@@ -77,10 +77,10 @@ const StyledText = styled.div`
 `
 
 function Map({ places }) {
-  const mapRef = useRef(null)
-  const [mapObject, setMapObject] = useState()
+  const mapRef = React.useRef(null)
+  const [mapObject, setMapObject] = React.useState()
 
-  useEffect(() => {
+  React.useEffect(() => {
     setMapObject(
       new mapboxgl.Map({
         container: mapRef.current,
@@ -89,7 +89,7 @@ function Map({ places }) {
     )
   }, [])
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (!mapObject) {
       return
     }
