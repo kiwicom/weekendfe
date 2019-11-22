@@ -32,7 +32,7 @@ const PlaceToVisit = ({
   }
 
   // Create a ref that we add to the element for which we want to detect outside clicks
-  const ref = useRef()
+  const ref = useRef(null)
   // State for our slider
   const [isOpenSlider, setSliderVisibility] = useState(false)
   // Call hook passing in the ref and a function to call on outside click
@@ -44,11 +44,11 @@ const PlaceToVisit = ({
         onChange={changePlace}
       />
       <Slider
-        openRef={ref}
         isOpen={isOpenSlider}
         onFocus={() => setSliderVisibility(true)}
-        defaultValues={tripDays}
-        onChange={(from, to) => setDays([from, to])}
+        onBlur={() => setSliderVisibility(false)}
+        value={tripDays}
+        onChange={val => setDays(val)}
       />
       <Button
         type="secondary"
@@ -103,10 +103,7 @@ const PlacesToVisit = ({
   showDebug = false
 }) => {
   const loggReducer = logReducer(reducer, onChange)
-  const [places, dispatch] = useReducer(loggReducer, defaultValue, {
-    type: "reset",
-    payload: defaultValue
-  })
+  const [places, dispatch] = useReducer(loggReducer, defaultValue)
   const action = (type, payload) => dispatch({ type, payload })
   const removePlace = index => () => action("removePlace", { index })
   const changeDays = index => days =>
@@ -136,7 +133,7 @@ const PlacesToVisit = ({
           <Button
             type="secondary"
             iconLeft={<Plus />}
-            block
+            fullWidth
             disabled={!places[places.length - 1][0]}
             onClick={() => action("addPlace")}
           >
@@ -144,7 +141,7 @@ const PlacesToVisit = ({
           </Button>
           <Button
             iconLeft={<Search />}
-            block
+            fullWidth
             disabled={typeof onSearchClick !== "function"}
             onClick={() => onSearchClick(places)}
           >

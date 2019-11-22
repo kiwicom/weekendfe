@@ -1,4 +1,5 @@
 /* eslint-disable no-param-reassign */
+/* eslint-disable import/no-extraneous-dependencies */
 const webpack = require("webpack")
 const withBundleAnalyzer = require("@zeit/next-bundle-analyzer")
 const dotenv = require("dotenv")

@@ -18,7 +18,7 @@ const StyledPlaceCard = styled.div`
   border-radius: ${({ theme }) => theme.orbit.borderRadiusNormal};
   border-bottom: 1px solid
     ${({ theme }) => theme.orbit.paletteCloudLight};
-  box-shadow: ${({ theme }) => theme.orbit.boxShadowActionable};
+  box-shadow: ${({ theme }) => theme.orbit.boxShadowAction};
   border-radius: ${({ theme }) => theme.orbit.borderRadiusNormal};
 
   ${Label} {

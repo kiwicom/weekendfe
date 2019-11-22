@@ -59,7 +59,7 @@ const StyledDatePicker = styled.div`
   padding: 24px;
   border-radius: ${({ theme }) => theme.orbit.borderRadiusNormal};
   overflow: hidden;
-  box-shadow: ${({ theme }) => theme.orbit.boxShadowElevatedLevel1};
+  box-shadow: ${({ theme }) => theme.orbit.boxShadowRaised};
   right: 0;
 
   ${mq.largeMobile(css`
@@ -203,7 +203,7 @@ const DatePicker = ({
                             calendar.year
                           }${weekIndex}${index}`
                           if (!dateObj) {
-                            return <StyledDay key={key} />
+                            return <StyledDay key={key} disabled />
                           }
                           const {
                             date,

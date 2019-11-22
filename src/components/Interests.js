@@ -1,4 +1,4 @@
-import React, { useCallback } from "react"
+import React  from "react"
 import {
   Cocktail,
   Meal,
@@ -30,12 +30,9 @@ export default function Interests({ defaultValue }) {
     setInterest(e.target.value)
   }
 
-  const handleOnClick = useCallback(
-    value => {
-      setInterest(value)
-    },
-    [setInterest]
-  )
+  const handleOnClick = value => {
+    setInterest(value)
+  }
 
   return (
     <Stack

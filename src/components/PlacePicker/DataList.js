@@ -19,7 +19,7 @@ const StyledResults = styled.div`
   border-radius: ${({ theme }) => theme.orbit.borderRadiusNormal};
   overflow-x: hidden;
   overflow-y: auto;
-  box-shadow: ${({ theme }) => theme.orbit.boxShadowElevatedLevel1};
+  box-shadow: ${({ theme }) => theme.orbit.boxShadowRaised};
 `
 
 const renderQueryRendererResponse = ({

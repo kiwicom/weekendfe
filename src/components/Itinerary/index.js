@@ -50,7 +50,7 @@ const Itinerary = ({ flights, interest }) => (
                       {flight.price} €
                     </Text>
                   </Stack>
-                  <Stack direction="column" shrink>
+                  <Stack direction="column" shrink basis="70%">
                     {routes.map((route, key) => (
                       // eslint-disable-next-line
 												<Route flight={route} key={key} nights={getNights(routes, route, key)} />
