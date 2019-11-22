@@ -11,7 +11,7 @@ import getConfig from "next/config"
 import RatingStars from "./RatingStars"
 
 const {
-  publicRuntimeConfig: { mapToken }
+  env: { mapToken }
 } = getConfig()
 
 mapboxgl.accessToken = mapToken || ""
