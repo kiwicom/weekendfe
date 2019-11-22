@@ -41,7 +41,12 @@ const Autocomplete = ({ search }: Props) => {
               return null
             }
 
-            return <AutocompleteItem location={location} />
+            return (
+              <AutocompleteItem
+                key={location.id}
+                location={location}
+              />
+            )
           })
         }}
       />

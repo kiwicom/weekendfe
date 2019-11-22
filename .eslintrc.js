@@ -15,7 +15,7 @@ module.exports = {
     "prettier",
     "prettier/react",
     "plugin:fp/recommended",
-    "plugin:relay/recommended"
+    "plugin:relay/strict"
   ],
   globals: {
     BASE_URL: true
