@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash cdd050933865c449c0306a7600b7890a
+ * @relayHash d8e2a23a76132a47679c9829681a9213
  */
 
 /* eslint-disable */
@@ -25,19 +25,19 @@ export type Stopover = {|
   nightsFrom?: ?number,
   nightsTo?: ?number,
 |};
-export type resultQueryVariables = {|
+export type ResultQueryVariables = {|
   params: SearchParams
 |};
-export type resultQueryResponse = {|
+export type ResultQueryResponse = {|
   +$fragmentRefs: Itinerary_flights$ref
 |};
-export type resultQuery = {|
-  variables: resultQueryVariables,
-  response: resultQueryResponse,
+export type ResultQuery = {|
+  variables: ResultQueryVariables,
+  response: ResultQueryResponse,
 |};
 
 /*
-query resultQuery(
+query ResultQuery(
   $params: SearchParams!
 ) {
   ...Itinerary_flights_35PWgj
@@ -119,7 +119,7 @@ return {
   "kind": "Request",
   "fragment": {
     "kind": "Fragment",
-    "name": "resultQuery",
+    "name": "ResultQuery",
     "type": "Query",
     "metadata": null,
     "argumentDefinitions": (v0/*: any*/),
@@ -133,7 +133,7 @@ return {
   },
   "operation": {
     "kind": "Operation",
-    "name": "resultQuery",
+    "name": "ResultQuery",
     "argumentDefinitions": (v0/*: any*/),
     "selections": [
       {
@@ -214,13 +214,13 @@ return {
   },
   "params": {
     "operationKind": "query",
-    "name": "resultQuery",
+    "name": "ResultQuery",
     "id": null,
-    "text": "query resultQuery(\n  $params: SearchParams!\n) {\n  ...Itinerary_flights_35PWgj\n}\n\nfragment Itinerary_flights_35PWgj on Query {\n  search(params: $params) {\n    price\n    bookingToken\n    route {\n      ...Route_flight\n      from {\n        timeLocal\n      }\n      to {\n        timeLocal\n      }\n    }\n  }\n}\n\nfragment Route_flight on Route {\n  from {\n    city\n    iata\n    timeLocal\n  }\n  to {\n    city\n    iata\n    timeLocal\n  }\n  parts {\n    carrier\n  }\n}\n",
+    "text": "query ResultQuery(\n  $params: SearchParams!\n) {\n  ...Itinerary_flights_35PWgj\n}\n\nfragment Itinerary_flights_35PWgj on Query {\n  search(params: $params) {\n    price\n    bookingToken\n    route {\n      ...Route_flight\n      from {\n        timeLocal\n      }\n      to {\n        timeLocal\n      }\n    }\n  }\n}\n\nfragment Route_flight on Route {\n  from {\n    city\n    iata\n    timeLocal\n  }\n  to {\n    city\n    iata\n    timeLocal\n  }\n  parts {\n    carrier\n  }\n}\n",
     "metadata": {}
   }
 };
 })();
 // prettier-ignore
-(node: any).hash = 'f930ed9a8dc75ac7ca068ed0708b0965';
+(node: any).hash = '751a2677096a92b665affb6dacbee99b';
 export default node;

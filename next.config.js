@@ -11,8 +11,8 @@ const env = name => process.env[name] || ""
 const debug = process.env.NODE_ENV !== "production"
 
 const nextConfig = {
-  publicRuntimeConfig: {
-    mapToken: env("MAP_TOKEN") // Pass through env variables
+  env: {
+    mapToken: env("MAP_TOKEN"),
   },
   analyzeServer: ["server", "both"].includes(
     process.env.BUNDLE_ANALYZE

@@ -1,5 +1,3 @@
-// @flow
-
 const getStopovers = placesInUrl => {
   if (!placesInUrl) return undefined
   const items = placesInUrl.split("-")

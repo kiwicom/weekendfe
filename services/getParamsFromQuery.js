@@ -1,5 +1,3 @@
-// @flow
-
 import { format, addDays } from "date-fns"
 
 import getStopovers from "./getStopovers"
