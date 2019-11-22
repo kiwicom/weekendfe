@@ -6,6 +6,15 @@
 
 See installation to your project: https://flow.org/en/docs/install/
 
+#### Examples
+
+- [basics](http://bit.ly/2KNJkKl) 
+- [react](http://bit.ly/2qttbmz)
+
+#### Flow lint
+
+https://flow.org/en/docs/linting/
+
 #### Run flow type check after changes:
 
 ```
