@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from "react"
-import { Alert, Stack, Tile } from "@kiwicom/orbit-components"
+import { Alert, Stack } from "@kiwicom/orbit-components"
 import { QueryRenderer, graphql } from "@adeira/relay"
 
 import { weekendapiEnvironment } from "../../services/enviroment"
@@ -9,6 +9,7 @@ import type {
   AutocompleteQueryResponse,
   AutocompleteQueryVariables
 } from "./__generated__/AutocompleteQuery.graphql"
+import AutocompleteItem from "./AutocompleteItem"
 
 type Props = {|
   search: string
@@ -18,8 +19,7 @@ const query = graphql`
   query AutocompleteQuery($query: String!) {
     locations(query: $query, limit: 5) {
       id
-      name
-      type
+      ...AutocompleteItem_location
     }
   }
 `
@@ -41,17 +41,7 @@ const Autocomplete = ({ search }: Props) => {
               return null
             }
 
-            return (
-              <Tile
-                key={location.id}
-                title={location.name}
-                description={
-                  location.type != null
-                    ? `Type: ${location.type}`
-                    : "Unkown type"
-                }
-              />
-            )
+            return <AutocompleteItem location={location} />
           })
         }}
       />
