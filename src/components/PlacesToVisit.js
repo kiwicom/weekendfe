@@ -1,4 +1,4 @@
-import React, { useState, useRef, useReducer } from "react"
+import * as React from "react"
 import { Heading, Stack, Button } from "@kiwicom/orbit-components"
 import {
   CloseCircle,
@@ -24,7 +24,7 @@ const PlaceToVisit = ({
   onRemoveClick
 }) => {
   // const [tripFrom, setFrom] = useState(place)
-  const [tripDays, setDaysState] = useState(days)
+  const [tripDays, setDaysState] = React.useState(days)
 
   const setDays = daysChanged => {
     setDaysState(daysChanged)
@@ -32,9 +32,9 @@ const PlaceToVisit = ({
   }
 
   // Create a ref that we add to the element for which we want to detect outside clicks
-  const ref = useRef(null)
+  const ref = React.useRef(null)
   // State for our slider
-  const [isOpenSlider, setSliderVisibility] = useState(false)
+  const [isOpenSlider, setSliderVisibility] = React.useState(false)
   // Call hook passing in the ref and a function to call on outside click
   useOnClickOutside(ref, () => setSliderVisibility(false))
   return (
@@ -104,7 +104,10 @@ const PlacesToVisit = ({
   showDebug = false
 }) => {
   const loggReducer = logReducer(reducer, onChange)
-  const [places, dispatch] = useReducer(loggReducer, defaultValue)
+  const [places, dispatch] = React.useReducer(
+    loggReducer,
+    defaultValue
+  )
   const action = (type, payload) => dispatch({ type, payload })
   const removePlace = index => () => action("removePlace", { index })
   const changeDays = index => days =>

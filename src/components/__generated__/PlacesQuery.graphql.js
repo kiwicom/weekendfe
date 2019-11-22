@@ -1,48 +1,34 @@
 /**
  * @flow
- * @relayHash c86175bdb5fd45855cd5d2b25ecdf8bb
+ * @relayHash a1fbf99354520e099a2e25b8c724411c
  */
 
 /* eslint-disable */
+// flowlint untyped-type-import:off
 
-'use strict';
-
-/*::
 import type { ConcreteRequest } from 'relay-runtime';
 type PlacesRoute_item$ref = any;
-export type placesQueryVariables = {|
+export type PlacesQueryVariables = {|
   interest: string,
   bookingToken: string,
 |};
-export type placesQueryResponse = {|
+export type PlacesQueryResponse = {|
   +item: ?{|
     +$fragmentRefs: PlacesRoute_item$ref
   |}
 |};
-export type placesQuery = {|
-  variables: placesQueryVariables,
-  response: placesQueryResponse,
+export type PlacesQuery = {|
+  variables: PlacesQueryVariables,
+  response: PlacesQueryResponse,
 |};
-*/
-
 
 /*
-query placesQuery(
+query PlacesQuery(
   $interest: String!
   $bookingToken: String!
 ) {
   item(interest: $interest, bookingToken: $bookingToken) {
     ...PlacesRoute_item
-  }
-}
-
-fragment PlacesRoute_item on Item {
-  route {
-    ...Map_places
-    ...PlaceCard_places
-    destination {
-      city
-    }
   }
 }
 
@@ -66,9 +52,19 @@ fragment PlaceCard_places on Route {
     id
   }
 }
+
+fragment PlacesRoute_item on Item {
+  route {
+    ...Map_places
+    ...PlaceCard_places
+    destination {
+      city
+    }
+  }
+}
 */
 
-const node/*: ConcreteRequest*/ = (function(){
+const node: ConcreteRequest = (function(){
 var v0 = [
   {
     "kind": "LocalArgument",
@@ -99,7 +95,7 @@ return {
   "kind": "Request",
   "fragment": {
     "kind": "Fragment",
-    "name": "placesQuery",
+    "name": "PlacesQuery",
     "type": "Query",
     "metadata": null,
     "argumentDefinitions": (v0/*: any*/),
@@ -124,7 +120,7 @@ return {
   },
   "operation": {
     "kind": "Operation",
-    "name": "placesQuery",
+    "name": "PlacesQuery",
     "argumentDefinitions": (v0/*: any*/),
     "selections": [
       {
@@ -242,13 +238,13 @@ return {
   },
   "params": {
     "operationKind": "query",
-    "name": "placesQuery",
+    "name": "PlacesQuery",
     "id": null,
-    "text": "query placesQuery(\n  $interest: String!\n  $bookingToken: String!\n) {\n  item(interest: $interest, bookingToken: $bookingToken) {\n    ...PlacesRoute_item\n  }\n}\n\nfragment PlacesRoute_item on Item {\n  route {\n    ...Map_places\n    ...PlaceCard_places\n    destination {\n      city\n    }\n  }\n}\n\nfragment Map_places on Route {\n  interests {\n    name\n    coords {\n      lat\n      lon\n    }\n    img\n    score\n    id\n  }\n}\n\nfragment PlaceCard_places on Route {\n  interests {\n    name\n    address\n    id\n  }\n}\n",
+    "text": "query PlacesQuery(\n  $interest: String!\n  $bookingToken: String!\n) {\n  item(interest: $interest, bookingToken: $bookingToken) {\n    ...PlacesRoute_item\n  }\n}\n\nfragment Map_places on Route {\n  interests {\n    name\n    coords {\n      lat\n      lon\n    }\n    img\n    score\n    id\n  }\n}\n\nfragment PlaceCard_places on Route {\n  interests {\n    name\n    address\n    id\n  }\n}\n\nfragment PlacesRoute_item on Item {\n  route {\n    ...Map_places\n    ...PlaceCard_places\n    destination {\n      city\n    }\n  }\n}\n",
     "metadata": {}
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '966ac9de0fd146558d249baa1f21d232';
-module.exports = node;
+(node: any).hash = 'bd405b121531b3e9af383e1ff90b7db7';
+export default node;

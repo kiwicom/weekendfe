@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql, QueryRenderer } from "@kiwicom/relay"
+import * as React from "react"
+import { graphql, QueryRenderer } from "@adeira/relay"
 import styled from "styled-components"
 import Loading from "@kiwicom/orbit-components/lib/Loading"
 
 import ListChoice from "./ListChoice"
-import { weekendapiEnvironment } from "../../../lib/enviroment"
+import { weekendapiEnvironment } from "../../services/enviroment"
 
 const StyledResults = styled.div`
   width: 100%;

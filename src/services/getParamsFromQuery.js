@@ -1,10 +1,8 @@
-// @flow
-
 import { format, addDays } from "date-fns"
 
 import getStopovers from "./getStopovers"
 
-const formatDate = date => format(date, "DD/MM/YYYY")
+const formatDate = date => format(date, "dd/MM/yyyy")
 
 const getParamsFromQuery = ({
   adults = 1,

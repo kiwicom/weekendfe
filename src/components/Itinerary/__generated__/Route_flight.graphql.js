@@ -3,10 +3,8 @@
  */
 
 /* eslint-disable */
+// flowlint untyped-type-import:off
 
-'use strict';
-
-/*::
 import type { ReaderFragment } from 'relay-runtime';
 import type { FragmentReference } from "relay-runtime";
 declare export opaque type Route_flight$ref: FragmentReference;
@@ -32,10 +30,9 @@ export type Route_flight$key = {
   +$data?: Route_flight$data,
   +$fragmentRefs: Route_flight$ref,
 };
-*/
 
 
-const node/*: ReaderFragment*/ = (function(){
+const node: ReaderFragment = (function(){
 var v0 = [
   {
     "kind": "ScalarField",
@@ -108,5 +105,5 @@ return {
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '3cebdf443597d3513853438caf85ce88';
-module.exports = node;
+(node: any).hash = '3cebdf443597d3513853438caf85ce88';
+export default node;

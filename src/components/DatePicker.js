@@ -139,7 +139,7 @@ const DatePicker = ({
       label={label}
       onFocus={onFocus}
       onBlur={onBlur}
-      value={format(currentDate, "MM/DD/YYYY")}
+      value={format(currentDate, "MM/dd/yyyy")}
       readOnly
     />
     {shown && (

@@ -1,5 +1,5 @@
 import * as React from "react"
-import App, { Container } from "next/app"
+import App from "next/app"
 import Head from "next/head"
 import { getTokens, ThemeProvider } from "@kiwicom/orbit-components"
 import { createGlobalStyle } from "styled-components"

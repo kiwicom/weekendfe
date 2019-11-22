@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import * as React from "react"
 import {
   Portal,
   Modal,
@@ -11,7 +11,7 @@ import ModalHeader from "@kiwicom/orbit-components/lib/Modal/ModalHeader"
 import { CopyToClipboard } from "react-copy-to-clipboard"
 
 const ShareModal = ({ onClose }) => {
-  const [copied, setCopied] = useState(false)
+  const [copied, setCopied] = React.useState(false)
 
   const path = window && window.location.href
 

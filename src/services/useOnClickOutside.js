@@ -1,8 +1,8 @@
-import { useEffect } from "react"
+import * as React from "react"
 
 // Hook
 export default function useOnClickOutside(ref, handler) {
-  useEffect(() => {
+  React.useEffect(() => {
     const listener = event => {
       // Do nothing if clicking ref's element or descendent elements
       if (!ref.current || ref.current.contains(event.target)) {
@@ -19,7 +19,6 @@ export default function useOnClickOutside(ref, handler) {
       document.removeEventListener("mousedown", listener)
       document.removeEventListener("touchstart", listener)
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     // Empty array ensures that effect is only run on mount and unmount
   }, [handler, ref])
 }

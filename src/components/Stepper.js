@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import * as React from "react"
 import styled from "styled-components"
 import ButtonLink from "@kiwicom/orbit-components/lib/ButtonLink"
 import Popover from "@kiwicom/orbit-components/lib/Popover"
@@ -27,8 +27,8 @@ StyledStepperWrapper.defaultProps = {
 }
 
 const Stepper = ({ onChange, defaultValue = 0, ...props }) => {
-  const [value, setValue] = useState(defaultValue)
-  const [isOpen, setOpen] = useState(false)
+  const [value, setValue] = React.useState(defaultValue)
+  const [isOpen, setOpen] = React.useState(false)
 
   const incrementCounter = () => {
     const { maxValue = Number.POSITIVE_INFINITY, step = 1 } = props

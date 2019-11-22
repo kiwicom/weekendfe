@@ -5,19 +5,19 @@ import {
   ButtonLink,
   Button
 } from "@kiwicom/orbit-components"
-import { graphql, createFragmentContainer } from "@kiwicom/relay"
+import { graphql, createFragmentContainer } from "@adeira/relay"
 import { Share, Kiwicom } from "@kiwicom/orbit-components/lib/icons"
 import { StyledCardSectionContent } from "@kiwicom/orbit-components/lib/Card/CardSection/CardSectionContent"
 import styled, { css } from "styled-components"
 import mq from "@kiwicom/orbit-components/lib/utils/mediaQuery"
 import dynamic from "next/dynamic"
 
-import PlaceCard from "../src/components/PlaceCard"
-import Footer from "../src/components/Footer"
-import ShareModal from "../src/components/ShareModal"
-import NavBar from "../src/components/NavBar"
-import Timeline from "../src/components/Timeline"
-import MapLoading from "../src/components/MapLoading"
+import PlaceCard from "./PlaceCard"
+import Footer from "./Footer"
+import ShareModal from "./ShareModal"
+import NavBar from "./NavBar"
+import Timeline from "./Timeline"
+import MapLoading from "./MapLoading"
 
 const Places = styled.div`
   display: block;
@@ -28,9 +28,7 @@ const Places = styled.div`
   max-height: 100%;
   overflow-x: auto;
   padding: ${({ theme }) =>
-    `${theme.orbit.spaceXXLarge} ${theme.orbit.spaceMedium} 90px ${
-      theme.orbit.spaceMedium
-    }`};
+    `${theme.orbit.spaceXXLarge} ${theme.orbit.spaceMedium} 90px ${theme.orbit.spaceMedium}`};
 
   ${StyledCardSectionContent} {
     margin: 0 -24px;
@@ -42,7 +40,7 @@ const Places = styled.div`
   `)}
 `
 
-const Map = dynamic(() => import("../src/components/Map"), {
+const Map = dynamic(() => import("./Map"), {
   loading: () => <MapLoading text="Loading..." />,
   ssr: false
 })
@@ -112,9 +110,7 @@ const PlacesRoute = ({
           rightActions={
             <Stack direction="row" justify="end" shrink>
               <Button
-                href={`https://www.kiwi.com/en/booking?token=${
-                  query.bookingToken
-                }`}
+                href={`https://www.kiwi.com/en/booking?token=${query.bookingToken}`}
                 external
                 iconLeft={<Kiwicom />}
               >

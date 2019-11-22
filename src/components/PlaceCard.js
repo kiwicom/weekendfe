@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql, createFragmentContainer } from "@kiwicom/relay"
+import { graphql, createFragmentContainer } from "@adeira/relay"
 import styled from "styled-components"
 import { Label } from "@kiwicom/orbit-components/lib/Checkbox"
 import { Text, Stack } from "@kiwicom/orbit-components"

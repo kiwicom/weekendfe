@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql, createFragmentContainer } from "@kiwicom/relay"
+import { graphql, createFragmentContainer } from "@adeira/relay"
 import styled, { ThemeProvider } from "styled-components"
 import {
   Stack,
@@ -80,7 +80,7 @@ const Route = ({ flight, nights }) => {
             <Stack direction="column" spacing="extraTight">
               <Text weight="bold">{`${departureTime} - ${departureArrival}`}</Text>
               <Text size="small">
-                {format(departureTimeLocal, "ddd D MMM")}
+                {format(departureTimeLocal, "eee d MMM")}
               </Text>
             </Stack>
           </Stack>

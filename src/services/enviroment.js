@@ -1,7 +1,7 @@
 import {
   createEnvironment,
   createNetworkFetcher
-} from "@kiwicom/relay"
+} from "@adeira/relay"
 
 export const weekendapiEnvironment = createEnvironment({
   fetchFn: createNetworkFetcher("https://weekend-api.now.sh/", {

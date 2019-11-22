@@ -1,8 +1,8 @@
-import { useState } from "react"
+import * as React from "react"
 import Router from "next/router"
 
 const useUrl = (defaultValue, paramName, serializer = val => val) => {
-  const [value, updater] = useState(defaultValue)
+  const [value, updater] = React.useState(defaultValue)
   const updaterWithUrl = newValue => {
     const newQuery = {
       ...Router.query,

@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import { graphql, QueryRenderer } from "@kiwicom/relay"
+import * as React from "react"
+import { graphql, QueryRenderer } from "@adeira/relay"
 import styled from "styled-components"
 import {
   Loading,
@@ -9,7 +9,7 @@ import {
 import Downshift from "downshift"
 import { Close } from "@kiwicom/orbit-components/lib/icons"
 
-import { weekendapiEnvironment } from "../../../lib/enviroment"
+import { weekendapiEnvironment } from "../../services/enviroment"
 import useDebounce from "../../services/useDebounce"
 import Results from "./DataList"
 import PlacePickerInput from "./PlacePickerInput"
@@ -23,8 +23,8 @@ const PlacePicker = ({
   label = "Via",
   onChange = () => {}
 }) => {
-  const [value, setValue] = useState(defaultValue)
-  const [changed, setChanged] = useState(false)
+  const [value, setValue] = React.useState(defaultValue)
+  const [changed, setChanged] = React.useState(false)
   const debouncedValue = useDebounce(value, 150)
 
   const handleStateChange = ({ inputValue }) => {
