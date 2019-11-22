@@ -28,9 +28,7 @@ const Places = styled.div`
   max-height: 100%;
   overflow-x: auto;
   padding: ${({ theme }) =>
-    `${theme.orbit.spaceXXLarge} ${theme.orbit.spaceMedium} 90px ${
-      theme.orbit.spaceMedium
-    }`};
+    `${theme.orbit.spaceXXLarge} ${theme.orbit.spaceMedium} 90px ${theme.orbit.spaceMedium}`};
 
   ${StyledCardSectionContent} {
     margin: 0 -24px;
@@ -112,9 +110,7 @@ const PlacesRoute = ({
           rightActions={
             <Stack direction="row" justify="end" shrink>
               <Button
-                href={`https://www.kiwi.com/en/booking?token=${
-                  query.bookingToken
-                }`}
+                href={`https://www.kiwi.com/en/booking?token=${query.bookingToken}`}
                 external
                 iconLeft={<Kiwicom />}
               >

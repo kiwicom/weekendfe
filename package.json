@@ -10,7 +10,7 @@
     "start": "next start",
     "export": "next export",
     "schema": "adeira-fetch-schema --resource=https://weekend-api.now.sh/",
-    "lint": "eslint src",
+    "lint": "eslint src pages",
     "relay": "adeira-relay-compiler --src ./ --schema schema.graphql",
     "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages",
     "analyze": "BUNDLE_ANALYZE=both next build",
