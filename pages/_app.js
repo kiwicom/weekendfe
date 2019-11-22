@@ -17,17 +17,15 @@ class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props
     return (
-      <Container>
-        <Head>
-          <title>JS Weekend</title>
-        </Head>
-        <ThemeProvider theme={{ orbit: getTokens() }}>
-          <>
-            <GlobalStyle />
-            <Component {...pageProps} />
-          </>
-        </ThemeProvider>
-      </Container>
+      <ThemeProvider theme={{ orbit: getTokens() }}>
+        <>
+          <Head>
+            <title>JS Weekend</title>
+          </Head>
+          <GlobalStyle />
+          <Component {...pageProps} />
+        </>
+      </ThemeProvider>
     )
   }
 }
