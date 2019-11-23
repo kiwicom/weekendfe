@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "schema": "adeira-fetch-schema --resource=https://weekend-api.now.sh/",
+    "schema": "adeira-fetch-schema --resource=https://graphql.kiwi.com/",
     "lint": "eslint src pages",
     "flow": "flow",
     "flow:mess": "flow check-contents src/components/BrokenFlow/BigMess.js < src/components/BrokenFlow/BigMess.js",
@@ -44,6 +44,7 @@
     "wait-on": "^3.3.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.7.4",
     "@babel/preset-flow": "^7.0.0",
     "@kiwicom/babel-plugin-orbit-components": "^1.3.0",
     "babel-eslint": "^10.0.3",
@@ -68,6 +69,8 @@
     "jest": "^24.9.0",
     "jest-date-mock": "^1.0.7",
     "jest-environment-jsdom-global": "^1.2.0",
+    "next-plugin-custom-babel-config": "^1.0.2",
+    "next-transpile-modules": "^2.3.1",
     "prettier": "^1.19.1",
     "webpack": "^4.41.2"
   },

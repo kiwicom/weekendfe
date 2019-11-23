@@ -1,75 +1,15 @@
-/* eslint-disable no-param-reassign */
-const path = require("path")
-/* eslint-disable import/no-extraneous-dependencies */
-const webpack = require("webpack")
-const withBundleAnalyzer = require("@zeit/next-bundle-analyzer")
-const dotenv = require("dotenv")
+// @noflow
 
-dotenv.config()
-const env = name => process.env[name] || ""
+const path = require('path');
+const withTranspileModules = require('next-transpile-modules');
+const withCustomBabelConfigFile = require('next-plugin-custom-babel-config');
 
-const debug = process.env.NODE_ENV !== "production"
-
-const nextConfig = {
-  env: {
-    mapToken: env("MAP_TOKEN"),
-  },
-  analyzeServer: ["server", "both"].includes(
-    process.env.BUNDLE_ANALYZE
-  ),
-  analyzeBrowser: ["browser", "both"].includes(
-    process.env.BUNDLE_ANALYZE
-  ),
-  bundleAnalyzerConfig: {
-    server: {
-      analyzerMode: "static",
-      reportFilename: "../bundles/server.html"
-    },
-    browser: {
-      analyzerMode: "static",
-      reportFilename: "../bundles/client.html"
-    }
-  },
-  // exportPathMap() {
-  //   return {
-  //     "/": { page: "/" },
-  //     "/places": { page: "places" },
-  //     "/result": { page: "result" }
-  //   }
-  // },
-  // assetPrefix: debug ? "" : `/${repoName}/`,
-
-  webpack: (config /* : any */) => {
-    // https://github.com/zeit/next.js/issues/8617
-    const originalEntry = config.entry
-    config.entry = async () => {
-      const entries = await originalEntry()
-
-      const keys = Object.keys(entries)
-      keys.forEach(key => {
-        if (key.includes("/__generated__/")) {
-          delete entries[key] // eslint-disable-line fp/no-delete
-        }
-      })
-
-      return entries
-    }
-
-    config.plugins = [
-      ...(config.plugins || []),
-      new webpack.DefinePlugin({
-        BASE_URL: debug ? "''" : "''" // `'/${repoName}/'`
-      })
-    ]
-
-    config.resolve.alias.components = path.join(
+module.exports = withCustomBabelConfigFile(
+  withTranspileModules({
+    babelConfigFile: path.join(
       __dirname,
-      "components"
-    )
-    config.resolve.alias.src = path.join(__dirname, "src")
-
-    return config
-  }
-}
-
-module.exports = withBundleAnalyzer(nextConfig)
+      'babel.config.js',
+    ),
+    transpileModules: ['@adeira'],
+  }),
+);
