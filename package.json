@@ -72,6 +72,7 @@
     "next-plugin-custom-babel-config": "^1.0.2",
     "next-transpile-modules": "^2.3.1",
     "prettier": "^1.19.1",
+    "relay-test-utils": "^7.1.0",
     "webpack": "^4.41.2"
   },
   "resolutions": {

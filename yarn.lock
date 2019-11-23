@@ -8693,6 +8693,15 @@ relay-runtime@7.1.0, relay-runtime@^7.1.0:
     "@babel/runtime" "^7.0.0"
     fbjs "^1.0.0"
 
+relay-test-utils@^7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/relay-test-utils/-/relay-test-utils-7.1.0.tgz#390583478ba676808ddc9c1a499f1a68e681c0d0"
+  integrity sha512-rt6ip3fjwegWlusaHaFBf23V42PyEsGHhstNZHHIg+JFKVT/DKeQOO70Oe4htFeCidaCvd0/hiDgVa6JksLJbw==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    fbjs "^1.0.0"
+    relay-runtime "7.1.0"
+
 remove-accents@0.4.2:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/remove-accents/-/remove-accents-0.4.2.tgz#0a43d3aaae1e80db919e07ae254b285d9e1c7bb5"
