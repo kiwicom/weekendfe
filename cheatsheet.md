@@ -1,4 +1,4 @@
-## Weekend - Flow + GraphQL
+## Weekend - Flow + Jest + GraphQL
 
 ```
 git fetch --all
@@ -39,6 +39,31 @@ yarn flow:mess
 ```
 
 -> fix reported errors in [BigMess.js](./src/components/BrokenFlow/BigMess.js)
+
+## Unit tests with jest
+
+- [jest](https://jestjs.io/docs/en/getting-started.html)
+- [enzyme](https://airbnb.io/enzyme/)
+- [jest-date-mock]() - sometimes you need more, this is just one of many libs for making unit tests with jest more friendly
+
+```
+yarn test
+yarn test --watch
+```
+
+> Note we had to install type definitions for enzyme, jest & jest-date-mock
+
+- Try to remove definitions for `jest-date-mock` and run `yarn flow`
+- you might try to install them again by `flow-typed install jest-date-mock`
+- oh no, you might get `No flow@v0.112.0-compatible libdefs found in flow-typed`
+- in such case you can generate stubs for it (`flow-typed create-stub jest-date-mock`)
+
+These enzyme functions might be useful:
+
+```
+wrapper.find(selector)
+wrapper.prop(propName)
+```
 
 ## GraphQL
 
