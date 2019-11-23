@@ -90,8 +90,20 @@ TODO mocking data, mocking date, mocking dom
 - [nexus](https://nexus.js.org/) to build server, especially if you prefer typescript
 - [dataloader](https://github.com/graphql/dataloader) core spice for efficient GraphQL server
 - [graphql-bc-checker](https://github.com/adeira/universe/tree/master/src/graphql-bc-checker) to detect breaking changes (check also https://github.com/graphql/graphql-js/blob/master/src/utilities/findBreakingChanges.js)
+- [Where art thou, my error?](http://artsy.github.io/blog/2018/10/19/where-art-thou-my-error/) how to handle errors in schema
 
 *Other*
 
+- [relay.dev](https://relay.dev/)
+- [@adeira/relay](https://www.npmjs.com/package/@adeira/relay)
 - [relay best practices](https://code.kiwi.com/relay-and-graphql-best-practices-b09ce1d6d7ea)
 - [Building Great User Experiences with Concurrent Mode and Suspense](https://reactjs.org/blog/2019/11/06/building-great-user-experiences-with-concurrent-mode-and-suspense.html) if you want to see future
+
+*Relay*
+
+- [relay docs](https://relay.dev/)
+- [Relay Modern Learning Blog Posts](https://twitter.com/sseraphini/status/1078595758801203202?s=20)
+
+*In case you use Apollo*
+
+- [Apollo Codegen](https://github.com/apollographql/apollo-tooling#apollo-clientcodegen-output)
