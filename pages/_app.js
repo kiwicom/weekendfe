@@ -1,8 +1,15 @@
+// @flow
+
 import * as React from "react"
 import App from "next/app"
 import Head from "next/head"
-import { getTokens, ThemeProvider } from "@kiwicom/orbit-components"
-import { createGlobalStyle } from "styled-components"
+import {
+  // $FlowFixMe: Orbit is broken
+  getTokens,
+  Stack,
+  ThemeProvider
+} from "@kiwicom/orbit-components"
+import styled, { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -11,6 +18,12 @@ const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
     background-color: ${({ theme }) => theme.orbit.paletteCloudLight};
   }
+`
+
+const Container = styled.div`
+  max-width: 800px;
+  padding-top: 80px;
+  position: relative;
 `
 
 class MyApp extends App {
@@ -23,7 +36,11 @@ class MyApp extends App {
             <title>JS Weekend</title>
           </Head>
           <GlobalStyle />
-          <Component {...pageProps} />
+          <Stack justify="center" align="center">
+            <Container>
+              <Component {...pageProps} />
+            </Container>
+          </Stack>
         </>
       </ThemeProvider>
     )

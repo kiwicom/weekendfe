@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 7f0e3dc0b2aa1165b6e8e16d465d512d
+ * @relayHash bc6006dbcebc5973cedca5116cfad5af
  */
 
 /* eslint-disable */
@@ -33,6 +33,7 @@ query AutocompleteQuery(
 }
 
 fragment AutocompleteItem_location on Location {
+  id
   name
   type
 }
@@ -131,7 +132,7 @@ return {
     "operationKind": "query",
     "name": "AutocompleteQuery",
     "id": null,
-    "text": "query AutocompleteQuery(\n  $query: String!\n) {\n  locations(query: $query, limit: 5) {\n    id\n    ...AutocompleteItem_location\n  }\n}\n\nfragment AutocompleteItem_location on Location {\n  name\n  type\n}\n",
+    "text": "query AutocompleteQuery(\n  $query: String!\n) {\n  locations(query: $query, limit: 5) {\n    id\n    ...AutocompleteItem_location\n  }\n}\n\nfragment AutocompleteItem_location on Location {\n  id\n  name\n  type\n}\n",
     "metadata": {}
   }
 };
