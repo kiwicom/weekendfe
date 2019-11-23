@@ -1,6 +1,7 @@
 {
   "env": {
-    "browser": true
+    "browser": true,
+    "jest": true,
   },
   "parser": "babel-eslint",
   "extends": [
@@ -13,12 +14,22 @@
   "globals": {
     "BASE_URL": true
   },
-  "plugins": ["relay", "prettier", "fp", "react-hooks"],
+  "plugins": [
+    "relay",
+    "prettier",
+    "fp",
+    "react-hooks"
+  ],
   "rules": {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [
       "error",
-      { "extensions": [".js", ".jsx"] }
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
     ],
     "import/extensions": "error",
     "import/no-unresolved": "error",
@@ -28,8 +39,16 @@
       "error",
       {
         "groups": [
-          ["builtin", "external"],
-          ["internal", "parent", "sibling", "index"]
+          [
+            "builtin",
+            "external"
+          ],
+          [
+            "internal",
+            "parent",
+            "sibling",
+            "index"
+          ]
         ],
         "newlines-between": "always"
       }
