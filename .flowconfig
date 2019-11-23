@@ -7,6 +7,9 @@
 [libs]
 <PROJECT_ROOT>/flow-typed
 
+[declarations]
+.+/node_modules/.+
+
 [lints]
 ; make sure to turn on at least "untyped-type-import"
 all=error
