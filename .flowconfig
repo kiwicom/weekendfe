@@ -29,6 +29,8 @@ untyped-import
 [options]
 emoji=true
 include_warnings=true
+; Try to uncomment this:
+;exact_by_default=true
 module.ignore_non_literal_requires=true
 esproposal.optional_chaining=enable
 esproposal.nullish_coalescing=enable
