@@ -12,6 +12,7 @@
     "schema": "adeira-fetch-schema --resource=https://weekend-api.now.sh/",
     "lint": "eslint src pages",
     "flow": "flow",
+    "flow:mess": "flow check-contents src/components/BrokenFlow/BigMess.js < src/components/BrokenFlow/BigMess.js",
     "relay": "adeira-relay-compiler --src ./ --schema schema.graphql",
     "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages",
     "analyze": "BUNDLE_ANALYZE=both next build",

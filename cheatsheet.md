@@ -25,6 +25,16 @@ yarn flow
 
 > Check [.flowconfig](.flowconfig)
 
+#### Task!
+
+run in your console:
+
+```
+yarn flow:mess
+```
+
+-> fix reported errors in [BigMess.js](./src/components/BrokenFlow/BigMess.js)
+
 ## GraphQL
 
 - `graphql` tagged template literal - how it works in general: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates
