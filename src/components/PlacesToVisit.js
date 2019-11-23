@@ -1,4 +1,4 @@
-import React, { useState, useRef, useReducer } from "react"
+import React, { useState, useRef } from "react"
 import { Heading, Stack, Button } from "@kiwicom/orbit-components"
 import {
   CloseCircle,
@@ -63,38 +63,15 @@ const PlaceToVisit = ({
 
 const defaultDays = [2, 5]
 
-function reducer(places, { type, payload }) {
+/* function reducer(places, { type, payload }) {
   const newPlaces = places && places.concat()
   switch (type) {
-    case "reset":
-      return payload || [["Australia", defaultDays]]
-    case "addPlace":
-      return places.concat([[null, [1, 3]]])
-    case "removePlace":
-      return places.filter((val, index) => index !== payload.index)
-    case "changeDays":
-      newPlaces[payload.index][1] = payload.days
-      return newPlaces
-    case "changePlace":
-      newPlaces[payload.index][0] = payload.place
-      return newPlaces
     default:
       // A reducer must always return a valid state.
       // Alternatively you can throw an error if an invalid action is dispatched.
       return places
   }
-}
-
-const logReducer = (fn, logger) =>
-  // eslint-disable-next-line func-names
-  function() {
-    // eslint-disable-next-line
-    const before = arguments[0]
-    // eslint-disable-next-line
-    const result = fn(...arguments) // fn.apply(null, arguments)
-    if (logger && before !== result) logger(result)
-    return result
-  }
+} */
 
 const PlacesToVisit = ({
   defaultValue = [["Mexico", defaultDays]],
@@ -103,14 +80,34 @@ const PlacesToVisit = ({
   onSearchClick,
   showDebug = false
 }) => {
-  const loggReducer = logReducer(reducer, onChange)
-  const [places, dispatch] = useReducer(loggReducer, defaultValue)
-  const action = (type, payload) => dispatch({ type, payload })
-  const removePlace = index => () => action("removePlace", { index })
-  const changeDays = index => days =>
-    action("changeDays", { index, days })
-  const changePlace = index => place =>
-    action("changePlace", { index, place })
+  /*
+    TODO:
+    Refactor places state and all handlers to useReducer hook with own reducer and dispatch
+   */
+  const [places, setPlaces] = useState(defaultValue)
+  const removePlace = itemIndex => () => {
+    setPlaces(val => {
+      const newValue = val.filter((_, index) => index !== itemIndex)
+      onChange(newValue)
+      return newValue
+    })
+  }
+  const changeDays = index => days => {
+    setPlaces(val => {
+      const newValue = val
+      newValue[index][1] = days
+      onChange(newValue)
+      return newValue
+    })
+  }
+  const changePlace = index => place => {
+    setPlaces(val => {
+      const newValue = val
+      newValue[index][0] = place
+      onChange(newValue)
+      return newValue
+    })
+  }
   return (
     <>
       <Heading type="title2" spaceAfter="medium">
@@ -136,7 +133,9 @@ const PlacesToVisit = ({
             iconLeft={<Plus />}
             fullWidth
             disabled={!places[places.length - 1][0]}
-            onClick={() => action("addPlace")}
+            onClick={() => {
+              setPlaces(val => val.concat([[null, [1, 3]]]))
+            }}
           >
             Add destination
           </Button>
