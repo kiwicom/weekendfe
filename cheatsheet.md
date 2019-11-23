@@ -101,7 +101,23 @@ and in your [.eslintrc.js](.eslintrc.js)
 
 #### Unit test for fragment component
 
-TODO mocking data, mocking date, mocking dom
+```
+import { createMockEnvironment, MockPayloadGenerator } from 'relay-test-utils';
+
+// 1. step: create mock environment
+const environment = createMockEnvironment();
+
+// 2. step: render component with mocked environment
+
+// 3. step: resolve pending queries
+environment.mock.resolveMostRecentOperation(operation => data)
+
+// 4. test your component
+```
+
+- [Relay docs: Testing relay components](https://relay.dev/docs/en/testing-relay-components)
+- [relay-test-utils](https://www.npmjs.com/package/relay-test-utils)
+- GIST for cheating: [fragmentComponentTest.js](https://gist.github.com/jaroslav-kubicek/421c7775075bae0942aa64a337308e46)
 
 #### Misc
 
@@ -131,4 +147,4 @@ TODO mocking data, mocking date, mocking dom
 
 *In case you use Apollo*
 
-- [Apollo Codegen](https://github.com/apollographql/apollo-tooling#apollo-clientcodegen-output)
+- [Apollo Codegen](https://github.com/apollographql/apollo-tooling#apollo-clientcodegen-output) - make sure you use codegen to generate types
