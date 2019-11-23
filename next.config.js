@@ -34,10 +34,13 @@ const nextConfig = {
   //   return {
   //     "/": { page: "/" },
   //     "/places": { page: "places" },
+  //     "/places/Prague": { page: "places", query: {"place": "Prague"} },
   //     "/result": { page: "result" }
   //   }
   // },
   // assetPrefix: debug ? "" : `/${repoName}/`,
+
+  experimental: { granularChunks: true },
 
   webpack: (config /* : any */) => {
     // https://github.com/zeit/next.js/issues/8617
@@ -54,13 +57,6 @@ const nextConfig = {
 
       return entries
     }
-
-    config.plugins = [
-      ...(config.plugins || []),
-      new webpack.DefinePlugin({
-        BASE_URL: debug ? "''" : "''" // `'/${repoName}/'`
-      })
-    ]
 
     config.resolve.alias.components = path.join(
       __dirname,
