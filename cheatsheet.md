@@ -73,13 +73,21 @@ Basic query to fetch location:
 
 ```graphql
   query AutocompleteQuery($query: String!) {
-    locations(query: $query, limit: 5) {
-      id
-      name
-      type
+    allLocations(search: $query, first: 5) {
+      edges {
+        node {
+          id
+          type
+          name
+        }
+      }
     }
   }
 ```
+
+*Tip:*
+
+- use [optional chaining](https://github.com/tc39/proposal-optional-chaining)
 
 #### Eslint for relay
 

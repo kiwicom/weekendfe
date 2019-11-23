@@ -24,7 +24,8 @@ module.exports = function(api /*: ApiType */) {
       ],
       ["@kiwicom/orbit-components"],
       ["import-graphql"],
-      ["relay"]
+      ["relay"],
+      ["@babel/plugin-proposal-optional-chaining"]
     ]
   }
 }

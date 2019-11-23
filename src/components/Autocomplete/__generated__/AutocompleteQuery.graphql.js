@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash bc6006dbcebc5973cedca5116cfad5af
+ * @relayHash 2fc2106af41e1600cf12f16009ec9b91
  */
 
 /* eslint-disable */
@@ -12,10 +12,14 @@ export type AutocompleteQueryVariables = {|
   query: string
 |};
 export type AutocompleteQueryResponse = {|
-  +locations: ?$ReadOnlyArray<?{|
-    +id: string,
-    +$fragmentRefs: AutocompleteItem_location$ref,
-  |}>
+  +allLocations: ?{|
+    +edges: ?$ReadOnlyArray<?{|
+      +node: ?{|
+        +id: string,
+        +$fragmentRefs: AutocompleteItem_location$ref,
+      |}
+    |}>
+  |}
 |};
 export type AutocompleteQuery = {|
   variables: AutocompleteQueryVariables,
@@ -26,16 +30,20 @@ export type AutocompleteQuery = {|
 query AutocompleteQuery(
   $query: String!
 ) {
-  locations(query: $query, limit: 5) {
-    id
-    ...AutocompleteItem_location
+  allLocations(search: $query, first: 5) {
+    edges {
+      node {
+        id
+        ...AutocompleteItem_location
+      }
+    }
   }
 }
 
 fragment AutocompleteItem_location on Location {
   id
-  name
   type
+  name
 }
 */
 
@@ -51,12 +59,12 @@ var v0 = [
 v1 = [
   {
     "kind": "Literal",
-    "name": "limit",
+    "name": "first",
     "value": 5
   },
   {
     "kind": "Variable",
-    "name": "query",
+    "name": "search",
     "variableName": "query"
   }
 ],
@@ -72,24 +80,46 @@ return {
   "fragment": {
     "kind": "Fragment",
     "name": "AutocompleteQuery",
-    "type": "Query",
+    "type": "RootQuery",
     "metadata": null,
     "argumentDefinitions": (v0/*: any*/),
     "selections": [
       {
         "kind": "LinkedField",
         "alias": null,
-        "name": "locations",
+        "name": "allLocations",
         "storageKey": null,
         "args": (v1/*: any*/),
-        "concreteType": "Location",
-        "plural": true,
+        "concreteType": "LocationConnection",
+        "plural": false,
         "selections": [
-          (v2/*: any*/),
           {
-            "kind": "FragmentSpread",
-            "name": "AutocompleteItem_location",
-            "args": null
+            "kind": "LinkedField",
+            "alias": null,
+            "name": "edges",
+            "storageKey": null,
+            "args": null,
+            "concreteType": "LocationEdge",
+            "plural": true,
+            "selections": [
+              {
+                "kind": "LinkedField",
+                "alias": null,
+                "name": "node",
+                "storageKey": null,
+                "args": null,
+                "concreteType": "Location",
+                "plural": false,
+                "selections": [
+                  (v2/*: any*/),
+                  {
+                    "kind": "FragmentSpread",
+                    "name": "AutocompleteItem_location",
+                    "args": null
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -103,26 +133,48 @@ return {
       {
         "kind": "LinkedField",
         "alias": null,
-        "name": "locations",
+        "name": "allLocations",
         "storageKey": null,
         "args": (v1/*: any*/),
-        "concreteType": "Location",
-        "plural": true,
+        "concreteType": "LocationConnection",
+        "plural": false,
         "selections": [
-          (v2/*: any*/),
           {
-            "kind": "ScalarField",
+            "kind": "LinkedField",
             "alias": null,
-            "name": "name",
+            "name": "edges",
+            "storageKey": null,
             "args": null,
-            "storageKey": null
-          },
-          {
-            "kind": "ScalarField",
-            "alias": null,
-            "name": "type",
-            "args": null,
-            "storageKey": null
+            "concreteType": "LocationEdge",
+            "plural": true,
+            "selections": [
+              {
+                "kind": "LinkedField",
+                "alias": null,
+                "name": "node",
+                "storageKey": null,
+                "args": null,
+                "concreteType": "Location",
+                "plural": false,
+                "selections": [
+                  (v2/*: any*/),
+                  {
+                    "kind": "ScalarField",
+                    "alias": null,
+                    "name": "type",
+                    "args": null,
+                    "storageKey": null
+                  },
+                  {
+                    "kind": "ScalarField",
+                    "alias": null,
+                    "name": "name",
+                    "args": null,
+                    "storageKey": null
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -132,11 +184,11 @@ return {
     "operationKind": "query",
     "name": "AutocompleteQuery",
     "id": null,
-    "text": "query AutocompleteQuery(\n  $query: String!\n) {\n  locations(query: $query, limit: 5) {\n    id\n    ...AutocompleteItem_location\n  }\n}\n\nfragment AutocompleteItem_location on Location {\n  id\n  name\n  type\n}\n",
+    "text": "query AutocompleteQuery(\n  $query: String!\n) {\n  allLocations(search: $query, first: 5) {\n    edges {\n      node {\n        id\n        ...AutocompleteItem_location\n      }\n    }\n  }\n}\n\nfragment AutocompleteItem_location on Location {\n  id\n  type\n  name\n}\n",
     "metadata": {}
   }
 };
 })();
 // prettier-ignore
-(node: any).hash = 'a038bac493b7070e52de8065a9cc0853';
+(node: any).hash = '3fb715fe9be6e3045633985787826f94';
 export default node;

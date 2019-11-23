@@ -17,9 +17,13 @@ type Props = {|
 
 const query = graphql`
   query AutocompleteQuery($query: String!) {
-    locations(query: $query, limit: 5) {
-      id
-      ...AutocompleteItem_location
+    allLocations(search: $query, first: 5) {
+      edges {
+        node {
+          id
+          ...AutocompleteItem_location
+        }
+      }
     }
   }
 `
@@ -32,21 +36,18 @@ const Autocomplete = ({ search }: Props) => {
         query={query}
         variables={({ query: search }: AutocompleteQueryVariables)}
         onResponse={(data: AutocompleteQueryResponse) => {
-          if (!data.locations || data.locations.length === 0) {
+          const edges = data.allLocations?.edges
+
+          if (!edges || edges.length === 0) {
             return <Alert type="info">Sorry, no locations!</Alert>
           }
 
-          return data.locations.map(location => {
-            if (!location) {
+          return edges.filter(Boolean).map(({ node }) => {
+            if (!node) {
               return null
             }
 
-            return (
-              <AutocompleteItem
-                key={location.id}
-                location={location}
-              />
-            )
+            return <AutocompleteItem key={node.id} location={node} />
           })
         }}
       />

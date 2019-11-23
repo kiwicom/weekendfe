@@ -6,7 +6,7 @@ import {
 } from "@adeira/relay"
 
 export const weekendapiEnvironment = createEnvironment({
-  fetchFn: createNetworkFetcher("https://weekend-api.now.sh/", {
+  fetchFn: createNetworkFetcher("https://graphql.kiwi.com/", {
     "X-Client": "js-weekend"
   })
 })

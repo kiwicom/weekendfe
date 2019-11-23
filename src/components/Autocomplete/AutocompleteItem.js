@@ -30,8 +30,8 @@ export default createFragmentContainer(AutocompleteItem, {
   location: graphql`
     fragment AutocompleteItem_location on Location {
       id
-      name
       type
+      name
     }
   `
 })
