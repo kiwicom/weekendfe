@@ -1,21 +1,16 @@
-import React, { createContext } from "react"
+import React, { createContext, useContext } from "react"
 import Stack from "@kiwicom/orbit-components/lib/Stack"
 import Badge from "@kiwicom/orbit-components/lib/Badge"
 
 const defaultFruit = [
-  { name: "apple", count: 10 },
+  { name: "apple", count: 100 },
   { name: "pear", count: 5 }
 ]
 
 const FruitContext = createContext(defaultFruit)
 
-const withFruit = Component => props => (
-  <FruitContext.Consumer>
-    {fruit => <Component {...props} fruit={fruit} />}
-  </FruitContext.Consumer>
-)
-
-const Example = ({ fruit }) => {
+const Example = () => {
+  const fruit = useContext(FruitContext)
   return (
     <Stack direction="row">
       {fruit.map(({ name, count }, index) => (
@@ -27,4 +22,4 @@ const Example = ({ fruit }) => {
     </Stack>
   )
 }
-export default withFruit(Example)
+export default Example

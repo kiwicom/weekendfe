@@ -1,9 +1,33 @@
-import React, { Component } from "react"
-import Badge from "@kiwicom/orbit-components/lib/Badge"
+import React, {
+  useEffect,
+  useRef,
+  useState,
+  useCallback
+} from "react"
+import Button from "@kiwicom/orbit-components/lib/Button"
 
-class Example extends Component {
-  render() {
-    return <Badge type="success">Hello World</Badge>
-  }
+const Example = () => {
+  const ref = useRef(null)
+  const [dimensions, setDimensions] = useState(0)
+  useEffect(() => {
+    const getDimensions = () => {
+      if (ref && ref.current) {
+        const { left } = ref.current.getBoundingClientRect()
+        console.log(left);
+        setDimensions(left)
+      }
+    }
+    getDimensions()
+    window.addEventListener("resize", getDimensions)
+    return () => {
+      window.removeEventListener("resize", getDimensions)
+    }
+  }, [])
+  return (
+    <Button type="success" ref={ref}>
+      Hello World: {dimensions}
+    </Button>
+  )
 }
+
 export default Example
