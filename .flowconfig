@@ -7,6 +7,9 @@
 [libs]
 <PROJECT_ROOT>/flow-typed
 
+[declarations]
+.+/node_modules/.+
+
 [lints]
 ; make sure to turn on at least "untyped-type-import"
 all=error
@@ -31,7 +34,6 @@ esproposal.optional_chaining=enable
 esproposal.nullish_coalescing=enable
 
 suppress_comment=\\(.\\|\n\\)*\\$FlowExpectedError: .+
-suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe(.+) .+
 suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe: .+
 suppress_comment=\\(.\\|\n\\)*\\$FlowIssue: https://github.com/facebook/flow/issues/[0-9]+
 
