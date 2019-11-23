@@ -73,3 +73,21 @@ and in your [.eslintrc.js](.eslintrc.js)
     "plugin:relay/strict"
   ],
 ```
+
+#### Misc
+
+*Demo*
+
+- https://github.com/adeira/relay-example and [relay-example demo](https://github.com/adeira/relay-example)
+
+*Server*
+
+- https://graphql.org/graphql-js/ to build server
+- [nexus](https://nexus.js.org/) to build server, especially if you prefer typescript
+- [dataloader](https://github.com/graphql/dataloader) core spice for efficient GraphQL server
+- [graphql-bc-checker](https://github.com/adeira/universe/tree/master/src/graphql-bc-checker) to detect breaking changes (check also https://github.com/graphql/graphql-js/blob/master/src/utilities/findBreakingChanges.js)
+
+*Other*
+
+- [relay best practices](https://code.kiwi.com/relay-and-graphql-best-practices-b09ce1d6d7ea)
+- [Building Great User Experiences with Concurrent Mode and Suspense](https://reactjs.org/blog/2019/11/06/building-great-user-experiences-with-concurrent-mode-and-suspense.html) if you want to see future
