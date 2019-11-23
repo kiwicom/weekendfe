@@ -1,5 +1,10 @@
 ## Weekend - Flow + GraphQL
 
+```
+git fetch --all
+git checkout kubajz/start
+```
+
 ## Flow
 
 > Done for you in this branch :)
