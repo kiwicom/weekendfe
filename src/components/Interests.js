@@ -18,7 +18,7 @@ const INTERESTS = [
   },
   { value: "food", title: "Food", icon: <Meal /> },
   { value: "coffee", title: "Coffee", icon: <Coffee /> },
-  { shops: "shops", title: "Shops", icon: <Shopping /> }
+  { value: "shops", title: "Shops", icon: <Shopping /> }
 ]
 
 export default function Interests({ defaultValue }) {
@@ -42,8 +42,7 @@ export default function Interests({ defaultValue }) {
     >
       {INTERESTS.map((item, key) => (
         <InterestCard
-          // eslint-disable-next-line
-          key={key}
+          key={item.value}
           title={item.title}
           value={item.value}
           checked={interest === item.value}

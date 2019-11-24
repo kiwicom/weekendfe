@@ -77,6 +77,7 @@ const InterestCard = ({
       onClick={handleClick}
       tabIndex={0}
       onKeyDown={handleKeyDown}
+      data-test={`interest-${value}`}
     >
       <Stack direction="row" justify="between" align="center" shrink>
         <Hide on={["largeMobile"]}>
