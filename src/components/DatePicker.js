@@ -16,7 +16,7 @@ import { format } from "date-fns"
 
 const today = new Date()
 const day = 60 * 60 * 24 * 1000
-const minDate = new Date(today.getTime() - day)
+const defaultMinDate = new Date(today.getTime() - day)
 
 const monthNamesShort = [
   "Jan",
@@ -131,7 +131,8 @@ const DatePicker = ({
   onDateSelected,
   currentDate = "",
   shown,
-  openRef
+  openRef,
+  minDate = defaultMinDate
 }) => (
   <StyledDatePickerWrapper ref={openRef}>
     <InputField

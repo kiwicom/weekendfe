@@ -92,6 +92,7 @@ const Stepper = ({ onChange, defaultValue = 0, ...props }) => {
         <ButtonLink
           type="secondary"
           size="small"
+          title="passengers"
           iconLeft={<Passengers />}
           iconRight={isOpen ? <ChevronDown /> : <ChevronUp />}
         >

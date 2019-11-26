@@ -81,8 +81,8 @@ const TopPart = ({ flyFrom, flyTo, dateFrom, dateTo, adults }) => {
       <Stack direction="row" justify="end">
         <Stack basis="calc(25% - 16px)" shrink={false} grow={false}>
           <Stepper
-            min={1}
-            max={20}
+            minValue={1}
+            maxValue={20}
             defaultValue={tripAdults}
             onChange={setAdults}
           />
@@ -120,6 +120,7 @@ const TopPart = ({ flyFrom, flyTo, dateFrom, dateTo, adults }) => {
               shown={returnDatePickerOpened}
               currentDate={returnDate}
               onDateSelected={selectReturnDate}
+              minDate={departureDate}
             />
           )}
         </Stack>

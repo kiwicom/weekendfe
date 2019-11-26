@@ -16,6 +16,7 @@ const PlacePickerInput = ({
       value: place ? place.name : "",
       onFocus: openMenu
     })}
+    dataTest={`picker-${label}`}
     inlineLabel
     label={label}
     suffix={
