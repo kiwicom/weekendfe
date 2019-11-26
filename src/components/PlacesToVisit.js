@@ -141,6 +141,7 @@ const PlacesToVisit = ({
             Add destination
           </Button>
           <Button
+            dataTest="search-button"
             iconLeft={<Search />}
             fullWidth
             disabled={typeof onSearchClick !== "function"}
