@@ -40,7 +40,7 @@ export default function Interests({ defaultValue }) {
       spaceAfter="largest"
       largeMobile={{ direction: "row" }}
     >
-      {INTERESTS.map((item, key) => (
+      {INTERESTS.map(item => (
         <InterestCard
           key={item.value}
           title={item.title}
